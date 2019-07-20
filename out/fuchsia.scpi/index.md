@@ -105,42 +105,48 @@ Book: /_book.yaml
             <td>
                 <code>uint32</code>
             </td>
-            <td></td>
+            <td> operating point index for big cluster
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>small_cluster_op_index</code></td>
             <td>
                 <code>uint32</code>
             </td>
-            <td></td>
+            <td> operating point index for small cluster
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>temperature</code></td>
             <td>
                 <code>uint32</code>
             </td>
-            <td></td>
+            <td> current CPU temperature
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>fan_level</code></td>
             <td>
                 <code>uint32</code>
             </td>
-            <td></td>
+            <td> current Fan Level
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>cpu_utilization</code></td>
             <td>
                 <code>uint32</code>
             </td>
-            <td></td>
+            <td> current CPU utilization
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>memory_utilization</code></td>
             <td>
                 <code>uint32</code>
             </td>
-            <td></td>
+            <td> current Memory usage
+</td>
             <td>No default</td>
         </tr>
 </table>

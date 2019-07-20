@@ -461,6 +461,17 @@ Book: /_book.yaml
 
 
 
+### ScheduleUnbindChildren {:#ScheduleUnbindChildren}
+
+ Requests the devcoordinator schedule the unbinding of this device's children.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+
 ### UnbindDone {:#UnbindDone}
 
  Sent as the response to |Unbind| or |CompleteRemoval|.

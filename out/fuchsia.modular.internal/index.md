@@ -58,8 +58,17 @@ Book: /_book.yaml
 ## Sessionmgr {:#Sessionmgr}
 *Defined in [fuchsia.modular.internal/sessionmgr.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.internal/sessionmgr.fidl#16)*
 
+ The basemgr application (there is no `Basemgr` service) requests
+ an instance of this service in order to launch and display a `Sessionmgr`.
 
 ### Initialize {:#Initialize}
+
+ Launches a sessionmgr instance identified by a unique device-local
+ `session_id`. The uniqueness of `session_id` must be guaranteed by the
+ caller, because `sessionmgr` creates an Environment namespace with the
+ given `session_id`, and this will crash if we try to create an
+ environment with a pre-existing name, because the services sessionmgr
+ tries to access won't be available.
 
 
 #### Request
@@ -136,9 +145,12 @@ Book: /_book.yaml
 ## SessionContext {:#SessionContext}
 *Defined in [fuchsia.modular.internal/sessionmgr.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.internal/sessionmgr.fidl#40)*
 
+ This interface is provided by basemgr to `Sessionmgr`.
 
 ### Logout {:#Logout}
 
+ See detailed comments in SessionShellContext.Logout(). Logs out all the
+ users in this session, then shut down the sessionmgr process.
 
 #### Request
 <table>
@@ -149,6 +161,9 @@ Book: /_book.yaml
 
 ### Shutdown {:#Shutdown}
 
+ Shut down the sessionmgr process. This method should be called if the
+ users of the session should remain logged in. Call Logout() if the intent
+ is to also log out the users from the session.
 
 #### Request
 <table>
@@ -185,6 +200,8 @@ Book: /_book.yaml
 
 *Defined in [fuchsia.modular.internal/story_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.internal/story_data.fidl#12)*
 
+ Metadata and summary information about a single story.  Does not contain the
+ data necessary to run a story: see story_model.fidl for that.
 
 
 <table>
@@ -195,28 +212,32 @@ Book: /_book.yaml
             <td>
                 <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#StoryInfo'>StoryInfo</a></code>
             </td>
-            <td></td>
+            <td> Metadata available to the SessionShell.
+</td>
         </tr><tr>
             <td>2</td>
             <td><code>story_name</code></td>
             <td>
                 <code>string</code>
             </td>
-            <td></td>
+            <td> A client-supplied name for this story.
+</td>
         </tr><tr>
             <td>3</td>
             <td><code>story_options</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#StoryOptions'>StoryOptions</a></code>
             </td>
-            <td></td>
+            <td> Story metadata and configuration.
+</td>
         </tr><tr>
             <td>4</td>
             <td><code>story_page_id</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.ledger/index.html'>fuchsia.ledger</a>/<a class='link' href='../fuchsia.ledger/index.html#PageId'>PageId</a></code>
             </td>
-            <td></td>
+            <td> Page id on the user's ledger which stores story information.
+</td>
         </tr></table>
 
 

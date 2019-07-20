@@ -105,7 +105,7 @@ Book: /_book.yaml
 
 
 ## ZirconChannel {:#ZirconChannel}
-*Defined in [fuchsia.overnet.protocol/zircon_proxy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/zircon_proxy.fidl#46)*
+*Defined in [fuchsia.overnet.protocol/zircon_proxy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/zircon_proxy.fidl#45)*
 
  Proxy protocol for channels.
  This protocol is published for each side of the Overnet stream.
@@ -127,7 +127,7 @@ Book: /_book.yaml
 
 
 ## ZirconSocket {:#ZirconSocket}
-*Defined in [fuchsia.overnet.protocol/zircon_proxy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/zircon_proxy.fidl#54)*
+*Defined in [fuchsia.overnet.protocol/zircon_proxy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/zircon_proxy.fidl#53)*
 
  Proxy protocol for sockets.
  This protocol is published for each side of the Overnet stream.
@@ -145,38 +145,6 @@ Book: /_book.yaml
             <td><code>bytes</code></td>
             <td>
                 <code>vector&lt;uint8&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### Control {:#Control}
-
- Send a control message to the stream's peer.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>bytes</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### Share {:#Share}
-
- Share a handle to the stream's peer (to be collected via zx_socket_accept).
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>socket</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#SocketHandle'>SocketHandle</a></code>
             </td>
         </tr></table>
 

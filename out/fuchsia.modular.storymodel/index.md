@@ -17,6 +17,11 @@ Book: /_book.yaml
 
 *Defined in [fuchsia.modular.storymodel/story_model.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.storymodel/story_model.fidl#14)*
 
+ IMPORTANT: StoryModel must only contain field types that are cloneable.
+
+ The `StoryModel` FIDL table is used to represent the state of a story.
+ `sessionmgr` keeps a separate `StoryModel` in memory for each running story,
+ and also persists changes to it onto storage.
 
 
 <table>
@@ -27,28 +32,41 @@ Book: /_book.yaml
             <td>
                 <code>string[1024]</code>
             </td>
-            <td></td>
+            <td> The name of the story, set at story create time.
+
+ Always set. Immutable.
+</td>
         </tr><tr>
             <td>2</td>
             <td><code>runtime_state</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#StoryState'>StoryState</a></code>
             </td>
-            <td></td>
+            <td> An enum describing if the story is RUNNING, STOPPING, STOPPED.
+
+ Always set. Defaults to StoryState::STOPPED.
+</td>
         </tr><tr>
             <td>3</td>
             <td><code>visibility_state</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#StoryVisibilityState'>StoryVisibilityState</a></code>
             </td>
-            <td></td>
+            <td> An enum describing how the story should be displayed, when focused,
+ in the StoryShell.
+
+ Always set. Defaults to StoryVisibilityState::DEFAULT.
+</td>
         </tr><tr>
             <td>4</td>
             <td><code>modules</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='../fuchsia.modular.storymodel/index.html#ModuleModel'>ModuleModel</a>&gt;[128]</code>
             </td>
-            <td></td>
+            <td> A list of modules present in the story.
+
+ Always set. Defaults to an empty list.
+</td>
         </tr></table>
 
 ### ModuleModel {:#ModuleModel}
@@ -66,7 +84,12 @@ Book: /_book.yaml
             <td>
                 <code>string[1024]</code>
             </td>
-            <td></td>
+            <td> The name of the module, set by the client that requested creation
+ of the module. The name uniquely identifies this module within
+ the story.
+
+ Always set. Immutable.
+</td>
         </tr></table>
 
 
@@ -76,6 +99,13 @@ Book: /_book.yaml
 ### StoryModelMutation {:#StoryModelMutation}
 *Defined in [fuchsia.modular.storymodel/story_model_mutation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.storymodel/story_model_mutation.fidl#16)*
 
+ The `StoryModelMutation` union represents the set of all possible low-level mutations to data
+ for a single story. A vector of mutations represent mutations that are to be applied to the
+ model in a single transaction.
+
+ This structured is used internally in `sessionmgr` and is not exposed to any clients outside
+ that process. Clients will typically construct these indirectly using convenience methods on the
+ `StoryMutator` class.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -83,13 +113,15 @@ Book: /_book.yaml
             <td>
                 <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#StoryVisibilityState'>StoryVisibilityState</a></code>
             </td>
-            <td></td>
+            <td> Sets the value of `StoryModel.visibility_state`.
+</td>
         </tr><tr>
             <td><code>set_runtime_state</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#StoryState'>StoryState</a></code>
             </td>
-            <td></td>
+            <td> Sets the value of `StoryModel.runtime_state`.
+</td>
         </tr></table>
 
 
