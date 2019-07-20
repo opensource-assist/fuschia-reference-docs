@@ -9,7 +9,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### WlanChan {:#WlanChan}
-*Defined in [fuchsia.wlan.common/wlan_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.common/wlan_common.fidl#36)*
+*Defined in [fuchsia.wlan.common/wlan_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.common/wlan_common.fidl#41)*
 
 
 
@@ -107,7 +107,7 @@ Type: <code>uint32</code>
 ### CBW {:#CBW}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.common/wlan_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.common/wlan_common.fidl#26)*
+*Defined in [fuchsia.wlan.common/wlan_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.common/wlan_common.fidl#31)*
 
 
 
@@ -141,7 +141,7 @@ Type: <code>uint32</code>
 ### Band {:#Band}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.wlan.common/wlan_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.common/wlan_common.fidl#42)*
+*Defined in [fuchsia.wlan.common/wlan_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.common/wlan_common.fidl#47)*
 
 
 
@@ -163,7 +163,7 @@ Type: <code>uint8</code>
 ### ScanType {:#ScanType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.common/wlan_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.common/wlan_common.fidl#50)*
+*Defined in [fuchsia.wlan.common/wlan_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.common/wlan_common.fidl#55)*
 
 
 
@@ -181,7 +181,7 @@ Type: <code>uint32</code>
 ### DriverFeature {:#DriverFeature}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.common/wlan_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.common/wlan_common.fidl#55)*
+*Defined in [fuchsia.wlan.common/wlan_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.common/wlan_common.fidl#60)*
 
 
 

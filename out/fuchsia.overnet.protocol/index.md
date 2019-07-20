@@ -490,6 +490,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.overnet.protocol/stream_socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/stream_socket.fidl#8)*
 
+ Introduction packet sent on stream oriented links between Overnet nodes
 
 
 <table>
@@ -500,21 +501,24 @@ Type: <code>uint32</code>
             <td>
                 <code>string[32]</code>
             </td>
-            <td></td>
+            <td> Protocol identification string; different kinds of streams might choose a different value here
+</td>
         </tr><tr>
             <td>2</td>
             <td><code>node_id</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.overnet.protocol/index.html#NodeId'>NodeId</a></code>
             </td>
-            <td></td>
+            <td> Overnet NodeId of the sender
+</td>
         </tr><tr>
             <td>3</td>
             <td><code>local_link_id</code></td>
             <td>
                 <code>uint64</code>
             </td>
-            <td></td>
+            <td> Sender's LinkId for this link
+</td>
         </tr></table>
 
 

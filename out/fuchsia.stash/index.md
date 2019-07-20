@@ -9,6 +9,8 @@ Book: /_book.yaml
 ## ListIterator {:#ListIterator}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#45)*
 
+ The iterator returned when a series of keys are being listed. Returns an
+ empty vector when there are no more remaining ListItems.
 
 ### GetNext {:#GetNext}
 
@@ -32,6 +34,8 @@ Book: /_book.yaml
 ## GetIterator {:#GetIterator}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#51)*
 
+ The iterator returned when a series of keys are being read. Returns an
+ empty vector when there are no more remaining KeyValues.
 
 ### GetNext {:#GetNext}
 
@@ -55,9 +59,11 @@ Book: /_book.yaml
 ## StoreAccessor {:#StoreAccessor}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#56)*
 
+ The interface returned when a new accessor is created.
 
 ### GetValue {:#GetValue}
 
+ Gets a single value from the store.
 
 #### Request
 <table>
@@ -82,6 +88,8 @@ Book: /_book.yaml
 
 ### SetValue {:#SetValue}
 
+ Sets a single value in the store. Overwrites existing values. Commit()
+ must be called for this change to take effect.
 
 #### Request
 <table>
@@ -102,6 +110,8 @@ Book: /_book.yaml
 
 ### DeleteValue {:#DeleteValue}
 
+ Deletes a single value in the store. Does nothing if the value doesn't
+ exist. Commit() must be called for this change to take effect.
 
 #### Request
 <table>
@@ -117,6 +127,7 @@ Book: /_book.yaml
 
 ### ListPrefix {:#ListPrefix}
 
+ Lists all keys under a given prefix.
 
 #### Request
 <table>
@@ -137,6 +148,7 @@ Book: /_book.yaml
 
 ### GetPrefix {:#GetPrefix}
 
+ Reads the values of all keys under a given prefix.
 
 #### Request
 <table>
@@ -157,6 +169,7 @@ Book: /_book.yaml
 
 ### DeletePrefix {:#DeletePrefix}
 
+ Deletes the all keys under a given prefix.
 
 #### Request
 <table>
@@ -172,6 +185,8 @@ Book: /_book.yaml
 
 ### Commit {:#Commit}
 
+ Atomically causes all of the state modifications that happened in this
+ accessor to take place.
 
 #### Request
 <table>
@@ -183,9 +198,14 @@ Book: /_book.yaml
 ## Store {:#Store}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#84)*
 
+ Interface used to interact with a given client's key/value store
 
 ### Identify {:#Identify}
 
+ Identify should be called at the beginning of a connection to identify
+ which client service's store is to be accessed. In the future this will
+ be deprecated in favor of component monikers, and each client will only
+ be able to access its own store.
 
 #### Request
 <table>
@@ -201,6 +221,8 @@ Book: /_book.yaml
 
 ### CreateAccessor {:#CreateAccessor}
 
+ Creates a accessor for interacting with the store. The resulting
+ interface can be used to inspect and modify the state of the store.
 
 #### Request
 <table>
@@ -222,9 +244,15 @@ Book: /_book.yaml
 ## SecureStore {:#SecureStore}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#99)*
 
+ Interface used to interact with a given client's key/value store. The bytes
+ type is disabled in this store.
 
 ### Identify {:#Identify}
 
+ Identify should be called at the beginning of a connection to identify
+ which client service's store is to be accessed. In the future this will
+ be deprecated in favor of component monikers, and each client will only
+ be able to access its own store.
 
 #### Request
 <table>
@@ -240,6 +268,8 @@ Book: /_book.yaml
 
 ### CreateAccessor {:#CreateAccessor}
 
+ Creates a accessor for interacting with the store. The resulting
+ interface can be used to inspect and modify the state of the store.
 
 #### Request
 <table>
@@ -267,6 +297,7 @@ Book: /_book.yaml
 
 
 
+ ListItem is returned when a series of keys are being listed.
 
 
 <table>
@@ -292,6 +323,8 @@ Book: /_book.yaml
 
 
 
+ KeyValue is used when a series of keys are being read, or the default state
+ for the store is being set.
 
 
 <table>
@@ -321,6 +354,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#13)*
 
+ ValueType encodes a type for a field in the store
 
 
 <table>
@@ -355,6 +389,7 @@ Type: <code>uint8</code>
 ### Value {:#Value}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#35)*
 
+ Value holds a value for a given key.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>

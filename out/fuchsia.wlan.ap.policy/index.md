@@ -193,7 +193,7 @@ Book: /_book.yaml
 </table>
 
 ### ApClient {:#ApClient}
-*Defined in [fuchsia.wlan.ap.policy/wlan_ap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.ap/wlan_ap.fidl#56)*
+*Defined in [fuchsia.wlan.ap.policy/wlan_ap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.ap/wlan_ap.fidl#60)*
 
 
 
@@ -239,7 +239,7 @@ Type: <code>uint32</code>
 ### ApState {:#ApState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.ap.policy/wlan_ap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.ap/wlan_ap.fidl#48)*
+*Defined in [fuchsia.wlan.ap.policy/wlan_ap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.ap/wlan_ap.fidl#51)*
 
 
 

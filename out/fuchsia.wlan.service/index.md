@@ -9,6 +9,8 @@ Book: /_book.yaml
 ## Wlan {:#Wlan}
 *Defined in [fuchsia.wlan.service/wlan_service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.service/wlan_service.fidl#81)*
 
+ Stub interface; eventually to be replaced by something based on the 802.11
+ SME / MSGCF.
 
 ### Scan {:#Scan}
 

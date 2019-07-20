@@ -314,45 +314,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>record</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
-            </td>
-        </tr><tr>
-            <td><code>op</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[16384]</code>
-            </td>
-        </tr><tr>
-            <td><code>out_count</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>actions</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
-            </td>
-        </tr></table>
-
 ### Message {:#Message}
 
 
@@ -433,7 +394,7 @@ Book: /_book.yaml
 
 
 ## MockDeviceThread {:#MockDeviceThread}
-*Defined in [fuchsia.device.mock/mock-device.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/dev/test/mock-device/mock-device.fidl#101)*
+*Defined in [fuchsia.device.mock/mock-device.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/dev/test/mock-device/mock-device.fidl#100)*
 
  Interface for requesting a mock device thread do something.  The mock device implements
  this interface.  Closing the interface causes the thread to exit.

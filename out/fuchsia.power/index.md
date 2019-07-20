@@ -9,9 +9,11 @@ Book: /_book.yaml
 ## PowerManager {:#PowerManager}
 *Defined in [fuchsia.power/power.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/power.fidl#44)*
 
+ Manager Interface used to manage power
 
 ### GetBatteryStatus {:#GetBatteryStatus}
 
+ Gets battery status
 
 #### Request
 <table>
@@ -31,6 +33,7 @@ Book: /_book.yaml
 
 ### Watch {:#Watch}
 
+ watcher called when battery status changes
 
 #### Request
 <table>
@@ -47,6 +50,7 @@ Book: /_book.yaml
 ## PowerManagerWatcher {:#PowerManagerWatcher}
 *Defined in [fuchsia.power/power.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/power.fidl#53)*
 
+ Watcher on battery status
 
 ### OnChangeBatteryStatus {:#OnChangeBatteryStatus}
 
@@ -72,6 +76,7 @@ Book: /_book.yaml
 
 
 
+ Provides battery status
 
 
 <table>
@@ -80,63 +85,72 @@ Book: /_book.yaml
             <td>
                 <code><a class='link' href='../fuchsia.power/index.html#Status'>Status</a></code>
             </td>
-            <td></td>
+            <td> Error status
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>batteryPresent</code></td>
             <td>
                 <code>bool</code>
             </td>
-            <td></td>
+            <td> If battery is present
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>charging</code></td>
             <td>
                 <code>bool</code>
             </td>
-            <td></td>
+            <td> If battery is charging
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>discharging</code></td>
             <td>
                 <code>bool</code>
             </td>
-            <td></td>
+            <td> If battery is dis-charging
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>critical</code></td>
             <td>
                 <code>bool</code>
             </td>
-            <td></td>
+            <td> If battery is at critical level
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>powerAdapterOnline</code></td>
             <td>
                 <code>bool</code>
             </td>
-            <td></td>
+            <td> If power cable is plugged in
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>timestamp</code></td>
             <td>
                 <code>int64</code>
             </td>
-            <td></td>
+            <td> To distinguish between latest and stale status
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>level</code></td>
             <td>
                 <code>float32</code>
             </td>
-            <td></td>
+            <td> Battery level in percentage
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>remainingBatteryLife</code></td>
             <td>
                 <code>float32</code>
             </td>
-            <td></td>
+            <td> Remaining Battery life in hours. It is negative when battery is not discharging
+</td>
             <td>No default</td>
         </tr>
 </table>

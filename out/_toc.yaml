@@ -529,6 +529,8 @@ toc:
   path: /reference/fidlfuchsia.wlan.device
 - title: fuchsia.wlan.device.service
   path: /reference/fidlfuchsia.wlan.device.service
+- title: fuchsia.wlan.devmgr
+  path: /reference/fidlfuchsia.wlan.devmgr
 - title: fuchsia.wlan.mesh
   path: /reference/fidlfuchsia.wlan.mesh
 - title: fuchsia.wlan.minstrel

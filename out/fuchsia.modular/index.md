@@ -3599,6 +3599,27 @@ Book: /_book.yaml
 
 
 
+### AddSurface3 {:#AddSurface3}
+
+ For transition purposes only.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>view_connection</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.modular/index.html#ViewConnection'>ViewConnection</a></code>
+            </td>
+        </tr><tr>
+            <td><code>surface_info</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceInfo2'>SurfaceInfo2</a></code>
+            </td>
+        </tr></table>
+
+
+
 ### FocusSurface {:#FocusSurface}
 
  Focuses the surface with surface_id, bringing it to the foreground.
@@ -3851,8 +3872,29 @@ Book: /_book.yaml
 
 
 
+### UpdateSurface3 {:#UpdateSurface3}
+
+ For transition purposes only.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>view_connection</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.modular/index.html#ViewConnection'>ViewConnection</a></code>
+            </td>
+        </tr><tr>
+            <td><code>surface_info</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceInfo2'>SurfaceInfo2</a></code>
+            </td>
+        </tr></table>
+
+
+
 ## StoryShellContext {:#StoryShellContext}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#167)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#188)*
 
  This interface provides the StoryShell instance with everything it needs to
  know or be able to do about the Story. Not much right now, but we expect this
@@ -3942,7 +3984,7 @@ Book: /_book.yaml
 
 
 ## StoryVisualStateWatcher {:#StoryVisualStateWatcher}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#188)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#209)*
 
  Implemented by StoryShell to get notified about visual state changes.
 
@@ -5717,7 +5759,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewConnection {:#ViewConnection}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#107)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#113)*
 
 
 
@@ -5745,7 +5787,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewConnection2 {:#ViewConnection2}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#116)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#122)*
 
 
 
@@ -5773,11 +5815,11 @@ Book: /_book.yaml
 </table>
 
 ### SurfaceInfo {:#SurfaceInfo}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#125)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#131)*
 
 
 
- Contain metadata for a Surface
+ Contains metadata for a Surface.
 
 
 <table>
@@ -5795,7 +5837,7 @@ Book: /_book.yaml
                 <code><a class='link' href='../fuchsia.modular/index.html#SurfaceRelation'>SurfaceRelation</a>?</code>
             </td>
             <td> The relationship between the parent Surface and this new Surface. Used
- for layout optimization
+ for layout optimization.
 </td>
             <td>No default</td>
         </tr><tr>
@@ -5819,12 +5861,10 @@ Book: /_book.yaml
 </table>
 
 ### ContainerView {:#ContainerView}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#143)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#164)*
 
 
 
- Maps the node_name to the specific scenic view resulting from resolving and
- launching the intent specified in a Container node.
 
 
 <table>
@@ -5850,7 +5890,7 @@ Book: /_book.yaml
 </table>
 
 ### ContainerView2 {:#ContainerView2}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#154)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#175)*
 
 
 
@@ -6365,7 +6405,7 @@ Type: <code>int32</code>
 ### StoryVisualState {:#StoryVisualState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#193)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#214)*
 
  Defines the visual state of the Story shell.
 
@@ -6637,6 +6677,52 @@ Type: <code>uint32</code>
  PARAMETER_PROPERTY = string | string . PARAMETER_PROPERTY
  The first string in the dot-separated string is the name of the intent
  parameter and the following are nested subfields.
+</td>
+        </tr></table>
+
+### SurfaceInfo2 {:#SurfaceInfo2}
+
+
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#148)*
+
+ Contains metadata for a Surface.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>parent_id</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td> ID of the view that is parent of this Surface.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>surface_relation</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceRelation'>SurfaceRelation</a></code>
+            </td>
+            <td> The relationship between the parent Surface and this new Surface. Used
+ for layout optimization.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>module_manifest</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.modular/index.html#ModuleManifest'>ModuleManifest</a></code>
+            </td>
+            <td> Information about the module populates the view.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>module_source</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.modular/index.html#ModuleSource'>ModuleSource</a></code>
+            </td>
+            <td> How the Surface was generated. By an action internal to the story or by
+ an external action.
 </td>
         </tr></table>
 

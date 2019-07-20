@@ -267,6 +267,7 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.wlan.common/index">fuchsia.wlan.common</a></td></tr>
 <tr><td><a href="fuchsia.wlan.device/index">fuchsia.wlan.device</a></td></tr>
 <tr><td><a href="fuchsia.wlan.device.service/index">fuchsia.wlan.device.service</a></td></tr>
+<tr><td><a href="fuchsia.wlan.devmgr/index">fuchsia.wlan.devmgr</a></td></tr>
 <tr><td><a href="fuchsia.wlan.mesh/index">fuchsia.wlan.mesh</a></td></tr>
 <tr><td><a href="fuchsia.wlan.minstrel/index">fuchsia.wlan.minstrel</a></td></tr>
 <tr><td><a href="fuchsia.wlan.mlme/index">fuchsia.wlan.mlme</a></td></tr>
