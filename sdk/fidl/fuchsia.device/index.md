@@ -36,9 +36,10 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Unbind {:#Unbind}
+### ScheduleUnbind {:#ScheduleUnbind}
 
  Disconnect this device and allow its parent to be bound again.
+ This may not complete before it returns.
 
 #### Request
 <table>

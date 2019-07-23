@@ -453,11 +453,17 @@ Book: /_book.yaml
 
  Requests the devcoordinator schedule the removal of this device,
  and the unbinding of its children.
+ If |unbind_self| is true, the unbind hook for this device will also be called.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
-    </table>
+    <tr>
+            <td><code>unbind_self</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
 
 
 
