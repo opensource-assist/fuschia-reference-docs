@@ -87,7 +87,7 @@ Book: /_book.yaml
 </table>
 
 ### Annotation {:#Annotation}
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#45)*
+*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#44)*
 
 
 
@@ -114,7 +114,7 @@ Book: /_book.yaml
 </table>
 
 ### Attachment {:#Attachment}
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#53)*
+*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#52)*
 
 
 
@@ -142,7 +142,7 @@ Book: /_book.yaml
 </table>
 
 ### Screenshot {:#Screenshot}
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#67)*
+*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#66)*
 
 
 
@@ -174,7 +174,7 @@ Book: /_book.yaml
 ### ImageEncoding {:#ImageEncoding}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#62)*
+*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#61)*
 
  The encoding used for the image.
 
@@ -196,7 +196,7 @@ Type: <code>uint32</code>
 ### Data {:#Data}
 
 
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#35)*
+*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#34)*
 
  Data to attach to feedback reports.
 

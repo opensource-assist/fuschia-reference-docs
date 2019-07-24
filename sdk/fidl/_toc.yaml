@@ -201,10 +201,6 @@ toc:
   path: /reference/fidl/fuchsia.ui.vectorial
 - title: fuchsia.ui.views
   path: /reference/fidl/fuchsia.ui.views
-- title: fuchsia.ui.viewsv1
-  path: /reference/fidl/fuchsia.ui.viewsv1
-- title: fuchsia.ui.viewsv1token
-  path: /reference/fidl/fuchsia.ui.viewsv1token
 - title: fuchsia.update
   path: /reference/fidl/fuchsia.update
 - title: fuchsia.virtualaudio

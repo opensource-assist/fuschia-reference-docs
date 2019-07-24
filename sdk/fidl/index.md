@@ -103,8 +103,6 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.ui.scenic/index">fuchsia.ui.scenic</a></td></tr>
 <tr><td><a href="fuchsia.ui.vectorial/index">fuchsia.ui.vectorial</a></td></tr>
 <tr><td><a href="fuchsia.ui.views/index">fuchsia.ui.views</a></td></tr>
-<tr><td><a href="fuchsia.ui.viewsv1/index">fuchsia.ui.viewsv1</a></td></tr>
-<tr><td><a href="fuchsia.ui.viewsv1token/index">fuchsia.ui.viewsv1token</a></td></tr>
 <tr><td><a href="fuchsia.update/index">fuchsia.update</a></td></tr>
 <tr><td><a href="fuchsia.virtualaudio/index">fuchsia.virtualaudio</a></td></tr>
 <tr><td><a href="fuchsia.virtualconsole/index">fuchsia.virtualconsole</a></td></tr>

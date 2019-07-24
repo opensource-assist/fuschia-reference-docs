@@ -5714,7 +5714,7 @@ Book: /_book.yaml
 </table>
 
 ### StoryInfoExtraEntry {:#StoryInfoExtraEntry}
-*Defined in [fuchsia.modular/story_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_info.fidl#28)*
+*Defined in [fuchsia.modular/story_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_info.fidl#41)*
 
 
 
@@ -6677,6 +6677,38 @@ Type: <code>uint32</code>
  PARAMETER_PROPERTY = string | string . PARAMETER_PROPERTY
  The first string in the dot-separated string is the name of the intent
  parameter and the following are nested subfields.
+</td>
+        </tr></table>
+
+### StoryInfo2 {:#StoryInfo2}
+
+
+*Defined in [fuchsia.modular/story_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_info.fidl#30)*
+
+ Information about a story as provided to the SessionShell.
+ For transition purposes only.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>id</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td> The ID of the Story, used to reference it in method arguments.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>last_focus_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> Wallclock time when the story was last focused. From
+ ZX_CLOCK_UTC, thus nanoseconds since UNIX epoch (1970-01-01 00:00 UTC).
+
+ A value of zero means the story has never been focused.
 </td>
         </tr></table>
 

@@ -306,6 +306,41 @@ Book: /_book.yaml
 
 
 
+## Snapshooter {:#Snapshooter}
+*Defined in [fuchsia.ui.scenic/snapshooter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/snapshooter.fidl#11)*
+
+ Defines an interface to take view snapshots.
+
+### TakeViewSnapshot {:#TakeViewSnapshot}
+
+ Takes a snapshot of a view and returns it in a callback.
+
+ The `view_koid` identifies the view whose snapshot needs to be taken.
+
+ The callback is invoked with the VMO buffer containing the snapshot.
+ If successful, the buffer size is non-zero, otherwise it is 0.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>view_koid</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>snapshot</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+        </tr></table>
+
 
 
 ## **STRUCTS**
