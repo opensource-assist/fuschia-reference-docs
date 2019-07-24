@@ -51,7 +51,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>paths</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.mesh/index.html#MeshPath'>MeshPath</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#MeshPath'>MeshPath</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>

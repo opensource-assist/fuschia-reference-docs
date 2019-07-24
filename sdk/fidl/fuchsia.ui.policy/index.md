@@ -139,7 +139,7 @@ Book: /_book.yaml
     <tr>
             <td><code>usage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.policy/index.html#DisplayUsage'>DisplayUsage</a></code>
+                <code><a class='link' href='#DisplayUsage'>DisplayUsage</a></code>
             </td>
         </tr></table>
 
@@ -208,7 +208,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.policy/index.html#KeyboardCaptureListenerHACK'>KeyboardCaptureListenerHACK</a></code>
+                <code><a class='link' href='#KeyboardCaptureListenerHACK'>KeyboardCaptureListenerHACK</a></code>
             </td>
         </tr></table>
 
@@ -224,7 +224,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.policy/index.html#PointerCaptureListenerHACK'>PointerCaptureListenerHACK</a></code>
+                <code><a class='link' href='#PointerCaptureListenerHACK'>PointerCaptureListenerHACK</a></code>
             </td>
         </tr></table>
 
@@ -245,7 +245,7 @@ Book: /_book.yaml
     <tr>
             <td><code>mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.policy/index.html#PresentationMode'>PresentationMode</a></code>
+                <code><a class='link' href='#PresentationMode'>PresentationMode</a></code>
             </td>
         </tr></table>
 
@@ -258,7 +258,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.policy/index.html#PresentationModeListener'>PresentationModeListener</a></code>
+                <code><a class='link' href='#PresentationModeListener'>PresentationModeListener</a></code>
             </td>
         </tr></table>
 
@@ -274,7 +274,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.policy/index.html#MediaButtonsListener'>MediaButtonsListener</a></code>
+                <code><a class='link' href='#MediaButtonsListener'>MediaButtonsListener</a></code>
             </td>
         </tr></table>
 
@@ -338,7 +338,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>presentation_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ui.policy/index.html#Presentation'>Presentation</a>&gt;?</code>
+                <code>request&lt;<a class='link' href='#Presentation'>Presentation</a>&gt;?</code>
             </td>
         </tr></table>
 

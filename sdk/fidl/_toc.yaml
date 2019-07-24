@@ -35,6 +35,10 @@ toc:
   path: /reference/fidl/fuchsia.bluetooth.test
 - title: fuchsia.boot
   path: /reference/fidl/fuchsia.boot
+- title: fuchsia.camera
+  path: /reference/fidl/fuchsia.camera
+- title: fuchsia.camera.common
+  path: /reference/fidl/fuchsia.camera.common
 - title: fuchsia.cobalt
   path: /reference/fidl/fuchsia.cobalt
 - title: fuchsia.crash
@@ -57,6 +61,8 @@ toc:
   path: /reference/fidl/fuchsia.devicesettings
 - title: fuchsia.feedback
   path: /reference/fidl/fuchsia.feedback
+- title: fuchsia.gpu.magma
+  path: /reference/fidl/fuchsia.gpu.magma
 - title: fuchsia.hardware.bluetooth
   path: /reference/fidl/fuchsia.hardware.bluetooth
 - title: fuchsia.hardware.display
@@ -67,6 +73,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.pty
 - title: fuchsia.hardware.rtc
   path: /reference/fidl/fuchsia.hardware.rtc
+- title: fuchsia.hardware.telephony.transport
+  path: /reference/fidl/fuchsia.hardware.telephony.transport
 - title: fuchsia.images
   path: /reference/fidl/fuchsia.images
 - title: fuchsia.inspect
@@ -163,6 +171,8 @@ toc:
   path: /reference/fidl/fuchsia.sysinfo
 - title: fuchsia.sysmem
   path: /reference/fidl/fuchsia.sysmem
+- title: fuchsia.telephony.snoop
+  path: /reference/fidl/fuchsia.telephony.snoop
 - title: fuchsia.time
   path: /reference/fidl/fuchsia.time
 - title: fuchsia.timezone
@@ -201,6 +211,8 @@ toc:
   path: /reference/fidl/fuchsia.virtualaudio
 - title: fuchsia.virtualconsole
   path: /reference/fidl/fuchsia.virtualconsole
+- title: fuchsia.vulkan.loader
+  path: /reference/fidl/fuchsia.vulkan.loader
 - title: fuchsia.web
   path: /reference/fidl/fuchsia.web
 - title: fuchsia.wlan.ap.policy

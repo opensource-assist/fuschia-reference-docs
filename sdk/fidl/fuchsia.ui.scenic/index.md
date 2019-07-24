@@ -20,12 +20,12 @@ Book: /_book.yaml
     <tr>
             <td><code>session</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ui.scenic/index.html#Session'>Session</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Session'>Session</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.scenic/index.html#SessionListener'>SessionListener</a>?</code>
+                <code><a class='link' href='#SessionListener'>SessionListener</a>?</code>
             </td>
         </tr></table>
 
@@ -89,7 +89,7 @@ Book: /_book.yaml
     <tr>
             <td><code>img_data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.scenic/index.html#ScreenshotData'>ScreenshotData</a></code>
+                <code><a class='link' href='#ScreenshotData'>ScreenshotData</a></code>
             </td>
         </tr><tr>
             <td><code>success</code></td>
@@ -113,7 +113,7 @@ Book: /_book.yaml
     <tr>
             <td><code>cmds</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ui.scenic/index.html#Command'>Command</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Command'>Command</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -300,7 +300,7 @@ Book: /_book.yaml
     <tr>
             <td><code>events</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ui.scenic/index.html#Event'>Event</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Event'>Event</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -395,7 +395,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>unhandled</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.scenic/index.html#Command'>Command</a></code>
+                <code><a class='link' href='#Command'>Command</a></code>
             </td>
             <td></td>
         </tr></table>

@@ -58,7 +58,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewContainerListener'>ViewContainerListener</a>?</code>
+                <code><a class='link' href='#ViewContainerListener'>ViewContainerListener</a>?</code>
             </td>
         </tr></table>
 
@@ -243,7 +243,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>child_view_properties</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewProperties'>ViewProperties</a>?</code>
+                <code><a class='link' href='#ViewProperties'>ViewProperties</a>?</code>
             </td>
         </tr></table>
 
@@ -335,7 +335,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>child_view_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewInfo'>ViewInfo</a></code>
+                <code><a class='link' href='#ViewInfo'>ViewInfo</a></code>
             </td>
         </tr></table>
 
@@ -448,7 +448,7 @@ Book: /_book.yaml
     <tr>
             <td><code>view</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ui.viewsv1/index.html#View'>View</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#View'>View</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>view_owner</code></td>
@@ -458,7 +458,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>view_listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewListener'>ViewListener</a></code>
+                <code><a class='link' href='#ViewListener'>ViewListener</a></code>
             </td>
         </tr><tr>
             <td><code>parent_export_token</code></td>
@@ -483,7 +483,7 @@ Book: /_book.yaml
     <tr>
             <td><code>view</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ui.viewsv1/index.html#View'>View</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#View'>View</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>view_token</code></td>
@@ -493,7 +493,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>view_listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewListener'>ViewListener</a></code>
+                <code><a class='link' href='#ViewListener'>ViewListener</a></code>
             </td>
         </tr><tr>
             <td><code>parent_export_token</code></td>
@@ -531,12 +531,12 @@ Book: /_book.yaml
     <tr>
             <td><code>view_tree</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewTree'>ViewTree</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ViewTree'>ViewTree</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>view_tree_listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewTreeListener'>ViewTreeListener</a></code>
+                <code><a class='link' href='#ViewTreeListener'>ViewTreeListener</a></code>
             </td>
         </tr><tr>
             <td><code>label</code></td>
@@ -678,7 +678,7 @@ Book: /_book.yaml
     <tr>
             <td><code>token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewTreeToken'>ViewTreeToken</a></code>
+                <code><a class='link' href='#ViewTreeToken'>ViewTreeToken</a></code>
             </td>
         </tr></table>
 
@@ -713,7 +713,7 @@ Book: /_book.yaml
     <tr>
             <td><code>container</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewContainer'>ViewContainer</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ViewContainer'>ViewContainer</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -810,7 +810,7 @@ Book: /_book.yaml
     <tr>
             <td><code>container</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewContainer'>ViewContainer</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ViewContainer'>ViewContainer</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -834,7 +834,7 @@ Book: /_book.yaml
     <tr>
             <td><code>properties</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewProperties'>ViewProperties</a></code>
+                <code><a class='link' href='#ViewProperties'>ViewProperties</a></code>
             </td>
         </tr></table>
 
@@ -877,14 +877,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>view_layout</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.viewsv1/index.html#ViewLayout'>ViewLayout</a>?</code>
+                <code><a class='link' href='#ViewLayout'>ViewLayout</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>custom_focus_behavior</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.viewsv1/index.html#CustomFocusBehavior'>CustomFocusBehavior</a>?</code>
+                <code><a class='link' href='#CustomFocusBehavior'>CustomFocusBehavior</a>?</code>
             </td>
             <td></td>
             <td>No default</td>

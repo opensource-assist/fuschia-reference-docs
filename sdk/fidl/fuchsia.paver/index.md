@@ -52,7 +52,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#ReadResult'>ReadResult</a></code>
+                <code><a class='link' href='#ReadResult'>ReadResult</a></code>
             </td>
         </tr></table>
 
@@ -77,7 +77,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Paver_QueryActiveConfiguration_Result'>Paver_QueryActiveConfiguration_Result</a></code>
+                <code><a class='link' href='#Paver_QueryActiveConfiguration_Result'>Paver_QueryActiveConfiguration_Result</a></code>
             </td>
         </tr></table>
 
@@ -93,7 +93,7 @@ Book: /_book.yaml
     <tr>
             <td><code>configuration</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Configuration'>Configuration</a></code>
+                <code><a class='link' href='#Configuration'>Configuration</a></code>
             </td>
         </tr></table>
 
@@ -165,12 +165,12 @@ Book: /_book.yaml
     <tr>
             <td><code>configuration</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Configuration'>Configuration</a></code>
+                <code><a class='link' href='#Configuration'>Configuration</a></code>
             </td>
         </tr><tr>
             <td><code>asset</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Asset'>Asset</a></code>
+                <code><a class='link' href='#Asset'>Asset</a></code>
             </td>
         </tr><tr>
             <td><code>payload</code></td>
@@ -201,7 +201,7 @@ Book: /_book.yaml
     <tr>
             <td><code>payload</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.paver/index.html#PayloadStream'>PayloadStream</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#PayloadStream'>PayloadStream</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -310,7 +310,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>configuration</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Configuration'>Configuration</a></code>
+                <code><a class='link' href='#Configuration'>Configuration</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -405,7 +405,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Paver_QueryActiveConfiguration_Response'>Paver_QueryActiveConfiguration_Response</a></code>
+                <code><a class='link' href='#Paver_QueryActiveConfiguration_Response'>Paver_QueryActiveConfiguration_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -438,7 +438,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#ReadInfo'>ReadInfo</a></code>
+                <code><a class='link' href='#ReadInfo'>ReadInfo</a></code>
             </td>
             <td> Information about location of successfully read data within pre-registered VMO.
 </td>

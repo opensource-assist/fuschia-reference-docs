@@ -30,7 +30,7 @@ Book: /_book.yaml
     <tr>
             <td><code>peripherals</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.le/index.html#RemoteDevice'>RemoteDevice</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RemoteDevice'>RemoteDevice</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -54,7 +54,7 @@ Book: /_book.yaml
     <tr>
             <td><code>peripheral</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#RemoteDevice'>RemoteDevice</a>?</code>
+                <code><a class='link' href='#RemoteDevice'>RemoteDevice</a>?</code>
             </td>
         </tr></table>
 
@@ -67,7 +67,7 @@ Book: /_book.yaml
     <tr>
             <td><code>filter</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#ScanFilter'>ScanFilter</a>?</code>
+                <code><a class='link' href='#ScanFilter'>ScanFilter</a>?</code>
             </td>
         </tr></table>
 
@@ -171,7 +171,7 @@ Book: /_book.yaml
     <tr>
             <td><code>device</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#RemoteDevice'>RemoteDevice</a></code>
+                <code><a class='link' href='#RemoteDevice'>RemoteDevice</a></code>
             </td>
         </tr></table>
 
@@ -211,23 +211,23 @@ Book: /_book.yaml
 
  Start advertising as a LE peripheral. An empty response is sent to indicate when advertising
  has successfully initiated. If advertising cannot be initiated, then the response will
- contain a <a class='link' href='../fuchsia.bluetooth.le/index.html#PeripheralError'>PeripheralError</a>.
+ contain a <a class='link' href='#PeripheralError'>PeripheralError</a>.
 
  This method can get called any number of times and successive calls can be made to
  reconfigure the advertising parameters. However only the most recent
- <a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingHandle'>AdvertisingHandle</a> will remain valid.
+ <a class='link' href='#AdvertisingHandle'>AdvertisingHandle</a> will remain valid.
 
- An instance of <a class='link' href='../fuchsia.bluetooth.le/index.html#Peripheral'>Peripheral</a> can only have one active advertisement at
+ An instance of <a class='link' href='#Peripheral'>Peripheral</a> can only have one active advertisement at
  a time. Clients must obtain multiple Peripheral instances for multiple simultaneous
  advertisements.
 
- If the client closes its end of the <a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingHandle'>AdvertisingHandle</a> channel,
+ If the client closes its end of the <a class='link' href='#AdvertisingHandle'>AdvertisingHandle</a> channel,
  advertising will be stopped. If the handle is closed before the request is fulfilled,
  advertising will be briefly enabled before it is terminated.
 
  + request `parameters` Parameters used while configuring the advertising instance.
  + request `handle` Handle that remains valid for the duration of this advertising session.
- * error Returns a <a class='link' href='../fuchsia.bluetooth.le/index.html#PeripheralError'>PeripheralError</a> if advertising cannot be
+ * error Returns a <a class='link' href='#PeripheralError'>PeripheralError</a> if advertising cannot be
          initiated. In this case the `handle` will be closed.
 
 #### Request
@@ -236,12 +236,12 @@ Book: /_book.yaml
     <tr>
             <td><code>parameters</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingParameters'>AdvertisingParameters</a></code>
+                <code><a class='link' href='#AdvertisingParameters'>AdvertisingParameters</a></code>
             </td>
         </tr><tr>
             <td><code>handle</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingHandle'>AdvertisingHandle</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AdvertisingHandle'>AdvertisingHandle</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -252,7 +252,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#Peripheral_StartAdvertising_Result'>Peripheral_StartAdvertising_Result</a></code>
+                <code><a class='link' href='#Peripheral_StartAdvertising_Result'>Peripheral_StartAdvertising_Result</a></code>
             </td>
         </tr></table>
 
@@ -260,9 +260,9 @@ Book: /_book.yaml
 
  Event delivered when a remote LE central initiates a connection to this Peripheral when
  connectable advertising is enabled via
- <a class='link' href='../fuchsia.bluetooth.le/index.html#Peripheral.StartAdvertising'>Peripheral.StartAdvertising</a>.
+ <a class='link' href='#Peripheral.StartAdvertising'>Peripheral.StartAdvertising</a>.
 
- The returned <a class='link' href='../fuchsia.bluetooth.le/index.html#Connection'>Connection</a> handle can be used to interact with the
+ The returned <a class='link' href='#Connection'>Connection</a> handle can be used to interact with the
  peer. It also represents a peripheral's ownership over the connection: the client can drop
  the handle to request a disconnection. Similarly, the handle is closed by the system to
  indicate that the connection to the peer has been lost.
@@ -278,12 +278,12 @@ Book: /_book.yaml
     <tr>
             <td><code>peer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#Peer'>Peer</a></code>
+                <code><a class='link' href='#Peer'>Peer</a></code>
             </td>
         </tr><tr>
             <td><code>connection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#Connection'>Connection</a></code>
+                <code><a class='link' href='#Connection'>Connection</a></code>
             </td>
         </tr></table>
 
@@ -296,12 +296,12 @@ Book: /_book.yaml
     <tr>
             <td><code>advertising_data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingDataDeprecated'>AdvertisingDataDeprecated</a></code>
+                <code><a class='link' href='#AdvertisingDataDeprecated'>AdvertisingDataDeprecated</a></code>
             </td>
         </tr><tr>
             <td><code>scan_result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingDataDeprecated'>AdvertisingDataDeprecated</a>?</code>
+                <code><a class='link' href='#AdvertisingDataDeprecated'>AdvertisingDataDeprecated</a>?</code>
             </td>
         </tr><tr>
             <td><code>connectable</code></td>
@@ -376,7 +376,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>central</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#RemoteDevice'>RemoteDevice</a></code>
+                <code><a class='link' href='#RemoteDevice'>RemoteDevice</a></code>
             </td>
         </tr></table>
 
@@ -404,7 +404,7 @@ Book: /_book.yaml
 
 
 
- Entry in the `service_data` field of a <a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingData'>AdvertisingData</a>.
+ Entry in the `service_data` field of a <a class='link' href='#AdvertisingData'>AdvertisingData</a>.
 
 
 <table>
@@ -430,7 +430,7 @@ Book: /_book.yaml
 
 
 
- Entry in the `manufacturer_data` field of a <a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingData'>AdvertisingData</a>.
+ Entry in the `manufacturer_data` field of a <a class='link' href='#AdvertisingData'>AdvertisingData</a>.
 
 
 <table>
@@ -551,14 +551,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>service_data</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.le/index.html#ServiceDataEntry'>ServiceDataEntry</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#ServiceDataEntry'>ServiceDataEntry</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>manufacturer_specific_data</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.le/index.html#ManufacturerSpecificDataEntry'>ManufacturerSpecificDataEntry</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#ManufacturerSpecificDataEntry'>ManufacturerSpecificDataEntry</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -611,7 +611,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>advertising_data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingDataDeprecated'>AdvertisingDataDeprecated</a>?</code>
+                <code><a class='link' href='#AdvertisingDataDeprecated'>AdvertisingDataDeprecated</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -786,7 +786,7 @@ Type: <code>uint8</code>
             <td>5</td>
             <td><code>service_data</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.le/index.html#ServiceData'>ServiceData</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ServiceData'>ServiceData</a>&gt;</code>
             </td>
             <td> Service data entries.
 </td>
@@ -794,7 +794,7 @@ Type: <code>uint8</code>
             <td>6</td>
             <td><code>manufacturer_data</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.le/index.html#ManufacturerData'>ManufacturerData</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ManufacturerData'>ManufacturerData</a>&gt;</code>
             </td>
             <td> Manufacturer-specific data entries.
 </td>
@@ -856,7 +856,7 @@ Type: <code>uint8</code>
             <td>4</td>
             <td><code>advertising_data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingData'>AdvertisingData</a></code>
+                <code><a class='link' href='#AdvertisingData'>AdvertisingData</a></code>
             </td>
             <td> Advertising and scan response data broadcast by this peer. Present in broadcasters and
  peripherals.
@@ -877,7 +877,7 @@ Type: <code>uint8</code>
             <td>1</td>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingData'>AdvertisingData</a></code>
+                <code><a class='link' href='#AdvertisingData'>AdvertisingData</a></code>
             </td>
             <td> The fields that will be encoded in the data section of advertising packets.
 
@@ -887,7 +887,7 @@ Type: <code>uint8</code>
             <td>2</td>
             <td><code>scan_response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingData'>AdvertisingData</a></code>
+                <code><a class='link' href='#AdvertisingData'>AdvertisingData</a></code>
             </td>
             <td> The fields that are to be sent in a scan response packet. Clients may use this to send
  additional data that does not fit inside an advertising packet on platforms that do not
@@ -899,10 +899,10 @@ Type: <code>uint8</code>
             <td>3</td>
             <td><code>mode_hint</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingModeHint'>AdvertisingModeHint</a></code>
+                <code><a class='link' href='#AdvertisingModeHint'>AdvertisingModeHint</a></code>
             </td>
-            <td> The desired advertising frequency. See <a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingModeHint'>AdvertisingModeHint</a>.
- Defaults to <a class='link' href='../fuchsia.bluetooth.le/index.html#AdvertisingModeHint.SLOW'>AdvertisingModeHint.SLOW</a> if not present.
+            <td> The desired advertising frequency. See <a class='link' href='#AdvertisingModeHint'>AdvertisingModeHint</a>.
+ Defaults to <a class='link' href='#AdvertisingModeHint.SLOW'>AdvertisingModeHint.SLOW</a> if not present.
 </td>
         </tr><tr>
             <td>4</td>
@@ -928,13 +928,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#Peripheral_StartAdvertising_Response'>Peripheral_StartAdvertising_Response</a></code>
+                <code><a class='link' href='#Peripheral_StartAdvertising_Response'>Peripheral_StartAdvertising_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.le/index.html#PeripheralError'>PeripheralError</a></code>
+                <code><a class='link' href='#PeripheralError'>PeripheralError</a></code>
             </td>
             <td></td>
         </tr></table>

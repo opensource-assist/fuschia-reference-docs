@@ -31,7 +31,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#ProviderConfig'>ProviderConfig</a></code>
+                <code><a class='link' href='#ProviderConfig'>ProviderConfig</a></code>
             </td>
         </tr></table>
 
@@ -52,7 +52,7 @@ Book: /_book.yaml
     <tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#StartOptions'>StartOptions</a></code>
+                <code><a class='link' href='#StartOptions'>StartOptions</a></code>
             </td>
         </tr></table>
 
@@ -115,7 +115,7 @@ Book: /_book.yaml
     <tr>
             <td><code>provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#Provider'>Provider</a></code>
+                <code><a class='link' href='#Provider'>Provider</a></code>
             </td>
         </tr><tr>
             <td><code>pid</code></td>
@@ -149,7 +149,7 @@ Book: /_book.yaml
     <tr>
             <td><code>provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#Provider'>Provider</a></code>
+                <code><a class='link' href='#Provider'>Provider</a></code>
             </td>
         </tr><tr>
             <td><code>pid</code></td>
@@ -195,7 +195,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>buffering_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#BufferingMode'>BufferingMode</a></code>
+                <code><a class='link' href='#BufferingMode'>BufferingMode</a></code>
             </td>
             <td> `buffering_mode` specifies what happens when the buffer fills.
 </td>
@@ -242,7 +242,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>buffer_disposition</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#BufferDisposition'>BufferDisposition</a></code>
+                <code><a class='link' href='#BufferDisposition'>BufferDisposition</a></code>
             </td>
             <td> Whether and how to clear the buffer when starting data collection.
  This allows, for example, multiple Start/Stop trace runs to be

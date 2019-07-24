@@ -28,7 +28,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.feedback/index.html#DataProvider_GetData_Result'>DataProvider_GetData_Result</a></code>
+                <code><a class='link' href='#DataProvider_GetData_Result'>DataProvider_GetData_Result</a></code>
             </td>
         </tr></table>
 
@@ -49,7 +49,7 @@ Book: /_book.yaml
     <tr>
             <td><code>encoding</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.feedback/index.html#ImageEncoding'>ImageEncoding</a></code>
+                <code><a class='link' href='#ImageEncoding'>ImageEncoding</a></code>
             </td>
         </tr></table>
 
@@ -60,7 +60,7 @@ Book: /_book.yaml
     <tr>
             <td><code>screenshot</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.feedback/index.html#Screenshot'>Screenshot</a>?</code>
+                <code><a class='link' href='#Screenshot'>Screenshot</a>?</code>
             </td>
         </tr></table>
 
@@ -79,7 +79,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.feedback/index.html#Data'>Data</a></code>
+                <code><a class='link' href='#Data'>Data</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -211,7 +211,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>annotations</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.feedback/index.html#Annotation'>Annotation</a>&gt;[32]</code>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[32]</code>
             </td>
             <td> A vector of key-value string pairs. Keys are guaranteed to be unique.
 </td>
@@ -219,7 +219,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>attachments</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.feedback/index.html#Attachment'>Attachment</a>&gt;[16]</code>
+                <code>vector&lt;<a class='link' href='#Attachment'>Attachment</a>&gt;[16]</code>
             </td>
             <td> A vector of key-value string-to-VMO pairs. Keys are guaranteed to be unique.
 </td>
@@ -237,7 +237,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.feedback/index.html#DataProvider_GetData_Response'>DataProvider_GetData_Response</a></code>
+                <code><a class='link' href='#DataProvider_GetData_Response'>DataProvider_GetData_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

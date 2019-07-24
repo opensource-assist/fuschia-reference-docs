@@ -19,12 +19,12 @@ Book: /_book.yaml
     <tr>
             <td><code>log_listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.logger/index.html#LogListener'>LogListener</a></code>
+                <code><a class='link' href='#LogListener'>LogListener</a></code>
             </td>
         </tr><tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.logger/index.html#LogFilterOptions'>LogFilterOptions</a>?</code>
+                <code><a class='link' href='#LogFilterOptions'>LogFilterOptions</a>?</code>
             </td>
         </tr></table>
 
@@ -39,12 +39,12 @@ Book: /_book.yaml
     <tr>
             <td><code>log_listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.logger/index.html#LogListener'>LogListener</a></code>
+                <code><a class='link' href='#LogListener'>LogListener</a></code>
             </td>
         </tr><tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.logger/index.html#LogFilterOptions'>LogFilterOptions</a>?</code>
+                <code><a class='link' href='#LogFilterOptions'>LogFilterOptions</a>?</code>
             </td>
         </tr></table>
 
@@ -82,7 +82,7 @@ Book: /_book.yaml
     <tr>
             <td><code>log</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.logger/index.html#LogMessage'>LogMessage</a></code>
+                <code><a class='link' href='#LogMessage'>LogMessage</a></code>
             </td>
         </tr></table>
 
@@ -97,7 +97,7 @@ Book: /_book.yaml
     <tr>
             <td><code>log</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.logger/index.html#LogMessage'>LogMessage</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#LogMessage'>LogMessage</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -163,7 +163,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>min_severity</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.logger/index.html#LogLevelFilter'>LogLevelFilter</a></code>
+                <code><a class='link' href='#LogLevelFilter'>LogLevelFilter</a></code>
             </td>
             <td></td>
             <td>No default</td>

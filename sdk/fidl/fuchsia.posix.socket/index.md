@@ -354,7 +354,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.posix.socket/index.html#Control'>Control</a>?</code>
+                <code><a class='link' href='#Control'>Control</a>?</code>
             </td>
         </tr></table>
 
@@ -555,7 +555,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.posix.socket/index.html#Control'>Control</a>?</code>
+                <code><a class='link' href='#Control'>Control</a>?</code>
             </td>
         </tr></table>
 

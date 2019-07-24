@@ -35,7 +35,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.hardware.display/index.html#Controller'>Controller</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Controller'>Controller</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -71,7 +71,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.hardware.display/index.html#Controller'>Controller</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Controller'>Controller</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -115,7 +115,7 @@ Book: /_book.yaml
     <tr>
             <td><code>added</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.hardware.display/index.html#Info'>Info</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Info'>Info</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>removed</code></td>
@@ -133,7 +133,7 @@ Book: /_book.yaml
     <tr>
             <td><code>image_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ImageConfig'>ImageConfig</a></code>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
             </td>
         </tr><tr>
             <td><code>vmo</code></td>
@@ -172,7 +172,7 @@ Book: /_book.yaml
     <tr>
             <td><code>image_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ImageConfig'>ImageConfig</a></code>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
             </td>
         </tr><tr>
             <td><code>collection_id</code></td>
@@ -305,7 +305,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#Mode'>Mode</a></code>
+                <code><a class='link' href='#Mode'>Mode</a></code>
             </td>
         </tr></table>
 
@@ -375,7 +375,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>image_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ImageConfig'>ImageConfig</a></code>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
             </td>
         </tr></table>
 
@@ -395,17 +395,17 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>transform</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#Transform'>Transform</a></code>
+                <code><a class='link' href='#Transform'>Transform</a></code>
             </td>
         </tr><tr>
             <td><code>src_frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#Frame'>Frame</a></code>
+                <code><a class='link' href='#Frame'>Frame</a></code>
             </td>
         </tr><tr>
             <td><code>dest_frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#Frame'>Frame</a></code>
+                <code><a class='link' href='#Frame'>Frame</a></code>
             </td>
         </tr></table>
 
@@ -425,7 +425,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#AlphaMode'>AlphaMode</a></code>
+                <code><a class='link' href='#AlphaMode'>AlphaMode</a></code>
             </td>
         </tr><tr>
             <td><code>val</code></td>
@@ -450,7 +450,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>image_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ImageConfig'>ImageConfig</a></code>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
             </td>
         </tr></table>
 
@@ -556,12 +556,12 @@ Book: /_book.yaml
     <tr>
             <td><code>res</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ConfigResult'>ConfigResult</a></code>
+                <code><a class='link' href='#ConfigResult'>ConfigResult</a></code>
             </td>
         </tr><tr>
             <td><code>ops</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.hardware.display/index.html#ClientCompositionOp'>ClientCompositionOp</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ClientCompositionOp'>ClientCompositionOp</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -761,7 +761,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ImageConfig'>ImageConfig</a></code>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
             </td>
         </tr></table>
 
@@ -898,7 +898,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>modes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.hardware.display/index.html#Mode'>Mode</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Mode'>Mode</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -912,7 +912,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>cursor_configs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.hardware.display/index.html#CursorInfo'>CursorInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CursorInfo'>CursorInfo</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1000,7 +1000,7 @@ Book: /_book.yaml
                 <code>uint32</code>
             </td>
             <td></td>
-            <td><a class='link' href='../fuchsia.hardware.display/index.html#typeSimple'>typeSimple</a></td>
+            <td><a class='link' href='#typeSimple'>typeSimple</a></td>
         </tr><tr>
             <td><code>planes</code></td>
             <td>
@@ -1075,7 +1075,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>opcode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ClientCompositionOpcode'>ClientCompositionOpcode</a></code>
+                <code><a class='link' href='#ClientCompositionOpcode'>ClientCompositionOpcode</a></code>
             </td>
             <td></td>
             <td>No default</td>

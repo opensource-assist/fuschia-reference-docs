@@ -32,7 +32,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -76,7 +76,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.filter/index.html#Rule'>Rule</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Rule'>Rule</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -86,7 +86,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -108,7 +108,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.filter/index.html#Rule'>Rule</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Rule'>Rule</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -124,7 +124,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -147,7 +147,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.filter/index.html#NAT'>NAT</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#NAT'>NAT</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -157,7 +157,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -175,7 +175,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.filter/index.html#NAT'>NAT</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#NAT'>NAT</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -191,7 +191,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -213,7 +213,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.filter/index.html#RDR'>RDR</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RDR'>RDR</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -223,7 +223,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -241,7 +241,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.filter/index.html#RDR'>RDR</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RDR'>RDR</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -257,7 +257,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -277,14 +277,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>action</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#Action'>Action</a></code>
+                <code><a class='link' href='#Action'>Action</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>direction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#Direction'>Direction</a></code>
+                <code><a class='link' href='#Direction'>Direction</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -299,7 +299,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>proto</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#SocketProtocol'>SocketProtocol</a></code>
+                <code><a class='link' href='#SocketProtocol'>SocketProtocol</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -384,7 +384,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>proto</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#SocketProtocol'>SocketProtocol</a></code>
+                <code><a class='link' href='#SocketProtocol'>SocketProtocol</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -425,7 +425,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>proto</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.filter/index.html#SocketProtocol'>SocketProtocol</a></code>
+                <code><a class='link' href='#SocketProtocol'>SocketProtocol</a></code>
             </td>
             <td></td>
             <td>No default</td>

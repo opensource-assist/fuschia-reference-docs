@@ -30,7 +30,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>characteristics</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.gatt/index.html#Characteristic'>Characteristic</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Characteristic'>Characteristic</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -394,7 +394,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>services</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.gatt/index.html#ServiceInfo'>ServiceInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ServiceInfo'>ServiceInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -412,7 +412,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>service</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.bluetooth.gatt/index.html#RemoteService'>RemoteService</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#RemoteService'>RemoteService</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -482,7 +482,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.gatt/index.html#ErrorCode'>ErrorCode</a></code>
+                <code><a class='link' href='#ErrorCode'>ErrorCode</a></code>
             </td>
         </tr></table>
 
@@ -516,7 +516,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.gatt/index.html#ErrorCode'>ErrorCode</a></code>
+                <code><a class='link' href='#ErrorCode'>ErrorCode</a></code>
             </td>
         </tr></table>
 
@@ -602,17 +602,17 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.gatt/index.html#ServiceInfo'>ServiceInfo</a></code>
+                <code><a class='link' href='#ServiceInfo'>ServiceInfo</a></code>
             </td>
         </tr><tr>
             <td><code>delegate</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.gatt/index.html#LocalServiceDelegate'>LocalServiceDelegate</a></code>
+                <code><a class='link' href='#LocalServiceDelegate'>LocalServiceDelegate</a></code>
             </td>
         </tr><tr>
             <td><code>service</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.bluetooth.gatt/index.html#LocalService'>LocalService</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#LocalService'>LocalService</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -674,21 +674,21 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>read</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.gatt/index.html#SecurityRequirements'>SecurityRequirements</a>?</code>
+                <code><a class='link' href='#SecurityRequirements'>SecurityRequirements</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>write</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.gatt/index.html#SecurityRequirements'>SecurityRequirements</a>?</code>
+                <code><a class='link' href='#SecurityRequirements'>SecurityRequirements</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>update</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.gatt/index.html#SecurityRequirements'>SecurityRequirements</a>?</code>
+                <code><a class='link' href='#SecurityRequirements'>SecurityRequirements</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -727,7 +727,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>characteristics</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.gatt/index.html#Characteristic'>Characteristic</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Characteristic'>Characteristic</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -773,14 +773,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>permissions</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.gatt/index.html#AttributePermissions'>AttributePermissions</a>?</code>
+                <code><a class='link' href='#AttributePermissions'>AttributePermissions</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>descriptors</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.gatt/index.html#Descriptor'>Descriptor</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Descriptor'>Descriptor</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -812,7 +812,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>permissions</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.gatt/index.html#AttributePermissions'>AttributePermissions</a>?</code>
+                <code><a class='link' href='#AttributePermissions'>AttributePermissions</a>?</code>
             </td>
             <td></td>
             <td>No default</td>

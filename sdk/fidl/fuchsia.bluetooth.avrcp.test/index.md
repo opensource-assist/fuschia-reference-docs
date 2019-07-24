@@ -33,7 +33,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>client</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.bluetooth.avrcp.test/index.html#ControllerExt'>ControllerExt</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ControllerExt'>ControllerExt</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -44,7 +44,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp.test/index.html#PeerManagerExt_GetControllerForTarget_Result'>PeerManagerExt_GetControllerForTarget_Result</a></code>
+                <code><a class='link' href='#PeerManagerExt_GetControllerForTarget_Result'>PeerManagerExt_GetControllerForTarget_Result</a></code>
             </td>
         </tr></table>
 
@@ -62,7 +62,7 @@ Book: /_book.yaml
     <tr>
             <td><code>handler</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp.test/index.html#TargetHandler'>TargetHandler</a></code>
+                <code><a class='link' href='#TargetHandler'>TargetHandler</a></code>
             </td>
         </tr></table>
 
@@ -92,7 +92,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>delegate</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.bluetooth.avrcp.test/index.html#TargetDelegate'>TargetDelegate</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#TargetDelegate'>TargetDelegate</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -125,7 +125,7 @@ Book: /_book.yaml
     <tr>
             <td><code>code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp.test/index.html#ResponseCode'>ResponseCode</a></code>
+                <code><a class='link' href='#ResponseCode'>ResponseCode</a></code>
             </td>
         </tr></table>
 
@@ -172,7 +172,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp.test/index.html#ControllerExt_GetEventsSupported_Result'>ControllerExt_GetEventsSupported_Result</a></code>
+                <code><a class='link' href='#ControllerExt_GetEventsSupported_Result'>ControllerExt_GetEventsSupported_Result</a></code>
             </td>
         </tr></table>
 
@@ -226,7 +226,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp.test/index.html#ControllerExt_SendRawVendorDependentCommand_Result'>ControllerExt_SendRawVendorDependentCommand_Result</a></code>
+                <code><a class='link' href='#ControllerExt_SendRawVendorDependentCommand_Result'>ControllerExt_SendRawVendorDependentCommand_Result</a></code>
             </td>
         </tr></table>
 
@@ -339,7 +339,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp.test/index.html#PeerManagerExt_GetControllerForTarget_Response'>PeerManagerExt_GetControllerForTarget_Response</a></code>
+                <code><a class='link' href='#PeerManagerExt_GetControllerForTarget_Response'>PeerManagerExt_GetControllerForTarget_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -358,7 +358,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp.test/index.html#ControllerExt_GetEventsSupported_Response'>ControllerExt_GetEventsSupported_Response</a></code>
+                <code><a class='link' href='#ControllerExt_GetEventsSupported_Response'>ControllerExt_GetEventsSupported_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -377,7 +377,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp.test/index.html#ControllerExt_SendRawVendorDependentCommand_Response'>ControllerExt_SendRawVendorDependentCommand_Response</a></code>
+                <code><a class='link' href='#ControllerExt_SendRawVendorDependentCommand_Response'>ControllerExt_SendRawVendorDependentCommand_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

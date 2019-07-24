@@ -36,7 +36,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.devicesettings/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -65,7 +65,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.devicesettings/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -145,7 +145,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.devicesettings/index.html#DeviceSettingsWatcher'>DeviceSettingsWatcher</a></code>
+                <code><a class='link' href='#DeviceSettingsWatcher'>DeviceSettingsWatcher</a></code>
             </td>
         </tr></table>
 
@@ -156,7 +156,7 @@ Book: /_book.yaml
     <tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.devicesettings/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -174,7 +174,7 @@ Book: /_book.yaml
     <tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.devicesettings/index.html#ValueType'>ValueType</a></code>
+                <code><a class='link' href='#ValueType'>ValueType</a></code>
             </td>
         </tr></table>
 

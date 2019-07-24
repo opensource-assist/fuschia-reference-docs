@@ -25,7 +25,7 @@ Book: /_book.yaml
     <tr>
             <td><code>object</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.inspect/index.html#Object'>Object</a></code>
+                <code><a class='link' href='#Object'>Object</a></code>
             </td>
         </tr></table>
 
@@ -62,7 +62,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>child_channel</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.inspect/index.html#Inspect'>Inspect</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Inspect'>Inspect</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -99,7 +99,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.inspect/index.html#PropertyValue'>PropertyValue</a></code>
+                <code><a class='link' href='#PropertyValue'>PropertyValue</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -124,7 +124,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.inspect/index.html#MetricValue'>MetricValue</a></code>
+                <code><a class='link' href='#MetricValue'>MetricValue</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -149,14 +149,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>properties</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.inspect/index.html#Property'>Property</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Property'>Property</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>metrics</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.inspect/index.html#Metric'>Metric</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Metric'>Metric</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>

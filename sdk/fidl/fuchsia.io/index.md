@@ -41,7 +41,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>object</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.io/index.html#Node'>Node</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Node'>Node</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -88,7 +88,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeInfo'>NodeInfo</a></code>
+                <code><a class='link' href='#NodeInfo'>NodeInfo</a></code>
             </td>
         </tr></table>
 
@@ -113,7 +113,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeInfo'>NodeInfo</a>?</code>
+                <code><a class='link' href='#NodeInfo'>NodeInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -162,7 +162,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>attributes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeAttributes'>NodeAttributes</a></code>
+                <code><a class='link' href='#NodeAttributes'>NodeAttributes</a></code>
             </td>
         </tr></table>
 
@@ -184,7 +184,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>attributes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeAttributes'>NodeAttributes</a></code>
+                <code><a class='link' href='#NodeAttributes'>NodeAttributes</a></code>
             </td>
         </tr></table>
 
@@ -284,7 +284,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>object</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.io/index.html#Node'>Node</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Node'>Node</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -331,7 +331,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeInfo'>NodeInfo</a></code>
+                <code><a class='link' href='#NodeInfo'>NodeInfo</a></code>
             </td>
         </tr></table>
 
@@ -356,7 +356,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeInfo'>NodeInfo</a>?</code>
+                <code><a class='link' href='#NodeInfo'>NodeInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -405,7 +405,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>attributes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeAttributes'>NodeAttributes</a></code>
+                <code><a class='link' href='#NodeAttributes'>NodeAttributes</a></code>
             </td>
         </tr></table>
 
@@ -427,7 +427,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>attributes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeAttributes'>NodeAttributes</a></code>
+                <code><a class='link' href='#NodeAttributes'>NodeAttributes</a></code>
             </td>
         </tr></table>
 
@@ -652,7 +652,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>start</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#SeekOrigin'>SeekOrigin</a></code>
+                <code><a class='link' href='#SeekOrigin'>SeekOrigin</a></code>
             </td>
         </tr></table>
 
@@ -850,7 +850,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>object</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.io/index.html#Node'>Node</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Node'>Node</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -897,7 +897,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeInfo'>NodeInfo</a></code>
+                <code><a class='link' href='#NodeInfo'>NodeInfo</a></code>
             </td>
         </tr></table>
 
@@ -922,7 +922,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeInfo'>NodeInfo</a>?</code>
+                <code><a class='link' href='#NodeInfo'>NodeInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -971,7 +971,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>attributes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeAttributes'>NodeAttributes</a></code>
+                <code><a class='link' href='#NodeAttributes'>NodeAttributes</a></code>
             </td>
         </tr></table>
 
@@ -993,7 +993,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>attributes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeAttributes'>NodeAttributes</a></code>
+                <code><a class='link' href='#NodeAttributes'>NodeAttributes</a></code>
             </td>
         </tr></table>
 
@@ -1104,7 +1104,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>object</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.io/index.html#Node'>Node</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Node'>Node</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1433,7 +1433,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>object</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.io/index.html#Node'>Node</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Node'>Node</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1480,7 +1480,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeInfo'>NodeInfo</a></code>
+                <code><a class='link' href='#NodeInfo'>NodeInfo</a></code>
             </td>
         </tr></table>
 
@@ -1505,7 +1505,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeInfo'>NodeInfo</a>?</code>
+                <code><a class='link' href='#NodeInfo'>NodeInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -1554,7 +1554,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>attributes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeAttributes'>NodeAttributes</a></code>
+                <code><a class='link' href='#NodeAttributes'>NodeAttributes</a></code>
             </td>
         </tr></table>
 
@@ -1576,7 +1576,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>attributes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#NodeAttributes'>NodeAttributes</a></code>
+                <code><a class='link' href='#NodeAttributes'>NodeAttributes</a></code>
             </td>
         </tr></table>
 
@@ -1687,7 +1687,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>object</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.io/index.html#Node'>Node</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Node'>Node</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1993,7 +1993,7 @@ Book: /_book.yaml
     <tr>
             <td><code>remote</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#Directory'>Directory</a></code>
+                <code><a class='link' href='#Directory'>Directory</a></code>
             </td>
         </tr></table>
 
@@ -2019,7 +2019,7 @@ Book: /_book.yaml
     <tr>
             <td><code>remote</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#Directory'>Directory</a></code>
+                <code><a class='link' href='#Directory'>Directory</a></code>
             </td>
         </tr><tr>
             <td><code>name</code></td>
@@ -2087,7 +2087,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>remote</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#Directory'>Directory</a>?</code>
+                <code><a class='link' href='#Directory'>Directory</a>?</code>
             </td>
         </tr></table>
 
@@ -2112,7 +2112,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#FilesystemInfo'>FilesystemInfo</a>?</code>
+                <code><a class='link' href='#FilesystemInfo'>FilesystemInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -2558,49 +2558,49 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>service</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#Service'>Service</a></code>
+                <code><a class='link' href='#Service'>Service</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>file</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#FileObject'>FileObject</a></code>
+                <code><a class='link' href='#FileObject'>FileObject</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>directory</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#DirectoryObject'>DirectoryObject</a></code>
+                <code><a class='link' href='#DirectoryObject'>DirectoryObject</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>pipe</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#Pipe'>Pipe</a></code>
+                <code><a class='link' href='#Pipe'>Pipe</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>vmofile</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#Vmofile'>Vmofile</a></code>
+                <code><a class='link' href='#Vmofile'>Vmofile</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>device</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#Device'>Device</a></code>
+                <code><a class='link' href='#Device'>Device</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>tty</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#Tty'>Tty</a></code>
+                <code><a class='link' href='#Tty'>Tty</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>socket</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io/index.html#Socket'>Socket</a></code>
+                <code><a class='link' href='#Socket'>Socket</a></code>
             </td>
             <td></td>
         </tr></table>

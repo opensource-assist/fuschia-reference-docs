@@ -20,7 +20,7 @@ Book: /_book.yaml
     <tr>
             <td><code>transcription_listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.speech/index.html#TranscriptionListener'>TranscriptionListener</a></code>
+                <code><a class='link' href='#TranscriptionListener'>TranscriptionListener</a></code>
             </td>
         </tr></table>
 
@@ -37,7 +37,7 @@ Book: /_book.yaml
     <tr>
             <td><code>hotword_listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.speech/index.html#HotwordListener'>HotwordListener</a></code>
+                <code><a class='link' href='#HotwordListener'>HotwordListener</a></code>
             </td>
         </tr></table>
 

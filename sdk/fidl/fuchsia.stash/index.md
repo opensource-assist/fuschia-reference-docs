@@ -27,7 +27,7 @@ Book: /_book.yaml
     <tr>
             <td><code>keys</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.stash/index.html#ListItem'>ListItem</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ListItem'>ListItem</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -52,7 +52,7 @@ Book: /_book.yaml
     <tr>
             <td><code>kvs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.stash/index.html#KeyValue'>KeyValue</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#KeyValue'>KeyValue</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -82,7 +82,7 @@ Book: /_book.yaml
     <tr>
             <td><code>val</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.stash/index.html#Value'>Value</a>?</code>
+                <code><a class='link' href='#Value'>Value</a>?</code>
             </td>
         </tr></table>
 
@@ -102,7 +102,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>val</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.stash/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
         </tr></table>
 
@@ -140,7 +140,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>it</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.stash/index.html#ListIterator'>ListIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ListIterator'>ListIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -161,7 +161,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>it</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.stash/index.html#GetIterator'>GetIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#GetIterator'>GetIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -235,7 +235,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>accessor_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.stash/index.html#StoreAccessor'>StoreAccessor</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#StoreAccessor'>StoreAccessor</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -282,7 +282,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>accessor_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.stash/index.html#StoreAccessor'>StoreAccessor</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#StoreAccessor'>StoreAccessor</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -311,7 +311,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.stash/index.html#ValueType'>ValueType</a></code>
+                <code><a class='link' href='#ValueType'>ValueType</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -338,7 +338,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>val</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.stash/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>

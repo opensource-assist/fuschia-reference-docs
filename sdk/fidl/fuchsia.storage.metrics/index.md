@@ -65,14 +65,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>success</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.storage.metrics/index.html#CallStatRaw'>CallStatRaw</a></code>
+                <code><a class='link' href='#CallStatRaw'>CallStatRaw</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>failure</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.storage.metrics/index.html#CallStatRaw'>CallStatRaw</a></code>
+                <code><a class='link' href='#CallStatRaw'>CallStatRaw</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -90,56 +90,56 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>create</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.storage.metrics/index.html#CallStat'>CallStat</a></code>
+                <code><a class='link' href='#CallStat'>CallStat</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>read</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.storage.metrics/index.html#CallStat'>CallStat</a></code>
+                <code><a class='link' href='#CallStat'>CallStat</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>write</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.storage.metrics/index.html#CallStat'>CallStat</a></code>
+                <code><a class='link' href='#CallStat'>CallStat</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>truncate</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.storage.metrics/index.html#CallStat'>CallStat</a></code>
+                <code><a class='link' href='#CallStat'>CallStat</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>unlink</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.storage.metrics/index.html#CallStat'>CallStat</a></code>
+                <code><a class='link' href='#CallStat'>CallStat</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>rename</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.storage.metrics/index.html#CallStat'>CallStat</a></code>
+                <code><a class='link' href='#CallStat'>CallStat</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>lookup</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.storage.metrics/index.html#CallStat'>CallStat</a></code>
+                <code><a class='link' href='#CallStat'>CallStat</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>open</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.storage.metrics/index.html#CallStat'>CallStat</a></code>
+                <code><a class='link' href='#CallStat'>CallStat</a></code>
             </td>
             <td></td>
             <td>No default</td>

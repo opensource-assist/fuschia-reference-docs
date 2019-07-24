@@ -49,7 +49,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#LookupIpOptions'>LookupIpOptions</a></code>
+                <code><a class='link' href='#LookupIpOptions'>LookupIpOptions</a></code>
             </td>
         </tr></table>
 
@@ -60,7 +60,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#NameLookup_LookupIp_Result'>NameLookup_LookupIp_Result</a></code>
+                <code><a class='link' href='#NameLookup_LookupIp_Result'>NameLookup_LookupIp_Result</a></code>
             </td>
         </tr></table>
 
@@ -74,7 +74,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#IpAddress'>IpAddress</a></code>
+                <code><a class='link' href='#IpAddress'>IpAddress</a></code>
             </td>
         </tr></table>
 
@@ -85,7 +85,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#NameLookup_LookupHostname_Result'>NameLookup_LookupHostname_Result</a></code>
+                <code><a class='link' href='#NameLookup_LookupHostname_Result'>NameLookup_LookupHostname_Result</a></code>
             </td>
         </tr></table>
 
@@ -115,7 +115,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>hints</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#AddrInfoHints'>AddrInfoHints</a>?</code>
+                <code><a class='link' href='#AddrInfoHints'>AddrInfoHints</a>?</code>
             </td>
         </tr></table>
 
@@ -126,7 +126,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#AddrInfoStatus'>AddrInfoStatus</a></code>
+                <code><a class='link' href='#AddrInfoStatus'>AddrInfoStatus</a></code>
             </td>
         </tr><tr>
             <td><code>nres</code></td>
@@ -155,7 +155,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#IpAddressInfo'>IpAddressInfo</a></code>
+                <code><a class='link' href='#IpAddressInfo'>IpAddressInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -191,7 +191,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>ipv4_addrs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/index.html#Ipv4Address'>Ipv4Address</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Ipv4Address'>Ipv4Address</a>&gt;</code>
             </td>
             <td> All of the IPv4 addresses for the requested hostname.
 </td>
@@ -199,7 +199,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>ipv6_addrs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/index.html#Ipv6Address'>Ipv6Address</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Ipv6Address'>Ipv6Address</a>&gt;</code>
             </td>
             <td> All of the IPv6 addresses for the requested hostname.
 </td>
@@ -269,7 +269,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#IpAddress'>IpAddress</a></code>
+                <code><a class='link' href='#IpAddress'>IpAddress</a></code>
             </td>
             <td> The IP address of the endpoint.
 </td>
@@ -298,7 +298,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#IpAddress'>IpAddress</a></code>
+                <code><a class='link' href='#IpAddress'>IpAddress</a></code>
             </td>
             <td> The Ipv4 or Ipv6 address. Only the `prefix_len` most significant bits may be set in `addr`;
  all bits in the host portion of the address must be zero.
@@ -440,7 +440,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#AddrStorage'>AddrStorage</a></code>
+                <code><a class='link' href='#AddrStorage'>AddrStorage</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -540,13 +540,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#NameLookup_LookupIp_Response'>NameLookup_LookupIp_Response</a></code>
+                <code><a class='link' href='#NameLookup_LookupIp_Response'>NameLookup_LookupIp_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#LookupError'>LookupError</a></code>
+                <code><a class='link' href='#LookupError'>LookupError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -559,13 +559,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#NameLookup_LookupHostname_Response'>NameLookup_LookupHostname_Response</a></code>
+                <code><a class='link' href='#NameLookup_LookupHostname_Response'>NameLookup_LookupHostname_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#LookupError'>LookupError</a></code>
+                <code><a class='link' href='#LookupError'>LookupError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -579,13 +579,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>ipv4</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#Ipv4Address'>Ipv4Address</a></code>
+                <code><a class='link' href='#Ipv4Address'>Ipv4Address</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>ipv6</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net/index.html#Ipv6Address'>Ipv6Address</a></code>
+                <code><a class='link' href='#Ipv6Address'>Ipv6Address</a></code>
             </td>
             <td></td>
         </tr></table>

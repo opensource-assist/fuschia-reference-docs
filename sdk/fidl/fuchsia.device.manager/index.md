@@ -38,7 +38,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## DeviceController {:#DeviceController}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#85)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#91)*
 
  Protocol for controlling devices in a devhost process from the devcoordinator
 
@@ -171,14 +171,14 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.manager/index.html#CompatibilityTestStatus'>CompatibilityTestStatus</a></code>
+                <code><a class='link' href='#CompatibilityTestStatus'>CompatibilityTestStatus</a></code>
             </td>
         </tr></table>
 
 
 
 ## DevhostController {:#DevhostController}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#123)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#129)*
 
  Protocol for controlling a devhost process from the devcoordinator
 
@@ -312,7 +312,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Coordinator {:#Coordinator}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#163)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#168)*
 
  Interface for the devices in devhosts to coordinate with the devcoordinator.
 
@@ -362,7 +362,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>device_add_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.manager/index.html#AddDeviceConfig'>AddDeviceConfig</a></code>
+                <code><a class='link' href='#AddDeviceConfig'>AddDeviceConfig</a></code>
             </td>
         </tr><tr>
             <td><code>client_remote</code></td>
@@ -771,12 +771,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>components</code></td>
             <td>
-                <code>[8]</code>
-            </td>
-        </tr><tr>
-            <td><code>components_count</code></td>
-            <td>
-                <code>uint32</code>
+                <code>vector&lt;<a class='link' href='#DeviceComponent'>DeviceComponent</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>coresident_device_index</code></td>
@@ -981,8 +976,35 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
+### BindInstruction {:#BindInstruction}
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#19)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>op</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> bitfield that encodes the operation and execution conditions
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>arg</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> bitfield that encodes the arguments
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### DeviceComponentPart {:#DeviceComponentPart}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#56)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#62)*
 
 
 
@@ -1000,7 +1022,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>match_program</code></td>
             <td>
-                <code>uint64[32]</code>
+                <code>[32]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1008,7 +1030,7 @@ Book: /_book.yaml
 </table>
 
 ### DeviceComponent {:#DeviceComponent}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#65)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#71)*
 
 
 
@@ -1040,7 +1062,7 @@ Book: /_book.yaml
 ### CompatibilityTestStatus {:#CompatibilityTestStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#74)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#80)*
 
  A enum of CompatibilityTestStatus
 
@@ -1119,56 +1141,56 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#25">DEVICE_NAME_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#31">DEVICE_NAME_MAX</a></td>
             <td>
                     <code>31</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#29">DEVICE_PATH_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#35">DEVICE_PATH_MAX</a></td>
             <td>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#32">DEVICE_ARGS_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#38">DEVICE_ARGS_MAX</a></td>
             <td>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#35">METADATA_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#41">METADATA_MAX</a></td>
             <td>
                     <code>8192</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#38">PROPERTIES_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#44">PROPERTIES_MAX</a></td>
             <td>
                     <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#41">COMPONENTS_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#47">COMPONENTS_MAX</a></td>
             <td>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#44">DEVICE_COMPONENT_PARTS_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#50">DEVICE_COMPONENT_PARTS_MAX</a></td>
             <td>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#47">DEVICE_COMPONENT_PART_INSTRUCTIONS_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#53">DEVICE_COMPONENT_PART_INSTRUCTIONS_MAX</a></td>
             <td>
                     <code>32</code>
                 </td>

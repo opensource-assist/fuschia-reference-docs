@@ -47,7 +47,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.ethernet/index.html#Info'>Info</a></code>
+                <code><a class='link' href='#Info'>Info</a></code>
             </td>
         </tr></table>
 
@@ -71,7 +71,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.ethernet/index.html#Fifos'>Fifos</a>?</code>
+                <code><a class='link' href='#Fifos'>Fifos</a>?</code>
             </td>
         </tr></table>
 
@@ -241,7 +241,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.ethernet/index.html#MacAddress'>MacAddress</a></code>
+                <code><a class='link' href='#MacAddress'>MacAddress</a></code>
             </td>
         </tr></table>
 
@@ -265,7 +265,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.ethernet/index.html#MacAddress'>MacAddress</a></code>
+                <code><a class='link' href='#MacAddress'>MacAddress</a></code>
             </td>
         </tr></table>
 
@@ -389,7 +389,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>mac</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.ethernet/index.html#MacAddress'>MacAddress</a></code>
+                <code><a class='link' href='#MacAddress'>MacAddress</a></code>
             </td>
             <td></td>
             <td>No default</td>

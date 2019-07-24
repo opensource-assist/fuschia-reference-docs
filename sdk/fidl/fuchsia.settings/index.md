@@ -18,7 +18,7 @@ Book: /_book.yaml
  values change.
 
  - `settings` all current values of the accessibility settings.
- * see <a class='link' href='../fuchsia.settings/index.html#AccessibilitySettings'>AccessibilitySettings</a> for their meaning.
+ * see <a class='link' href='#AccessibilitySettings'>AccessibilitySettings</a> for their meaning.
 
 #### Request
 <table>
@@ -32,7 +32,7 @@ Book: /_book.yaml
     <tr>
             <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#AccessibilitySettings'>AccessibilitySettings</a></code>
+                <code><a class='link' href='#AccessibilitySettings'>AccessibilitySettings</a></code>
             </td>
         </tr></table>
 
@@ -40,7 +40,7 @@ Book: /_book.yaml
 
  Enables or disables audio description.
 
- * see <a class='link' href='../fuchsia.settings/index.html#AccessibilitySettings.audio_description'>AccessibilitySettings.audio_description</a>
+ * see <a class='link' href='#AccessibilitySettings.audio_description'>AccessibilitySettings.audio_description</a>
 
 #### Request
 <table>
@@ -62,7 +62,7 @@ Book: /_book.yaml
 
  Enables or disables the screen reader.
 
- * see <a class='link' href='../fuchsia.settings/index.html#AccessibilitySettings.screen_reader'>AccessibilitySettings.screen_reader</a>
+ * see <a class='link' href='#AccessibilitySettings.screen_reader'>AccessibilitySettings.screen_reader</a>
 
 #### Request
 <table>
@@ -84,7 +84,7 @@ Book: /_book.yaml
 
  Enables or disables color inversion.
 
- * see <a class='link' href='../fuchsia.settings/index.html#AccessibilitySettings.color_inversion'>AccessibilitySettings.color_inversion</a>
+ * see <a class='link' href='#AccessibilitySettings.color_inversion'>AccessibilitySettings.color_inversion</a>
 
 #### Request
 <table>
@@ -106,7 +106,7 @@ Book: /_book.yaml
 
  Enables or disables magnification by triple-tapping the display.
 
- * see <a class='link' href='../fuchsia.settings/index.html#AccessibilitySettings.enable_magnification'>AccessibilitySettings.enable_magnification</a>
+ * see <a class='link' href='#AccessibilitySettings.enable_magnification'>AccessibilitySettings.enable_magnification</a>
 
 #### Request
 <table>
@@ -128,7 +128,7 @@ Book: /_book.yaml
 
  Sets the specific color correction to use, or none.
 
- * see <a class='link' href='../fuchsia.settings/index.html#AccessibilitySettings.color_correction'>AccessibilitySettings.color_correction</a>
+ * see <a class='link' href='#AccessibilitySettings.color_correction'>AccessibilitySettings.color_correction</a>
 
 #### Request
 <table>
@@ -136,7 +136,7 @@ Book: /_book.yaml
     <tr>
             <td><code>color_correction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#ColorBlindnessType'>ColorBlindnessType</a></code>
+                <code><a class='link' href='#ColorBlindnessType'>ColorBlindnessType</a></code>
             </td>
         </tr></table>
 
@@ -151,7 +151,7 @@ Book: /_book.yaml
  Updates closed captions settings.
 
  + `settings` fields to update. Only values explicitly set are changed.
- * see <a class='link' href='../fuchsia.settings/index.html#CaptionsSettings'>CaptionsSettings</a> for their meaning.
+ * see <a class='link' href='#CaptionsSettings'>CaptionsSettings</a> for their meaning.
 
 #### Request
 <table>
@@ -159,7 +159,7 @@ Book: /_book.yaml
     <tr>
             <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#CaptionsSettings'>CaptionsSettings</a></code>
+                <code><a class='link' href='#CaptionsSettings'>CaptionsSettings</a></code>
             </td>
         </tr></table>
 
@@ -191,7 +191,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Display_Watch_Result'>Display_Watch_Result</a></code>
+                <code><a class='link' href='#Display_Watch_Result'>Display_Watch_Result</a></code>
             </td>
         </tr></table>
 
@@ -216,7 +216,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Display_SetAutoBrightness_Result'>Display_SetAutoBrightness_Result</a></code>
+                <code><a class='link' href='#Display_SetAutoBrightness_Result'>Display_SetAutoBrightness_Result</a></code>
             </td>
         </tr></table>
 
@@ -242,7 +242,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Display_SetBrightness_Result'>Display_SetBrightness_Result</a></code>
+                <code><a class='link' href='#Display_SetBrightness_Result'>Display_SetBrightness_Result</a></code>
             </td>
         </tr></table>
 
@@ -269,7 +269,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Intl_Watch_Result'>Intl_Watch_Result</a></code>
+                <code><a class='link' href='#Intl_Watch_Result'>Intl_Watch_Result</a></code>
             </td>
         </tr></table>
 
@@ -294,7 +294,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Intl_SetTimeZone_Result'>Intl_SetTimeZone_Result</a></code>
+                <code><a class='link' href='#Intl_SetTimeZone_Result'>Intl_SetTimeZone_Result</a></code>
             </td>
         </tr></table>
 
@@ -319,7 +319,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Intl_SetTemperatureUnit_Result'>Intl_SetTemperatureUnit_Result</a></code>
+                <code><a class='link' href='#Intl_SetTemperatureUnit_Result'>Intl_SetTemperatureUnit_Result</a></code>
             </td>
         </tr></table>
 
@@ -344,7 +344,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Intl_SetLocales_Result'>Intl_SetLocales_Result</a></code>
+                <code><a class='link' href='#Intl_SetLocales_Result'>Intl_SetLocales_Result</a></code>
             </td>
         </tr></table>
 
@@ -370,7 +370,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#System_Watch_Result'>System_Watch_Result</a></code>
+                <code><a class='link' href='#System_Watch_Result'>System_Watch_Result</a></code>
             </td>
         </tr></table>
 
@@ -384,7 +384,7 @@ Book: /_book.yaml
     <tr>
             <td><code>login_override</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#LoginOverride'>LoginOverride</a></code>
+                <code><a class='link' href='#LoginOverride'>LoginOverride</a></code>
             </td>
         </tr></table>
 
@@ -395,7 +395,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#System_SetLoginOverride_Result'>System_SetLoginOverride_Result</a></code>
+                <code><a class='link' href='#System_SetLoginOverride_Result'>System_SetLoginOverride_Result</a></code>
             </td>
         </tr></table>
 
@@ -454,7 +454,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#DisplaySettings'>DisplaySettings</a></code>
+                <code><a class='link' href='#DisplaySettings'>DisplaySettings</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -494,7 +494,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#IntlSettings'>IntlSettings</a></code>
+                <code><a class='link' href='#IntlSettings'>IntlSettings</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -545,7 +545,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#SystemSettings'>SystemSettings</a></code>
+                <code><a class='link' href='#SystemSettings'>SystemSettings</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -760,7 +760,7 @@ Type: <code>uint32</code>
             <td>5</td>
             <td><code>color_correction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#ColorBlindnessType'>ColorBlindnessType</a></code>
+                <code><a class='link' href='#ColorBlindnessType'>ColorBlindnessType</a></code>
             </td>
             <td> What type of color-blindness, if any, to correct for.
 </td>
@@ -768,7 +768,7 @@ Type: <code>uint32</code>
             <td>6</td>
             <td><code>captions_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#CaptionsSettings'>CaptionsSettings</a></code>
+                <code><a class='link' href='#CaptionsSettings'>CaptionsSettings</a></code>
             </td>
             <td> What kind of sources get closed captions, and how they look.
 </td>
@@ -804,7 +804,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>font_style</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#CaptionFontStyle'>CaptionFontStyle</a></code>
+                <code><a class='link' href='#CaptionFontStyle'>CaptionFontStyle</a></code>
             </td>
             <td> Font style and color used for the closed captions text.
 </td>
@@ -812,7 +812,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>window_color</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Color'>Color</a></code>
+                <code><a class='link' href='#Color'>Color</a></code>
             </td>
             <td> Border color used around the closed captions window.
 </td>
@@ -820,7 +820,7 @@ Type: <code>uint32</code>
             <td>5</td>
             <td><code>background_color</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Color'>Color</a></code>
+                <code><a class='link' href='#Color'>Color</a></code>
             </td>
             <td> Background color of the closed captions window.
 </td>
@@ -840,14 +840,14 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>family</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#CaptionFontFamily'>CaptionFontFamily</a></code>
+                <code><a class='link' href='#CaptionFontFamily'>CaptionFontFamily</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>2</td>
             <td><code>color</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Color'>Color</a></code>
+                <code><a class='link' href='#Color'>Color</a></code>
             </td>
             <td> 47 CFR §79.103(c)(2) requires at least 3-bit RGB for user override of
  closed-captions color.
@@ -866,7 +866,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>char_edge_style</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#CaptionEdgeStyle'>CaptionEdgeStyle</a></code>
+                <code><a class='link' href='#CaptionEdgeStyle'>CaptionEdgeStyle</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -946,7 +946,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#LoginOverride'>LoginOverride</a></code>
+                <code><a class='link' href='#LoginOverride'>LoginOverride</a></code>
             </td>
             <td> If set, indicates a login behavior specified at runtime.
 </td>
@@ -964,13 +964,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Display_Watch_Response'>Display_Watch_Response</a></code>
+                <code><a class='link' href='#Display_Watch_Response'>Display_Watch_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -983,13 +983,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Display_SetAutoBrightness_Response'>Display_SetAutoBrightness_Response</a></code>
+                <code><a class='link' href='#Display_SetAutoBrightness_Response'>Display_SetAutoBrightness_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1002,13 +1002,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Display_SetBrightness_Response'>Display_SetBrightness_Response</a></code>
+                <code><a class='link' href='#Display_SetBrightness_Response'>Display_SetBrightness_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1021,13 +1021,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Intl_Watch_Response'>Intl_Watch_Response</a></code>
+                <code><a class='link' href='#Intl_Watch_Response'>Intl_Watch_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1040,13 +1040,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Intl_SetTimeZone_Response'>Intl_SetTimeZone_Response</a></code>
+                <code><a class='link' href='#Intl_SetTimeZone_Response'>Intl_SetTimeZone_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1059,13 +1059,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Intl_SetTemperatureUnit_Response'>Intl_SetTemperatureUnit_Response</a></code>
+                <code><a class='link' href='#Intl_SetTemperatureUnit_Response'>Intl_SetTemperatureUnit_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1078,13 +1078,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Intl_SetLocales_Response'>Intl_SetLocales_Response</a></code>
+                <code><a class='link' href='#Intl_SetLocales_Response'>Intl_SetLocales_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1097,13 +1097,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#System_Watch_Response'>System_Watch_Response</a></code>
+                <code><a class='link' href='#System_Watch_Response'>System_Watch_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1116,13 +1116,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#System_SetLoginOverride_Response'>System_SetLoginOverride_Response</a></code>
+                <code><a class='link' href='#System_SetLoginOverride_Response'>System_SetLoginOverride_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.settings/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>

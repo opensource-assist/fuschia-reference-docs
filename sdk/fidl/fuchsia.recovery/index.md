@@ -45,7 +45,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.recovery/index.html#FactoryResetStateWatcher'>FactoryResetStateWatcher</a></code>
+                <code><a class='link' href='#FactoryResetStateWatcher'>FactoryResetStateWatcher</a></code>
             </td>
         </tr></table>
 
@@ -64,7 +64,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.recovery/index.html#FactoryResetState'>FactoryResetState</a></code>
+                <code><a class='link' href='#FactoryResetState'>FactoryResetState</a></code>
             </td>
         </tr></table>
 

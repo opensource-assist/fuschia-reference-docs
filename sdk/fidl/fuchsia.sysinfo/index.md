@@ -126,7 +126,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysinfo/index.html#InterruptControllerInfo'>InterruptControllerInfo</a>?</code>
+                <code><a class='link' href='#InterruptControllerInfo'>InterruptControllerInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -145,7 +145,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysinfo/index.html#InterruptControllerType'>InterruptControllerType</a></code>
+                <code><a class='link' href='#InterruptControllerType'>InterruptControllerType</a></code>
             </td>
             <td></td>
             <td>No default</td>

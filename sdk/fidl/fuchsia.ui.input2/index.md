@@ -27,7 +27,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#KeyListener'>KeyListener</a></code>
+                <code><a class='link' href='#KeyListener'>KeyListener</a></code>
             </td>
         </tr></table>
 
@@ -52,7 +52,7 @@ Book: /_book.yaml
     <tr>
             <td><code>event</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#KeyEvent'>KeyEvent</a></code>
+                <code><a class='link' href='#KeyEvent'>KeyEvent</a></code>
             </td>
         </tr></table>
 
@@ -63,7 +63,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -582,7 +582,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>key</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#Key'>Key</a></code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
             <td> Physical key being pressed.
 
@@ -592,7 +592,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>phase</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#KeyEventPhase'>KeyEventPhase</a></code>
+                <code><a class='link' href='#KeyEventPhase'>KeyEventPhase</a></code>
             </td>
             <td> Phase of input.
 </td>
@@ -600,7 +600,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>modifiers</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#Modifiers'>Modifiers</a></code>
+                <code><a class='link' href='#Modifiers'>Modifiers</a></code>
             </td>
             <td> Modifier keys being held.
 </td>

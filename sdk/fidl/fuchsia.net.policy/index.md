@@ -26,7 +26,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.policy/index.html#InterfaceInfo'>InterfaceInfo</a></code>
+                <code><a class='link' href='#InterfaceInfo'>InterfaceInfo</a></code>
             </td>
         </tr></table>
 
@@ -146,7 +146,7 @@ Book: /_book.yaml
     <tr>
             <td><code>events</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.policy/index.html#Events'>Events</a></code>
+                <code><a class='link' href='#Events'>Events</a></code>
             </td>
         </tr></table>
 
@@ -171,7 +171,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.policy/index.html#InterfaceInfo'>InterfaceInfo</a></code>
+                <code><a class='link' href='#InterfaceInfo'>InterfaceInfo</a></code>
             </td>
         </tr></table>
 
@@ -291,7 +291,7 @@ Book: /_book.yaml
     <tr>
             <td><code>events</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.policy/index.html#Events'>Events</a></code>
+                <code><a class='link' href='#Events'>Events</a></code>
             </td>
         </tr></table>
 
@@ -316,7 +316,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.policy/index.html#InterfaceInfo'>InterfaceInfo</a></code>
+                <code><a class='link' href='#InterfaceInfo'>InterfaceInfo</a></code>
             </td>
         </tr></table>
 
@@ -436,7 +436,7 @@ Book: /_book.yaml
     <tr>
             <td><code>events</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.policy/index.html#Events'>Events</a></code>
+                <code><a class='link' href='#Events'>Events</a></code>
             </td>
         </tr></table>
 
@@ -460,7 +460,7 @@ Book: /_book.yaml
     <tr>
             <td><code>infos</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.policy/index.html#InterfaceInfo'>InterfaceInfo</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#InterfaceInfo'>InterfaceInfo</a>&gt;?</code>
             </td>
         </tr><tr>
             <td><code>status</code></td>
@@ -490,7 +490,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.policy/index.html#InterfaceInfo'>InterfaceInfo</a>?</code>
+                <code><a class='link' href='#InterfaceInfo'>InterfaceInfo</a>?</code>
             </td>
         </tr><tr>
             <td><code>status</code></td>
@@ -515,7 +515,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>events</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.policy/index.html#Events'>Events</a></code>
+                <code><a class='link' href='#Events'>Events</a></code>
             </td>
         </tr></table>
 
@@ -538,7 +538,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>interfaceCtl</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.net.policy/index.html#StandardInterfaceController'>StandardInterfaceController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#StandardInterfaceController'>StandardInterfaceController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -568,7 +568,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>interfaceCtl</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.net.policy/index.html#BridgeInterfaceController'>BridgeInterfaceController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#BridgeInterfaceController'>BridgeInterfaceController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -601,7 +601,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.policy/index.html#EthernetControllerRequest'>EthernetControllerRequest</a></code>
+                <code><a class='link' href='#EthernetControllerRequest'>EthernetControllerRequest</a></code>
             </td>
         </tr></table>
 
@@ -702,7 +702,7 @@ Book: /_book.yaml
             <td>3</td>
             <td><code>name</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.policy/index.html#InterfaceNameUpdate'>InterfaceNameUpdate</a></code>
+                <code><a class='link' href='#InterfaceNameUpdate'>InterfaceNameUpdate</a></code>
             </td>
             <td> InterfaceNameUpdate event is triggered whenever an interface's name is changed.
 </td>
@@ -720,13 +720,13 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>standard</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.net.policy/index.html#StandardInterfaceController'>StandardInterfaceController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#StandardInterfaceController'>StandardInterfaceController</a>&gt;</code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>bridge</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.net.policy/index.html#BridgeInterfaceController'>BridgeInterfaceController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#BridgeInterfaceController'>BridgeInterfaceController</a>&gt;</code>
             </td>
             <td></td>
         </tr></table>

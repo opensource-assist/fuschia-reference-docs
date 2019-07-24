@@ -23,7 +23,7 @@ Book: /_book.yaml
     <tr>
             <td><code>control</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualaudio/index.html#Control'>Control</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Control'>Control</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -38,7 +38,7 @@ Book: /_book.yaml
     <tr>
             <td><code>input</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualaudio/index.html#Input'>Input</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Input'>Input</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -53,7 +53,7 @@ Book: /_book.yaml
     <tr>
             <td><code>output</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualaudio/index.html#Output'>Output</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Output'>Output</a>&gt;</code>
             </td>
         </tr></table>
 

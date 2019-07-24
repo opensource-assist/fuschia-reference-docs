@@ -30,12 +30,12 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.scpi/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>opps</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.scpi/index.html#DvfsOpp'>DvfsOpp</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#DvfsOpp'>DvfsOpp</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -54,12 +54,12 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.scpi/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>sys_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.scpi/index.html#SystemStatus'>SystemStatus</a></code>
+                <code><a class='link' href='#SystemStatus'>SystemStatus</a></code>
             </td>
         </tr></table>
 

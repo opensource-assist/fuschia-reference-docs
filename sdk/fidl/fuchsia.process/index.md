@@ -38,7 +38,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.process/index.html#LaunchInfo'>LaunchInfo</a></code>
+                <code><a class='link' href='#LaunchInfo'>LaunchInfo</a></code>
             </td>
         </tr></table>
 
@@ -76,7 +76,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.process/index.html#LaunchInfo'>LaunchInfo</a></code>
+                <code><a class='link' href='#LaunchInfo'>LaunchInfo</a></code>
             </td>
         </tr></table>
 
@@ -92,7 +92,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.process/index.html#ProcessStartData'>ProcessStartData</a>?</code>
+                <code><a class='link' href='#ProcessStartData'>ProcessStartData</a>?</code>
             </td>
         </tr></table>
 
@@ -148,7 +148,7 @@ Book: /_book.yaml
     <tr>
             <td><code>names</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.process/index.html#NameInfo'>NameInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#NameInfo'>NameInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -166,7 +166,7 @@ Book: /_book.yaml
     <tr>
             <td><code>handles</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.process/index.html#HandleInfo'>HandleInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#HandleInfo'>HandleInfo</a>&gt;</code>
             </td>
         </tr></table>
 

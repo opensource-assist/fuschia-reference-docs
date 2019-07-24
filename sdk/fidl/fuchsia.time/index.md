@@ -54,7 +54,7 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.time/index.html#UtcState'>UtcState</a></code>
+                <code><a class='link' href='#UtcState'>UtcState</a></code>
             </td>
         </tr></table>
 
@@ -109,7 +109,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.time/index.html#UtcSource'>UtcSource</a></code>
+                <code><a class='link' href='#UtcSource'>UtcSource</a></code>
             </td>
             <td> The source of our current UTC approximation.
 </td>

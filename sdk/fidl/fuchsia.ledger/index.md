@@ -66,12 +66,12 @@ Book: /_book.yaml
     <tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageId'>PageId</a>?</code>
+                <code><a class='link' href='#PageId'>PageId</a>?</code>
             </td>
         </tr><tr>
             <td><code>page_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ledger/index.html#Page'>Page</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Page'>Page</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -90,7 +90,7 @@ Book: /_book.yaml
     <tr>
             <td><code>page_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ledger/index.html#Page'>Page</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Page'>Page</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -114,7 +114,7 @@ Book: /_book.yaml
     <tr>
             <td><code>factory</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#ConflictResolverFactory'>ConflictResolverFactory</a></code>
+                <code><a class='link' href='#ConflictResolverFactory'>ConflictResolverFactory</a></code>
             </td>
         </tr></table>
 
@@ -155,7 +155,7 @@ Book: /_book.yaml
     <tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageId'>PageId</a></code>
+                <code><a class='link' href='#PageId'>PageId</a></code>
             </td>
         </tr></table>
 
@@ -176,7 +176,7 @@ Book: /_book.yaml
     <tr>
             <td><code>snapshot_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ledger/index.html#PageSnapshot'>PageSnapshot</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#PageSnapshot'>PageSnapshot</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>key_prefix</code></td>
@@ -186,7 +186,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageWatcher'>PageWatcher</a>?</code>
+                <code><a class='link' href='#PageWatcher'>PageWatcher</a>?</code>
             </td>
         </tr></table>
 
@@ -248,7 +248,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>priority</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Priority'>Priority</a></code>
+                <code><a class='link' href='#Priority'>Priority</a></code>
             </td>
         </tr></table>
 
@@ -268,12 +268,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>reference</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Reference'>Reference</a></code>
+                <code><a class='link' href='#Reference'>Reference</a></code>
             </td>
         </tr><tr>
             <td><code>priority</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Priority'>Priority</a></code>
+                <code><a class='link' href='#Priority'>Priority</a></code>
             </td>
         </tr></table>
 
@@ -339,7 +339,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Page_CreateReferenceFromSocket_Result'>Page_CreateReferenceFromSocket_Result</a></code>
+                <code><a class='link' href='#Page_CreateReferenceFromSocket_Result'>Page_CreateReferenceFromSocket_Result</a></code>
             </td>
         </tr></table>
 
@@ -366,7 +366,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Page_CreateReferenceFromBuffer_Result'>Page_CreateReferenceFromBuffer_Result</a></code>
+                <code><a class='link' href='#Page_CreateReferenceFromBuffer_Result'>Page_CreateReferenceFromBuffer_Result</a></code>
             </td>
         </tr></table>
 
@@ -439,7 +439,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#SyncWatcher'>SyncWatcher</a></code>
+                <code><a class='link' href='#SyncWatcher'>SyncWatcher</a></code>
             </td>
         </tr></table>
 
@@ -467,7 +467,7 @@ Book: /_book.yaml
     <tr>
             <td><code>wait_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#ConflictResolutionWaitStatus'>ConflictResolutionWaitStatus</a></code>
+                <code><a class='link' href='#ConflictResolutionWaitStatus'>ConflictResolutionWaitStatus</a></code>
             </td>
         </tr></table>
 
@@ -518,7 +518,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Token'>Token</a>?</code>
+                <code><a class='link' href='#Token'>Token</a>?</code>
             </td>
         </tr></table>
 
@@ -529,12 +529,12 @@ Book: /_book.yaml
     <tr>
             <td><code>entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ledger/index.html#Entry'>Entry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#Entry'>Entry</a>&gt;[65536]</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Token'>Token</a>?</code>
+                <code><a class='link' href='#Token'>Token</a>?</code>
             </td>
         </tr></table>
 
@@ -554,7 +554,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Token'>Token</a>?</code>
+                <code><a class='link' href='#Token'>Token</a>?</code>
             </td>
         </tr></table>
 
@@ -565,12 +565,12 @@ Book: /_book.yaml
     <tr>
             <td><code>entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ledger/index.html#InlinedEntry'>InlinedEntry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#InlinedEntry'>InlinedEntry</a>&gt;[65536]</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Token'>Token</a>?</code>
+                <code><a class='link' href='#Token'>Token</a>?</code>
             </td>
         </tr></table>
 
@@ -597,7 +597,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Token'>Token</a>?</code>
+                <code><a class='link' href='#Token'>Token</a>?</code>
             </td>
         </tr></table>
 
@@ -613,7 +613,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>next_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Token'>Token</a>?</code>
+                <code><a class='link' href='#Token'>Token</a>?</code>
             </td>
         </tr></table>
 
@@ -641,7 +641,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageSnapshot_Get_Result'>PageSnapshot_Get_Result</a></code>
+                <code><a class='link' href='#PageSnapshot_Get_Result'>PageSnapshot_Get_Result</a></code>
             </td>
         </tr></table>
 
@@ -669,7 +669,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageSnapshot_GetInline_Result'>PageSnapshot_GetInline_Result</a></code>
+                <code><a class='link' href='#PageSnapshot_GetInline_Result'>PageSnapshot_GetInline_Result</a></code>
             </td>
         </tr></table>
 
@@ -696,7 +696,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageSnapshot_Fetch_Result'>PageSnapshot_Fetch_Result</a></code>
+                <code><a class='link' href='#PageSnapshot_Fetch_Result'>PageSnapshot_Fetch_Result</a></code>
             </td>
         </tr></table>
 
@@ -736,7 +736,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageSnapshot_FetchPartial_Result'>PageSnapshot_FetchPartial_Result</a></code>
+                <code><a class='link' href='#PageSnapshot_FetchPartial_Result'>PageSnapshot_FetchPartial_Result</a></code>
             </td>
         </tr></table>
 
@@ -773,12 +773,12 @@ Book: /_book.yaml
     <tr>
             <td><code>page_change</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageChange'>PageChange</a></code>
+                <code><a class='link' href='#PageChange'>PageChange</a></code>
             </td>
         </tr><tr>
             <td><code>result_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#ResultState'>ResultState</a></code>
+                <code><a class='link' href='#ResultState'>ResultState</a></code>
             </td>
         </tr></table>
 
@@ -789,7 +789,7 @@ Book: /_book.yaml
     <tr>
             <td><code>snapshot</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ledger/index.html#PageSnapshot'>PageSnapshot</a>&gt;?</code>
+                <code>request&lt;<a class='link' href='#PageSnapshot'>PageSnapshot</a>&gt;?</code>
             </td>
         </tr></table>
 
@@ -810,7 +810,7 @@ Book: /_book.yaml
     <tr>
             <td><code>page_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageId'>PageId</a></code>
+                <code><a class='link' href='#PageId'>PageId</a></code>
             </td>
         </tr></table>
 
@@ -821,7 +821,7 @@ Book: /_book.yaml
     <tr>
             <td><code>policy</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#MergePolicy'>MergePolicy</a></code>
+                <code><a class='link' href='#MergePolicy'>MergePolicy</a></code>
             </td>
         </tr></table>
 
@@ -837,12 +837,12 @@ Book: /_book.yaml
     <tr>
             <td><code>page_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageId'>PageId</a></code>
+                <code><a class='link' href='#PageId'>PageId</a></code>
             </td>
         </tr><tr>
             <td><code>resolver</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ledger/index.html#ConflictResolver'>ConflictResolver</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ConflictResolver'>ConflictResolver</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -894,7 +894,7 @@ Book: /_book.yaml
     <tr>
             <td><code>token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Token'>Token</a>?</code>
+                <code><a class='link' href='#Token'>Token</a>?</code>
             </td>
         </tr></table>
 
@@ -905,12 +905,12 @@ Book: /_book.yaml
     <tr>
             <td><code>changes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ledger/index.html#DiffEntry'>DiffEntry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#DiffEntry'>DiffEntry</a>&gt;[65536]</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Token'>Token</a>?</code>
+                <code><a class='link' href='#Token'>Token</a>?</code>
             </td>
         </tr></table>
 
@@ -928,7 +928,7 @@ Book: /_book.yaml
     <tr>
             <td><code>token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Token'>Token</a>?</code>
+                <code><a class='link' href='#Token'>Token</a>?</code>
             </td>
         </tr></table>
 
@@ -939,12 +939,12 @@ Book: /_book.yaml
     <tr>
             <td><code>changes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ledger/index.html#DiffEntry'>DiffEntry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#DiffEntry'>DiffEntry</a>&gt;[65536]</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Token'>Token</a>?</code>
+                <code><a class='link' href='#Token'>Token</a>?</code>
             </td>
         </tr></table>
 
@@ -970,7 +970,7 @@ Book: /_book.yaml
     <tr>
             <td><code>merge_changes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ledger/index.html#MergedValue'>MergedValue</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#MergedValue'>MergedValue</a>&gt;[65536]</code>
             </td>
         </tr></table>
 
@@ -1032,22 +1032,22 @@ Book: /_book.yaml
     <tr>
             <td><code>left</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageSnapshot'>PageSnapshot</a></code>
+                <code><a class='link' href='#PageSnapshot'>PageSnapshot</a></code>
             </td>
         </tr><tr>
             <td><code>right</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageSnapshot'>PageSnapshot</a></code>
+                <code><a class='link' href='#PageSnapshot'>PageSnapshot</a></code>
             </td>
         </tr><tr>
             <td><code>common_version</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageSnapshot'>PageSnapshot</a>?</code>
+                <code><a class='link' href='#PageSnapshot'>PageSnapshot</a>?</code>
             </td>
         </tr><tr>
             <td><code>new_result_provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#MergeResultProvider'>MergeResultProvider</a></code>
+                <code><a class='link' href='#MergeResultProvider'>MergeResultProvider</a></code>
             </td>
         </tr></table>
 
@@ -1069,12 +1069,12 @@ Book: /_book.yaml
     <tr>
             <td><code>download_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#SyncState'>SyncState</a></code>
+                <code><a class='link' href='#SyncState'>SyncState</a></code>
             </td>
         </tr><tr>
             <td><code>upload_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#SyncState'>SyncState</a></code>
+                <code><a class='link' href='#SyncState'>SyncState</a></code>
             </td>
         </tr></table>
 
@@ -1099,7 +1099,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>reference</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Reference'>Reference</a></code>
+                <code><a class='link' href='#Reference'>Reference</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1117,7 +1117,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>reference</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Reference'>Reference</a></code>
+                <code><a class='link' href='#Reference'>Reference</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1153,7 +1153,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#InlinedValue'>InlinedValue</a></code>
+                <code><a class='link' href='#InlinedValue'>InlinedValue</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1282,7 +1282,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>priority</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Priority'>Priority</a></code>
+                <code><a class='link' href='#Priority'>Priority</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1327,7 +1327,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>inlined_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#InlinedValue'>InlinedValue</a>?</code>
+                <code><a class='link' href='#InlinedValue'>InlinedValue</a>?</code>
             </td>
             <td> `value` is null if the value requested has the LAZY priority and is not
  present on the device. Clients must use a Fetch call to retrieve the
@@ -1337,7 +1337,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>priority</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Priority'>Priority</a></code>
+                <code><a class='link' href='#Priority'>Priority</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1367,7 +1367,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>changed_entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ledger/index.html#Entry'>Entry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#Entry'>Entry</a>&gt;[65536]</code>
             </td>
             <td> List of new and modified entries. `changed_entries` are sorted by `key`.
 </td>
@@ -1404,21 +1404,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#ValueSource'>ValueSource</a></code>
+                <code><a class='link' href='#ValueSource'>ValueSource</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>new_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#BytesOrReference'>BytesOrReference</a>?</code>
+                <code><a class='link' href='#BytesOrReference'>BytesOrReference</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>priority</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Priority'>Priority</a></code>
+                <code><a class='link' href='#Priority'>Priority</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1448,21 +1448,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>base</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Value'>Value</a>?</code>
+                <code><a class='link' href='#Value'>Value</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>left</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Value'>Value</a>?</code>
+                <code><a class='link' href='#Value'>Value</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>right</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Value'>Value</a>?</code>
+                <code><a class='link' href='#Value'>Value</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1491,7 +1491,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>priority</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Priority'>Priority</a></code>
+                <code><a class='link' href='#Priority'>Priority</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1682,7 +1682,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Page_CreateReferenceFromSocket_Response'>Page_CreateReferenceFromSocket_Response</a></code>
+                <code><a class='link' href='#Page_CreateReferenceFromSocket_Response'>Page_CreateReferenceFromSocket_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1701,7 +1701,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Page_CreateReferenceFromBuffer_Response'>Page_CreateReferenceFromBuffer_Response</a></code>
+                <code><a class='link' href='#Page_CreateReferenceFromBuffer_Response'>Page_CreateReferenceFromBuffer_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1720,13 +1720,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageSnapshot_Get_Response'>PageSnapshot_Get_Response</a></code>
+                <code><a class='link' href='#PageSnapshot_Get_Response'>PageSnapshot_Get_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1739,13 +1739,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageSnapshot_GetInline_Response'>PageSnapshot_GetInline_Response</a></code>
+                <code><a class='link' href='#PageSnapshot_GetInline_Response'>PageSnapshot_GetInline_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1758,13 +1758,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageSnapshot_Fetch_Response'>PageSnapshot_Fetch_Response</a></code>
+                <code><a class='link' href='#PageSnapshot_Fetch_Response'>PageSnapshot_Fetch_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1777,13 +1777,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#PageSnapshot_FetchPartial_Response'>PageSnapshot_FetchPartial_Response</a></code>
+                <code><a class='link' href='#PageSnapshot_FetchPartial_Response'>PageSnapshot_FetchPartial_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1804,7 +1804,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>reference</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/index.html#Reference'>Reference</a></code>
+                <code><a class='link' href='#Reference'>Reference</a></code>
             </td>
             <td></td>
         </tr></table>

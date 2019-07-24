@@ -26,7 +26,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>cbw</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.common/index.html#CBW'>CBW</a></code>
+                <code><a class='link' href='#CBW'>CBW</a></code>
             </td>
             <td></td>
             <td>No default</td>

@@ -88,7 +88,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>resource</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ResourceArgs'>ResourceArgs</a></code>
+                <code><a class='link' href='#ResourceArgs'>ResourceArgs</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -198,7 +198,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>spec</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ImportSpec'>ImportSpec</a></code>
+                <code><a class='link' href='#ImportSpec'>ImportSpec</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -294,7 +294,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Vector3Value'>Vector3Value</a></code>
+                <code><a class='link' href='#Vector3Value'>Vector3Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -323,7 +323,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Vector3Value'>Vector3Value</a></code>
+                <code><a class='link' href='#Vector3Value'>Vector3Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -352,7 +352,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#QuaternionValue'>QuaternionValue</a></code>
+                <code><a class='link' href='#QuaternionValue'>QuaternionValue</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -381,7 +381,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Vector3Value'>Vector3Value</a></code>
+                <code><a class='link' href='#Vector3Value'>Vector3Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -412,7 +412,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Vector2Value'>Vector2Value</a></code>
+                <code><a class='link' href='#Vector2Value'>Vector2Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -727,7 +727,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>hit_test_behavior</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#HitTestBehavior'>HitTestBehavior</a></code>
+                <code><a class='link' href='#HitTestBehavior'>HitTestBehavior</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -756,7 +756,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>properties</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewProperties'>ViewProperties</a></code>
+                <code><a class='link' href='#ViewProperties'>ViewProperties</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -781,7 +781,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>callback</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SnapshotCallbackHACK'>SnapshotCallbackHACK</a></code>
+                <code><a class='link' href='#SnapshotCallbackHACK'>SnapshotCallbackHACK</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -845,21 +845,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>eye_position</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Vector3Value'>Vector3Value</a></code>
+                <code><a class='link' href='#Vector3Value'>Vector3Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>eye_look_at</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Vector3Value'>Vector3Value</a></code>
+                <code><a class='link' href='#Vector3Value'>Vector3Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>eye_up</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Vector3Value'>Vector3Value</a></code>
+                <code><a class='link' href='#Vector3Value'>Vector3Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -893,7 +893,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>fovy</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#FloatValue'>FloatValue</a></code>
+                <code><a class='link' href='#FloatValue'>FloatValue</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -928,14 +928,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>left_projection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Matrix4Value'>Matrix4Value</a></code>
+                <code><a class='link' href='#Matrix4Value'>Matrix4Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>right_projection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Matrix4Value'>Matrix4Value</a></code>
+                <code><a class='link' href='#Matrix4Value'>Matrix4Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1079,7 +1079,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>color</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ColorRgbValue'>ColorRgbValue</a></code>
+                <code><a class='link' href='#ColorRgbValue'>ColorRgbValue</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1105,7 +1105,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>direction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Vector3Value'>Vector3Value</a></code>
+                <code><a class='link' href='#Vector3Value'>Vector3Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1238,7 +1238,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>color</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ColorRgbaValue'>ColorRgbaValue</a></code>
+                <code><a class='link' href='#ColorRgbaValue'>ColorRgbaValue</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1256,7 +1256,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>position_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ValueType'>ValueType</a></code>
+                <code><a class='link' href='#ValueType'>ValueType</a></code>
             </td>
             <td> kVector2 or kVector3.
 </td>
@@ -1264,7 +1264,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>normal_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ValueType'>ValueType</a></code>
+                <code><a class='link' href='#ValueType'>ValueType</a></code>
             </td>
             <td> kVector2 or kVector3 (must match position_type), or kNone.
 </td>
@@ -1272,7 +1272,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>tex_coord_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ValueType'>ValueType</a></code>
+                <code><a class='link' href='#ValueType'>ValueType</a></code>
             </td>
             <td> kVector2 or kNone.
 </td>
@@ -1305,7 +1305,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>index_format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#MeshIndexFormat'>MeshIndexFormat</a></code>
+                <code><a class='link' href='#MeshIndexFormat'>MeshIndexFormat</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1333,7 +1333,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>vertex_format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#MeshVertexFormat'>MeshVertexFormat</a></code>
+                <code><a class='link' href='#MeshVertexFormat'>MeshVertexFormat</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1354,7 +1354,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>bounding_box</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#BoundingBox'>BoundingBox</a></code>
+                <code><a class='link' href='#BoundingBox'>BoundingBox</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1523,7 +1523,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>param</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#RendererParam'>RendererParam</a></code>
+                <code><a class='link' href='#RendererParam'>RendererParam</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1667,7 +1667,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>clip_planes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ui.gfx/index.html#Plane3'>Plane3</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Plane3'>Plane3</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1693,7 +1693,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>position</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Vector3Value'>Vector3Value</a></code>
+                <code><a class='link' href='#Vector3Value'>Vector3Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1724,7 +1724,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>falloff</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#FloatValue'>FloatValue</a></code>
+                <code><a class='link' href='#FloatValue'>FloatValue</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1944,7 +1944,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>color</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ColorRgbValue'>ColorRgbValue</a></code>
+                <code><a class='link' href='#ColorRgbValue'>ColorRgbValue</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2006,7 +2006,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>metrics</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Metrics'>Metrics</a></code>
+                <code><a class='link' href='#Metrics'>Metrics</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2187,7 +2187,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>properties</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewProperties'>ViewProperties</a></code>
+                <code><a class='link' href='#ViewProperties'>ViewProperties</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2241,7 +2241,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>properties</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewProperties'>ViewProperties</a></code>
+                <code><a class='link' href='#ViewProperties'>ViewProperties</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2267,7 +2267,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewState'>ViewState</a></code>
+                <code><a class='link' href='#ViewState'>ViewState</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2302,7 +2302,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>ray_origin</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec4'>vec4</a></code>
+                <code><a class='link' href='#vec4'>vec4</a></code>
             </td>
             <td> The origin of the ray that was used for the hit test, in the hit
  node's coordinate system.
@@ -2311,7 +2311,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>ray_direction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec4'>vec4</a></code>
+                <code><a class='link' href='#vec4'>vec4</a></code>
             </td>
             <td> The direction of the ray that was used for the hit test, in the hit
  node's coordinate system.
@@ -2320,7 +2320,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>inverse_transform</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#mat4'>mat4</a></code>
+                <code><a class='link' href='#mat4'>mat4</a></code>
             </td>
             <td> The inverse transformation matrix which maps the coordinate system of
  the node at which the hit test was initiated into the local coordinate
@@ -3074,14 +3074,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ValueType'>ValueType</a></code>
+                <code><a class='link' href='#ValueType'>ValueType</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>initial_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3102,14 +3102,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>width</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>height</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3134,42 +3134,42 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>width</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>height</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>top_left_radius</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>top_right_radius</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>bottom_right_radius</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>bottom_left_radius</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3187,7 +3187,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>radius</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3504,7 +3504,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>dir</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec3'>vec3</a></code>
+                <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3529,21 +3529,21 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>translation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec3'>vec3</a></code>
+                <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>scale</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec3'>vec3</a></code>
+                <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>anchor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec3'>vec3</a></code>
+                <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
             <td> Point around which rotation and scaling occur.
 </td>
@@ -3551,7 +3551,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>rotation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Quaternion'>Quaternion</a></code>
+                <code><a class='link' href='#Quaternion'>Quaternion</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3602,7 +3602,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec2'>vec2</a></code>
+                <code><a class='link' href='#vec2'>vec2</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3631,7 +3631,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec3'>vec3</a></code>
+                <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3660,7 +3660,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec4'>vec4</a></code>
+                <code><a class='link' href='#vec4'>vec4</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3689,7 +3689,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#mat4'>mat4</a></code>
+                <code><a class='link' href='#mat4'>mat4</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3718,7 +3718,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ColorRgb'>ColorRgb</a></code>
+                <code><a class='link' href='#ColorRgb'>ColorRgb</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3747,7 +3747,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ColorRgba'>ColorRgba</a></code>
+                <code><a class='link' href='#ColorRgba'>ColorRgba</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3776,7 +3776,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Quaternion'>Quaternion</a></code>
+                <code><a class='link' href='#Quaternion'>Quaternion</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3857,14 +3857,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>min</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec3'>vec3</a></code>
+                <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>max</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec3'>vec3</a></code>
+                <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3883,7 +3883,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>bounding_box</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#BoundingBox'>BoundingBox</a></code>
+                <code><a class='link' href='#BoundingBox'>BoundingBox</a></code>
             </td>
             <td> The View's bounding box extents can be defined as:
     { bounding_box.min + inset_from_min, bounding_box.max - inset_from_max }
@@ -3894,7 +3894,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>inset_from_min</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec3'>vec3</a></code>
+                <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
             <td> `insets_from_min` and `insets_from_max` specify the distances between the
  view's bounding box and that of its parent.
@@ -3903,7 +3903,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>inset_from_max</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec3'>vec3</a></code>
+                <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4147,342 +4147,342 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>create_resource</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#CreateResourceCmd'>CreateResourceCmd</a></code>
+                <code><a class='link' href='#CreateResourceCmd'>CreateResourceCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>release_resource</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ReleaseResourceCmd'>ReleaseResourceCmd</a></code>
+                <code><a class='link' href='#ReleaseResourceCmd'>ReleaseResourceCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>export_resource</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ExportResourceCmd'>ExportResourceCmd</a></code>
+                <code><a class='link' href='#ExportResourceCmd'>ExportResourceCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>import_resource</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ImportResourceCmd'>ImportResourceCmd</a></code>
+                <code><a class='link' href='#ImportResourceCmd'>ImportResourceCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_tag</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetTagCmd'>SetTagCmd</a></code>
+                <code><a class='link' href='#SetTagCmd'>SetTagCmd</a></code>
             </td>
             <td> Tagging commands.
 </td>
         </tr><tr>
             <td><code>detach</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#DetachCmd'>DetachCmd</a></code>
+                <code><a class='link' href='#DetachCmd'>DetachCmd</a></code>
             </td>
             <td> Grouping commands.
 </td>
         </tr><tr>
             <td><code>set_translation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetTranslationCmd'>SetTranslationCmd</a></code>
+                <code><a class='link' href='#SetTranslationCmd'>SetTranslationCmd</a></code>
             </td>
             <td> Spatial commands.
 </td>
         </tr><tr>
             <td><code>set_scale</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetScaleCmd'>SetScaleCmd</a></code>
+                <code><a class='link' href='#SetScaleCmd'>SetScaleCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_rotation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetRotationCmd'>SetRotationCmd</a></code>
+                <code><a class='link' href='#SetRotationCmd'>SetRotationCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_anchor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetAnchorCmd'>SetAnchorCmd</a></code>
+                <code><a class='link' href='#SetAnchorCmd'>SetAnchorCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_size</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetSizeCmd'>SetSizeCmd</a></code>
+                <code><a class='link' href='#SetSizeCmd'>SetSizeCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_opacity</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetOpacityCmd'>SetOpacityCmd</a></code>
+                <code><a class='link' href='#SetOpacityCmd'>SetOpacityCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>send_size_change_hint_hack</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SendSizeChangeHintCmdHACK'>SendSizeChangeHintCmdHACK</a></code>
+                <code><a class='link' href='#SendSizeChangeHintCmdHACK'>SendSizeChangeHintCmdHACK</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>add_child</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#AddChildCmd'>AddChildCmd</a></code>
+                <code><a class='link' href='#AddChildCmd'>AddChildCmd</a></code>
             </td>
             <td> Node-specific commands.
 </td>
         </tr><tr>
             <td><code>add_part</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#AddPartCmd'>AddPartCmd</a></code>
+                <code><a class='link' href='#AddPartCmd'>AddPartCmd</a></code>
             </td>
             <td> re-parenting?
 </td>
         </tr><tr>
             <td><code>detach_children</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#DetachChildrenCmd'>DetachChildrenCmd</a></code>
+                <code><a class='link' href='#DetachChildrenCmd'>DetachChildrenCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_shape</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetShapeCmd'>SetShapeCmd</a></code>
+                <code><a class='link' href='#SetShapeCmd'>SetShapeCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_material</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetMaterialCmd'>SetMaterialCmd</a></code>
+                <code><a class='link' href='#SetMaterialCmd'>SetMaterialCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_clip</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetClipCmd'>SetClipCmd</a></code>
+                <code><a class='link' href='#SetClipCmd'>SetClipCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_hit_test_behavior</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetHitTestBehaviorCmd'>SetHitTestBehaviorCmd</a></code>
+                <code><a class='link' href='#SetHitTestBehaviorCmd'>SetHitTestBehaviorCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_view_properties</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetViewPropertiesCmd'>SetViewPropertiesCmd</a></code>
+                <code><a class='link' href='#SetViewPropertiesCmd'>SetViewPropertiesCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>take_snapshot_cmd</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#TakeSnapshotCmdHACK'>TakeSnapshotCmdHACK</a></code>
+                <code><a class='link' href='#TakeSnapshotCmdHACK'>TakeSnapshotCmdHACK</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_camera</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetCameraCmd'>SetCameraCmd</a></code>
+                <code><a class='link' href='#SetCameraCmd'>SetCameraCmd</a></code>
             </td>
             <td> Camera and lighting commands.
 </td>
         </tr><tr>
             <td><code>set_camera_transform</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetCameraTransformCmd'>SetCameraTransformCmd</a></code>
+                <code><a class='link' href='#SetCameraTransformCmd'>SetCameraTransformCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_camera_projection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetCameraProjectionCmd'>SetCameraProjectionCmd</a></code>
+                <code><a class='link' href='#SetCameraProjectionCmd'>SetCameraProjectionCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_stereo_camera_projection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetStereoCameraProjectionCmd'>SetStereoCameraProjectionCmd</a></code>
+                <code><a class='link' href='#SetStereoCameraProjectionCmd'>SetStereoCameraProjectionCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_camera_pose_buffer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetCameraPoseBufferCmd'>SetCameraPoseBufferCmd</a></code>
+                <code><a class='link' href='#SetCameraPoseBufferCmd'>SetCameraPoseBufferCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_light_color</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetLightColorCmd'>SetLightColorCmd</a></code>
+                <code><a class='link' href='#SetLightColorCmd'>SetLightColorCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_light_direction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetLightDirectionCmd'>SetLightDirectionCmd</a></code>
+                <code><a class='link' href='#SetLightDirectionCmd'>SetLightDirectionCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>add_light</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#AddLightCmd'>AddLightCmd</a></code>
+                <code><a class='link' href='#AddLightCmd'>AddLightCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>detach_light</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#DetachLightCmd'>DetachLightCmd</a></code>
+                <code><a class='link' href='#DetachLightCmd'>DetachLightCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>detach_lights</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#DetachLightsCmd'>DetachLightsCmd</a></code>
+                <code><a class='link' href='#DetachLightsCmd'>DetachLightsCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_texture</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetTextureCmd'>SetTextureCmd</a></code>
+                <code><a class='link' href='#SetTextureCmd'>SetTextureCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_color</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetColorCmd'>SetColorCmd</a></code>
+                <code><a class='link' href='#SetColorCmd'>SetColorCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>bind_mesh_buffers</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#BindMeshBuffersCmd'>BindMeshBuffersCmd</a></code>
+                <code><a class='link' href='#BindMeshBuffersCmd'>BindMeshBuffersCmd</a></code>
             </td>
             <td> Mesh commands.
 </td>
         </tr><tr>
             <td><code>add_layer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#AddLayerCmd'>AddLayerCmd</a></code>
+                <code><a class='link' href='#AddLayerCmd'>AddLayerCmd</a></code>
             </td>
             <td> Layer and renderer commands.
 </td>
         </tr><tr>
             <td><code>remove_layer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#RemoveLayerCmd'>RemoveLayerCmd</a></code>
+                <code><a class='link' href='#RemoveLayerCmd'>RemoveLayerCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>remove_all_layers</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#RemoveAllLayersCmd'>RemoveAllLayersCmd</a></code>
+                <code><a class='link' href='#RemoveAllLayersCmd'>RemoveAllLayersCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_layer_stack</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetLayerStackCmd'>SetLayerStackCmd</a></code>
+                <code><a class='link' href='#SetLayerStackCmd'>SetLayerStackCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_renderer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetRendererCmd'>SetRendererCmd</a></code>
+                <code><a class='link' href='#SetRendererCmd'>SetRendererCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_renderer_param</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetRendererParamCmd'>SetRendererParamCmd</a></code>
+                <code><a class='link' href='#SetRendererParamCmd'>SetRendererParamCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_event_mask</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetEventMaskCmd'>SetEventMaskCmd</a></code>
+                <code><a class='link' href='#SetEventMaskCmd'>SetEventMaskCmd</a></code>
             </td>
             <td> Events.
 </td>
         </tr><tr>
             <td><code>set_label</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetLabelCmd'>SetLabelCmd</a></code>
+                <code><a class='link' href='#SetLabelCmd'>SetLabelCmd</a></code>
             </td>
             <td> Diagnostic commands.
 </td>
         </tr><tr>
             <td><code>set_disable_clipping</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetDisableClippingCmd'>SetDisableClippingCmd</a></code>
+                <code><a class='link' href='#SetDisableClippingCmd'>SetDisableClippingCmd</a></code>
             </td>
             <td> Debugging commands.
 </td>
         </tr><tr>
             <td><code>set_import_focus</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetImportFocusCmdDEPRECATED'>SetImportFocusCmdDEPRECATED</a></code>
+                <code><a class='link' href='#SetImportFocusCmdDEPRECATED'>SetImportFocusCmdDEPRECATED</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_clip_planes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetClipPlanesCmd'>SetClipPlanesCmd</a></code>
+                <code><a class='link' href='#SetClipPlanesCmd'>SetClipPlanesCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_point_light_position</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetPointLightPositionCmd'>SetPointLightPositionCmd</a></code>
+                <code><a class='link' href='#SetPointLightPositionCmd'>SetPointLightPositionCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_point_light_falloff</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetPointLightFalloffCmd'>SetPointLightFalloffCmd</a></code>
+                <code><a class='link' href='#SetPointLightFalloffCmd'>SetPointLightFalloffCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>scene__add_ambient_light</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SceneAddAmbientLightCmd'>SceneAddAmbientLightCmd</a></code>
+                <code><a class='link' href='#SceneAddAmbientLightCmd'>SceneAddAmbientLightCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>scene__add_directional_light</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SceneAddDirectionalLightCmd'>SceneAddDirectionalLightCmd</a></code>
+                <code><a class='link' href='#SceneAddDirectionalLightCmd'>SceneAddDirectionalLightCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>scene__add_point_light</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SceneAddPointLightCmd'>SceneAddPointLightCmd</a></code>
+                <code><a class='link' href='#SceneAddPointLightCmd'>SceneAddPointLightCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_display_color_conversion</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetDisplayColorConversionCmdHACK'>SetDisplayColorConversionCmdHACK</a></code>
+                <code><a class='link' href='#SetDisplayColorConversionCmdHACK'>SetDisplayColorConversionCmdHACK</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_display_rotation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetDisplayRotationCmdHACK'>SetDisplayRotationCmdHACK</a></code>
+                <code><a class='link' href='#SetDisplayRotationCmdHACK'>SetDisplayRotationCmdHACK</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_enable_view_debug_bounds</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetEnableDebugViewBoundsCmd'>SetEnableDebugViewBoundsCmd</a></code>
+                <code><a class='link' href='#SetEnableDebugViewBoundsCmd'>SetEnableDebugViewBoundsCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_view_holder_bounds_color</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SetViewHolderBoundsColorCmd'>SetViewHolderBoundsColorCmd</a></code>
+                <code><a class='link' href='#SetViewHolderBoundsColorCmd'>SetViewHolderBoundsColorCmd</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4497,69 +4497,69 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>metrics</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#MetricsEvent'>MetricsEvent</a></code>
+                <code><a class='link' href='#MetricsEvent'>MetricsEvent</a></code>
             </td>
             <td> Events which are controlled by a mask.
 </td>
         </tr><tr>
             <td><code>size_change_hint</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SizeChangeHintEvent'>SizeChangeHintEvent</a></code>
+                <code><a class='link' href='#SizeChangeHintEvent'>SizeChangeHintEvent</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>import_unbound</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ImportUnboundEvent'>ImportUnboundEvent</a></code>
+                <code><a class='link' href='#ImportUnboundEvent'>ImportUnboundEvent</a></code>
             </td>
             <td> Events which are always delivered, regardless of mask.
 </td>
         </tr><tr>
             <td><code>view_connected</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewConnectedEvent'>ViewConnectedEvent</a></code>
+                <code><a class='link' href='#ViewConnectedEvent'>ViewConnectedEvent</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view_disconnected</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewDisconnectedEvent'>ViewDisconnectedEvent</a></code>
+                <code><a class='link' href='#ViewDisconnectedEvent'>ViewDisconnectedEvent</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view_holder_disconnected</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewHolderDisconnectedEvent'>ViewHolderDisconnectedEvent</a></code>
+                <code><a class='link' href='#ViewHolderDisconnectedEvent'>ViewHolderDisconnectedEvent</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view_attached_to_scene</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewAttachedToSceneEvent'>ViewAttachedToSceneEvent</a></code>
+                <code><a class='link' href='#ViewAttachedToSceneEvent'>ViewAttachedToSceneEvent</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view_detached_from_scene</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewDetachedFromSceneEvent'>ViewDetachedFromSceneEvent</a></code>
+                <code><a class='link' href='#ViewDetachedFromSceneEvent'>ViewDetachedFromSceneEvent</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view_properties_changed</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewPropertiesChangedEvent'>ViewPropertiesChangedEvent</a></code>
+                <code><a class='link' href='#ViewPropertiesChangedEvent'>ViewPropertiesChangedEvent</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view_state_changed</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewStateChangedEvent'>ViewStateChangedEvent</a></code>
+                <code><a class='link' href='#ViewStateChangedEvent'>ViewStateChangedEvent</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view_holder_connected</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewHolderConnectedEvent'>ViewHolderConnectedEvent</a></code>
+                <code><a class='link' href='#ViewHolderConnectedEvent'>ViewHolderConnectedEvent</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4574,13 +4574,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>shadow_technique</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ShadowTechnique'>ShadowTechnique</a></code>
+                <code><a class='link' href='#ShadowTechnique'>ShadowTechnique</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>render_frequency</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#RenderFrequency'>RenderFrequency</a></code>
+                <code><a class='link' href='#RenderFrequency'>RenderFrequency</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -4601,187 +4601,187 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>memory</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#MemoryArgs'>MemoryArgs</a></code>
+                <code><a class='link' href='#MemoryArgs'>MemoryArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>image</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ImageArgs'>ImageArgs</a></code>
+                <code><a class='link' href='#ImageArgs'>ImageArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>image_pipe</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ImagePipeArgs'>ImagePipeArgs</a></code>
+                <code><a class='link' href='#ImagePipeArgs'>ImagePipeArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>buffer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#BufferArgs'>BufferArgs</a></code>
+                <code><a class='link' href='#BufferArgs'>BufferArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewArgs'>ViewArgs</a></code>
+                <code><a class='link' href='#ViewArgs'>ViewArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view_holder</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewHolderArgs'>ViewHolderArgs</a></code>
+                <code><a class='link' href='#ViewHolderArgs'>ViewHolderArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>rectangle</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#RectangleArgs'>RectangleArgs</a></code>
+                <code><a class='link' href='#RectangleArgs'>RectangleArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>rounded_rectangle</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#RoundedRectangleArgs'>RoundedRectangleArgs</a></code>
+                <code><a class='link' href='#RoundedRectangleArgs'>RoundedRectangleArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>circle</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#CircleArgs'>CircleArgs</a></code>
+                <code><a class='link' href='#CircleArgs'>CircleArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>mesh</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#MeshArgs'>MeshArgs</a></code>
+                <code><a class='link' href='#MeshArgs'>MeshArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>shape_node</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ShapeNodeArgs'>ShapeNodeArgs</a></code>
+                <code><a class='link' href='#ShapeNodeArgs'>ShapeNodeArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>clip_node</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ClipNodeArgs'>ClipNodeArgs</a></code>
+                <code><a class='link' href='#ClipNodeArgs'>ClipNodeArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>entity_node</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#EntityNodeArgs'>EntityNodeArgs</a></code>
+                <code><a class='link' href='#EntityNodeArgs'>EntityNodeArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>opacity_node</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#OpacityNodeArgsHACK'>OpacityNodeArgsHACK</a></code>
+                <code><a class='link' href='#OpacityNodeArgsHACK'>OpacityNodeArgsHACK</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>material</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#MaterialArgs'>MaterialArgs</a></code>
+                <code><a class='link' href='#MaterialArgs'>MaterialArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>compositor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#CompositorArgs'>CompositorArgs</a></code>
+                <code><a class='link' href='#CompositorArgs'>CompositorArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>display_compositor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#DisplayCompositorArgs'>DisplayCompositorArgs</a></code>
+                <code><a class='link' href='#DisplayCompositorArgs'>DisplayCompositorArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>image_pipe_compositor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ImagePipeCompositorArgs'>ImagePipeCompositorArgs</a></code>
+                <code><a class='link' href='#ImagePipeCompositorArgs'>ImagePipeCompositorArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>layer_stack</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#LayerStackArgs'>LayerStackArgs</a></code>
+                <code><a class='link' href='#LayerStackArgs'>LayerStackArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>layer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#LayerArgs'>LayerArgs</a></code>
+                <code><a class='link' href='#LayerArgs'>LayerArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>scene</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#SceneArgs'>SceneArgs</a></code>
+                <code><a class='link' href='#SceneArgs'>SceneArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>camera</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#CameraArgs'>CameraArgs</a></code>
+                <code><a class='link' href='#CameraArgs'>CameraArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>stereo_camera</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#StereoCameraArgs'>StereoCameraArgs</a></code>
+                <code><a class='link' href='#StereoCameraArgs'>StereoCameraArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>renderer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#RendererArgs'>RendererArgs</a></code>
+                <code><a class='link' href='#RendererArgs'>RendererArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>ambient_light</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#AmbientLightArgs'>AmbientLightArgs</a></code>
+                <code><a class='link' href='#AmbientLightArgs'>AmbientLightArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>directional_light</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#DirectionalLightArgs'>DirectionalLightArgs</a></code>
+                <code><a class='link' href='#DirectionalLightArgs'>DirectionalLightArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>variable</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#VariableArgs'>VariableArgs</a></code>
+                <code><a class='link' href='#VariableArgs'>VariableArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>point_light</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#PointLightArgs'>PointLightArgs</a></code>
+                <code><a class='link' href='#PointLightArgs'>PointLightArgs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view2</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewArgs2'>ViewArgs2</a></code>
+                <code><a class='link' href='#ViewArgs2'>ViewArgs2</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view_holder2</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewHolderArgs2'>ViewHolderArgs2</a></code>
+                <code><a class='link' href='#ViewHolderArgs2'>ViewHolderArgs2</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>view3</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ViewArgs3'>ViewArgs3</a></code>
+                <code><a class='link' href='#ViewArgs3'>ViewArgs3</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4800,37 +4800,37 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>vector2</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec2'>vec2</a></code>
+                <code><a class='link' href='#vec2'>vec2</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>vector3</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec3'>vec3</a></code>
+                <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>vector4</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#vec4'>vec4</a></code>
+                <code><a class='link' href='#vec4'>vec4</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>matrix4x4</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#mat4'>mat4</a></code>
+                <code><a class='link' href='#mat4'>mat4</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>color_rgba</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ColorRgba'>ColorRgba</a></code>
+                <code><a class='link' href='#ColorRgba'>ColorRgba</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>color_rgb</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#ColorRgb'>ColorRgb</a></code>
+                <code><a class='link' href='#ColorRgb'>ColorRgb</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -4843,13 +4843,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>quaternion</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#Quaternion'>Quaternion</a></code>
+                <code><a class='link' href='#Quaternion'>Quaternion</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>transform</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.gfx/index.html#FactoredTransform'>FactoredTransform</a></code>
+                <code><a class='link' href='#FactoredTransform'>FactoredTransform</a></code>
             </td>
             <td></td>
         </tr><tr>

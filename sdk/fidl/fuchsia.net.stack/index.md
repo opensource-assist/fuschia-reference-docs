@@ -37,7 +37,7 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
         </tr><tr>
             <td><code>id</code></td>
@@ -67,7 +67,7 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
         </tr></table>
 
@@ -87,7 +87,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ifs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.stack/index.html#InterfaceInfo'>InterfaceInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#InterfaceInfo'>InterfaceInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -112,12 +112,12 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#InterfaceInfo'>InterfaceInfo</a>?</code>
+                <code><a class='link' href='#InterfaceInfo'>InterfaceInfo</a>?</code>
             </td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
         </tr></table>
 
@@ -142,7 +142,7 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
         </tr></table>
 
@@ -167,7 +167,7 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
         </tr></table>
 
@@ -187,7 +187,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#InterfaceAddress'>InterfaceAddress</a></code>
+                <code><a class='link' href='#InterfaceAddress'>InterfaceAddress</a></code>
             </td>
         </tr></table>
 
@@ -198,7 +198,7 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
         </tr></table>
 
@@ -218,7 +218,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#InterfaceAddress'>InterfaceAddress</a></code>
+                <code><a class='link' href='#InterfaceAddress'>InterfaceAddress</a></code>
             </td>
         </tr></table>
 
@@ -229,7 +229,7 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
         </tr></table>
 
@@ -249,7 +249,7 @@ Book: /_book.yaml
     <tr>
             <td><code>table</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.stack/index.html#ForwardingEntry'>ForwardingEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ForwardingEntry'>ForwardingEntry</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -264,7 +264,7 @@ Book: /_book.yaml
     <tr>
             <td><code>entry</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#ForwardingEntry'>ForwardingEntry</a></code>
+                <code><a class='link' href='#ForwardingEntry'>ForwardingEntry</a></code>
             </td>
         </tr></table>
 
@@ -275,7 +275,7 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
         </tr></table>
 
@@ -302,7 +302,7 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
         </tr></table>
 
@@ -327,7 +327,7 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
         </tr></table>
 
@@ -352,7 +352,7 @@ Book: /_book.yaml
     <tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
         </tr></table>
 
@@ -368,7 +368,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#InterfaceStatusChange'>InterfaceStatusChange</a></code>
+                <code><a class='link' href='#InterfaceStatusChange'>InterfaceStatusChange</a></code>
             </td>
         </tr></table>
 
@@ -384,7 +384,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#InterfaceAddressChange'>InterfaceAddressChange</a></code>
+                <code><a class='link' href='#InterfaceAddressChange'>InterfaceAddressChange</a></code>
             </td>
         </tr></table>
 
@@ -440,7 +440,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>properties</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#InterfaceProperties'>InterfaceProperties</a></code>
+                <code><a class='link' href='#InterfaceProperties'>InterfaceProperties</a></code>
             </td>
             <td> All info of an interface except the interface name.
 </td>
@@ -501,7 +501,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>administrativeStatus</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#AdministrativeStatus'>AdministrativeStatus</a></code>
+                <code><a class='link' href='#AdministrativeStatus'>AdministrativeStatus</a></code>
             </td>
             <td> The administrative status of the interface.
 </td>
@@ -509,7 +509,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>physicalStatus</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#PhysicalStatus'>PhysicalStatus</a></code>
+                <code><a class='link' href='#PhysicalStatus'>PhysicalStatus</a></code>
             </td>
             <td> The physical link status of the interface.
 </td>
@@ -517,7 +517,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>addresses</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.stack/index.html#InterfaceAddress'>InterfaceAddress</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#InterfaceAddress'>InterfaceAddress</a>&gt;</code>
             </td>
             <td> The list of addresses currently assigned to the interface.
 </td>
@@ -545,7 +545,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>destination</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#ForwardingDestination'>ForwardingDestination</a></code>
+                <code><a class='link' href='#ForwardingDestination'>ForwardingDestination</a></code>
             </td>
             <td> The destination that will receive the forwarded packet.
 </td>
@@ -572,7 +572,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#InterfaceStatus'>InterfaceStatus</a></code>
+                <code><a class='link' href='#InterfaceStatus'>InterfaceStatus</a></code>
             </td>
             <td> The new status.
 </td>
@@ -599,7 +599,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>diff</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#InterfaceAddressDiff'>InterfaceAddressDiff</a></code>
+                <code><a class='link' href='#InterfaceAddressDiff'>InterfaceAddressDiff</a></code>
             </td>
             <td> The diff representing the address change.
 </td>
@@ -618,7 +618,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -739,19 +739,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>presence</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#PresenceStatus'>PresenceStatus</a></code>
+                <code><a class='link' href='#PresenceStatus'>PresenceStatus</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>physical</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#PhysicalStatus'>PhysicalStatus</a></code>
+                <code><a class='link' href='#PhysicalStatus'>PhysicalStatus</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>administrative</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#AdministrativeStatus'>AdministrativeStatus</a></code>
+                <code><a class='link' href='#AdministrativeStatus'>AdministrativeStatus</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -787,13 +787,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>added</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#InterfaceAddress'>InterfaceAddress</a></code>
+                <code><a class='link' href='#InterfaceAddress'>InterfaceAddress</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>removed</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html#InterfaceAddress'>InterfaceAddress</a></code>
+                <code><a class='link' href='#InterfaceAddress'>InterfaceAddress</a></code>
             </td>
             <td></td>
         </tr></table>

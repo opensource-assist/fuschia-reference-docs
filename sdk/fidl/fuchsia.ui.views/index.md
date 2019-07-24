@@ -104,7 +104,7 @@ Book: /_book.yaml
     <tr>
             <td><code>view_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.views/index.html#ViewToken'>ViewToken</a></code>
+                <code><a class='link' href='#ViewToken'>ViewToken</a></code>
             </td>
         </tr></table>
 

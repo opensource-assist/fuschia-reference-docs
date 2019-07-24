@@ -26,7 +26,7 @@ Book: /_book.yaml
     <tr>
             <td><code>properties</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#Properties'>Properties</a></code>
+                <code><a class='link' href='#Properties'>Properties</a></code>
             </td>
         </tr></table>
 
@@ -43,7 +43,7 @@ Book: /_book.yaml
     <tr>
             <td><code>allocation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#Allocation'>Allocation</a></code>
+                <code><a class='link' href='#Allocation'>Allocation</a></code>
             </td>
         </tr></table>
 
@@ -54,7 +54,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#Controller_Initialize_Result'>Controller_Initialize_Result</a></code>
+                <code><a class='link' href='#Controller_Initialize_Result'>Controller_Initialize_Result</a></code>
             </td>
         </tr></table>
 
@@ -92,7 +92,7 @@ Book: /_book.yaml
     <tr>
             <td><code>allocation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#Allocation'>Allocation</a>?</code>
+                <code><a class='link' href='#Allocation'>Allocation</a>?</code>
             </td>
         </tr></table>
 
@@ -109,7 +109,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#Config'>Config</a></code>
+                <code><a class='link' href='#Config'>Config</a></code>
             </td>
         </tr></table>
 
@@ -120,7 +120,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#Controller_StageConfig_Result'>Controller_StageConfig_Result</a></code>
+                <code><a class='link' href='#Controller_StageConfig_Result'>Controller_StageConfig_Result</a></code>
             </td>
         </tr></table>
 
@@ -141,7 +141,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#Config'>Config</a>?</code>
+                <code><a class='link' href='#Config'>Config</a>?</code>
             </td>
         </tr></table>
 
@@ -190,7 +190,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#Controller_Start_Result'>Controller_Start_Result</a></code>
+                <code><a class='link' href='#Controller_Start_Result'>Controller_Start_Result</a></code>
             </td>
         </tr></table>
 
@@ -338,7 +338,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>flags</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#PropertyFlags'>PropertyFlags</a></code>
+                <code><a class='link' href='#PropertyFlags'>PropertyFlags</a></code>
             </td>
             <td> Various flags.
 </td>
@@ -382,7 +382,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>flags</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#EventConfigFlags'>EventConfigFlags</a></code>
+                <code><a class='link' href='#EventConfigFlags'>EventConfigFlags</a></code>
             </td>
             <td> Flags for the event.
 </td>
@@ -458,7 +458,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#Controller_Initialize_Response'>Controller_Initialize_Response</a></code>
+                <code><a class='link' href='#Controller_Initialize_Response'>Controller_Initialize_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -477,7 +477,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#Controller_StageConfig_Response'>Controller_StageConfig_Response</a></code>
+                <code><a class='link' href='#Controller_StageConfig_Response'>Controller_StageConfig_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -496,7 +496,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.perfmon.cpu/index.html#Controller_Start_Response'>Controller_Start_Response</a></code>
+                <code><a class='link' href='#Controller_Start_Response'>Controller_Start_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

@@ -111,7 +111,7 @@ Book: /_book.yaml
     <tr>
             <td><code>loader</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ldsvc/index.html#Loader'>Loader</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Loader'>Loader</a>&gt;</code>
             </td>
         </tr></table>
 

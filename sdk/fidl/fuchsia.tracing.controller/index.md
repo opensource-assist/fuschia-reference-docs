@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.controller/index.html#TraceOptions'>TraceOptions</a></code>
+                <code><a class='link' href='#TraceOptions'>TraceOptions</a></code>
             </td>
         </tr><tr>
             <td><code>output</code></td>
@@ -59,7 +59,7 @@ Book: /_book.yaml
     <tr>
             <td><code>categories</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.tracing.controller/index.html#KnownCategory'>KnownCategory</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#KnownCategory'>KnownCategory</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -185,14 +185,14 @@ Type: <code>uint8</code>
             <td>4</td>
             <td><code>buffering_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.controller/index.html#BufferingMode'>BufferingMode</a></code>
+                <code><a class='link' href='#BufferingMode'>BufferingMode</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>5</td>
             <td><code>provider_specs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.tracing.controller/index.html#ProviderSpec'>ProviderSpec</a>&gt;[100]</code>
+                <code>vector&lt;<a class='link' href='#ProviderSpec'>ProviderSpec</a>&gt;[100]</code>
             </td>
             <td> Overrides for particular providers.
 </td>

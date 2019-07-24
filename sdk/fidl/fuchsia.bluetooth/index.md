@@ -20,7 +20,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth/index.html#AddressType'>AddressType</a></code>
+                <code><a class='link' href='#AddressType'>AddressType</a></code>
             </td>
             <td> Type of the device address.
 </td>
@@ -141,7 +141,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>error_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth/index.html#ErrorCode'>ErrorCode</a></code>
+                <code><a class='link' href='#ErrorCode'>ErrorCode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -173,7 +173,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
             <td></td>
             <td>No default</td>

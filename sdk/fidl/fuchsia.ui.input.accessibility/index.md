@@ -24,7 +24,7 @@ Book: /_book.yaml
     <tr>
             <td><code>pointer_event_listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input.accessibility/index.html#PointerEventListener'>PointerEventListener</a></code>
+                <code><a class='link' href='#PointerEventListener'>PointerEventListener</a></code>
             </td>
         </tr></table>
 
@@ -49,7 +49,7 @@ Book: /_book.yaml
     <tr>
             <td><code>pointer_event</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input.accessibility/index.html#PointerEvent'>PointerEvent</a></code>
+                <code><a class='link' href='#PointerEvent'>PointerEvent</a></code>
             </td>
         </tr></table>
 
@@ -70,7 +70,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>handled</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input.accessibility/index.html#EventHandling'>EventHandling</a></code>
+                <code><a class='link' href='#EventHandling'>EventHandling</a></code>
             </td>
         </tr></table>
 

@@ -86,7 +86,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>rampType</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.audio/index.html#RampType'>RampType</a></code>
+                <code><a class='link' href='#RampType'>RampType</a></code>
             </td>
         </tr></table>
 

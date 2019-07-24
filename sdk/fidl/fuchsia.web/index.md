@@ -26,12 +26,12 @@ Book: /_book.yaml
     <tr>
             <td><code>params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#CreateContextParams'>CreateContextParams</a></code>
+                <code><a class='link' href='#CreateContextParams'>CreateContextParams</a></code>
             </td>
         </tr><tr>
             <td><code>context</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#Context'>Context</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Context'>Context</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -58,7 +58,7 @@ Book: /_book.yaml
     <tr>
             <td><code>frame</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#Frame'>Frame</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Frame'>Frame</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -74,7 +74,7 @@ Book: /_book.yaml
     <tr>
             <td><code>manager</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#CookieManager'>CookieManager</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#CookieManager'>CookieManager</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -99,7 +99,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Context_GetRemoteDebuggingPort_Result'>Context_GetRemoteDebuggingPort_Result</a></code>
+                <code><a class='link' href='#Context_GetRemoteDebuggingPort_Result'>Context_GetRemoteDebuggingPort_Result</a></code>
             </td>
         </tr></table>
 
@@ -132,7 +132,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#CookieChangeListener'>CookieChangeListener</a></code>
+                <code><a class='link' href='#CookieChangeListener'>CookieChangeListener</a></code>
             </td>
         </tr></table>
 
@@ -150,7 +150,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ids</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.web/index.html#CookieId'>CookieId</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CookieId'>CookieId</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -161,7 +161,7 @@ Book: /_book.yaml
     <tr>
             <td><code>cookies</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.web/index.html#Cookie'>Cookie</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Cookie'>Cookie</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -185,7 +185,7 @@ Book: /_book.yaml
     <tr>
             <td><code>changes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.web/index.html#CookieChangeEvent'>CookieChangeEvent</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CookieChangeEvent'>CookieChangeEvent</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -213,7 +213,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#DevToolsListener'>DevToolsListener</a></code>
+                <code><a class='link' href='#DevToolsListener'>DevToolsListener</a></code>
             </td>
         </tr></table>
 
@@ -242,7 +242,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#DevToolsPerContextListener'>DevToolsPerContextListener</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#DevToolsPerContextListener'>DevToolsPerContextListener</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -329,7 +329,7 @@ Book: /_book.yaml
     <tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#NavigationController'>NavigationController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#NavigationController'>NavigationController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -376,7 +376,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_ExecuteJavaScript_Result'>Frame_ExecuteJavaScript_Result</a></code>
+                <code><a class='link' href='#Frame_ExecuteJavaScript_Result'>Frame_ExecuteJavaScript_Result</a></code>
             </td>
         </tr></table>
 
@@ -407,7 +407,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_ExecuteJavaScriptNoResult_Result'>Frame_ExecuteJavaScriptNoResult_Result</a></code>
+                <code><a class='link' href='#Frame_ExecuteJavaScriptNoResult_Result'>Frame_ExecuteJavaScriptNoResult_Result</a></code>
             </td>
         </tr></table>
 
@@ -460,7 +460,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_AddBeforeLoadJavaScript_Result'>Frame_AddBeforeLoadJavaScript_Result</a></code>
+                <code><a class='link' href='#Frame_AddBeforeLoadJavaScript_Result'>Frame_AddBeforeLoadJavaScript_Result</a></code>
             </td>
         </tr></table>
 
@@ -509,7 +509,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>message</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#WebMessage'>WebMessage</a></code>
+                <code><a class='link' href='#WebMessage'>WebMessage</a></code>
             </td>
         </tr></table>
 
@@ -520,7 +520,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_PostMessage_Result'>Frame_PostMessage_Result</a></code>
+                <code><a class='link' href='#Frame_PostMessage_Result'>Frame_PostMessage_Result</a></code>
             </td>
         </tr></table>
 
@@ -537,7 +537,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationEventListener'>NavigationEventListener</a>?</code>
+                <code><a class='link' href='#NavigationEventListener'>NavigationEventListener</a>?</code>
             </td>
         </tr></table>
 
@@ -560,7 +560,7 @@ Book: /_book.yaml
     <tr>
             <td><code>level</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#ConsoleLogLevel'>ConsoleLogLevel</a></code>
+                <code><a class='link' href='#ConsoleLogLevel'>ConsoleLogLevel</a></code>
             </td>
         </tr></table>
 
@@ -600,7 +600,7 @@ Book: /_book.yaml
     <tr>
             <td><code>provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#AdditionalHeadersProvider'>AdditionalHeadersProvider</a></code>
+                <code><a class='link' href='#AdditionalHeadersProvider'>AdditionalHeadersProvider</a></code>
             </td>
         </tr></table>
 
@@ -667,7 +667,7 @@ Book: /_book.yaml
     <tr>
             <td><code>message</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#WebMessage'>WebMessage</a></code>
+                <code><a class='link' href='#WebMessage'>WebMessage</a></code>
             </td>
         </tr></table>
 
@@ -678,7 +678,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#MessagePort_PostMessage_Result'>MessagePort_PostMessage_Result</a></code>
+                <code><a class='link' href='#MessagePort_PostMessage_Result'>MessagePort_PostMessage_Result</a></code>
             </td>
         </tr></table>
 
@@ -702,7 +702,7 @@ Book: /_book.yaml
     <tr>
             <td><code>message</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#WebMessage'>WebMessage</a></code>
+                <code><a class='link' href='#WebMessage'>WebMessage</a></code>
             </td>
         </tr></table>
 
@@ -728,7 +728,7 @@ Book: /_book.yaml
     <tr>
             <td><code>change</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationState'>NavigationState</a></code>
+                <code><a class='link' href='#NavigationState'>NavigationState</a></code>
             </td>
         </tr></table>
 
@@ -766,7 +766,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#LoadUrlParams'>LoadUrlParams</a></code>
+                <code><a class='link' href='#LoadUrlParams'>LoadUrlParams</a></code>
             </td>
         </tr></table>
 
@@ -777,7 +777,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationController_LoadUrl_Result'>NavigationController_LoadUrl_Result</a></code>
+                <code><a class='link' href='#NavigationController_LoadUrl_Result'>NavigationController_LoadUrl_Result</a></code>
             </td>
         </tr></table>
 
@@ -820,7 +820,7 @@ Book: /_book.yaml
     <tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#ReloadType'>ReloadType</a></code>
+                <code><a class='link' href='#ReloadType'>ReloadType</a></code>
             </td>
         </tr></table>
 
@@ -843,7 +843,7 @@ Book: /_book.yaml
     <tr>
             <td><code>entry</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationState'>NavigationState</a></code>
+                <code><a class='link' href='#NavigationState'>NavigationState</a></code>
             </td>
         </tr></table>
 
@@ -1223,7 +1223,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#CookieId'>CookieId</a></code>
+                <code><a class='link' href='#CookieId'>CookieId</a></code>
             </td>
             <td> A table with fields to identify a cookie.
 </td>
@@ -1250,7 +1250,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#CookieId'>CookieId</a></code>
+                <code><a class='link' href='#CookieId'>CookieId</a></code>
             </td>
             <td> The identity of the cookie which was changed.
 </td>
@@ -1258,7 +1258,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#CookieChangeType'>CookieChangeType</a></code>
+                <code><a class='link' href='#CookieChangeType'>CookieChangeType</a></code>
             </td>
             <td> Describes what type of change caused the CookieChangeEvent to be
  published.
@@ -1287,7 +1287,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>incoming_transfer</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.web/index.html#IncomingTransferable'>IncomingTransferable</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#IncomingTransferable'>IncomingTransferable</a>&gt;</code>
             </td>
             <td> Optional list of objects transferred into the MessagePort from the FIDL
  client.
@@ -1296,7 +1296,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>outgoing_transfer</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.web/index.html#OutgoingTransferable'>OutgoingTransferable</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#OutgoingTransferable'>OutgoingTransferable</a>&gt;</code>
             </td>
             <td> Optional list of objects transferred out of the MessagePort to the FIDL
  client.
@@ -1317,7 +1317,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#LoadUrlReason'>LoadUrlReason</a></code>
+                <code><a class='link' href='#LoadUrlReason'>LoadUrlReason</a></code>
             </td>
             <td> Provides a hint to the browser UI about how LoadUrl was triggered.
 </td>
@@ -1380,7 +1380,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>page_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#PageType'>PageType</a></code>
+                <code><a class='link' href='#PageType'>PageType</a></code>
             </td>
             <td> Indicates whether this was a navigation to an error page.
 </td>
@@ -1423,13 +1423,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Context_GetRemoteDebuggingPort_Response'>Context_GetRemoteDebuggingPort_Response</a></code>
+                <code><a class='link' href='#Context_GetRemoteDebuggingPort_Response'>Context_GetRemoteDebuggingPort_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#ContextError'>ContextError</a></code>
+                <code><a class='link' href='#ContextError'>ContextError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1442,13 +1442,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_ExecuteJavaScript_Response'>Frame_ExecuteJavaScript_Response</a></code>
+                <code><a class='link' href='#Frame_ExecuteJavaScript_Response'>Frame_ExecuteJavaScript_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#FrameError'>FrameError</a></code>
+                <code><a class='link' href='#FrameError'>FrameError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1461,13 +1461,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_ExecuteJavaScriptNoResult_Response'>Frame_ExecuteJavaScriptNoResult_Response</a></code>
+                <code><a class='link' href='#Frame_ExecuteJavaScriptNoResult_Response'>Frame_ExecuteJavaScriptNoResult_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#FrameError'>FrameError</a></code>
+                <code><a class='link' href='#FrameError'>FrameError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1480,13 +1480,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_AddBeforeLoadJavaScript_Response'>Frame_AddBeforeLoadJavaScript_Response</a></code>
+                <code><a class='link' href='#Frame_AddBeforeLoadJavaScript_Response'>Frame_AddBeforeLoadJavaScript_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#FrameError'>FrameError</a></code>
+                <code><a class='link' href='#FrameError'>FrameError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1499,13 +1499,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_PostMessage_Response'>Frame_PostMessage_Response</a></code>
+                <code><a class='link' href='#Frame_PostMessage_Response'>Frame_PostMessage_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#FrameError'>FrameError</a></code>
+                <code><a class='link' href='#FrameError'>FrameError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1518,13 +1518,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#MessagePort_PostMessage_Response'>MessagePort_PostMessage_Response</a></code>
+                <code><a class='link' href='#MessagePort_PostMessage_Response'>MessagePort_PostMessage_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#FrameError'>FrameError</a></code>
+                <code><a class='link' href='#FrameError'>FrameError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1537,13 +1537,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationController_LoadUrl_Response'>NavigationController_LoadUrl_Response</a></code>
+                <code><a class='link' href='#NavigationController_LoadUrl_Response'>NavigationController_LoadUrl_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationControllerError'>NavigationControllerError</a></code>
+                <code><a class='link' href='#NavigationControllerError'>NavigationControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1560,7 +1560,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>message_port</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#MessagePort'>MessagePort</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#MessagePort'>MessagePort</a>&gt;</code>
             </td>
             <td></td>
         </tr></table>
@@ -1573,7 +1573,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>message_port</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#MessagePort'>MessagePort</a></code>
+                <code><a class='link' href='#MessagePort'>MessagePort</a></code>
             </td>
             <td></td>
         </tr></table>

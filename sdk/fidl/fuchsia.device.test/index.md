@@ -33,7 +33,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>report</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.test/index.html#TestReport'>TestReport</a></code>
+                <code><a class='link' href='#TestReport'>TestReport</a></code>
             </td>
         </tr></table>
 
@@ -65,7 +65,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>report</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.test/index.html#TestReport'>TestReport</a></code>
+                <code><a class='link' href='#TestReport'>TestReport</a></code>
             </td>
         </tr></table>
 

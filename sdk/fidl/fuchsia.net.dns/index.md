@@ -24,7 +24,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.dns/index.html#DNSConfig'>DNSConfig</a></code>
+                <code><a class='link' href='#DNSConfig'>DNSConfig</a></code>
             </td>
         </tr></table>
 
@@ -35,7 +35,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.dns/index.html#NetError'>NetError</a></code>
+                <code><a class='link' href='#NetError'>NetError</a></code>
             </td>
         </tr></table>
 
@@ -55,7 +55,7 @@ Book: /_book.yaml
     <tr>
             <td><code>current</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.dns/index.html#DNSConfig'>DNSConfig</a></code>
+                <code><a class='link' href='#DNSConfig'>DNSConfig</a></code>
             </td>
         </tr></table>
 
@@ -74,7 +74,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.dns/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
             <td></td>
             <td>No default</td>

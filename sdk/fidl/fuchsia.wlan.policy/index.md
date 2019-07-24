@@ -32,12 +32,12 @@ Book: /_book.yaml
     <tr>
             <td><code>requests</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.wlan.policy/index.html#ClientController'>ClientController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ClientController'>ClientController</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>updates</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#ClientStateUpdates'>ClientStateUpdates</a></code>
+                <code><a class='link' href='#ClientStateUpdates'>ClientStateUpdates</a></code>
             </td>
         </tr></table>
 
@@ -59,7 +59,7 @@ Book: /_book.yaml
     <tr>
             <td><code>updates</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#ClientStateUpdates'>ClientStateUpdates</a></code>
+                <code><a class='link' href='#ClientStateUpdates'>ClientStateUpdates</a></code>
             </td>
         </tr></table>
 
@@ -131,7 +131,7 @@ Book: /_book.yaml
     <tr>
             <td><code>iterator</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.wlan.policy/index.html#ScanResultIterator'>ScanResultIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ScanResultIterator'>ScanResultIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -151,7 +151,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#NetworkConfig'>NetworkConfig</a></code>
+                <code><a class='link' href='#NetworkConfig'>NetworkConfig</a></code>
             </td>
         </tr></table>
 
@@ -162,7 +162,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#ClientController_SaveNetwork_Result'>ClientController_SaveNetwork_Result</a></code>
+                <code><a class='link' href='#ClientController_SaveNetwork_Result'>ClientController_SaveNetwork_Result</a></code>
             </td>
         </tr></table>
 
@@ -178,7 +178,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#NetworkConfig'>NetworkConfig</a></code>
+                <code><a class='link' href='#NetworkConfig'>NetworkConfig</a></code>
             </td>
         </tr></table>
 
@@ -189,7 +189,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#ClientController_RemoveNetwork_Result'>ClientController_RemoveNetwork_Result</a></code>
+                <code><a class='link' href='#ClientController_RemoveNetwork_Result'>ClientController_RemoveNetwork_Result</a></code>
             </td>
         </tr></table>
 
@@ -203,7 +203,7 @@ Book: /_book.yaml
     <tr>
             <td><code>iterator</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.wlan.policy/index.html#NetworkConfigIterator'>NetworkConfigIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#NetworkConfigIterator'>NetworkConfigIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -226,7 +226,7 @@ Book: /_book.yaml
     <tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#NetworkIdentifier'>NetworkIdentifier</a></code>
+                <code><a class='link' href='#NetworkIdentifier'>NetworkIdentifier</a></code>
             </td>
         </tr></table>
 
@@ -267,7 +267,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#ScanResultIterator_GetNext_Result'>ScanResultIterator_GetNext_Result</a></code>
+                <code><a class='link' href='#ScanResultIterator_GetNext_Result'>ScanResultIterator_GetNext_Result</a></code>
             </td>
         </tr></table>
 
@@ -292,7 +292,7 @@ Book: /_book.yaml
     <tr>
             <td><code>configs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.policy/index.html#NetworkConfig'>NetworkConfig</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#NetworkConfig'>NetworkConfig</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -320,7 +320,7 @@ Book: /_book.yaml
     <tr>
             <td><code>summary</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#ClientStateSummary'>ClientStateSummary</a></code>
+                <code><a class='link' href='#ClientStateSummary'>ClientStateSummary</a></code>
             </td>
         </tr></table>
 
@@ -367,7 +367,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>scan_results</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.policy/index.html#ScanResult'>ScanResult</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ScanResult'>ScanResult</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -396,7 +396,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#SecurityType'>SecurityType</a></code>
+                <code><a class='link' href='#SecurityType'>SecurityType</a></code>
             </td>
             <td> Protection type (or not) for the network.
 </td>
@@ -607,7 +607,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#NetworkIdentifier'>NetworkIdentifier</a></code>
+                <code><a class='link' href='#NetworkIdentifier'>NetworkIdentifier</a></code>
             </td>
             <td> Network properties used to distinguish between networks and to group
  individual APs.
@@ -616,7 +616,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.policy/index.html#Bss'>Bss</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Bss'>Bss</a>&gt;</code>
             </td>
             <td> Individual access points offering the specified network.
 </td>
@@ -624,7 +624,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>compatibility</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#Compatibility'>Compatibility</a></code>
+                <code><a class='link' href='#Compatibility'>Compatibility</a></code>
             </td>
             <td> Indication if the detected network is supported by the implementation.
 </td>
@@ -690,7 +690,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#WlanClientState'>WlanClientState</a></code>
+                <code><a class='link' href='#WlanClientState'>WlanClientState</a></code>
             </td>
             <td> State indicating whether wlan will attempt to connect to networks or not.
 </td>
@@ -698,7 +698,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>networks</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.policy/index.html#NetworkState'>NetworkState</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#NetworkState'>NetworkState</a>&gt;</code>
             </td>
             <td> Active connections, connection attempts or failed connections.
 </td>
@@ -718,7 +718,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#NetworkIdentifier'>NetworkIdentifier</a></code>
+                <code><a class='link' href='#NetworkIdentifier'>NetworkIdentifier</a></code>
             </td>
             <td> Network id for the current connection (or attempt).
 </td>
@@ -726,7 +726,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#ConnectionState'>ConnectionState</a></code>
+                <code><a class='link' href='#ConnectionState'>ConnectionState</a></code>
             </td>
             <td> Current state for the connection.
 </td>
@@ -734,7 +734,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#DisconnectStatus'>DisconnectStatus</a></code>
+                <code><a class='link' href='#DisconnectStatus'>DisconnectStatus</a></code>
             </td>
             <td> Extra information for debugging or Settings display
 </td>
@@ -754,7 +754,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#NetworkIdentifier'>NetworkIdentifier</a></code>
+                <code><a class='link' href='#NetworkIdentifier'>NetworkIdentifier</a></code>
             </td>
             <td> Identifier used to represent a specific network. No guarantee for uniqueness.
 </td>
@@ -762,7 +762,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>credential</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#Credential'>Credential</a></code>
+                <code><a class='link' href='#Credential'>Credential</a></code>
             </td>
             <td> Information needed to join a network.
 </td>
@@ -780,13 +780,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#ClientController_SaveNetwork_Response'>ClientController_SaveNetwork_Response</a></code>
+                <code><a class='link' href='#ClientController_SaveNetwork_Response'>ClientController_SaveNetwork_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#NetworkConfigChangeError'>NetworkConfigChangeError</a></code>
+                <code><a class='link' href='#NetworkConfigChangeError'>NetworkConfigChangeError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -799,13 +799,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#ClientController_RemoveNetwork_Response'>ClientController_RemoveNetwork_Response</a></code>
+                <code><a class='link' href='#ClientController_RemoveNetwork_Response'>ClientController_RemoveNetwork_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#NetworkConfigChangeError'>NetworkConfigChangeError</a></code>
+                <code><a class='link' href='#NetworkConfigChangeError'>NetworkConfigChangeError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -818,13 +818,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#ScanResultIterator_GetNext_Response'>ScanResultIterator_GetNext_Response</a></code>
+                <code><a class='link' href='#ScanResultIterator_GetNext_Response'>ScanResultIterator_GetNext_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#ScanErrorCode'>ScanErrorCode</a></code>
+                <code><a class='link' href='#ScanErrorCode'>ScanErrorCode</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -842,7 +842,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>none</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.policy/index.html#Empty'>Empty</a></code>
+                <code><a class='link' href='#Empty'>Empty</a></code>
             </td>
             <td> The network does not use credentials (open networks).
 </td>

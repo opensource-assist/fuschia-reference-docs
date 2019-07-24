@@ -47,7 +47,7 @@ Book: /_book.yaml
     <tr>
             <td><code>delegate</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#PairingDelegate'>PairingDelegate</a>?</code>
+                <code><a class='link' href='#PairingDelegate'>PairingDelegate</a>?</code>
             </td>
         </tr></table>
 
@@ -78,7 +78,7 @@ Book: /_book.yaml
     <tr>
             <td><code>adapters</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.control/index.html#AdapterInfo'>AdapterInfo</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#AdapterInfo'>AdapterInfo</a>&gt;?</code>
             </td>
         </tr></table>
 
@@ -124,7 +124,7 @@ Book: /_book.yaml
     <tr>
             <td><code>adapter</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#AdapterInfo'>AdapterInfo</a>?</code>
+                <code><a class='link' href='#AdapterInfo'>AdapterInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -176,7 +176,7 @@ Book: /_book.yaml
     <tr>
             <td><code>devices</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.control/index.html#RemoteDevice'>RemoteDevice</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RemoteDevice'>RemoteDevice</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -217,7 +217,7 @@ Book: /_book.yaml
     <tr>
             <td><code>device_class</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#DeviceClass'>DeviceClass</a></code>
+                <code><a class='link' href='#DeviceClass'>DeviceClass</a></code>
             </td>
         </tr></table>
 
@@ -344,12 +344,12 @@ Book: /_book.yaml
     <tr>
             <td><code>input</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#InputCapabilityType'>InputCapabilityType</a></code>
+                <code><a class='link' href='#InputCapabilityType'>InputCapabilityType</a></code>
             </td>
         </tr><tr>
             <td><code>output</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#OutputCapabilityType'>OutputCapabilityType</a></code>
+                <code><a class='link' href='#OutputCapabilityType'>OutputCapabilityType</a></code>
             </td>
         </tr></table>
 
@@ -368,7 +368,7 @@ Book: /_book.yaml
     <tr>
             <td><code>adapter</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#AdapterInfo'>AdapterInfo</a>?</code>
+                <code><a class='link' href='#AdapterInfo'>AdapterInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -384,7 +384,7 @@ Book: /_book.yaml
     <tr>
             <td><code>adapter</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#AdapterInfo'>AdapterInfo</a></code>
+                <code><a class='link' href='#AdapterInfo'>AdapterInfo</a></code>
             </td>
         </tr></table>
 
@@ -417,7 +417,7 @@ Book: /_book.yaml
     <tr>
             <td><code>device</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#RemoteDevice'>RemoteDevice</a></code>
+                <code><a class='link' href='#RemoteDevice'>RemoteDevice</a></code>
             </td>
         </tr></table>
 
@@ -450,12 +450,12 @@ Book: /_book.yaml
     <tr>
             <td><code>device</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#RemoteDevice'>RemoteDevice</a></code>
+                <code><a class='link' href='#RemoteDevice'>RemoteDevice</a></code>
             </td>
         </tr><tr>
             <td><code>method</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#PairingMethod'>PairingMethod</a></code>
+                <code><a class='link' href='#PairingMethod'>PairingMethod</a></code>
             </td>
         </tr><tr>
             <td><code>displayed_passkey</code></td>
@@ -514,7 +514,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>keypress</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#PairingKeypressType'>PairingKeypressType</a></code>
+                <code><a class='link' href='#PairingKeypressType'>PairingKeypressType</a></code>
             </td>
         </tr></table>
 
@@ -536,7 +536,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>keypress</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#PairingKeypressType'>PairingKeypressType</a></code>
+                <code><a class='link' href='#PairingKeypressType'>PairingKeypressType</a></code>
             </td>
         </tr></table>
 
@@ -587,7 +587,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>security_properties</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#SecurityProperties'>SecurityProperties</a></code>
+                <code><a class='link' href='#SecurityProperties'>SecurityProperties</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -630,7 +630,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>key</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#RemoteKey'>RemoteKey</a></code>
+                <code><a class='link' href='#RemoteKey'>RemoteKey</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -708,14 +708,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>address_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#AddressType'>AddressType</a></code>
+                <code><a class='link' href='#AddressType'>AddressType</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>connection_parameters</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#LEConnectionParameters'>LEConnectionParameters</a>?</code>
+                <code><a class='link' href='#LEConnectionParameters'>LEConnectionParameters</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -729,21 +729,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>ltk</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#LTK'>LTK</a>?</code>
+                <code><a class='link' href='#LTK'>LTK</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>irk</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#RemoteKey'>RemoteKey</a>?</code>
+                <code><a class='link' href='#RemoteKey'>RemoteKey</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>csrk</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#RemoteKey'>RemoteKey</a>?</code>
+                <code><a class='link' href='#RemoteKey'>RemoteKey</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -782,7 +782,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>link_key</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#LTK'>LTK</a>?</code>
+                <code><a class='link' href='#LTK'>LTK</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -821,14 +821,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>le</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#LEData'>LEData</a>?</code>
+                <code><a class='link' href='#LEData'>LEData</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>bredr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#BREDRData'>BREDRData</a>?</code>
+                <code><a class='link' href='#BREDRData'>BREDRData</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -847,7 +847,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>irk</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#LocalKey'>LocalKey</a>?</code>
+                <code><a class='link' href='#LocalKey'>LocalKey</a>?</code>
             </td>
             <td> The local Identity Resolving Key used by a bt-host device to generate Resolvable Private
  Addresses when privacy is enabled.
@@ -880,7 +880,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>technology</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#TechnologyType'>TechnologyType</a></code>
+                <code><a class='link' href='#TechnologyType'>TechnologyType</a></code>
             </td>
             <td> The Bluetooth technologies that are supported by this adapter.
 </td>
@@ -896,7 +896,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#AdapterState'>AdapterState</a>?</code>
+                <code><a class='link' href='#AdapterState'>AdapterState</a>?</code>
             </td>
             <td> The current adapter state. This field is only present when an AdapterInfo
  is obtained via the Control and ControlDelegate interfaces. If present,
@@ -992,7 +992,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>technology</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#TechnologyType'>TechnologyType</a></code>
+                <code><a class='link' href='#TechnologyType'>TechnologyType</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1006,7 +1006,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>appearance</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/index.html#Appearance'>Appearance</a></code>
+                <code><a class='link' href='#Appearance'>Appearance</a></code>
             </td>
             <td></td>
             <td>No default</td>

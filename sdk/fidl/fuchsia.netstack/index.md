@@ -27,7 +27,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>protocol</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#Protocol'>Protocol</a></code>
+                <code><a class='link' href='#Protocol'>Protocol</a></code>
             </td>
         </tr></table>
 
@@ -70,12 +70,12 @@ Book: /_book.yaml
     <tr>
             <td><code>addresses</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.netstack/index.html#SocketAddress'>SocketAddress</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#SocketAddress'>SocketAddress</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#NetErr'>NetErr</a></code>
+                <code><a class='link' href='#NetErr'>NetErr</a></code>
             </td>
         </tr></table>
 
@@ -95,7 +95,7 @@ Book: /_book.yaml
     <tr>
             <td><code>interfaces</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.netstack/index.html#NetInterface'>NetInterface</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#NetInterface'>NetInterface</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -114,7 +114,7 @@ Book: /_book.yaml
     <tr>
             <td><code>interfaces</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.netstack/index.html#NetInterface2'>NetInterface2</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#NetInterface2'>NetInterface2</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -137,7 +137,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rt</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.netstack/index.html#RouteTableEntry'>RouteTableEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RouteTableEntry'>RouteTableEntry</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -156,7 +156,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rt</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.netstack/index.html#RouteTableEntry2'>RouteTableEntry2</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RouteTableEntry2'>RouteTableEntry2</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -180,7 +180,7 @@ Book: /_book.yaml
     <tr>
             <td><code>stats</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#NetInterfaceStats'>NetInterfaceStats</a></code>
+                <code><a class='link' href='#NetInterfaceStats'>NetInterfaceStats</a></code>
             </td>
         </tr></table>
 
@@ -253,7 +253,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#NetErr'>NetErr</a></code>
+                <code><a class='link' href='#NetErr'>NetErr</a></code>
             </td>
         </tr></table>
 
@@ -289,7 +289,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#NetErr'>NetErr</a></code>
+                <code><a class='link' href='#NetErr'>NetErr</a></code>
             </td>
         </tr></table>
 
@@ -319,7 +319,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#NetErr'>NetErr</a></code>
+                <code><a class='link' href='#NetErr'>NetErr</a></code>
             </td>
         </tr></table>
 
@@ -348,7 +348,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#NetErr'>NetErr</a></code>
+                <code><a class='link' href='#NetErr'>NetErr</a></code>
             </td>
         </tr></table>
 
@@ -374,7 +374,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#NetErr'>NetErr</a></code>
+                <code><a class='link' href='#NetErr'>NetErr</a></code>
             </td>
         </tr><tr>
             <td><code>nicid</code></td>
@@ -397,7 +397,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>interfaceConfig</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#InterfaceConfig'>InterfaceConfig</a></code>
+                <code><a class='link' href='#InterfaceConfig'>InterfaceConfig</a></code>
             </td>
         </tr><tr>
             <td><code>device</code></td>
@@ -428,7 +428,7 @@ Book: /_book.yaml
     <tr>
             <td><code>routeTableTransaction</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.netstack/index.html#RouteTableTransaction'>RouteTableTransaction</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#RouteTableTransaction'>RouteTableTransaction</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -454,7 +454,7 @@ Book: /_book.yaml
     <tr>
             <td><code>interfaces</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.netstack/index.html#NetInterface'>NetInterface</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#NetInterface'>NetInterface</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -490,7 +490,7 @@ Book: /_book.yaml
     <tr>
             <td><code>r</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#RouteTableEntry2'>RouteTableEntry2</a></code>
+                <code><a class='link' href='#RouteTableEntry2'>RouteTableEntry2</a></code>
             </td>
         </tr></table>
 
@@ -514,7 +514,7 @@ Book: /_book.yaml
     <tr>
             <td><code>r</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#RouteTableEntry2'>RouteTableEntry2</a></code>
+                <code><a class='link' href='#RouteTableEntry2'>RouteTableEntry2</a></code>
             </td>
         </tr></table>
 
@@ -544,7 +544,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -603,14 +603,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>rx</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#NetTrafficStats'>NetTrafficStats</a></code>
+                <code><a class='link' href='#NetTrafficStats'>NetTrafficStats</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>tx</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#NetTrafficStats'>NetTrafficStats</a></code>
+                <code><a class='link' href='#NetTrafficStats'>NetTrafficStats</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -642,7 +642,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>ip_address_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netstack/index.html#IpAddressConfig'>IpAddressConfig</a></code>
+                <code><a class='link' href='#IpAddressConfig'>IpAddressConfig</a></code>
             </td>
             <td> Deprecated; to configure a network interface, use SetDhcpClientStatus
  and SetInterfaceAddress instead.

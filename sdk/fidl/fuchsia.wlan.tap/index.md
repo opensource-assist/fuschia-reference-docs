@@ -22,12 +22,12 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#WlantapPhyConfig'>WlantapPhyConfig</a></code>
+                <code><a class='link' href='#WlantapPhyConfig'>WlantapPhyConfig</a></code>
             </td>
         </tr><tr>
             <td><code>proxy</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.wlan.tap/index.html#WlantapPhy'>WlantapPhy</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#WlantapPhy'>WlantapPhy</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -65,7 +65,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#WlanRxInfo'>WlanRxInfo</a></code>
+                <code><a class='link' href='#WlanRxInfo'>WlanRxInfo</a></code>
             </td>
         </tr></table>
 
@@ -105,7 +105,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>txs</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#WlanTxStatus'>WlanTxStatus</a></code>
+                <code><a class='link' href='#WlanTxStatus'>WlanTxStatus</a></code>
             </td>
         </tr></table>
 
@@ -122,7 +122,7 @@ Book: /_book.yaml
     <tr>
             <td><code>args</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#TxArgs'>TxArgs</a></code>
+                <code><a class='link' href='#TxArgs'>TxArgs</a></code>
             </td>
         </tr></table>
 
@@ -137,7 +137,7 @@ Book: /_book.yaml
     <tr>
             <td><code>args</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#SetChannelArgs'>SetChannelArgs</a></code>
+                <code><a class='link' href='#SetChannelArgs'>SetChannelArgs</a></code>
             </td>
         </tr></table>
 
@@ -152,7 +152,7 @@ Book: /_book.yaml
     <tr>
             <td><code>args</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#ConfigureBssArgs'>ConfigureBssArgs</a></code>
+                <code><a class='link' href='#ConfigureBssArgs'>ConfigureBssArgs</a></code>
             </td>
         </tr></table>
 
@@ -167,7 +167,7 @@ Book: /_book.yaml
     <tr>
             <td><code>args</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#SetKeyArgs'>SetKeyArgs</a></code>
+                <code><a class='link' href='#SetKeyArgs'>SetKeyArgs</a></code>
             </td>
         </tr></table>
 
@@ -182,7 +182,7 @@ Book: /_book.yaml
     <tr>
             <td><code>args</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#WlanmacStartArgs'>WlanmacStartArgs</a></code>
+                <code><a class='link' href='#WlanmacStartArgs'>WlanmacStartArgs</a></code>
             </td>
         </tr></table>
 
@@ -197,7 +197,7 @@ Book: /_book.yaml
     <tr>
             <td><code>args</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#SetCountryArgs'>SetCountryArgs</a></code>
+                <code><a class='link' href='#SetCountryArgs'>SetCountryArgs</a></code>
             </td>
         </tr></table>
 
@@ -383,7 +383,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#WlanTxInfo'>WlanTxInfo</a></code>
+                <code><a class='link' href='#WlanTxInfo'>WlanTxInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -575,7 +575,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#WlanTxPacket'>WlanTxPacket</a></code>
+                <code><a class='link' href='#WlanTxPacket'>WlanTxPacket</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -625,7 +625,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#WlanBssConfig'>WlanBssConfig</a></code>
+                <code><a class='link' href='#WlanBssConfig'>WlanBssConfig</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -650,7 +650,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.tap/index.html#WlanKeyConfig'>WlanKeyConfig</a></code>
+                <code><a class='link' href='#WlanKeyConfig'>WlanKeyConfig</a></code>
             </td>
             <td></td>
             <td>No default</td>

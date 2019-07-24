@@ -28,7 +28,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>client</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller'>Controller</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Controller'>Controller</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -39,7 +39,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#PeerManager_GetControllerForTarget_Result'>PeerManager_GetControllerForTarget_Result</a></code>
+                <code><a class='link' href='#PeerManager_GetControllerForTarget_Result'>PeerManager_GetControllerForTarget_Result</a></code>
             </td>
         </tr></table>
 
@@ -67,7 +67,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_GetPlayerApplicationSettings_Result'>Controller_GetPlayerApplicationSettings_Result</a></code>
+                <code><a class='link' href='#Controller_GetPlayerApplicationSettings_Result'>Controller_GetPlayerApplicationSettings_Result</a></code>
             </td>
         </tr></table>
 
@@ -89,7 +89,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_GetMediaAttributes_Result'>Controller_GetMediaAttributes_Result</a></code>
+                <code><a class='link' href='#Controller_GetMediaAttributes_Result'>Controller_GetMediaAttributes_Result</a></code>
             </td>
         </tr></table>
 
@@ -117,7 +117,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SetAbsoluteVolume_Result'>Controller_SetAbsoluteVolume_Result</a></code>
+                <code><a class='link' href='#Controller_SetAbsoluteVolume_Result'>Controller_SetAbsoluteVolume_Result</a></code>
             </td>
         </tr></table>
 
@@ -131,7 +131,7 @@ Book: /_book.yaml
     <tr>
             <td><code>battery_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#BatteryStatus'>BatteryStatus</a></code>
+                <code><a class='link' href='#BatteryStatus'>BatteryStatus</a></code>
             </td>
         </tr></table>
 
@@ -142,15 +142,15 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_InformBatteryStatus_Result'>Controller_InformBatteryStatus_Result</a></code>
+                <code><a class='link' href='#Controller_InformBatteryStatus_Result'>Controller_InformBatteryStatus_Result</a></code>
             </td>
         </tr></table>
 
 ### SetNotificationFilter {:#SetNotificationFilter}
 
- Filters notifications that will be received with <a class='link' href='../fuchsia.bluetooth.avrcp/index.html#OnNotification'>OnNotification</a>. Not all notifications
+ Filters notifications that will be received with <a class='link' href='#OnNotification'>OnNotification</a>. Not all notifications
  are supported by all peers. Resetting the notification filter may trigger all requested
- notification types to post their current value to <a class='link' href='../fuchsia.bluetooth.avrcp/index.html#OnNotification'>OnNotification</a> immediately.
+ notification types to post their current value to <a class='link' href='#OnNotification'>OnNotification</a> immediately.
 
  The `position_change_interval` argument is used to set the interval in seconds that the
  controller client would like to be notified of TRACK_POS_CHANGED events.
@@ -164,7 +164,7 @@ Book: /_book.yaml
     <tr>
             <td><code>notifications</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Notifications'>Notifications</a></code>
+                <code><a class='link' href='#Notifications'>Notifications</a></code>
             </td>
         </tr><tr>
             <td><code>position_change_interval</code></td>
@@ -179,10 +179,10 @@ Book: /_book.yaml
 
  Incoming notification events from the target peer. `timestamp` is monotonic wall time
  of when the event was received by the peer.
- You must call <a class='link' href='../fuchsia.bluetooth.avrcp/index.html#NotifyNotificationHandled'>NotifyNotificationHandled</a> after receving a notification event to
+ You must call <a class='link' href='#NotifyNotificationHandled'>NotifyNotificationHandled</a> after receving a notification event to
  acknowledge delivery. Multiple non-discrete events may be combined into a single
  notification if acknowledged after a new event arrives from a peer.
- Call <a class='link' href='../fuchsia.bluetooth.avrcp/index.html#SetNotificationFilter'>SetNotificationFilter</a> to set the notifications that are requested of the peer.
+ Call <a class='link' href='#SetNotificationFilter'>SetNotificationFilter</a> to set the notifications that are requested of the peer.
  All notifications are discrete state changes except volume change and position change
  notifications.
 
@@ -199,13 +199,13 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>notification</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Notification'>Notification</a></code>
+                <code><a class='link' href='#Notification'>Notification</a></code>
             </td>
         </tr></table>
 
 ### NotifyNotificationHandled {:#NotifyNotificationHandled}
 
- Call to acknowledge handling of a notification from <a class='link' href='../fuchsia.bluetooth.avrcp/index.html#OnNotification'>OnNotification</a>.
+ Call to acknowledge handling of a notification from <a class='link' href='#OnNotification'>OnNotification</a>.
 
 #### Request
 <table>
@@ -235,7 +235,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SetAddressedPlayer_Result'>Controller_SetAddressedPlayer_Result</a></code>
+                <code><a class='link' href='#Controller_SetAddressedPlayer_Result'>Controller_SetAddressedPlayer_Result</a></code>
             </td>
         </tr></table>
 
@@ -249,7 +249,7 @@ Book: /_book.yaml
     <tr>
             <td><code>command</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#AvcPanelCommand'>AvcPanelCommand</a></code>
+                <code><a class='link' href='#AvcPanelCommand'>AvcPanelCommand</a></code>
             </td>
         </tr></table>
 
@@ -260,7 +260,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SendCommand_Result'>Controller_SendCommand_Result</a></code>
+                <code><a class='link' href='#Controller_SendCommand_Result'>Controller_SendCommand_Result</a></code>
             </td>
         </tr></table>
 
@@ -290,7 +290,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
+                <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -308,7 +308,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>attributes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#MediaAttributes'>MediaAttributes</a></code>
+                <code><a class='link' href='#MediaAttributes'>MediaAttributes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -378,21 +378,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>repeat_status_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#RepeatStatusMode'>RepeatStatusMode</a></code>
+                <code><a class='link' href='#RepeatStatusMode'>RepeatStatusMode</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>shuffle_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ShuffleMode'>ShuffleMode</a></code>
+                <code><a class='link' href='#ShuffleMode'>ShuffleMode</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>scan_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ScanMode'>ScanMode</a></code>
+                <code><a class='link' href='#ScanMode'>ScanMode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1030,7 +1030,7 @@ Type: <code>uint8</code>
             <td>1</td>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#PlaybackStatus'>PlaybackStatus</a></code>
+                <code><a class='link' href='#PlaybackStatus'>PlaybackStatus</a></code>
             </td>
             <td> EVENT_PLAYBACK_STATUS_CHANGED event data
 </td>
@@ -1054,7 +1054,7 @@ Type: <code>uint8</code>
             <td>4</td>
             <td><code>battery_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#BatteryStatus'>BatteryStatus</a></code>
+                <code><a class='link' href='#BatteryStatus'>BatteryStatus</a></code>
             </td>
             <td> EVENT_BATT_STATUS_CHANGED event data
 </td>
@@ -1062,7 +1062,7 @@ Type: <code>uint8</code>
             <td>5</td>
             <td><code>system_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#SystemStatus'>SystemStatus</a></code>
+                <code><a class='link' href='#SystemStatus'>SystemStatus</a></code>
             </td>
             <td> EVENT_SYSTEM_STATUS_CHANGED event data
 </td>
@@ -1070,7 +1070,7 @@ Type: <code>uint8</code>
             <td>6</td>
             <td><code>application_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
+                <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
             </td>
             <td> EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED event data
 </td>
@@ -1112,7 +1112,7 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#PeerManager_GetControllerForTarget_Response'>PeerManager_GetControllerForTarget_Response</a></code>
+                <code><a class='link' href='#PeerManager_GetControllerForTarget_Response'>PeerManager_GetControllerForTarget_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1131,13 +1131,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_GetPlayerApplicationSettings_Response'>Controller_GetPlayerApplicationSettings_Response</a></code>
+                <code><a class='link' href='#Controller_GetPlayerApplicationSettings_Response'>Controller_GetPlayerApplicationSettings_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1150,13 +1150,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_GetMediaAttributes_Response'>Controller_GetMediaAttributes_Response</a></code>
+                <code><a class='link' href='#Controller_GetMediaAttributes_Response'>Controller_GetMediaAttributes_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1169,13 +1169,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SetAbsoluteVolume_Response'>Controller_SetAbsoluteVolume_Response</a></code>
+                <code><a class='link' href='#Controller_SetAbsoluteVolume_Response'>Controller_SetAbsoluteVolume_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1188,13 +1188,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_InformBatteryStatus_Response'>Controller_InformBatteryStatus_Response</a></code>
+                <code><a class='link' href='#Controller_InformBatteryStatus_Response'>Controller_InformBatteryStatus_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1207,13 +1207,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SetAddressedPlayer_Response'>Controller_SetAddressedPlayer_Response</a></code>
+                <code><a class='link' href='#Controller_SetAddressedPlayer_Response'>Controller_SetAddressedPlayer_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1226,13 +1226,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SendCommand_Response'>Controller_SendCommand_Response</a></code>
+                <code><a class='link' href='#Controller_SendCommand_Response'>Controller_SendCommand_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>

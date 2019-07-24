@@ -79,7 +79,7 @@ Book: /_book.yaml
     <tr>
             <td><code>child</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ChildRef'>ChildRef</a></code>
+                <code><a class='link' href='#ChildRef'>ChildRef</a></code>
             </td>
         </tr><tr>
             <td><code>exposed_dir</code></td>
@@ -95,7 +95,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_BindChild_Result'>Realm_BindChild_Result</a></code>
+                <code><a class='link' href='#Realm_BindChild_Result'>Realm_BindChild_Result</a></code>
             </td>
         </tr></table>
 
@@ -117,12 +117,12 @@ Book: /_book.yaml
     <tr>
             <td><code>collection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#CollectionRef'>CollectionRef</a></code>
+                <code><a class='link' href='#CollectionRef'>CollectionRef</a></code>
             </td>
         </tr><tr>
             <td><code>decl</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ChildDecl'>ChildDecl</a></code>
+                <code><a class='link' href='#ChildDecl'>ChildDecl</a></code>
             </td>
         </tr></table>
 
@@ -133,7 +133,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_CreateChild_Result'>Realm_CreateChild_Result</a></code>
+                <code><a class='link' href='#Realm_CreateChild_Result'>Realm_CreateChild_Result</a></code>
             </td>
         </tr></table>
 
@@ -157,7 +157,7 @@ Book: /_book.yaml
     <tr>
             <td><code>child</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ChildRef'>ChildRef</a></code>
+                <code><a class='link' href='#ChildRef'>ChildRef</a></code>
             </td>
         </tr></table>
 
@@ -168,7 +168,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_DestroyChild_Result'>Realm_DestroyChild_Result</a></code>
+                <code><a class='link' href='#Realm_DestroyChild_Result'>Realm_DestroyChild_Result</a></code>
             </td>
         </tr></table>
 
@@ -190,12 +190,12 @@ Book: /_book.yaml
     <tr>
             <td><code>collection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#CollectionRef'>CollectionRef</a></code>
+                <code><a class='link' href='#CollectionRef'>CollectionRef</a></code>
             </td>
         </tr><tr>
             <td><code>iter</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sys2/index.html#ChildIterator'>ChildIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ChildIterator'>ChildIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -206,7 +206,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_ListChildren_Result'>Realm_ListChildren_Result</a></code>
+                <code><a class='link' href='#Realm_ListChildren_Result'>Realm_ListChildren_Result</a></code>
             </td>
         </tr></table>
 
@@ -234,7 +234,7 @@ Book: /_book.yaml
     <tr>
             <td><code>children</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#ChildRef'>ChildRef</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ChildRef'>ChildRef</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -291,7 +291,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>component</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Component'>Component</a></code>
+                <code><a class='link' href='#Component'>Component</a></code>
             </td>
         </tr></table>
 
@@ -325,12 +325,12 @@ Book: /_book.yaml
     <tr>
             <td><code>start_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ComponentStartInfo'>ComponentStartInfo</a></code>
+                <code><a class='link' href='#ComponentStartInfo'>ComponentStartInfo</a></code>
             </td>
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sys2/index.html#ComponentController'>ComponentController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ComponentController'>ComponentController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -396,7 +396,7 @@ Book: /_book.yaml
     <tr>
             <td><code>client_moniker</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Moniker'>Moniker</a></code>
+                <code><a class='link' href='#Moniker'>Moniker</a></code>
             </td>
         </tr><tr>
             <td><code>exports</code></td>
@@ -679,7 +679,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>startup</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#StartupMode'>StartupMode</a></code>
+                <code><a class='link' href='#StartupMode'>StartupMode</a></code>
             </td>
             <td> The startup mode for the component instance.
 </td>
@@ -708,7 +708,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>durability</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Durability'>Durability</a></code>
+                <code><a class='link' href='#Durability'>Durability</a></code>
             </td>
             <td> The durability of instances in the collection.
 </td>
@@ -758,7 +758,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>uses</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#UseDecl'>UseDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#UseDecl'>UseDecl</a>&gt;</code>
             </td>
             <td> List of capabilities used by the component. These consist of
  capabilities offered to the component that are installed in its incoming
@@ -770,7 +770,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>exposes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#ExposeDecl'>ExposeDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ExposeDecl'>ExposeDecl</a>&gt;</code>
             </td>
             <td> List of capabilities exposed by the component. These consist of
  capabilities that are made visible to the containing realm. The parent
@@ -782,7 +782,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>offers</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#OfferDecl'>OfferDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#OfferDecl'>OfferDecl</a>&gt;</code>
             </td>
             <td> List of capabilities offered to the component’s children. These consist
  of capabilities that the given children may `use`, which may come from a
@@ -802,7 +802,7 @@ Type: <code>uint32</code>
             <td>6</td>
             <td><code>children</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#ChildDecl'>ChildDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ChildDecl'>ChildDecl</a>&gt;</code>
             </td>
             <td> The component's statically instantiated children. The children must have
  unique names.
@@ -811,7 +811,7 @@ Type: <code>uint32</code>
             <td>7</td>
             <td><code>collections</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#CollectionDecl'>CollectionDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CollectionDecl'>CollectionDecl</a>&gt;</code>
             </td>
             <td> The component's collections. The collections must have unique names.
 </td>
@@ -819,7 +819,7 @@ Type: <code>uint32</code>
             <td>8</td>
             <td><code>storage</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#StorageDecl'>StorageDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#StorageDecl'>StorageDecl</a>&gt;</code>
             </td>
             <td> List of storage capabilities created by this component.
  Storage capabilities can be offered to children.
@@ -841,7 +841,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the capability relative to the component itself. Must
  be `self` or `child`.
@@ -891,7 +891,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the capability relative to the component itself. Must
  be `self` or `child`.
@@ -924,7 +924,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the capability relative to the component itself. Must be
  `realm`, `self`, or `child`.
@@ -941,7 +941,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>target</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> Reference to the target. Must be `child` or `collection`.
 </td>
@@ -973,7 +973,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the capability relative to the component itself. Must be
  `realm`, `self`, or `child`.
@@ -990,7 +990,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>target</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> Reference to the target of the capability. Must be `child` or
  `collection`.
@@ -1023,7 +1023,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#StorageType'>StorageType</a></code>
+                <code><a class='link' href='#StorageType'>StorageType</a></code>
             </td>
             <td> The type of storage being offered.
 </td>
@@ -1031,7 +1031,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The source of the storage capability. Must be `realm` or `storage`.
 </td>
@@ -1039,7 +1039,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>target</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> Reference to the target of the capability. Must be `child` or
  `collection`.
@@ -1185,7 +1185,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the underlying directory capability relative to the
  component itself. Must be `realm`, `self`, or `child`.
@@ -1207,7 +1207,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the service relative to the component itself. Must
  be |realm| or |framework|.
@@ -1249,7 +1249,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the directory relative to the component itself. Must
  be |realm| or |framework|.
@@ -1291,7 +1291,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#StorageType'>StorageType</a></code>
+                <code><a class='link' href='#StorageType'>StorageType</a></code>
             </td>
             <td> Type of storage used by the component.
 </td>
@@ -1335,7 +1335,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>decl</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ComponentDecl'>ComponentDecl</a></code>
+                <code><a class='link' href='#ComponentDecl'>ComponentDecl</a></code>
             </td>
             <td> The component's declaration.
  This information is typically obtained from the component's manifest
@@ -1345,7 +1345,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>package</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Package'>Package</a></code>
+                <code><a class='link' href='#Package'>Package</a></code>
             </td>
             <td> The package that contains the component.
  By convention, the component's package is mapped to "/pkg" in its
@@ -1392,7 +1392,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>ns</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ComponentNamespace'>ComponentNamespace</a></code>
+                <code><a class='link' href='#ComponentNamespace'>ComponentNamespace</a></code>
             </td>
             <td> The namespace to provide to the component instance.
 </td>
@@ -1457,13 +1457,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_BindChild_Response'>Realm_BindChild_Response</a></code>
+                <code><a class='link' href='#Realm_BindChild_Response'>Realm_BindChild_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1476,13 +1476,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_CreateChild_Response'>Realm_CreateChild_Response</a></code>
+                <code><a class='link' href='#Realm_CreateChild_Response'>Realm_CreateChild_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1495,13 +1495,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_DestroyChild_Response'>Realm_DestroyChild_Response</a></code>
+                <code><a class='link' href='#Realm_DestroyChild_Response'>Realm_DestroyChild_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1514,13 +1514,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_ListChildren_Response'>Realm_ListChildren_Response</a></code>
+                <code><a class='link' href='#Realm_ListChildren_Response'>Realm_ListChildren_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1539,13 +1539,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>service</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ExposeServiceDecl'>ExposeServiceDecl</a></code>
+                <code><a class='link' href='#ExposeServiceDecl'>ExposeServiceDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>directory</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ExposeDirectoryDecl'>ExposeDirectoryDecl</a></code>
+                <code><a class='link' href='#ExposeDirectoryDecl'>ExposeDirectoryDecl</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1561,19 +1561,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>service</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#OfferServiceDecl'>OfferServiceDecl</a></code>
+                <code><a class='link' href='#OfferServiceDecl'>OfferServiceDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>directory</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#OfferDirectoryDecl'>OfferDirectoryDecl</a></code>
+                <code><a class='link' href='#OfferDirectoryDecl'>OfferDirectoryDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>storage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#OfferStorageDecl'>OfferStorageDecl</a></code>
+                <code><a class='link' href='#OfferStorageDecl'>OfferStorageDecl</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1588,37 +1588,37 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>realm</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#RealmRef'>RealmRef</a></code>
+                <code><a class='link' href='#RealmRef'>RealmRef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>self</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#SelfRef'>SelfRef</a></code>
+                <code><a class='link' href='#SelfRef'>SelfRef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>child</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ChildRef'>ChildRef</a></code>
+                <code><a class='link' href='#ChildRef'>ChildRef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>collection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#CollectionRef'>CollectionRef</a></code>
+                <code><a class='link' href='#CollectionRef'>CollectionRef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>storage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#StorageRef'>StorageRef</a></code>
+                <code><a class='link' href='#StorageRef'>StorageRef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>framework</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#FrameworkRef'>FrameworkRef</a></code>
+                <code><a class='link' href='#FrameworkRef'>FrameworkRef</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1633,19 +1633,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>service</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#UseServiceDecl'>UseServiceDecl</a></code>
+                <code><a class='link' href='#UseServiceDecl'>UseServiceDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>directory</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#UseDirectoryDecl'>UseDirectoryDecl</a></code>
+                <code><a class='link' href='#UseDirectoryDecl'>UseDirectoryDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>storage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#UseStorageDecl'>UseStorageDecl</a></code>
+                <code><a class='link' href='#UseStorageDecl'>UseStorageDecl</a></code>
             </td>
             <td></td>
         </tr></table>

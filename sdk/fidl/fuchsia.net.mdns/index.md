@@ -73,7 +73,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>subscriber</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.mdns/index.html#ServiceSubscriber'>ServiceSubscriber</a></code>
+                <code><a class='link' href='#ServiceSubscriber'>ServiceSubscriber</a></code>
             </td>
         </tr></table>
 
@@ -116,7 +116,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>responder</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.mdns/index.html#PublicationResponder'>PublicationResponder</a></code>
+                <code><a class='link' href='#PublicationResponder'>PublicationResponder</a></code>
             </td>
         </tr></table>
 
@@ -127,7 +127,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.mdns/index.html#Publisher_PublishServiceInstance_Result'>Publisher_PublishServiceInstance_Result</a></code>
+                <code><a class='link' href='#Publisher_PublishServiceInstance_Result'>Publisher_PublishServiceInstance_Result</a></code>
             </td>
         </tr></table>
 
@@ -148,7 +148,7 @@ Book: /_book.yaml
     <tr>
             <td><code>instance</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.mdns/index.html#ServiceInstance'>ServiceInstance</a></code>
+                <code><a class='link' href='#ServiceInstance'>ServiceInstance</a></code>
             </td>
         </tr></table>
 
@@ -169,7 +169,7 @@ Book: /_book.yaml
     <tr>
             <td><code>instance</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.mdns/index.html#ServiceInstance'>ServiceInstance</a></code>
+                <code><a class='link' href='#ServiceInstance'>ServiceInstance</a></code>
             </td>
         </tr></table>
 
@@ -242,7 +242,7 @@ Book: /_book.yaml
     <tr>
             <td><code>publication</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.mdns/index.html#Publication'>Publication</a>?</code>
+                <code><a class='link' href='#Publication'>Publication</a>?</code>
             </td>
         </tr></table>
 
@@ -393,7 +393,7 @@ Book: /_book.yaml
             <td> The priority of the SRV resource record for this publication. See
  [RFC6763](https://tools.ietf.org/html/rfc6763) for details.
 </td>
-            <td><a class='link' href='../fuchsia.net.mdns/index.html#DEFAULT_SRV_PRIORITY'>DEFAULT_SRV_PRIORITY</a></td>
+            <td><a class='link' href='#DEFAULT_SRV_PRIORITY'>DEFAULT_SRV_PRIORITY</a></td>
         </tr><tr>
             <td><code>srv_weight</code></td>
             <td>
@@ -402,7 +402,7 @@ Book: /_book.yaml
             <td> The weight of the SRV resource record for this publication. See
  [RFC6763](https://tools.ietf.org/html/rfc6763) for details.
 </td>
-            <td><a class='link' href='../fuchsia.net.mdns/index.html#DEFAULT_SRV_WEIGHT'>DEFAULT_SRV_WEIGHT</a></td>
+            <td><a class='link' href='#DEFAULT_SRV_WEIGHT'>DEFAULT_SRV_WEIGHT</a></td>
         </tr><tr>
             <td><code>ptr_ttl</code></td>
             <td>
@@ -410,7 +410,7 @@ Book: /_book.yaml
             </td>
             <td> Time-to-live for PTR resource records.
 </td>
-            <td><a class='link' href='../fuchsia.net.mdns/index.html#DEFAULT_PTR_TTL'>DEFAULT_PTR_TTL</a></td>
+            <td><a class='link' href='#DEFAULT_PTR_TTL'>DEFAULT_PTR_TTL</a></td>
         </tr><tr>
             <td><code>srv_ttl</code></td>
             <td>
@@ -418,7 +418,7 @@ Book: /_book.yaml
             </td>
             <td> Time-to-live for SRV resource records.
 </td>
-            <td><a class='link' href='../fuchsia.net.mdns/index.html#DEFAULT_SRV_TTL'>DEFAULT_SRV_TTL</a></td>
+            <td><a class='link' href='#DEFAULT_SRV_TTL'>DEFAULT_SRV_TTL</a></td>
         </tr><tr>
             <td><code>txt_ttl</code></td>
             <td>
@@ -426,7 +426,7 @@ Book: /_book.yaml
             </td>
             <td> Time-to-live for TXT resource records.
 </td>
-            <td><a class='link' href='../fuchsia.net.mdns/index.html#DEFAULT_TXT_TTL'>DEFAULT_TXT_TTL</a></td>
+            <td><a class='link' href='#DEFAULT_TXT_TTL'>DEFAULT_TXT_TTL</a></td>
         </tr>
 </table>
 
@@ -475,13 +475,13 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.mdns/index.html#Publisher_PublishServiceInstance_Response'>Publisher_PublishServiceInstance_Response</a></code>
+                <code><a class='link' href='#Publisher_PublishServiceInstance_Response'>Publisher_PublishServiceInstance_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.mdns/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>

@@ -20,7 +20,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>values</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.data/index.html#Value'>Value</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Value'>Value</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -40,7 +40,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.data/index.html#Entry'>Entry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Entry'>Entry</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -66,7 +66,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.data/index.html#Value'>Value</a>?</code>
+                <code><a class='link' href='#Value'>Value</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -114,13 +114,13 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>vec</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.data/index.html#Vector'>Vector</a></code>
+                <code><a class='link' href='#Vector'>Vector</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>dict</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.data/index.html#Dictionary'>Dictionary</a></code>
+                <code><a class='link' href='#Dictionary'>Dictionary</a></code>
             </td>
             <td></td>
         </tr></table>

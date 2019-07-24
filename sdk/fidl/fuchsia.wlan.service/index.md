@@ -21,7 +21,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#ScanRequest'>ScanRequest</a></code>
+                <code><a class='link' href='#ScanRequest'>ScanRequest</a></code>
             </td>
         </tr></table>
 
@@ -32,7 +32,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#ScanResult'>ScanResult</a></code>
+                <code><a class='link' href='#ScanResult'>ScanResult</a></code>
             </td>
         </tr></table>
 
@@ -45,7 +45,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#ConnectConfig'>ConnectConfig</a></code>
+                <code><a class='link' href='#ConnectConfig'>ConnectConfig</a></code>
             </td>
         </tr></table>
 
@@ -56,7 +56,7 @@ Book: /_book.yaml
     <tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
         </tr></table>
 
@@ -75,7 +75,7 @@ Book: /_book.yaml
     <tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
         </tr></table>
 
@@ -94,7 +94,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#WlanStatus'>WlanStatus</a></code>
+                <code><a class='link' href='#WlanStatus'>WlanStatus</a></code>
             </td>
         </tr></table>
 
@@ -107,7 +107,7 @@ Book: /_book.yaml
     <tr>
             <td><code>cfg</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#BssConfig'>BssConfig</a></code>
+                <code><a class='link' href='#BssConfig'>BssConfig</a></code>
             </td>
         </tr></table>
 
@@ -118,7 +118,7 @@ Book: /_book.yaml
     <tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
         </tr></table>
 
@@ -137,7 +137,7 @@ Book: /_book.yaml
     <tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
         </tr></table>
 
@@ -156,7 +156,7 @@ Book: /_book.yaml
     <tr>
             <td><code>stats</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#WlanStats'>WlanStats</a></code>
+                <code><a class='link' href='#WlanStats'>WlanStats</a></code>
             </td>
         </tr></table>
 
@@ -189,7 +189,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#ErrCode'>ErrCode</a></code>
+                <code><a class='link' href='#ErrCode'>ErrCode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -285,14 +285,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>aps</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.service/index.html#AP'>AP</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#AP'>AP</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -349,21 +349,21 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#State'>State</a></code>
+                <code><a class='link' href='#State'>State</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>current_ap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#AP'>AP</a>?</code>
+                <code><a class='link' href='#AP'>AP</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -420,7 +420,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.service/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
             <td>No default</td>

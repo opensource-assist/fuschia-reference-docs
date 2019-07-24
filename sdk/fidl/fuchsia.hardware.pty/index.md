@@ -106,7 +106,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>size</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.pty/index.html#WindowSize'>WindowSize</a></code>
+                <code><a class='link' href='#WindowSize'>WindowSize</a></code>
             </td>
         </tr></table>
 
@@ -175,7 +175,7 @@ Book: /_book.yaml
     <tr>
             <td><code>size</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.pty/index.html#WindowSize'>WindowSize</a></code>
+                <code><a class='link' href='#WindowSize'>WindowSize</a></code>
             </td>
         </tr></table>
 

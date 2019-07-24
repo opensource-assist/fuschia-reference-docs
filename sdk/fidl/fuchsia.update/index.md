@@ -59,7 +59,7 @@ Book: /_book.yaml
     <tr>
             <td><code>slot</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update/index.html#Slot'>Slot</a></code>
+                <code><a class='link' href='#Slot'>Slot</a></code>
             </td>
         </tr><tr>
             <td><code>data_blob</code></td>
@@ -76,7 +76,7 @@ Book: /_book.yaml
      the ‘other’ slot on a two-slot device).
  + request `data_blob` the data blob to write for the given slot.  Providing too
      large of a data blob will result in failure.
- * error <a class='link' href='../fuchsia.update/index.html#SetChannelDataError'>SetChannelDataError</a>.
+ * error <a class='link' href='#SetChannelDataError'>SetChannelDataError</a>.
 
 #### Request
 <table>
@@ -84,7 +84,7 @@ Book: /_book.yaml
     <tr>
             <td><code>slot</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update/index.html#Slot'>Slot</a></code>
+                <code><a class='link' href='#Slot'>Slot</a></code>
             </td>
         </tr><tr>
             <td><code>data_blob</code></td>
@@ -100,7 +100,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update/index.html#ChannelWriter_SetChannelData_Result'>ChannelWriter_SetChannelData_Result</a></code>
+                <code><a class='link' href='#ChannelWriter_SetChannelData_Result'>ChannelWriter_SetChannelData_Result</a></code>
             </td>
         </tr></table>
 
@@ -126,12 +126,12 @@ Book: /_book.yaml
     <tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update/index.html#Options'>Options</a></code>
+                <code><a class='link' href='#Options'>Options</a></code>
             </td>
         </tr><tr>
             <td><code>monitor</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.update/index.html#Monitor'>Monitor</a>&gt;?</code>
+                <code>request&lt;<a class='link' href='#Monitor'>Monitor</a>&gt;?</code>
             </td>
         </tr></table>
 
@@ -142,7 +142,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update/index.html#CheckStartedResult'>CheckStartedResult</a></code>
+                <code><a class='link' href='#CheckStartedResult'>CheckStartedResult</a></code>
             </td>
         </tr></table>
 
@@ -163,7 +163,7 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update/index.html#State'>State</a></code>
+                <code><a class='link' href='#State'>State</a></code>
             </td>
         </tr></table>
 
@@ -177,7 +177,7 @@ Book: /_book.yaml
     <tr>
             <td><code>monitor</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.update/index.html#Monitor'>Monitor</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Monitor'>Monitor</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -201,7 +201,7 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update/index.html#State'>State</a></code>
+                <code><a class='link' href='#State'>State</a></code>
             </td>
         </tr></table>
 
@@ -380,7 +380,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>initiator</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update/index.html#Initiator'>Initiator</a></code>
+                <code><a class='link' href='#Initiator'>Initiator</a></code>
             </td>
             <td> What initiated this update attempt.
 </td>
@@ -399,7 +399,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update/index.html#ManagerState'>ManagerState</a></code>
+                <code><a class='link' href='#ManagerState'>ManagerState</a></code>
             </td>
             <td> The current state of the Manager. Always present.
 </td>
@@ -426,13 +426,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update/index.html#ChannelWriter_SetChannelData_Response'>ChannelWriter_SetChannelData_Response</a></code>
+                <code><a class='link' href='#ChannelWriter_SetChannelData_Response'>ChannelWriter_SetChannelData_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update/index.html#SetChannelDataError'>SetChannelDataError</a></code>
+                <code><a class='link' href='#SetChannelDataError'>SetChannelDataError</a></code>
             </td>
             <td></td>
         </tr></table>

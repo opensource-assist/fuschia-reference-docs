@@ -42,7 +42,7 @@ Book: /_book.yaml
     <tr>
             <td><code>meta_far_blob</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#BlobInfo'>BlobInfo</a></code>
+                <code><a class='link' href='#BlobInfo'>BlobInfo</a></code>
             </td>
         </tr><tr>
             <td><code>selectors</code></td>
@@ -52,7 +52,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>needed_blobs</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.pkg/index.html#NeededBlobs'>NeededBlobs</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#NeededBlobs'>NeededBlobs</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>dir</code></td>
@@ -92,7 +92,7 @@ Book: /_book.yaml
     <tr>
             <td><code>meta_far_blob_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#BlobId'>BlobId</a></code>
+                <code><a class='link' href='#BlobId'>BlobId</a></code>
             </td>
         </tr><tr>
             <td><code>selectors</code></td>
@@ -143,7 +143,7 @@ Book: /_book.yaml
     <tr>
             <td><code>blobs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.pkg/index.html#BlobInfo'>BlobInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#BlobInfo'>BlobInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -168,7 +168,7 @@ Book: /_book.yaml
     <tr>
             <td><code>blob_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#BlobId'>BlobId</a></code>
+                <code><a class='link' href='#BlobId'>BlobId</a></code>
             </td>
         </tr><tr>
             <td><code>file</code></td>
@@ -214,7 +214,7 @@ Book: /_book.yaml
     <tr>
             <td><code>repo</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#RepositoryConfig'>RepositoryConfig</a></code>
+                <code><a class='link' href='#RepositoryConfig'>RepositoryConfig</a></code>
             </td>
         </tr></table>
 
@@ -290,7 +290,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>mirror</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#MirrorConfig'>MirrorConfig</a></code>
+                <code><a class='link' href='#MirrorConfig'>MirrorConfig</a></code>
             </td>
         </tr></table>
 
@@ -360,7 +360,7 @@ Book: /_book.yaml
     <tr>
             <td><code>iterator</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.pkg/index.html#RepositoryIterator'>RepositoryIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#RepositoryIterator'>RepositoryIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -391,7 +391,7 @@ Book: /_book.yaml
     <tr>
             <td><code>repos</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.pkg/index.html#RepositoryConfig'>RepositoryConfig</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RepositoryConfig'>RepositoryConfig</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -440,7 +440,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>update_policy</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#UpdatePolicy'>UpdatePolicy</a></code>
+                <code><a class='link' href='#UpdatePolicy'>UpdatePolicy</a></code>
             </td>
         </tr><tr>
             <td><code>dir</code></td>
@@ -497,7 +497,7 @@ Book: /_book.yaml
     <tr>
             <td><code>retention_index</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#BlobId'>BlobId</a></code>
+                <code><a class='link' href='#BlobId'>BlobId</a></code>
             </td>
         </tr></table>
 
@@ -549,7 +549,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>blob_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#BlobId'>BlobId</a></code>
+                <code><a class='link' href='#BlobId'>BlobId</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -622,7 +622,7 @@ Book: /_book.yaml
             <td>2</td>
             <td><code>root_keys</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.pkg/index.html#RepositoryKeyConfig'>RepositoryKeyConfig</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RepositoryKeyConfig'>RepositoryKeyConfig</a>&gt;</code>
             </td>
             <td> A vector of public keys. Required.
 
@@ -632,7 +632,7 @@ Book: /_book.yaml
             <td>3</td>
             <td><code>mirrors</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.pkg/index.html#MirrorConfig'>MirrorConfig</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#MirrorConfig'>MirrorConfig</a>&gt;</code>
             </td>
             <td> The repository mirrors that serve the package contents. Required.
 </td>
@@ -678,7 +678,7 @@ Book: /_book.yaml
             <td>3</td>
             <td><code>blob_key</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#RepositoryBlobKey'>RepositoryBlobKey</a></code>
+                <code><a class='link' href='#RepositoryBlobKey'>RepositoryBlobKey</a></code>
             </td>
             <td> The private (or symmetric) key used to decrypt blobs fetched from this mirror. Optional.
 </td>

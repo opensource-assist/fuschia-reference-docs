@@ -28,12 +28,12 @@ Book: /_book.yaml
     <tr>
             <td><code>settingType</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#SettingType'>SettingType</a></code>
+                <code><a class='link' href='#SettingType'>SettingType</a></code>
             </td>
         </tr><tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#SettingListener'>SettingListener</a></code>
+                <code><a class='link' href='#SettingListener'>SettingListener</a></code>
             </td>
         </tr></table>
 
@@ -50,7 +50,7 @@ Book: /_book.yaml
     <tr>
             <td><code>settingType</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#SettingType'>SettingType</a></code>
+                <code><a class='link' href='#SettingType'>SettingType</a></code>
             </td>
         </tr></table>
 
@@ -61,7 +61,7 @@ Book: /_book.yaml
     <tr>
             <td><code>setting</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#SettingsObject'>SettingsObject</a></code>
+                <code><a class='link' href='#SettingsObject'>SettingsObject</a></code>
             </td>
         </tr></table>
 
@@ -76,7 +76,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#SettingsObject'>SettingsObject</a></code>
+                <code><a class='link' href='#SettingsObject'>SettingsObject</a></code>
             </td>
         </tr></table>
 
@@ -87,7 +87,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#UpdateResponse'>UpdateResponse</a></code>
+                <code><a class='link' href='#UpdateResponse'>UpdateResponse</a></code>
             </td>
         </tr></table>
 
@@ -100,12 +100,12 @@ Book: /_book.yaml
     <tr>
             <td><code>settingType</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#SettingType'>SettingType</a></code>
+                <code><a class='link' href='#SettingType'>SettingType</a></code>
             </td>
         </tr><tr>
             <td><code>mutation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#Mutation'>Mutation</a></code>
+                <code><a class='link' href='#Mutation'>Mutation</a></code>
             </td>
         </tr></table>
 
@@ -116,7 +116,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#MutationResponse'>MutationResponse</a></code>
+                <code><a class='link' href='#MutationResponse'>MutationResponse</a></code>
             </td>
         </tr></table>
 
@@ -129,17 +129,17 @@ Book: /_book.yaml
     <tr>
             <td><code>settingType</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#SettingType'>SettingType</a></code>
+                <code><a class='link' href='#SettingType'>SettingType</a></code>
             </td>
         </tr><tr>
             <td><code>mutation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#Mutation'>Mutation</a></code>
+                <code><a class='link' href='#Mutation'>Mutation</a></code>
             </td>
         </tr><tr>
             <td><code>mutation_handles</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#MutationHandles'>MutationHandles</a></code>
+                <code><a class='link' href='#MutationHandles'>MutationHandles</a></code>
             </td>
         </tr></table>
 
@@ -150,7 +150,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#MutationResponse'>MutationResponse</a></code>
+                <code><a class='link' href='#MutationResponse'>MutationResponse</a></code>
             </td>
         </tr></table>
 
@@ -168,7 +168,7 @@ Book: /_book.yaml
     <tr>
             <td><code>object</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#SettingsObject'>SettingsObject</a></code>
+                <code><a class='link' href='#SettingsObject'>SettingsObject</a></code>
             </td>
         </tr></table>
 
@@ -190,7 +190,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>operation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#StringOperation'>StringOperation</a></code>
+                <code><a class='link' href='#StringOperation'>StringOperation</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -216,7 +216,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>operation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#WirelessOperation'>WirelessOperation</a></code>
+                <code><a class='link' href='#WirelessOperation'>WirelessOperation</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -249,7 +249,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#TimeZoneInfo'>TimeZoneInfo</a></code>
+                <code><a class='link' href='#TimeZoneInfo'>TimeZoneInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -288,7 +288,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>hour_cycle</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#HourCycle'>HourCycle</a></code>
+                <code><a class='link' href='#HourCycle'>HourCycle</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -307,7 +307,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>temperature_unit</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#TemperatureUnit'>TemperatureUnit</a></code>
+                <code><a class='link' href='#TemperatureUnit'>TemperatureUnit</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -343,14 +343,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>setting_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#SettingType'>SettingType</a></code>
+                <code><a class='link' href='#SettingType'>SettingType</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#SettingData'>SettingData</a></code>
+                <code><a class='link' href='#SettingData'>SettingData</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -368,7 +368,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>return_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#ReturnCode'>ReturnCode</a></code>
+                <code><a class='link' href='#ReturnCode'>ReturnCode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -386,7 +386,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>return_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#ReturnCode'>ReturnCode</a></code>
+                <code><a class='link' href='#ReturnCode'>ReturnCode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -404,7 +404,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>current</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#TimeZone'>TimeZone</a>?</code>
+                <code><a class='link' href='#TimeZone'>TimeZone</a>?</code>
             </td>
             <td> The current time zone. Will be absent if no time zone is currently set.
  To update the time zone, set this value.
@@ -413,7 +413,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>available</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.setui/index.html#TimeZone'>TimeZone</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#TimeZone'>TimeZone</a>&gt;</code>
             </td>
             <td> An ordered list of the available time zones.
 </td>
@@ -490,7 +490,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#ConnectionStatus'>ConnectionStatus</a></code>
+                <code><a class='link' href='#ConnectionStatus'>ConnectionStatus</a></code>
             </td>
             <td> The current connection state of the access point.
 </td>
@@ -526,7 +526,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>wpa_auth</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#WpaAuth'>WpaAuth</a></code>
+                <code><a class='link' href='#WpaAuth'>WpaAuth</a></code>
             </td>
             <td> The auth configuration for the access point.
 </td>
@@ -534,7 +534,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>wpa_cipher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#WpaCipher'>WpaCipher</a></code>
+                <code><a class='link' href='#WpaCipher'>WpaCipher</a></code>
             </td>
             <td> The cipher configuration for the access point.
 </td>
@@ -542,7 +542,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>access_points</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.setui/index.html#WirelessAccessPoint'>WirelessAccessPoint</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#WirelessAccessPoint'>WirelessAccessPoint</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -560,7 +560,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>wireless_networks</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.setui/index.html#WirelessNetwork'>WirelessNetwork</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#WirelessNetwork'>WirelessNetwork</a>&gt;</code>
             </td>
             <td> The available access points to connect to.
 </td>
@@ -579,7 +579,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>reachability</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#Reachability'>Reachability</a></code>
+                <code><a class='link' href='#Reachability'>Reachability</a></code>
             </td>
             <td> The current level of connection access.
 </td>
@@ -611,7 +611,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>hour_cycle</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#HourCycle'>HourCycle</a></code>
+                <code><a class='link' href='#HourCycle'>HourCycle</a></code>
             </td>
             <td> The user's preferred hour cycle, 12 hours or 24 hours.
 </td>
@@ -619,7 +619,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>temperature_unit</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#TemperatureUnit'>TemperatureUnit</a></code>
+                <code><a class='link' href='#TemperatureUnit'>TemperatureUnit</a></code>
             </td>
             <td> The user's preferred temperature unit.
 </td>
@@ -962,14 +962,14 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>operation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#AccountOperation'>AccountOperation</a></code>
+                <code><a class='link' href='#AccountOperation'>AccountOperation</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>2</td>
             <td><code>login_override</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#LoginOverride'>LoginOverride</a></code>
+                <code><a class='link' href='#LoginOverride'>LoginOverride</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -987,7 +987,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#LoginOverride'>LoginOverride</a></code>
+                <code><a class='link' href='#LoginOverride'>LoginOverride</a></code>
             </td>
             <td> If set, indicates a login behavior specified at runtime.
 </td>
@@ -1006,43 +1006,43 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>account_mutation_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#AccountMutation'>AccountMutation</a></code>
+                <code><a class='link' href='#AccountMutation'>AccountMutation</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>string_mutation_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#StringMutation'>StringMutation</a></code>
+                <code><a class='link' href='#StringMutation'>StringMutation</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>wireless_mutation_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#WirelessMutation'>WirelessMutation</a></code>
+                <code><a class='link' href='#WirelessMutation'>WirelessMutation</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>time_zone_mutation_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#TimeZoneMutation'>TimeZoneMutation</a></code>
+                <code><a class='link' href='#TimeZoneMutation'>TimeZoneMutation</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>locales_mutation_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#LocalesMutation'>LocalesMutation</a></code>
+                <code><a class='link' href='#LocalesMutation'>LocalesMutation</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>hour_cycle_mutation_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#HourCycleMutation'>HourCycleMutation</a></code>
+                <code><a class='link' href='#HourCycleMutation'>HourCycleMutation</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>temperature_unit_mutation_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#TemperatureUnitMutation'>TemperatureUnitMutation</a></code>
+                <code><a class='link' href='#TemperatureUnitMutation'>TemperatureUnitMutation</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1055,7 +1055,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>account_handles</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#AccountMutationHandles'>AccountMutationHandles</a></code>
+                <code><a class='link' href='#AccountMutationHandles'>AccountMutationHandles</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1074,7 +1074,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>time_zone_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#TimeZoneInfo'>TimeZoneInfo</a></code>
+                <code><a class='link' href='#TimeZoneInfo'>TimeZoneInfo</a></code>
             </td>
             <td> The data returned by the time zone service for getting or setting
  time zones.
@@ -1082,28 +1082,28 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>connectivity</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#ConnectedState'>ConnectedState</a></code>
+                <code><a class='link' href='#ConnectedState'>ConnectedState</a></code>
             </td>
             <td> The current connected state. (read-only)
 </td>
         </tr><tr>
             <td><code>wireless</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#WirelessState'>WirelessState</a></code>
+                <code><a class='link' href='#WirelessState'>WirelessState</a></code>
             </td>
             <td> The wireless state (read-only).
 </td>
         </tr><tr>
             <td><code>intl</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#IntlSettings'>IntlSettings</a></code>
+                <code><a class='link' href='#IntlSettings'>IntlSettings</a></code>
             </td>
             <td> Internationalization settings.
 </td>
         </tr><tr>
             <td><code>account</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.setui/index.html#AccountSettings'>AccountSettings</a></code>
+                <code><a class='link' href='#AccountSettings'>AccountSettings</a></code>
             </td>
             <td></td>
         </tr></table>

@@ -34,7 +34,7 @@ Book: /_book.yaml
     <tr>
             <td><code>account_ids</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.auth.account/index.html#LocalAccountId'>LocalAccountId</a>&gt;[128]</code>
+                <code>vector&lt;<a class='link' href='#LocalAccountId'>LocalAccountId</a>&gt;[128]</code>
             </td>
         </tr></table>
 
@@ -55,12 +55,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>account_auth_states</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.auth.account/index.html#AccountAuthState'>AccountAuthState</a>&gt;[128]</code>
+                <code>vector&lt;<a class='link' href='#AccountAuthState'>AccountAuthState</a>&gt;[128]</code>
             </td>
         </tr></table>
 
@@ -84,7 +84,7 @@ Book: /_book.yaml
     <tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#LocalAccountId'>LocalAccountId</a></code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
         </tr><tr>
             <td><code>auth_context_provider</code></td>
@@ -94,7 +94,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>account</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.auth.account/index.html#Account'>Account</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Account'>Account</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -105,7 +105,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -129,12 +129,12 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#AccountListener'>AccountListener</a></code>
+                <code><a class='link' href='#AccountListener'>AccountListener</a></code>
             </td>
         </tr><tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#AccountListenerOptions'>AccountListenerOptions</a></code>
+                <code><a class='link' href='#AccountListenerOptions'>AccountListenerOptions</a></code>
             </td>
         </tr></table>
 
@@ -145,7 +145,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -169,7 +169,7 @@ Book: /_book.yaml
     <tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#LocalAccountId'>LocalAccountId</a></code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
         </tr><tr>
             <td><code>force</code></td>
@@ -185,7 +185,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -226,7 +226,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>lifetime</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Lifetime'>Lifetime</a></code>
+                <code><a class='link' href='#Lifetime'>Lifetime</a></code>
             </td>
         </tr></table>
 
@@ -237,12 +237,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>account_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#LocalAccountId'>LocalAccountId</a>?</code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a>?</code>
             </td>
         </tr></table>
 
@@ -263,7 +263,7 @@ Book: /_book.yaml
     <tr>
             <td><code>lifetime</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Lifetime'>Lifetime</a></code>
+                <code><a class='link' href='#Lifetime'>Lifetime</a></code>
             </td>
         </tr></table>
 
@@ -274,12 +274,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>account_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#LocalAccountId'>LocalAccountId</a>?</code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a>?</code>
             </td>
         </tr></table>
 
@@ -312,7 +312,7 @@ Book: /_book.yaml
     <tr>
             <td><code>account_auth_states</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.auth.account/index.html#AccountAuthState'>AccountAuthState</a>&gt;[128]</code>
+                <code>vector&lt;<a class='link' href='#AccountAuthState'>AccountAuthState</a>&gt;[128]</code>
             </td>
         </tr></table>
 
@@ -334,7 +334,7 @@ Book: /_book.yaml
     <tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#LocalAccountId'>LocalAccountId</a></code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
         </tr></table>
 
@@ -356,7 +356,7 @@ Book: /_book.yaml
     <tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#LocalAccountId'>LocalAccountId</a></code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
         </tr></table>
 
@@ -377,7 +377,7 @@ Book: /_book.yaml
     <tr>
             <td><code>account_auth_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#AccountAuthState'>AccountAuthState</a></code>
+                <code><a class='link' href='#AccountAuthState'>AccountAuthState</a></code>
             </td>
         </tr></table>
 
@@ -467,7 +467,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>auth_state</code></td>
@@ -497,7 +497,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#AuthListener'>AuthListener</a></code>
+                <code><a class='link' href='#AuthListener'>AuthListener</a></code>
             </td>
         </tr><tr>
             <td><code>initial_state</code></td>
@@ -518,7 +518,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -547,7 +547,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>auth_state</code></td>
@@ -577,7 +577,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#AuthListener'>AuthListener</a></code>
+                <code><a class='link' href='#AuthListener'>AuthListener</a></code>
             </td>
         </tr><tr>
             <td><code>initial_state</code></td>
@@ -598,7 +598,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -640,7 +640,7 @@ Book: /_book.yaml
     <tr>
             <td><code>lifetime</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Lifetime'>Lifetime</a></code>
+                <code><a class='link' href='#Lifetime'>Lifetime</a></code>
             </td>
         </tr></table>
 
@@ -661,7 +661,7 @@ Book: /_book.yaml
     <tr>
             <td><code>persona_ids</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.auth.account/index.html#LocalPersonaId'>LocalPersonaId</a>&gt;[128]</code>
+                <code>vector&lt;<a class='link' href='#LocalPersonaId'>LocalPersonaId</a>&gt;[128]</code>
             </td>
         </tr></table>
 
@@ -683,7 +683,7 @@ Book: /_book.yaml
     <tr>
             <td><code>persona</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.auth.account/index.html#Persona'>Persona</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Persona'>Persona</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -694,12 +694,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#LocalPersonaId'>LocalPersonaId</a>?</code>
+                <code><a class='link' href='#LocalPersonaId'>LocalPersonaId</a>?</code>
             </td>
         </tr></table>
 
@@ -720,12 +720,12 @@ Book: /_book.yaml
     <tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#LocalPersonaId'>LocalPersonaId</a></code>
+                <code><a class='link' href='#LocalPersonaId'>LocalPersonaId</a></code>
             </td>
         </tr><tr>
             <td><code>persona</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.auth.account/index.html#Persona'>Persona</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Persona'>Persona</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -736,7 +736,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -763,7 +763,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>account</code></td>
@@ -801,7 +801,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -832,7 +832,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>auth_state</code></td>
@@ -862,7 +862,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#AuthListener'>AuthListener</a></code>
+                <code><a class='link' href='#AuthListener'>AuthListener</a></code>
             </td>
         </tr><tr>
             <td><code>initial_state</code></td>
@@ -883,7 +883,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -903,7 +903,7 @@ Book: /_book.yaml
     <tr>
             <td><code>lifetime</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Lifetime'>Lifetime</a></code>
+                <code><a class='link' href='#Lifetime'>Lifetime</a></code>
             </td>
         </tr></table>
 
@@ -943,7 +943,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -1030,7 +1030,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>account_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html#LocalAccountId'>LocalAccountId</a></code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
             <td></td>
             <td>No default</td>

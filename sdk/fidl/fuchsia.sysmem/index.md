@@ -42,7 +42,7 @@ Book: /_book.yaml
     <tr>
             <td><code>collection</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sysmem/index.html#BufferCollection'>BufferCollection</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#BufferCollection'>BufferCollection</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -63,7 +63,7 @@ Book: /_book.yaml
     <tr>
             <td><code>token_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sysmem/index.html#BufferCollectionToken'>BufferCollectionToken</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#BufferCollectionToken'>BufferCollectionToken</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -98,12 +98,12 @@ Book: /_book.yaml
     <tr>
             <td><code>token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#BufferCollectionToken'>BufferCollectionToken</a></code>
+                <code><a class='link' href='#BufferCollectionToken'>BufferCollectionToken</a></code>
             </td>
         </tr><tr>
             <td><code>buffer_collection_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sysmem/index.html#BufferCollection'>BufferCollection</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#BufferCollection'>BufferCollection</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -193,7 +193,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>token_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sysmem/index.html#BufferCollectionToken'>BufferCollectionToken</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#BufferCollectionToken'>BufferCollectionToken</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -290,7 +290,7 @@ Book: /_book.yaml
     <tr>
             <td><code>events</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#BufferCollectionEvents'>BufferCollectionEvents</a></code>
+                <code><a class='link' href='#BufferCollectionEvents'>BufferCollectionEvents</a></code>
             </td>
         </tr></table>
 
@@ -360,7 +360,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>constraints</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#BufferCollectionConstraints'>BufferCollectionConstraints</a></code>
+                <code><a class='link' href='#BufferCollectionConstraints'>BufferCollectionConstraints</a></code>
             </td>
         </tr></table>
 
@@ -419,7 +419,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>buffer_collection_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#BufferCollectionInfo_2'>BufferCollectionInfo_2</a></code>
+                <code><a class='link' href='#BufferCollectionInfo_2'>BufferCollectionInfo_2</a></code>
             </td>
         </tr></table>
 
@@ -522,7 +522,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>buffer_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#SingleBufferInfo'>SingleBufferInfo</a></code>
+                <code><a class='link' href='#SingleBufferInfo'>SingleBufferInfo</a></code>
             </td>
         </tr></table>
 
@@ -625,7 +625,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>buffer_collection_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#BufferCollectionInfo_2'>BufferCollectionInfo_2</a></code>
+                <code><a class='link' href='#BufferCollectionInfo_2'>BufferCollectionInfo_2</a></code>
             </td>
         </tr></table>
 
@@ -669,7 +669,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>buffer_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#SingleBufferInfo'>SingleBufferInfo</a></code>
+                <code><a class='link' href='#SingleBufferInfo'>SingleBufferInfo</a></code>
             </td>
         </tr></table>
 
@@ -708,7 +708,7 @@ Book: /_book.yaml
     <tr>
             <td><code>allocator_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sysmem/index.html#Allocator'>Allocator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Allocator'>Allocator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -887,7 +887,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#BufferFormat'>BufferFormat</a></code>
+                <code><a class='link' href='#BufferFormat'>BufferFormat</a></code>
             </td>
             <td> Describes how the contents of buffers are represented.
  All buffers within the collection have the same format.
@@ -935,7 +935,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>usage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#BufferUsage'>BufferUsage</a></code>
+                <code><a class='link' href='#BufferUsage'>BufferUsage</a></code>
             </td>
             <td> The usage is only meant as a hint to help sysmem choose a more optimal
  PixelFormat or similar when multiple compatible options exist.
@@ -1052,7 +1052,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>buffer_memory_constraints</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#BufferMemoryConstraints'>BufferMemoryConstraints</a></code>
+                <code><a class='link' href='#BufferMemoryConstraints'>BufferMemoryConstraints</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1136,7 +1136,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#SingleBufferSettings'>SingleBufferSettings</a></code>
+                <code><a class='link' href='#SingleBufferSettings'>SingleBufferSettings</a></code>
             </td>
             <td> These settings apply to all the buffers in the inital buffer allocation.
 </td>
@@ -1176,14 +1176,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#SingleBufferSettings'>SingleBufferSettings</a></code>
+                <code><a class='link' href='#SingleBufferSettings'>SingleBufferSettings</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>buffer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#VmoBuffer'>VmoBuffer</a></code>
+                <code><a class='link' href='#VmoBuffer'>VmoBuffer</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1205,7 +1205,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>buffer_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#BufferMemorySettings'>BufferMemorySettings</a></code>
+                <code><a class='link' href='#BufferMemorySettings'>BufferMemorySettings</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1225,7 +1225,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>image_format_constraints</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#ImageFormatConstraints'>ImageFormatConstraints</a></code>
+                <code><a class='link' href='#ImageFormatConstraints'>ImageFormatConstraints</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1350,14 +1350,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>coherency_domain</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#CoherencyDomain'>CoherencyDomain</a></code>
+                <code><a class='link' href='#CoherencyDomain'>CoherencyDomain</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>heap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#HeapType'>HeapType</a></code>
+                <code><a class='link' href='#HeapType'>HeapType</a></code>
             </td>
             <td> The specific heap from which buffers are allocated.
  See above in this file for heap identifier values.
@@ -1378,7 +1378,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>pixel_format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#PixelFormat'>PixelFormat</a></code>
+                <code><a class='link' href='#PixelFormat'>PixelFormat</a></code>
             </td>
             <td> The PixelFormat for which the following constraints apply.  A
  participant may have more than one PixelFormat that's supported, in
@@ -1616,7 +1616,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>pixel_format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#PixelFormat'>PixelFormat</a></code>
+                <code><a class='link' href='#PixelFormat'>PixelFormat</a></code>
             </td>
             <td> Pixel format.
 </td>
@@ -1674,7 +1674,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>color_space</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#ColorSpace'>ColorSpace</a></code>
+                <code><a class='link' href='#ColorSpace'>ColorSpace</a></code>
             </td>
             <td> Color space.
 </td>
@@ -1755,7 +1755,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#PixelFormatType'>PixelFormatType</a></code>
+                <code><a class='link' href='#PixelFormatType'>PixelFormatType</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1771,7 +1771,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>format_modifier</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#FormatModifier'>FormatModifier</a></code>
+                <code><a class='link' href='#FormatModifier'>FormatModifier</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1792,7 +1792,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#ColorSpaceType'>ColorSpaceType</a></code>
+                <code><a class='link' href='#ColorSpaceType'>ColorSpaceType</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1836,7 +1836,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>pixel_format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#PixelFormat'>PixelFormat</a></code>
+                <code><a class='link' href='#PixelFormat'>PixelFormat</a></code>
             </td>
             <td> Pixel format.
 </td>
@@ -1844,7 +1844,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>color_space</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#ColorSpace'>ColorSpace</a></code>
+                <code><a class='link' href='#ColorSpace'>ColorSpace</a></code>
             </td>
             <td> Color space.
 </td>
@@ -1924,7 +1924,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>pixel_format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#PixelFormat'>PixelFormat</a></code>
+                <code><a class='link' href='#PixelFormat'>PixelFormat</a></code>
             </td>
             <td> Pixel format.
 </td>
@@ -1932,7 +1932,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>color_space</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#ColorSpace'>ColorSpace</a></code>
+                <code><a class='link' href='#ColorSpace'>ColorSpace</a></code>
             </td>
             <td> Color space.
 </td>
@@ -2183,7 +2183,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>image</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#ImageFormat'>ImageFormat</a></code>
+                <code><a class='link' href='#ImageFormat'>ImageFormat</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2198,7 +2198,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>image</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html#ImageSpec'>ImageSpec</a></code>
+                <code><a class='link' href='#ImageSpec'>ImageSpec</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2294,7 +2294,7 @@ Type: <code>uint32</code>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#30">FORMAT_MODIFIER_INVALID</a></td>
             <td>
-                    <code><a class='link' href='../fuchsia.sysmem/index.html#FORMAT_MODIFIER_VALUE_RESERVED'>FORMAT_MODIFIER_VALUE_RESERVED</a></code>
+                    <code><a class='link' href='#FORMAT_MODIFIER_VALUE_RESERVED'>FORMAT_MODIFIER_VALUE_RESERVED</a></code>
                 </td>
                 <td><code>uint64</code></td>
         </tr>

@@ -20,6 +20,8 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.bluetooth.snoop/index">fuchsia.bluetooth.snoop</a></td></tr>
 <tr><td><a href="fuchsia.bluetooth.test/index">fuchsia.bluetooth.test</a></td></tr>
 <tr><td><a href="fuchsia.boot/index">fuchsia.boot</a></td></tr>
+<tr><td><a href="fuchsia.camera/index">fuchsia.camera</a></td></tr>
+<tr><td><a href="fuchsia.camera.common/index">fuchsia.camera.common</a></td></tr>
 <tr><td><a href="fuchsia.cobalt/index">fuchsia.cobalt</a></td></tr>
 <tr><td><a href="fuchsia.crash/index">fuchsia.crash</a></td></tr>
 <tr><td><a href="fuchsia.data/index">fuchsia.data</a></td></tr>
@@ -31,11 +33,13 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.device.test/index">fuchsia.device.test</a></td></tr>
 <tr><td><a href="fuchsia.devicesettings/index">fuchsia.devicesettings</a></td></tr>
 <tr><td><a href="fuchsia.feedback/index">fuchsia.feedback</a></td></tr>
+<tr><td><a href="fuchsia.gpu.magma/index">fuchsia.gpu.magma</a></td></tr>
 <tr><td><a href="fuchsia.hardware.bluetooth/index">fuchsia.hardware.bluetooth</a></td></tr>
 <tr><td><a href="fuchsia.hardware.display/index">fuchsia.hardware.display</a></td></tr>
 <tr><td><a href="fuchsia.hardware.ethernet/index">fuchsia.hardware.ethernet</a></td></tr>
 <tr><td><a href="fuchsia.hardware.pty/index">fuchsia.hardware.pty</a></td></tr>
 <tr><td><a href="fuchsia.hardware.rtc/index">fuchsia.hardware.rtc</a></td></tr>
+<tr><td><a href="fuchsia.hardware.telephony.transport/index">fuchsia.hardware.telephony.transport</a></td></tr>
 <tr><td><a href="fuchsia.images/index">fuchsia.images</a></td></tr>
 <tr><td><a href="fuchsia.inspect/index">fuchsia.inspect</a></td></tr>
 <tr><td><a href="fuchsia.intl/index">fuchsia.intl</a></td></tr>
@@ -84,6 +88,7 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.sys2/index">fuchsia.sys2</a></td></tr>
 <tr><td><a href="fuchsia.sysinfo/index">fuchsia.sysinfo</a></td></tr>
 <tr><td><a href="fuchsia.sysmem/index">fuchsia.sysmem</a></td></tr>
+<tr><td><a href="fuchsia.telephony.snoop/index">fuchsia.telephony.snoop</a></td></tr>
 <tr><td><a href="fuchsia.time/index">fuchsia.time</a></td></tr>
 <tr><td><a href="fuchsia.timezone/index">fuchsia.timezone</a></td></tr>
 <tr><td><a href="fuchsia.tracing.controller/index">fuchsia.tracing.controller</a></td></tr>
@@ -103,6 +108,7 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.update/index">fuchsia.update</a></td></tr>
 <tr><td><a href="fuchsia.virtualaudio/index">fuchsia.virtualaudio</a></td></tr>
 <tr><td><a href="fuchsia.virtualconsole/index">fuchsia.virtualconsole</a></td></tr>
+<tr><td><a href="fuchsia.vulkan.loader/index">fuchsia.vulkan.loader</a></td></tr>
 <tr><td><a href="fuchsia.web/index">fuchsia.web</a></td></tr>
 <tr><td><a href="fuchsia.wlan.ap.policy/index">fuchsia.wlan.ap.policy</a></td></tr>
 <tr><td><a href="fuchsia.wlan.common/index">fuchsia.wlan.common</a></td></tr>

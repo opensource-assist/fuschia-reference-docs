@@ -129,7 +129,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ComponentContext'>ComponentContext</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ComponentContext'>ComponentContext</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -147,7 +147,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#EntityReferenceFactory'>EntityReferenceFactory</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#EntityReferenceFactory'>EntityReferenceFactory</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -164,7 +164,7 @@ Book: /_book.yaml
     <tr>
             <td><code>task_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#TaskInfo'>TaskInfo</a></code>
+                <code><a class='link' href='#TaskInfo'>TaskInfo</a></code>
             </td>
         </tr></table>
 
@@ -181,7 +181,7 @@ Book: /_book.yaml
     <tr>
             <td><code>task_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#TaskInfo'>TaskInfo</a></code>
+                <code><a class='link' href='#TaskInfo'>TaskInfo</a></code>
             </td>
         </tr></table>
 
@@ -260,12 +260,12 @@ Book: /_book.yaml
     <tr>
             <td><code>base_shell_context</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#BaseShellContext'>BaseShellContext</a></code>
+                <code><a class='link' href='#BaseShellContext'>BaseShellContext</a></code>
             </td>
         </tr><tr>
             <td><code>base_shell_params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#BaseShellParams'>BaseShellParams</a></code>
+                <code><a class='link' href='#BaseShellParams'>BaseShellParams</a></code>
             </td>
         </tr></table>
 
@@ -308,7 +308,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#UserProvider'>UserProvider</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#UserProvider'>UserProvider</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -429,7 +429,7 @@ Book: /_book.yaml
     <tr>
             <td><code>user_login_params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#UserLoginParams'>UserLoginParams</a></code>
+                <code><a class='link' href='#UserLoginParams'>UserLoginParams</a></code>
             </td>
         </tr></table>
 
@@ -445,7 +445,7 @@ Book: /_book.yaml
     <tr>
             <td><code>user_login_params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#UserLoginParams2'>UserLoginParams2</a></code>
+                <code><a class='link' href='#UserLoginParams2'>UserLoginParams2</a></code>
             </td>
         </tr></table>
 
@@ -559,7 +559,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#AgentController'>AgentController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AgentController'>AgentController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -585,7 +585,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#AgentServiceRequest'>AgentServiceRequest</a></code>
+                <code><a class='link' href='#AgentServiceRequest'>AgentServiceRequest</a></code>
             </td>
         </tr></table>
 
@@ -607,7 +607,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>queue</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#MessageQueue'>MessageQueue</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#MessageQueue'>MessageQueue</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -647,7 +647,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>sender</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#MessageSender'>MessageSender</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#MessageSender'>MessageSender</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -664,7 +664,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#EntityResolver'>EntityResolver</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#EntityResolver'>EntityResolver</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -685,7 +685,7 @@ Book: /_book.yaml
     <tr>
             <td><code>type_to_data</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#TypeToDataEntry'>TypeToDataEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#TypeToDataEntry'>TypeToDataEntry</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -781,7 +781,7 @@ Book: /_book.yaml
     <tr>
             <td><code>receiver</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#MessageReader'>MessageReader</a></code>
+                <code><a class='link' href='#MessageReader'>MessageReader</a></code>
             </td>
         </tr></table>
 
@@ -859,12 +859,12 @@ Book: /_book.yaml
     <tr>
             <td><code>client_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ComponentScope'>ComponentScope</a></code>
+                <code><a class='link' href='#ComponentScope'>ComponentScope</a></code>
             </td>
         </tr><tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ContextReader'>ContextReader</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ContextReader'>ContextReader</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -879,12 +879,12 @@ Book: /_book.yaml
     <tr>
             <td><code>client_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ComponentScope'>ComponentScope</a></code>
+                <code><a class='link' href='#ComponentScope'>ComponentScope</a></code>
             </td>
         </tr><tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ContextWriter'>ContextWriter</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ContextWriter'>ContextWriter</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -899,7 +899,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ContextDebug'>ContextDebug</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ContextDebug'>ContextDebug</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -931,12 +931,12 @@ Book: /_book.yaml
     <tr>
             <td><code>query</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextQuery'>ContextQuery</a></code>
+                <code><a class='link' href='#ContextQuery'>ContextQuery</a></code>
             </td>
         </tr><tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextListener'>ContextListener</a></code>
+                <code><a class='link' href='#ContextListener'>ContextListener</a></code>
             </td>
         </tr></table>
 
@@ -952,7 +952,7 @@ Book: /_book.yaml
     <tr>
             <td><code>query</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextQuery'>ContextQuery</a></code>
+                <code><a class='link' href='#ContextQuery'>ContextQuery</a></code>
             </td>
         </tr></table>
 
@@ -963,7 +963,7 @@ Book: /_book.yaml
     <tr>
             <td><code>update</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextUpdate'>ContextUpdate</a></code>
+                <code><a class='link' href='#ContextUpdate'>ContextUpdate</a></code>
             </td>
         </tr></table>
 
@@ -984,7 +984,7 @@ Book: /_book.yaml
     <tr>
             <td><code>update</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextUpdate'>ContextUpdate</a></code>
+                <code><a class='link' href='#ContextUpdate'>ContextUpdate</a></code>
             </td>
         </tr></table>
 
@@ -1007,12 +1007,12 @@ Book: /_book.yaml
     <tr>
             <td><code>value_writer</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ContextValueWriter'>ContextValueWriter</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ContextValueWriter'>ContextValueWriter</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextValueType'>ContextValueType</a></code>
+                <code><a class='link' href='#ContextValueType'>ContextValueType</a></code>
             </td>
         </tr></table>
 
@@ -1063,12 +1063,12 @@ Book: /_book.yaml
     <tr>
             <td><code>value_writer</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ContextValueWriter'>ContextValueWriter</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ContextValueWriter'>ContextValueWriter</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextValueType'>ContextValueType</a></code>
+                <code><a class='link' href='#ContextValueType'>ContextValueType</a></code>
             </td>
         </tr></table>
 
@@ -1090,7 +1090,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>metadata</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextMetadata'>ContextMetadata</a>?</code>
+                <code><a class='link' href='#ContextMetadata'>ContextMetadata</a>?</code>
             </td>
         </tr></table>
 
@@ -1110,7 +1110,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextDebugListener'>ContextDebugListener</a></code>
+                <code><a class='link' href='#ContextDebugListener'>ContextDebugListener</a></code>
             </td>
         </tr></table>
 
@@ -1149,7 +1149,7 @@ Book: /_book.yaml
     <tr>
             <td><code>values</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContextDebugValue'>ContextDebugValue</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContextDebugValue'>ContextDebugValue</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1164,7 +1164,7 @@ Book: /_book.yaml
     <tr>
             <td><code>subscription</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContextDebugSubscription'>ContextDebugSubscription</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContextDebugSubscription'>ContextDebugSubscription</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1250,7 +1250,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#EntityWriteStatus'>EntityWriteStatus</a></code>
+                <code><a class='link' href='#EntityWriteStatus'>EntityWriteStatus</a></code>
             </td>
         </tr></table>
 
@@ -1294,7 +1294,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#EntityWatcher'>EntityWatcher</a></code>
+                <code><a class='link' href='#EntityWatcher'>EntityWatcher</a></code>
             </td>
         </tr></table>
 
@@ -1437,7 +1437,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#EntityWriteStatus'>EntityWriteStatus</a></code>
+                <code><a class='link' href='#EntityWriteStatus'>EntityWriteStatus</a></code>
             </td>
         </tr></table>
 
@@ -1473,7 +1473,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#EntityWatcher'>EntityWatcher</a></code>
+                <code><a class='link' href='#EntityWatcher'>EntityWatcher</a></code>
             </td>
         </tr></table>
 
@@ -1555,7 +1555,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>entity_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#Entity'>Entity</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Entity'>Entity</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1586,7 +1586,7 @@ Book: /_book.yaml
     <tr>
             <td><code>intent</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#Intent'>Intent</a></code>
+                <code><a class='link' href='#Intent'>Intent</a></code>
             </td>
         </tr></table>
 
@@ -1643,7 +1643,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>link</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#Link'>Link</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1676,17 +1676,17 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>intent</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#Intent'>Intent</a></code>
+                <code><a class='link' href='#Intent'>Intent</a></code>
             </td>
         </tr><tr>
             <td><code>module_controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ModuleController'>ModuleController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ModuleController'>ModuleController</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>surface_relation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceRelation'>SurfaceRelation</a>?</code>
+                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a>?</code>
             </td>
         </tr></table>
 
@@ -1697,7 +1697,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StartModuleStatus'>StartModuleStatus</a></code>
+                <code><a class='link' href='#StartModuleStatus'>StartModuleStatus</a></code>
             </td>
         </tr></table>
 
@@ -1720,12 +1720,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>intent</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#Intent'>Intent</a></code>
+                <code><a class='link' href='#Intent'>Intent</a></code>
             </td>
         </tr><tr>
             <td><code>module_controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ModuleController'>ModuleController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ModuleController'>ModuleController</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>view_token</code></td>
@@ -1741,7 +1741,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StartModuleStatus'>StartModuleStatus</a></code>
+                <code><a class='link' href='#StartModuleStatus'>StartModuleStatus</a></code>
             </td>
         </tr></table>
 
@@ -1759,12 +1759,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>intent</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#Intent'>Intent</a></code>
+                <code><a class='link' href='#Intent'>Intent</a></code>
             </td>
         </tr><tr>
             <td><code>module_controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ModuleController'>ModuleController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ModuleController'>ModuleController</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>view_token</code></td>
@@ -1780,7 +1780,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StartModuleStatus'>StartModuleStatus</a></code>
+                <code><a class='link' href='#StartModuleStatus'>StartModuleStatus</a></code>
             </td>
         </tr></table>
 
@@ -1799,22 +1799,22 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>parent_relation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceRelation'>SurfaceRelation</a></code>
+                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
             </td>
         </tr><tr>
             <td><code>layout</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContainerLayout'>ContainerLayout</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContainerLayout'>ContainerLayout</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>relationships</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>nodes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContainerNode'>ContainerNode</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContainerNode'>ContainerNode</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1831,7 +1831,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ComponentContext'>ComponentContext</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ComponentContext'>ComponentContext</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1915,7 +1915,7 @@ Book: /_book.yaml
     <tr>
             <td><code>visibility_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryVisibilityState'>StoryVisibilityState</a></code>
+                <code><a class='link' href='#StoryVisibilityState'>StoryVisibilityState</a></code>
             </td>
         </tr></table>
 
@@ -1942,12 +1942,12 @@ Book: /_book.yaml
     <tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#OngoingActivityType'>OngoingActivityType</a></code>
+                <code><a class='link' href='#OngoingActivityType'>OngoingActivityType</a></code>
             </td>
         </tr><tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#OngoingActivity'>OngoingActivity</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#OngoingActivity'>OngoingActivity</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1981,7 +1981,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>entity_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#Entity'>Entity</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Entity'>Entity</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2067,7 +2067,7 @@ Book: /_book.yaml
     <tr>
             <td><code>new_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ModuleState'>ModuleState</a></code>
+                <code><a class='link' href='#ModuleState'>ModuleState</a></code>
             </td>
         </tr></table>
 
@@ -2094,7 +2094,7 @@ Book: /_book.yaml
     <tr>
             <td><code>query</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#FindModulesQuery'>FindModulesQuery</a></code>
+                <code><a class='link' href='#FindModulesQuery'>FindModulesQuery</a></code>
             </td>
         </tr></table>
 
@@ -2105,7 +2105,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#FindModulesResponse'>FindModulesResponse</a></code>
+                <code><a class='link' href='#FindModulesResponse'>FindModulesResponse</a></code>
             </td>
         </tr></table>
 
@@ -2149,7 +2149,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#FocusRequestWatcher'>FocusRequestWatcher</a></code>
+                <code><a class='link' href='#FocusRequestWatcher'>FocusRequestWatcher</a></code>
             </td>
         </tr></table>
 
@@ -2199,7 +2199,7 @@ Book: /_book.yaml
     <tr>
             <td><code>focused_stories</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#FocusInfo'>FocusInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#FocusInfo'>FocusInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2213,7 +2213,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#FocusWatcher'>FocusWatcher</a></code>
+                <code><a class='link' href='#FocusWatcher'>FocusWatcher</a></code>
             </td>
         </tr></table>
 
@@ -2255,7 +2255,7 @@ Book: /_book.yaml
     <tr>
             <td><code>focus_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#FocusInfo'>FocusInfo</a>?</code>
+                <code><a class='link' href='#FocusInfo'>FocusInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -2300,7 +2300,7 @@ Book: /_book.yaml
     <tr>
             <td><code>view_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ViewIdentifier'>ViewIdentifier</a></code>
+                <code><a class='link' href='#ViewIdentifier'>ViewIdentifier</a></code>
             </td>
         </tr><tr>
             <td><code>view_holder_token</code></td>
@@ -2320,7 +2320,7 @@ Book: /_book.yaml
     <tr>
             <td><code>view_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ViewIdentifier'>ViewIdentifier</a></code>
+                <code><a class='link' href='#ViewIdentifier'>ViewIdentifier</a></code>
             </td>
         </tr><tr>
             <td><code>view_holder_token</code></td>
@@ -2356,7 +2356,7 @@ Book: /_book.yaml
     <tr>
             <td><code>view_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ViewIdentifier'>ViewIdentifier</a></code>
+                <code><a class='link' href='#ViewIdentifier'>ViewIdentifier</a></code>
             </td>
         </tr></table>
 
@@ -2403,7 +2403,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ComponentContext'>ComponentContext</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ComponentContext'>ComponentContext</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2437,7 +2437,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#FocusController'>FocusController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#FocusController'>FocusController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2452,7 +2452,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#FocusProvider'>FocusProvider</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#FocusProvider'>FocusProvider</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2467,7 +2467,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#Link'>Link</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2512,7 +2512,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#StoryProvider'>StoryProvider</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#StoryProvider'>StoryProvider</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2527,7 +2527,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#VisibleStoriesController'>VisibleStoriesController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#VisibleStoriesController'>VisibleStoriesController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2594,7 +2594,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryVisualStateWatcher'>StoryVisualStateWatcher</a></code>
+                <code><a class='link' href='#StoryVisualStateWatcher'>StoryVisualStateWatcher</a></code>
             </td>
         </tr></table>
 
@@ -2779,7 +2779,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#LinkWatcher'>LinkWatcher</a></code>
+                <code><a class='link' href='#LinkWatcher'>LinkWatcher</a></code>
             </td>
         </tr></table>
 
@@ -2796,7 +2796,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#LinkWatcher'>LinkWatcher</a></code>
+                <code><a class='link' href='#LinkWatcher'>LinkWatcher</a></code>
             </td>
         </tr></table>
 
@@ -2866,7 +2866,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#StoryPuppetMaster'>StoryPuppetMaster</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#StoryPuppetMaster'>StoryPuppetMaster</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2923,7 +2923,7 @@ Book: /_book.yaml
     <tr>
             <td><code>commands</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#StoryCommand'>StoryCommand</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#StoryCommand'>StoryCommand</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2944,7 +2944,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ExecuteResult'>ExecuteResult</a></code>
+                <code><a class='link' href='#ExecuteResult'>ExecuteResult</a></code>
             </td>
         </tr></table>
 
@@ -2957,7 +2957,7 @@ Book: /_book.yaml
     <tr>
             <td><code>story_options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryOptions'>StoryOptions</a></code>
+                <code><a class='link' href='#StoryOptions'>StoryOptions</a></code>
             </td>
         </tr></table>
 
@@ -2972,7 +2972,7 @@ Book: /_book.yaml
     <tr>
             <td><code>story_info_extra</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#StoryInfoExtraEntry'>StoryInfoExtraEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#StoryInfoExtraEntry'>StoryInfoExtraEntry</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2983,7 +2983,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryPuppetMaster_SetStoryInfoExtra_Result'>StoryPuppetMaster_SetStoryInfoExtra_Result</a></code>
+                <code><a class='link' href='#StoryPuppetMaster_SetStoryInfoExtra_Result'>StoryPuppetMaster_SetStoryInfoExtra_Result</a></code>
             </td>
         </tr></table>
 
@@ -3012,12 +3012,12 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryInfo'>StoryInfo</a></code>
+                <code><a class='link' href='#StoryInfo'>StoryInfo</a></code>
             </td>
         </tr><tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryState'>StoryState</a></code>
+                <code><a class='link' href='#StoryState'>StoryState</a></code>
             </td>
         </tr></table>
 
@@ -3089,7 +3089,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryWatcher'>StoryWatcher</a></code>
+                <code><a class='link' href='#StoryWatcher'>StoryWatcher</a></code>
             </td>
         </tr></table>
 
@@ -3111,7 +3111,7 @@ Book: /_book.yaml
     <tr>
             <td><code>module_data</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ModuleData'>ModuleData</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ModuleData'>ModuleData</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -3131,7 +3131,7 @@ Book: /_book.yaml
     <tr>
             <td><code>module_data</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ModuleData'>ModuleData</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ModuleData'>ModuleData</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -3151,7 +3151,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ModuleController'>ModuleController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ModuleController'>ModuleController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -3167,12 +3167,12 @@ Book: /_book.yaml
     <tr>
             <td><code>link_path</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#LinkPath'>LinkPath</a></code>
+                <code><a class='link' href='#LinkPath'>LinkPath</a></code>
             </td>
         </tr><tr>
             <td><code>link</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#Link'>Link</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -3194,7 +3194,7 @@ Book: /_book.yaml
     <tr>
             <td><code>new_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryState'>StoryState</a></code>
+                <code><a class='link' href='#StoryState'>StoryState</a></code>
             </td>
         </tr></table>
 
@@ -3210,7 +3210,7 @@ Book: /_book.yaml
     <tr>
             <td><code>module_data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ModuleData'>ModuleData</a></code>
+                <code><a class='link' href='#ModuleData'>ModuleData</a></code>
             </td>
         </tr></table>
 
@@ -3262,7 +3262,7 @@ Book: /_book.yaml
     <tr>
             <td><code>link_path</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#LinkPath'>LinkPath</a></code>
+                <code><a class='link' href='#LinkPath'>LinkPath</a></code>
             </td>
         </tr></table>
 
@@ -3290,7 +3290,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryProviderWatcher'>StoryProviderWatcher</a>?</code>
+                <code><a class='link' href='#StoryProviderWatcher'>StoryProviderWatcher</a>?</code>
             </td>
         </tr></table>
 
@@ -3301,7 +3301,7 @@ Book: /_book.yaml
     <tr>
             <td><code>story_infos</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#StoryInfo'>StoryInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#StoryInfo'>StoryInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -3327,7 +3327,7 @@ Book: /_book.yaml
     <tr>
             <td><code>story_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryInfo'>StoryInfo</a>?</code>
+                <code><a class='link' href='#StoryInfo'>StoryInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -3348,7 +3348,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#StoryController'>StoryController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#StoryController'>StoryController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -3371,7 +3371,7 @@ Book: /_book.yaml
     <tr>
             <td><code>story_infos</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#StoryInfo'>StoryInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#StoryInfo'>StoryInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -3386,7 +3386,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryProviderWatcher'>StoryProviderWatcher</a></code>
+                <code><a class='link' href='#StoryProviderWatcher'>StoryProviderWatcher</a></code>
             </td>
         </tr></table>
 
@@ -3404,7 +3404,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryActivityWatcher'>StoryActivityWatcher</a></code>
+                <code><a class='link' href='#StoryActivityWatcher'>StoryActivityWatcher</a></code>
             </td>
         </tr></table>
 
@@ -3453,17 +3453,17 @@ Book: /_book.yaml
     <tr>
             <td><code>story_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryInfo'>StoryInfo</a></code>
+                <code><a class='link' href='#StoryInfo'>StoryInfo</a></code>
             </td>
         </tr><tr>
             <td><code>story_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryState'>StoryState</a></code>
+                <code><a class='link' href='#StoryState'>StoryState</a></code>
             </td>
         </tr><tr>
             <td><code>story_visibility_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryVisibilityState'>StoryVisibilityState</a></code>
+                <code><a class='link' href='#StoryVisibilityState'>StoryVisibilityState</a></code>
             </td>
         </tr></table>
 
@@ -3517,7 +3517,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>activities</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#OngoingActivityType'>OngoingActivityType</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#OngoingActivityType'>OngoingActivityType</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -3546,7 +3546,7 @@ Book: /_book.yaml
     <tr>
             <td><code>story_shell_context</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryShellContext'>StoryShellContext</a></code>
+                <code><a class='link' href='#StoryShellContext'>StoryShellContext</a></code>
             </td>
         </tr></table>
 
@@ -3567,12 +3567,12 @@ Book: /_book.yaml
     <tr>
             <td><code>view_connection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ViewConnection'>ViewConnection</a></code>
+                <code><a class='link' href='#ViewConnection'>ViewConnection</a></code>
             </td>
         </tr><tr>
             <td><code>surface_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceInfo'>SurfaceInfo</a></code>
+                <code><a class='link' href='#SurfaceInfo'>SurfaceInfo</a></code>
             </td>
         </tr></table>
 
@@ -3588,12 +3588,12 @@ Book: /_book.yaml
     <tr>
             <td><code>view_connection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ViewConnection2'>ViewConnection2</a></code>
+                <code><a class='link' href='#ViewConnection2'>ViewConnection2</a></code>
             </td>
         </tr><tr>
             <td><code>surface_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceInfo'>SurfaceInfo</a></code>
+                <code><a class='link' href='#SurfaceInfo'>SurfaceInfo</a></code>
             </td>
         </tr></table>
 
@@ -3609,12 +3609,12 @@ Book: /_book.yaml
     <tr>
             <td><code>view_connection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ViewConnection'>ViewConnection</a></code>
+                <code><a class='link' href='#ViewConnection'>ViewConnection</a></code>
             </td>
         </tr><tr>
             <td><code>surface_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceInfo2'>SurfaceInfo2</a></code>
+                <code><a class='link' href='#SurfaceInfo2'>SurfaceInfo2</a></code>
             </td>
         </tr></table>
 
@@ -3679,22 +3679,22 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>relation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceRelation'>SurfaceRelation</a></code>
+                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
             </td>
         </tr><tr>
             <td><code>layout</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContainerLayout'>ContainerLayout</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContainerLayout'>ContainerLayout</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>relationships</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>views</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContainerView'>ContainerView</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContainerView'>ContainerView</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -3720,22 +3720,22 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>relation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceRelation'>SurfaceRelation</a></code>
+                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
             </td>
         </tr><tr>
             <td><code>layout</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContainerLayout'>ContainerLayout</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContainerLayout'>ContainerLayout</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>relationships</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>views</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContainerView2'>ContainerView2</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContainerView2'>ContainerView2</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -3801,7 +3801,7 @@ Book: /_book.yaml
     <tr>
             <td><code>view_connection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ViewConnection'>ViewConnection</a></code>
+                <code><a class='link' href='#ViewConnection'>ViewConnection</a></code>
             </td>
         </tr></table>
 
@@ -3817,7 +3817,7 @@ Book: /_book.yaml
     <tr>
             <td><code>view_connection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ViewConnection2'>ViewConnection2</a></code>
+                <code><a class='link' href='#ViewConnection2'>ViewConnection2</a></code>
             </td>
         </tr></table>
 
@@ -3840,12 +3840,12 @@ Book: /_book.yaml
     <tr>
             <td><code>view_connection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ViewConnection'>ViewConnection</a></code>
+                <code><a class='link' href='#ViewConnection'>ViewConnection</a></code>
             </td>
         </tr><tr>
             <td><code>surface_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceInfo'>SurfaceInfo</a></code>
+                <code><a class='link' href='#SurfaceInfo'>SurfaceInfo</a></code>
             </td>
         </tr></table>
 
@@ -3861,12 +3861,12 @@ Book: /_book.yaml
     <tr>
             <td><code>view_connection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ViewConnection2'>ViewConnection2</a></code>
+                <code><a class='link' href='#ViewConnection2'>ViewConnection2</a></code>
             </td>
         </tr><tr>
             <td><code>surface_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceInfo'>SurfaceInfo</a></code>
+                <code><a class='link' href='#SurfaceInfo'>SurfaceInfo</a></code>
             </td>
         </tr></table>
 
@@ -3882,12 +3882,12 @@ Book: /_book.yaml
     <tr>
             <td><code>view_connection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ViewConnection'>ViewConnection</a></code>
+                <code><a class='link' href='#ViewConnection'>ViewConnection</a></code>
             </td>
         </tr><tr>
             <td><code>surface_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceInfo2'>SurfaceInfo2</a></code>
+                <code><a class='link' href='#SurfaceInfo2'>SurfaceInfo2</a></code>
             </td>
         </tr></table>
 
@@ -3927,7 +3927,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryVisualStateWatcher'>StoryVisualStateWatcher</a></code>
+                <code><a class='link' href='#StoryVisualStateWatcher'>StoryVisualStateWatcher</a></code>
             </td>
         </tr></table>
 
@@ -3943,7 +3943,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#Link'>Link</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -3997,7 +3997,7 @@ Book: /_book.yaml
     <tr>
             <td><code>visual_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryVisualState'>StoryVisualState</a></code>
+                <code><a class='link' href='#StoryVisualState'>StoryVisualState</a></code>
             </td>
         </tr></table>
 
@@ -4025,7 +4025,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>story_shell</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#StoryShell'>StoryShell</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#StoryShell'>StoryShell</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -4069,7 +4069,7 @@ Book: /_book.yaml
     <tr>
             <td><code>context_reader</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ContextReader'>ContextReader</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ContextReader'>ContextReader</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -4084,7 +4084,7 @@ Book: /_book.yaml
     <tr>
             <td><code>context_writer</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#ContextWriter'>ContextWriter</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ContextWriter'>ContextWriter</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -4114,12 +4114,12 @@ Book: /_book.yaml
     <tr>
             <td><code>scope</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ComponentScope'>ComponentScope</a></code>
+                <code><a class='link' href='#ComponentScope'>ComponentScope</a></code>
             </td>
         </tr><tr>
             <td><code>services</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#IntelligenceServices'>IntelligenceServices</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#IntelligenceServices'>IntelligenceServices</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -4150,7 +4150,7 @@ Book: /_book.yaml
     <tr>
             <td><code>user_intelligence_context</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ComponentContext'>ComponentContext</a></code>
+                <code><a class='link' href='#ComponentContext'>ComponentContext</a></code>
             </td>
         </tr><tr>
             <td><code>session_agents</code></td>
@@ -4216,7 +4216,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>trigger_condition</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#TriggerCondition'>TriggerCondition</a></code>
+                <code><a class='link' href='#TriggerCondition'>TriggerCondition</a></code>
             </td>
             <td> The condition that would cause this task to get scheduled.
 </td>
@@ -4357,7 +4357,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>selector</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContextQueryEntry'>ContextQueryEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContextQueryEntry'>ContextQueryEntry</a>&gt;</code>
             </td>
             <td> A map of ContextSelector structs. The keys are specified by the client.
  Each key gets a corresponding entry in `ContextUpdate.values` when it is
@@ -4385,7 +4385,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextSelector'>ContextSelector</a></code>
+                <code><a class='link' href='#ContextSelector'>ContextSelector</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4403,7 +4403,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>meta</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextMetadata'>ContextMetadata</a>?</code>
+                <code><a class='link' href='#ContextMetadata'>ContextMetadata</a>?</code>
             </td>
             <td> A partial metadata struct. Any metadata value given in `meta` restricts
  the set of values in the eventual ContextUpdate to include only those
@@ -4420,7 +4420,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextValueType'>ContextValueType</a></code>
+                <code><a class='link' href='#ContextValueType'>ContextValueType</a></code>
             </td>
             <td> A string specifying the type of context object to return.
 </td>
@@ -4439,7 +4439,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>values</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContextUpdateEntry'>ContextUpdateEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContextUpdateEntry'>ContextUpdateEntry</a>&gt;</code>
             </td>
             <td> A list of ContextValue for each key in `ContextQuery.selector`. An empty
  list means no values matched the given ContextSelector.
@@ -4466,7 +4466,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ContextValue'>ContextValue</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ContextValue'>ContextValue</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4500,7 +4500,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextValue'>ContextValue</a>?</code>
+                <code><a class='link' href='#ContextValue'>ContextValue</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4525,7 +4525,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>debug_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SubscriptionDebugInfo'>SubscriptionDebugInfo</a>?</code>
+                <code><a class='link' href='#SubscriptionDebugInfo'>SubscriptionDebugInfo</a>?</code>
             </td>
             <td> These are null when describing a subscription that was removed, although
  it's safe to condition only on `query`.
@@ -4534,7 +4534,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>query</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextQuery'>ContextQuery</a>?</code>
+                <code><a class='link' href='#ContextQuery'>ContextQuery</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4552,7 +4552,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>client_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ComponentScope'>ComponentScope</a></code>
+                <code><a class='link' href='#ComponentScope'>ComponentScope</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4579,28 +4579,28 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>story</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryMetadata'>StoryMetadata</a>?</code>
+                <code><a class='link' href='#StoryMetadata'>StoryMetadata</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>mod</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ModuleMetadata'>ModuleMetadata</a>?</code>
+                <code><a class='link' href='#ModuleMetadata'>ModuleMetadata</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>entity</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#EntityMetadata'>EntityMetadata</a>?</code>
+                <code><a class='link' href='#EntityMetadata'>EntityMetadata</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>link</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#LinkMetadata'>LinkMetadata</a>?</code>
+                <code><a class='link' href='#LinkMetadata'>LinkMetadata</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4625,7 +4625,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>focused</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#FocusedState'>FocusedState</a>?</code>
+                <code><a class='link' href='#FocusedState'>FocusedState</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4657,7 +4657,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>focused</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#FocusedState'>FocusedState</a>?</code>
+                <code><a class='link' href='#FocusedState'>FocusedState</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4735,7 +4735,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#FocusedStateState'>FocusedStateState</a></code>
+                <code><a class='link' href='#FocusedStateState'>FocusedStateState</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4753,7 +4753,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextValueType'>ContextValueType</a></code>
+                <code><a class='link' href='#ContextValueType'>ContextValueType</a></code>
             </td>
             <td> The type of value this describes.
 </td>
@@ -4770,7 +4770,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>meta</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ContextMetadata'>ContextMetadata</a></code>
+                <code><a class='link' href='#ContextMetadata'>ContextMetadata</a></code>
             </td>
             <td> All metadata for the node. When this ContextValue is included in a
  ContextUpdate, `meta` will contain a merged view of metadata that is
@@ -4812,7 +4812,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>parameters</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#IntentParameter'>IntentParameter</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#IntentParameter'>IntentParameter</a>&gt;?</code>
             </td>
             <td> The parameters that will be passed to the handler of `action`.
 </td>
@@ -4842,7 +4842,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#IntentParameterData'>IntentParameterData</a></code>
+                <code><a class='link' href='#IntentParameterData'>IntentParameterData</a></code>
             </td>
             <td> The data that will be passed to the intent handler.
 </td>
@@ -4910,7 +4910,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>parameter_map</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ModuleParameterMap'>ModuleParameterMap</a></code>
+                <code><a class='link' href='#ModuleParameterMap'>ModuleParameterMap</a></code>
             </td>
             <td> Contains the mapping of Mod parameter name to Link instances for this mod.
 </td>
@@ -4918,7 +4918,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>module_source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ModuleSource'>ModuleSource</a></code>
+                <code><a class='link' href='#ModuleSource'>ModuleSource</a></code>
             </td>
             <td> The way in which this Module instance was first started in the story,
  either by request from another Module instance (INTERNAL) or by request
@@ -4928,7 +4928,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>surface_relation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceRelation'>SurfaceRelation</a>?</code>
+                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a>?</code>
             </td>
             <td> The `surface_relation` that was used to start this Module instance with.
  The same is used when re-inflating the Module instance when the story is
@@ -4948,7 +4948,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>intent</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#Intent'>Intent</a>?</code>
+                <code><a class='link' href='#Intent'>Intent</a>?</code>
             </td>
             <td> The intent that was issued to start add this Module instance to the story.
  Some Module instances may have been added not by an Intent, for example as
@@ -4983,7 +4983,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ModuleParameterMapEntry'>ModuleParameterMapEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ModuleParameterMapEntry'>ModuleParameterMapEntry</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -5011,7 +5011,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>link_path</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#LinkPath'>LinkPath</a></code>
+                <code><a class='link' href='#LinkPath'>LinkPath</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -5050,7 +5050,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>intent_filters</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#IntentFilter'>IntentFilter</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#IntentFilter'>IntentFilter</a>&gt;?</code>
             </td>
             <td> A list of intents that this module is able to handle.
 </td>
@@ -5094,7 +5094,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>parameter_constraints</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ParameterConstraint'>ParameterConstraint</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ParameterConstraint'>ParameterConstraint</a>&gt;</code>
             </td>
             <td> Includes the name and types of entities for the parameters required to
  execute specified [action].
@@ -5103,7 +5103,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>action_display</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ActionDisplay'>ActionDisplay</a></code>
+                <code><a class='link' href='#ActionDisplay'>ActionDisplay</a></code>
             </td>
             <td> Defines presentation properties for suggestions of this action.
 </td>
@@ -5170,7 +5170,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>parameter_constraints</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#FindModulesParameterConstraint'>FindModulesParameterConstraint</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#FindModulesParameterConstraint'>FindModulesParameterConstraint</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -5213,14 +5213,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#FindModulesStatus'>FindModulesStatus</a></code>
+                <code><a class='link' href='#FindModulesStatus'>FindModulesStatus</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>results</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#FindModulesResult'>FindModulesResult</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#FindModulesResult'>FindModulesResult</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -5246,7 +5246,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>manifest</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ModuleManifest'>ModuleManifest</a>?</code>
+                <code><a class='link' href='#ModuleManifest'>ModuleManifest</a>?</code>
             </td>
             <td> The Module's manifest file (see docs/manifests/module.md).
 </td>
@@ -5337,7 +5337,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>allowed_types</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#LinkAllowedTypes'>LinkAllowedTypes</a>?</code>
+                <code><a class='link' href='#LinkAllowedTypes'>LinkAllowedTypes</a>?</code>
             </td>
             <td> If `allowed_types` is null, the Link contains JSON. No schema validation
  is performed.
@@ -5380,7 +5380,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>property_info</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#CreateModuleParameterMapEntry'>CreateModuleParameterMapEntry</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#CreateModuleParameterMapEntry'>CreateModuleParameterMapEntry</a>&gt;?</code>
             </td>
             <td> Contains instructions to create each name in the parameter map.
 </td>
@@ -5406,7 +5406,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#CreateModuleParameterInfo'>CreateModuleParameterInfo</a></code>
+                <code><a class='link' href='#CreateModuleParameterInfo'>CreateModuleParameterInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -5435,7 +5435,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ExecuteStatus'>ExecuteStatus</a></code>
+                <code><a class='link' href='#ExecuteStatus'>ExecuteStatus</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -5526,14 +5526,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>intent</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#Intent'>Intent</a></code>
+                <code><a class='link' href='#Intent'>Intent</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>surface_relation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceRelation'>SurfaceRelation</a></code>
+                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
             </td>
             <td> `surface_relation` defines the visual relationship between this mod and the
  mod at `surface_parent_mod_name`.
@@ -5596,7 +5596,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>path</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#LinkPath'>LinkPath</a></code>
+                <code><a class='link' href='#LinkPath'>LinkPath</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -5704,7 +5704,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>extra</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#StoryInfoExtraEntry'>StoryInfoExtraEntry</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#StoryInfoExtraEntry'>StoryInfoExtraEntry</a>&gt;?</code>
             </td>
             <td> Data the SessionShell wants to keep associated with this Story, like
  title, a color, or a display rank.
@@ -5834,7 +5834,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>surface_relation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceRelation'>SurfaceRelation</a>?</code>
+                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a>?</code>
             </td>
             <td> The relationship between the parent Surface and this new Surface. Used
  for layout optimization.
@@ -5843,7 +5843,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>module_manifest</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ModuleManifest'>ModuleManifest</a>?</code>
+                <code><a class='link' href='#ModuleManifest'>ModuleManifest</a>?</code>
             </td>
             <td> Information about the module populates the view.
 </td>
@@ -5851,7 +5851,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>module_source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ModuleSource'>ModuleSource</a></code>
+                <code><a class='link' href='#ModuleSource'>ModuleSource</a></code>
             </td>
             <td> How the Surface was generated. By an action internal to the story or by
  an external action.
@@ -5932,7 +5932,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>surfaces</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#LayoutEntry'>LayoutEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#LayoutEntry'>LayoutEntry</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -6000,7 +6000,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>relationship</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceRelation'>SurfaceRelation</a></code>
+                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
             </td>
             <td> This surface relation between the surface identified by node_name and by
  parent_node_name.
@@ -6038,7 +6038,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>intent</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#Intent'>Intent</a></code>
+                <code><a class='link' href='#Intent'>Intent</a></code>
             </td>
             <td> The intent to resolve to a module.
 </td>
@@ -6059,19 +6059,19 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>arrangement</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceArrangement'>SurfaceArrangement</a></code>
+                <code><a class='link' href='#SurfaceArrangement'>SurfaceArrangement</a></code>
             </td>
             <td> Advice on arranging these surfaces on the screen together.
 </td>
-            <td><a class='link' href='../fuchsia.modular/index.html#NONE'>NONE</a></td>
+            <td><a class='link' href='#NONE'>NONE</a></td>
         </tr><tr>
             <td><code>dependency</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceDependency'>SurfaceDependency</a></code>
+                <code><a class='link' href='#SurfaceDependency'>SurfaceDependency</a></code>
             </td>
             <td> Advice for dismissal of surfaces to be linked.
 </td>
-            <td><a class='link' href='../fuchsia.modular/index.html#NONE'>NONE</a></td>
+            <td><a class='link' href='#NONE'>NONE</a></td>
         </tr><tr>
             <td><code>emphasis</code></td>
             <td>
@@ -6574,7 +6574,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>agent_controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.modular/index.html#AgentController'>AgentController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AgentController'>AgentController</a>&gt;</code>
             </td>
             <td> The AgentController that keeps the agent alive.
 </td>
@@ -6594,7 +6594,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>display_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#DisplayInfo'>DisplayInfo</a></code>
+                <code><a class='link' href='#DisplayInfo'>DisplayInfo</a></code>
             </td>
             <td> Defines presentation fields for a suggestion. The string fields might be
  templated and will be filled from data in `parameter_mapping`.
@@ -6604,7 +6604,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>parameter_mapping</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular/index.html#ParameterMapping'>ParameterMapping</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ParameterMapping'>ParameterMapping</a>&gt;</code>
             </td>
             <td> Fields to be replaced in the given `display_info` templated strings.
  In the example above, we would map name=artistName to the intent field
@@ -6702,7 +6702,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>surface_relation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SurfaceRelation'>SurfaceRelation</a></code>
+                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
             </td>
             <td> The relationship between the parent Surface and this new Surface. Used
  for layout optimization.
@@ -6711,7 +6711,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>module_manifest</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ModuleManifest'>ModuleManifest</a></code>
+                <code><a class='link' href='#ModuleManifest'>ModuleManifest</a></code>
             </td>
             <td> Information about the module populates the view.
 </td>
@@ -6719,7 +6719,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>module_source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ModuleSource'>ModuleSource</a></code>
+                <code><a class='link' href='#ModuleSource'>ModuleSource</a></code>
             </td>
             <td> How the Surface was generated. By an action internal to the story or by
  an external action.
@@ -6820,7 +6820,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>link_path</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#LinkPath'>LinkPath</a></code>
+                <code><a class='link' href='#LinkPath'>LinkPath</a></code>
             </td>
             <td> Instructs parameter map initialization to either use an existing Link
  (`link_path` is set) or create a new Link (`create_link` is set).
@@ -6828,7 +6828,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>create_link</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#CreateLinkInfo'>CreateLinkInfo</a></code>
+                <code><a class='link' href='#CreateLinkInfo'>CreateLinkInfo</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -6841,13 +6841,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryPuppetMaster_SetStoryInfoExtra_Response'>StoryPuppetMaster_SetStoryInfoExtra_Response</a></code>
+                <code><a class='link' href='#StoryPuppetMaster_SetStoryInfoExtra_Response'>StoryPuppetMaster_SetStoryInfoExtra_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ConfigureStoryError'>ConfigureStoryError</a></code>
+                <code><a class='link' href='#ConfigureStoryError'>ConfigureStoryError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -6868,42 +6868,42 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>set_focus_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SetFocusState'>SetFocusState</a></code>
+                <code><a class='link' href='#SetFocusState'>SetFocusState</a></code>
             </td>
             <td> Sets the focus state of the story to `set_focus_state.focused`.
 </td>
         </tr><tr>
             <td><code>add_mod</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#AddMod'>AddMod</a></code>
+                <code><a class='link' href='#AddMod'>AddMod</a></code>
             </td>
             <td> Adds a Mod.
 </td>
         </tr><tr>
             <td><code>remove_mod</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#RemoveMod'>RemoveMod</a></code>
+                <code><a class='link' href='#RemoveMod'>RemoveMod</a></code>
             </td>
             <td> Removes an existing Mod.
 </td>
         </tr><tr>
             <td><code>set_link_value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SetLinkValue'>SetLinkValue</a></code>
+                <code><a class='link' href='#SetLinkValue'>SetLinkValue</a></code>
             </td>
             <td> Sets the value of a Link.
 </td>
         </tr><tr>
             <td><code>focus_mod</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#FocusMod'>FocusMod</a></code>
+                <code><a class='link' href='#FocusMod'>FocusMod</a></code>
             </td>
             <td> Brings focus to a mod.
 </td>
         </tr><tr>
             <td><code>set_kind_of_proto_story_option</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#SetKindOfProtoStoryOption'>SetKindOfProtoStoryOption</a></code>
+                <code><a class='link' href='#SetKindOfProtoStoryOption'>SetKindOfProtoStoryOption</a></code>
             </td>
             <td> Updates the kind_of_proto_story option in a story.
 </td>
@@ -6919,28 +6919,28 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>global_scope</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#GlobalScope'>GlobalScope</a></code>
+                <code><a class='link' href='#GlobalScope'>GlobalScope</a></code>
             </td>
             <td> Reserved for system-level services.
 </td>
         </tr><tr>
             <td><code>module_scope</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#ModuleScope'>ModuleScope</a></code>
+                <code><a class='link' href='#ModuleScope'>ModuleScope</a></code>
             </td>
             <td> Scope for a specific Module instance within a specific Story.
 </td>
         </tr><tr>
             <td><code>agent_scope</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#AgentScope'>AgentScope</a></code>
+                <code><a class='link' href='#AgentScope'>AgentScope</a></code>
             </td>
             <td> Scope for a specific Agent. Agents are not tied to a specific story.
 </td>
         </tr><tr>
             <td><code>story_scope</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html#StoryScope'>StoryScope</a></code>
+                <code><a class='link' href='#StoryScope'>StoryScope</a></code>
             </td>
             <td> Scope for a specific Story, potentially containing several Module instances.
 </td>

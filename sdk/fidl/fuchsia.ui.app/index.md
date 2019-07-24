@@ -63,7 +63,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.app/index.html#ViewConfig'>ViewConfig</a></code>
+                <code><a class='link' href='#ViewConfig'>ViewConfig</a></code>
             </td>
         </tr></table>
 

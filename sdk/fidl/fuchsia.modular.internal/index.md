@@ -112,7 +112,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>session_context</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.internal/index.html#SessionContext'>SessionContext</a></code>
+                <code><a class='link' href='#SessionContext'>SessionContext</a></code>
             </td>
         </tr><tr>
             <td><code>view_token</code></td>
