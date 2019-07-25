@@ -2284,7 +2284,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>event</code></td>
             <td>
-                <code>handle&lt;event&gt;?</code>
+                <code>handle&lt;eventpair&gt;?</code>
             </td>
             <td> An optional event which transmits information about a device's state.
 
@@ -2306,7 +2306,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>event</code></td>
             <td>
-                <code>handle&lt;event&gt;?</code>
+                <code>handle&lt;eventpair&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>

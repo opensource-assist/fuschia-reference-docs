@@ -6063,7 +6063,7 @@ Book: /_book.yaml
             </td>
             <td> Advice on arranging these surfaces on the screen together.
 </td>
-            <td><a class='link' href='#NONE'>NONE</a></td>
+            <td><a class='link' href='#SurfaceArrangement.NONE'>SurfaceArrangement.NONE</a></td>
         </tr><tr>
             <td><code>dependency</code></td>
             <td>
@@ -6071,7 +6071,7 @@ Book: /_book.yaml
             </td>
             <td> Advice for dismissal of surfaces to be linked.
 </td>
-            <td><a class='link' href='#NONE'>NONE</a></td>
+            <td><a class='link' href='#SurfaceDependency.NONE'>SurfaceDependency.NONE</a></td>
         </tr><tr>
             <td><code>emphasis</code></td>
             <td>

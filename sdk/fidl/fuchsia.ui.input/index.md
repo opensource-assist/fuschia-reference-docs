@@ -661,7 +661,7 @@ Book: /_book.yaml
                 <code><a class='link' href='#AxisScale'>AxisScale</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='#LINEAR'>LINEAR</a></td>
+            <td><a class='link' href='#AxisScale.LINEAR'>AxisScale.LINEAR</a></td>
         </tr>
 </table>
 
@@ -693,7 +693,7 @@ Book: /_book.yaml
                 <code><a class='link' href='#AxisScale'>AxisScale</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='#LINEAR'>LINEAR</a></td>
+            <td><a class='link' href='#AxisScale.LINEAR'>AxisScale.LINEAR</a></td>
         </tr>
 </table>
 

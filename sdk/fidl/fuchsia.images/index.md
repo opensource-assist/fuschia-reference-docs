@@ -256,7 +256,7 @@ Book: /_book.yaml
             </td>
             <td> Specifies if the image should be mirrored before displaying.
 </td>
-            <td><a class='link' href='#NORMAL'>NORMAL</a></td>
+            <td><a class='link' href='#Transform.NORMAL'>Transform.NORMAL</a></td>
         </tr><tr>
             <td><code>width</code></td>
             <td>
@@ -287,7 +287,7 @@ Book: /_book.yaml
             </td>
             <td> The pixel format of the image.
 </td>
-            <td><a class='link' href='#BGRA_8'>BGRA_8</a></td>
+            <td><a class='link' href='#PixelFormat.BGRA_8'>PixelFormat.BGRA_8</a></td>
         </tr><tr>
             <td><code>color_space</code></td>
             <td>
@@ -295,7 +295,7 @@ Book: /_book.yaml
             </td>
             <td> The pixel color space.
 </td>
-            <td><a class='link' href='#SRGB'>SRGB</a></td>
+            <td><a class='link' href='#ColorSpace.SRGB'>ColorSpace.SRGB</a></td>
         </tr><tr>
             <td><code>tiling</code></td>
             <td>
@@ -303,7 +303,7 @@ Book: /_book.yaml
             </td>
             <td> The pixel arrangement in memory.
 </td>
-            <td><a class='link' href='#LINEAR'>LINEAR</a></td>
+            <td><a class='link' href='#Tiling.LINEAR'>Tiling.LINEAR</a></td>
         </tr><tr>
             <td><code>alpha_format</code></td>
             <td>
@@ -311,7 +311,7 @@ Book: /_book.yaml
             </td>
             <td> Specifies the interpretion of the alpha channel, if one exists.
 </td>
-            <td><a class='link' href='#OPAQUE'>OPAQUE</a></td>
+            <td><a class='link' href='#AlphaFormat.OPAQUE'>AlphaFormat.OPAQUE</a></td>
         </tr>
 </table>
 

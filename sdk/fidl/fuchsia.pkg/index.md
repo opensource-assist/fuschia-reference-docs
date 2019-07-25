@@ -188,6 +188,63 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## FontResolver {:#FontResolver}
+*Defined in [fuchsia.pkg/font_resolver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/font_resolver.fidl#19)*
+
+ Resolves font packages from a registry.
+
+ This interface is intended to be implemented by package resolver components, and used
+ exclusively by fuchsia.fonts.Provider.
+
+ DEPRECATED. This is an interim solution, and will be revisited when Component Framework v2
+ becomes available and allows non-component packages and easier directory routing.
+
+### Resolve {:#Resolve}
+
+ Populates or updates the cache of a font package, fetching it if it is not present on the
+ local system.
+
+ + request `package_url` The package URL of a font package.
+ + request `directory_request` Request for a directory that will be resolved when the package
+   has been successfully cached. The directory should contain a single file, corresponding to
+   the asset filename. The client should retain the directory handle for as long as needed to
+   prevent the package from being evicted from cache.
+
+ - response `status` Outcome of the request.
+   * `ZX_OK` if the package was successfully opened.
+   * `ZX_ERR_ACCESS_DENIED` if the resolver does not have permission to fetch a package blob.
+   * `ZX_ERR_IO` if there is some other unspecified error during I/O.
+   * `ZX_ERR_NOT_FOUND` if the font package or a package blob does not exist, or is not known
+     to be a font package.
+   * `ZX_ERR_NO_SPACE` if there is no space available to store the package.
+   * `ZX_ERR_UNAVAILABLE` if the resolver is currently unable to fetch a package blob.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>package_url</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>directory_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.io/index.html'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/index.html#Directory'>Directory</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
 ## RepositoryManager {:#RepositoryManager}
 *Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#14)*
 

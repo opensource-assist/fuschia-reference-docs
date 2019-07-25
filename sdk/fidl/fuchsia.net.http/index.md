@@ -232,7 +232,7 @@ Book: /_book.yaml
             </td>
             <td> The cache behavior for the request.
 </td>
-            <td><a class='link' href='#DEFAULT'>DEFAULT</a></td>
+            <td><a class='link' href='#CacheMode.DEFAULT'>CacheMode.DEFAULT</a></td>
         </tr><tr>
             <td><code>response_body_mode</code></td>
             <td>
@@ -240,7 +240,7 @@ Book: /_book.yaml
             </td>
             <td> The response body mode.
 </td>
-            <td><a class='link' href='#BUFFER'>BUFFER</a></td>
+            <td><a class='link' href='#ResponseBodyMode.BUFFER'>ResponseBodyMode.BUFFER</a></td>
         </tr>
 </table>
 

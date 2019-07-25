@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Stack {:#Stack}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#139)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#143)*
 
 
 ### AddEthernetInterface {:#AddEthernetInterface}
@@ -465,12 +465,21 @@ Book: /_book.yaml
 </td>
             <td>No default</td>
         </tr><tr>
-            <td><code>path</code></td>
+            <td><code>topopath</code></td>
             <td>
                 <code>string</code>
             </td>
             <td> The topological path to the device, representing a stable identifier for the interface
  hardware.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>filepath</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td> An unstable file path corresponding to the interface. Used in watching the creation
+ and destruction of the interface, or in accessing the interface using netdump.
 </td>
             <td>No default</td>
         </tr><tr>
@@ -526,7 +535,7 @@ Book: /_book.yaml
 </table>
 
 ### ForwardingEntry {:#ForwardingEntry}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#94)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#98)*
 
 
 
@@ -554,7 +563,7 @@ Book: /_book.yaml
 </table>
 
 ### InterfaceStatusChange {:#InterfaceStatusChange}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#102)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#106)*
 
 
 
@@ -581,7 +590,7 @@ Book: /_book.yaml
 </table>
 
 ### InterfaceAddressChange {:#InterfaceAddressChange}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#115)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#119)*
 
 
 
@@ -608,7 +617,7 @@ Book: /_book.yaml
 </table>
 
 ### Error {:#Error}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#134)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#138)*
 
 
 
@@ -686,7 +695,7 @@ Type: <code>uint32</code>
 ### ErrorType {:#ErrorType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#123)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#127)*
 
 
 
@@ -757,7 +766,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### ForwardingDestination {:#ForwardingDestination}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#85)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#89)*
 
  A ForwardingDestination represents either the device that should transmit a packet or the address
  of the next hop in the route.
@@ -780,7 +789,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### InterfaceAddressDiff {:#InterfaceAddressDiff}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#110)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#114)*
 
 
 <table>

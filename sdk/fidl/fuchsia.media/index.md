@@ -2865,21 +2865,21 @@ Book: /_book.yaml
                 <code><a class='link' href='#SbcSubBands'>SbcSubBands</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='#SUB_BANDS_8'>SUB_BANDS_8</a></td>
+            <td><a class='link' href='#SbcSubBands.SUB_BANDS_8'>SbcSubBands.SUB_BANDS_8</a></td>
         </tr><tr>
             <td><code>allocation</code></td>
             <td>
                 <code><a class='link' href='#SbcAllocation'>SbcAllocation</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='#ALLOC_LOUDNESS'>ALLOC_LOUDNESS</a></td>
+            <td><a class='link' href='#SbcAllocation.ALLOC_LOUDNESS'>SbcAllocation.ALLOC_LOUDNESS</a></td>
         </tr><tr>
             <td><code>block_count</code></td>
             <td>
                 <code><a class='link' href='#SbcBlockCount'>SbcBlockCount</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='#BLOCK_COUNT_4'>BLOCK_COUNT_4</a></td>
+            <td><a class='link' href='#SbcBlockCount.BLOCK_COUNT_4'>SbcBlockCount.BLOCK_COUNT_4</a></td>
         </tr><tr>
             <td><code>channel_mode</code></td>
             <td>
