@@ -3469,6 +3469,33 @@ Book: /_book.yaml
 
 
 
+### OnChange2 {:#OnChange2}
+
+ This method *will not be called* but exists for transition purposes.
+ Clients should implement a no-op stub.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>story_info</code></td>
+            <td>
+                <code><a class='link' href='#StoryInfo2'>StoryInfo2</a></code>
+            </td>
+        </tr><tr>
+            <td><code>story_state</code></td>
+            <td>
+                <code><a class='link' href='#StoryState'>StoryState</a></code>
+            </td>
+        </tr><tr>
+            <td><code>story_visibility_state</code></td>
+            <td>
+                <code><a class='link' href='#StoryVisibilityState'>StoryVisibilityState</a></code>
+            </td>
+        </tr></table>
+
+
+
 ### OnDelete {:#OnDelete}
 
  Called when a story record is permanently deleted. The deletion could
@@ -3490,7 +3517,7 @@ Book: /_book.yaml
 
 
 ## StoryActivityWatcher {:#StoryActivityWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#95)*
+*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#101)*
 
  Implemented by clients of StoryProvider in order to inform them about ongoing
  activities in stories. `activities` is the entire list of ongoing activities

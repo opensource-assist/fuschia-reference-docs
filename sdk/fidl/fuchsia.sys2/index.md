@@ -411,6 +411,112 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
+### RealmRef {:#RealmRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#19)*
+
+
+
+ A reference to a component’s containing realm, i.e. the parent component.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### SelfRef {:#SelfRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#22)*
+
+
+
+ A reference to the component itself.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### ChildRef {:#ChildRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#25)*
+
+
+
+ A reference to one of the component's child instances.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td> The name assigned to the child by its parent. If `collection` is set,
+ `name` is scoped to `collection` and the child is a dynamic instance.
+ Required.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>collection</code></td>
+            <td>
+                <code>string[100]?</code>
+            </td>
+            <td> The collection `name` belongs to. If omitted, `name` references a static
+ instance. This field must be omitted if the `ChildRef` is being used in
+ a component declaration. Optional.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### CollectionRef {:#CollectionRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#37)*
+
+
+
+ A reference to one of the component's collections.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### StorageRef {:#StorageRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#42)*
+
+
+
+ A reference to one of the component's storage sections.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### FrameworkRef {:#FrameworkRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#47)*
+
+
+
+ A reference to the component framework itself.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### Moniker {:#Moniker}
 *Defined in [fuchsia.sys2/moniker.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/moniker.fidl#19)*
 
@@ -1045,112 +1151,6 @@ Type: <code>uint32</code>
  `collection`.
 </td>
         </tr></table>
-
-### RealmRef {:#RealmRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#19)*
-
- A reference to a component’s containing realm, i.e. the parent component.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    </table>
-
-### SelfRef {:#SelfRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#22)*
-
- A reference to the component itself.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    </table>
-
-### ChildRef {:#ChildRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#25)*
-
- A reference to one of the component's child instances.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>name</code></td>
-            <td>
-                <code>string[100]</code>
-            </td>
-            <td> The name assigned to the child by its parent. If `collection` is set,
- `name` is scoped to `collection` and the child is a dynamic instance.
- Required.
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>collection</code></td>
-            <td>
-                <code>string[100]</code>
-            </td>
-            <td> The collection `name` belongs to. If omitted, `name` references a static
- instance. This field must be omitted if the `ChildRef` is being used in
- a component declaration. Optional.
-</td>
-        </tr></table>
-
-### CollectionRef {:#CollectionRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#37)*
-
- A reference to one of the component's collections.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>name</code></td>
-            <td>
-                <code>string[100]</code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### StorageRef {:#StorageRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#42)*
-
- A reference to one of the component's storage sections.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>name</code></td>
-            <td>
-                <code>string[100]</code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### FrameworkRef {:#FrameworkRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#47)*
-
- A reference to the component framework itself.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    </table>
 
 ### StorageDecl {:#StorageDecl}
 

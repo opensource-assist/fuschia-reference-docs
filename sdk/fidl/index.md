@@ -101,6 +101,7 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.ui.policy/index">fuchsia.ui.policy</a></td></tr>
 <tr><td><a href="fuchsia.ui.policy.accessibility/index">fuchsia.ui.policy.accessibility</a></td></tr>
 <tr><td><a href="fuchsia.ui.scenic/index">fuchsia.ui.scenic</a></td></tr>
+<tr><td><a href="fuchsia.ui.types/index">fuchsia.ui.types</a></td></tr>
 <tr><td><a href="fuchsia.ui.vectorial/index">fuchsia.ui.vectorial</a></td></tr>
 <tr><td><a href="fuchsia.ui.views/index">fuchsia.ui.views</a></td></tr>
 <tr><td><a href="fuchsia.update/index">fuchsia.update</a></td></tr>

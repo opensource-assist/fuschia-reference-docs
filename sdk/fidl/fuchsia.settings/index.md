@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Accessibility {:#Accessibility}
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#9)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#11)*
 
  Modify or watch accessibility settings that are persisted.
 
@@ -36,122 +36,10 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### SetAudioDescription {:#SetAudioDescription}
+### Set {:#Set}
 
- Enables or disables audio description.
-
- * see <a class='link' href='#AccessibilitySettings.audio_description'>AccessibilitySettings.audio_description</a>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>audio_description</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-### SetScreenReader {:#SetScreenReader}
-
- Enables or disables the screen reader.
-
- * see <a class='link' href='#AccessibilitySettings.screen_reader'>AccessibilitySettings.screen_reader</a>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>screen_reader</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-### SetColorInversion {:#SetColorInversion}
-
- Enables or disables color inversion.
-
- * see <a class='link' href='#AccessibilitySettings.color_inversion'>AccessibilitySettings.color_inversion</a>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>color_inversion</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-### SetEnableMagnification {:#SetEnableMagnification}
-
- Enables or disables magnification by triple-tapping the display.
-
- * see <a class='link' href='#AccessibilitySettings.enable_magnification'>AccessibilitySettings.enable_magnification</a>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>enable_magnification</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-### SetColorCorrection {:#SetColorCorrection}
-
- Sets the specific color correction to use, or none.
-
- * see <a class='link' href='#AccessibilitySettings.color_correction'>AccessibilitySettings.color_correction</a>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>color_correction</code></td>
-            <td>
-                <code><a class='link' href='#ColorBlindnessType'>ColorBlindnessType</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-### SetCaptionsSettings {:#SetCaptionsSettings}
-
- Updates closed captions settings.
-
- + `settings` fields to update. Only values explicitly set are changed.
- * see <a class='link' href='#CaptionsSettings'>CaptionsSettings</a> for their meaning.
+ Sets [AccessibilitySettings] settings. Any field not explicitly set in the table performs a
+ no-op, and will not make any changes.
 
 #### Request
 <table>
@@ -159,7 +47,7 @@ Book: /_book.yaml
     <tr>
             <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='#CaptionsSettings'>CaptionsSettings</a></code>
+                <code><a class='link' href='#AccessibilitySettings'>AccessibilitySettings</a></code>
             </td>
         </tr></table>
 
@@ -195,17 +83,18 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### SetAutoBrightness {:#SetAutoBrightness}
+### Set {:#Set}
 
- Enable or disable automatic adjustment of brightness.
+ Sets display settings. Any field not explicitly set in the table performs a
+ no-op, and will not make any changes.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>auto_brightness</code></td>
+            <td><code>settings</code></td>
             <td>
-                <code>bool</code>
+                <code><a class='link' href='#DisplaySettings'>DisplaySettings</a></code>
             </td>
         </tr></table>
 
@@ -216,33 +105,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Display_SetAutoBrightness_Result'>Display_SetAutoBrightness_Result</a></code>
-            </td>
-        </tr></table>
-
-### SetBrightness {:#SetBrightness}
-
- Changes the brightness to a value from 0-1.0, with 1.0 representing
- full brightness. Values greater than 1.0 may be added in future.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>brightness_value</code></td>
-            <td>
-                <code>float32</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>result</code></td>
-            <td>
-                <code><a class='link' href='#Display_SetBrightness_Result'>Display_SetBrightness_Result</a></code>
+                <code><a class='link' href='#Display_Set_Result'>Display_Set_Result</a></code>
             </td>
         </tr></table>
 
@@ -273,17 +136,18 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### SetTimeZone {:#SetTimeZone}
+### Set {:#Set}
 
- Sets the current time zone based on the [time_zone_id].
+ Sets [IntlSettings] settings. Any field not explicitly set in the table performs a
+ no-op, and will not make any changes.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>time_zone_id</code></td>
+            <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.intl/index.html'>fuchsia.intl</a>/<a class='link' href='../fuchsia.intl/index.html#TimeZoneId'>TimeZoneId</a></code>
+                <code><a class='link' href='#IntlSettings'>IntlSettings</a></code>
             </td>
         </tr></table>
 
@@ -294,57 +158,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Intl_SetTimeZone_Result'>Intl_SetTimeZone_Result</a></code>
-            </td>
-        </tr></table>
-
-### SetTemperatureUnit {:#SetTemperatureUnit}
-
- Changes the temperature unit to the specified unit.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>temperature_unit</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.intl/index.html'>fuchsia.intl</a>/<a class='link' href='../fuchsia.intl/index.html#TemperatureUnit'>TemperatureUnit</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>result</code></td>
-            <td>
-                <code><a class='link' href='#Intl_SetTemperatureUnit_Result'>Intl_SetTemperatureUnit_Result</a></code>
-            </td>
-        </tr></table>
-
-### SetLocales {:#SetLocales}
-
- Sets the ordered list of preferred locales.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>locales</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.intl/index.html'>fuchsia.intl</a>/<a class='link' href='../fuchsia.intl/index.html#LocaleId'>LocaleId</a>&gt;[10]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>result</code></td>
-            <td>
-                <code><a class='link' href='#Intl_SetLocales_Result'>Intl_SetLocales_Result</a></code>
+                <code><a class='link' href='#Intl_Set_Result'>Intl_Set_Result</a></code>
             </td>
         </tr></table>
 
@@ -374,17 +188,18 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### SetLoginOverride {:#SetLoginOverride}
+### Set {:#Set}
 
- Changes the login overide to the supplied value.
+ Changes the settings specified in [SystemSettings]. Any field not set in the table will
+ not perform any system operation.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>login_override</code></td>
+            <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='#LoginOverride'>LoginOverride</a></code>
+                <code><a class='link' href='#SystemSettings'>SystemSettings</a></code>
             </td>
         </tr></table>
 
@@ -395,7 +210,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#System_SetLoginOverride_Result'>System_SetLoginOverride_Result</a></code>
+                <code><a class='link' href='#System_Set_Result'>System_Set_Result</a></code>
             </td>
         </tr></table>
 
@@ -403,48 +218,8 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
-### Color {:#Color}
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#134)*
-
-
-
- 32-bit RGBA color. Color channels have not been premultiplied by `alpha`.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>red</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>green</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>blue</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>alpha</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### Display_Watch_Response {:#Display_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#6)*
 
 
 
@@ -461,19 +236,8 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### Display_SetAutoBrightness_Response {:#Display_SetAutoBrightness_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
-</table>
-
-### Display_SetBrightness_Response {:#Display_SetBrightness_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#30)*
+### Display_Set_Response {:#Display_Set_Response}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#13)*
 
 
 
@@ -484,7 +248,7 @@ Book: /_book.yaml
 </table>
 
 ### Intl_Watch_Response {:#Intl_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#20)*
 
 
 
@@ -501,30 +265,8 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### Intl_SetTimeZone_Response {:#Intl_SetTimeZone_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#44)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
-</table>
-
-### Intl_SetTemperatureUnit_Response {:#Intl_SetTemperatureUnit_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#51)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
-</table>
-
-### Intl_SetLocales_Response {:#Intl_SetLocales_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#58)*
+### Intl_Set_Response {:#Intl_Set_Response}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
 
 
 
@@ -535,7 +277,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Watch_Response {:#System_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#65)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
 
 
 
@@ -552,8 +294,8 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### System_SetLoginOverride_Response {:#System_SetLoginOverride_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#72)*
+### System_Set_Response {:#System_Set_Response}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#41)*
 
 
 
@@ -570,7 +312,7 @@ Book: /_book.yaml
 ### ColorBlindnessType {:#ColorBlindnessType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#72)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#47)*
 
 
 
@@ -596,7 +338,7 @@ Type: <code>uint32</code>
 ### CaptionFontFamily {:#CaptionFontFamily}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#119)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#94)*
 
  Font family groups for closed captions, specified by 47 CFR §79.102(k).
 
@@ -636,12 +378,12 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### CaptionEdgeStyle {:#CaptionEdgeStyle}
+### EdgeStyle {:#EdgeStyle}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#142)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#106)*
 
- Font edge style, for better visibility against the background.
+ Edge style for fonts as specified in 47 CFR §79.103(c)(7)
 
 
 <table>
@@ -689,7 +431,7 @@ Type: <code>uint32</code>
 ### LoginOverride {:#LoginOverride}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.settings/system.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/system.fidl#25)*
+*Defined in [fuchsia.settings/system.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/system.fidl#26)*
 
  What preferred login behavior has been set.
 
@@ -716,7 +458,7 @@ Type: <code>uint32</code>
 ### AccessibilitySettings {:#AccessibilitySettings}
 
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#51)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#26)*
 
  Supported accessibility settings.
 
@@ -777,7 +519,7 @@ Type: <code>uint32</code>
 ### CaptionsSettings {:#CaptionsSettings}
 
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#88)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#63)*
 
  What kind of sources get closed captions, and how they look.
 
@@ -812,7 +554,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>window_color</code></td>
             <td>
-                <code><a class='link' href='#Color'>Color</a></code>
+                <code><a class='link' href='../fuchsia.ui.types/index.html'>fuchsia.ui.types</a>/<a class='link' href='../fuchsia.ui.types/index.html#ColorRgba'>ColorRgba</a></code>
             </td>
             <td> Border color used around the closed captions window.
 </td>
@@ -820,7 +562,7 @@ Type: <code>uint32</code>
             <td>5</td>
             <td><code>background_color</code></td>
             <td>
-                <code><a class='link' href='#Color'>Color</a></code>
+                <code><a class='link' href='../fuchsia.ui.types/index.html'>fuchsia.ui.types</a>/<a class='link' href='../fuchsia.ui.types/index.html#ColorRgba'>ColorRgba</a></code>
             </td>
             <td> Background color of the closed captions window.
 </td>
@@ -829,7 +571,7 @@ Type: <code>uint32</code>
 ### CaptionFontStyle {:#CaptionFontStyle}
 
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#106)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#81)*
 
  Font, size, and color of closed captions text.
 
@@ -847,7 +589,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>color</code></td>
             <td>
-                <code><a class='link' href='#Color'>Color</a></code>
+                <code><a class='link' href='../fuchsia.ui.types/index.html'>fuchsia.ui.types</a>/<a class='link' href='../fuchsia.ui.types/index.html#ColorRgba'>ColorRgba</a></code>
             </td>
             <td> 47 CFR §79.103(c)(2) requires at least 3-bit RGB for user override of
  closed-captions color.
@@ -866,7 +608,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>char_edge_style</code></td>
             <td>
-                <code><a class='link' href='#CaptionEdgeStyle'>CaptionEdgeStyle</a></code>
+                <code><a class='link' href='#EdgeStyle'>EdgeStyle</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -874,7 +616,7 @@ Type: <code>uint32</code>
 ### DisplaySettings {:#DisplaySettings}
 
 
-*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#22)*
+*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#19)*
 
 
 
@@ -899,7 +641,7 @@ Type: <code>uint32</code>
 ### IntlSettings {:#IntlSettings}
 
 
-*Defined in [fuchsia.settings/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/intl.fidl#28)*
+*Defined in [fuchsia.settings/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/intl.fidl#23)*
 
  Collection of internationalization-related settings.
 
@@ -935,7 +677,7 @@ Type: <code>uint32</code>
 ### SystemSettings {:#SystemSettings}
 
 
-*Defined in [fuchsia.settings/system.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/system.fidl#19)*
+*Defined in [fuchsia.settings/system.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/system.fidl#20)*
 
  Settings related to the general system.
 
@@ -957,7 +699,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Display_Watch_Result {:#Display_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
 
 
 <table>
@@ -975,34 +717,15 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### Display_SetAutoBrightness_Result {:#Display_SetAutoBrightness_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
+### Display_Set_Result {:#Display_Set_Result}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='#Display_SetAutoBrightness_Response'>Display_SetAutoBrightness_Response</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>err</code></td>
-            <td>
-                <code><a class='link' href='#Error'>Error</a></code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### Display_SetBrightness_Result {:#Display_SetBrightness_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#33)*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>response</code></td>
-            <td>
-                <code><a class='link' href='#Display_SetBrightness_Response'>Display_SetBrightness_Response</a></code>
+                <code><a class='link' href='#Display_Set_Response'>Display_Set_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1014,7 +737,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Intl_Watch_Result {:#Intl_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#40)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
 
 
 <table>
@@ -1032,53 +755,15 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### Intl_SetTimeZone_Result {:#Intl_SetTimeZone_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#47)*
+### Intl_Set_Result {:#Intl_Set_Result}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#30)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='#Intl_SetTimeZone_Response'>Intl_SetTimeZone_Response</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>err</code></td>
-            <td>
-                <code><a class='link' href='#Error'>Error</a></code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### Intl_SetTemperatureUnit_Result {:#Intl_SetTemperatureUnit_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#54)*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>response</code></td>
-            <td>
-                <code><a class='link' href='#Intl_SetTemperatureUnit_Response'>Intl_SetTemperatureUnit_Response</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>err</code></td>
-            <td>
-                <code><a class='link' href='#Error'>Error</a></code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### Intl_SetLocales_Result {:#Intl_SetLocales_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#61)*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>response</code></td>
-            <td>
-                <code><a class='link' href='#Intl_SetLocales_Response'>Intl_SetLocales_Response</a></code>
+                <code><a class='link' href='#Intl_Set_Response'>Intl_Set_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1090,7 +775,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### System_Watch_Result {:#System_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#68)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
 
 
 <table>
@@ -1108,15 +793,15 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### System_SetLoginOverride_Result {:#System_SetLoginOverride_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#75)*
+### System_Set_Result {:#System_Set_Result}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#44)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='#System_SetLoginOverride_Response'>System_SetLoginOverride_Response</a></code>
+                <code><a class='link' href='#System_Set_Response'>System_Set_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

@@ -197,6 +197,8 @@ toc:
   path: /reference/fidl/fuchsia.ui.policy.accessibility
 - title: fuchsia.ui.scenic
   path: /reference/fidl/fuchsia.ui.scenic
+- title: fuchsia.ui.types
+  path: /reference/fidl/fuchsia.ui.types
 - title: fuchsia.ui.vectorial
   path: /reference/fidl/fuchsia.ui.vectorial
 - title: fuchsia.ui.views
