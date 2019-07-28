@@ -43,7 +43,7 @@ Book: /_book.yaml
 
  If tracing has already started the provider must ignore the request.
 
- There is no result. The provider must send a TRACE_PROVIDER_STARTED
+ There is no result. The provider must send a `TRACE_PROVIDER_STARTED`
  packet on `fifo` to indicate success/failure of starting.
 
 #### Request
@@ -65,7 +65,7 @@ Book: /_book.yaml
  If tracing has already stopped the provider must ignore the request.
 
  Once the provider has finished writing any final events to the trace
- buffer, it must send a TRACE_PROVIDER_STOPPED packet on `fifo`.
+ buffer, it must send a `TRACE_PROVIDER_STOPPED` packet on `fifo`.
  Note that multiple `Start,Stop` requests can be received between
  `Initialize,Terminate`.
 
@@ -135,7 +135,7 @@ Book: /_book.yaml
 
  Registers the trace provider synchronously. The call doesn't return
  until the provider is registered.
- On return `s` is ZX_OK if registration was successful.
+ On return `s` is `ZX_OK` if registration was successful.
  `started` is true if tracing has already started, which is a hint to
  the provider to wait for the Start() message before continuing if it
  wishes to not drop trace records before Start() is received.

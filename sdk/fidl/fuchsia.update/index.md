@@ -192,7 +192,7 @@ Book: /_book.yaml
 ### CheckNow {:#CheckNow}
 
  Immediately check for an update.
-  `options`:  Did a user initiate this request? (USER_INITIATED) This changes
+  `options`:  Did a user initiate this request? (`USER_INITIATED`) This changes
               some parameters about aggressiveness of retries and throttling.
   `monitor`:  An interface on which to receive the status events for this update check.
                It's only valid for a single update check, after that it won't receive any
@@ -360,8 +360,9 @@ Type: <code>uint32</code>
 ### ManagerState {:#ManagerState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#146)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#148)*
 
+ ```
  The various states that the manager can be in.
 
      +----------------------+
@@ -387,6 +388,7 @@ Type: <code>uint32</code>
  +---|  FINALIZING_UPDATE   |---->|  ENCOUNTERED_ERROR   |----+
      +----------------------+     +----------------------+
 
+ ```
 
 
 <table>
@@ -423,7 +425,7 @@ Type: <code>uint32</code>
 ### CheckStartedResult {:#CheckStartedResult}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#192)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#194)*
 
 
 
@@ -470,7 +472,7 @@ Type: <code>uint32</code>
 ### State {:#State}
 
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#203)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#205)*
 
 
 

@@ -129,7 +129,7 @@ Book: /_book.yaml
 
 ### GetEventHandle {:#GetEventHandle}
 
- Get an event for monitoring device conditions (see DEVICE_SIGNAL_* constants)
+ Get an event for monitoring device conditions (see `DEVICE_SIGNAL_*` constants)
 
 #### Request
 <table>

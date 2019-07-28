@@ -6,6 +6,39 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
+## CrashReporter {:#CrashReporter}
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#11)*
+
+ Provides the ability to file crash reports.
+
+### File {:#File}
+
+ Files a crash `report`.
+
+ This could mean generating a crash report in a local crash report database or uploading the
+ crash report to a remote crash server depending on the FIDL server's configuration.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>report</code></td>
+            <td>
+                <code><a class='link' href='#CrashReport'>CrashReport</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#CrashReporter_File_Result'>CrashReporter_File_Result</a></code>
+            </td>
+        </tr></table>
+
 ## DataProvider {:#DataProvider}
 *Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#13)*
 
@@ -68,26 +101,8 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
-### DataProvider_GetData_Response {:#DataProvider_GetData_Response}
-*Defined in [fuchsia.feedback/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>data</code></td>
-            <td>
-                <code><a class='link' href='#Data'>Data</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### Annotation {:#Annotation}
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#44)*
+*Defined in [fuchsia.feedback/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/annotation.fidl#8)*
 
 
 
@@ -114,13 +129,12 @@ Book: /_book.yaml
 </table>
 
 ### Attachment {:#Attachment}
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#52)*
+*Defined in [fuchsia.feedback/attachment.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/attachment.fidl#10)*
 
 
 
  An attachment and its plain ASCII string key.
- Attachments are larger objects, e.g., log files. They may be binary or text
- data.
+ Attachments are larger objects, e.g., log files. They may be binary or text data.
 
 
 <table>
@@ -141,8 +155,37 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### CrashReporter_File_Response {:#CrashReporter_File_Response}
+*Defined in [fuchsia.feedback/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### DataProvider_GetData_Response {:#DataProvider_GetData_Response}
+*Defined in [fuchsia.feedback/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>data</code></td>
+            <td>
+                <code><a class='link' href='#Data'>Data</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Screenshot {:#Screenshot}
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#66)*
+*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#51)*
 
 
 
@@ -174,7 +217,7 @@ Book: /_book.yaml
 ### ImageEncoding {:#ImageEncoding}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#61)*
+*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#46)*
 
  The encoding used for the image.
 
@@ -192,6 +235,113 @@ Type: <code>uint32</code>
 
 
 ## **TABLES**
+
+### GenericCrashReport {:#GenericCrashReport}
+
+
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#35)*
+
+ Represents a generic crash report.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>program_name</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> The name of the program that crashed, e.g., the process or component's name.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>annotations</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[32]</code>
+            </td>
+            <td> A vector of key-value string pairs representing arbitrary data that should be attached to a
+ crash report. Keys should be unique.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>attachments</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Attachment'>Attachment</a>&gt;[16]</code>
+            </td>
+            <td> A vector of key-value string-to-VMO pairs representing arbitrary data that should be
+ attached to a crash report. Keys should be unique.
+</td>
+        </tr></table>
+
+### NativeCrashReport {:#NativeCrashReport}
+
+
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#49)*
+
+ Represents a crash report for a native exception out of which the client has built a minidump.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>base_report</code></td>
+            <td>
+                <code><a class='link' href='#GenericCrashReport'>GenericCrashReport</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>minidump</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### RuntimeCrashReport {:#RuntimeCrashReport}
+
+
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#56)*
+
+ Represents a crash report for a runtime exception, applicable to most languages.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>base_report</code></td>
+            <td>
+                <code><a class='link' href='#GenericCrashReport'>GenericCrashReport</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>type</code></td>
+            <td>
+                <code>string[128]</code>
+            </td>
+            <td> Exception type, e.g., "FileSystemException".
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>message</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> Exception message, e.g., "cannot open file".
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>stack_trace</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+            <td> Text representation of the stack trace.
+</td>
+        </tr></table>
 
 ### Data {:#Data}
 
@@ -229,8 +379,27 @@ Type: <code>uint32</code>
 
 ## **UNIONS**
 
-### DataProvider_GetData_Result {:#DataProvider_GetData_Result}
+### CrashReporter_File_Result {:#CrashReporter_File_Result}
 *Defined in [fuchsia.feedback/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#CrashReporter_File_Response'>CrashReporter_File_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### DataProvider_GetData_Result {:#DataProvider_GetData_Result}
+*Defined in [fuchsia.feedback/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
 
 
 <table>
@@ -249,6 +418,40 @@ Type: <code>uint32</code>
         </tr></table>
 
 
+
+## **XUNIONS**
+
+### CrashReport {:#CrashReport}
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#23)*
+
+ Represents a crash report.
+
+ Add a new member when the server needs to special case how it handles certain annotations and
+ attachments for a given type of crashes, e.g., a `RuntimeCrashReport` for Javascript.
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>generic</code></td>
+            <td>
+                <code><a class='link' href='#GenericCrashReport'>GenericCrashReport</a></code>
+            </td>
+            <td> Intended for arbitrary crashes, e.g., OOM, out-of-disk.
+</td>
+        </tr><tr>
+            <td><code>native</code></td>
+            <td>
+                <code><a class='link' href='#NativeCrashReport'>NativeCrashReport</a></code>
+            </td>
+            <td> Intended for a native exception.
+</td>
+        </tr><tr>
+            <td><code>dart</code></td>
+            <td>
+                <code><a class='link' href='#RuntimeCrashReport'>RuntimeCrashReport</a></code>
+            </td>
+            <td> Intended for a Dart exception.
+</td>
+        </tr></table>
 
 
 

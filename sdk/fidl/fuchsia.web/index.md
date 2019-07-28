@@ -83,7 +83,7 @@ Book: /_book.yaml
 ### GetRemoteDebuggingPort {:#GetRemoteDebuggingPort}
 
  Returns the port used for remote debugging.
- The ContextError will be set to REMOTE_DEBUGGING_PORT_NOT_OPENED if
+ The ContextError will be set to `REMOTE_DEBUGGING_PORT_NOT_OPENED` if
  |remote_debugging_port| was not set in CreateContextParams or the
  remote debugging service failed to start.
 
@@ -108,13 +108,18 @@ Book: /_book.yaml
 
  Provides methods for monitoring and accessing browser cookie state.
 
-### StartObservingChanges {:#StartObservingChanges}
+### ObserveCookieChanges {:#ObserveCookieChanges}
 
  Observe changes to all cookies named `name` that would be sent in a
  request to `url`.
- `url` may be un-set to observe changes across all URLs,
- Similarly, `name` may be un-set to observe changes across all cookie
- names.
+
+ If neither `url` nor `name` are set then all cookies are observed.
+ If only `url` is set then all cookies for that URL are observed.
+ If both are set then only cookies matching both fields are observed.
+
+ |changes| iterates over a stream of cookie changes. Additions or updates
+ are expressed as complete cookies, while deletions are expressed as
+ cookies with no |value| set.
 
 #### Request
 <table>
@@ -130,70 +135,66 @@ Book: /_book.yaml
                 <code>string?</code>
             </td>
         </tr><tr>
-            <td><code>listener</code></td>
+            <td><code>changes</code></td>
             <td>
-                <code><a class='link' href='#CookieChangeListener'>CookieChangeListener</a></code>
+                <code>request&lt;<a class='link' href='#CookiesIterator'>CookiesIterator</a>&gt;</code>
             </td>
         </tr></table>
 
 
 
-### GetCookies {:#GetCookies}
+### GetCookieList {:#GetCookieList}
 
- Returns a list of Cookies whose CookieIds match `ids`.
- Entries in `cookies` will be omitted for any CookieIds which can't be
- found.
+ Returns a list of Cookies, optionally limited to those matching `url`,
+ and optionally `name`.
+ |cookies| iterates over the matching cookies, including their |value|s.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>ids</code></td>
+            <td><code>url</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#CookieId'>CookieId</a>&gt;</code>
+                <code>string?</code>
+            </td>
+        </tr><tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string?</code>
+            </td>
+        </tr><tr>
+            <td><code>cookies</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#CookiesIterator'>CookiesIterator</a>&gt;</code>
             </td>
         </tr></table>
+
+
+
+## CookiesIterator {:#CookiesIterator}
+*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#35)*
+
+ Used to iterator over a set of cookies, or a stream of changes to cookies.
+
+### GetNext {:#GetNext}
+
+ Fetches the next batch of cookies, or of changes to cookies.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
 
 
 #### Response
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>cookies</code></td>
+            <td><code>changed_cookies</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#Cookie'>Cookie</a>&gt;</code>
             </td>
         </tr></table>
-
-## CookieChangeListener {:#CookieChangeListener}
-*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#28)*
-
- Receives notifications about changes in a context's cookie store.
-
-### OnCookieChanged {:#OnCookieChanged}
-
- Notifies the observer whenever cookies are added, changed, or removed
- for observed URLs. `changes` is populated with information about the
- cookies that were changed, and how they were changed.
- Cookies' data can be accessed by calling GetCookie() with the CookieId.
- Future cookie change events will be buffered until the acknowledgement
- callback is invoked.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>changes</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#CookieChangeEvent'>CookieChangeEvent</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
 
 ## Debug {:#Debug}
 *Defined in [fuchsia.web/debug.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/debug.fidl#9)*
@@ -350,8 +351,8 @@ Book: /_book.yaml
  the script in arbitrary or unpredictable ways.
 
  If an error occured, the FrameError will be set to one of these values:
- BUFFER_NOT_UTF8: `script` is not UTF-8 encoded.
- INVALID_ORIGIN: The Frame's current URL does not match any of the
+ `BUFFER_NOT_UTF8`: `script` is not UTF-8 encoded.
+ `INVALID_ORIGIN`: The Frame's current URL does not match any of the
                  values in `origins` or `origins` is an empty vector.
 
 #### Request
@@ -430,8 +431,8 @@ Book: /_book.yaml
  evaluated for all documents.
 
  If an error occured, the FrameError will be set to one of these values:
- BUFFER_NOT_UTF8: `script` is not UTF-8 encoded.
- INVALID_ORIGIN: `origins` is an empty vector.
+ `BUFFER_NOT_UTF8`: `script` is not UTF-8 encoded.
+ `INVALID_ORIGIN`: `origins` is an empty vector.
 
 #### Request
 <table>
@@ -492,11 +493,11 @@ Book: /_book.yaml
  for more details on how the target origin policy is applied.
 
  If an error occured, the FrameError will be set to one of these values:
- INTERNAL_ERROR: The WebEngine failed to create a message pipe.
- BUFFER_NOT_UTF8: The script in `message`'s `data` property is not
+ `INTERNAL_ERROR`: The WebEngine failed to create a message pipe.
+ `BUFFER_NOT_UTF8`: The script in `message`'s `data` property is not
                   UTF-8 encoded.
- INVALID_ORIGIN: `origins` is an empty vector.
- NO_DATA_IN_MESSAGE: The `data` property is missing in `message`.
+ `INVALID_ORIGIN`: `origins` is an empty vector.
+ `NO_DATA_IN_MESSAGE`: The `data` property is missing in `message`.
 
 #### Request
 <table>
@@ -592,7 +593,7 @@ Book: /_book.yaml
  channel for `provider` must remain open for the entirety of the Frame
  lifetime.
  Invalid usage will result in closure of the Frame channel with
- ERR_INVALID_ARGS.
+ `ERR_INVALID_ARGS`.
 
 #### Request
 <table>
@@ -657,9 +658,9 @@ Book: /_book.yaml
  callback before calling PostMessage() again.
 
  If an error occured, the FrameError will be set to this value:
- BUFFER_NOT_UTF8: The script in `message`'s `data` property is not
+ `BUFFER_NOT_UTF8`: The script in `message`'s `data` property is not
                   UTF-8 encoded.
- NO_DATA_IN_MESSAGE: The `data` property is missing in `message`.
+ `NO_DATA_IN_MESSAGE`: The `data` property is missing in `message`.
 
 #### Request
 <table>
@@ -753,7 +754,7 @@ Book: /_book.yaml
            loaded (e.g. cookies, HTTP headers, etc.)
 
  If an error occured, the NavigationControllerError will be set:
- INVALID_URL: The `url` parameter is invalid.
+ `INVALID_URL`: The `url` parameter is invalid.
 
 #### Request
 <table>
@@ -870,7 +871,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_ExecuteJavaScript_Response {:#Frame_ExecuteJavaScript_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
 
 
 
@@ -888,7 +889,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_ExecuteJavaScriptNoResult_Response {:#Frame_ExecuteJavaScriptNoResult_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#31)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#30)*
 
 
 
@@ -899,7 +900,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_AddBeforeLoadJavaScript_Response {:#Frame_AddBeforeLoadJavaScript_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#38)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
 
 
 
@@ -910,7 +911,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_PostMessage_Response {:#Frame_PostMessage_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#46)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
 
 
 
@@ -921,7 +922,7 @@ Book: /_book.yaml
 </table>
 
 ### MessagePort_PostMessage_Response {:#MessagePort_PostMessage_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#60)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#59)*
 
 
 
@@ -932,7 +933,7 @@ Book: /_book.yaml
 </table>
 
 ### NavigationController_LoadUrl_Response {:#NavigationController_LoadUrl_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#71)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#70)*
 
 
 
@@ -957,28 +958,6 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>REMOTE_DEBUGGING_PORT_NOT_OPENED</code></td>
             <td><code>1</code></td>
-            <td></td>
-        </tr></table>
-
-### CookieChangeType {:#CookieChangeType}
-Type: <code>uint32</code>
-
-*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#57)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>ADDED</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>MODIFIED</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>DELETED</code></td>
-            <td><code>2</code></td>
             <td></td>
         </tr></table>
 
@@ -1178,7 +1157,7 @@ Type: <code>uint32</code>
 ### CookieId {:#CookieId}
 
 
-*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#38)*
+*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#40)*
 
 
 
@@ -1213,7 +1192,7 @@ Type: <code>uint32</code>
 ### Cookie {:#Cookie}
 
 
-*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#49)*
+*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#51)*
 
 
 
@@ -1234,34 +1213,6 @@ Type: <code>uint32</code>
                 <code>string</code>
             </td>
             <td> The cookie value.
-</td>
-        </tr></table>
-
-### CookieChangeEvent {:#CookieChangeEvent}
-
-
-*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#63)*
-
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>id</code></td>
-            <td>
-                <code><a class='link' href='#CookieId'>CookieId</a></code>
-            </td>
-            <td> The identity of the cookie which was changed.
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>type</code></td>
-            <td>
-                <code><a class='link' href='#CookieChangeType'>CookieChangeType</a></code>
-            </td>
-            <td> Describes what type of change caused the CookieChangeEvent to be
- published.
 </td>
         </tr></table>
 
@@ -1435,7 +1386,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Frame_ExecuteJavaScript_Result {:#Frame_ExecuteJavaScript_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
 
 
 <table>
@@ -1454,7 +1405,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Frame_ExecuteJavaScriptNoResult_Result {:#Frame_ExecuteJavaScriptNoResult_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#33)*
 
 
 <table>
@@ -1473,7 +1424,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Frame_AddBeforeLoadJavaScript_Result {:#Frame_AddBeforeLoadJavaScript_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#41)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#40)*
 
 
 <table>
@@ -1492,7 +1443,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Frame_PostMessage_Result {:#Frame_PostMessage_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#49)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
 
 
 <table>
@@ -1511,7 +1462,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### MessagePort_PostMessage_Result {:#MessagePort_PostMessage_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#63)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
 
 
 <table>
@@ -1530,7 +1481,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### NavigationController_LoadUrl_Result {:#NavigationController_LoadUrl_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#74)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#73)*
 
 
 <table>

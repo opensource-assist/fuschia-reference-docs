@@ -262,7 +262,7 @@ Book: /_book.yaml
             <td>
                 <code>uint16</code>
             </td>
-            <td> S/W API version = API_VERSION.
+            <td> S/W API version = `API_VERSION`.
 </td>
             <td>No default</td>
         </tr><tr>

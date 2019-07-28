@@ -6,6 +6,45 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
+## PackageResolverAdmin {:#PackageResolverAdmin}
+*Defined in [fuchsia.pkg/admin.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/admin.fidl#9)*
+
+ Configures a package resolver.
+
+### SetExperimentState {:#SetExperimentState}
+
+ Sets an experiment toggle to a specific state (on or off).
+
+ Experiment states are not persisted and apply only while the resolver
+ is running.
+
+ + request `experiment_id` the experiment to enable or disable.
+ + request `state` the state the experimnet should be set to.
+ * error a zx.status value indicating success or failure.
+     Fails with `ZX_ERR_INVALID_ARGS if the experiment is unknown
+     to the resolver.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>experiment_id</code></td>
+            <td>
+                <code><a class='link' href='#ExperimentToggle'>ExperimentToggle</a></code>
+            </td>
+        </tr><tr>
+            <td><code>state</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
 ## PackageCache {:#PackageCache}
 *Defined in [fuchsia.pkg/cache.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/cache.fidl#15)*
 
@@ -650,6 +689,23 @@ Book: /_book.yaml
 </table>
 
 
+
+## **ENUMS**
+
+### ExperimentToggle {:#ExperimentToggle}
+Type: <code>uint64</code>
+
+*Defined in [fuchsia.pkg/admin.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/admin.fidl#24)*
+
+ List of known experiment toggles
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>LIGHTBULB</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr></table>
 
 
 

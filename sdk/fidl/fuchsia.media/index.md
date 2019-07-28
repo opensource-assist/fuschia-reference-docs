@@ -180,7 +180,7 @@ Book: /_book.yaml
  If a user has supplied regions to be filled by the AudioCapturer instance in
  the past, but wishes to reclaim those regions, they may do so using the
  DiscardAllPackets method.  Calling the DiscardAllPackets method will cause
- all pending regions to be returned, but with NO_TIMESTAMP as their
+ all pending regions to be returned, but with `NO_TIMESTAMP` as their
  StreamPacket's PTS.  See "Timing and Overflows", below, for a discussion of
  timestamps and discontinuity flags. After a DiscardAllPackets operation,
  an OnEndOfStream event will be produced.  While an AudioCapturer will never
@@ -247,20 +247,20 @@ Book: /_book.yaml
 
  All media packets produced by an AudioCapturer instance will have their PTS
  field filled out with the capture time of the audio expressed as a timestamp
- given by the CLOCK_MONOTONIC timeline.  Note: this timestamp is actually a
+ given by the `CLOCK_MONOTONIC` timeline.  Note: this timestamp is actually a
  capture timestamp, not a presentation timestamp (it is more of a CTS than a
  PTS) and is meant to represent the underlying system's best estimate of the
  capture time of the first frame of audio, including all outboard and hardware
  introduced buffering delay.  As a result, all timestamps produced by an
  AudioCapturer should be expected to be in the past relative to 'now' on the
- CLOCK_MONOTONIC timeline.
+ `CLOCK_MONOTONIC` timeline.
 
  The one exception to the "everything has an explicit timestamp" rule is when
  discarding submitted regions while operating in synchronous mode. Discarded
  packets have no data in them, but FIDL demands that all pending
  method-return-value callbacks be executed.  Because of this, the regions will
  be returned to the user, but their timestamps will be set to
- NO_TIMESTAMP, and their payload sizes will be set to zero.  Any
+ `NO_TIMESTAMP`, and their payload sizes will be set to zero.  Any
  partially filled payload will have a valid timestamp, but a payload size
  smaller than originally requested.  The final discarded payload (if there
  were any to discard) will be followed by an OnEndOfStream event.
@@ -277,7 +277,7 @@ Book: /_book.yaml
  instead of simply using the raw capture timestamps.  This is because the
  explicit timestamps written on continuous packets may have a small amount of
  rounding error based on whether or not the units of the capture timeline
- (CLOCK_MONOTONIC) are divisible by the chosen audio frame rate.
+ (`CLOCK_MONOTONIC`) are divisible by the chosen audio frame rate.
 
  Users should always expect the first StreamPacket produced by an
  AudioCapturer to have the discontinuous flag set on it (as there is no
@@ -867,7 +867,7 @@ Book: /_book.yaml
  target the proper input/output.
 
  The Get command returns the device_token of the device whose gain is
- being reported, or ZX_KOID_INVALID in the case that the requested
+ being reported, or `ZX_KOID_INVALID` in the case that the requested
  device_token was invalid or the device had been removed from the system
  before the Get command could be processed.
 
@@ -937,7 +937,7 @@ Book: /_book.yaml
  Default Device
 
  Fetch the device ID of the current default input or output device, or
- ZX_KOID_INVALID if no such device exists.
+ `ZX_KOID_INVALID` if no such device exists.
 
 #### Request
 <table>
@@ -1125,7 +1125,7 @@ Book: /_book.yaml
 ### SetPcmStreamType {:#SetPcmStreamType}
 
  Sets the type of the stream to be delivered by the client. Using this
- method implies that the stream encoding is AUDIO_ENCODING_LPCM.
+ method implies that the stream encoding is `AUDIO_ENCODING_LPCM`.
 
 #### Request
 <table>
@@ -1321,7 +1321,7 @@ Book: /_book.yaml
 
  Users, depending on their use case, may optionally choose not to specify
  one or both of these timestamps. A timestamp may be omitted by supplying
- the special value 'NO_TIMESTAMP'. The AudioRenderer automatically deduces
+ the special value '`NO_TIMESTAMP`'. The AudioRenderer automatically deduces
  any omitted timestamp value using the following rules:
 
  Reference Time
@@ -3671,7 +3671,7 @@ Type: <code>uint32</code>
                 <code>string</code>
             </td>
             <td> `mode` specifies which encryption scheme to use, such as
- fuchsia.media.ENCRYPTION_MODE_CENC.
+ `fuchsia.media.ENCRYPTION_MODE_CENC`.
  Usage:
   - It is required to be set prior to delivery of input packets.
   - This should only be changed at the beginning of a data stream.

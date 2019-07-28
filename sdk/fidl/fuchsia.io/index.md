@@ -16,19 +16,19 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
- - OPEN_RIGHT_*
- - OPEN_FLAG_APPEND
- - OPEN_FLAG_NO_REMOTE
- - OPEN_FLAG_DESCRIBE
- - CLONE_FLAG_SAME_RIGHTS
+ - `OPEN_RIGHT_*`
+ - `OPEN_FLAG_APPEND`
+ - `OPEN_FLAG_NO_REMOTE`
+ - `OPEN_FLAG_DESCRIBE`
+ - `CLONE_FLAG_SAME_RIGHTS`
 
  All other flags are ignored.
 
- The OPEN_RIGHT_* bits in `flags` request corresponding rights over the resulting
+ The `OPEN_RIGHT_*` bits in `flags` request corresponding rights over the resulting
  cloned object.
  The cloned object must have rights less than or equal to the original object.
- Alternatively, pass CLONE_FLAG_SAME_RIGHTS to inherit the rights on the source connection.
- It is invalid to pass any of the OPEN_RIGHT_* flags together with CLONE_FLAG_SAME_RIGHTS.
+ Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -169,9 +169,9 @@ Book: /_book.yaml
 ### SetAttr {:#SetAttr}
 
  Updates information about the node.
- `flags` may be any of NODE_ATTRIBUTE_FLAG_*.
+ `flags` may be any of `NODE_ATTRIBUTE_FLAG_*`.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -259,19 +259,19 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
- - OPEN_RIGHT_*
- - OPEN_FLAG_APPEND
- - OPEN_FLAG_NO_REMOTE
- - OPEN_FLAG_DESCRIBE
- - CLONE_FLAG_SAME_RIGHTS
+ - `OPEN_RIGHT_*`
+ - `OPEN_FLAG_APPEND`
+ - `OPEN_FLAG_NO_REMOTE`
+ - `OPEN_FLAG_DESCRIBE`
+ - `CLONE_FLAG_SAME_RIGHTS`
 
  All other flags are ignored.
 
- The OPEN_RIGHT_* bits in `flags` request corresponding rights over the resulting
+ The `OPEN_RIGHT_*` bits in `flags` request corresponding rights over the resulting
  cloned object.
  The cloned object must have rights less than or equal to the original object.
- Alternatively, pass CLONE_FLAG_SAME_RIGHTS to inherit the rights on the source connection.
- It is invalid to pass any of the OPEN_RIGHT_* flags together with CLONE_FLAG_SAME_RIGHTS.
+ Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -412,9 +412,9 @@ Book: /_book.yaml
 ### SetAttr {:#SetAttr}
 
  Updates information about the node.
- `flags` may be any of NODE_ATTRIBUTE_FLAG_*.
+ `flags` may be any of `NODE_ATTRIBUTE_FLAG_*`.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -497,7 +497,7 @@ Book: /_book.yaml
  Reads 'count' bytes at the seek offset.
  The seek offset is moved forward by the number of bytes read.
 
- This method requires following rights: OPEN_RIGHT_READABLE.
+ This method requires following rights: `OPEN_RIGHT_READABLE`.
 
 #### Request
 <table>
@@ -530,7 +530,7 @@ Book: /_book.yaml
  Reads 'count' bytes at the provided offset.
  Does not affect the seek offset.
 
- This method requires following rights: OPEN_RIGHT_READABLE.
+ This method requires following rights: `OPEN_RIGHT_READABLE`.
 
 #### Request
 <table>
@@ -568,7 +568,7 @@ Book: /_book.yaml
  Writes data at the seek offset.
  The seek offset is moved forward by the number of bytes written.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -601,7 +601,7 @@ Book: /_book.yaml
  Writes data to the provided offset.
  Does not affect the seek offset.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -676,7 +676,7 @@ Book: /_book.yaml
 
  Shrinks the file size to 'length' bytes.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -730,7 +730,7 @@ Book: /_book.yaml
 
  Changes the Directory::Open flags used to access the file.
  Supported flags which can be turned on / off:
- - OPEN_FLAG_APPEND
+ - `OPEN_FLAG_APPEND`
 
  This method does not require any rights.
 
@@ -760,11 +760,11 @@ Book: /_book.yaml
  Acquires a buffer representing this file, if there is one, with the
  requested access rights.
 
- `flags` may be any of VMO_FLAG_*.
+ `flags` may be any of `VMO_FLAG_*`.
 
  This method requires following rights:
- - OPEN_RIGHT_WRITABLE if `flags` includes VMO_FLAG_WRITE.
- - OPEN_RIGHT_READABLE if `flags` includes VMO_FLAG_READ or VMO_FLAG_EXEC.
+ - `OPEN_RIGHT_WRITABLE` if `flags` includes `VMO_FLAG_WRITE`.
+ - `OPEN_RIGHT_READABLE` if `flags` includes `VMO_FLAG_READ` or `VMO_FLAG_EXEC`.
 
 #### Request
 <table>
@@ -825,19 +825,19 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
- - OPEN_RIGHT_*
- - OPEN_FLAG_APPEND
- - OPEN_FLAG_NO_REMOTE
- - OPEN_FLAG_DESCRIBE
- - CLONE_FLAG_SAME_RIGHTS
+ - `OPEN_RIGHT_*`
+ - `OPEN_FLAG_APPEND`
+ - `OPEN_FLAG_NO_REMOTE`
+ - `OPEN_FLAG_DESCRIBE`
+ - `CLONE_FLAG_SAME_RIGHTS`
 
  All other flags are ignored.
 
- The OPEN_RIGHT_* bits in `flags` request corresponding rights over the resulting
+ The `OPEN_RIGHT_*` bits in `flags` request corresponding rights over the resulting
  cloned object.
  The cloned object must have rights less than or equal to the original object.
- Alternatively, pass CLONE_FLAG_SAME_RIGHTS to inherit the rights on the source connection.
- It is invalid to pass any of the OPEN_RIGHT_* flags together with CLONE_FLAG_SAME_RIGHTS.
+ Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -978,9 +978,9 @@ Book: /_book.yaml
 ### SetAttr {:#SetAttr}
 
  Updates information about the node.
- `flags` may be any of NODE_ATTRIBUTE_FLAG_*.
+ `flags` may be any of `NODE_ATTRIBUTE_FLAG_*`.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -1065,14 +1065,14 @@ Book: /_book.yaml
  `path` may contain multiple segments, separated by "/" characters,
  and should never be empty i.e. "" is an invalid path.
 
- `flags` may be any of the OPEN_FLAG_* and OPEN_RIGHT_* values, bitwise ORed together.
- The OPEN_FLAG_DESCRIBE flag may cause an `OnOpen` event to be transmitted
+ `flags` may be any of the `OPEN_FLAG_*` and `OPEN_RIGHT_*` values, bitwise ORed together.
+ The `OPEN_FLAG_DESCRIBE` flag may cause an `OnOpen` event to be transmitted
  on the `object` handle, indicating the type of object opened.
 
  If an unknown value is sent for either flags or mode, the connection should
  be closed.
 
- OPEN_RIGHTS_* flags provided in `flags` will restrict access rights on the `object` channel
+ `OPEN_RIGHTS_*` flags provided in `flags` will restrict access rights on the `object` channel
  which will be connected to the opened entity.
 
  Rights are never increased. When you open a nested entity within a directory, you may only
@@ -1080,8 +1080,8 @@ Book: /_book.yaml
  Exceeding those rights causes an access denied error to be transmitted in the
  `OnOpen` event if applicable, and the `object` connection closed.
 
- The caller must specify either one or more of the OPEN_RIGHT_* flags, or
- the OPEN_FLAG_NODE_REFERENCE flag.
+ The caller must specify either one or more of the `OPEN_RIGHT_*` flags, or
+ the `OPEN_FLAG_NODE_REFERENCE` flag.
 
 #### Request
 <table>
@@ -1129,16 +1129,16 @@ Book: /_book.yaml
  originally accessed Directory.
 
  Returns:
-   ZX_ERR_ACCESS_DENIED if the connection (or the underlying filesystem) does not
+   `ZX_ERR_ACCESS_DENIED` if the connection (or the underlying filesystem) does not
      allow writable access.
-   ZX_ERR_INVALID_ARGS if `path` contains ".." segments.
-   ZX_ERR_NOT_EMPTY if `path` refers to a non-empty directory.
-   ZX_ERR_UNAVAILABLE if `path` refers to a mount point, containing a remote channel.
-   ZX_ERR_UNAVAILABLE if `path` is ".".
+   `ZX_ERR_INVALID_ARGS` if `path` contains ".." segments.
+   `ZX_ERR_NOT_EMPTY` if `path` refers to a non-empty directory.
+   `ZX_ERR_UNAVAILABLE` if `path` refers to a mount point, containing a remote channel.
+   `ZX_ERR_UNAVAILABLE` if `path` is ".".
 
  Other errors may be returned for filesystem-specific reasons.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -1175,7 +1175,7 @@ Book: /_book.yaml
    // Describes the length of the dirent name.
    uint8 size;
    // Describes the type of the entry. Aligned with the
-   /// POSIX d_type values. Use DIRENT_TYPE_* constants.
+   /// POSIX d_type values. Use `DIRENT_TYPE_*` constants.
    uint8 type;
    // Unterminated name of entry.
    char name[0];
@@ -1237,7 +1237,7 @@ Book: /_book.yaml
  Acquires a token to a Directory which can be used to identify
  access to it at a later point in time.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -1265,11 +1265,11 @@ Book: /_book.yaml
  Renames an object named src to the name dst, in a directory represented by token.
 
  `src/dst` must be resolved object names. Including "/" in any position
- other than the end of the string will return ZX_ERR_INVALID_ARGS.
+ other than the end of the string will return `ZX_ERR_INVALID_ARGS`.
  Returning "/" at the end of either string implies that it must be a
- directory, or else ZX_ERR_NOT_DIR should be returned.
+ directory, or else `ZX_ERR_NOT_DIR` should be returned.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -1308,12 +1308,12 @@ Book: /_book.yaml
  token.
 
  `src` must be a resolved object name. Including "/" in the string will
- return ZX_ERR_INVALID_ARGS.
+ return `ZX_ERR_INVALID_ARGS`.
 
  `dst` must be a resolved object name. Including "/" in the string will
- return ZX_ERR_INVALID_ARGS.
+ return `ZX_ERR_INVALID_ARGS`.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -1408,19 +1408,19 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
- - OPEN_RIGHT_*
- - OPEN_FLAG_APPEND
- - OPEN_FLAG_NO_REMOTE
- - OPEN_FLAG_DESCRIBE
- - CLONE_FLAG_SAME_RIGHTS
+ - `OPEN_RIGHT_*`
+ - `OPEN_FLAG_APPEND`
+ - `OPEN_FLAG_NO_REMOTE`
+ - `OPEN_FLAG_DESCRIBE`
+ - `CLONE_FLAG_SAME_RIGHTS`
 
  All other flags are ignored.
 
- The OPEN_RIGHT_* bits in `flags` request corresponding rights over the resulting
+ The `OPEN_RIGHT_*` bits in `flags` request corresponding rights over the resulting
  cloned object.
  The cloned object must have rights less than or equal to the original object.
- Alternatively, pass CLONE_FLAG_SAME_RIGHTS to inherit the rights on the source connection.
- It is invalid to pass any of the OPEN_RIGHT_* flags together with CLONE_FLAG_SAME_RIGHTS.
+ Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -1561,9 +1561,9 @@ Book: /_book.yaml
 ### SetAttr {:#SetAttr}
 
  Updates information about the node.
- `flags` may be any of NODE_ATTRIBUTE_FLAG_*.
+ `flags` may be any of `NODE_ATTRIBUTE_FLAG_*`.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -1648,14 +1648,14 @@ Book: /_book.yaml
  `path` may contain multiple segments, separated by "/" characters,
  and should never be empty i.e. "" is an invalid path.
 
- `flags` may be any of the OPEN_FLAG_* and OPEN_RIGHT_* values, bitwise ORed together.
- The OPEN_FLAG_DESCRIBE flag may cause an `OnOpen` event to be transmitted
+ `flags` may be any of the `OPEN_FLAG_*` and `OPEN_RIGHT_*` values, bitwise ORed together.
+ The `OPEN_FLAG_DESCRIBE` flag may cause an `OnOpen` event to be transmitted
  on the `object` handle, indicating the type of object opened.
 
  If an unknown value is sent for either flags or mode, the connection should
  be closed.
 
- OPEN_RIGHTS_* flags provided in `flags` will restrict access rights on the `object` channel
+ `OPEN_RIGHTS_*` flags provided in `flags` will restrict access rights on the `object` channel
  which will be connected to the opened entity.
 
  Rights are never increased. When you open a nested entity within a directory, you may only
@@ -1663,8 +1663,8 @@ Book: /_book.yaml
  Exceeding those rights causes an access denied error to be transmitted in the
  `OnOpen` event if applicable, and the `object` connection closed.
 
- The caller must specify either one or more of the OPEN_RIGHT_* flags, or
- the OPEN_FLAG_NODE_REFERENCE flag.
+ The caller must specify either one or more of the `OPEN_RIGHT_*` flags, or
+ the `OPEN_FLAG_NODE_REFERENCE` flag.
 
 #### Request
 <table>
@@ -1712,16 +1712,16 @@ Book: /_book.yaml
  originally accessed Directory.
 
  Returns:
-   ZX_ERR_ACCESS_DENIED if the connection (or the underlying filesystem) does not
+   `ZX_ERR_ACCESS_DENIED` if the connection (or the underlying filesystem) does not
      allow writable access.
-   ZX_ERR_INVALID_ARGS if `path` contains ".." segments.
-   ZX_ERR_NOT_EMPTY if `path` refers to a non-empty directory.
-   ZX_ERR_UNAVAILABLE if `path` refers to a mount point, containing a remote channel.
-   ZX_ERR_UNAVAILABLE if `path` is ".".
+   `ZX_ERR_INVALID_ARGS` if `path` contains ".." segments.
+   `ZX_ERR_NOT_EMPTY` if `path` refers to a non-empty directory.
+   `ZX_ERR_UNAVAILABLE` if `path` refers to a mount point, containing a remote channel.
+   `ZX_ERR_UNAVAILABLE` if `path` is ".".
 
  Other errors may be returned for filesystem-specific reasons.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -1758,7 +1758,7 @@ Book: /_book.yaml
    // Describes the length of the dirent name.
    uint8 size;
    // Describes the type of the entry. Aligned with the
-   /// POSIX d_type values. Use DIRENT_TYPE_* constants.
+   /// POSIX d_type values. Use `DIRENT_TYPE_*` constants.
    uint8 type;
    // Unterminated name of entry.
    char name[0];
@@ -1820,7 +1820,7 @@ Book: /_book.yaml
  Acquires a token to a Directory which can be used to identify
  access to it at a later point in time.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -1848,11 +1848,11 @@ Book: /_book.yaml
  Renames an object named src to the name dst, in a directory represented by token.
 
  `src/dst` must be resolved object names. Including "/" in any position
- other than the end of the string will return ZX_ERR_INVALID_ARGS.
+ other than the end of the string will return `ZX_ERR_INVALID_ARGS`.
  Returning "/" at the end of either string implies that it must be a
- directory, or else ZX_ERR_NOT_DIR should be returned.
+ directory, or else `ZX_ERR_NOT_DIR` should be returned.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -1891,12 +1891,12 @@ Book: /_book.yaml
  token.
 
  `src` must be a resolved object name. Including "/" in the string will
- return ZX_ERR_INVALID_ARGS.
+ return `ZX_ERR_INVALID_ARGS`.
 
  `dst` must be a resolved object name. Including "/" in the string will
- return ZX_ERR_INVALID_ARGS.
+ return `ZX_ERR_INVALID_ARGS`.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>
@@ -1985,7 +1985,7 @@ Book: /_book.yaml
  Mount a channel representing a remote filesystem onto this directory.
  All future requests to this node will be forwarded to the remote filesystem.
  To re-open a node without forwarding to the remote target, the node
- should be opened with OPEN_FLAG_NO_REMOTE.
+ should be opened with `OPEN_FLAG_NO_REMOTE`.
 
 #### Request
 <table>
@@ -2177,7 +2177,7 @@ Book: /_book.yaml
  the capability granted to client: this event may be signalled "readable" on a
  connection that does not have the capability to read.
 
- The "FILE_SIGNAL_" values may be observed on this event.
+ The "`FILE_SIGNAL_`" values may be observed on this event.
 </td>
             <td>No default</td>
         </tr>
@@ -2288,7 +2288,7 @@ Book: /_book.yaml
             </td>
             <td> An optional event which transmits information about a device's state.
 
- The "DEVICE_SIGNAL_" values may be observed on this event.
+ The "`DEVICE_SIGNAL_`" values may be observed on this event.
 </td>
             <td>No default</td>
         </tr>

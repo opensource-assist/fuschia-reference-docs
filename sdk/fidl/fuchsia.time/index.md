@@ -10,7 +10,7 @@ Book: /_book.yaml
 *Defined in [fuchsia.time/deprecated_network_sync.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/netclock/deprecated_network_sync.fidl#12)*
 
  Emits `UtcUpdated` events when the serving program changes the UTC offset tracked by
- ZX_CLOCK_UTC.
+ `ZX_CLOCK_UTC`.
 
  Do not take this API as a dependency, it will be deleted in the near future.
 

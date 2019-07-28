@@ -153,8 +153,8 @@ Book: /_book.yaml
  notification types to post their current value to <a class='link' href='#OnNotification'>OnNotification</a> immediately.
 
  The `position_change_interval` argument is used to set the interval in seconds that the
- controller client would like to be notified of TRACK_POS_CHANGED events.
- `position_change_interval` is ignored if TRACK_POS is not set. The position change interval
+ controller client would like to be notified of `TRACK_POS_CHANGED` events.
+ `position_change_interval` is ignored if `TRACK_POS` is not set. The position change interval
  is best effort and not a guarantee and events may arrive more frequently or less frequently
  than requested.
 
@@ -589,7 +589,7 @@ Type: <code>uint8</code>
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#46)*
 
  Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
- Format for EVENT_SYSTEM_STATUS_CHANGED.
+ Format for `EVENT_SYSTEM_STATUS_CHANGED`.
 
 
 <table>
@@ -613,7 +613,7 @@ Type: <code>uint8</code>
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#54)*
 
  Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
- Format for EVENT_PLAYBACK_STATUS_CHANGED.
+ Format for `EVENT_PLAYBACK_STATUS_CHANGED`.
 
 
 <table>
@@ -649,7 +649,7 @@ Type: <code>uint8</code>
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#66)*
 
  Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
- Format for EVENT_BATT_STATUS_CHANGED.
+ Format for `EVENT_BATT_STATUS_CHANGED`.
  Same encoding also defined by 6.5.8 (InformBatteryStatusOfCT).
 
 
@@ -1032,7 +1032,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#PlaybackStatus'>PlaybackStatus</a></code>
             </td>
-            <td> EVENT_PLAYBACK_STATUS_CHANGED event data
+            <td> `EVENT_PLAYBACK_STATUS_CHANGED` event data
 </td>
         </tr><tr>
             <td>2</td>
@@ -1040,7 +1040,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> EVENT_TRACK_CHANGED event data
+            <td> `EVENT_TRACK_CHANGED` event data
 </td>
         </tr><tr>
             <td>3</td>
@@ -1048,7 +1048,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint32</code>
             </td>
-            <td> EVENT_TRACK_POS_CHANGED event data
+            <td> `EVENT_TRACK_POS_CHANGED` event data
 </td>
         </tr><tr>
             <td>4</td>
@@ -1056,7 +1056,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#BatteryStatus'>BatteryStatus</a></code>
             </td>
-            <td> EVENT_BATT_STATUS_CHANGED event data
+            <td> `EVENT_BATT_STATUS_CHANGED` event data
 </td>
         </tr><tr>
             <td>5</td>
@@ -1064,7 +1064,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#SystemStatus'>SystemStatus</a></code>
             </td>
-            <td> EVENT_SYSTEM_STATUS_CHANGED event data
+            <td> `EVENT_SYSTEM_STATUS_CHANGED` event data
 </td>
         </tr><tr>
             <td>6</td>
@@ -1072,7 +1072,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
             </td>
-            <td> EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED event data
+            <td> `EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED` event data
 </td>
         </tr><tr>
             <td>7</td>
@@ -1080,7 +1080,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint16</code>
             </td>
-            <td> EVENT_ADDRESSED_PLAYER_CHANGED event data
+            <td> `EVENT_ADDRESSED_PLAYER_CHANGED` event data
 </td>
         </tr><tr>
             <td>8</td>
@@ -1088,7 +1088,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint8</code>
             </td>
-            <td> EVENT_VOLUME_CHANGED event data
+            <td> `EVENT_VOLUME_CHANGED` event data
 </td>
         </tr><tr>
             <td>9</td>
@@ -1096,7 +1096,7 @@ Type: <code>uint8</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> CONNECTION_CHANGE event data
+            <td> `CONNECTION_CHANGE` event data
 </td>
         </tr></table>
 
@@ -1250,42 +1250,42 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td>PLAYBACK_STATUS</td>
             <td>1</td>
-            <td> AVRCP EVENT_PLAYBACK_STATUS_CHANGED Notification
+            <td> AVRCP `EVENT_PLAYBACK_STATUS_CHANGED` Notification
 </td>
         </tr><tr>
             <td>TRACK</td>
             <td>2</td>
-            <td> AVRCP EVENT_TRACK_CHANGED Notification
+            <td> AVRCP `EVENT_TRACK_CHANGED` Notification
 </td>
         </tr><tr>
             <td>TRACK_POS</td>
             <td>4</td>
-            <td> AVRCP EVENT_TRACK_POS_CHANGED Notification
+            <td> AVRCP `EVENT_TRACK_POS_CHANGED` Notification
 </td>
         </tr><tr>
             <td>BATT_STATUS</td>
             <td>8</td>
-            <td> AVRCP EVENT_BATT_STATUS_CHANGED Notification
+            <td> AVRCP `EVENT_BATT_STATUS_CHANGED` Notification
 </td>
         </tr><tr>
             <td>SYSTEM_STATUS</td>
             <td>16</td>
-            <td> AVRCP EVENT_SYSTEM_STATUS_CHANGED Notification
+            <td> AVRCP `EVENT_SYSTEM_STATUS_CHANGED` Notification
 </td>
         </tr><tr>
             <td>PLAYER_APPLICATION_SETTINGS</td>
             <td>32</td>
-            <td> AVRCP EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED Notification
+            <td> AVRCP `EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED` Notification
 </td>
         </tr><tr>
             <td>ADDRESSED_PLAYER</td>
             <td>64</td>
-            <td> AVRCP EVENT_ADDRESSED_PLAYER_CHANGED Notification
+            <td> AVRCP `EVENT_ADDRESSED_PLAYER_CHANGED` Notification
 </td>
         </tr><tr>
             <td>VOLUME</td>
             <td>128</td>
-            <td> AVRCP EVENT_VOLUME_CHANGED Notification
+            <td> AVRCP `EVENT_VOLUME_CHANGED` Notification
 </td>
         </tr><tr>
             <td>CONNECTION</td>

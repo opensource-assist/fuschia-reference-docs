@@ -541,7 +541,7 @@ Book: /_book.yaml
 ### GetEntriesInline {:#GetEntriesInline}
 
  Same as `GetEntries()`. The connection will be closed with a
- ZX_ERR_BAD_STATE epitaph if a value does not fit in a FIDL message.
+ `ZX_ERR_BAD_STATE` epitaph if a value does not fit in a FIDL message.
 
 #### Request
 <table>
@@ -648,7 +648,7 @@ Book: /_book.yaml
 ### GetInline {:#GetInline}
 
  Returns the value of a given key if it fits in a FIDL message.
- The connection will be closed with a ZX_ERR_BAD_STATE epitaph if the
+ The connection will be closed with a `ZX_ERR_BAD_STATE` epitaph if the
  value does not fit in a FIDL message.
  See `Get()` for additional information.
 

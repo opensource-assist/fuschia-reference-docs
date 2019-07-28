@@ -233,7 +233,7 @@ Book: /_book.yaml
  activated, format ranges are returned by the driver in response to an
  `AUDIO_STREAM_CMD_GET_FORMATS` command. sample_format_flags is of type
  audio_sample_format_t, and rate_family_flags is a bit field of possible
- constants beginning with ASF_RANGE_FLAG_FPS_. See audio.h for details.
+ constants beginning with `ASF_RANGE_FLAG_FPS_`. See audio.h for details.
 
 #### Request
 <table>
@@ -416,7 +416,7 @@ Book: /_book.yaml
  Set plug properties for this virtual device. This must be called before
  calling `Add()`, or after `Remove()`. Once the device is activated, plug
  information is returned by the driver in response to an
- `AUDIO_STREAM_CMD_PLUG_DETECT `command. This information is used by the
+ `AUDIO_STREAM_CMD_PLUG_DETECT` command. This information is used by the
  system when determining which device is default. This in turn is exposed
  to clients by the `fuchsia.media.AudioDeviceEnumerator` protocol: in
  `GetDevices()`, `GetDefaultInputDevice()`/`GetDefaultOutputDevice()` and
@@ -928,7 +928,7 @@ Book: /_book.yaml
  activated, format ranges are returned by the driver in response to an
  `AUDIO_STREAM_CMD_GET_FORMATS` command. sample_format_flags is of type
  audio_sample_format_t, and rate_family_flags is a bit field of possible
- constants beginning with ASF_RANGE_FLAG_FPS_. See audio.h for details.
+ constants beginning with `ASF_RANGE_FLAG_FPS_`. See audio.h for details.
 
 #### Request
 <table>
@@ -1111,7 +1111,7 @@ Book: /_book.yaml
  Set plug properties for this virtual device. This must be called before
  calling `Add()`, or after `Remove()`. Once the device is activated, plug
  information is returned by the driver in response to an
- `AUDIO_STREAM_CMD_PLUG_DETECT `command. This information is used by the
+ `AUDIO_STREAM_CMD_PLUG_DETECT` command. This information is used by the
  system when determining which device is default. This in turn is exposed
  to clients by the `fuchsia.media.AudioDeviceEnumerator` protocol: in
  `GetDevices()`, `GetDefaultInputDevice()`/`GetDefaultOutputDevice()` and
@@ -1623,7 +1623,7 @@ Book: /_book.yaml
  activated, format ranges are returned by the driver in response to an
  `AUDIO_STREAM_CMD_GET_FORMATS` command. sample_format_flags is of type
  audio_sample_format_t, and rate_family_flags is a bit field of possible
- constants beginning with ASF_RANGE_FLAG_FPS_. See audio.h for details.
+ constants beginning with `ASF_RANGE_FLAG_FPS_`. See audio.h for details.
 
 #### Request
 <table>
@@ -1806,7 +1806,7 @@ Book: /_book.yaml
  Set plug properties for this virtual device. This must be called before
  calling `Add()`, or after `Remove()`. Once the device is activated, plug
  information is returned by the driver in response to an
- `AUDIO_STREAM_CMD_PLUG_DETECT `command. This information is used by the
+ `AUDIO_STREAM_CMD_PLUG_DETECT` command. This information is used by the
  system when determining which device is default. This in turn is exposed
  to clients by the `fuchsia.media.AudioDeviceEnumerator` protocol: in
  `GetDevices()`, `GetDefaultInputDevice()`/`GetDefaultOutputDevice()` and
@@ -2320,7 +2320,7 @@ Book: /_book.yaml
  activated, format ranges are returned by the driver in response to an
  `AUDIO_STREAM_CMD_GET_FORMATS` command. sample_format_flags is of type
  audio_sample_format_t, and rate_family_flags is a bit field of possible
- constants beginning with ASF_RANGE_FLAG_FPS_. See audio.h for details.
+ constants beginning with `ASF_RANGE_FLAG_FPS_`. See audio.h for details.
 
 #### Request
 <table>
@@ -2503,7 +2503,7 @@ Book: /_book.yaml
  Set plug properties for this virtual device. This must be called before
  calling `Add()`, or after `Remove()`. Once the device is activated, plug
  information is returned by the driver in response to an
- `AUDIO_STREAM_CMD_PLUG_DETECT `command. This information is used by the
+ `AUDIO_STREAM_CMD_PLUG_DETECT` command. This information is used by the
  system when determining which device is default. This in turn is exposed
  to clients by the `fuchsia.media.AudioDeviceEnumerator` protocol: in
  `GetDevices()`, `GetDefaultInputDevice()`/`GetDefaultOutputDevice()` and

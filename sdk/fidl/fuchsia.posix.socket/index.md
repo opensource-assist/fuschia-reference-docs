@@ -19,19 +19,19 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
- - OPEN_RIGHT_*
- - OPEN_FLAG_APPEND
- - OPEN_FLAG_NO_REMOTE
- - OPEN_FLAG_DESCRIBE
- - CLONE_FLAG_SAME_RIGHTS
+ - `OPEN_RIGHT_*`
+ - `OPEN_FLAG_APPEND`
+ - `OPEN_FLAG_NO_REMOTE`
+ - `OPEN_FLAG_DESCRIBE`
+ - `CLONE_FLAG_SAME_RIGHTS`
 
  All other flags are ignored.
 
- The OPEN_RIGHT_* bits in `flags` request corresponding rights over the resulting
+ The `OPEN_RIGHT_*` bits in `flags` request corresponding rights over the resulting
  cloned object.
  The cloned object must have rights less than or equal to the original object.
- Alternatively, pass CLONE_FLAG_SAME_RIGHTS to inherit the rights on the source connection.
- It is invalid to pass any of the OPEN_RIGHT_* flags together with CLONE_FLAG_SAME_RIGHTS.
+ Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -172,9 +172,9 @@ Book: /_book.yaml
 ### SetAttr {:#SetAttr}
 
  Updates information about the node.
- `flags` may be any of NODE_ATTRIBUTE_FLAG_*.
+ `flags` may be any of `NODE_ATTRIBUTE_FLAG_*`.
 
- This method requires following rights: OPEN_RIGHT_WRITABLE.
+ This method requires following rights: `OPEN_RIGHT_WRITABLE`.
 
 #### Request
 <table>

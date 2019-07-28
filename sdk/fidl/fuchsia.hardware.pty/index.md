@@ -18,8 +18,8 @@ Book: /_book.yaml
  closed. Closing the channel will close the connection and release the
  device. If the provided `id` is 0, then the new client is a controlling
  client and has the capability to open additional clients. If the
- current device is not a controlling client, ZX_ERR_ACCESS_DENIED will be
- returned. If `id` is not unique, ZX_ERR_INVALID_ARGS will be returned.
+ current device is not a controlling client, `ZX_ERR_ACCESS_DENIED` will be
+ returned. If `id` is not unique, `ZX_ERR_INVALID_ARGS` will be returned.
  Otherwise the status code from `device_add` is passed on.
 
 #### Request

@@ -574,9 +574,9 @@ Book: /_book.yaml
 
  If an error is encountered, the `request.channel` will be closed with
  a status code, such as:
-   * ZX_ERR_NOT_FOUND -- if a `request.handler` agent URL is not
+   * `ZX_ERR_NOT_FOUND` -- if a `request.handler` agent URL is not
      specified, and an agent for the `request.service_name` is not found
-   * ZX_ERR_PEER_CLOSED -- if `request.service_name` is not available from
+   * `ZX_ERR_PEER_CLOSED` -- if `request.service_name` is not available from
      the agent (either specified or discovered)
 
 #### Request
@@ -5723,7 +5723,7 @@ Book: /_book.yaml
                 <code>int64</code>
             </td>
             <td> Wallclock time when the story was last focused. From
- ZX_CLOCK_UTC, thus nanoseconds since UNIX epoch (1970-01-01 00:00 UTC).
+ `ZX_CLOCK_UTC`, thus nanoseconds since UNIX epoch (1970-01-01 00:00 UTC).
 
  A value of zero means the story has never been focused.
 </td>
@@ -6701,7 +6701,7 @@ Type: <code>uint32</code>
                 <code>string</code>
             </td>
             <td> The path in the intent parameter to get that name.
- PARAMETER_PROPERTY = string | string . PARAMETER_PROPERTY
+ `PARAMETER_PROPERTY` = string | string . `PARAMETER_PROPERTY`
  The first string in the dot-separated string is the name of the intent
  parameter and the following are nested subfields.
 </td>

@@ -157,7 +157,7 @@ Book: /_book.yaml
  Will zero out rest of the partition if `payload` is smaller than the size of the partition
  being written.
 
- Returns ZX_ERR_INVALID_ARGS if `configuration` specifies active configuration.
+ Returns `ZX_ERR_INVALID_ARGS` if `configuration` specifies active configuration.
 
 #### Request
 <table>

@@ -14,7 +14,7 @@ Book: /_book.yaml
 ### Suspend {:#Suspend}
 
  Ask all devices to enter the suspend state indicated by `flags`. Flags should be some
- combination of DEVICE_SUSPEND_FLAG_* from the DDK.
+ combination of `DEVICE_SUSPEND_FLAG_*` from the DDK.
 
 #### Request
 <table>

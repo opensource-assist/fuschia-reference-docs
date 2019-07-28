@@ -30,7 +30,7 @@ Book: /_book.yaml
  After processing this message, the `Launcher` is reset to its initial
  state and is ready to launch another process.
 
- `process` is present if, and only if, `status` is ZX_OK.
+ `process` is present if, and only if, `status` is `ZX_OK`.
 
 #### Request
 <table>
@@ -68,7 +68,7 @@ Book: /_book.yaml
  The caller is responsible for calling `zx_process_start` using the data
  in `ProcessStartData` to actually start the process.
 
- `data` is present if, and only if, `status` is ZX_OK.
+ `data` is present if, and only if, `status` is `ZX_OK`.
 
 #### Request
 <table>
@@ -198,7 +198,7 @@ Book: /_book.yaml
 
  If present, the `executable` is suitable for use as the `executable`
  property of `LaunchInfo`. If present, the `ldsvc` is suitable for use as
- the PA_LDSVC_LOADER handle when launching the process.
+ the `PA_LDSVC_LOADER` handle when launching the process.
 
  For example, the resolver might locate the given `name` inside a package
  and return the executable binary from the package as well as a shared

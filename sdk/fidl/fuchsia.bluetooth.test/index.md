@@ -14,7 +14,7 @@ Book: /_book.yaml
 ### Publish {:#Publish}
 
  Publish a bt-hci device using the provided `settings`. Each HciEmulator instance can only
- manage a single bt-hci device. Returns Emulator.HCI_ALREADY_PUBLISHED if the device has
+ manage a single bt-hci device. Returns Emulator.`HCI_ALREADY_PUBLISHED` if the device has
  already been published.
 
 #### Request
@@ -67,7 +67,7 @@ Book: /_book.yaml
 
 ### RemovePeer {:#RemovePeer}
 
- Remove a previously inserted peer. Returns EmulatorPeerError.NOT_FOUND if `id` is not
+ Remove a previously inserted peer. Returns EmulatorPeerError.`NOT_FOUND` if `id` is not
  recognized.
 
 #### Request
@@ -577,7 +577,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Address'>Address</a></code>
             </td>
-            <td> The LE identity address and/or BD_ADDR of the peer. This field is mandatory.
+            <td> The LE identity address and/or `BD_ADDR` of the peer. This field is mandatory.
 </td>
         </tr><tr>
             <td>2</td>
@@ -730,7 +730,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Address'>Address</a></code>
             </td>
-            <td> The BD_ADDR (BR/EDR) or LE Public Device Address. Defaults to "00:00:00:00:00:00".
+            <td> The `BD_ADDR` (BR/EDR) or LE Public Device Address. Defaults to "00:00:00:00:00:00".
 </td>
         </tr><tr>
             <td>2</td>
@@ -738,7 +738,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#HciConfig'>HciConfig</a></code>
             </td>
-            <td> Supported HCI command configuration. Defaults to "DUAL_MODE".
+            <td> Supported HCI command configuration. Defaults to "`DUAL_MODE`".
 </td>
         </tr><tr>
             <td>3</td>
@@ -757,7 +757,7 @@ Type: <code>uint8</code>
             <td> The ACL-U data buffer settings. Defaults to
     data_packet_length: 1024
     total_num_data_packets: 5
- IF `hci_config` is set to DUAL_MODE. Defaults to null otherwise.
+ IF `hci_config` is set to `DUAL_MODE`. Defaults to null otherwise.
 </td>
         </tr><tr>
             <td>5</td>

@@ -336,7 +336,7 @@ Book: /_book.yaml
 ### MapBufferGpu {:#MapBufferGpu}
 
  Maps `page_count` pages of `buffer` from `page_offset` onto the GPU in the connection's
- address space at `gpu_va`.  `flags` is a set of flags from MAGMA_GPU_MAP_FLAGS that
+ address space at `gpu_va`.  `flags` is a set of flags from `MAGMA_GPU_MAP_FLAGS` that
  specify how the GPU can access the buffer.
 
 #### Request

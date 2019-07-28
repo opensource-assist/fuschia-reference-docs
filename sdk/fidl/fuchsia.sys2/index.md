@@ -67,11 +67,11 @@ Book: /_book.yaml
  returns, it may return `INSTANCE_NOT_FOUND`.
 
  Errors:
- - INVALID_ARGUMENTS: `child` is not a valid child reference.  -
- - INSTANCE_NOT_FOUND: `child` does not exist.
- - INSTANCE_CANNOT_START: `child` was not running and there was an error
+ - `INVALID_ARGUMENTS`: `child` is not a valid child reference.  -
+ - `INSTANCE_NOT_FOUND`: `child` does not exist.
+ - `INSTANCE_CANNOT_START`: `child` was not running and there was an error
    starting it.
- - INSTANCE_CANNOT_RESOLVE: `child`'s component declaration failed to resolve.
+ - `INSTANCE_CANNOT_RESOLVE`: `child`'s component declaration failed to resolve.
 
 #### Request
 <table>
@@ -105,11 +105,11 @@ Book: /_book.yaml
  returns successfully, the instance exists, but it may not be running.
 
  Errors:
- - INVALID_ARGUMENTS: `collection` is not a valid reference or `child`
+ - `INVALID_ARGUMENTS`: `collection` is not a valid reference or `child`
    is not a valid declaration.
- - COLLECTION_NOT_FOUND: `collection` does not exist.
- - INSTANCE_ALREADY_EXISTS: `decl.name` already exists in `collection`.
- - NO_SPACE: Could not allocate storage for the new instance.
+ - `COLLECTION_NOT_FOUND`: `collection` does not exist.
+ - `INSTANCE_ALREADY_EXISTS`: `decl.name` already exists in `collection`.
+ - `NO_SPACE`: Could not allocate storage for the new instance.
 
 #### Request
 <table>
@@ -146,10 +146,10 @@ Book: /_book.yaml
  function returns.
 
  Errors:
- - INVALID_ARGUMENTS: `child` is not a valid reference or does not refer
+ - `INVALID_ARGUMENTS`: `child` is not a valid reference or does not refer
    to a dynamic instance.
- - INSTANCE_NOT_FOUND: `child` does not exist.
- - COLLECTION_NOT_FOUND: `collection` does not exist.
+ - `INSTANCE_NOT_FOUND`: `child` does not exist.
+ - `COLLECTION_NOT_FOUND`: `collection` does not exist.
 
 #### Request
 <table>
@@ -181,8 +181,8 @@ Book: /_book.yaml
  won't be observed by the iterator after this method returns.
 
  Errors:
- - INVALID_ARGUMENTS: `collection` is not a valid reference.
- - COLLECTION_NOT_FOUND: `collection` does not exist.
+ - `INVALID_ARGUMENTS`: `collection` is not a valid reference.
+ - `COLLECTION_NOT_FOUND`: `collection` does not exist.
 
 #### Request
 <table>
@@ -406,6 +406,136 @@ Book: /_book.yaml
         </tr></table>
 
 
+
+## WorkScheduler {:#WorkScheduler}
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#39)*
+
+ Framework service: API for scheduling, inspecting, and canceling work. Each component instance
+ can access work items that it has scheduled (but not others' scheduled work items). Work items
+ are scheduled _roughly_ at the specified time and frequency; the service implementation may
+ specify its notion of _roughly_, and may provide a configuration API to tune this notion.
+
+ Each scheduled work item is identified by a client-provided `WorkId`. Each scheduled work item
+ has a `WorkId` that is unique with respect to scheduled work items belonging to the same
+ component instance.
+
+### ScheduleWork {:#ScheduleWork}
+
+ Schedule a new work item identified by `work_id`. The work item is to be scheduled roughly
+ at the time corresponding to `work_request.start`. When `work_request.period` is specified,
+ reschedule work roughly every `work_request.period` until the the work item is canceled.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>work_id</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+        </tr><tr>
+            <td><code>work_request</code></td>
+            <td>
+                <code><a class='link' href='#WorkRequest'>WorkRequest</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_ScheduleWork_Result'>WorkScheduler_ScheduleWork_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetWorkById {:#GetWorkById}
+
+ Get the current status of the scheduled work item identified by `work_id`. Note that
+ canceled work items, and work items that do not repeat and has already run are not
+ considered scheduled (and cannot be queried via this method).
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>work_id</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_GetWorkById_Result'>WorkScheduler_GetWorkById_Result</a></code>
+            </td>
+        </tr></table>
+
+### CancelWork {:#CancelWork}
+
+ Cancel the scheduled work item specified by `work_id`.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>work_id</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_CancelWork_Result'>WorkScheduler_CancelWork_Result</a></code>
+            </td>
+        </tr></table>
+
+## Worker {:#Worker}
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#60)*
+
+ Component-exposed service: Work scheduler connects to this service to invoke scheduled work item
+ callbacks. The service implementation is responsible for invoking the code that corresponds to
+ the scheduled work item identified by `work_id`.
+
+ Note: The intent of exposing this service is to expose it to the `WorkScheduler` service
+ provider (i.e., the framework) and no one else.
+
+### DoWork {:#DoWork}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>work_id</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Worker_DoWork_Result'>Worker_DoWork_Result</a></code>
+            </td>
+        </tr></table>
 
 
 
@@ -633,6 +763,57 @@ Book: /_book.yaml
 </td>
             <td>No default</td>
         </tr>
+</table>
+
+### WorkScheduler_ScheduleWork_Response {:#WorkScheduler_ScheduleWork_Response}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#39)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### WorkScheduler_GetWorkById_Response {:#WorkScheduler_GetWorkById_Response}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#46)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>work_status</code></td>
+            <td>
+                <code><a class='link' href='#WorkStatus'>WorkStatus</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### WorkScheduler_CancelWork_Response {:#WorkScheduler_CancelWork_Response}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#53)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Worker_DoWork_Response {:#Worker_DoWork_Response}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#60)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
 
@@ -1445,6 +1626,65 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### WorkRequest {:#WorkRequest}
+
+
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#22)*
+
+ Parameters for a new piece of work to be scheduled.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>start</code></td>
+            <td>
+                <code><a class='link' href='#Start'>Start</a></code>
+            </td>
+            <td> Time when corresponding work item should be _first_ scheduled.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>period</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> Delay between repeated schedulings of corresponding work item. This is left unspecified for
+ one-shot work that should not repeat. Repeating work items are rescheduled indefinitely
+ until it is canceled.
+</td>
+        </tr></table>
+
+### WorkStatus {:#WorkStatus}
+
+
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#65)*
+
+ Snapshot of the status of a scheduled work item.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>next_run_utc_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> Estimated next time to run this work item, interpreted like `ZX_CLOCK_UTC`: number of wall
+ clock nanoseconds since the Unix epoch (midnight on January 1 1970) in UTC.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>period</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> Period for rerunning work; unspecified when work is one-shot instead of repeating.
+</td>
+        </tr></table>
+
 
 
 ## **UNIONS**
@@ -1515,6 +1755,82 @@ Type: <code>uint32</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Realm_ListChildren_Response'>Realm_ListChildren_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### WorkScheduler_ScheduleWork_Result {:#WorkScheduler_ScheduleWork_Result}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#42)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_ScheduleWork_Response'>WorkScheduler_ScheduleWork_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### WorkScheduler_GetWorkById_Result {:#WorkScheduler_GetWorkById_Result}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#49)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_GetWorkById_Response'>WorkScheduler_GetWorkById_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### WorkScheduler_CancelWork_Result {:#WorkScheduler_CancelWork_Result}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#56)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_CancelWork_Response'>WorkScheduler_CancelWork_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Worker_DoWork_Result {:#Worker_DoWork_Result}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#63)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Worker_DoWork_Response'>Worker_DoWork_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1650,6 +1966,29 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### Start {:#Start}
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#13)*
+
+ Different ways to specify when to schedule a work item for the first time.
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>delay</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> A non-negative delay to wait before scheduling work.
+</td>
+        </tr><tr>
+            <td><code>utc_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> A fixed point in time to start scheduling work, interpreted like `ZX_CLOCK_UTC`: number of
+ wall clock nanoseconds since the Unix epoch (midnight on January 1 1970) in UTC.
+</td>
+        </tr></table>
+
 
 
 
@@ -1714,6 +2053,13 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>int32</code></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#9">MAX_WORK_ID_LENGTH</a></td>
+            <td>
+                    <code>100</code>
+                </td>
+                <td><code>uint32</code></td>
         </tr>
     
 </table>

@@ -22,7 +22,7 @@ Book: /_book.yaml
  provides an interface to the Controller for the new device. Closing the
  connection to `device` will also close the `controller` interface. If
  the display device already has a virtcon controller then this method
- will return ZX_ERR_ALREADY_BOUND.
+ will return `ZX_ERR_ALREADY_BOUND`.
 
 #### Request
 <table>
@@ -58,7 +58,7 @@ Book: /_book.yaml
  provides an interface to the Controller for the new device. Closing the
  connection to `device` will also close the `controller` interface. If
  the display device already has a primary controller then this method
- will return ZX_ERR_ALREADY_BOUND.
+ will return `ZX_ERR_ALREADY_BOUND`.
 
 #### Request
 <table>

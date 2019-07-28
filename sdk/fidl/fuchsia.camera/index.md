@@ -15,7 +15,7 @@ Book: /_book.yaml
 ### GetFormats {:#GetFormats}
 
  Get the available format types for this device
- NOTE: The formats are paginated to MAX_FORMATS_PER_RESPONSE, multiple
+ NOTE: The formats are paginated to `MAX_FORMATS_PER_RESPONSE`, multiple
  GetFormats need to be issued until total_format_count are received
 
 #### Request
@@ -55,7 +55,7 @@ Book: /_book.yaml
  If setting the format is successful, the stream request will be honored.
  The stream token is used to provide additional control over the interface from the
  Camera Manager.  The driver provides the guarantee that:
-     1) If the stream token receives the PEER_CLOSED event, the driver will close
+     1) If the stream token receives the `PEER_CLOSED` event, the driver will close
         the stream.
      2) If the Stream interface is closed, the driver will close the eventpair.
 

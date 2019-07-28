@@ -79,7 +79,7 @@ Book: /_book.yaml
  Event that is triggered when the component's output directory is mounted.
 
  This event will not be triggered for every component, only those that
- serve a directory over their PA_DIRECTORY_REQUEST handle.
+ serve a directory over their `PA_DIRECTORY_REQUEST` handle.
 
 
 
@@ -473,7 +473,7 @@ Book: /_book.yaml
                 <code>bool</code>
             </td>
             <td> True if this environment should be killed first in out of memory
- situations by setting the ZX_PROP_JOB_KILL_ON_OOM property on this
+ situations by setting the `ZX_PROP_JOB_KILL_ON_OOM` property on this
  environment's job.
 </td>
             <td>No default</td>
@@ -532,7 +532,7 @@ Book: /_book.yaml
             <td>
                 <code>int32</code>
             </td>
-            <td> The FDIO types of the handle (e.g., FA_FDIO_REMOTE).
+            <td> The FDIO types of the handle (e.g., `FA_FDIO_REMOTE`).
 </td>
             <td>No default</td>
         </tr><tr>

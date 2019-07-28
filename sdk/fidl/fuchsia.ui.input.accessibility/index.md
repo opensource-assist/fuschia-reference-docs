@@ -170,7 +170,7 @@ Type: <code>uint32</code>
                 <code>uint64</code>
             </td>
             <td> The viewref koid of the top most view hit for this pointer event.
- This field is set to ZX_KOID_INVALID when there is no view hit and
+ This field is set to `ZX_KOID_INVALID` when there is no view hit and
  `local_point` is undefined.
 </td>
         </tr><tr>

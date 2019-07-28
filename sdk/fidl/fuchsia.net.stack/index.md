@@ -504,7 +504,7 @@ Book: /_book.yaml
                 <code>uint32</code>
             </td>
             <td> The features present on the interface, as a bitfield. Valid flags are
- fuchsia.hardware.ethernet.INFO_FEATURE_*.
+ fuchsia.hardware.ethernet.`INFO_FEATURE_*`.
 </td>
             <td>No default</td>
         </tr><tr>

@@ -157,7 +157,7 @@ Book: /_book.yaml
 ### GetEventsSupported {:#GetEventsSupported}
 
  Queries the target and returns what events are supported for notification.
- Sends GetCapabilties(0x03 (EVENTS_SUPPORTED)) command for all events supported by
+ Sends GetCapabilties(0x03 (`EVENTS_SUPPORTED`)) command for all events supported by
  the negoitated version of AVRCP.
 
 #### Request
