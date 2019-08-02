@@ -974,6 +974,31 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### AddDeviceByChannel {:#AddDeviceByChannel}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>device_channel</code></td>
+            <td>
+                <code>handle&lt;channel&gt;</code>
+            </td>
+        </tr><tr>
+            <td><code>device_name</code></td>
+            <td>
+                <code>string[256]</code>
+            </td>
+        </tr><tr>
+            <td><code>is_input</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+
+
 ## AudioRenderer {:#AudioRenderer}
 *Defined in [fuchsia.media/audio_renderer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_renderer.fidl#23)*
 

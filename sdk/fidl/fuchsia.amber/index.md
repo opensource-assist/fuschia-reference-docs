@@ -385,8 +385,54 @@ Book: /_book.yaml
 
 
 
+### MerkleFor {:#MerkleFor}
+
+ Finds the merkle hash for the package identified by 'name' which has the
+ provided variant. Does not install the package or fetch any blobs.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>variant</code></td>
+            <td>
+                <code>string?</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>message</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>merkle</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>size</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr></table>
+
 ## FetchResult {:#FetchResult}
-*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#217)*
+*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#221)*
 
  A protocol providing results for a OpenedRepository.GetUpdateComplete call.
  Only one event will be sent before the channel is closed.

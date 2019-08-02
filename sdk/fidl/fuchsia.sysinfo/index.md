@@ -34,30 +34,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### GetRootResource {:#GetRootResource}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>resource</code></td>
-            <td>
-                <code>handle&lt;resource&gt;?</code>
-            </td>
-        </tr></table>
-
 ### GetHypervisorResource {:#GetHypervisorResource}
 
 

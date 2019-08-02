@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## BaseInterfaceController {:#BaseInterfaceController}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#42)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#39)*
 
 
 ### GetInterfaceInfo {:#GetInterfaceInfo}
@@ -84,32 +84,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### UpdateAddress {:#UpdateAddress}
-
- Add/Remove IP address for an interface.
- Remove only if IP address is an exact match.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>addressDiff</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html'>fuchsia.net.stack</a>/<a class='link' href='../fuchsia.net.stack/index.html#InterfaceAddressDiff'>InterfaceAddressDiff</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr></table>
-
 ### SetName {:#SetName}
 
  Set a name for an interface.
@@ -151,7 +125,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StandardInterfaceController {:#StandardInterfaceController}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#67)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#60)*
 
  Controller of physical and virtual interfaces.
 
@@ -229,32 +203,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### UpdateAddress {:#UpdateAddress}
-
- Add/Remove IP address for an interface.
- Remove only if IP address is an exact match.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>addressDiff</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html'>fuchsia.net.stack</a>/<a class='link' href='../fuchsia.net.stack/index.html#InterfaceAddressDiff'>InterfaceAddressDiff</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr></table>
-
 ### SetName {:#SetName}
 
  Set a name for an interface.
@@ -296,7 +244,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## BridgeInterfaceController {:#BridgeInterfaceController}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#72)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#65)*
 
  Controller of  bridging interfaces.
 
@@ -374,32 +322,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### UpdateAddress {:#UpdateAddress}
-
- Add/Remove IP address for an interface.
- Remove only if IP address is an exact match.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>addressDiff</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html'>fuchsia.net.stack</a>/<a class='link' href='../fuchsia.net.stack/index.html#InterfaceAddressDiff'>InterfaceAddressDiff</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr></table>
-
 ### SetName {:#SetName}
 
  Set a name for an interface.
@@ -441,7 +363,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Observer {:#Observer}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#80)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#73)*
 
 
 ### ListInterfaces {:#ListInterfaces}
@@ -520,7 +442,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## BasePolicy {:#BasePolicy}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#91)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#84)*
 
 
 ### AddInterface {:#AddInterface}
@@ -584,7 +506,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## PrivilegedPolicy {:#PrivilegedPolicy}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#109)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#102)*
 
 
 ### GetInterfaceController {:#GetInterfaceController}
@@ -692,14 +614,6 @@ Book: /_book.yaml
 </td>
         </tr><tr>
             <td>2</td>
-            <td><code>addressDiff</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html'>fuchsia.net.stack</a>/<a class='link' href='../fuchsia.net.stack/index.html#InterfaceAddressDiff'>InterfaceAddressDiff</a></code>
-            </td>
-            <td> InterfaceAddressDiff event is triggered whenever the interface's addresses are changed.
-</td>
-        </tr><tr>
-            <td>3</td>
             <td><code>name</code></td>
             <td>
                 <code><a class='link' href='#InterfaceNameUpdate'>InterfaceNameUpdate</a></code>
@@ -713,7 +627,7 @@ Book: /_book.yaml
 ## **UNIONS**
 
 ### EthernetControllerRequest {:#EthernetControllerRequest}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#36)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#33)*
 
 
 <table>

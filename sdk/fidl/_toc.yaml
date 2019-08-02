@@ -53,6 +53,8 @@ toc:
   path: /reference/fidl/fuchsia.developer.tiles
 - title: fuchsia.device
   path: /reference/fidl/fuchsia.device
+- title: fuchsia.device.display
+  path: /reference/fidl/fuchsia.device.display
 - title: fuchsia.device.manager
   path: /reference/fidl/fuchsia.device.manager
 - title: fuchsia.device.test
@@ -239,5 +241,3 @@ toc:
   path: /reference/fidl/fuchsia.wlan.stats
 - title: fuchsia.wlan.tap
   path: /reference/fidl/fuchsia.wlan.tap
-- title: test.processbuilder
-  path: /reference/fidl/test.processbuilder

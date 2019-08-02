@@ -114,79 +114,8 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-## ChannelWriter {:#ChannelWriter}
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#46)*
-
- Read and write A/B channel data, the data is not authenticated or encrypted by this API.
- The format of the data is specific to the caller, and they should be authenticating the
- data themselves and parsing it with extreme care.
-
-### GetChannelData {:#GetChannelData}
-
- Get the data blob for the currently running slot.
-
- - response `slot` the currently running slot
- - response `data_blob` the data blob (if it exists) for the current slot.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>slot</code></td>
-            <td>
-                <code><a class='link' href='#Slot'>Slot</a></code>
-            </td>
-        </tr><tr>
-            <td><code>data_blob</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;?</code>
-            </td>
-        </tr></table>
-
-### SetChannelData {:#SetChannelData}
-
- Set a new data blob for the given slot.
-
- + request `slot` the slot to set the data for (could be currently running, could be
-     the ‘other’ slot on a two-slot device).
- + request `data_blob` the data blob to write for the given slot.  Providing too
-     large of a data blob will result in failure.
- * error <a class='link' href='#SetChannelDataError'>SetChannelDataError</a>.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>slot</code></td>
-            <td>
-                <code><a class='link' href='#Slot'>Slot</a></code>
-            </td>
-        </tr><tr>
-            <td><code>data_blob</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>result</code></td>
-            <td>
-                <code><a class='link' href='#ChannelWriter_SetChannelData_Result'>ChannelWriter_SetChannelData_Result</a></code>
-            </td>
-        </tr></table>
-
 ## Manager {:#Manager}
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#74)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#43)*
 
 
 ### CheckNow {:#CheckNow}
@@ -265,7 +194,7 @@ Book: /_book.yaml
 
 
 ## Monitor {:#Monitor}
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#97)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#66)*
 
  Receiver of updates for either an individual update check, or to continuously
  receive updates for all checks.
@@ -288,60 +217,14 @@ Book: /_book.yaml
 
 
 
-## **STRUCTS**
-
-### ChannelWriter_SetChannelData_Response {:#ChannelWriter_SetChannelData_Response}
-*Defined in [fuchsia.update/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#10)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
-</table>
-
 
 
 ## **ENUMS**
 
-### Slot {:#Slot}
-Type: <code>uint32</code>
-
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#64)*
-
- The list of valid update slots.
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>A</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>B</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr></table>
-
-### SetChannelDataError {:#SetChannelDataError}
-Type: <code>uint32</code>
-
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#69)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>FAILED</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr></table>
-
 ### Initiator {:#Initiator}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#112)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#81)*
 
  Who or what initiated the update check.
 
@@ -360,7 +243,7 @@ Type: <code>uint32</code>
 ### ManagerState {:#ManagerState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#148)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#117)*
 
  ```
  The various states that the manager can be in.
@@ -425,7 +308,7 @@ Type: <code>uint32</code>
 ### CheckStartedResult {:#CheckStartedResult}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#194)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#163)*
 
 
 
@@ -451,7 +334,7 @@ Type: <code>uint32</code>
 ### Options {:#Options}
 
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#106)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#75)*
 
  Configuration options for an update attempt (this is common with the Fuchsia
   OTA Interface v2)
@@ -472,7 +355,7 @@ Type: <code>uint32</code>
 ### State {:#State}
 
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#205)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#174)*
 
 
 
@@ -498,27 +381,6 @@ Type: <code>uint32</code>
         </tr></table>
 
 
-
-## **UNIONS**
-
-### ChannelWriter_SetChannelData_Result {:#ChannelWriter_SetChannelData_Result}
-*Defined in [fuchsia.update/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#13)*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>response</code></td>
-            <td>
-                <code><a class='link' href='#ChannelWriter_SetChannelData_Response'>ChannelWriter_SetChannelData_Response</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>err</code></td>
-            <td>
-                <code><a class='link' href='#SetChannelDataError'>SetChannelDataError</a></code>
-            </td>
-            <td></td>
-        </tr></table>
 
 
 

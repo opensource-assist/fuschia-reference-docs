@@ -43,8 +43,118 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### SetAbsoluteVolumeHandler {:#SetAbsoluteVolumeHandler}
+
+ Set the absolute volume handler for the peer specified at `peer_id` to handle absolute
+ volume commands and notifications received from the peer. Only one handler may be set with
+ a peer at at time. If a second handler is registered it will be dropped and an error will
+ be returned.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>peer_id</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>handler</code></td>
+            <td>
+                <code><a class='link' href='#AbsoluteVolumeHandler'>AbsoluteVolumeHandler</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#PeerManager_SetAbsoluteVolumeHandler_Result'>PeerManager_SetAbsoluteVolumeHandler_Result</a></code>
+            </td>
+        </tr></table>
+
+## AbsoluteVolumeHandler {:#AbsoluteVolumeHandler}
+*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#92)*
+
+ Handler for absolute volume requests from a remote peer. See AVRCP v 1.6.2 section 6.13.2.
+ Absolute volume is represented as a percentage using one byte with the most significant bit
+ reserved. 0% is represented as 0x0 and 100% as 0x7f. Volume should scaled between the
+ two values.
+
+### SetVolume {:#SetVolume}
+
+ Requests that the absolute volume of the player be changed.
+ `requested_volume` is the requested volume by the peer.
+ Returns the actual volume set locally by the handler.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requested_volume</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>set_volume</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+        </tr></table>
+
+### OnVolumeChanged {:#OnVolumeChanged}
+
+ Returns latest volume of the handler to the AVRCP service. This function should return
+ immediately on the first call and if the volume has changed since the last call to this
+ function, otherwise it should only return when the volume has been changed.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>new_volume</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+        </tr></table>
+
+### GetCurrentVolume {:#GetCurrentVolume}
+
+ Returns the current volume immediately.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>volume</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+        </tr></table>
+
 ## Controller {:#Controller}
-*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#86)*
+*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#111)*
 
  Client wrapper for local controller (CT) -> remote target (TG) AVCTP connections between devices.
  A client is high level construct and does not represent a connection with a device.
@@ -95,16 +205,15 @@ Book: /_book.yaml
 
 ### SetAbsoluteVolume {:#SetAbsoluteVolume}
 
- Sets the absolute volume on the device. Values can range from 0x00 to 0x7F
- (with 100% volume being 0x7F). This is in addition to the relative volume change
- commands that can be sent over AV\C. You will get a volume changed notification event
- as part of successfully sending this.
+ Request the absolute volume on the peer be changed. Returns the actual volume set by the
+ peer. Values can range from 0x00 to 0x7F (with 100% volume being 0x7F). You may not get a
+ volume changed notification event from the remote peer as result of changing this.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>volume</code></td>
+            <td><code>requested_volume</code></td>
             <td>
                 <code>uint8</code>
             </td>
@@ -279,8 +388,19 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
-### Controller_GetPlayerApplicationSettings_Response {:#Controller_GetPlayerApplicationSettings_Response}
+### PeerManager_SetAbsoluteVolumeHandler_Response {:#PeerManager_SetAbsoluteVolumeHandler_Response}
 *Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Controller_GetPlayerApplicationSettings_Response {:#Controller_GetPlayerApplicationSettings_Response}
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#22)*
 
 
 
@@ -298,7 +418,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_GetMediaAttributes_Response {:#Controller_GetMediaAttributes_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#29)*
 
 
 
@@ -316,18 +436,25 @@ Book: /_book.yaml
 </table>
 
 ### Controller_SetAbsoluteVolume_Response {:#Controller_SetAbsoluteVolume_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#36)*
 
 
 
 
 
 <table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>set_volume</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
 </table>
 
 ### Controller_InformBatteryStatus_Response {:#Controller_InformBatteryStatus_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#30)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#43)*
 
 
 
@@ -338,7 +465,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_SetAddressedPlayer_Response {:#Controller_SetAddressedPlayer_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#40)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#53)*
 
 
 
@@ -349,7 +476,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_SendCommand_Response {:#Controller_SendCommand_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#47)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#60)*
 
 
 
@@ -1019,7 +1146,7 @@ Type: <code>uint8</code>
 ### Notification {:#Notification}
 
 
-*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#53)*
+*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#59)*
 
  Event data from incoming target notifications.
 
@@ -1123,8 +1250,27 @@ Type: <code>uint8</code>
             <td></td>
         </tr></table>
 
-### Controller_GetPlayerApplicationSettings_Result {:#Controller_GetPlayerApplicationSettings_Result}
+### PeerManager_SetAbsoluteVolumeHandler_Result {:#PeerManager_SetAbsoluteVolumeHandler_Result}
 *Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#PeerManager_SetAbsoluteVolumeHandler_Response'>PeerManager_SetAbsoluteVolumeHandler_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Controller_GetPlayerApplicationSettings_Result {:#Controller_GetPlayerApplicationSettings_Result}
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#25)*
 
 
 <table>
@@ -1143,7 +1289,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_GetMediaAttributes_Result {:#Controller_GetMediaAttributes_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#32)*
 
 
 <table>
@@ -1162,7 +1308,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_SetAbsoluteVolume_Result {:#Controller_SetAbsoluteVolume_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#39)*
 
 
 <table>
@@ -1181,7 +1327,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_InformBatteryStatus_Result {:#Controller_InformBatteryStatus_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#33)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#46)*
 
 
 <table>
@@ -1200,7 +1346,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_SetAddressedPlayer_Result {:#Controller_SetAddressedPlayer_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#43)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#56)*
 
 
 <table>
@@ -1219,7 +1365,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_SendCommand_Result {:#Controller_SendCommand_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#50)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#63)*
 
 
 <table>

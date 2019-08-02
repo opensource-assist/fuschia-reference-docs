@@ -6,6 +6,59 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
+## Counter {:#Counter}
+*Defined in [fuchsia.kernel/kernel-counter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-kernel/kernel-counter.fidl#12)*
+
+ Protocol for retrieving kcounter information.
+
+### GetInspectVMO {:#GetInspectVMO}
+
+ Retrives a VMO containining summarized kcounter data. The vmo returned
+ in |buffer| is in "inspect-vmo" format, documented elsewhere.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>buffer</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+        </tr></table>
+
+### UpdateInspectVMO {:#UpdateInspectVMO}
+
+ Request that the previously-returned VMO buffer's data be updated. The
+ data may not be updated if it was already recently updated (updates are
+ limited to an unspecified rate, but approximately every few seconds).
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
 ## DebugBroker {:#DebugBroker}
 *Defined in [fuchsia.kernel/kernel-debug.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-kernel/kernel-debug.fidl#14)*
 

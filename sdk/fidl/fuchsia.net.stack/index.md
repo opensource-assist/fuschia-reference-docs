@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Stack {:#Stack}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#143)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#130)*
 
 
 ### AddEthernetInterface {:#AddEthernetInterface}
@@ -325,9 +325,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>err</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
+                <code><a class='link' href='#Stack_EnablePacketFilter_Result'>Stack_EnablePacketFilter_Result</a></code>
             </td>
         </tr></table>
 
@@ -350,11 +350,41 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>err</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
+                <code><a class='link' href='#Stack_DisablePacketFilter_Result'>Stack_DisablePacketFilter_Result</a></code>
             </td>
         </tr></table>
+
+### EnableIpForwarding {:#EnableIpForwarding}
+
+ Enable IP Forwarding.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+### DisableIpForwarding {:#DisableIpForwarding}
+
+ Disable IP Forwarding.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
 
 ### OnInterfaceStatusChange {:#OnInterfaceStatusChange}
 
@@ -372,25 +402,31 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### OnInterfaceAddressChange {:#OnInterfaceAddressChange}
-
- An address change event is triggered whenever an interface's addresses change.
-
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>info</code></td>
-            <td>
-                <code><a class='link' href='#InterfaceAddressChange'>InterfaceAddressChange</a></code>
-            </td>
-        </tr></table>
-
 
 
 ## **STRUCTS**
+
+### Stack_EnablePacketFilter_Response {:#Stack_EnablePacketFilter_Response}
+*Defined in [fuchsia.net.stack/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Stack_DisablePacketFilter_Response {:#Stack_DisablePacketFilter_Response}
+*Defined in [fuchsia.net.stack/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#31)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
 
 ### InterfaceAddress {:#InterfaceAddress}
 *Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#37)*
@@ -589,35 +625,8 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### InterfaceAddressChange {:#InterfaceAddressChange}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#119)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>id</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-            <td> The opaque identifier of the device that had its address change.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>diff</code></td>
-            <td>
-                <code><a class='link' href='#InterfaceAddressDiff'>InterfaceAddressDiff</a></code>
-            </td>
-            <td> The diff representing the address change.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### Error {:#Error}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#138)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#125)*
 
 
 
@@ -695,7 +704,7 @@ Type: <code>uint32</code>
 ### ErrorType {:#ErrorType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#127)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#114)*
 
 
 
@@ -739,6 +748,44 @@ Type: <code>uint32</code>
 
 
 ## **UNIONS**
+
+### Stack_EnablePacketFilter_Result {:#Stack_EnablePacketFilter_Result}
+*Defined in [fuchsia.net.stack/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Stack_EnablePacketFilter_Response'>Stack_EnablePacketFilter_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Stack_DisablePacketFilter_Result {:#Stack_DisablePacketFilter_Result}
+*Defined in [fuchsia.net.stack/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Stack_DisablePacketFilter_Response'>Stack_DisablePacketFilter_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
 
 ### InterfaceStatus {:#InterfaceStatus}
 *Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#31)*
@@ -786,25 +833,6 @@ Type: <code>uint32</code>
             </td>
             <td> The IP address of the next hop, used to look up the next forwarding entry.
 </td>
-        </tr></table>
-
-### InterfaceAddressDiff {:#InterfaceAddressDiff}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#114)*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>added</code></td>
-            <td>
-                <code><a class='link' href='#InterfaceAddress'>InterfaceAddress</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>removed</code></td>
-            <td>
-                <code><a class='link' href='#InterfaceAddress'>InterfaceAddress</a></code>
-            </td>
-            <td></td>
         </tr></table>
 
 

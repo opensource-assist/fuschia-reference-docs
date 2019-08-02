@@ -29,6 +29,7 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.deprecatedtimezone/index">fuchsia.deprecatedtimezone</a></td></tr>
 <tr><td><a href="fuchsia.developer.tiles/index">fuchsia.developer.tiles</a></td></tr>
 <tr><td><a href="fuchsia.device/index">fuchsia.device</a></td></tr>
+<tr><td><a href="fuchsia.device.display/index">fuchsia.device.display</a></td></tr>
 <tr><td><a href="fuchsia.device.manager/index">fuchsia.device.manager</a></td></tr>
 <tr><td><a href="fuchsia.device.test/index">fuchsia.device.test</a></td></tr>
 <tr><td><a href="fuchsia.devicesettings/index">fuchsia.devicesettings</a></td></tr>
@@ -122,7 +123,6 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.wlan.sme/index">fuchsia.wlan.sme</a></td></tr>
 <tr><td><a href="fuchsia.wlan.stats/index">fuchsia.wlan.stats</a></td></tr>
 <tr><td><a href="fuchsia.wlan.tap/index">fuchsia.wlan.tap</a></td></tr>
-<tr><td><a href="test.processbuilder/index">test.processbuilder</a></td></tr>
 </table>
 
 Generated with fidldoc v0.0.4
