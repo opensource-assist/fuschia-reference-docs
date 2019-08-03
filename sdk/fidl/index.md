@@ -33,6 +33,7 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.device.manager/index">fuchsia.device.manager</a></td></tr>
 <tr><td><a href="fuchsia.device.test/index">fuchsia.device.test</a></td></tr>
 <tr><td><a href="fuchsia.devicesettings/index">fuchsia.devicesettings</a></td></tr>
+<tr><td><a href="fuchsia.exception/index">fuchsia.exception</a></td></tr>
 <tr><td><a href="fuchsia.feedback/index">fuchsia.feedback</a></td></tr>
 <tr><td><a href="fuchsia.gpu.magma/index">fuchsia.gpu.magma</a></td></tr>
 <tr><td><a href="fuchsia.hardware.bluetooth/index">fuchsia.hardware.bluetooth</a></td></tr>

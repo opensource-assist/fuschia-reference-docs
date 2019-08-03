@@ -61,6 +61,8 @@ toc:
   path: /reference/fidl/fuchsia.device.test
 - title: fuchsia.devicesettings
   path: /reference/fidl/fuchsia.devicesettings
+- title: fuchsia.exception
+  path: /reference/fidl/fuchsia.exception
 - title: fuchsia.feedback
   path: /reference/fidl/fuchsia.feedback
 - title: fuchsia.gpu.magma

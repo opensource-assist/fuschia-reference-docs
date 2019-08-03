@@ -109,6 +109,57 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## DoNotDisturb {:#DoNotDisturb}
+*Defined in [fuchsia.settings/do_not_disturb.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/do_not_disturb.fidl#13)*
+
+ Modify or watch do-not-disturb (DND) mode. While DND is active, distractions
+ created by the device are reduced or eliminated. E.g. bootup is silent,
+ incoming calls could be rejected or silent, and notifications could be
+ paused, silent, or hidden. High-priority disruptions like alarms can be
+ allowed.
+
+### Watch {:#Watch}
+
+ Gets the current <a class='link' href='#DoNotDisturbSettings'>DoNotDisturbSettings</a>. Returns immediately on first
+ call; subsequent calls return when the values change.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>settings</code></td>
+            <td>
+                <code><a class='link' href='#DoNotDisturbSettings'>DoNotDisturbSettings</a></code>
+            </td>
+        </tr></table>
+
+### Set {:#Set}
+
+ Sets <a class='link' href='#DoNotDisturbSettings'>DoNotDisturbSettings</a> settings. Any field not explicitly set in
+ the table performs a no-op, and will not make any changes.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>settings</code></td>
+            <td>
+                <code><a class='link' href='#DoNotDisturbSettings'>DoNotDisturbSettings</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
 ## Intl {:#Intl}
 *Defined in [fuchsia.settings/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/intl.fidl#12)*
 
@@ -248,7 +299,7 @@ Book: /_book.yaml
 </table>
 
 ### Intl_Watch_Response {:#Intl_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#20)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
 
 
 
@@ -266,7 +317,7 @@ Book: /_book.yaml
 </table>
 
 ### Intl_Set_Response {:#Intl_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#31)*
 
 
 
@@ -277,7 +328,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Watch_Response {:#System_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#38)*
 
 
 
@@ -295,7 +346,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Set_Response {:#System_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#41)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
 
 
 
@@ -638,6 +689,51 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### DoNotDisturbSettings {:#DoNotDisturbSettings}
+
+
+*Defined in [fuchsia.settings/do_not_disturb.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/do_not_disturb.fidl#24)*
+
+ Settings related to do-not-disturb (DND) mode.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>user_initiated_do_not_disturb</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> If true, the device is in do-not-disturb (DND) mode. Change this value
+ if you're directly responding to a user-initiated event.
+
+ Note that the device could still be in DND mode even if this is set to
+ `false`, as <a class='link' href='#night_mode_initiated_do_not_disturb'>night_mode_initiated_do_not_disturb</a> might be `true`. To
+ actually disable DND mode, set both fields to `false`.
+
+ To know whether DND is enabled, you need to do a boolean OR of both
+ fields.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>night_mode_initiated_do_not_disturb</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> If true, the device is in do-not-disturb (DND) mode. Change this value
+ if you're trying to enable or disable DND based on a nightly schedule.
+
+ Note that the device could still be in DND mode even if this is set to
+ `false`, as <a class='link' href='#user_initiated_do_not_disturb'>user_initiated_do_not_disturb</a> might be `true`. Do not
+ set that field to `false` unless you're directly responding to a
+ user-initiated event.
+
+ To know whether DND is enabled, you need to do a boolean OR of both
+ fields.
+</td>
+        </tr></table>
+
 ### IntlSettings {:#IntlSettings}
 
 
@@ -737,7 +833,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Intl_Watch_Result {:#Intl_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
 
 
 <table>
@@ -756,7 +852,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Intl_Set_Result {:#Intl_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#30)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
 
 
 <table>
@@ -775,7 +871,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### System_Watch_Result {:#System_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#41)*
 
 
 <table>
@@ -794,7 +890,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### System_Set_Result {:#System_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#44)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
 
 
 <table>

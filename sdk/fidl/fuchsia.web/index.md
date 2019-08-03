@@ -611,8 +611,28 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
+### SetPopupFrameCreationListener {:#SetPopupFrameCreationListener}
+
+ Sets the listener for handling popup frame opened by web content.
+ If no listener is present, then any new popup frame will be blocked.
+
+ `listener`: The listener to use. Unregisters any existing listener if
+             null.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>listener</code></td>
+            <td>
+                <code><a class='link' href='#PopupFrameCreationListener'>PopupFrameCreationListener</a>?</code>
+            </td>
+        </tr></table>
+
+
+
 ## AdditionalHeadersProvider {:#AdditionalHeadersProvider}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#180)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#188)*
 
 
 ### GetHeaders {:#GetHeaders}
@@ -644,7 +664,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## MessagePort {:#MessagePort}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#214)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#222)*
 
  Represents one end of an HTML5 MessageChannel. Can be used to send
  and exchange Messages with the peered MessagePort in the Frame's script
@@ -706,6 +726,39 @@ Book: /_book.yaml
                 <code><a class='link' href='#WebMessage'>WebMessage</a></code>
             </td>
         </tr></table>
+
+## PopupFrameCreationListener {:#PopupFrameCreationListener}
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#251)*
+
+
+### OnPopupFrameCreated {:#OnPopupFrameCreated}
+
+ Called when a Frame has created a new popup |frame|.
+ Information about the popup frame, and how it was created, is provided
+ via |info|.
+ Additional popup frames are delivered after the the acknowledgement
+ callback is invoked.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>frame</code></td>
+            <td>
+                <code><a class='link' href='#Frame'>Frame</a></code>
+            </td>
+        </tr><tr>
+            <td><code>info</code></td>
+            <td>
+                <code><a class='link' href='#PopupFrameCreationInfo'>PopupFrameCreationInfo</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
 
 ## NavigationEventListener {:#NavigationEventListener}
 *Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#11)*
@@ -922,7 +975,7 @@ Book: /_book.yaml
 </table>
 
 ### MessagePort_PostMessage_Response {:#MessagePort_PostMessage_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#59)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#60)*
 
 
 
@@ -933,7 +986,7 @@ Book: /_book.yaml
 </table>
 
 ### NavigationController_LoadUrl_Response {:#NavigationController_LoadUrl_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#70)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#73)*
 
 
 
@@ -1219,7 +1272,7 @@ Type: <code>uint32</code>
 ### WebMessage {:#WebMessage}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#188)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#196)*
 
 
 
@@ -1251,6 +1304,35 @@ Type: <code>uint32</code>
             </td>
             <td> Optional list of objects transferred out of the MessagePort to the FIDL
  client.
+</td>
+        </tr></table>
+
+### PopupFrameCreationInfo {:#PopupFrameCreationInfo}
+
+
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#242)*
+
+ Specifies additional information about a newly created popup frame.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>initial_url</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td> The URL to which the popup frame was initially navigated.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>initiated_by_user</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> Set if the popup frame was created in response to UI interaction from the
+ user (e.g. a link was clicked).
 </td>
         </tr></table>
 
@@ -1462,7 +1544,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### MessagePort_PostMessage_Result {:#MessagePort_PostMessage_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#63)*
 
 
 <table>
@@ -1481,7 +1563,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### NavigationController_LoadUrl_Result {:#NavigationController_LoadUrl_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#73)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#76)*
 
 
 <table>
@@ -1504,7 +1586,7 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### OutgoingTransferable {:#OutgoingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#202)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#210)*
 
 
 <table>
@@ -1517,7 +1599,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### IncomingTransferable {:#IncomingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#206)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#214)*
 
 
 <table>
