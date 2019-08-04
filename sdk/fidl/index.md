@@ -60,6 +60,8 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.modular/index">fuchsia.modular</a></td></tr>
 <tr><td><a href="fuchsia.modular.auth/index">fuchsia.modular.auth</a></td></tr>
 <tr><td><a href="fuchsia.modular.internal/index">fuchsia.modular.internal</a></td></tr>
+<tr><td><a href="fuchsia.modular.session/index">fuchsia.modular.session</a></td></tr>
+<tr><td><a href="fuchsia.modular.testing/index">fuchsia.modular.testing</a></td></tr>
 <tr><td><a href="fuchsia.net/index">fuchsia.net</a></td></tr>
 <tr><td><a href="fuchsia.net.dns/index">fuchsia.net.dns</a></td></tr>
 <tr><td><a href="fuchsia.net.filter/index">fuchsia.net.filter</a></td></tr>

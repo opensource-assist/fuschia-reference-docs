@@ -115,6 +115,10 @@ toc:
   path: /reference/fidl/fuchsia.modular.auth
 - title: fuchsia.modular.internal
   path: /reference/fidl/fuchsia.modular.internal
+- title: fuchsia.modular.session
+  path: /reference/fidl/fuchsia.modular.session
+- title: fuchsia.modular.testing
+  path: /reference/fidl/fuchsia.modular.testing
 - title: fuchsia.net
   path: /reference/fidl/fuchsia.net
 - title: fuchsia.net.dns
