@@ -793,7 +793,7 @@ Book: /_book.yaml
     </table>
 
 ## NavigationController {:#NavigationController}
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#30)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#33)*
 
  Provides methods for controlling and querying the navigation state
  of a Frame.
@@ -801,13 +801,15 @@ Book: /_book.yaml
 ### LoadUrl {:#LoadUrl}
 
  Tells the Frame to navigate to a `url`.
+ * `url`:    The address to navigate to.
+ * `params`: Additional parameters that affect how the resource will be
+   loaded (e.g. cookies, HTTP headers, etc.)
 
- `url`:    The address to navigate to.
- `params`: Additional parameters that affect how the resource will be
-           loaded (e.g. cookies, HTTP headers, etc.)
-
- If an error occured, the NavigationControllerError will be set:
- `INVALID_URL`: The `url` parameter is invalid.
+ If an error occured, the <a class='link' href='#fuchsia.web.NavigationControllerError'>fuchsia.web.NavigationControllerError</a> will
+ be set:
+ * `INVALID_URL`: The `url` parameter is invalid.
+ * `INVALID_HEADER`: At least one of the headers in
+   <a class='link' href='../fuchsia.web.LoadUrlParams/index.html'>fuchsia.web.LoadUrlParams</a>/<a class='link' href='../fuchsia.web.LoadUrlParams/index.html#headers'>headers</a> is invalid.
 
 #### Request
 <table>
@@ -1084,12 +1086,16 @@ Type: <code>int32</code>
             <td><code>INVALID_URL</code></td>
             <td><code>1</code></td>
             <td></td>
+        </tr><tr>
+            <td><code>INVALID_HEADER</code></td>
+            <td><code>2</code></td>
+            <td></td>
         </tr></table>
 
 ### ReloadType {:#ReloadType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#96)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#101)*
 
  Characterizes the type of reload.
 
@@ -1108,7 +1114,7 @@ Type: <code>uint32</code>
 ### LoadUrlReason {:#LoadUrlReason}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#105)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#110)*
 
  Characterizes the origin of a LoadUrl request.
 
@@ -1127,7 +1133,7 @@ Type: <code>uint32</code>
 ### PageType {:#PageType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#114)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#119)*
 
  Characterizes the page type in a NavigationState.
 
@@ -1339,7 +1345,7 @@ Type: <code>uint32</code>
 ### LoadUrlParams {:#LoadUrlParams}
 
 
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#56)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#61)*
 
  Additional parameters for modifying the behavior of LoadUrl().
 
@@ -1386,7 +1392,7 @@ Type: <code>uint32</code>
 ### NavigationState {:#NavigationState}
 
 
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#74)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#79)*
 
  Contains information about the Frame's navigation state.
 
