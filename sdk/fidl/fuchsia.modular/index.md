@@ -4260,6 +4260,34 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### Annotation {:#Annotation}
+*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#10)*
+
+
+
+ A user-defined annotation for a story or module.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>key</code></td>
+            <td>
+                <code>string[256]</code>
+            </td>
+            <td> An identfier for this annotation.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code><a class='link' href='#AnnotationValue'>AnnotationValue</a>?</code>
+            </td>
+            <td> The contents of this annotation.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### BaseShellParams {:#BaseShellParams}
 *Defined in [fuchsia.modular/base_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/basemgr/base_shell.fidl#49)*
 
@@ -7007,7 +7035,70 @@ Type: <code>uint32</code>
 
 
 
+## **XUNIONS**
+
+### AnnotationValue {:#AnnotationValue}
+*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#41)*
+
+ The value of a <a class='link' href='#Annotation'>Annotation</a>.
+
+ The actual field used depends on the type of annotation, which is
+ user-defined, and not enforced by the framework.
+
+ The size of `buffer` is limited to
+ `MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES` bytes.
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>text</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>bytes</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[1024]</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>buffer</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+            <td></td>
+        </tr></table>
 
 
 
+
+
+## **CONSTANTS**
+
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#19">MAX_ANNOTATION_KEY_LENGTH</a></td>
+            <td>
+                    <code>256</code>
+                </td>
+                <td><code>uint32</code></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#23">MAX_ANNOTATION_VALUE_LENGTH</a></td>
+            <td>
+                    <code>1024</code>
+                </td>
+                <td><code>uint32</code></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#29">MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES</a></td>
+            <td>
+                    <code>102400</code>
+                </td>
+                <td><code>uint32</code></td>
+        </tr>
+    
+</table>
 

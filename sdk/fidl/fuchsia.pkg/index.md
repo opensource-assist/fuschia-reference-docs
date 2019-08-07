@@ -705,6 +705,10 @@ Type: <code>uint64</code>
             <td><code>LIGHTBULB</code></td>
             <td><code>0</code></td>
             <td></td>
+        </tr><tr>
+            <td><code>DOWNLOAD_BLOB</code></td>
+            <td><code>1</code></td>
+            <td></td>
         </tr></table>
 
 

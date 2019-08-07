@@ -1564,6 +1564,14 @@ Book: /_book.yaml
 
  While the non-required_ fields aggregate by taking the intersection, the
  required_ fields aggregate by taking the union.
+
+ If set, the required_max_coded_width and required_max_coded_height will
+ cause the allocated buffers to be large enough to hold an image that is
+ required_max_coded_width * required_max_coded_height.
+
+ TODO(dustingreen): Make it easier to allocate buffers of minimal size
+ that can (optionally) also handle 90 degree rotated version of the max
+ dimensions / alternate required bounds for another main aspect ratio.
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1605,7 +1613,7 @@ Book: /_book.yaml
 </table>
 
 ### ImageFormat_2 {:#ImageFormat_2}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#347)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#355)*
 
 
 

@@ -376,7 +376,7 @@ Book: /_book.yaml
             </td>
             <td> The vmar object that was created when the process was created.
 
- See <https://fuchsia.googlesource.com/fuchsia/+/master/zircon/docs/syscalls/process_create.md>.
+ See <https://fuchsia.googlesource.com/fuchsia/+/master/docs/zircon/syscalls/process_create.md>.
 </td>
             <td>No default</td>
         </tr><tr>

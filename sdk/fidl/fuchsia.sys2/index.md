@@ -1082,13 +1082,16 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
-### ExposeServiceDecl {:#ExposeServiceDecl}
+### ExposeLegacyServiceDecl {:#ExposeLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#16)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#19)*
 
- Declares a service exposed to a component's containing realm, such as a
- service exposed by the component or one of its children at runtime.
+ Declares a legacy service exposed to a component's containing realm, such as
+ a legacy service exposed by the component or one of its children at runtime.
+
+ A legacy service is a service with a single instance, provided by a single
+ FIDL protocol.
 
 
 <table>
@@ -1108,7 +1111,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the service, by which it was presented to this
+            <td> Path identifying the legacy service, by which it was presented to this
  component.
 </td>
         </tr><tr>
@@ -1126,7 +1129,7 @@ Type: <code>uint32</code>
 ### ExposeDirectoryDecl {:#ExposeDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#33)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#36)*
 
  Declares a directory exposed to a component's containing realm, such as a
  directory exposed by the component or one of its children at runtime.
@@ -1164,14 +1167,17 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
-### OfferServiceDecl {:#OfferServiceDecl}
+### OfferLegacyServiceDecl {:#OfferLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#19)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#22)*
 
- Declares a service offered by a component to one of its children, which may
- have been offered by the component's containing realm, the component itself,
- or one of its other children.
+ Declares a legacy service offered by a component to one of its children,
+ which may have been offered by the component's containing realm, the
+ component itself, or one of its other children.
+
+ A legacy service is a service with a single instance, provided by a single
+ FIDL protocol.
 
 
 <table>
@@ -1191,7 +1197,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the service being offered.
+            <td> Path identifying the legacy service being offered.
 </td>
         </tr><tr>
             <td>3</td>
@@ -1216,11 +1222,11 @@ Type: <code>uint32</code>
 ### OfferDirectoryDecl {:#OfferDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#39)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#42)*
 
- Declares a directory offered by a component to one of its children, which may
- have been offered by the component's containing realm, the component itself,
- or one of its other children.
+ Declares a directory offered by a component to one of its children, which
+ may have been offered by the component's containing realm, the component
+ itself, or one of its other children.
 
 
 <table>
@@ -1266,7 +1272,7 @@ Type: <code>uint32</code>
 ### OfferStorageDecl {:#OfferStorageDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#60)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#63)*
 
  Declares a storage capability offered by a component to one of its children,
  such as meta storage offered by the component's containing realm or cache
@@ -1342,13 +1348,16 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
-### UseServiceDecl {:#UseServiceDecl}
+### UseLegacyServiceDecl {:#UseLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#17)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#20)*
 
- Declares a service used by a component, which was offered to the component's
- environment.
+ Declares a legacy service used by a component, which was offered to the
+ component's environment.
+
+ A legacy service is a service with a single instance, provided by a single
+ FIDL protocol.
 
 
 <table>
@@ -1359,8 +1368,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the service relative to the component itself. Must
- be |realm| or |framework|.
+            <td> The provider of the legacy service relative to the component itself.
+ Must be |realm| or |framework|.
 </td>
         </tr><tr>
             <td>2</td>
@@ -1368,7 +1377,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the service, by which it was presented to this
+            <td> Path identifying the legacy service, by which it was presented to this
  component.
 </td>
         </tr><tr>
@@ -1387,10 +1396,10 @@ Type: <code>uint32</code>
 ### UseDirectoryDecl {:#UseDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#35)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#38)*
 
- Declares a directory used by a component, which was offered to the component's
- environment.
+ Declares a directory used by a component, which was offered to the
+ component's environment.
 
 
 <table>
@@ -1429,7 +1438,7 @@ Type: <code>uint32</code>
 ### UseStorageDecl {:#UseStorageDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#53)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#56)*
 
  Declares storage used by a component, which was offered to the component's
  environment.
@@ -1818,13 +1827,13 @@ Type: <code>uint32</code>
 *Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#9)*
 
  Declares a capability exposed to a component's containing realm, such as a
- service exposed by the component or one of its children at runtime.
+ legacy service exposed by the component or one of its children at runtime.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>service</code></td>
+            <td><code>legacy_service</code></td>
             <td>
-                <code><a class='link' href='#ExposeServiceDecl'>ExposeServiceDecl</a></code>
+                <code><a class='link' href='#ExposeLegacyServiceDecl'>ExposeLegacyServiceDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1838,15 +1847,15 @@ Type: <code>uint32</code>
 ### OfferDecl {:#OfferDecl}
 *Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#10)*
 
- Declares a capability offered by a component to one of its children, which may
- have been offered by the component's containing realm, the component itself,
- or one of its other children.
+ Declares a capability offered by a component to one of its children, which
+ may have been offered by the component's containing realm, the component
+ itself, or one of its other children.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>service</code></td>
+            <td><code>legacy_service</code></td>
             <td>
-                <code><a class='link' href='#OfferServiceDecl'>OfferServiceDecl</a></code>
+                <code><a class='link' href='#OfferLegacyServiceDecl'>OfferLegacyServiceDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1916,9 +1925,9 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>service</code></td>
+            <td><code>legacy_service</code></td>
             <td>
-                <code><a class='link' href='#UseServiceDecl'>UseServiceDecl</a></code>
+                <code><a class='link' href='#UseLegacyServiceDecl'>UseLegacyServiceDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
