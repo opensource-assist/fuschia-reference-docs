@@ -331,24 +331,8 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-## Events {:#Events}
-*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#201)*
-
-
-### OnOutOfSpace {:#OnOutOfSpace}
-
- Event that is triggered when an update failed because blobfs is out of
- storage.
-
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
 ## OpenedRepository {:#OpenedRepository}
-*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#207)*
+*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#200)*
 
 
 ### GetUpdateComplete {:#GetUpdateComplete}
@@ -432,7 +416,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## FetchResult {:#FetchResult}
-*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#221)*
+*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#214)*
 
  A protocol providing results for a OpenedRepository.GetUpdateComplete call.
  Only one event will be sent before the channel is closed.

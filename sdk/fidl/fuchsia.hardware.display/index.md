@@ -805,9 +805,149 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### ImportImageForCapture {:#ImportImageForCapture}
+
+ Imports a buffer collection backed VMO into the display controller. The VMO
+ will be used by display controller to capture the image being displayed.
+ Returns ZX_OK along with an image_id.
+ image_id must be used by the client to start capture and/or release
+ resources allocated for capture.
+ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>image_config</code></td>
+            <td>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
+            </td>
+        </tr><tr>
+            <td><code>collection_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>index</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_ImportImageForCapture_Result'>Controller_ImportImageForCapture_Result</a></code>
+            </td>
+        </tr></table>
+
+### StartCapture {:#StartCapture}
+
+ Starts capture. Client must provide a valid signal_event_id and
+ image_id. signal_event_id must have been imported into the driver
+ using ImportEvent FIDL API. Image_id is the id from ImportImageForCapture.
+ The client will get notified once capture is complete via signal_event_id.
+ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>signal_event_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_StartCapture_Result'>Controller_StartCapture_Result</a></code>
+            </td>
+        </tr></table>
+
+### ReleaseCapture {:#ReleaseCapture}
+
+ Releases resources allocated for capture.
+ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_ReleaseCapture_Result'>Controller_ReleaseCapture_Result</a></code>
+            </td>
+        </tr></table>
+
 
 
 ## **STRUCTS**
+
+### Controller_ImportImageForCapture_Response {:#Controller_ImportImageForCapture_Response}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Controller_StartCapture_Response {:#Controller_StartCapture_Response}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#52)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Controller_ReleaseCapture_Response {:#Controller_ReleaseCapture_Response}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#59)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
 
 ### Mode {:#Mode}
 *Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#20)*
@@ -1247,6 +1387,65 @@ Type: <code>uint32</code>
 
 
 
+
+## **UNIONS**
+
+### Controller_ImportImageForCapture_Result {:#Controller_ImportImageForCapture_Result}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_ImportImageForCapture_Response'>Controller_ImportImageForCapture_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Controller_StartCapture_Result {:#Controller_StartCapture_Result}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#55)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_StartCapture_Response'>Controller_StartCapture_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Controller_ReleaseCapture_Result {:#Controller_ReleaseCapture_Result}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_ReleaseCapture_Response'>Controller_ReleaseCapture_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
 
 
 

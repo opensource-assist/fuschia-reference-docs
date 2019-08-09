@@ -1787,7 +1787,7 @@ Book: /_book.yaml
 </table>
 
 ### ColorSpace {:#ColorSpace}
-*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#62)*
+*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#65)*
 
 
 
@@ -2101,12 +2101,16 @@ Type: <code>uint32</code>
             <td><code>YV12</code></td>
             <td><code>107</code></td>
             <td></td>
+        </tr><tr>
+            <td><code>BGR24</code></td>
+            <td><code>108</code></td>
+            <td></td>
         </tr></table>
 
 ### ColorSpaceType {:#ColorSpaceType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#92)*
+*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#95)*
 
  This list has a separate entry for each variant of a color space standard.
 
