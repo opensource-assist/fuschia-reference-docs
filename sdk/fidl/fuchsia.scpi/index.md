@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## SystemController {:#SystemController}
-*Defined in [fuchsia.scpi/scpi.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scpi/scpi.fidl#59)*
+*Defined in [fuchsia.scpi/scpi.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scpi/scpi.fidl#55)*
 
 
 ### GetDvfsInfo {:#GetDvfsInfo}
@@ -114,14 +114,6 @@ Book: /_book.yaml
                 <code>uint32</code>
             </td>
             <td> operating point index for small cluster
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>temperature</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-            <td> current CPU temperature
 </td>
             <td>No default</td>
         </tr><tr>

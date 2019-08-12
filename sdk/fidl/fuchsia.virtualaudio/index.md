@@ -745,9 +745,10 @@ Book: /_book.yaml
 
 ### GetPosition {:#GetPosition}
 
- Return the current position (in bytes) within the ring buffer. This can
- only be called after the ring buffer is established. If the device has
- not yet Started streaming, then zero will always be returned.
+ Return the current position (in bytes) within the ring buffer, along
+ with the time (per MONOTONIC clock) that corresponds with that position.
+ This can only be called after the ring buffer is established. If the
+ device has not yet Started streaming, then zero will always be returned.
 
 #### Request
 <table>
@@ -759,14 +760,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -777,7 +778,10 @@ Book: /_book.yaml
  per-stream notifications is set by AudioCore, reported to VAD clients
  via `GetBuffer` or the `->OnBufferCreated` event. VirtualAudioDevice
  clients can enable an alternate notification frequency for a given
- stream by calling `SetNotificationFrequency`.
+ stream by calling `SetNotificationFrequency`. As with a direct call to
+ `GetPosition`, the returned parameters are the current position (in
+ bytes) in the ring buffer, as well as the time (per MONOTONIC clock)
+ that corresponds with that ring buffer position.
 
 
 
@@ -785,14 +789,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -1440,9 +1444,10 @@ Book: /_book.yaml
 
 ### GetPosition {:#GetPosition}
 
- Return the current position (in bytes) within the ring buffer. This can
- only be called after the ring buffer is established. If the device has
- not yet Started streaming, then zero will always be returned.
+ Return the current position (in bytes) within the ring buffer, along
+ with the time (per MONOTONIC clock) that corresponds with that position.
+ This can only be called after the ring buffer is established. If the
+ device has not yet Started streaming, then zero will always be returned.
 
 #### Request
 <table>
@@ -1454,14 +1459,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -1472,7 +1477,10 @@ Book: /_book.yaml
  per-stream notifications is set by AudioCore, reported to VAD clients
  via `GetBuffer` or the `->OnBufferCreated` event. VirtualAudioDevice
  clients can enable an alternate notification frequency for a given
- stream by calling `SetNotificationFrequency`.
+ stream by calling `SetNotificationFrequency`. As with a direct call to
+ `GetPosition`, the returned parameters are the current position (in
+ bytes) in the ring buffer, as well as the time (per MONOTONIC clock)
+ that corresponds with that ring buffer position.
 
 
 
@@ -1480,14 +1488,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -2135,9 +2143,10 @@ Book: /_book.yaml
 
 ### GetPosition {:#GetPosition}
 
- Return the current position (in bytes) within the ring buffer. This can
- only be called after the ring buffer is established. If the device has
- not yet Started streaming, then zero will always be returned.
+ Return the current position (in bytes) within the ring buffer, along
+ with the time (per MONOTONIC clock) that corresponds with that position.
+ This can only be called after the ring buffer is established. If the
+ device has not yet Started streaming, then zero will always be returned.
 
 #### Request
 <table>
@@ -2149,14 +2158,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -2167,7 +2176,10 @@ Book: /_book.yaml
  per-stream notifications is set by AudioCore, reported to VAD clients
  via `GetBuffer` or the `->OnBufferCreated` event. VirtualAudioDevice
  clients can enable an alternate notification frequency for a given
- stream by calling `SetNotificationFrequency`.
+ stream by calling `SetNotificationFrequency`. As with a direct call to
+ `GetPosition`, the returned parameters are the current position (in
+ bytes) in the ring buffer, as well as the time (per MONOTONIC clock)
+ that corresponds with that ring buffer position.
 
 
 
@@ -2175,14 +2187,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -2217,7 +2229,7 @@ Book: /_book.yaml
 
 
 ## Configuration {:#Configuration}
-*Defined in [fuchsia.virtualaudio/virtual_audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualaudio/virtual_audio.fidl#202)*
+*Defined in [fuchsia.virtualaudio/virtual_audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualaudio/virtual_audio.fidl#206)*
 
  This protocol is conceptually a base protocol to Device. It exposes the
  methods used to specify the properties of a virtual audio device (its

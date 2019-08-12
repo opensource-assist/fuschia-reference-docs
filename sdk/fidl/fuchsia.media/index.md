@@ -1983,6 +1983,26 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### OnStreamFailed2 {:#OnStreamFailed2}
+
+
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>stream_lifetime_ordinal</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>error</code></td>
+            <td>
+                <code><a class='link' href='#StreamError'>StreamError</a></code>
+            </td>
+        </tr></table>
+
 ### OnInputConstraints {:#OnInputConstraints}
 
 
@@ -2568,7 +2588,7 @@ Book: /_book.yaml
 </table>
 
 ### AudioCompressedFormatAac {:#AudioCompressedFormatAac}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#57)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#89)*
 
 
 
@@ -2579,7 +2599,7 @@ Book: /_book.yaml
 </table>
 
 ### AudioCompressedFormatSbc {:#AudioCompressedFormatSbc}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#60)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#92)*
 
 
 
@@ -2590,7 +2610,7 @@ Book: /_book.yaml
 </table>
 
 ### PcmFormat {:#PcmFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#119)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#151)*
 
 
 
@@ -2633,7 +2653,7 @@ Book: /_book.yaml
 </table>
 
 ### VideoUncompressedFormat {:#VideoUncompressedFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#200)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#232)*
 
 
 
@@ -2788,7 +2808,7 @@ Book: /_book.yaml
 </table>
 
 ### KeyId {:#KeyId}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#306)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#338)*
 
 
 
@@ -2809,7 +2829,7 @@ Book: /_book.yaml
 </table>
 
 ### SubsampleEntry {:#SubsampleEntry}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#315)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#347)*
 
 
 
@@ -2839,7 +2859,7 @@ Book: /_book.yaml
 </table>
 
 ### EncryptionPattern {:#EncryptionPattern}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#326)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#358)*
 
 
 
@@ -2870,7 +2890,7 @@ Book: /_book.yaml
 </table>
 
 ### SbcEncoderSettings {:#SbcEncoderSettings}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#440)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#472)*
 
 
 
@@ -2924,7 +2944,7 @@ Book: /_book.yaml
 </table>
 
 ### AacTransportRaw {:#AacTransportRaw}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#450)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#482)*
 
 
 
@@ -2936,7 +2956,7 @@ Book: /_book.yaml
 </table>
 
 ### AacConstantBitRate {:#AacConstantBitRate}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#462)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#494)*
 
 
 
@@ -2955,7 +2975,7 @@ Book: /_book.yaml
 </table>
 
 ### AacEncoderSettings {:#AacEncoderSettings}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#489)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#521)*
 
 
 
@@ -3331,10 +3351,53 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### AudioBitrateMode {:#AudioBitrateMode}
+### StreamError {:#StreamError}
 Type: <code>uint32</code>
 
 *Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#47)*
+
+ StreamError
+
+ This error code encapsulates various errors that might emanate from a
+ StreamProcessor server. It can be sent either as an OnStreamFailed event or
+ as an epitaph for the channel.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>UNKNOWN</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>INVALID_INPUT_FORMAT_DETAILS</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>INCOMPATIBLE_BUFFERS_PROVIDED</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DECODER_UNKNOWN</code></td>
+            <td><code>16777217</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ENCODER_UNKNOWN</code></td>
+            <td><code>33554433</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DECRYPTOR_UNKNOWN</code></td>
+            <td><code>50331649</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DECRYPTOR_NO_KEY</code></td>
+            <td><code>50331650</code></td>
+            <td></td>
+        </tr></table>
+
+### AudioBitrateMode {:#AudioBitrateMode}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#79)*
 
 
 
@@ -3356,7 +3419,7 @@ Type: <code>uint32</code>
 ### AudioPcmMode {:#AudioPcmMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#67)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#99)*
 
  AudioPcmMode
 
@@ -3380,7 +3443,7 @@ Type: <code>uint32</code>
 ### AudioChannelId {:#AudioChannelId}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#91)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#123)*
 
  AudioChannelId
 
@@ -3448,7 +3511,7 @@ Type: <code>uint32</code>
 ### VideoColorSpace {:#VideoColorSpace}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#188)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#220)*
 
 
 
@@ -3462,7 +3525,7 @@ Type: <code>uint32</code>
 ### SbcSubBands {:#SbcSubBands}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#409)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#441)*
 
 
 
@@ -3480,7 +3543,7 @@ Type: <code>uint32</code>
 ### SbcBlockCount {:#SbcBlockCount}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#414)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#446)*
 
 
 
@@ -3506,7 +3569,7 @@ Type: <code>uint32</code>
 ### SbcAllocation {:#SbcAllocation}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#421)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#453)*
 
 
 
@@ -3524,7 +3587,7 @@ Type: <code>uint32</code>
 ### SbcChannelMode {:#SbcChannelMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#426)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#458)*
 
 
 
@@ -3550,7 +3613,7 @@ Type: <code>uint32</code>
 ### AacChannelMode {:#AacChannelMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#457)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#489)*
 
 
 
@@ -3568,7 +3631,7 @@ Type: <code>uint32</code>
 ### AacVariableBitRate {:#AacVariableBitRate}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#471)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#503)*
 
  Variable bit rate modes. The actual resulting bitrate
  varies based on input signal and other encoding settings.
@@ -3602,7 +3665,7 @@ Type: <code>uint32</code>
 ### AacAudioObjectType {:#AacAudioObjectType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#484)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#516)*
 
 
 
@@ -3677,7 +3740,7 @@ Type: <code>uint32</code>
 ### EncryptedFormat {:#EncryptedFormat}
 
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#337)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#369)*
 
  EncryptedFormat
 
@@ -3759,7 +3822,7 @@ Type: <code>uint32</code>
 ### DecryptedFormat {:#DecryptedFormat}
 
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#384)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#416)*
 
  DecryptedFormat
 
@@ -3782,7 +3845,7 @@ Type: <code>uint32</code>
 ### FormatDetails {:#FormatDetails}
 
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#528)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#560)*
 
  FormatDetails
 
@@ -4433,7 +4496,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### AudioUncompressedFormat {:#AudioUncompressedFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#160)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#192)*
 
  AudioUncompressedFormat
 
@@ -4448,7 +4511,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### AudioFormat {:#AudioFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#167)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#199)*
 
  AudioFormat
 
@@ -4469,7 +4532,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### VideoCompressedFormat {:#VideoCompressedFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#179)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#211)*
 
  VideoCompressedFormat
 
@@ -4486,7 +4549,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### VideoFormat {:#VideoFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#298)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#330)*
 
  VideoFormat
 
@@ -4510,7 +4573,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### DomainFormat {:#DomainFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#401)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#433)*
 
  DomainFormat
 
@@ -4537,7 +4600,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### AacBitRate {:#AacBitRate}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#479)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#511)*
 
 
 <table>
@@ -4613,7 +4676,7 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### AudioCompressedFormat {:#AudioCompressedFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#42)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#74)*
 
 
 <table>
@@ -4632,7 +4695,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### CryptoFormat {:#CryptoFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#393)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#425)*
 
  CryptoFormat
 
@@ -4654,7 +4717,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### AacTransport {:#AacTransport}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#453)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#485)*
 
 
 <table>
@@ -4667,7 +4730,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### EncoderSettings {:#EncoderSettings}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#498)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#530)*
 
  Settings for encoders that tell them how to encode raw
  formats.
@@ -4858,7 +4921,7 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#407">kMaxOobBytesSize</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#439">kMaxOobBytesSize</a></td>
             <td>
                     <code>8192</code>
                 </td>
