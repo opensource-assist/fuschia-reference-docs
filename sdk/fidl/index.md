@@ -36,6 +36,7 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.exception/index">fuchsia.exception</a></td></tr>
 <tr><td><a href="fuchsia.feedback/index">fuchsia.feedback</a></td></tr>
 <tr><td><a href="fuchsia.gpu.magma/index">fuchsia.gpu.magma</a></td></tr>
+<tr><td><a href="fuchsia.hardware.block/index">fuchsia.hardware.block</a></td></tr>
 <tr><td><a href="fuchsia.hardware.bluetooth/index">fuchsia.hardware.bluetooth</a></td></tr>
 <tr><td><a href="fuchsia.hardware.display/index">fuchsia.hardware.display</a></td></tr>
 <tr><td><a href="fuchsia.hardware.ethernet/index">fuchsia.hardware.ethernet</a></td></tr>
@@ -83,6 +84,7 @@ Book: /_book.yaml
 <tr><td><a href="fuchsia.scpi/index">fuchsia.scpi</a></td></tr>
 <tr><td><a href="fuchsia.settings/index">fuchsia.settings</a></td></tr>
 <tr><td><a href="fuchsia.setui/index">fuchsia.setui</a></td></tr>
+<tr><td><a href="fuchsia.space/index">fuchsia.space</a></td></tr>
 <tr><td><a href="fuchsia.speech/index">fuchsia.speech</a></td></tr>
 <tr><td><a href="fuchsia.stash/index">fuchsia.stash</a></td></tr>
 <tr><td><a href="fuchsia.storage.metrics/index">fuchsia.storage.metrics</a></td></tr>

@@ -67,6 +67,8 @@ toc:
   path: /reference/fidl/fuchsia.feedback
 - title: fuchsia.gpu.magma
   path: /reference/fidl/fuchsia.gpu.magma
+- title: fuchsia.hardware.block
+  path: /reference/fidl/fuchsia.hardware.block
 - title: fuchsia.hardware.bluetooth
   path: /reference/fidl/fuchsia.hardware.bluetooth
 - title: fuchsia.hardware.display
@@ -161,6 +163,8 @@ toc:
   path: /reference/fidl/fuchsia.settings
 - title: fuchsia.setui
   path: /reference/fidl/fuchsia.setui
+- title: fuchsia.space
+  path: /reference/fidl/fuchsia.space
 - title: fuchsia.speech
   path: /reference/fidl/fuchsia.speech
 - title: fuchsia.stash

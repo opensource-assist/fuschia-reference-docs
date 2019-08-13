@@ -1253,7 +1253,7 @@ Book: /_book.yaml
                 <code>uint32</code>
             </td>
             <td></td>
-            <td>0xFFFFFFFF</td>
+            <td>4294967295</td>
         </tr><tr>
             <td><code>physically_contiguous_required</code></td>
             <td>
@@ -1475,7 +1475,7 @@ Book: /_book.yaml
  BufferSettings.size_bytes, and can also be enforced directly via this
  field.
 </td>
-            <td>0xFFFFFFFF</td>
+            <td>4294967295</td>
         </tr><tr>
             <td><code>layers</code></td>
             <td>

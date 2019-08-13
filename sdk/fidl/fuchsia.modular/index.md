@@ -6135,7 +6135,7 @@ Book: /_book.yaml
             <td> Relative emphasis of the child surface, relative to the parent.
  Influences relative areas of surfaces on screen.
 </td>
-            <td>1.0</td>
+            <td>1</td>
         </tr>
 </table>
 

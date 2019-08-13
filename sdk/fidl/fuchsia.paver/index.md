@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## PayloadStream {:#PayloadStream}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#45)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#46)*
 
  Protocol for streaming the FVM payload.
 
@@ -57,9 +57,15 @@ Book: /_book.yaml
         </tr></table>
 
 ## Paver {:#Paver}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#55)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#62)*
 
  Protocol for managing boot partitions.
+
+ Most of the protocol methods rely on auto-discovery of the storage device
+ which will be paved. If the device has no pre-initialized storage devices or
+ multiple, the methods will fail. For devices with dynamic partitions (i.e. GPT),
+ |InitializePartitionTables| and |WipeVolumes| can be used to control which device is
+ paved to.
 
 ### QueryActiveConfiguration {:#QueryActiveConfiguration}
 
@@ -279,10 +285,48 @@ Book: /_book.yaml
  Notable use cases include recovering from corrupted FVM as well as setting device to a
  "clean" state for automation.
 
+ If |block_device| is not provided, the paver will perform a search for
+ the the FVM. If multiple block devices have valid GPT, |block_device| can be provided
+ to specify which one to target. It assumed that channel backing
+ |block_device| also implements `fuchsia.io.Node` for now.
+
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
-    </table>
+    <tr>
+            <td><code>block_device</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.hardware.block/index.html'>fuchsia.hardware.block</a>/<a class='link' href='../fuchsia.hardware.block/index.html#Block'>Block</a>&gt;?</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+### InitializePartitionTables {:#InitializePartitionTables}
+
+ Initializes GPT on given block device and then adds an FVM partition.
+
+ |gpt_block_device| specifies the block device to use. It assumed that channel
+ backing |gpt_block_device| also implements `fuchsia.io.Node` for now.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>gpt_block_device</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.hardware.block/index.html'>fuchsia.hardware.block</a>/<a class='link' href='../fuchsia.hardware.block/index.html#Block'>Block</a>&gt;</code>
+            </td>
+        </tr></table>
 
 
 #### Response
@@ -318,7 +362,7 @@ Book: /_book.yaml
 </table>
 
 ### ReadInfo {:#ReadInfo}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#27)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#28)*
 
 
 
@@ -351,7 +395,7 @@ Book: /_book.yaml
 ### Configuration {:#Configuration}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#12)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#13)*
 
  Describes the version of an asset.
 
@@ -374,7 +418,7 @@ Type: <code>uint32</code>
 ### Asset {:#Asset}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#20)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#21)*
 
  Describes assets which may be updated. Each asset has 3 versions, each tied to a particular
  configuration.
@@ -417,7 +461,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### ReadResult {:#ReadResult}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#34)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#35)*
 
 
 <table>

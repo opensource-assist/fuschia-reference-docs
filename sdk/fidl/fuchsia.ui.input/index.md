@@ -535,14 +535,14 @@ Book: /_book.yaml
                 <code>float32</code>
             </td>
             <td></td>
-            <td>0.0</td>
+            <td>0</td>
         </tr><tr>
             <td><code>radius_minor</code></td>
             <td>
                 <code>float32</code>
             </td>
             <td></td>
-            <td>0.0</td>
+            <td>0</td>
         </tr><tr>
             <td><code>buttons</code></td>
             <td>
@@ -686,7 +686,7 @@ Book: /_book.yaml
                 <code>float32</code>
             </td>
             <td></td>
-            <td>1.0</td>
+            <td>1</td>
         </tr><tr>
             <td><code>scale</code></td>
             <td>

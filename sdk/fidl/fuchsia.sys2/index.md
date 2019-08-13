@@ -1082,10 +1082,56 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### ExposeServiceDecl {:#ExposeServiceDecl}
+
+
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#20)*
+
+ Declares a service exposed to a component's containing realm, such as a
+ service exposed by the component or one of its children at runtime.
+
+ To learn more about services, see:
+ https://fuchsia.dev/fuchsia-src/glossary#service
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The provider of the capability relative to the component itself. Must
+ be `self` or `child`.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>source_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> Path identifying the service, by which it was presented to this
+ component.
+
+ Must be an absolute path starting with /.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>target_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> The path by which the capability is being exposed.
+
+ Must be an absolute path starting with /.
+</td>
+        </tr></table>
+
 ### ExposeLegacyServiceDecl {:#ExposeLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#19)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#42)*
 
  Declares a legacy service exposed to a component's containing realm, such as
  a legacy service exposed by the component or one of its children at runtime.
@@ -1129,7 +1175,7 @@ Type: <code>uint32</code>
 ### ExposeDirectoryDecl {:#ExposeDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#36)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#59)*
 
  Declares a directory exposed to a component's containing realm, such as a
  directory exposed by the component or one of its children at runtime.
@@ -1167,10 +1213,64 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### OfferServiceDecl {:#OfferServiceDecl}
+
+
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#23)*
+
+ Declares a service offered by a component to one of its children, which may
+ have been offered by the component's containing realm, the component itself,
+ or one of its other children.
+
+ To learn more about services, see:
+ https://fuchsia.dev/fuchsia-src/glossary#service
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The provider of the capability relative to the component itself. Must be
+ `realm`, `self`, or `child`.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>source_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> Path identifying the service being offered.
+
+ Must be an absolute path starting with /.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>target</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> Reference to the target. Must be `child` or `collection`.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>target_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> The path under which the capability is being offered.
+
+ Must be an absolute path starting with /.
+</td>
+        </tr></table>
+
 ### OfferLegacyServiceDecl {:#OfferLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#22)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#48)*
 
  Declares a legacy service offered by a component to one of its children,
  which may have been offered by the component's containing realm, the
@@ -1222,7 +1322,7 @@ Type: <code>uint32</code>
 ### OfferDirectoryDecl {:#OfferDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#42)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#68)*
 
  Declares a directory offered by a component to one of its children, which
  may have been offered by the component's containing realm, the component
@@ -1272,7 +1372,7 @@ Type: <code>uint32</code>
 ### OfferStorageDecl {:#OfferStorageDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#63)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#89)*
 
  Declares a storage capability offered by a component to one of its children,
  such as meta storage offered by the component's containing realm or cache
@@ -1348,10 +1448,57 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### UseServiceDecl {:#UseServiceDecl}
+
+
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#21)*
+
+ Declares a service used by a component, which was offered to the component's
+ environment.
+
+ To learn more about services, see:
+ https://fuchsia.dev/fuchsia-src/glossary#service
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The provider of the service relative to the component itself. Must
+ be |realm| or |framework|.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>source_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> Path identifying the service, by which it was presented to this
+ component.
+
+ Must be an absolute path starting with /.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>target_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> The path where the capability should be installed in the component's
+ namespace.
+
+ Must be an absolute path starting with /.
+</td>
+        </tr></table>
+
 ### UseLegacyServiceDecl {:#UseLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#20)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#44)*
 
  Declares a legacy service used by a component, which was offered to the
  component's environment.
@@ -1396,7 +1543,7 @@ Type: <code>uint32</code>
 ### UseDirectoryDecl {:#UseDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#38)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#62)*
 
  Declares a directory used by a component, which was offered to the
  component's environment.
@@ -1438,7 +1585,7 @@ Type: <code>uint32</code>
 ### UseStorageDecl {:#UseStorageDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#56)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#80)*
 
  Declares storage used by a component, which was offered to the component's
  environment.
@@ -1831,6 +1978,12 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>service</code></td>
+            <td>
+                <code><a class='link' href='#ExposeServiceDecl'>ExposeServiceDecl</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
             <td><code>legacy_service</code></td>
             <td>
                 <code><a class='link' href='#ExposeLegacyServiceDecl'>ExposeLegacyServiceDecl</a></code>
@@ -1853,6 +2006,12 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>service</code></td>
+            <td>
+                <code><a class='link' href='#OfferServiceDecl'>OfferServiceDecl</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
             <td><code>legacy_service</code></td>
             <td>
                 <code><a class='link' href='#OfferLegacyServiceDecl'>OfferLegacyServiceDecl</a></code>
@@ -1925,6 +2084,12 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>service</code></td>
+            <td>
+                <code><a class='link' href='#UseServiceDecl'>UseServiceDecl</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
             <td><code>legacy_service</code></td>
             <td>
                 <code><a class='link' href='#UseLegacyServiceDecl'>UseLegacyServiceDecl</a></code>
