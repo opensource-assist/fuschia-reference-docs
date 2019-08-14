@@ -3,6 +3,8 @@ Book: /_book.yaml
 
 # fuchsia.modular
 
+ This file contains the definition of Link as well as the structure
+ of the data it holds.
 
 ## **PROTOCOLS**
 
@@ -7075,6 +7077,8 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
+ This file contains the definition of Link as well as the structure
+ of the data it holds.
 
 
 <table>

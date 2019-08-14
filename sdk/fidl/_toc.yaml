@@ -107,6 +107,8 @@ toc:
   path: /reference/fidl/fuchsia.media.playback
 - title: fuchsia.media.sessions
   path: /reference/fidl/fuchsia.media.sessions
+- title: fuchsia.media.sessions2
+  path: /reference/fidl/fuchsia.media.sessions2
 - title: fuchsia.mem
   path: /reference/fidl/fuchsia.mem
 - title: fuchsia.memory
@@ -185,6 +187,8 @@ toc:
   path: /reference/fidl/fuchsia.sysmem
 - title: fuchsia.telephony.snoop
   path: /reference/fidl/fuchsia.telephony.snoop
+- title: fuchsia.test
+  path: /reference/fidl/fuchsia.test
 - title: fuchsia.time
   path: /reference/fidl/fuchsia.time
 - title: fuchsia.timezone

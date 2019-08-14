@@ -3,6 +3,7 @@ Book: /_book.yaml
 
 # fuchsia.scpi
 
+ System Control Power Interface
 
 ## **PROTOCOLS**
 
@@ -205,6 +206,7 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
+ System Control Power Interface
 
 
 <table>

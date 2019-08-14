@@ -3,6 +3,15 @@ Book: /_book.yaml
 
 # fuchsia.hardware.pty
 
+ A PTY (pseudoterminal) emulates terminal devices, with a "server" side
+ (which represents the keyboard+monitor side of the terminal and is obtained
+ by opening /dev/misc/ptmx) and a number of "client" sides which are obtained
+ by calling `OpenClient`.
+
+ Client PTYs are identified by the `id` used in the `OpenClient` call. The
+ first Client PTY *must* be 0, and it is the only Client PTY that is allowed
+ to create additional Client PTYs, receive Events, etc. It is the
+ Controlling PTY.
 
 ## **PROTOCOLS**
 
@@ -771,6 +780,15 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
+ A PTY (pseudoterminal) emulates terminal devices, with a "server" side
+ (which represents the keyboard+monitor side of the terminal and is obtained
+ by opening /dev/misc/ptmx) and a number of "client" sides which are obtained
+ by calling `OpenClient`.
+
+ Client PTYs are identified by the `id` used in the `OpenClient` call. The
+ first Client PTY *must* be 0, and it is the only Client PTY that is allowed
+ to create additional Client PTYs, receive Events, etc. It is the
+ Controlling PTY.
 
 
 <table>

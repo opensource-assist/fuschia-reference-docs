@@ -94,8 +94,8 @@ Book: /_book.yaml
 ### WatchLeScanState {:#WatchLeScanState}
 
  Returns the latest state of the link layer LE scan procedure. This method returns when there
- is a state change since the last invocation of this method by this client (see [hanging get
- pattern](//docs/development/api/fidl.md#delay-responses-using-hanging-gets))
+ is a state change since the last invocation of this method by this client
+ (see [hanging get pattern](/docs/development/api/fidl.md#delay_responses_using_hanging_gets)).
 
 #### Request
 <table>

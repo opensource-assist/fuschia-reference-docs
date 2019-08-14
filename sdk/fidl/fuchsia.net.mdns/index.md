@@ -86,9 +86,9 @@ Book: /_book.yaml
 
 ### PublishServiceInstance {:#PublishServiceInstance}
 
- Publishes a service instance. `responder` is consulted via its
+ Publishes a service instance. `publication_responder` is consulted via its
  `OnPublication` method for initial announcements and to answer queries.
- The service is published until the `responder` channel closes. In
+ The service is published until the `publication_responder` channel closes. In
  addition to announcements and queries for the service type, all queries
  for subtypes are answered subject to filtering through the responder.
  `perform_probe` indicates whether a probe for a conflicting instance
@@ -114,7 +114,7 @@ Book: /_book.yaml
                 <code>bool</code>
             </td>
         </tr><tr>
-            <td><code>responder</code></td>
+            <td><code>publication_responder</code></td>
             <td>
                 <code><a class='link' href='#PublicationResponder'>PublicationResponder</a></code>
             </td>
