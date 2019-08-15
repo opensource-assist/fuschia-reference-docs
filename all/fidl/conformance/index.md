@@ -545,7 +545,7 @@ Book: /_book.yaml
 </table>
 
 ### TestInlineXUnionInStruct {:#TestInlineXUnionInStruct}
-*Defined in [conformance/xunion.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/xunion.test.fidl#27)*
+*Defined in [conformance/xunion.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/xunion.test.fidl#33)*
 
 
 
@@ -577,7 +577,7 @@ Book: /_book.yaml
 </table>
 
 ### TestOptionalXUnionInStruct {:#TestOptionalXUnionInStruct}
-*Defined in [conformance/xunion.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/xunion.test.fidl#33)*
+*Defined in [conformance/xunion.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/xunion.test.fidl#39)*
 
 
 
@@ -602,6 +602,24 @@ Book: /_book.yaml
             <td><code>after</code></td>
             <td>
                 <code>string</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TestStrictXUnionInStruct {:#TestStrictXUnionInStruct}
+*Defined in [conformance/xunion.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/xunion.test.fidl#45)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>xu</code></td>
+            <td>
+                <code><a class='link' href='#SampleStrictXUnion'>SampleStrictXUnion</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -840,6 +858,31 @@ Book: /_book.yaml
 
 ### SampleXUnion {:#SampleXUnion}
 *Defined in [conformance/xunion.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/xunion.test.fidl#21)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>u</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>su</code></td>
+            <td>
+                <code><a class='link' href='#SimpleUnion'>SimpleUnion</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>st</code></td>
+            <td>
+                <code><a class='link' href='#SimpleTable'>SimpleTable</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### SampleStrictXUnion {:#SampleStrictXUnion}
+*Defined in [conformance/xunion.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/xunion.test.fidl#27)*
 
 
 <table>
