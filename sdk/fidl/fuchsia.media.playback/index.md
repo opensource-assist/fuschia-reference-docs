@@ -924,38 +924,42 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#25">PROBLEM_INTERNAL</a></td>
             <td><code>fuchsia.media.playback.Internal</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#27">PROBLEM_ASSET_NOT_FOUND</a></td>
             <td><code>fuchsia.media.playback.AssetNotFound</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#29">PROBLEM_CONTAINER_NOT_SUPPORTED</a></td>
             <td><code>fuchsia.media.playback.ContainerNotSupported</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#31">PROBLEM_AUDIO_ENCODING_NOT_SUPPORTED</a></td>
             <td><code>fuchsia.media.playback.AudioEncodingNotSupported</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#33">PROBLEM_VIDEO_ENCODING_NOT_SUPPORTED</a></td>
             <td><code>fuchsia.media.playback.VideoEncodingNotSupported</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#35">PROBLEM_CONNECTION_FAILED</a></td>
             <td><code>fuchsia.media.playback.ConnectionFailed</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/seeking_reader.fidl#25">UNKNOWN_SIZE</a></td>
@@ -963,6 +967,9 @@ Book: /_book.yaml
                     <code>18446744073709551615</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Distinguished value for the `size` value returned by `SeekingReader.Describe`
+ Indicating that the size isn't known.
+</td>
         </tr>
     
 </table>

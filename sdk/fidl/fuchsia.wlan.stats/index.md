@@ -284,15 +284,14 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.stats/wlan_stats.fidl#29">RSSI_BINS</a></td>
             <td>
                     <code>129</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     
 </table>

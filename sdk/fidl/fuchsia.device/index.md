@@ -359,15 +359,15 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#10">MAX_DEVICE_NAME_LEN</a></td>
             <td>
                     <code>32</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maxmium length for a device name
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#12">MAX_DEVICE_PATH_LEN</a></td>
@@ -375,6 +375,8 @@ Book: /_book.yaml
                     <code>1024</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maximum length of a device path
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#14">MAX_DRIVER_NAME_LEN</a></td>
@@ -382,6 +384,8 @@ Book: /_book.yaml
                     <code>32</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maxmium length for a driver name
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#16">MAX_DRIVER_PATH_LEN</a></td>
@@ -389,6 +393,8 @@ Book: /_book.yaml
                     <code>1024</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maximum length for a driver path
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#20">DEVICE_SIGNAL_READABLE</a></td>
@@ -396,6 +402,9 @@ Book: /_book.yaml
                     <code>16777216</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Signal that will be active on a device event handle if the device's read() method
+ will return data.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#24">DEVICE_SIGNAL_OOB</a></td>
@@ -403,6 +412,10 @@ Book: /_book.yaml
                     <code>33554432</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Signal that will be active on a device event handle if the device has some out-of-band
+ mechanism that needs attention.
+ This is primarily used by the PTY support.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#27">DEVICE_SIGNAL_WRITABLE</a></td>
@@ -410,6 +423,9 @@ Book: /_book.yaml
                     <code>67108864</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Signal that will be active on a device event handle if the device's write() method
+ will accept data.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#30">DEVICE_SIGNAL_ERROR</a></td>
@@ -417,6 +433,9 @@ Book: /_book.yaml
                     <code>134217728</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Signal that will be active on a device event handle if the device has encountered an error.
+ This is primarily used by the PTY support.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#33">DEVICE_SIGNAL_HANGUP</a></td>
@@ -424,11 +443,15 @@ Book: /_book.yaml
                     <code>268435456</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Signal that will be active on a device event handle if the device has been disconnected.
+ This is primarily used by the PTY support.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/name-provider.fidl#9">DEFAULT_DEVICE_NAME</a></td>
             <td><code>fuchsia</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     
 </table>

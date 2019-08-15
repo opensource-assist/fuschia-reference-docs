@@ -1731,15 +1731,14 @@ Type: <code>int32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#41">MAX_BYTES_PER_EVENT</a></td>
             <td>
                     <code>102400</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     
 </table>

@@ -610,6 +610,7 @@ Book: /_book.yaml
 
 ### CreateAudioRenderer {:#CreateAudioRenderer}
 
+ Create an AudioRenderer which outputs audio to the default device.
 
 #### Request
 <table>
@@ -625,6 +626,9 @@ Book: /_book.yaml
 
 ### CreateAudioCapturer {:#CreateAudioCapturer}
 
+ Create an AudioCapturer which either captures from the current default
+ audio input device, or loops-back from the current default audio output
+ device based on value passed for the loopback flag.
 
 #### Request
 <table>
@@ -645,6 +649,19 @@ Book: /_book.yaml
 
 ### SetSystemGain {:#SetSystemGain}
 
+ System Gain and Mute
+
+ Fuchsia clients control the volume of individual audio streams via the
+ fuchsia.media.audio.GainControl protocol. System Gain and Mute affect
+ all audio output, and are controlled with methods that use the same
+ concepts as GainControl, namely: independent gain and mute, with change
+ notifications. Setting System Mute to true leads to the same outcome as
+ setting System Gain to MUTED_GAIN_DB: all audio output across the system
+ is silenced.
+ Sets the systemwide gain in decibels. `gain_db` values are clamped to
+ the range -160 db to 0 db, inclusive. This setting is applied to all
+ audio output devices. Audio input devices are unaffected.
+ Does not affect System Mute.
 
 #### Request
 <table>
@@ -660,6 +677,9 @@ Book: /_book.yaml
 
 ### SetSystemMute {:#SetSystemMute}
 
+ Sets/clears the systemwide 'Mute' state for audio output devices.
+ Audio input devices are unaffected. Changes to the System Mute state do
+ not affect the value of System Gain.
 
 #### Request
 <table>
@@ -675,6 +695,10 @@ Book: /_book.yaml
 
 ### SystemGainMuteChanged {:#SystemGainMuteChanged}
 
+ Provides current values for systemwide Gain and Mute. When a client
+ connects to AudioCore, the system immediately sends that client a
+ SystemGainMuteChanged event with the current system Gain|Mute settings.
+ Subsequent events will be sent when these Gain|Mute values change.
 
 
 
@@ -725,6 +749,8 @@ Book: /_book.yaml
 
 ### SetRenderUsageGain {:#SetRenderUsageGain}
 
+ Set the Usage gain applied to Renderers. By default, the gain for all
+ render usages is set to Unity (0 db).
 
 #### Request
 <table>
@@ -745,6 +771,8 @@ Book: /_book.yaml
 
 ### SetCaptureUsageGain {:#SetCaptureUsageGain}
 
+ Set the Usage gain applied to Capturers. By default, the gain for all
+ capture usages is set to Unity (0 db).
 
 #### Request
 <table>
@@ -3278,9 +3306,12 @@ Book: /_book.yaml
 ### AudioRenderUsage {:#AudioRenderUsage}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#94)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#81)*
 
  Usage annotating the purpose of the stream being used to render audio.
+ An AudioRenderer's usage cannot be changed after creation.  The
+ AudioRenderUsage is used by audio policy to dictate how audio streams
+ interact with each other.
 
 
 <table>
@@ -3309,9 +3340,11 @@ Type: <code>uint32</code>
 ### AudioCaptureUsage {:#AudioCaptureUsage}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#119)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#108)*
 
- Usages annotating the purpose of the stream being used to capture audio.
+ Usages annotating the purpose of the stream being used to capture audio. The
+ AudioCaptureUsage is used by audio policy to dictate how audio streams
+ interact with each other.
 
 
 <table>
@@ -3336,7 +3369,7 @@ Type: <code>uint32</code>
 ### AudioOutputRoutingPolicy {:#AudioOutputRoutingPolicy}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#150)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#139)*
 
 
 
@@ -4437,7 +4470,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Usage {:#Usage}
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#143)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#132)*
 
 
 <table>
@@ -4756,15 +4789,15 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#32">MIN_PCM_CHANNEL_COUNT</a></td>
             <td>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Permitted ranges for AudioRenderer and AudioCapturer
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#33">MAX_PCM_CHANNEL_COUNT</a></td>
@@ -4772,6 +4805,7 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#34">MIN_PCM_FRAMES_PER_SECOND</a></td>
@@ -4779,6 +4813,7 @@ Type: <code>uint32</code>
                     <code>1000</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#35">MAX_PCM_FRAMES_PER_SECOND</a></td>
@@ -4786,20 +4821,23 @@ Type: <code>uint32</code>
                     <code>192000</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#116">RENDER_USAGE_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#103">RENDER_USAGE_COUNT</a></td>
             <td>
                     <code>5</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#141">CAPTURE_USAGE_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#130">CAPTURE_USAGE_COUNT</a></td>
             <td>
                     <code>4</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#7">AudioGainInfoFlag_Mute</a></td>
@@ -4807,6 +4845,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#8">AudioGainInfoFlag_AgcSupported</a></td>
@@ -4814,6 +4853,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#9">AudioGainInfoFlag_AgcEnabled</a></td>
@@ -4821,6 +4861,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#29">SetAudioGainFlag_GainValid</a></td>
@@ -4828,6 +4869,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#30">SetAudioGainFlag_MuteValid</a></td>
@@ -4835,6 +4877,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#31">SetAudioGainFlag_AgcValid</a></td>
@@ -4842,41 +4885,51 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#17">METADATA_LABEL_TITLE</a></td>
             <td><code>fuchsia.media.title</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#18">METADATA_LABEL_ARTIST</a></td>
             <td><code>fuchsia.media.artist</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#19">METADATA_LABEL_ALBUM</a></td>
             <td><code>fuchsia.media.album</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#20">METADATA_LABEL_PUBLISHER</a></td>
             <td><code>fuchsia.media.publisher</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#21">METADATA_LABEL_GENRE</a></td>
             <td><code>fuchsia.media.genre</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#22">METADATA_LABEL_COMPOSER</a></td>
             <td><code>fuchsia.media.composer</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#26">METADATA_SOURCE_TITLE</a></td>
             <td><code>fuchsia.media.source_title</code></td>
                     <td><code>String</code></td>
+            <td> The title of the source of the media, e.g. a player, streaming service, or
+ website.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream.fidl#154">NO_TIMESTAMP</a></td>
@@ -4884,6 +4937,10 @@ Type: <code>uint32</code>
                     <code>9223372036854775807</code>
                 </td>
                 <td><code>int64</code></td>
+            <td> When used as a `StreamPacket.pts` value, indicates that the packet has no
+ specific presentation timestamp. The effective presentation time of such a
+ packet depends on the context in which the `StreamPacket` is used.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream.fidl#159">STREAM_PACKET_FLAG_KEY_FRAME</a></td>
@@ -4891,6 +4948,10 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Indicates that the packet can be understood without reference to other
+ packets in the stream. This is typically used in compressed streams to
+ identify packets that contain key frames.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream.fidl#165">STREAM_PACKET_FLAG_DROPPABLE</a></td>
@@ -4898,6 +4959,11 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Indicates that all other packets in the stream can be understood without
+ reference to this packet. This is typically used in compressed streams to
+ identify packets containing frames that may be discarded without affecting
+ other frames.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream.fidl#170">STREAM_PACKET_FLAG_DISCONTINUITY</a></td>
@@ -4905,6 +4971,10 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Indicates a discontinuity in an otherwise continuous-in-time sequence of
+ packets. The precise semantics of this flag depend on the context in which
+ the `StreamPacket` is used.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#9">KEY_ID_SIZE</a></td>
@@ -4912,6 +4982,7 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#10">MAX_INIT_VECTOR_SIZE</a></td>
@@ -4919,6 +4990,7 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#439">kMaxOobBytesSize</a></td>
@@ -4926,6 +4998,7 @@ Type: <code>uint32</code>
                     <code>8192</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#449">kDefaultInputPacketCountForClient</a></td>
@@ -4933,6 +5006,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#451">kDefaultOutputPacketCountForClient</a></td>
@@ -4940,6 +5014,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#458">kDefaultInputIsSingleBufferMode</a></td>
@@ -4947,6 +5022,7 @@ Type: <code>uint32</code>
                     <code>false</code>
                 </td>
                 <td><code>bool</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#459">kDefaultOutputIsSingleBufferMode</a></td>
@@ -4954,106 +5030,129 @@ Type: <code>uint32</code>
                     <code>false</code>
                 </td>
                 <td><code>bool</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#39">AUDIO_ENCODING_AAC</a></td>
             <td><code>fuchsia.media.aac</code></td>
                     <td><code>String</code></td>
+            <td> Audio encodings.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#40">AUDIO_ENCODING_AMRNB</a></td>
             <td><code>fuchsia.media.amrnb</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#41">AUDIO_ENCODING_AMRWB</a></td>
             <td><code>fuchsia.media.amrwb</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#42">AUDIO_ENCODING_APTX</a></td>
             <td><code>fuchsia.media.aptx</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#43">AUDIO_ENCODING_FLAC</a></td>
             <td><code>fuchsia.media.flac</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#44">AUDIO_ENCODING_GSMMS</a></td>
             <td><code>fuchsia.media.gsmms</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#45">AUDIO_ENCODING_LPCM</a></td>
             <td><code>fuchsia.media.lpcm</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#46">AUDIO_ENCODING_MP3</a></td>
             <td><code>fuchsia.media.mp3</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#47">AUDIO_ENCODING_PCMALAW</a></td>
             <td><code>fuchsia.media.pcmalaw</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#48">AUDIO_ENCODING_PCMMULAW</a></td>
             <td><code>fuchsia.media.pcmmulaw</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#49">AUDIO_ENCODING_SBC</a></td>
             <td><code>fuchsia.media.sbc</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#50">AUDIO_ENCODING_VORBIS</a></td>
             <td><code>fuchsia.media.vorbis</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#53">VIDEO_ENCODING_H263</a></td>
             <td><code>fuchsia.media.h263</code></td>
                     <td><code>String</code></td>
+            <td> Video encodings.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#54">VIDEO_ENCODING_H264</a></td>
             <td><code>fuchsia.media.h264</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#55">VIDEO_ENCODING_MPEG4</a></td>
             <td><code>fuchsia.media.mpeg4</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#56">VIDEO_ENCODING_THEORA</a></td>
             <td><code>fuchsia.media.theora</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#57">VIDEO_ENCODING_UNCOMPRESSED</a></td>
             <td><code>fuchsia.media.uncompressed_video</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#58">VIDEO_ENCODING_VP3</a></td>
             <td><code>fuchsia.media.vp3</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#59">VIDEO_ENCODING_VP8</a></td>
             <td><code>fuchsia.media.vp8</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#60">VIDEO_ENCODING_VP9</a></td>
             <td><code>fuchsia.media.vp9</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     
 </table>

@@ -1570,15 +1570,15 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#10">SUSPEND_FLAG_REBOOT</a></td>
             <td>
                     <code>3705405696</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Check the DDK for all available flags.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#11">SUSPEND_FLAG_POWEROFF</a></td>
@@ -1586,6 +1586,7 @@ Type: <code>uint32</code>
                     <code>3705405952</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#31">DEVICE_NAME_MAX</a></td>
@@ -1593,6 +1594,8 @@ Type: <code>uint32</code>
                     <code>31</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> This definition must match `ZX_DEVICE_NAME_MAX` and is checked by a static assert.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#35">DEVICE_PATH_MAX</a></td>
@@ -1600,6 +1603,8 @@ Type: <code>uint32</code>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum number of bytes in a path
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#38">DEVICE_ARGS_MAX</a></td>
@@ -1607,6 +1612,8 @@ Type: <code>uint32</code>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum number of bytes in a device arguments string.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#41">METADATA_MAX</a></td>
@@ -1614,6 +1621,8 @@ Type: <code>uint32</code>
                     <code>8192</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum number of bytes in a metadata payload
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#44">PROPERTIES_MAX</a></td>
@@ -1621,6 +1630,8 @@ Type: <code>uint32</code>
                     <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum number of properties that can be attached to a device
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#47">COMPONENTS_MAX</a></td>
@@ -1628,6 +1639,8 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum number of components that a composite device can have
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#50">DEVICE_COMPONENT_PARTS_MAX</a></td>
@@ -1635,6 +1648,8 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum number of parts that a composite device component can have
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#53">DEVICE_COMPONENT_PART_INSTRUCTIONS_MAX</a></td>
@@ -1642,6 +1657,8 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum instructions in a match program
+</td>
         </tr>
     
 </table>

@@ -170,15 +170,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysinfo/sysinfo.fidl#9">SYSINFO_BOARD_NAME_LEN</a></td>
             <td>
                     <code>32</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     
 </table>

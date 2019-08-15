@@ -449,15 +449,14 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#14">INFO_FEATURE_WLAN</a></td>
             <td>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#15">INFO_FEATURE_SYNTH</a></td>
@@ -465,6 +464,7 @@ Book: /_book.yaml
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#16">INFO_FEATURE_LOOPBACK</a></td>
@@ -472,6 +472,7 @@ Book: /_book.yaml
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#37">SIGNAL_STATUS</a></td>
@@ -479,6 +480,7 @@ Book: /_book.yaml
                     <code>16777216</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#40">DEVICE_STATUS_ONLINE</a></td>
@@ -486,6 +488,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#43">MAX_CLIENT_NAME_LEN</a></td>
@@ -493,6 +496,7 @@ Book: /_book.yaml
                     <code>15</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#47">SET_CLIENT_NAME_MAX_LEN</a></td>
@@ -500,6 +504,7 @@ Book: /_book.yaml
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

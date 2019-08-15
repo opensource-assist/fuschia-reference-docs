@@ -494,15 +494,14 @@ Type: <code>int32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#193">DEFAULT_SRV_PRIORITY</a></td>
             <td>
                     <code>0</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#194">DEFAULT_SRV_WEIGHT</a></td>
@@ -510,6 +509,7 @@ Type: <code>int32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#195">DEFAULT_PTR_TTL</a></td>
@@ -517,6 +517,7 @@ Type: <code>int32</code>
                     <code>4500000000000</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#196">DEFAULT_SRV_TTL</a></td>
@@ -524,6 +525,7 @@ Type: <code>int32</code>
                     <code>120000000000</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#197">DEFAULT_TXT_TTL</a></td>
@@ -531,6 +533,7 @@ Type: <code>int32</code>
                     <code>4500000000000</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     
 </table>

@@ -861,15 +861,14 @@ Type: <code>uint8</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#9">MAX_LEGACY_ADVERTISING_DATA_LENGTH</a></td>
             <td>
                     <code>31</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#10">MAX_EXTENDED_ADVERTISING_DATA_LENGTH</a></td>
@@ -877,6 +876,7 @@ Type: <code>uint8</code>
                     <code>251</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     
 </table>

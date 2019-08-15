@@ -456,15 +456,15 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/resolver.fidl#11">MAX_RESOLVE_NAME_SIZE</a></td>
             <td>
                     <code>2048</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum size for a name used by `Resolver`.
+</td>
         </tr>
     
 </table>

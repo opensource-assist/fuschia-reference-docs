@@ -3023,6 +3023,31 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### GetInfo2 {:#GetInfo2}
+
+ For transition purposes only.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>info</code></td>
+            <td>
+                <code><a class='link' href='#StoryInfo2'>StoryInfo2</a></code>
+            </td>
+        </tr><tr>
+            <td><code>state</code></td>
+            <td>
+                <code><a class='link' href='#StoryState'>StoryState</a></code>
+            </td>
+        </tr></table>
+
 ### RequestStart {:#RequestStart}
 
  Requests to run the story controlled by this `StoryController` instance.
@@ -3181,7 +3206,7 @@ Book: /_book.yaml
 
 
 ## StoryWatcher {:#StoryWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#57)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#61)*
 
  Implemented by the client calling StoryController.Watch().
 
@@ -3235,7 +3260,7 @@ Book: /_book.yaml
 
 
 ## StoryLinksWatcher {:#StoryLinksWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#73)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#77)*
 
  Implemented by the client calling StoryController.GetActiveLinks().
 
@@ -3307,6 +3332,31 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### GetStories2 {:#GetStories2}
+
+ For transition purposes only.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>watcher</code></td>
+            <td>
+                <code><a class='link' href='#StoryProviderWatcher'>StoryProviderWatcher</a>?</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>story_infos</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#StoryInfo2'>StoryInfo2</a>&gt;</code>
+            </td>
+        </tr></table>
+
 ### GetStoryInfo {:#GetStoryInfo}
 
  Requests detailed information about the given story. If the story doesn't
@@ -3330,6 +3380,31 @@ Book: /_book.yaml
             <td><code>story_info</code></td>
             <td>
                 <code><a class='link' href='#StoryInfo'>StoryInfo</a>?</code>
+            </td>
+        </tr></table>
+
+### GetStoryInfo2 {:#GetStoryInfo2}
+
+ For transition purposes only.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>story_id</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>story_info</code></td>
+            <td>
+                <code><a class='link' href='#StoryInfo2'>StoryInfo2</a></code>
             </td>
         </tr></table>
 
@@ -3377,6 +3452,26 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### PreviousStories2 {:#PreviousStories2}
+
+ DEPRECATED: In favor of GetStories2(). For transition purposes only.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>story_infos</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#StoryInfo2'>StoryInfo2</a>&gt;</code>
+            </td>
+        </tr></table>
+
 ### Watch {:#Watch}
 
  Registers a watcher for changes in the story collection.
@@ -3413,7 +3508,7 @@ Book: /_book.yaml
 
 
 ## StoryProviderWatcher {:#StoryProviderWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#44)*
+*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#56)*
 
  Implemented by clients of StoryProvider.
 
@@ -3473,8 +3568,7 @@ Book: /_book.yaml
 
 ### OnChange2 {:#OnChange2}
 
- This method *will not be called* but exists for transition purposes.
- Clients should implement a no-op stub.
+ For transition purposes only.
 
 #### Request
 <table>
@@ -3519,7 +3613,7 @@ Book: /_book.yaml
 
 
 ## StoryActivityWatcher {:#StoryActivityWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#101)*
+*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#112)*
 
  Implemented by clients of StoryProvider in order to inform them about ongoing
  activities in stories. `activities` is the entire list of ongoing activities
@@ -7077,17 +7171,15 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
- This file contains the definition of Link as well as the structure
- of the data it holds.
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#19">MAX_ANNOTATION_KEY_LENGTH</a></td>
             <td>
                     <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum length of <a class='link' href='#AnnotationKey'>AnnotationKey</a>.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#23">MAX_ANNOTATION_VALUE_LENGTH</a></td>
@@ -7095,6 +7187,9 @@ Type: <code>uint32</code>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum length of <a class='link' href='#AnnotationValue'>AnnotationValue</a> fields:
+ `text` and `bytes`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#29">MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES</a></td>
@@ -7102,6 +7197,11 @@ Type: <code>uint32</code>
                     <code>102400</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum length of the <a class='link' href='#AnnotationValue.buffer'>AnnotationValue.buffer</a> field, in
+ bytes.
+
+ Does not apply to other fields; see <a class='link' href='#MAX_ANNOTATION_VALUE_LENGTH'>MAX_ANNOTATION_VALUE_LENGTH</a>.
+</td>
         </tr>
     
 </table>

@@ -213,6 +213,61 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## Privacy {:#Privacy}
+*Defined in [fuchsia.settings/privacy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/privacy.fidl#7)*
+
+
+### Watch {:#Watch}
+
+ Notifies of a change in privacy settings.
+
+ On a given connection, the first call will return the current `settings` value while
+ subsequent calls will only return the new `settings` value upon a value change. This
+ follows the hanging get pattern.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Privacy_Watch_Result'>Privacy_Watch_Result</a></code>
+            </td>
+        </tr></table>
+
+### Set {:#Set}
+
+ Sets the privacy settings.
+
+ Any field not explicitly set in `settings` performs a no-op, and will not make any changes.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>settings</code></td>
+            <td>
+                <code><a class='link' href='#PrivacySettings'>PrivacySettings</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Privacy_Set_Result'>Privacy_Set_Result</a></code>
+            </td>
+        </tr></table>
+
 ## System {:#System}
 *Defined in [fuchsia.settings/system.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/system.fidl#9)*
 
@@ -327,8 +382,37 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
-### System_Watch_Response {:#System_Watch_Response}
+### Privacy_Watch_Response {:#Privacy_Watch_Response}
 *Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#38)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>settings</code></td>
+            <td>
+                <code><a class='link' href='#PrivacySettings'>PrivacySettings</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Privacy_Set_Response {:#Privacy_Set_Response}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### System_Watch_Response {:#System_Watch_Response}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#52)*
 
 
 
@@ -346,7 +430,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Set_Response {:#System_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#59)*
 
 
 
@@ -770,6 +854,26 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### PrivacySettings {:#PrivacySettings}
+
+
+*Defined in [fuchsia.settings/privacy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/privacy.fidl#21)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>user_data_sharing_consent</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> Reflects the user consent to have their user data shared with the product owner, e.g., for
+ metrics collection and crash reporting.
+</td>
+        </tr></table>
+
 ### SystemSettings {:#SystemSettings}
 
 
@@ -870,8 +974,46 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### System_Watch_Result {:#System_Watch_Result}
+### Privacy_Watch_Result {:#Privacy_Watch_Result}
 *Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#41)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Privacy_Watch_Response'>Privacy_Watch_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Privacy_Set_Result {:#Privacy_Set_Result}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Privacy_Set_Response'>Privacy_Set_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### System_Watch_Result {:#System_Watch_Result}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#55)*
 
 
 <table>
@@ -890,7 +1032,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### System_Set_Result {:#System_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
 
 
 <table>

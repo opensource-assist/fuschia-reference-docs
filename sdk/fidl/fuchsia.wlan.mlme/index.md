@@ -4458,15 +4458,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#683">countryEnvironAll</a></td>
             <td>
                     <code>32</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#684">countryEnvironOutdoor</a></td>
@@ -4474,6 +4473,7 @@ Type: <code>uint32</code>
                     <code>79</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#685">countryEnvironIndoor</a></td>
@@ -4481,6 +4481,7 @@ Type: <code>uint32</code>
                     <code>73</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#686">countryEnvironNonCountry</a></td>
@@ -4488,6 +4489,7 @@ Type: <code>uint32</code>
                     <code>88</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     
 </table>

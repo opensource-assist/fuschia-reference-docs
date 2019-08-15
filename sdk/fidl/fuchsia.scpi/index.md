@@ -206,16 +206,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
- System Control Power Interface
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scpi/scpi.fidl#8">MAX_DVFS_OPPS</a></td>
             <td>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

@@ -761,15 +761,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#59">kPSM_SDP</a></td>
             <td>
                     <code>1</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#60">kPSM_RFCOMM</a></td>
@@ -777,6 +776,7 @@ Type: <code>uint32</code>
                     <code>3</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#61">kPSM_TCSBIN</a></td>
@@ -784,6 +784,7 @@ Type: <code>uint32</code>
                     <code>5</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#62">kPSM_TCSBINCordless</a></td>
@@ -791,6 +792,7 @@ Type: <code>uint32</code>
                     <code>7</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#63">kPSM_BNEP</a></td>
@@ -798,6 +800,7 @@ Type: <code>uint32</code>
                     <code>15</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#64">kPSM_HIDControl</a></td>
@@ -805,6 +808,7 @@ Type: <code>uint32</code>
                     <code>17</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#65">kPSM_HIDInterrupt</a></td>
@@ -812,6 +816,7 @@ Type: <code>uint32</code>
                     <code>19</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#66">kPSM_AVCTP</a></td>
@@ -819,6 +824,7 @@ Type: <code>uint32</code>
                     <code>23</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#67">kPSM_AVDTP</a></td>
@@ -826,6 +832,7 @@ Type: <code>uint32</code>
                     <code>25</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#68">kPSM_AVCTP_Browse</a></td>
@@ -833,6 +840,7 @@ Type: <code>uint32</code>
                     <code>27</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#69">kPSM_ATT</a></td>
@@ -840,6 +848,7 @@ Type: <code>uint32</code>
                     <code>31</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#70">kPSM_3DSP</a></td>
@@ -847,6 +856,7 @@ Type: <code>uint32</code>
                     <code>33</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#71">kPSM_LE_IPSP</a></td>
@@ -854,6 +864,7 @@ Type: <code>uint32</code>
                     <code>35</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#72">kPSM_OTS</a></td>
@@ -861,6 +872,7 @@ Type: <code>uint32</code>
                     <code>37</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#168">ATTR_SERVICE_RECORD_HANDLE</a></td>
@@ -868,6 +880,7 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#169">ATTR_SERVICE_CLASS_ID_LIST</a></td>
@@ -875,6 +888,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#170">ATTR_SERVICE_RECORD_STATE</a></td>
@@ -882,6 +896,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#171">ATTR_SERVICE_ID</a></td>
@@ -889,6 +904,7 @@ Type: <code>uint32</code>
                     <code>3</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#172">ATTR_PROTOCOL_DESCRIPTOR_LIST</a></td>
@@ -896,6 +912,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#173">ATTR_ADDITIONAL_PROTOCOL_DESCRIPTOR_LIST</a></td>
@@ -903,6 +920,7 @@ Type: <code>uint32</code>
                     <code>13</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#174">ATTR_BROWSE_GROUP_LIST</a></td>
@@ -910,6 +928,7 @@ Type: <code>uint32</code>
                     <code>5</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#175">ATTR_LANGUAGE_BASE_ATTRIBUTE_ID_LIST</a></td>
@@ -917,6 +936,7 @@ Type: <code>uint32</code>
                     <code>6</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#176">ATTR_SERVICE_INFO_TIME_TO_LIVE</a></td>
@@ -924,6 +944,7 @@ Type: <code>uint32</code>
                     <code>7</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#177">ATTR_SERVICE_AVAILABILITY</a></td>
@@ -931,6 +952,7 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#178">ATTR_BLUETOOTH_PROFILE_DESCRIPTOR_LIST</a></td>
@@ -938,6 +960,7 @@ Type: <code>uint32</code>
                     <code>9</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     
 </table>

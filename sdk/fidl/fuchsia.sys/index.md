@@ -868,15 +868,15 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/environment.fidl#8">kLabelMaxLength</a></td>
             <td>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum length for an environment label.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/types.fidl#11">MAX_URL_LENGTH</a></td>
@@ -884,6 +884,7 @@ Type: <code>uint32</code>
                     <code>2083</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     
 </table>

@@ -330,15 +330,15 @@ Type: <code>uint8</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-tracing-provider/provider.fidl#10">MAX_PROVIDER_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum length of a provider's name.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-tracing-provider/provider.fidl#13">MAX_NUM_CATEGORIES</a></td>
@@ -346,6 +346,8 @@ Type: <code>uint8</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum number of categories supported.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-tracing-provider/provider.fidl#16">MAX_CATEGORY_NAME_LENGTH</a></td>
@@ -353,6 +355,8 @@ Type: <code>uint8</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum length of a category name.
+</td>
         </tr>
     
 </table>

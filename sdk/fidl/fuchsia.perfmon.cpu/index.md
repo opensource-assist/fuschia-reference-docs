@@ -564,15 +564,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-perfmon-cpu/perfmon.fidl#21">API_VERSION</a></td>
             <td>
                     <code>0</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-perfmon-cpu/perfmon.fidl#25">MAX_NUM_EVENTS</a></td>
@@ -580,6 +579,9 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td> The maximum number of events we support simultaneously.
+ Typically the h/w supports less than this, e.g., 7 or so.
+</td>
         </tr>
     
 </table>

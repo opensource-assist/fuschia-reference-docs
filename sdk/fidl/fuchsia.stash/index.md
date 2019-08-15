@@ -432,15 +432,16 @@ Type: <code>uint8</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#9">MAX_STRING_SIZE</a></td>
             <td>
                     <code>12000</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Strings over 12 kb will be tossed. This number is chosen arbitrarily, if you
+ think it should be higher just ask.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#10">MAX_KEY_SIZE</a></td>
@@ -448,6 +449,7 @@ Type: <code>uint8</code>
                     <code>256</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     
 </table>
