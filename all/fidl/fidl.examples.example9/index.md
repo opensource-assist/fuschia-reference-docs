@@ -67,7 +67,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.example9/index.html#EchoMe'>EchoMe</a></code>
+                <code><a class='link' href='#EchoMe'>EchoMe</a></code>
             </td>
         </tr></table>
 
@@ -78,7 +78,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.example9/index.html#EchoMe'>EchoMe</a></code>
+                <code><a class='link' href='#EchoMe'>EchoMe</a></code>
             </td>
         </tr></table>
 
@@ -139,7 +139,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.example9/index.html#EchoMore'>EchoMore</a></code>
+                <code><a class='link' href='#EchoMore'>EchoMore</a></code>
             </td>
         </tr></table>
 
@@ -150,7 +150,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.example9/index.html#EchoMore'>EchoMore</a></code>
+                <code><a class='link' href='#EchoMore'>EchoMore</a></code>
             </td>
         </tr></table>
 

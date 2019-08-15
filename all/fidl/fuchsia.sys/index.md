@@ -70,7 +70,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>termination_reason</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#TerminationReason'>TerminationReason</a></code>
+                <code><a class='link' href='#TerminationReason'>TerminationReason</a></code>
             </td>
         </tr></table>
 
@@ -79,7 +79,7 @@ Book: /_book.yaml
  Event that is triggered when the component's output directory is mounted.
 
  This event will not be triggered for every component, only those that
- serve a directory over their PA_DIRECTORY_REQUEST handle.
+ serve a directory over their `PA_DIRECTORY_REQUEST` handle.
 
 
 
@@ -130,12 +130,12 @@ Book: /_book.yaml
     <tr>
             <td><code>environment</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sys/index.html#Environment'>Environment</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Environment'>Environment</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sys/index.html#EnvironmentController'>EnvironmentController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#EnvironmentController'>EnvironmentController</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>label</code></td>
@@ -145,12 +145,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>additional_services</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#ServiceList'>ServiceList</a>?</code>
+                <code><a class='link' href='#ServiceList'>ServiceList</a>?</code>
             </td>
         </tr><tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#EnvironmentOptions'>EnvironmentOptions</a></code>
+                <code><a class='link' href='#EnvironmentOptions'>EnvironmentOptions</a></code>
             </td>
         </tr></table>
 
@@ -169,7 +169,7 @@ Book: /_book.yaml
     <tr>
             <td><code>launcher</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sys/index.html#Launcher'>Launcher</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Launcher'>Launcher</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -186,7 +186,7 @@ Book: /_book.yaml
     <tr>
             <td><code>services</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sys/index.html#ServiceProvider'>ServiceProvider</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ServiceProvider'>ServiceProvider</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -318,12 +318,12 @@ Book: /_book.yaml
     <tr>
             <td><code>launch_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#LaunchInfo'>LaunchInfo</a></code>
+                <code><a class='link' href='#LaunchInfo'>LaunchInfo</a></code>
             </td>
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sys/index.html#ComponentController'>ComponentController</a>&gt;?</code>
+                <code>request&lt;<a class='link' href='#ComponentController'>ComponentController</a>&gt;?</code>
             </td>
         </tr></table>
 
@@ -355,7 +355,7 @@ Book: /_book.yaml
     <tr>
             <td><code>package</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#Package'>Package</a>?</code>
+                <code><a class='link' href='#Package'>Package</a>?</code>
             </td>
         </tr></table>
 
@@ -386,17 +386,17 @@ Book: /_book.yaml
     <tr>
             <td><code>package</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#Package'>Package</a></code>
+                <code><a class='link' href='#Package'>Package</a></code>
             </td>
         </tr><tr>
             <td><code>startup_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#StartupInfo'>StartupInfo</a></code>
+                <code><a class='link' href='#StartupInfo'>StartupInfo</a></code>
             </td>
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sys/index.html#ComponentController'>ComponentController</a>&gt;?</code>
+                <code>request&lt;<a class='link' href='#ComponentController'>ComponentController</a>&gt;?</code>
             </td>
         </tr></table>
 
@@ -473,7 +473,7 @@ Book: /_book.yaml
                 <code>bool</code>
             </td>
             <td> True if this environment should be killed first in out of memory
- situations by setting the ZX_PROP_JOB_KILL_ON_OOM property on this
+ situations by setting the `ZX_PROP_JOB_KILL_ON_OOM` property on this
  environment's job.
 </td>
             <td>No default</td>
@@ -532,7 +532,7 @@ Book: /_book.yaml
             <td>
                 <code>int32</code>
             </td>
-            <td> The FDIO types of the handle (e.g., FA_FDIO_REMOTE).
+            <td> The FDIO types of the handle (e.g., `FA_FDIO_REMOTE`).
 </td>
             <td>No default</td>
         </tr><tr>
@@ -607,7 +607,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>out</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#FileDescriptor'>FileDescriptor</a>?</code>
+                <code><a class='link' href='#FileDescriptor'>FileDescriptor</a>?</code>
             </td>
             <td> The file descriptor to use for stdout.
 
@@ -617,7 +617,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#FileDescriptor'>FileDescriptor</a>?</code>
+                <code><a class='link' href='#FileDescriptor'>FileDescriptor</a>?</code>
             </td>
             <td> The file descriptor to use for stderr.
 
@@ -637,7 +637,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>flat_namespace</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#FlatNamespace'>FlatNamespace</a>?</code>
+                <code><a class='link' href='#FlatNamespace'>FlatNamespace</a>?</code>
             </td>
             <td> A custom namespace that can be appended to the namespace generated by
  appmgr and provided to this component.
@@ -649,7 +649,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>additional_services</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#ServiceList'>ServiceList</a>?</code>
+                <code><a class='link' href='#ServiceList'>ServiceList</a>?</code>
             </td>
             <td> A list of services to be added to this component's svc namespace. These
  services are in addition to those coming from Environment.
@@ -677,7 +677,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#ServiceProvider'>ServiceProvider</a>?</code>
+                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a>?</code>
             </td>
             <td> A service provider to get the services listed in `names` from.
 </td>
@@ -708,7 +708,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>launch_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#LaunchInfo'>LaunchInfo</a></code>
+                <code><a class='link' href='#LaunchInfo'>LaunchInfo</a></code>
             </td>
             <td> The launch info for the component to start.
 </td>
@@ -716,7 +716,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>flat_namespace</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys/index.html#FlatNamespace'>FlatNamespace</a></code>
+                <code><a class='link' href='#FlatNamespace'>FlatNamespace</a></code>
             </td>
             <td> The namespace in which to run the component.
 </td>
@@ -724,7 +724,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>program_metadata</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys/index.html#ProgramMetadata'>ProgramMetadata</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#ProgramMetadata'>ProgramMetadata</a>&gt;?</code>
             </td>
             <td> Key string value string map of the component's program metadata,
  obtained from its component manifest.

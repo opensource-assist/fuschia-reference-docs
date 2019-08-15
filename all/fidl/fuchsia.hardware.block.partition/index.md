@@ -174,7 +174,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>guid</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.block.partition/index.html#GUID'>GUID</a>?</code>
+                <code><a class='link' href='#GUID'>GUID</a>?</code>
             </td>
         </tr></table>
 
@@ -198,7 +198,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>guid</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.block.partition/index.html#GUID'>GUID</a>?</code>
+                <code><a class='link' href='#GUID'>GUID</a>?</code>
             </td>
         </tr></table>
 

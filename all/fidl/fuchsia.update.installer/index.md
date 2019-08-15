@@ -34,7 +34,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#UpdateResult'>UpdateResult</a></code>
+                <code><a class='link' href='#UpdateResult'>UpdateResult</a></code>
             </td>
         </tr></table>
 
@@ -64,7 +64,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#UpdateResult'>UpdateResult</a></code>
+                <code><a class='link' href='#UpdateResult'>UpdateResult</a></code>
             </td>
         </tr></table>
 
@@ -78,7 +78,7 @@ Book: /_book.yaml
      with the existing `options` if an update attempt is already in progress.
  + request `monitor` A protocol on which to receive progress updates.
  + request `monitor_options` Configuration options to control the behavior of the
-     given <a class='link' href='../fuchsia.update.installer/index.html#Monitor'>Monitor</a>.
+     given <a class='link' href='#Monitor'>Monitor</a>.
 
  - response `attempt_id` UUID identifying this update attempt. For
      updates that require a reboot, components may use this identifier to
@@ -96,17 +96,17 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#Options'>Options</a></code>
+                <code><a class='link' href='#Options'>Options</a></code>
             </td>
         </tr><tr>
             <td><code>monitor</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.update.installer/index.html#Monitor'>Monitor</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Monitor'>Monitor</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>monitor_options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#MonitorOptions'>MonitorOptions</a></code>
+                <code><a class='link' href='#MonitorOptions'>MonitorOptions</a></code>
             </td>
         </tr></table>
 
@@ -130,7 +130,7 @@ Book: /_book.yaml
      not given, monitor any active update attempt.
  + request `monitor` A protocol on which to receive progress updates.
  + request `monitor_options` Configuration options to control the behavior of the
-     given <a class='link' href='../fuchsia.update.installer/index.html#Monitor'>Monitor</a>.
+     given <a class='link' href='#Monitor'>Monitor</a>.
 
  - response `attached` Whether or not the provided monitor was attached
      to an in-progress update attempt. If false, monitor will be closed
@@ -147,12 +147,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>monitor</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.update.installer/index.html#Monitor'>Monitor</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Monitor'>Monitor</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>monitor_options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#MonitorOptions'>MonitorOptions</a></code>
+                <code><a class='link' href='#MonitorOptions'>MonitorOptions</a></code>
             </td>
         </tr></table>
 
@@ -172,10 +172,10 @@ Book: /_book.yaml
  Monitor all update attempts as they start, as well as an in-progress
  attempt, if there is one.
 
- + request `attempts_monitor` A protocol on which to receive <a class='link' href='../fuchsia.update.installer/index.html#Monitor'>Monitor</a>
+ + request `attempts_monitor` A protocol on which to receive <a class='link' href='#Monitor'>Monitor</a>
      instances as update attempts start.
  + request `monitor_options` Configuration options to control the behavior of the
-     given <a class='link' href='../fuchsia.update.installer/index.html#Monitor'>Monitor</a>.
+     given <a class='link' href='#Monitor'>Monitor</a>.
 
 #### Request
 <table>
@@ -183,12 +183,12 @@ Book: /_book.yaml
     <tr>
             <td><code>attempts_monitor</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.update.installer/index.html#AttemptsMonitor'>AttemptsMonitor</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AttemptsMonitor'>AttemptsMonitor</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>monitor_options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#MonitorOptions'>MonitorOptions</a></code>
+                <code><a class='link' href='#MonitorOptions'>MonitorOptions</a></code>
             </td>
         </tr></table>
 
@@ -219,7 +219,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>monitor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#Monitor'>Monitor</a></code>
+                <code><a class='link' href='#Monitor'>Monitor</a></code>
             </td>
         </tr></table>
 
@@ -229,7 +229,7 @@ Book: /_book.yaml
  Monitors an update attempt.
 
  When a Monitor is attached to an update attempt with
- <a class='link' href='../fuchsia.update.installer/index.html#MonitorOptions.should_notify'>MonitorOptions.should_notify</a> set to true, the server will emit events on
+ <a class='link' href='#MonitorOptions.should_notify'>MonitorOptions.should_notify</a> set to true, the server will emit events on
  the protocol that the client must consume. Clients that attach to an attempt
  will be sent any events they may have missed (by attaching to an update
  attempt after it has started, for example).
@@ -248,7 +248,7 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#State'>State</a></code>
+                <code><a class='link' href='#State'>State</a></code>
             </td>
         </tr></table>
 
@@ -273,7 +273,7 @@ Book: /_book.yaml
     <tr>
             <td><code>progress</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#Progress'>Progress</a></code>
+                <code><a class='link' href='#Progress'>Progress</a></code>
             </td>
         </tr></table>
 
@@ -308,7 +308,7 @@ Type: <code>uint32</code>
 *Defined in [fuchsia.update.installer/progress.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update.installer/progress.fidl#40)*
 
  States that an update attempt may transition through. An update attempt
- always starts in <a class='link' href='../fuchsia.update.installer/index.html#State.PREPARE'>State.PREPARE</a>. See each state for more details.
+ always starts in <a class='link' href='#State.PREPARE'>State.PREPARE</a>. See each state for more details.
 
 
 <table>
@@ -384,7 +384,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#Options'>Options</a></code>
+                <code><a class='link' href='#Options'>Options</a></code>
             </td>
             <td> Configuration options for this update attempt. Always present.
 </td>
@@ -392,7 +392,7 @@ Type: <code>uint32</code>
             <td>5</td>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#State'>State</a></code>
+                <code><a class='link' href='#State'>State</a></code>
             </td>
             <td> Terminal state of this update attempt. Always present.
 </td>
@@ -420,7 +420,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>initiator</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#Initiator'>Initiator</a></code>
+                <code><a class='link' href='#Initiator'>Initiator</a></code>
             </td>
             <td> What initiated this update attempt. Required.
 </td>
@@ -431,7 +431,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.update.installer/installer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update.installer/installer.fidl#109)*
 
- Configuration options for the <a class='link' href='../fuchsia.update.installer/index.html#Monitor'>Monitor</a> protocol.
+ Configuration options for the <a class='link' href='#Monitor'>Monitor</a> protocol.
 
 
 <table>
@@ -442,7 +442,7 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> True if events should be sent over the <a class='link' href='../fuchsia.update.installer/index.html#Monitor'>Monitor</a> protocol. Assumed to
+            <td> True if events should be sent over the <a class='link' href='#Monitor'>Monitor</a> protocol. Assumed to
  be false if absent.
 </td>
         </tr></table>
@@ -461,7 +461,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.update.installer/index.html#State'>State</a></code>
+                <code><a class='link' href='#State'>State</a></code>
             </td>
             <td> The current state of the update. Always present.
 </td>
@@ -472,7 +472,7 @@ Type: <code>uint32</code>
                 <code>uint8</code>
             </td>
             <td> When not present, progress is not yet known. When present, must be less
- than or equal to <a class='link' href='../fuchsia.update.installer/index.html#PERCENT_MAX'>PERCENT_MAX</a>.
+ than or equal to <a class='link' href='#PERCENT_MAX'>PERCENT_MAX</a>.
 </td>
         </tr><tr>
             <td>3</td>
@@ -481,7 +481,7 @@ Type: <code>uint32</code>
                 <code>uint64</code>
             </td>
             <td> The number of bytes that must be downloaded to apply this update.
- Populated during <a class='link' href='../fuchsia.update.installer/index.html#State.PREPARE'>State.PREPARE</a>.
+ Populated during <a class='link' href='#State.PREPARE'>State.PREPARE</a>.
 </td>
         </tr><tr>
             <td>4</td>
@@ -490,7 +490,7 @@ Type: <code>uint32</code>
                 <code>uint64</code>
             </td>
             <td> The number of bytes downloaded during this update attempt. Less than or
- equal to <a class='link' href='../fuchsia.update.installer/index.html#download_size'>download_size</a>.
+ equal to <a class='link' href='#download_size'>download_size</a>.
 </td>
         </tr></table>
 

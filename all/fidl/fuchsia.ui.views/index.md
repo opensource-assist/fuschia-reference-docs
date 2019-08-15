@@ -104,7 +104,7 @@ Book: /_book.yaml
     <tr>
             <td><code>view_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.views/index.html#ViewToken'>ViewToken</a></code>
+                <code><a class='link' href='#ViewToken'>ViewToken</a></code>
             </td>
         </tr></table>
 
@@ -164,7 +164,7 @@ Book: /_book.yaml
  ViewRef, a ViewRefControl's handle is unique. Scenic uses this property
  when it ties a ViewRefControl to a View, arranged to share fate.  When a
  View is destroyed, the associated destruction of its ViewRefControl
- triggers an automatic ZX_ERR_PEER_CLOSED signal sent to all ViewRef
+ triggers an automatic `ZX_ERR_PEER_CLOSED` signal sent to all ViewRef
  holders; hence ViewRef holders may track View lifetime.
 
  As part of View creation, the client creates a linked

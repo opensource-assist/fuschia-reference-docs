@@ -57,7 +57,7 @@ Book: /_book.yaml
     <tr>
             <td><code>collision</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#NameCollision'>NameCollision</a></code>
+                <code><a class='link' href='#NameCollision'>NameCollision</a></code>
             </td>
         </tr></table>
 
@@ -94,7 +94,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>x</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#Int64Struct'>Int64Struct</a>?</code>
+                <code><a class='link' href='#Int64Struct'>Int64Struct</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -112,14 +112,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>x</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#Int64Struct'>Int64Struct</a>?</code>
+                <code><a class='link' href='#Int64Struct'>Int64Struct</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>y</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#Int64Struct'>Int64Struct</a>?</code>
+                <code><a class='link' href='#Int64Struct'>Int64Struct</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -155,7 +155,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>e</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#Empty'>Empty</a></code>
+                <code><a class='link' href='#Empty'>Empty</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -180,7 +180,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#SampleXUnion'>SampleXUnion</a></code>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -205,7 +205,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#SampleXUnion'>SampleXUnion</a></code>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -237,7 +237,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#SampleXUnion'>SampleXUnion</a>?</code>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -276,10 +276,10 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>enum_with_default</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#SampleEnum'>SampleEnum</a></code>
+                <code><a class='link' href='#SampleEnum'>SampleEnum</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='../fidl.test.misc/index.html#MEMBER_B'>MEMBER_B</a></td>
+            <td><a class='link' href='#SampleEnum.MEMBER_B'>SampleEnum.MEMBER_B</a></td>
         </tr><tr>
             <td><code>bool_with_default</code></td>
             <td>
@@ -464,14 +464,14 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>simple</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#SimpleTable'>SimpleTable</a></code>
+                <code><a class='link' href='#SimpleTable'>SimpleTable</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>2</td>
             <td><code>u</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#SampleXUnion'>SampleXUnion</a></code>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -503,7 +503,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#SampleXUnion'>SampleXUnion</a></code>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -571,13 +571,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#Int64Struct'>Int64Struct</a></code>
+                <code><a class='link' href='#Int64Struct'>Int64Struct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>os</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#Int64Struct'>Int64Struct</a>?</code>
+                <code><a class='link' href='#Int64Struct'>Int64Struct</a>?</code>
             </td>
             <td></td>
         </tr><tr>
@@ -606,13 +606,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>su</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#SimpleUnion'>SimpleUnion</a></code>
+                <code><a class='link' href='#SimpleUnion'>SimpleUnion</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>st</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.misc/index.html#SimpleTable'>SimpleTable</a></code>
+                <code><a class='link' href='#SimpleTable'>SimpleTable</a></code>
             </td>
             <td></td>
         </tr></table>

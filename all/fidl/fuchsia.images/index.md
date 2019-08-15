@@ -98,7 +98,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>image_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.images/index.html#ImageInfo'>ImageInfo</a></code>
+                <code><a class='link' href='#ImageInfo'>ImageInfo</a></code>
             </td>
         </tr><tr>
             <td><code>memory</code></td>
@@ -118,7 +118,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>memory_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.images/index.html#MemoryType'>MemoryType</a></code>
+                <code><a class='link' href='#MemoryType'>MemoryType</a></code>
             </td>
         </tr></table>
 
@@ -205,7 +205,7 @@ Book: /_book.yaml
     <tr>
             <td><code>presentation_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.images/index.html#PresentationInfo'>PresentationInfo</a></code>
+                <code><a class='link' href='#PresentationInfo'>PresentationInfo</a></code>
             </td>
         </tr></table>
 
@@ -252,11 +252,11 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>transform</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.images/index.html#Transform'>Transform</a></code>
+                <code><a class='link' href='#Transform'>Transform</a></code>
             </td>
             <td> Specifies if the image should be mirrored before displaying.
 </td>
-            <td><a class='link' href='../fuchsia.images/index.html#NORMAL'>NORMAL</a></td>
+            <td><a class='link' href='#Transform.NORMAL'>Transform.NORMAL</a></td>
         </tr><tr>
             <td><code>width</code></td>
             <td>
@@ -283,35 +283,35 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>pixel_format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.images/index.html#PixelFormat'>PixelFormat</a></code>
+                <code><a class='link' href='#PixelFormat'>PixelFormat</a></code>
             </td>
             <td> The pixel format of the image.
 </td>
-            <td><a class='link' href='../fuchsia.images/index.html#BGRA_8'>BGRA_8</a></td>
+            <td><a class='link' href='#PixelFormat.BGRA_8'>PixelFormat.BGRA_8</a></td>
         </tr><tr>
             <td><code>color_space</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.images/index.html#ColorSpace'>ColorSpace</a></code>
+                <code><a class='link' href='#ColorSpace'>ColorSpace</a></code>
             </td>
             <td> The pixel color space.
 </td>
-            <td><a class='link' href='../fuchsia.images/index.html#SRGB'>SRGB</a></td>
+            <td><a class='link' href='#ColorSpace.SRGB'>ColorSpace.SRGB</a></td>
         </tr><tr>
             <td><code>tiling</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.images/index.html#Tiling'>Tiling</a></code>
+                <code><a class='link' href='#Tiling'>Tiling</a></code>
             </td>
             <td> The pixel arrangement in memory.
 </td>
-            <td><a class='link' href='../fuchsia.images/index.html#LINEAR'>LINEAR</a></td>
+            <td><a class='link' href='#Tiling.LINEAR'>Tiling.LINEAR</a></td>
         </tr><tr>
             <td><code>alpha_format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.images/index.html#AlphaFormat'>AlphaFormat</a></code>
+                <code><a class='link' href='#AlphaFormat'>AlphaFormat</a></code>
             </td>
             <td> Specifies the interpretion of the alpha channel, if one exists.
 </td>
-            <td><a class='link' href='../fuchsia.images/index.html#OPAQUE'>OPAQUE</a></td>
+            <td><a class='link' href='#AlphaFormat.OPAQUE'>AlphaFormat.OPAQUE</a></td>
         </tr>
 </table>
 

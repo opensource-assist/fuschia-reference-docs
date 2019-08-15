@@ -27,7 +27,7 @@ Book: /_book.yaml
     <tr>
             <td><code>identity_provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.auth/index.html#IdentityProvider'>IdentityProvider</a></code>
+                <code><a class='link' href='#IdentityProvider'>IdentityProvider</a></code>
             </td>
         </tr></table>
 
@@ -38,7 +38,7 @@ Book: /_book.yaml
     <tr>
             <td><code>account</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.auth/index.html#Account'>Account</a>?</code>
+                <code><a class='link' href='#Account'>Account</a>?</code>
             </td>
         </tr><tr>
             <td><code>error_code</code></td>
@@ -67,7 +67,7 @@ Book: /_book.yaml
     <tr>
             <td><code>account</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.auth/index.html#Account'>Account</a></code>
+                <code><a class='link' href='#Account'>Account</a></code>
             </td>
         </tr><tr>
             <td><code>revoke_all</code></td>
@@ -83,7 +83,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.auth/index.html#AuthErr'>AuthErr</a></code>
+                <code><a class='link' href='#AuthErr'>AuthErr</a></code>
             </td>
         </tr></table>
 
@@ -129,7 +129,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>identity_provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.auth/index.html#IdentityProvider'>IdentityProvider</a></code>
+                <code><a class='link' href='#IdentityProvider'>IdentityProvider</a></code>
             </td>
             <td> The identity provider that was used to authenticate the user on this
  device.
@@ -191,7 +191,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.auth/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
             <td></td>
             <td>No default</td>

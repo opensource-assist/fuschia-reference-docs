@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.vsock/index.html#Addr'>Addr</a></code>
+                <code><a class='link' href='#Addr'>Addr</a></code>
             </td>
         </tr></table>
 
@@ -34,7 +34,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.vsock/index.html#Addr'>Addr</a></code>
+                <code><a class='link' href='#Addr'>Addr</a></code>
             </td>
         </tr></table>
 
@@ -49,7 +49,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.vsock/index.html#Addr'>Addr</a></code>
+                <code><a class='link' href='#Addr'>Addr</a></code>
             </td>
         </tr></table>
 
@@ -64,7 +64,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.vsock/index.html#Addr'>Addr</a></code>
+                <code><a class='link' href='#Addr'>Addr</a></code>
             </td>
         </tr></table>
 
@@ -98,7 +98,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.vsock/index.html#Addr'>Addr</a></code>
+                <code><a class='link' href='#Addr'>Addr</a></code>
             </td>
         </tr></table>
 
@@ -117,7 +117,7 @@ Book: /_book.yaml
     <tr>
             <td><code>cb</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.vsock/index.html#Callbacks'>Callbacks</a></code>
+                <code><a class='link' href='#Callbacks'>Callbacks</a></code>
             </td>
         </tr></table>
 
@@ -141,7 +141,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.vsock/index.html#Addr'>Addr</a></code>
+                <code><a class='link' href='#Addr'>Addr</a></code>
             </td>
         </tr><tr>
             <td><code>data</code></td>
@@ -170,7 +170,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.vsock/index.html#Addr'>Addr</a></code>
+                <code><a class='link' href='#Addr'>Addr</a></code>
             </td>
         </tr></table>
 
@@ -194,7 +194,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.vsock/index.html#Addr'>Addr</a></code>
+                <code><a class='link' href='#Addr'>Addr</a></code>
             </td>
         </tr></table>
 
@@ -218,7 +218,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.vsock/index.html#Addr'>Addr</a></code>
+                <code><a class='link' href='#Addr'>Addr</a></code>
             </td>
         </tr><tr>
             <td><code>data</code></td>
@@ -266,7 +266,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.vsock/index.html#Addr'>Addr</a></code>
+                <code><a class='link' href='#Addr'>Addr</a></code>
             </td>
         </tr><tr>
             <td><code>vmo</code></td>

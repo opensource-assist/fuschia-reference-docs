@@ -106,7 +106,7 @@ Type: <code>uint32</code>
             <td>7</td>
             <td><code>base_shell</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.session/index.html#BaseShellConfig'>BaseShellConfig</a></code>
+                <code><a class='link' href='#BaseShellConfig'>BaseShellConfig</a></code>
             </td>
             <td> Launch configurations specific to base shell.
 </td>
@@ -114,7 +114,7 @@ Type: <code>uint32</code>
             <td>8</td>
             <td><code>session_shell_map</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular.session/index.html#SessionShellMapEntry'>SessionShellMapEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#SessionShellMapEntry'>SessionShellMapEntry</a>&gt;</code>
             </td>
             <td> A map of launch configurations specific to session shells.
 </td>
@@ -122,7 +122,7 @@ Type: <code>uint32</code>
             <td>9</td>
             <td><code>story_shell</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.session/index.html#StoryShellConfig'>StoryShellConfig</a></code>
+                <code><a class='link' href='#StoryShellConfig'>StoryShellConfig</a></code>
             </td>
             <td> Launch configurations specific to story shell.
 </td>
@@ -130,7 +130,7 @@ Type: <code>uint32</code>
             <td>10</td>
             <td><code>sessionmgr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.session/index.html#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
             </td>
             <td> Temporary placeholder to pass configurations to sessionmgr. Will be
  removed with the completion of MF-10.
@@ -150,7 +150,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>app_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.session/index.html#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
             </td>
             <td> Contains the fuchsia package url and arguments to pass to the shell.
 </td>
@@ -188,7 +188,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.session/index.html#SessionShellConfig'>SessionShellConfig</a></code>
+                <code><a class='link' href='#SessionShellConfig'>SessionShellConfig</a></code>
             </td>
             <td> The launch configurations for the session shell.
 </td>
@@ -207,7 +207,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>app_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.session/index.html#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
             </td>
             <td> Contains the fuchsia package url and arguments to pass to the shell.
 </td>
@@ -256,7 +256,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>app_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.session/index.html#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
             </td>
             <td> Contains the fuchsia package url and arguments to pass to the shell.
 </td>
@@ -275,7 +275,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>cloud_provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.session/index.html#CloudProvider'>CloudProvider</a></code>
+                <code><a class='link' href='#CloudProvider'>CloudProvider</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -339,7 +339,7 @@ Type: <code>uint32</code>
             <td>8</td>
             <td><code>component_args</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular.session/index.html#AppConfig'>AppConfig</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#AppConfig'>AppConfig</a>&gt;</code>
             </td>
             <td> A map of agents to the arguments they should be started with.
 </td>
@@ -355,7 +355,7 @@ Type: <code>uint32</code>
             <td>10</td>
             <td><code>agent_service_index</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular.session/index.html#AgentServiceIndexEntry'>AgentServiceIndexEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#AgentServiceIndexEntry'>AgentServiceIndexEntry</a>&gt;</code>
             </td>
             <td> A list of supported services and the URL of the agent known to provide
  that service. Used by the Session Manager to implement

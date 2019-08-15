@@ -7,9 +7,9 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Peer {:#Peer}
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#12)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#15)*
 
- Peer-to-peer protocol between two Overnet nodes.
+ Older peer-to-peer protocol between two Overnet nodes.
  Each end of the Overnet connection stream implements this protocol.
 
 ### ConnectToService {:#ConnectToService}
@@ -28,7 +28,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>stream_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#StreamId'>StreamId</a></code>
+                <code><a class='link' href='#StreamId'>StreamId</a></code>
             </td>
         </tr></table>
 
@@ -66,7 +66,7 @@ Book: /_book.yaml
     <tr>
             <td><code>desc</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#PeerDescription'>PeerDescription</a></code>
+                <code><a class='link' href='#PeerDescription'>PeerDescription</a></code>
             </td>
         </tr></table>
 
@@ -82,7 +82,7 @@ Book: /_book.yaml
     <tr>
             <td><code>node</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#NodeStatus'>NodeStatus</a></code>
+                <code><a class='link' href='#NodeStatus'>NodeStatus</a></code>
             </td>
         </tr></table>
 
@@ -98,7 +98,7 @@ Book: /_book.yaml
     <tr>
             <td><code>link</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#LinkStatus'>LinkStatus</a></code>
+                <code><a class='link' href='#LinkStatus'>LinkStatus</a></code>
             </td>
         </tr></table>
 
@@ -120,7 +120,7 @@ Book: /_book.yaml
     <tr>
             <td><code>message</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#ZirconChannelMessage'>ZirconChannelMessage</a></code>
+                <code><a class='link' href='#ZirconChannelMessage'>ZirconChannelMessage</a></code>
             </td>
         </tr></table>
 
@@ -192,6 +192,43 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### ConnectToService {:#ConnectToService}
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#45)*
+
+
+
+ Create a new stream, labelled `stream_id`, to communicate with the
+ advertised service `service_name`.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>service_name</code></td>
+            <td>
+                <code>string[255]</code>
+            </td>
+            <td> Which service to connect to.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>stream_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> On which quic stream will this service connection be formed.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>options</code></td>
+            <td>
+                <code><a class='link' href='#ConnectToServiceOptions'>ConnectToServiceOptions</a></code>
+            </td>
+            <td> Ancillary options for this connection.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### LinkStatus {:#LinkStatus}
 *Defined in [fuchsia.overnet.protocol/routing.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/routing.fidl#32)*
 
@@ -205,7 +242,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>from</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#NodeId'>NodeId</a></code>
+                <code><a class='link' href='#NodeId'>NodeId</a></code>
             </td>
             <td> Link originating node.
 </td>
@@ -213,7 +250,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>to</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#NodeId'>NodeId</a></code>
+                <code><a class='link' href='#NodeId'>NodeId</a></code>
             </td>
             <td> Link target node.
 </td>
@@ -239,7 +276,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>metrics</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#LinkMetrics'>LinkMetrics</a></code>
+                <code><a class='link' href='#LinkMetrics'>LinkMetrics</a></code>
             </td>
             <td> Metrics associated with this link.
 </td>
@@ -259,7 +296,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#NodeId'>NodeId</a></code>
+                <code><a class='link' href='#NodeId'>NodeId</a></code>
             </td>
             <td> The node to which we refer.
 </td>
@@ -275,7 +312,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>metrics</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#NodeMetrics'>NodeMetrics</a></code>
+                <code><a class='link' href='#NodeMetrics'>NodeMetrics</a></code>
             </td>
             <td> Metrics associated with this node.
 </td>
@@ -303,7 +340,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>handles</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.overnet.protocol/index.html#ZirconHandle'>ZirconHandle</a>&gt;[64]</code>
+                <code>vector&lt;<a class='link' href='#ZirconHandle'>ZirconHandle</a>&gt;[64]</code>
             </td>
             <td> Handles part of the payload.
 </td>
@@ -323,7 +360,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>stream_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#StreamId'>StreamId</a></code>
+                <code><a class='link' href='#StreamId'>StreamId</a></code>
             </td>
             <td> The Overnet proxy stream that was created to carry this channel.
  The protocol over said stream will be a `ZirconChannel`.
@@ -344,7 +381,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>stream_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#StreamId'>StreamId</a></code>
+                <code><a class='link' href='#StreamId'>StreamId</a></code>
             </td>
             <td> The Overnet proxy stream that was created to carry this socket.
  The protocol over said stream will be a `ZirconSocket`.
@@ -399,6 +436,18 @@ Type: <code>uint32</code>
 
 
 ## **TABLES**
+
+### ConnectToServiceOptions {:#ConnectToServiceOptions}
+
+
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#55)*
+
+ Options for service connection formation.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
 
 ### PeerDescription {:#PeerDescription}
 
@@ -507,7 +556,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>node_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#NodeId'>NodeId</a></code>
+                <code><a class='link' href='#NodeId'>NodeId</a></code>
             </td>
             <td> Overnet NodeId of the sender
 </td>
@@ -527,6 +576,37 @@ Type: <code>uint32</code>
 
 ## **XUNIONS**
 
+### PeerMessage {:#PeerMessage}
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#33)*
+
+ Peer-to-peer protocol between two Overnet nodes.
+ Client quic connections send this xunion to servers over quic stream 0.
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>connect_to_service</code></td>
+            <td>
+                <code><a class='link' href='#ConnectToService'>ConnectToService</a></code>
+            </td>
+            <td> Request to create a channel to a service exported by this peer.
+</td>
+        </tr><tr>
+            <td><code>update_node_description</code></td>
+            <td>
+                <code><a class='link' href='#PeerDescription'>PeerDescription</a></code>
+            </td>
+            <td> Update this peers description on the server.
+</td>
+        </tr><tr>
+            <td><code>update_link_status</code></td>
+            <td>
+                <code><a class='link' href='#LinkStatus'>LinkStatus</a></code>
+            </td>
+            <td> Update information about a link that this peer knows about on the
+ remote peer.
+</td>
+        </tr></table>
+
 ### ZirconHandle {:#ZirconHandle}
 *Defined in [fuchsia.overnet.protocol/zircon_proxy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/zircon_proxy.fidl#19)*
 
@@ -537,14 +617,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>channel</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#ChannelHandle'>ChannelHandle</a></code>
+                <code><a class='link' href='#ChannelHandle'>ChannelHandle</a></code>
             </td>
             <td> A proxied channel.
 </td>
         </tr><tr>
             <td><code>socket</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.protocol/index.html#SocketHandle'>SocketHandle</a></code>
+                <code><a class='link' href='#SocketHandle'>SocketHandle</a></code>
             </td>
             <td> A proxied socket.
 </td>
@@ -560,6 +640,13 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#10">MAX_SERVICE_NAME_LENGTH</a></td>
+            <td>
+                    <code>255</code>
+                </td>
+                <td><code>uint64</code></td>
+        </tr>
+    <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/routing.fidl#9">METRIC_VERSION_TOMBSTONE</a></td>
             <td>
                     <code>18446744073709551615</code>

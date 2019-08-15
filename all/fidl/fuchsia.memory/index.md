@@ -20,7 +20,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.memory/index.html#Watcher'>Watcher</a></code>
+                <code><a class='link' href='#Watcher'>Watcher</a></code>
             </td>
         </tr></table>
 
@@ -40,7 +40,7 @@ Book: /_book.yaml
     <tr>
             <td><code>stats</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.memory/index.html#Stats'>Stats</a></code>
+                <code><a class='link' href='#Stats'>Stats</a></code>
             </td>
         </tr></table>
 

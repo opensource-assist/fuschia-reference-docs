@@ -68,7 +68,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>r</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fidl.examples.example5/index.html#Thing'>Thing</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Thing'>Thing</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -88,7 +88,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>r</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fidl.examples.example5/index.html#Thing'>Thing</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Thing'>Thing</a>&gt;</code>
             </td>
         </tr></table>
 

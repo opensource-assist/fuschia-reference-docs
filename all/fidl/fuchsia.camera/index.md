@@ -15,7 +15,7 @@ Book: /_book.yaml
 ### GetFormats {:#GetFormats}
 
  Get the available format types for this device
- NOTE: The formats are paginated to MAX_FORMATS_PER_RESPONSE, multiple
+ NOTE: The formats are paginated to `MAX_FORMATS_PER_RESPONSE`, multiple
  GetFormats need to be issued until total_format_count are received
 
 #### Request
@@ -35,7 +35,7 @@ Book: /_book.yaml
     <tr>
             <td><code>formats</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.camera/index.html#VideoFormat'>VideoFormat</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#VideoFormat'>VideoFormat</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>total_format_count</code></td>
@@ -55,7 +55,7 @@ Book: /_book.yaml
  If setting the format is successful, the stream request will be honored.
  The stream token is used to provide additional control over the interface from the
  Camera Manager.  The driver provides the guarantee that:
-     1) If the stream token receives the PEER_CLOSED event, the driver will close
+     1) If the stream token receives the `PEER_CLOSED` event, the driver will close
         the stream.
      2) If the Stream interface is closed, the driver will close the eventpair.
 
@@ -70,12 +70,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>rate</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera/index.html#FrameRate'>FrameRate</a></code>
+                <code><a class='link' href='#FrameRate'>FrameRate</a></code>
             </td>
         </tr><tr>
             <td><code>stream</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.camera/index.html#Stream'>Stream</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Stream'>Stream</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>stream_token</code></td>
@@ -101,7 +101,7 @@ Book: /_book.yaml
     <tr>
             <td><code>device_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera/index.html#DeviceInfo'>DeviceInfo</a></code>
+                <code><a class='link' href='#DeviceInfo'>DeviceInfo</a></code>
             </td>
         </tr></table>
 
@@ -160,7 +160,7 @@ Book: /_book.yaml
     <tr>
             <td><code>frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera/index.html#FrameAvailableEvent'>FrameAvailableEvent</a></code>
+                <code><a class='link' href='#FrameAvailableEvent'>FrameAvailableEvent</a></code>
             </td>
         </tr></table>
 
@@ -191,7 +191,7 @@ Book: /_book.yaml
     <tr>
             <td><code>descriptions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.camera/index.html#DeviceInfo'>DeviceInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#DeviceInfo'>DeviceInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -222,7 +222,7 @@ Book: /_book.yaml
     <tr>
             <td><code>formats</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.camera/index.html#VideoFormat'>VideoFormat</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#VideoFormat'>VideoFormat</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>total_format_count</code></td>
@@ -244,7 +244,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera/index.html#VideoStream'>VideoStream</a></code>
+                <code><a class='link' href='#VideoStream'>VideoStream</a></code>
             </td>
         </tr><tr>
             <td><code>buffer_info</code></td>
@@ -254,7 +254,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>stream</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.camera/index.html#Stream'>Stream</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Stream'>Stream</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>client_token</code></td>
@@ -277,7 +277,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera/index.html#VideoStreamV2'>VideoStreamV2</a></code>
+                <code><a class='link' href='#VideoStreamV2'>VideoStreamV2</a></code>
             </td>
         </tr><tr>
             <td><code>buffer_info</code></td>
@@ -403,7 +403,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>frame_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera/index.html#FrameStatus'>FrameStatus</a></code>
+                <code><a class='link' href='#FrameStatus'>FrameStatus</a></code>
             </td>
             <td> Non zero if an error occurred.
 </td>
@@ -419,7 +419,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>metadata</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera/index.html#Metadata'>Metadata</a></code>
+                <code><a class='link' href='#Metadata'>Metadata</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -470,7 +470,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>rate</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera/index.html#FrameRate'>FrameRate</a></code>
+                <code><a class='link' href='#FrameRate'>FrameRate</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -501,7 +501,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera/index.html#VideoFormat'>VideoFormat</a></code>
+                <code><a class='link' href='#VideoFormat'>VideoFormat</a></code>
             </td>
             <td> The requested video format.  Note that this is field is necessary to
  set The frame rate, even when calling CreateStream.

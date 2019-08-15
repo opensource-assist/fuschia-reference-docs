@@ -31,7 +31,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.http/index.html#Request'>Request</a></code>
+                <code><a class='link' href='#Request'>Request</a></code>
             </td>
         </tr></table>
 
@@ -42,7 +42,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.http/index.html#Response'>Response</a></code>
+                <code><a class='link' href='#Response'>Response</a></code>
             </td>
         </tr></table>
 
@@ -61,12 +61,12 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.http/index.html#Request'>Request</a></code>
+                <code><a class='link' href='#Request'>Request</a></code>
             </td>
         </tr><tr>
             <td><code>client</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.http/index.html#LoaderClient'>LoaderClient</a></code>
+                <code><a class='link' href='#LoaderClient'>LoaderClient</a></code>
             </td>
         </tr></table>
 
@@ -93,12 +93,12 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.http/index.html#Response'>Response</a></code>
+                <code><a class='link' href='#Response'>Response</a></code>
             </td>
         </tr><tr>
             <td><code>redirect</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.http/index.html#RedirectTarget'>RedirectTarget</a>?</code>
+                <code><a class='link' href='#RedirectTarget'>RedirectTarget</a>?</code>
             </td>
         </tr></table>
 
@@ -199,7 +199,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>headers</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.http/index.html#Header'>Header</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Header'>Header</a>&gt;?</code>
             </td>
             <td> Additional HTTP request headers.
 </td>
@@ -207,7 +207,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>body</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.http/index.html#Body'>Body</a>?</code>
+                <code><a class='link' href='#Body'>Body</a>?</code>
             </td>
             <td> The payload for the request body. For HTTP requests, the method must be set
  to "POST" or "PUT". If a buffer is used for the body, a Content-Length
@@ -228,19 +228,19 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>cache_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.http/index.html#CacheMode'>CacheMode</a></code>
+                <code><a class='link' href='#CacheMode'>CacheMode</a></code>
             </td>
             <td> The cache behavior for the request.
 </td>
-            <td><a class='link' href='../fuchsia.net.http/index.html#DEFAULT'>DEFAULT</a></td>
+            <td><a class='link' href='#CacheMode.DEFAULT'>CacheMode.DEFAULT</a></td>
         </tr><tr>
             <td><code>response_body_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.http/index.html#ResponseBodyMode'>ResponseBodyMode</a></code>
+                <code><a class='link' href='#ResponseBodyMode'>ResponseBodyMode</a></code>
             </td>
             <td> The response body mode.
 </td>
-            <td><a class='link' href='../fuchsia.net.http/index.html#BUFFER'>BUFFER</a></td>
+            <td><a class='link' href='#ResponseBodyMode.BUFFER'>ResponseBodyMode.BUFFER</a></td>
         </tr>
 </table>
 
@@ -296,7 +296,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.http/index.html#Error'>Error</a>?</code>
+                <code><a class='link' href='#Error'>Error</a>?</code>
             </td>
             <td> If the response resulted in a network level error, this field will be set.
 </td>
@@ -304,7 +304,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>body</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.net.http/index.html#Body'>Body</a>?</code>
+                <code><a class='link' href='#Body'>Body</a>?</code>
             </td>
             <td> The response body.
 </td>
@@ -338,7 +338,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>headers</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.http/index.html#Header'>Header</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Header'>Header</a>&gt;?</code>
             </td>
             <td> The HTTP response headers.
 </td>

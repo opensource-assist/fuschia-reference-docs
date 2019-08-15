@@ -32,12 +32,12 @@ Book: /_book.yaml
     <tr>
             <td><code>definition</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.bredr/index.html#ServiceDefinition'>ServiceDefinition</a></code>
+                <code><a class='link' href='#ServiceDefinition'>ServiceDefinition</a></code>
             </td>
         </tr><tr>
             <td><code>sec_level</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.bredr/index.html#SecurityLevel'>SecurityLevel</a></code>
+                <code><a class='link' href='#SecurityLevel'>SecurityLevel</a></code>
             </td>
         </tr><tr>
             <td><code>devices</code></td>
@@ -78,7 +78,7 @@ Book: /_book.yaml
     <tr>
             <td><code>service_uuid</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.bredr/index.html#ServiceClassProfileIdentifier'>ServiceClassProfileIdentifier</a></code>
+                <code><a class='link' href='#ServiceClassProfileIdentifier'>ServiceClassProfileIdentifier</a></code>
             </td>
         </tr><tr>
             <td><code>attr_ids</code></td>
@@ -175,7 +175,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>protocol</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.bredr/index.html#ProtocolDescriptor'>ProtocolDescriptor</a></code>
+                <code><a class='link' href='#ProtocolDescriptor'>ProtocolDescriptor</a></code>
             </td>
         </tr></table>
 
@@ -201,12 +201,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>profile</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.bredr/index.html#ProfileDescriptor'>ProfileDescriptor</a></code>
+                <code><a class='link' href='#ProfileDescriptor'>ProfileDescriptor</a></code>
             </td>
         </tr><tr>
             <td><code>attributes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.bredr/index.html#Attribute'>Attribute</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Attribute'>Attribute</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -225,7 +225,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.bredr/index.html#DataElementType'>DataElementType</a></code>
+                <code><a class='link' href='#DataElementType'>DataElementType</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -239,7 +239,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.bredr/index.html#DataElementData'>DataElementData</a></code>
+                <code><a class='link' href='#DataElementData'>DataElementData</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -257,14 +257,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>protocol</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.bredr/index.html#ProtocolIdentifier'>ProtocolIdentifier</a></code>
+                <code><a class='link' href='#ProtocolIdentifier'>ProtocolIdentifier</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>params</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.bredr/index.html#DataElement'>DataElement</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#DataElement'>DataElement</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -282,7 +282,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>profile_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.bredr/index.html#ServiceClassProfileIdentifier'>ServiceClassProfileIdentifier</a></code>
+                <code><a class='link' href='#ServiceClassProfileIdentifier'>ServiceClassProfileIdentifier</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -360,7 +360,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>element</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.bredr/index.html#DataElement'>DataElement</a></code>
+                <code><a class='link' href='#DataElement'>DataElement</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -385,7 +385,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>protocol_descriptors</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.bredr/index.html#ProtocolDescriptor'>ProtocolDescriptor</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ProtocolDescriptor'>ProtocolDescriptor</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -399,21 +399,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>profile_descriptors</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.bredr/index.html#ProfileDescriptor'>ProfileDescriptor</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ProfileDescriptor'>ProfileDescriptor</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>information</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.bredr/index.html#Information'>Information</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Information'>Information</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>additional_attributes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.bredr/index.html#Attribute'>Attribute</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Attribute'>Attribute</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -748,7 +748,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>sequence</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.bredr/index.html#DataElement'>DataElement</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#DataElement'>DataElement</a>&gt;</code>
             </td>
             <td></td>
         </tr></table>

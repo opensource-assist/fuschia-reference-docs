@@ -62,7 +62,7 @@ Book: /_book.yaml
     <tr>
             <td><code>frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera.common/index.html#FrameAvailableEvent'>FrameAvailableEvent</a></code>
+                <code><a class='link' href='#FrameAvailableEvent'>FrameAvailableEvent</a></code>
             </td>
         </tr></table>
 
@@ -82,7 +82,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera.common/index.html#VirtualCameraConfig'>VirtualCameraConfig</a></code>
+                <code><a class='link' href='#VirtualCameraConfig'>VirtualCameraConfig</a></code>
             </td>
         </tr></table>
 
@@ -177,7 +177,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>frame_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera.common/index.html#FrameStatus'>FrameStatus</a></code>
+                <code><a class='link' href='#FrameStatus'>FrameStatus</a></code>
             </td>
             <td> Non zero if an error occurred.
 </td>
@@ -193,7 +193,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>metadata</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera.common/index.html#Metadata'>Metadata</a></code>
+                <code><a class='link' href='#Metadata'>Metadata</a></code>
             </td>
             <td> Any associated metadata such as timestamp.
 </td>
@@ -247,7 +247,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>rate</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera.common/index.html#FrameRate'>FrameRate</a></code>
+                <code><a class='link' href='#FrameRate'>FrameRate</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -308,7 +308,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>formats</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.camera.common/index.html#VideoFormat'>VideoFormat</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#VideoFormat'>VideoFormat</a>&gt;</code>
             </td>
             <td> The formats that the controller will support.
 </td>
@@ -316,7 +316,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera.common/index.html#DeviceInfo'>DeviceInfo</a></code>
+                <code><a class='link' href='#DeviceInfo'>DeviceInfo</a></code>
             </td>
             <td> Device specific information that can be set by the user.
 </td>
@@ -324,7 +324,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>stream_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera.common/index.html#VirtualStreamConfig'>VirtualStreamConfig</a></code>
+                <code><a class='link' href='#VirtualStreamConfig'>VirtualStreamConfig</a></code>
             </td>
             <td> Either an ArtificialStreamConfig or a RealWorldStreamConfig.
 </td>
@@ -378,13 +378,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>artificial_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera.common/index.html#ArtificialStreamConfig'>ArtificialStreamConfig</a></code>
+                <code><a class='link' href='#ArtificialStreamConfig'>ArtificialStreamConfig</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>real_world_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera.common/index.html#RealWorldStreamConfig'>RealWorldStreamConfig</a></code>
+                <code><a class='link' href='#RealWorldStreamConfig'>RealWorldStreamConfig</a></code>
             </td>
             <td></td>
         </tr></table>

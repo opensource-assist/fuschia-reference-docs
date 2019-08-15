@@ -44,12 +44,8 @@ Book: /_book.yaml
 
 ### Get {:#Get}
 
- Gets a `payload` for a ZBI_TYPE_STORAGE_BOOTFS_FACTORY boot item with
+ Gets a `payload` for a `ZBI_TYPE_STORAGE_BOOTFS_FACTORY` boot item with
  extra field set to `extra`.
-
- This method vends `payload` at most once for each `extra` for the
- lifetime of the service that implements this protocol. On subsequent
- calls, `payload` will be ZX_HANDLE_INVALID and `length` will be 0.
 
  NOTE: We return the `length` of the item, as VMOs must be page-aligned.
 

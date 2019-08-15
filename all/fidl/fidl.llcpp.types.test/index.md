@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## TestInterface {:#TestInterface}
-*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#32)*
+*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#39)*
 
 
 ### TestMethod {:#TestMethod}
@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr>
             <td><code>u</code></td>
             <td>
-                <code><a class='link' href='../fidl.llcpp.types.test/index.html#TestUnion'>TestUnion</a></code>
+                <code><a class='link' href='#TestUnion'>TestUnion</a></code>
             </td>
         </tr></table>
 
@@ -30,7 +30,7 @@ Book: /_book.yaml
     <tr>
             <td><code>u</code></td>
             <td>
-                <code><a class='link' href='../fidl.llcpp.types.test/index.html#TestUnion'>TestUnion</a></code>
+                <code><a class='link' href='#TestUnion'>TestUnion</a></code>
             </td>
         </tr></table>
 
@@ -78,6 +78,41 @@ Book: /_book.yaml
 
 
 
+## **TABLES**
+
+### SampleTable {:#SampleTable}
+
+
+*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#33)*
+
+ Verifies that user code can build and access tables.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>x</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>y</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>vector_of_struct</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#CopyableStruct'>CopyableStruct</a>&gt;</code>
+            </td>
+            <td></td>
+        </tr></table>
+
 
 
 ## **UNIONS**
@@ -97,13 +132,13 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>copyable</code></td>
             <td>
-                <code><a class='link' href='../fidl.llcpp.types.test/index.html#CopyableStruct'>CopyableStruct</a></code>
+                <code><a class='link' href='#CopyableStruct'>CopyableStruct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>move_only</code></td>
             <td>
-                <code><a class='link' href='../fidl.llcpp.types.test/index.html#MoveOnlyStruct'>MoveOnlyStruct</a></code>
+                <code><a class='link' href='#MoveOnlyStruct'>MoveOnlyStruct</a></code>
             </td>
             <td></td>
         </tr></table>

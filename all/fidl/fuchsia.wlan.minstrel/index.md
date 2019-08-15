@@ -160,7 +160,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.minstrel/index.html#StatsEntry'>StatsEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#StatsEntry'>StatsEntry</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>

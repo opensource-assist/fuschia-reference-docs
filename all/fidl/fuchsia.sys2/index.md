@@ -6,37 +6,6 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
-## LifecycleHandler {:#LifecycleHandler}
-*Defined in [fuchsia.sys2/lifecycle_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/lifecycle_handler.fidl#12)*
-
- An interface that a component instance may implement to receive lifecycle
- events from the component manager.  It provides an opportunity for the
- instance to exercise limited discretionary control over its own
- lifecycle.
-
-### Stop {:#Stop}
-
- Called by the component manager when the instance is being stopped
- to give it an opportunity to close client connections, finish pending
- work, record its state, and terminate.
-
- Once this method returns, or after a brief system-configured timeout,
- the component manager will forcibly terminate the instance's runtime
- environment (such as by killing its process and/or job if it has not
- already exited).
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
 ## Realm {:#Realm}
 *Defined in [fuchsia.sys2/realm.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/realm.fidl#15)*
 
@@ -67,11 +36,11 @@ Book: /_book.yaml
  returns, it may return `INSTANCE_NOT_FOUND`.
 
  Errors:
- - INVALID_ARGUMENTS: `child` is not a valid child reference.  -
- - INSTANCE_NOT_FOUND: `child` does not exist.
- - INSTANCE_CANNOT_START: `child` was not running and there was an error
+ - `INVALID_ARGUMENTS`: `child` is not a valid child reference.  -
+ - `INSTANCE_NOT_FOUND`: `child` does not exist.
+ - `INSTANCE_CANNOT_START`: `child` was not running and there was an error
    starting it.
- - INSTANCE_CANNOT_RESOLVE: `child`'s component declaration failed to resolve.
+ - `INSTANCE_CANNOT_RESOLVE`: `child`'s component declaration failed to resolve.
 
 #### Request
 <table>
@@ -79,7 +48,7 @@ Book: /_book.yaml
     <tr>
             <td><code>child</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ChildRef'>ChildRef</a></code>
+                <code><a class='link' href='#ChildRef'>ChildRef</a></code>
             </td>
         </tr><tr>
             <td><code>exposed_dir</code></td>
@@ -95,7 +64,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_BindChild_Result'>Realm_BindChild_Result</a></code>
+                <code><a class='link' href='#Realm_BindChild_Result'>Realm_BindChild_Result</a></code>
             </td>
         </tr></table>
 
@@ -105,11 +74,11 @@ Book: /_book.yaml
  returns successfully, the instance exists, but it may not be running.
 
  Errors:
- - INVALID_ARGUMENTS: `collection` is not a valid reference or `child`
+ - `INVALID_ARGUMENTS`: `collection` is not a valid reference or `child`
    is not a valid declaration.
- - COLLECTION_NOT_FOUND: `collection` does not exist.
- - INSTANCE_ALREADY_EXISTS: `decl.name` already exists in `collection`.
- - NO_SPACE: Could not allocate storage for the new instance.
+ - `COLLECTION_NOT_FOUND`: `collection` does not exist.
+ - `INSTANCE_ALREADY_EXISTS`: `decl.name` already exists in `collection`.
+ - `NO_SPACE`: Could not allocate storage for the new instance.
 
 #### Request
 <table>
@@ -117,12 +86,12 @@ Book: /_book.yaml
     <tr>
             <td><code>collection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#CollectionRef'>CollectionRef</a></code>
+                <code><a class='link' href='#CollectionRef'>CollectionRef</a></code>
             </td>
         </tr><tr>
             <td><code>decl</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ChildDecl'>ChildDecl</a></code>
+                <code><a class='link' href='#ChildDecl'>ChildDecl</a></code>
             </td>
         </tr></table>
 
@@ -133,7 +102,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_CreateChild_Result'>Realm_CreateChild_Result</a></code>
+                <code><a class='link' href='#Realm_CreateChild_Result'>Realm_CreateChild_Result</a></code>
             </td>
         </tr></table>
 
@@ -146,10 +115,10 @@ Book: /_book.yaml
  function returns.
 
  Errors:
- - INVALID_ARGUMENTS: `child` is not a valid reference or does not refer
+ - `INVALID_ARGUMENTS`: `child` is not a valid reference or does not refer
    to a dynamic instance.
- - INSTANCE_NOT_FOUND: `child` does not exist.
- - COLLECTION_NOT_FOUND: `collection` does not exist.
+ - `INSTANCE_NOT_FOUND`: `child` does not exist.
+ - `COLLECTION_NOT_FOUND`: `collection` does not exist.
 
 #### Request
 <table>
@@ -157,7 +126,7 @@ Book: /_book.yaml
     <tr>
             <td><code>child</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ChildRef'>ChildRef</a></code>
+                <code><a class='link' href='#ChildRef'>ChildRef</a></code>
             </td>
         </tr></table>
 
@@ -168,7 +137,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_DestroyChild_Result'>Realm_DestroyChild_Result</a></code>
+                <code><a class='link' href='#Realm_DestroyChild_Result'>Realm_DestroyChild_Result</a></code>
             </td>
         </tr></table>
 
@@ -181,8 +150,8 @@ Book: /_book.yaml
  won't be observed by the iterator after this method returns.
 
  Errors:
- - INVALID_ARGUMENTS: `collection` is not a valid reference.
- - COLLECTION_NOT_FOUND: `collection` does not exist.
+ - `INVALID_ARGUMENTS`: `collection` is not a valid reference.
+ - `COLLECTION_NOT_FOUND`: `collection` does not exist.
 
 #### Request
 <table>
@@ -190,12 +159,12 @@ Book: /_book.yaml
     <tr>
             <td><code>collection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#CollectionRef'>CollectionRef</a></code>
+                <code><a class='link' href='#CollectionRef'>CollectionRef</a></code>
             </td>
         </tr><tr>
             <td><code>iter</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sys2/index.html#ChildIterator'>ChildIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ChildIterator'>ChildIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -206,7 +175,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_ListChildren_Result'>Realm_ListChildren_Result</a></code>
+                <code><a class='link' href='#Realm_ListChildren_Result'>Realm_ListChildren_Result</a></code>
             </td>
         </tr></table>
 
@@ -234,7 +203,7 @@ Book: /_book.yaml
     <tr>
             <td><code>children</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#ChildRef'>ChildRef</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ChildRef'>ChildRef</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -291,7 +260,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>component</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Component'>Component</a></code>
+                <code><a class='link' href='#Component'>Component</a></code>
             </td>
         </tr></table>
 
@@ -325,12 +294,12 @@ Book: /_book.yaml
     <tr>
             <td><code>start_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ComponentStartInfo'>ComponentStartInfo</a></code>
+                <code><a class='link' href='#ComponentStartInfo'>ComponentStartInfo</a></code>
             </td>
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.sys2/index.html#ComponentController'>ComponentController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ComponentController'>ComponentController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -396,7 +365,7 @@ Book: /_book.yaml
     <tr>
             <td><code>client_moniker</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Moniker'>Moniker</a></code>
+                <code><a class='link' href='#Moniker'>Moniker</a></code>
             </td>
         </tr><tr>
             <td><code>exports</code></td>
@@ -407,9 +376,245 @@ Book: /_book.yaml
 
 
 
+## WorkScheduler {:#WorkScheduler}
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#39)*
+
+ Framework service: API for scheduling, inspecting, and canceling work. Each component instance
+ can access work items that it has scheduled (but not others' scheduled work items). Work items
+ are scheduled _roughly_ at the specified time and frequency; the service implementation may
+ specify its notion of _roughly_, and may provide a configuration API to tune this notion.
+
+ Each scheduled work item is identified by a client-provided `WorkId`. Each scheduled work item
+ has a `WorkId` that is unique with respect to scheduled work items belonging to the same
+ component instance.
+
+### ScheduleWork {:#ScheduleWork}
+
+ Schedule a new work item identified by `work_id`. The work item is to be scheduled roughly
+ at the time corresponding to `work_request.start`. When `work_request.period` is specified,
+ reschedule work roughly every `work_request.period` until the the work item is canceled.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>work_id</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+        </tr><tr>
+            <td><code>work_request</code></td>
+            <td>
+                <code><a class='link' href='#WorkRequest'>WorkRequest</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_ScheduleWork_Result'>WorkScheduler_ScheduleWork_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetWorkById {:#GetWorkById}
+
+ Get the current status of the scheduled work item identified by `work_id`. Note that
+ canceled work items, and work items that do not repeat and has already run are not
+ considered scheduled (and cannot be queried via this method).
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>work_id</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_GetWorkById_Result'>WorkScheduler_GetWorkById_Result</a></code>
+            </td>
+        </tr></table>
+
+### CancelWork {:#CancelWork}
+
+ Cancel the scheduled work item specified by `work_id`.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>work_id</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_CancelWork_Result'>WorkScheduler_CancelWork_Result</a></code>
+            </td>
+        </tr></table>
+
+## Worker {:#Worker}
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#60)*
+
+ Component-exposed service: Work scheduler connects to this service to invoke scheduled work item
+ callbacks. The service implementation is responsible for invoking the code that corresponds to
+ the scheduled work item identified by `work_id`.
+
+ Note: The intent of exposing this service is to expose it to the `WorkScheduler` service
+ provider (i.e., the framework) and no one else.
+
+### DoWork {:#DoWork}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>work_id</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Worker_DoWork_Result'>Worker_DoWork_Result</a></code>
+            </td>
+        </tr></table>
+
 
 
 ## **STRUCTS**
+
+### RealmRef {:#RealmRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#19)*
+
+
+
+ A reference to a component’s containing realm, i.e. the parent component.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### SelfRef {:#SelfRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#22)*
+
+
+
+ A reference to the component itself.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### ChildRef {:#ChildRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#25)*
+
+
+
+ A reference to one of the component's child instances.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td> The name assigned to the child by its parent. If `collection` is set,
+ `name` is scoped to `collection` and the child is a dynamic instance.
+ Required.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>collection</code></td>
+            <td>
+                <code>string[100]?</code>
+            </td>
+            <td> The collection `name` belongs to. If omitted, `name` references a static
+ instance. This field must be omitted if the `ChildRef` is being used in
+ a component declaration. Optional.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### CollectionRef {:#CollectionRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#37)*
+
+
+
+ A reference to one of the component's collections.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### StorageRef {:#StorageRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#42)*
+
+
+
+ A reference to one of the component's storage sections.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### FrameworkRef {:#FrameworkRef}
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#47)*
+
+
+
+ A reference to the component framework itself.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
 
 ### Moniker {:#Moniker}
 *Defined in [fuchsia.sys2/moniker.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/moniker.fidl#19)*
@@ -443,7 +648,7 @@ Book: /_book.yaml
 </table>
 
 ### Realm_BindChild_Response {:#Realm_BindChild_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#4)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
 
 
 
@@ -454,7 +659,7 @@ Book: /_book.yaml
 </table>
 
 ### Realm_CreateChild_Response {:#Realm_CreateChild_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#11)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
 
 
 
@@ -465,7 +670,7 @@ Book: /_book.yaml
 </table>
 
 ### Realm_DestroyChild_Response {:#Realm_DestroyChild_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#18)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
 
 
 
@@ -476,7 +681,7 @@ Book: /_book.yaml
 </table>
 
 ### Realm_ListChildren_Response {:#Realm_ListChildren_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#25)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
 
 
 
@@ -527,6 +732,57 @@ Book: /_book.yaml
 </td>
             <td>No default</td>
         </tr>
+</table>
+
+### WorkScheduler_ScheduleWork_Response {:#WorkScheduler_ScheduleWork_Response}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### WorkScheduler_GetWorkById_Response {:#WorkScheduler_GetWorkById_Response}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#44)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>work_status</code></td>
+            <td>
+                <code><a class='link' href='#WorkStatus'>WorkStatus</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### WorkScheduler_CancelWork_Response {:#WorkScheduler_CancelWork_Response}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#51)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Worker_DoWork_Response {:#Worker_DoWork_Response}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#58)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
 
@@ -679,7 +935,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>startup</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#StartupMode'>StartupMode</a></code>
+                <code><a class='link' href='#StartupMode'>StartupMode</a></code>
             </td>
             <td> The startup mode for the component instance.
 </td>
@@ -708,7 +964,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>durability</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Durability'>Durability</a></code>
+                <code><a class='link' href='#Durability'>Durability</a></code>
             </td>
             <td> The durability of instances in the collection.
 </td>
@@ -758,7 +1014,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>uses</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#UseDecl'>UseDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#UseDecl'>UseDecl</a>&gt;</code>
             </td>
             <td> List of capabilities used by the component. These consist of
  capabilities offered to the component that are installed in its incoming
@@ -770,7 +1026,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>exposes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#ExposeDecl'>ExposeDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ExposeDecl'>ExposeDecl</a>&gt;</code>
             </td>
             <td> List of capabilities exposed by the component. These consist of
  capabilities that are made visible to the containing realm. The parent
@@ -782,7 +1038,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>offers</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#OfferDecl'>OfferDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#OfferDecl'>OfferDecl</a>&gt;</code>
             </td>
             <td> List of capabilities offered to the component’s children. These consist
  of capabilities that the given children may `use`, which may come from a
@@ -802,7 +1058,7 @@ Type: <code>uint32</code>
             <td>6</td>
             <td><code>children</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#ChildDecl'>ChildDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ChildDecl'>ChildDecl</a>&gt;</code>
             </td>
             <td> The component's statically instantiated children. The children must have
  unique names.
@@ -811,7 +1067,7 @@ Type: <code>uint32</code>
             <td>7</td>
             <td><code>collections</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#CollectionDecl'>CollectionDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CollectionDecl'>CollectionDecl</a>&gt;</code>
             </td>
             <td> The component's collections. The collections must have unique names.
 </td>
@@ -819,7 +1075,7 @@ Type: <code>uint32</code>
             <td>8</td>
             <td><code>storage</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.sys2/index.html#StorageDecl'>StorageDecl</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#StorageDecl'>StorageDecl</a>&gt;</code>
             </td>
             <td> List of storage capabilities created by this component.
  Storage capabilities can be offered to children.
@@ -829,10 +1085,13 @@ Type: <code>uint32</code>
 ### ExposeServiceDecl {:#ExposeServiceDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#16)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#20)*
 
  Declares a service exposed to a component's containing realm, such as a
  service exposed by the component or one of its children at runtime.
+
+ To learn more about services, see:
+ https://fuchsia.dev/fuchsia-src/glossary#service
 
 
 <table>
@@ -841,7 +1100,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the capability relative to the component itself. Must
  be `self` or `child`.
@@ -853,6 +1112,52 @@ Type: <code>uint32</code>
                 <code>string[1024]</code>
             </td>
             <td> Path identifying the service, by which it was presented to this
+ component.
+
+ Must be an absolute path starting with /.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>target_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> The path by which the capability is being exposed.
+
+ Must be an absolute path starting with /.
+</td>
+        </tr></table>
+
+### ExposeLegacyServiceDecl {:#ExposeLegacyServiceDecl}
+
+
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#42)*
+
+ Declares a legacy service exposed to a component's containing realm, such as
+ a legacy service exposed by the component or one of its children at runtime.
+
+ A legacy service is a service with a single instance, provided by a single
+ FIDL protocol.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The provider of the capability relative to the component itself. Must
+ be `self` or `child`.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>source_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> Path identifying the legacy service, by which it was presented to this
  component.
 </td>
         </tr><tr>
@@ -870,7 +1175,7 @@ Type: <code>uint32</code>
 ### ExposeDirectoryDecl {:#ExposeDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#33)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#59)*
 
  Declares a directory exposed to a component's containing realm, such as a
  directory exposed by the component or one of its children at runtime.
@@ -891,7 +1196,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the capability relative to the component itself. Must
  be `self` or `child`.
@@ -911,11 +1216,14 @@ Type: <code>uint32</code>
 ### OfferServiceDecl {:#OfferServiceDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#19)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#23)*
 
  Declares a service offered by a component to one of its children, which may
  have been offered by the component's containing realm, the component itself,
  or one of its other children.
+
+ To learn more about services, see:
+ https://fuchsia.dev/fuchsia-src/glossary#service
 
 
 <table>
@@ -924,7 +1232,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the capability relative to the component itself. Must be
  `realm`, `self`, or `child`.
@@ -936,12 +1244,66 @@ Type: <code>uint32</code>
                 <code>string[1024]</code>
             </td>
             <td> Path identifying the service being offered.
+
+ Must be an absolute path starting with /.
 </td>
         </tr><tr>
             <td>3</td>
             <td><code>target</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> Reference to the target. Must be `child` or `collection`.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>target_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> The path under which the capability is being offered.
+
+ Must be an absolute path starting with /.
+</td>
+        </tr></table>
+
+### OfferLegacyServiceDecl {:#OfferLegacyServiceDecl}
+
+
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#48)*
+
+ Declares a legacy service offered by a component to one of its children,
+ which may have been offered by the component's containing realm, the
+ component itself, or one of its other children.
+
+ A legacy service is a service with a single instance, provided by a single
+ FIDL protocol.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The provider of the capability relative to the component itself. Must be
+ `realm`, `self`, or `child`.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>source_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> Path identifying the legacy service being offered.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>target</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> Reference to the target. Must be `child` or `collection`.
 </td>
@@ -960,11 +1322,11 @@ Type: <code>uint32</code>
 ### OfferDirectoryDecl {:#OfferDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#39)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#68)*
 
- Declares a directory offered by a component to one of its children, which may
- have been offered by the component's containing realm, the component itself,
- or one of its other children.
+ Declares a directory offered by a component to one of its children, which
+ may have been offered by the component's containing realm, the component
+ itself, or one of its other children.
 
 
 <table>
@@ -973,7 +1335,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the capability relative to the component itself. Must be
  `realm`, `self`, or `child`.
@@ -990,7 +1352,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>target</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> Reference to the target of the capability. Must be `child` or
  `collection`.
@@ -1010,7 +1372,7 @@ Type: <code>uint32</code>
 ### OfferStorageDecl {:#OfferStorageDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#60)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#89)*
 
  Declares a storage capability offered by a component to one of its children,
  such as meta storage offered by the component's containing realm or cache
@@ -1023,7 +1385,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#StorageType'>StorageType</a></code>
+                <code><a class='link' href='#StorageType'>StorageType</a></code>
             </td>
             <td> The type of storage being offered.
 </td>
@@ -1031,7 +1393,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The source of the storage capability. Must be `realm` or `storage`.
 </td>
@@ -1039,118 +1401,12 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>target</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> Reference to the target of the capability. Must be `child` or
  `collection`.
 </td>
         </tr></table>
-
-### RealmRef {:#RealmRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#19)*
-
- A reference to a component’s containing realm, i.e. the parent component.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    </table>
-
-### SelfRef {:#SelfRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#22)*
-
- A reference to the component itself.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    </table>
-
-### ChildRef {:#ChildRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#25)*
-
- A reference to one of the component's child instances.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>name</code></td>
-            <td>
-                <code>string[100]</code>
-            </td>
-            <td> The name assigned to the child by its parent. If `collection` is set,
- `name` is scoped to `collection` and the child is a dynamic instance.
- Required.
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>collection</code></td>
-            <td>
-                <code>string[100]</code>
-            </td>
-            <td> The collection `name` belongs to. If omitted, `name` references a static
- instance. This field must be omitted if the `ChildRef` is being used in
- a component declaration. Optional.
-</td>
-        </tr></table>
-
-### CollectionRef {:#CollectionRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#37)*
-
- A reference to one of the component's collections.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>name</code></td>
-            <td>
-                <code>string[100]</code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### StorageRef {:#StorageRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#42)*
-
- A reference to one of the component's storage sections.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>name</code></td>
-            <td>
-                <code>string[100]</code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### FrameworkRef {:#FrameworkRef}
-
-
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#47)*
-
- A reference to the component framework itself.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    </table>
 
 ### StorageDecl {:#StorageDecl}
 
@@ -1185,7 +1441,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the underlying directory capability relative to the
  component itself. Must be `realm`, `self`, or `child`.
@@ -1195,10 +1451,13 @@ Type: <code>uint32</code>
 ### UseServiceDecl {:#UseServiceDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#17)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#21)*
 
  Declares a service used by a component, which was offered to the component's
  environment.
+
+ To learn more about services, see:
+ https://fuchsia.dev/fuchsia-src/glossary#service
 
 
 <table>
@@ -1207,7 +1466,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the service relative to the component itself. Must
  be |realm| or |framework|.
@@ -1219,6 +1478,53 @@ Type: <code>uint32</code>
                 <code>string[1024]</code>
             </td>
             <td> Path identifying the service, by which it was presented to this
+ component.
+
+ Must be an absolute path starting with /.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>target_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> The path where the capability should be installed in the component's
+ namespace.
+
+ Must be an absolute path starting with /.
+</td>
+        </tr></table>
+
+### UseLegacyServiceDecl {:#UseLegacyServiceDecl}
+
+
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#44)*
+
+ Declares a legacy service used by a component, which was offered to the
+ component's environment.
+
+ A legacy service is a service with a single instance, provided by a single
+ FIDL protocol.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The provider of the legacy service relative to the component itself.
+ Must be |realm| or |framework|.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>source_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> Path identifying the legacy service, by which it was presented to this
  component.
 </td>
         </tr><tr>
@@ -1237,10 +1543,10 @@ Type: <code>uint32</code>
 ### UseDirectoryDecl {:#UseDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#35)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#62)*
 
- Declares a directory used by a component, which was offered to the component's
- environment.
+ Declares a directory used by a component, which was offered to the
+ component's environment.
 
 
 <table>
@@ -1249,7 +1555,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td> The provider of the directory relative to the component itself. Must
  be |realm| or |framework|.
@@ -1279,7 +1585,7 @@ Type: <code>uint32</code>
 ### UseStorageDecl {:#UseStorageDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#53)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#80)*
 
  Declares storage used by a component, which was offered to the component's
  environment.
@@ -1291,7 +1597,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#StorageType'>StorageType</a></code>
+                <code><a class='link' href='#StorageType'>StorageType</a></code>
             </td>
             <td> Type of storage used by the component.
 </td>
@@ -1335,7 +1641,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>decl</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ComponentDecl'>ComponentDecl</a></code>
+                <code><a class='link' href='#ComponentDecl'>ComponentDecl</a></code>
             </td>
             <td> The component's declaration.
  This information is typically obtained from the component's manifest
@@ -1345,7 +1651,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>package</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Package'>Package</a></code>
+                <code><a class='link' href='#Package'>Package</a></code>
             </td>
             <td> The package that contains the component.
  By convention, the component's package is mapped to "/pkg" in its
@@ -1392,7 +1698,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>ns</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ComponentNamespace'>ComponentNamespace</a></code>
+                <code><a class='link' href='#ComponentNamespace'>ComponentNamespace</a></code>
             </td>
             <td> The namespace to provide to the component instance.
 </td>
@@ -1445,82 +1751,217 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### WorkRequest {:#WorkRequest}
+
+
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#22)*
+
+ Parameters for a new piece of work to be scheduled.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>start</code></td>
+            <td>
+                <code><a class='link' href='#Start'>Start</a></code>
+            </td>
+            <td> Time when corresponding work item should be _first_ scheduled.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>period</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> Delay between repeated schedulings of corresponding work item. This is left unspecified for
+ one-shot work that should not repeat. Repeating work items are rescheduled indefinitely
+ until it is canceled.
+</td>
+        </tr></table>
+
+### WorkStatus {:#WorkStatus}
+
+
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#65)*
+
+ Snapshot of the status of a scheduled work item.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>next_run_utc_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> Estimated next time to run this work item, interpreted like `ZX_CLOCK_UTC`: number of wall
+ clock nanoseconds since the Unix epoch (midnight on January 1 1970) in UTC.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>period</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> Period for rerunning work; unspecified when work is one-shot instead of repeating.
+</td>
+        </tr></table>
+
 
 
 ## **UNIONS**
 
 ### Realm_BindChild_Result {:#Realm_BindChild_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#7)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_BindChild_Response'>Realm_BindChild_Response</a></code>
+                <code><a class='link' href='#Realm_BindChild_Response'>Realm_BindChild_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Realm_CreateChild_Result {:#Realm_CreateChild_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#14)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_CreateChild_Response'>Realm_CreateChild_Response</a></code>
+                <code><a class='link' href='#Realm_CreateChild_Response'>Realm_CreateChild_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Realm_DestroyChild_Result {:#Realm_DestroyChild_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#21)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_DestroyChild_Response'>Realm_DestroyChild_Response</a></code>
+                <code><a class='link' href='#Realm_DestroyChild_Response'>Realm_DestroyChild_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Realm_ListChildren_Result {:#Realm_ListChildren_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#28)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Realm_ListChildren_Response'>Realm_ListChildren_Response</a></code>
+                <code><a class='link' href='#Realm_ListChildren_Response'>Realm_ListChildren_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### WorkScheduler_ScheduleWork_Result {:#WorkScheduler_ScheduleWork_Result}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#40)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_ScheduleWork_Response'>WorkScheduler_ScheduleWork_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### WorkScheduler_GetWorkById_Result {:#WorkScheduler_GetWorkById_Result}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#47)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_GetWorkById_Response'>WorkScheduler_GetWorkById_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### WorkScheduler_CancelWork_Result {:#WorkScheduler_CancelWork_Result}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#54)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#WorkScheduler_CancelWork_Response'>WorkScheduler_CancelWork_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Worker_DoWork_Result {:#Worker_DoWork_Result}
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#61)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Worker_DoWork_Response'>Worker_DoWork_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1533,19 +1974,25 @@ Type: <code>uint32</code>
 *Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#9)*
 
  Declares a capability exposed to a component's containing realm, such as a
- service exposed by the component or one of its children at runtime.
+ legacy service exposed by the component or one of its children at runtime.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>service</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ExposeServiceDecl'>ExposeServiceDecl</a></code>
+                <code><a class='link' href='#ExposeServiceDecl'>ExposeServiceDecl</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>legacy_service</code></td>
+            <td>
+                <code><a class='link' href='#ExposeLegacyServiceDecl'>ExposeLegacyServiceDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>directory</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ExposeDirectoryDecl'>ExposeDirectoryDecl</a></code>
+                <code><a class='link' href='#ExposeDirectoryDecl'>ExposeDirectoryDecl</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1553,27 +2000,33 @@ Type: <code>uint32</code>
 ### OfferDecl {:#OfferDecl}
 *Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#10)*
 
- Declares a capability offered by a component to one of its children, which may
- have been offered by the component's containing realm, the component itself,
- or one of its other children.
+ Declares a capability offered by a component to one of its children, which
+ may have been offered by the component's containing realm, the component
+ itself, or one of its other children.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>service</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#OfferServiceDecl'>OfferServiceDecl</a></code>
+                <code><a class='link' href='#OfferServiceDecl'>OfferServiceDecl</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>legacy_service</code></td>
+            <td>
+                <code><a class='link' href='#OfferLegacyServiceDecl'>OfferLegacyServiceDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>directory</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#OfferDirectoryDecl'>OfferDirectoryDecl</a></code>
+                <code><a class='link' href='#OfferDirectoryDecl'>OfferDirectoryDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>storage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#OfferStorageDecl'>OfferStorageDecl</a></code>
+                <code><a class='link' href='#OfferStorageDecl'>OfferStorageDecl</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1588,37 +2041,37 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>realm</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#RealmRef'>RealmRef</a></code>
+                <code><a class='link' href='#RealmRef'>RealmRef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>self</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#SelfRef'>SelfRef</a></code>
+                <code><a class='link' href='#SelfRef'>SelfRef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>child</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#ChildRef'>ChildRef</a></code>
+                <code><a class='link' href='#ChildRef'>ChildRef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>collection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#CollectionRef'>CollectionRef</a></code>
+                <code><a class='link' href='#CollectionRef'>CollectionRef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>storage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#StorageRef'>StorageRef</a></code>
+                <code><a class='link' href='#StorageRef'>StorageRef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>framework</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#FrameworkRef'>FrameworkRef</a></code>
+                <code><a class='link' href='#FrameworkRef'>FrameworkRef</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1633,21 +2086,50 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>service</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#UseServiceDecl'>UseServiceDecl</a></code>
+                <code><a class='link' href='#UseServiceDecl'>UseServiceDecl</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>legacy_service</code></td>
+            <td>
+                <code><a class='link' href='#UseLegacyServiceDecl'>UseLegacyServiceDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>directory</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#UseDirectoryDecl'>UseDirectoryDecl</a></code>
+                <code><a class='link' href='#UseDirectoryDecl'>UseDirectoryDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>storage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys2/index.html#UseStorageDecl'>UseStorageDecl</a></code>
+                <code><a class='link' href='#UseStorageDecl'>UseStorageDecl</a></code>
             </td>
             <td></td>
+        </tr></table>
+
+### Start {:#Start}
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#13)*
+
+ Different ways to specify when to schedule a work item for the first time.
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>delay</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> A non-negative delay to wait before scheduling work.
+</td>
+        </tr><tr>
+            <td><code>utc_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> A fixed point in time to start scheduling work, interpreted like `ZX_CLOCK_UTC`: number of
+ wall clock nanoseconds since the Unix epoch (midnight on January 1 1970) in UTC.
+</td>
         </tr></table>
 
 
@@ -1714,6 +2196,13 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>int32</code></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#9">MAX_WORK_ID_LENGTH</a></td>
+            <td>
+                    <code>100</code>
+                </td>
+                <td><code>uint32</code></td>
         </tr>
     
 </table>

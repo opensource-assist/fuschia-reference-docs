@@ -72,28 +72,28 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>nonnullable_protocol</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.types/index.html#this_is_a_protocol'>this_is_a_protocol</a></code>
+                <code><a class='link' href='#this_is_a_protocol'>this_is_a_protocol</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nullable_protocol</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.types/index.html#this_is_a_protocol'>this_is_a_protocol</a>?</code>
+                <code><a class='link' href='#this_is_a_protocol'>this_is_a_protocol</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nonnullable_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fidl.examples.types/index.html#this_is_a_protocol'>this_is_a_protocol</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#this_is_a_protocol'>this_is_a_protocol</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nullable_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fidl.examples.types/index.html#this_is_a_protocol'>this_is_a_protocol</a>&gt;?</code>
+                <code>request&lt;<a class='link' href='#this_is_a_protocol'>this_is_a_protocol</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -272,14 +272,14 @@ Book: /_book.yaml
                 <code>float32</code>
             </td>
             <td></td>
-            <td>1.30</td>
+            <td>1.3</td>
         </tr><tr>
             <td><code>f64</code></td>
             <td>
                 <code>float64</code>
             </td>
             <td></td>
-            <td>0.0000054</td>
+            <td>5.4e-06</td>
         </tr><tr>
             <td><code>s</code></td>
             <td>
@@ -1745,14 +1745,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.types/index.html#this_is_a_struct'>this_is_a_struct</a></code>
+                <code><a class='link' href='#this_is_a_struct'>this_is_a_struct</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nullable_s</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.types/index.html#this_is_a_struct'>this_is_a_struct</a>?</code>
+                <code><a class='link' href='#this_is_a_struct'>this_is_a_struct</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1770,14 +1770,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.types/index.html#this_is_a_union'>this_is_a_union</a></code>
+                <code><a class='link' href='#this_is_a_union'>this_is_a_union</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nullable_u</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.types/index.html#this_is_a_union'>this_is_a_union</a>?</code>
+                <code><a class='link' href='#this_is_a_union'>this_is_a_union</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1795,14 +1795,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.types/index.html#this_is_a_xunion'>this_is_a_xunion</a></code>
+                <code><a class='link' href='#this_is_a_xunion'>this_is_a_xunion</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nullable_xu</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.types/index.html#this_is_a_xunion'>this_is_a_xunion</a>?</code>
+                <code><a class='link' href='#this_is_a_xunion'>this_is_a_xunion</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1820,14 +1820,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>i</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.types/index.html#this_is_a_protocol'>this_is_a_protocol</a></code>
+                <code><a class='link' href='#this_is_a_protocol'>this_is_a_protocol</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nullable_i</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.types/index.html#this_is_a_protocol'>this_is_a_protocol</a>?</code>
+                <code><a class='link' href='#this_is_a_protocol'>this_is_a_protocol</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1845,14 +1845,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>r</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fidl.examples.types/index.html#this_is_a_protocol'>this_is_a_protocol</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#this_is_a_protocol'>this_is_a_protocol</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nullable_r</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fidl.examples.types/index.html#this_is_a_protocol'>this_is_a_protocol</a>&gt;?</code>
+                <code>request&lt;<a class='link' href='#this_is_a_protocol'>this_is_a_protocol</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>

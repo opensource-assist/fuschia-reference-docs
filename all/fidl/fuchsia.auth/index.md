@@ -35,7 +35,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AttestationSignerStatus'>AttestationSignerStatus</a></code>
+                <code><a class='link' href='#AttestationSignerStatus'>AttestationSignerStatus</a></code>
             </td>
         </tr><tr>
             <td><code>signature</code></td>
@@ -110,7 +110,7 @@ Book: /_book.yaml
     <tr>
             <td><code>auth_ui_context</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthenticationUIContext'>AuthenticationUIContext</a>?</code>
+                <code><a class='link' href='#AuthenticationUIContext'>AuthenticationUIContext</a>?</code>
             </td>
         </tr><tr>
             <td><code>user_profile_id</code></td>
@@ -126,7 +126,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthProviderStatus'>AuthProviderStatus</a></code>
+                <code><a class='link' href='#AuthProviderStatus'>AuthProviderStatus</a></code>
             </td>
         </tr><tr>
             <td><code>credential</code></td>
@@ -136,7 +136,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>user_profile_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#UserProfileInfo'>UserProfileInfo</a>?</code>
+                <code><a class='link' href='#UserProfileInfo'>UserProfileInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -181,12 +181,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthProviderStatus'>AuthProviderStatus</a></code>
+                <code><a class='link' href='#AuthProviderStatus'>AuthProviderStatus</a></code>
             </td>
         </tr><tr>
             <td><code>auth_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthToken'>AuthToken</a>?</code>
+                <code><a class='link' href='#AuthToken'>AuthToken</a>?</code>
             </td>
         </tr></table>
 
@@ -225,12 +225,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthProviderStatus'>AuthProviderStatus</a></code>
+                <code><a class='link' href='#AuthProviderStatus'>AuthProviderStatus</a></code>
             </td>
         </tr><tr>
             <td><code>auth_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthToken'>AuthToken</a>?</code>
+                <code><a class='link' href='#AuthToken'>AuthToken</a>?</code>
             </td>
         </tr></table>
 
@@ -265,12 +265,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthProviderStatus'>AuthProviderStatus</a></code>
+                <code><a class='link' href='#AuthProviderStatus'>AuthProviderStatus</a></code>
             </td>
         </tr><tr>
             <td><code>firebase_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#FirebaseToken'>FirebaseToken</a>?</code>
+                <code><a class='link' href='#FirebaseToken'>FirebaseToken</a>?</code>
             </td>
         </tr></table>
 
@@ -298,7 +298,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthProviderStatus'>AuthProviderStatus</a></code>
+                <code><a class='link' href='#AuthProviderStatus'>AuthProviderStatus</a></code>
             </td>
         </tr></table>
 
@@ -335,17 +335,17 @@ Book: /_book.yaml
     <tr>
             <td><code>attestation_signer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AttestationSigner'>AttestationSigner</a></code>
+                <code><a class='link' href='#AttestationSigner'>AttestationSigner</a></code>
             </td>
         </tr><tr>
             <td><code>jwt_params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AttestationJWTParams'>AttestationJWTParams</a></code>
+                <code><a class='link' href='#AttestationJWTParams'>AttestationJWTParams</a></code>
             </td>
         </tr><tr>
             <td><code>auth_ui_context</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthenticationUIContext'>AuthenticationUIContext</a>?</code>
+                <code><a class='link' href='#AuthenticationUIContext'>AuthenticationUIContext</a>?</code>
             </td>
         </tr><tr>
             <td><code>user_profile_id</code></td>
@@ -361,7 +361,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthProviderStatus'>AuthProviderStatus</a></code>
+                <code><a class='link' href='#AuthProviderStatus'>AuthProviderStatus</a></code>
             </td>
         </tr><tr>
             <td><code>credential</code></td>
@@ -371,17 +371,17 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>auth_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthToken'>AuthToken</a>?</code>
+                <code><a class='link' href='#AuthToken'>AuthToken</a>?</code>
             </td>
         </tr><tr>
             <td><code>auth_challenge</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthChallenge'>AuthChallenge</a>?</code>
+                <code><a class='link' href='#AuthChallenge'>AuthChallenge</a>?</code>
             </td>
         </tr><tr>
             <td><code>user_profile_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#UserProfileInfo'>UserProfileInfo</a>?</code>
+                <code><a class='link' href='#UserProfileInfo'>UserProfileInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -405,12 +405,12 @@ Book: /_book.yaml
     <tr>
             <td><code>attestation_signer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AttestationSigner'>AttestationSigner</a></code>
+                <code><a class='link' href='#AttestationSigner'>AttestationSigner</a></code>
             </td>
         </tr><tr>
             <td><code>jwt_params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AssertionJWTParams'>AssertionJWTParams</a></code>
+                <code><a class='link' href='#AssertionJWTParams'>AssertionJWTParams</a></code>
             </td>
         </tr><tr>
             <td><code>credential</code></td>
@@ -431,7 +431,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthProviderStatus'>AuthProviderStatus</a></code>
+                <code><a class='link' href='#AuthProviderStatus'>AuthProviderStatus</a></code>
             </td>
         </tr><tr>
             <td><code>updated_credential</code></td>
@@ -441,12 +441,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>auth_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthToken'>AuthToken</a>?</code>
+                <code><a class='link' href='#AuthToken'>AuthToken</a>?</code>
             </td>
         </tr><tr>
             <td><code>auth_challenge</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthChallenge'>AuthChallenge</a>?</code>
+                <code><a class='link' href='#AuthChallenge'>AuthChallenge</a>?</code>
             </td>
         </tr></table>
 
@@ -467,7 +467,7 @@ Book: /_book.yaml
     <tr>
             <td><code>auth_provider</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.auth/index.html#AuthProvider'>AuthProvider</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AuthProvider'>AuthProvider</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -478,7 +478,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthProviderStatus'>AuthProviderStatus</a></code>
+                <code><a class='link' href='#AuthProviderStatus'>AuthProviderStatus</a></code>
             </td>
         </tr></table>
 
@@ -502,7 +502,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.auth/index.html#AuthenticationUIContext'>AuthenticationUIContext</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AuthenticationUIContext'>AuthenticationUIContext</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -541,17 +541,17 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>auth_provider_configs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.auth/index.html#AuthProviderConfig'>AuthProviderConfig</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#AuthProviderConfig'>AuthProviderConfig</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>auth_context_provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthenticationContextProvider'>AuthenticationContextProvider</a></code>
+                <code><a class='link' href='#AuthenticationContextProvider'>AuthenticationContextProvider</a></code>
             </td>
         </tr><tr>
             <td><code>token_manager</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.auth/index.html#TokenManager'>TokenManager</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#TokenManager'>TokenManager</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -603,12 +603,12 @@ Book: /_book.yaml
     <tr>
             <td><code>app_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
             </td>
         </tr><tr>
             <td><code>auth_ui_context</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthenticationUIContext'>AuthenticationUIContext</a>?</code>
+                <code><a class='link' href='#AuthenticationUIContext'>AuthenticationUIContext</a>?</code>
             </td>
         </tr><tr>
             <td><code>app_scopes</code></td>
@@ -634,12 +634,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>user_profile_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#UserProfileInfo'>UserProfileInfo</a>?</code>
+                <code><a class='link' href='#UserProfileInfo'>UserProfileInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -665,7 +665,7 @@ Book: /_book.yaml
     <tr>
             <td><code>app_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
             </td>
         </tr><tr>
             <td><code>user_profile_id</code></td>
@@ -686,7 +686,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>access_token</code></td>
@@ -716,7 +716,7 @@ Book: /_book.yaml
     <tr>
             <td><code>app_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
             </td>
         </tr><tr>
             <td><code>user_profile_id</code></td>
@@ -737,7 +737,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>id_token</code></td>
@@ -767,7 +767,7 @@ Book: /_book.yaml
     <tr>
             <td><code>app_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
             </td>
         </tr><tr>
             <td><code>user_profile_id</code></td>
@@ -793,12 +793,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>firebase_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#FirebaseToken'>FirebaseToken</a>?</code>
+                <code><a class='link' href='#FirebaseToken'>FirebaseToken</a>?</code>
             </td>
         </tr></table>
 
@@ -828,7 +828,7 @@ Book: /_book.yaml
     <tr>
             <td><code>app_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
             </td>
         </tr><tr>
             <td><code>user_profile_id</code></td>
@@ -849,7 +849,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -864,7 +864,7 @@ Book: /_book.yaml
     <tr>
             <td><code>app_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
             </td>
         </tr></table>
 
@@ -875,7 +875,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>user_profile_ids</code></td>
@@ -901,7 +901,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>token_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#TokenType'>TokenType</a></code>
+                <code><a class='link' href='#TokenType'>TokenType</a></code>
             </td>
             <td> Type of token.
 </td>
@@ -1062,7 +1062,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>credential_eckey</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#CredentialECKey'>CredentialECKey</a></code>
+                <code><a class='link' href='#CredentialECKey'>CredentialECKey</a></code>
             </td>
             <td> Contains the ephemeral Elliptic curve credential public key which will be
  bound to the newly generated refresh token grant.
@@ -1101,7 +1101,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>credential_eckey</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#CredentialECKey'>CredentialECKey</a></code>
+                <code><a class='link' href='#CredentialECKey'>CredentialECKey</a></code>
             </td>
             <td> Contains Elliptic curve credential public key which is bound to existing
  refresh token.
@@ -1190,7 +1190,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>summary</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth/index.html#AuthStateSummary'>AuthStateSummary</a></code>
+                <code><a class='link' href='#AuthStateSummary'>AuthStateSummary</a></code>
             </td>
             <td> A high level assessment of whether the human that owns a Fuchsia account
  is present and engaged.

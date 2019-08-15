@@ -24,7 +24,7 @@ Book: /_book.yaml
     <tr>
             <td><code>session</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#Session'>Session</a></code>
+                <code><a class='link' href='#Session'>Session</a></code>
             </td>
         </tr></table>
 
@@ -50,7 +50,7 @@ Book: /_book.yaml
     <tr>
             <td><code>session</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#Session'>Session</a></code>
+                <code><a class='link' href='#Session'>Session</a></code>
             </td>
         </tr></table>
 
@@ -84,7 +84,7 @@ Book: /_book.yaml
     <tr>
             <td><code>active_session</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#ActiveSession'>ActiveSession</a></code>
+                <code><a class='link' href='#ActiveSession'>ActiveSession</a></code>
             </td>
         </tr></table>
 
@@ -120,7 +120,7 @@ Book: /_book.yaml
     <tr>
             <td><code>sessions_change</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#SessionsChange'>SessionsChange</a></code>
+                <code><a class='link' href='#SessionsChange'>SessionsChange</a></code>
             </td>
         </tr></table>
 
@@ -157,7 +157,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>session_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.sessions/index.html#Session'>Session</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Session'>Session</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -182,7 +182,7 @@ Book: /_book.yaml
     <tr>
             <td><code>playback_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#PlaybackStatus'>PlaybackStatus</a></code>
+                <code><a class='link' href='#PlaybackStatus'>PlaybackStatus</a></code>
             </td>
         </tr></table>
 
@@ -217,7 +217,7 @@ Book: /_book.yaml
     <tr>
             <td><code>media_images</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.media.sessions/index.html#MediaImage'>MediaImage</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#MediaImage'>MediaImage</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -255,7 +255,7 @@ Book: /_book.yaml
     <tr>
             <td><code>media_image_bitmap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#MediaImageBitmap'>MediaImageBitmap</a>?</code>
+                <code><a class='link' href='#MediaImageBitmap'>MediaImageBitmap</a>?</code>
             </td>
         </tr></table>
 
@@ -280,7 +280,7 @@ Book: /_book.yaml
     <tr>
             <td><code>playback_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#PlaybackStatus'>PlaybackStatus</a></code>
+                <code><a class='link' href='#PlaybackStatus'>PlaybackStatus</a></code>
             </td>
         </tr></table>
 
@@ -315,7 +315,7 @@ Book: /_book.yaml
     <tr>
             <td><code>media_images</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.media.sessions/index.html#MediaImage'>MediaImage</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#MediaImage'>MediaImage</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -353,7 +353,7 @@ Book: /_book.yaml
     <tr>
             <td><code>media_image_bitmap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#MediaImageBitmap'>MediaImageBitmap</a>?</code>
+                <code><a class='link' href='#MediaImageBitmap'>MediaImageBitmap</a>?</code>
             </td>
         </tr></table>
 
@@ -370,7 +370,7 @@ Book: /_book.yaml
     <tr>
             <td><code>playback_capabilities</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#PlaybackCapabilities'>PlaybackCapabilities</a></code>
+                <code><a class='link' href='#PlaybackCapabilities'>PlaybackCapabilities</a></code>
             </td>
         </tr></table>
 
@@ -509,7 +509,7 @@ Book: /_book.yaml
     <tr>
             <td><code>repeat_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#RepeatMode'>RepeatMode</a></code>
+                <code><a class='link' href='#RepeatMode'>RepeatMode</a></code>
             </td>
         </tr></table>
 
@@ -583,7 +583,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>image_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#MediaImageType'>MediaImageType</a></code>
+                <code><a class='link' href='#MediaImageType'>MediaImageType</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -653,14 +653,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>session</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#SessionEntry'>SessionEntry</a></code>
+                <code><a class='link' href='#SessionEntry'>SessionEntry</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>delta</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#SessionDelta'>SessionDelta</a></code>
+                <code><a class='link' href='#SessionDelta'>SessionDelta</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -774,7 +774,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>flags</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#PlaybackCapabilityFlags'>PlaybackCapabilityFlags</a></code>
+                <code><a class='link' href='#PlaybackCapabilityFlags'>PlaybackCapabilityFlags</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -797,7 +797,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>supported_repeat_modes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.media.sessions/index.html#RepeatMode'>RepeatMode</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RepeatMode'>RepeatMode</a>&gt;</code>
             </td>
             <td> Supported repeat modes that can be set with `SetRepeatMode()`.
 </td>
@@ -832,7 +832,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>playback_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#PlaybackState'>PlaybackState</a></code>
+                <code><a class='link' href='#PlaybackState'>PlaybackState</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -848,7 +848,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>repeat_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#RepeatMode'>RepeatMode</a></code>
+                <code><a class='link' href='#RepeatMode'>RepeatMode</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -879,7 +879,7 @@ Type: <code>uint32</code>
             <td>8</td>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.sessions/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>

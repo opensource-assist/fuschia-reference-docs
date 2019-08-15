@@ -14,6 +14,116 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
+### StructWithInt {:#StructWithInt}
+*Defined in [conformance/arrays_and_vectors.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/arrays_and_vectors.test.fidl#12)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>x</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### StructWithArrays {:#StructWithArrays}
+*Defined in [conformance/arrays_and_vectors.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/arrays_and_vectors.test.fidl#16)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>arr_empty</code></td>
+            <td>
+                <code>int32[0]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>arr_int</code></td>
+            <td>
+                <code>int32[2]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>arr_string</code></td>
+            <td>
+                <code>[2]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>arr_struct</code></td>
+            <td>
+                <code>[2]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>arr_arr_int</code></td>
+            <td>
+                <code>[2]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### StructWithVectors {:#StructWithVectors}
+*Defined in [conformance/arrays_and_vectors.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/arrays_and_vectors.test.fidl#24)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>vec_empty</code></td>
+            <td>
+                <code>vector&lt;int32&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>vec_int</code></td>
+            <td>
+                <code>vector&lt;int32&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>vec_string</code></td>
+            <td>
+                <code>vector&lt;string&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>vec_struct</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#StructWithInt'>StructWithInt</a>&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>vec_vec_int</code></td>
+            <td>
+                <code>vector&lt;vector&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### TestXUnionInTable {:#TestXUnionInTable}
 *Defined in [conformance/mix_and_match.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/mix_and_match.test.fidl#15)*
 
@@ -25,7 +135,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#XUnionInTable'>XUnionInTable</a></code>
+                <code><a class='link' href='#XUnionInTable'>XUnionInTable</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -50,7 +160,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>ip_address_config</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#IpAddressConfig'>IpAddressConfig</a></code>
+                <code><a class='link' href='#IpAddressConfig'>IpAddressConfig</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -75,7 +185,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#InterfaceConfig'>InterfaceConfig</a></code>
+                <code><a class='link' href='#InterfaceConfig'>InterfaceConfig</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -167,7 +277,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>attributes</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#NodeAttributes'>NodeAttributes</a></code>
+                <code><a class='link' href='#NodeAttributes'>NodeAttributes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -185,49 +295,49 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#EmptyStruct'>EmptyStruct</a></code>
+                <code><a class='link' href='#EmptyStruct'>EmptyStruct</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>s2</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#EmptyStruct'>EmptyStruct</a>?</code>
+                <code><a class='link' href='#EmptyStruct'>EmptyStruct</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>t</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#TableWithEmptyStruct'>TableWithEmptyStruct</a></code>
+                <code><a class='link' href='#TableWithEmptyStruct'>TableWithEmptyStruct</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#XUnionWithEmptyStruct'>XUnionWithEmptyStruct</a></code>
+                <code><a class='link' href='#XUnionWithEmptyStruct'>XUnionWithEmptyStruct</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>xu2</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#XUnionWithEmptyStruct'>XUnionWithEmptyStruct</a>?</code>
+                <code><a class='link' href='#XUnionWithEmptyStruct'>XUnionWithEmptyStruct</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>u</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#UnionWithEmptyStruct'>UnionWithEmptyStruct</a></code>
+                <code><a class='link' href='#UnionWithEmptyStruct'>UnionWithEmptyStruct</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>u2</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#UnionWithEmptyStruct'>UnionWithEmptyStruct</a>?</code>
+                <code><a class='link' href='#UnionWithEmptyStruct'>UnionWithEmptyStruct</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -263,7 +373,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>es</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#EmptyStruct'>EmptyStruct</a></code>
+                <code><a class='link' href='#EmptyStruct'>EmptyStruct</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -366,7 +476,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>table</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#SimpleTable'>SimpleTable</a></code>
+                <code><a class='link' href='#SimpleTable'>SimpleTable</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -384,7 +494,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>table</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#SimpleTable'>SimpleTable</a></code>
+                <code><a class='link' href='#SimpleTable'>SimpleTable</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -409,7 +519,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>table</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#TableWithStringAndVector'>TableWithStringAndVector</a></code>
+                <code><a class='link' href='#TableWithStringAndVector'>TableWithStringAndVector</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -452,7 +562,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#SampleXUnion'>SampleXUnion</a></code>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -484,7 +594,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#SampleXUnion'>SampleXUnion</a>?</code>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -524,7 +634,7 @@ Book: /_book.yaml
             <td>2</td>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#SampleXUnion'>SampleXUnion</a></code>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -549,7 +659,7 @@ Book: /_book.yaml
             <td>1</td>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#EmptyStruct'>EmptyStruct</a></code>
+                <code><a class='link' href='#EmptyStruct'>EmptyStruct</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -663,13 +773,13 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#EmptyStruct'>EmptyStruct</a></code>
+                <code><a class='link' href='#EmptyStruct'>EmptyStruct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>s2</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#EmptyStruct'>EmptyStruct</a>?</code>
+                <code><a class='link' href='#EmptyStruct'>EmptyStruct</a>?</code>
             </td>
             <td></td>
         </tr></table>
@@ -694,13 +804,13 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#Int64Struct'>Int64Struct</a></code>
+                <code><a class='link' href='#Int64Struct'>Int64Struct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>os</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#Int64Struct'>Int64Struct</a>?</code>
+                <code><a class='link' href='#Int64Struct'>Int64Struct</a>?</code>
             </td>
             <td></td>
         </tr><tr>
@@ -723,7 +833,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#EmptyStruct'>EmptyStruct</a></code>
+                <code><a class='link' href='#EmptyStruct'>EmptyStruct</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -742,13 +852,13 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>su</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#SimpleUnion'>SimpleUnion</a></code>
+                <code><a class='link' href='#SimpleUnion'>SimpleUnion</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>st</code></td>
             <td>
-                <code><a class='link' href='../conformance/index.html#SimpleTable'>SimpleTable</a></code>
+                <code><a class='link' href='#SimpleTable'>SimpleTable</a></code>
             </td>
             <td></td>
         </tr></table>

@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr>
             <td><code>audio_renderer_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media/index.html#AudioRenderer'>AudioRenderer</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AudioRenderer'>AudioRenderer</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -38,7 +38,7 @@ Book: /_book.yaml
     <tr>
             <td><code>audio_capturer_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media/index.html#AudioCapturer'>AudioCapturer</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AudioCapturer'>AudioCapturer</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>loopback</code></td>
@@ -108,7 +108,7 @@ Book: /_book.yaml
     <tr>
             <td><code>policy</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioOutputRoutingPolicy'>AudioOutputRoutingPolicy</a></code>
+                <code><a class='link' href='#AudioOutputRoutingPolicy'>AudioOutputRoutingPolicy</a></code>
             </td>
         </tr></table>
 
@@ -180,7 +180,7 @@ Book: /_book.yaml
  If a user has supplied regions to be filled by the AudioCapturer instance in
  the past, but wishes to reclaim those regions, they may do so using the
  DiscardAllPackets method.  Calling the DiscardAllPackets method will cause
- all pending regions to be returned, but with NO_TIMESTAMP as their
+ all pending regions to be returned, but with `NO_TIMESTAMP` as their
  StreamPacket's PTS.  See "Timing and Overflows", below, for a discussion of
  timestamps and discontinuity flags. After a DiscardAllPackets operation,
  an OnEndOfStream event will be produced.  While an AudioCapturer will never
@@ -247,20 +247,20 @@ Book: /_book.yaml
 
  All media packets produced by an AudioCapturer instance will have their PTS
  field filled out with the capture time of the audio expressed as a timestamp
- given by the CLOCK_MONOTONIC timeline.  Note: this timestamp is actually a
+ given by the `CLOCK_MONOTONIC` timeline.  Note: this timestamp is actually a
  capture timestamp, not a presentation timestamp (it is more of a CTS than a
  PTS) and is meant to represent the underlying system's best estimate of the
  capture time of the first frame of audio, including all outboard and hardware
  introduced buffering delay.  As a result, all timestamps produced by an
  AudioCapturer should be expected to be in the past relative to 'now' on the
- CLOCK_MONOTONIC timeline.
+ `CLOCK_MONOTONIC` timeline.
 
  The one exception to the "everything has an explicit timestamp" rule is when
  discarding submitted regions while operating in synchronous mode. Discarded
  packets have no data in them, but FIDL demands that all pending
  method-return-value callbacks be executed.  Because of this, the regions will
  be returned to the user, but their timestamps will be set to
- NO_TIMESTAMP, and their payload sizes will be set to zero.  Any
+ `NO_TIMESTAMP`, and their payload sizes will be set to zero.  Any
  partially filled payload will have a valid timestamp, but a payload size
  smaller than originally requested.  The final discarded payload (if there
  were any to discard) will be followed by an OnEndOfStream event.
@@ -277,7 +277,7 @@ Book: /_book.yaml
  instead of simply using the raw capture timestamps.  This is because the
  explicit timestamps written on continuous packets may have a small amount of
  rounding error based on whether or not the units of the capture timeline
- (CLOCK_MONOTONIC) are divisible by the chosen audio frame rate.
+ (`CLOCK_MONOTONIC`) are divisible by the chosen audio frame rate.
 
  Users should always expect the first StreamPacket produced by an
  AudioCapturer to have the discontinuous flag set on it (as there is no
@@ -388,7 +388,7 @@ Book: /_book.yaml
     <tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamPacket'>StreamPacket</a></code>
+                <code><a class='link' href='#StreamPacket'>StreamPacket</a></code>
             </td>
         </tr></table>
 
@@ -414,7 +414,7 @@ Book: /_book.yaml
     <tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamPacket'>StreamPacket</a></code>
+                <code><a class='link' href='#StreamPacket'>StreamPacket</a></code>
             </td>
         </tr></table>
 
@@ -457,7 +457,7 @@ Book: /_book.yaml
     <tr>
             <td><code>stream_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioStreamType'>AudioStreamType</a></code>
+                <code><a class='link' href='#AudioStreamType'>AudioStreamType</a></code>
             </td>
         </tr></table>
 
@@ -495,7 +495,7 @@ Book: /_book.yaml
     <tr>
             <td><code>captured_packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamPacket'>StreamPacket</a></code>
+                <code><a class='link' href='#StreamPacket'>StreamPacket</a></code>
             </td>
         </tr></table>
 
@@ -573,7 +573,7 @@ Book: /_book.yaml
     <tr>
             <td><code>usage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioCaptureUsage'>AudioCaptureUsage</a></code>
+                <code><a class='link' href='#AudioCaptureUsage'>AudioCaptureUsage</a></code>
             </td>
         </tr></table>
 
@@ -600,7 +600,7 @@ Book: /_book.yaml
     <tr>
             <td><code>stream_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamType'>StreamType</a></code>
+                <code><a class='link' href='#StreamType'>StreamType</a></code>
             </td>
         </tr></table>
 
@@ -617,7 +617,7 @@ Book: /_book.yaml
     <tr>
             <td><code>audio_out_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media/index.html#AudioRenderer'>AudioRenderer</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AudioRenderer'>AudioRenderer</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -637,7 +637,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>audio_in_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media/index.html#AudioCapturer'>AudioCapturer</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AudioCapturer'>AudioCapturer</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -702,7 +702,7 @@ Book: /_book.yaml
     <tr>
             <td><code>policy</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioOutputRoutingPolicy'>AudioOutputRoutingPolicy</a></code>
+                <code><a class='link' href='#AudioOutputRoutingPolicy'>AudioOutputRoutingPolicy</a></code>
             </td>
         </tr></table>
 
@@ -732,7 +732,7 @@ Book: /_book.yaml
     <tr>
             <td><code>usage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioRenderUsage'>AudioRenderUsage</a></code>
+                <code><a class='link' href='#AudioRenderUsage'>AudioRenderUsage</a></code>
             </td>
         </tr><tr>
             <td><code>gain_db</code></td>
@@ -752,7 +752,7 @@ Book: /_book.yaml
     <tr>
             <td><code>usage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioCaptureUsage'>AudioCaptureUsage</a></code>
+                <code><a class='link' href='#AudioCaptureUsage'>AudioCaptureUsage</a></code>
             </td>
         </tr><tr>
             <td><code>gain_db</code></td>
@@ -783,7 +783,7 @@ Book: /_book.yaml
     <tr>
             <td><code>devices</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.media/index.html#AudioDeviceInfo'>AudioDeviceInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#AudioDeviceInfo'>AudioDeviceInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -800,7 +800,7 @@ Book: /_book.yaml
     <tr>
             <td><code>device</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioDeviceInfo'>AudioDeviceInfo</a></code>
+                <code><a class='link' href='#AudioDeviceInfo'>AudioDeviceInfo</a></code>
             </td>
         </tr></table>
 
@@ -835,7 +835,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>gain_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioGainInfo'>AudioGainInfo</a></code>
+                <code><a class='link' href='#AudioGainInfo'>AudioGainInfo</a></code>
             </td>
         </tr></table>
 
@@ -867,7 +867,7 @@ Book: /_book.yaml
  target the proper input/output.
 
  The Get command returns the device_token of the device whose gain is
- being reported, or ZX_KOID_INVALID in the case that the requested
+ being reported, or `ZX_KOID_INVALID` in the case that the requested
  device_token was invalid or the device had been removed from the system
  before the Get command could be processed.
 
@@ -903,7 +903,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>gain_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioGainInfo'>AudioGainInfo</a></code>
+                <code><a class='link' href='#AudioGainInfo'>AudioGainInfo</a></code>
             </td>
         </tr></table>
 
@@ -921,7 +921,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>gain_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioGainInfo'>AudioGainInfo</a></code>
+                <code><a class='link' href='#AudioGainInfo'>AudioGainInfo</a></code>
             </td>
         </tr><tr>
             <td><code>set_flags</code></td>
@@ -937,7 +937,7 @@ Book: /_book.yaml
  Default Device
 
  Fetch the device ID of the current default input or output device, or
- ZX_KOID_INVALID if no such device exists.
+ `ZX_KOID_INVALID` if no such device exists.
 
 #### Request
 <table>
@@ -973,6 +973,31 @@ Book: /_book.yaml
                 <code>uint64</code>
             </td>
         </tr></table>
+
+### AddDeviceByChannel {:#AddDeviceByChannel}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>device_channel</code></td>
+            <td>
+                <code>handle&lt;channel&gt;</code>
+            </td>
+        </tr><tr>
+            <td><code>device_name</code></td>
+            <td>
+                <code>string[256]</code>
+            </td>
+        </tr><tr>
+            <td><code>is_input</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+
 
 ## AudioRenderer {:#AudioRenderer}
 *Defined in [fuchsia.media/audio_renderer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_renderer.fidl#23)*
@@ -1050,7 +1075,7 @@ Book: /_book.yaml
     <tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamPacket'>StreamPacket</a></code>
+                <code><a class='link' href='#StreamPacket'>StreamPacket</a></code>
             </td>
         </tr></table>
 
@@ -1075,7 +1100,7 @@ Book: /_book.yaml
     <tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamPacket'>StreamPacket</a></code>
+                <code><a class='link' href='#StreamPacket'>StreamPacket</a></code>
             </td>
         </tr></table>
 
@@ -1125,7 +1150,7 @@ Book: /_book.yaml
 ### SetPcmStreamType {:#SetPcmStreamType}
 
  Sets the type of the stream to be delivered by the client. Using this
- method implies that the stream encoding is AUDIO_ENCODING_LPCM.
+ method implies that the stream encoding is `AUDIO_ENCODING_LPCM`.
 
 #### Request
 <table>
@@ -1133,7 +1158,7 @@ Book: /_book.yaml
     <tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioStreamType'>AudioStreamType</a></code>
+                <code><a class='link' href='#AudioStreamType'>AudioStreamType</a></code>
             </td>
         </tr></table>
 
@@ -1152,7 +1177,7 @@ Book: /_book.yaml
     <tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamType'>StreamType</a></code>
+                <code><a class='link' href='#StreamType'>StreamType</a></code>
             </td>
         </tr></table>
 
@@ -1321,7 +1346,7 @@ Book: /_book.yaml
 
  Users, depending on their use case, may optionally choose not to specify
  one or both of these timestamps. A timestamp may be omitted by supplying
- the special value 'NO_TIMESTAMP'. The AudioRenderer automatically deduces
+ the special value '`NO_TIMESTAMP`'. The AudioRenderer automatically deduces
  any omitted timestamp value using the following rules:
 
  Reference Time
@@ -1563,7 +1588,7 @@ Book: /_book.yaml
     <tr>
             <td><code>usage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioRenderUsage'>AudioRenderUsage</a></code>
+                <code><a class='link' href='#AudioRenderUsage'>AudioRenderUsage</a></code>
             </td>
         </tr></table>
 
@@ -1643,7 +1668,7 @@ Book: /_book.yaml
     <tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamPacket'>StreamPacket</a></code>
+                <code><a class='link' href='#StreamPacket'>StreamPacket</a></code>
             </td>
         </tr></table>
 
@@ -1668,7 +1693,7 @@ Book: /_book.yaml
     <tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamPacket'>StreamPacket</a></code>
+                <code><a class='link' href='#StreamPacket'>StreamPacket</a></code>
             </td>
         </tr></table>
 
@@ -1736,7 +1761,7 @@ Book: /_book.yaml
     <tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamPacket'>StreamPacket</a></code>
+                <code><a class='link' href='#StreamPacket'>StreamPacket</a></code>
             </td>
         </tr></table>
 
@@ -1762,7 +1787,7 @@ Book: /_book.yaml
     <tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamPacket'>StreamPacket</a></code>
+                <code><a class='link' href='#StreamPacket'>StreamPacket</a></code>
             </td>
         </tr></table>
 
@@ -1857,7 +1882,7 @@ Book: /_book.yaml
     <tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamPacket'>StreamPacket</a></code>
+                <code><a class='link' href='#StreamPacket'>StreamPacket</a></code>
             </td>
         </tr></table>
 
@@ -1882,7 +1907,7 @@ Book: /_book.yaml
     <tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamPacket'>StreamPacket</a></code>
+                <code><a class='link' href='#StreamPacket'>StreamPacket</a></code>
             </td>
         </tr></table>
 
@@ -1958,6 +1983,26 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### OnStreamFailed2 {:#OnStreamFailed2}
+
+
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>stream_lifetime_ordinal</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>error</code></td>
+            <td>
+                <code><a class='link' href='#StreamError'>StreamError</a></code>
+            </td>
+        </tr></table>
+
 ### OnInputConstraints {:#OnInputConstraints}
 
 
@@ -1969,7 +2014,7 @@ Book: /_book.yaml
     <tr>
             <td><code>input_constraints</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBufferConstraints'>StreamBufferConstraints</a></code>
+                <code><a class='link' href='#StreamBufferConstraints'>StreamBufferConstraints</a></code>
             </td>
         </tr></table>
 
@@ -1982,7 +2027,7 @@ Book: /_book.yaml
     <tr>
             <td><code>input_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBufferSettings'>StreamBufferSettings</a></code>
+                <code><a class='link' href='#StreamBufferSettings'>StreamBufferSettings</a></code>
             </td>
         </tr></table>
 
@@ -1997,7 +2042,7 @@ Book: /_book.yaml
     <tr>
             <td><code>buffer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBuffer'>StreamBuffer</a></code>
+                <code><a class='link' href='#StreamBuffer'>StreamBuffer</a></code>
             </td>
         </tr></table>
 
@@ -2012,7 +2057,7 @@ Book: /_book.yaml
     <tr>
             <td><code>input_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBufferPartialSettings'>StreamBufferPartialSettings</a></code>
+                <code><a class='link' href='#StreamBufferPartialSettings'>StreamBufferPartialSettings</a></code>
             </td>
         </tr></table>
 
@@ -2029,7 +2074,7 @@ Book: /_book.yaml
     <tr>
             <td><code>output_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamOutputConstraints'>StreamOutputConstraints</a></code>
+                <code><a class='link' href='#StreamOutputConstraints'>StreamOutputConstraints</a></code>
             </td>
         </tr></table>
 
@@ -2044,7 +2089,7 @@ Book: /_book.yaml
     <tr>
             <td><code>output_format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamOutputFormat'>StreamOutputFormat</a></code>
+                <code><a class='link' href='#StreamOutputFormat'>StreamOutputFormat</a></code>
             </td>
         </tr></table>
 
@@ -2057,7 +2102,7 @@ Book: /_book.yaml
     <tr>
             <td><code>output_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBufferSettings'>StreamBufferSettings</a></code>
+                <code><a class='link' href='#StreamBufferSettings'>StreamBufferSettings</a></code>
             </td>
         </tr></table>
 
@@ -2072,7 +2117,7 @@ Book: /_book.yaml
     <tr>
             <td><code>buffer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBuffer'>StreamBuffer</a></code>
+                <code><a class='link' href='#StreamBuffer'>StreamBuffer</a></code>
             </td>
         </tr></table>
 
@@ -2087,7 +2132,7 @@ Book: /_book.yaml
     <tr>
             <td><code>output_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBufferPartialSettings'>StreamBufferPartialSettings</a></code>
+                <code><a class='link' href='#StreamBufferPartialSettings'>StreamBufferPartialSettings</a></code>
             </td>
         </tr></table>
 
@@ -2173,7 +2218,7 @@ Book: /_book.yaml
     <tr>
             <td><code>output_packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#Packet'>Packet</a></code>
+                <code><a class='link' href='#Packet'>Packet</a></code>
             </td>
         </tr><tr>
             <td><code>error_detected_before</code></td>
@@ -2196,7 +2241,7 @@ Book: /_book.yaml
     <tr>
             <td><code>available_output_packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#PacketHeader'>PacketHeader</a></code>
+                <code><a class='link' href='#PacketHeader'>PacketHeader</a></code>
             </td>
         </tr></table>
 
@@ -2236,7 +2281,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>format_details</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#FormatDetails'>FormatDetails</a></code>
+                <code><a class='link' href='#FormatDetails'>FormatDetails</a></code>
             </td>
         </tr></table>
 
@@ -2251,7 +2296,7 @@ Book: /_book.yaml
     <tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#Packet'>Packet</a></code>
+                <code><a class='link' href='#Packet'>Packet</a></code>
             </td>
         </tr></table>
 
@@ -2268,7 +2313,7 @@ Book: /_book.yaml
     <tr>
             <td><code>free_input_packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#PacketHeader'>PacketHeader</a></code>
+                <code><a class='link' href='#PacketHeader'>PacketHeader</a></code>
             </td>
         </tr></table>
 
@@ -2355,7 +2400,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>gain_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioGainInfo'>AudioGainInfo</a></code>
+                <code><a class='link' href='#AudioGainInfo'>AudioGainInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2380,7 +2425,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>properties</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.media/index.html#Property'>Property</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Property'>Property</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2429,7 +2474,7 @@ Book: /_book.yaml
             <td> Time at which the packet is to be presented, according to the
  presentation clock.
 </td>
-            <td><a class='link' href='../fuchsia.media/index.html#NO_TIMESTAMP'>NO_TIMESTAMP</a></td>
+            <td><a class='link' href='#NO_TIMESTAMP'>NO_TIMESTAMP</a></td>
         </tr><tr>
             <td><code>payload_buffer_id</code></td>
             <td>
@@ -2535,7 +2580,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2543,7 +2588,7 @@ Book: /_book.yaml
 </table>
 
 ### AudioCompressedFormatAac {:#AudioCompressedFormatAac}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#57)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#89)*
 
 
 
@@ -2554,7 +2599,7 @@ Book: /_book.yaml
 </table>
 
 ### AudioCompressedFormatSbc {:#AudioCompressedFormatSbc}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#60)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#92)*
 
 
 
@@ -2565,7 +2610,7 @@ Book: /_book.yaml
 </table>
 
 ### PcmFormat {:#PcmFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#119)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#151)*
 
 
 
@@ -2579,7 +2624,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>pcm_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioPcmMode'>AudioPcmMode</a></code>
+                <code><a class='link' href='#AudioPcmMode'>AudioPcmMode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2600,7 +2645,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>channel_map</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.media/index.html#AudioChannelId'>AudioChannelId</a>&gt;[16]</code>
+                <code>vector&lt;<a class='link' href='#AudioChannelId'>AudioChannelId</a>&gt;[16]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2608,7 +2653,7 @@ Book: /_book.yaml
 </table>
 
 ### VideoUncompressedFormat {:#VideoUncompressedFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#200)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#232)*
 
 
 
@@ -2763,7 +2808,7 @@ Book: /_book.yaml
 </table>
 
 ### KeyId {:#KeyId}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#306)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#338)*
 
 
 
@@ -2784,7 +2829,7 @@ Book: /_book.yaml
 </table>
 
 ### SubsampleEntry {:#SubsampleEntry}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#315)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#347)*
 
 
 
@@ -2814,7 +2859,7 @@ Book: /_book.yaml
 </table>
 
 ### EncryptionPattern {:#EncryptionPattern}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#326)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#358)*
 
 
 
@@ -2845,7 +2890,7 @@ Book: /_book.yaml
 </table>
 
 ### SbcEncoderSettings {:#SbcEncoderSettings}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#440)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#472)*
 
 
 
@@ -2862,28 +2907,28 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>sub_bands</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#SbcSubBands'>SbcSubBands</a></code>
+                <code><a class='link' href='#SbcSubBands'>SbcSubBands</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='../fuchsia.media/index.html#SUB_BANDS_8'>SUB_BANDS_8</a></td>
+            <td><a class='link' href='#SbcSubBands.SUB_BANDS_8'>SbcSubBands.SUB_BANDS_8</a></td>
         </tr><tr>
             <td><code>allocation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#SbcAllocation'>SbcAllocation</a></code>
+                <code><a class='link' href='#SbcAllocation'>SbcAllocation</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='../fuchsia.media/index.html#ALLOC_LOUDNESS'>ALLOC_LOUDNESS</a></td>
+            <td><a class='link' href='#SbcAllocation.ALLOC_LOUDNESS'>SbcAllocation.ALLOC_LOUDNESS</a></td>
         </tr><tr>
             <td><code>block_count</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#SbcBlockCount'>SbcBlockCount</a></code>
+                <code><a class='link' href='#SbcBlockCount'>SbcBlockCount</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='../fuchsia.media/index.html#BLOCK_COUNT_4'>BLOCK_COUNT_4</a></td>
+            <td><a class='link' href='#SbcBlockCount.BLOCK_COUNT_4'>SbcBlockCount.BLOCK_COUNT_4</a></td>
         </tr><tr>
             <td><code>channel_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#SbcChannelMode'>SbcChannelMode</a></code>
+                <code><a class='link' href='#SbcChannelMode'>SbcChannelMode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2899,7 +2944,7 @@ Book: /_book.yaml
 </table>
 
 ### AacTransportRaw {:#AacTransportRaw}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#450)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#482)*
 
 
 
@@ -2911,7 +2956,7 @@ Book: /_book.yaml
 </table>
 
 ### AacConstantBitRate {:#AacConstantBitRate}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#462)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#494)*
 
 
 
@@ -2930,7 +2975,7 @@ Book: /_book.yaml
 </table>
 
 ### AacEncoderSettings {:#AacEncoderSettings}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#489)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#521)*
 
 
 
@@ -2940,28 +2985,28 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>transport</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AacTransport'>AacTransport</a></code>
+                <code><a class='link' href='#AacTransport'>AacTransport</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>channel_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AacChannelMode'>AacChannelMode</a></code>
+                <code><a class='link' href='#AacChannelMode'>AacChannelMode</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>bit_rate</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AacBitRate'>AacBitRate</a></code>
+                <code><a class='link' href='#AacBitRate'>AacBitRate</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>aot</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AacAudioObjectType'>AacAudioObjectType</a></code>
+                <code><a class='link' href='#AacAudioObjectType'>AacAudioObjectType</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2980,7 +3025,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>medium_specific</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#MediumSpecificStreamType'>MediumSpecificStreamType</a></code>
+                <code><a class='link' href='#MediumSpecificStreamType'>MediumSpecificStreamType</a></code>
             </td>
             <td> Medium-specific type information.
 </td>
@@ -3021,7 +3066,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>sample_format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioSampleFormat'>AudioSampleFormat</a></code>
+                <code><a class='link' href='#AudioSampleFormat'>AudioSampleFormat</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3061,7 +3106,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>color_space</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#ColorSpace'>ColorSpace</a></code>
+                <code><a class='link' href='#ColorSpace'>ColorSpace</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3306,10 +3351,53 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### AudioBitrateMode {:#AudioBitrateMode}
+### StreamError {:#StreamError}
 Type: <code>uint32</code>
 
 *Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#47)*
+
+ StreamError
+
+ This error code encapsulates various errors that might emanate from a
+ StreamProcessor server. It can be sent either as an OnStreamFailed event or
+ as an epitaph for the channel.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>UNKNOWN</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>INVALID_INPUT_FORMAT_DETAILS</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>INCOMPATIBLE_BUFFERS_PROVIDED</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DECODER_UNKNOWN</code></td>
+            <td><code>16777217</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ENCODER_UNKNOWN</code></td>
+            <td><code>33554433</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DECRYPTOR_UNKNOWN</code></td>
+            <td><code>50331649</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DECRYPTOR_NO_KEY</code></td>
+            <td><code>50331650</code></td>
+            <td></td>
+        </tr></table>
+
+### AudioBitrateMode {:#AudioBitrateMode}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#79)*
 
 
 
@@ -3331,7 +3419,7 @@ Type: <code>uint32</code>
 ### AudioPcmMode {:#AudioPcmMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#67)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#99)*
 
  AudioPcmMode
 
@@ -3355,7 +3443,7 @@ Type: <code>uint32</code>
 ### AudioChannelId {:#AudioChannelId}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#91)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#123)*
 
  AudioChannelId
 
@@ -3423,7 +3511,7 @@ Type: <code>uint32</code>
 ### VideoColorSpace {:#VideoColorSpace}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#188)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#220)*
 
 
 
@@ -3437,7 +3525,7 @@ Type: <code>uint32</code>
 ### SbcSubBands {:#SbcSubBands}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#409)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#441)*
 
 
 
@@ -3455,7 +3543,7 @@ Type: <code>uint32</code>
 ### SbcBlockCount {:#SbcBlockCount}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#414)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#446)*
 
 
 
@@ -3481,7 +3569,7 @@ Type: <code>uint32</code>
 ### SbcAllocation {:#SbcAllocation}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#421)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#453)*
 
 
 
@@ -3499,7 +3587,7 @@ Type: <code>uint32</code>
 ### SbcChannelMode {:#SbcChannelMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#426)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#458)*
 
 
 
@@ -3525,7 +3613,7 @@ Type: <code>uint32</code>
 ### AacChannelMode {:#AacChannelMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#457)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#489)*
 
 
 
@@ -3543,7 +3631,7 @@ Type: <code>uint32</code>
 ### AacVariableBitRate {:#AacVariableBitRate}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#471)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#503)*
 
  Variable bit rate modes. The actual resulting bitrate
  varies based on input signal and other encoding settings.
@@ -3577,7 +3665,7 @@ Type: <code>uint32</code>
 ### AacAudioObjectType {:#AacAudioObjectType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#484)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#516)*
 
 
 
@@ -3652,7 +3740,7 @@ Type: <code>uint32</code>
 ### EncryptedFormat {:#EncryptedFormat}
 
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#337)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#369)*
 
  EncryptedFormat
 
@@ -3671,7 +3759,7 @@ Type: <code>uint32</code>
                 <code>string</code>
             </td>
             <td> `mode` specifies which encryption scheme to use, such as
- fuchsia.media.ENCRYPTION_MODE_CENC.
+ `fuchsia.media.ENCRYPTION_MODE_CENC`.
  Usage:
   - It is required to be set prior to delivery of input packets.
   - This should only be changed at the beginning of a data stream.
@@ -3680,7 +3768,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>key_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#KeyId'>KeyId</a></code>
+                <code><a class='link' href='#KeyId'>KeyId</a></code>
             </td>
             <td> `key_id` identifies the key that should be used for decrypting
  subsequent data.
@@ -3707,7 +3795,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>subsamples</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.media/index.html#SubsampleEntry'>SubsampleEntry</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#SubsampleEntry'>SubsampleEntry</a>&gt;</code>
             </td>
             <td> `subsamples` is used to identify the clear and encrypted portions of a
  subsample.
@@ -3719,7 +3807,7 @@ Type: <code>uint32</code>
             <td>5</td>
             <td><code>pattern</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#EncryptionPattern'>EncryptionPattern</a></code>
+                <code><a class='link' href='#EncryptionPattern'>EncryptionPattern</a></code>
             </td>
             <td> `pattern` is used to identify the clear and encrypted blocks for pattern
  based encryption.
@@ -3734,7 +3822,7 @@ Type: <code>uint32</code>
 ### DecryptedFormat {:#DecryptedFormat}
 
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#384)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#416)*
 
  DecryptedFormat
 
@@ -3757,7 +3845,7 @@ Type: <code>uint32</code>
 ### FormatDetails {:#FormatDetails}
 
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#528)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#560)*
 
  FormatDetails
 
@@ -3792,21 +3880,21 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>domain</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#DomainFormat'>DomainFormat</a></code>
+                <code><a class='link' href='#DomainFormat'>DomainFormat</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>5</td>
             <td><code>pass_through_parameters</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.media/index.html#Parameter'>Parameter</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Parameter'>Parameter</a>&gt;</code>
             </td>
             <td></td>
         </tr><tr>
             <td>6</td>
             <td><code>encoder_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#EncoderSettings'>EncoderSettings</a></code>
+                <code><a class='link' href='#EncoderSettings'>EncoderSettings</a></code>
             </td>
             <td> Instructs an encoder on how to encode raw data.
 
@@ -3855,7 +3943,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>default_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBufferSettings'>StreamBufferSettings</a></code>
+                <code><a class='link' href='#StreamBufferSettings'>StreamBufferSettings</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -3971,7 +4059,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>buffer_constraints</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBufferConstraints'>StreamBufferConstraints</a></code>
+                <code><a class='link' href='#StreamBufferConstraints'>StreamBufferConstraints</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -3996,7 +4084,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>format_details</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#FormatDetails'>FormatDetails</a></code>
+                <code><a class='link' href='#FormatDetails'>FormatDetails</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4028,14 +4116,14 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>buffer_constraints</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBufferConstraints'>StreamBufferConstraints</a></code>
+                <code><a class='link' href='#StreamBufferConstraints'>StreamBufferConstraints</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>4</td>
             <td><code>format_details</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#FormatDetails'>FormatDetails</a></code>
+                <code><a class='link' href='#FormatDetails'>FormatDetails</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4192,7 +4280,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBufferData'>StreamBufferData</a></code>
+                <code><a class='link' href='#StreamBufferData'>StreamBufferData</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4277,7 +4365,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>header</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#PacketHeader'>PacketHeader</a></code>
+                <code><a class='link' href='#PacketHeader'>PacketHeader</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -4356,13 +4444,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>render_usage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioRenderUsage'>AudioRenderUsage</a></code>
+                <code><a class='link' href='#AudioRenderUsage'>AudioRenderUsage</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>capture_usage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioCaptureUsage'>AudioCaptureUsage</a></code>
+                <code><a class='link' href='#AudioCaptureUsage'>AudioCaptureUsage</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4408,7 +4496,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### AudioUncompressedFormat {:#AudioUncompressedFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#160)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#192)*
 
  AudioUncompressedFormat
 
@@ -4417,13 +4505,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>pcm</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#PcmFormat'>PcmFormat</a></code>
+                <code><a class='link' href='#PcmFormat'>PcmFormat</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### AudioFormat {:#AudioFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#167)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#199)*
 
  AudioFormat
 
@@ -4432,19 +4520,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>compressed</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioCompressedFormat'>AudioCompressedFormat</a></code>
+                <code><a class='link' href='#AudioCompressedFormat'>AudioCompressedFormat</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>uncompressed</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioUncompressedFormat'>AudioUncompressedFormat</a></code>
+                <code><a class='link' href='#AudioUncompressedFormat'>AudioUncompressedFormat</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### VideoCompressedFormat {:#VideoCompressedFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#179)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#211)*
 
  VideoCompressedFormat
 
@@ -4461,7 +4549,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### VideoFormat {:#VideoFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#298)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#330)*
 
  VideoFormat
 
@@ -4473,19 +4561,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>compressed</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#VideoCompressedFormat'>VideoCompressedFormat</a></code>
+                <code><a class='link' href='#VideoCompressedFormat'>VideoCompressedFormat</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>uncompressed</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#VideoUncompressedFormat'>VideoUncompressedFormat</a></code>
+                <code><a class='link' href='#VideoUncompressedFormat'>VideoUncompressedFormat</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### DomainFormat {:#DomainFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#401)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#433)*
 
  DomainFormat
 
@@ -4494,38 +4582,38 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>audio</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioFormat'>AudioFormat</a></code>
+                <code><a class='link' href='#AudioFormat'>AudioFormat</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>video</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#VideoFormat'>VideoFormat</a></code>
+                <code><a class='link' href='#VideoFormat'>VideoFormat</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>crypto</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#CryptoFormat'>CryptoFormat</a></code>
+                <code><a class='link' href='#CryptoFormat'>CryptoFormat</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### AacBitRate {:#AacBitRate}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#479)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#511)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>constant</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AacConstantBitRate'>AacConstantBitRate</a></code>
+                <code><a class='link' href='#AacConstantBitRate'>AacConstantBitRate</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>variable</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AacVariableBitRate'>AacVariableBitRate</a></code>
+                <code><a class='link' href='#AacVariableBitRate'>AacVariableBitRate</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4546,7 +4634,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>vmo</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#StreamBufferDataVmo'>StreamBufferDataVmo</a></code>
+                <code><a class='link' href='#StreamBufferDataVmo'>StreamBufferDataVmo</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4560,25 +4648,25 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>audio</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioStreamType'>AudioStreamType</a></code>
+                <code><a class='link' href='#AudioStreamType'>AudioStreamType</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>video</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#VideoStreamType'>VideoStreamType</a></code>
+                <code><a class='link' href='#VideoStreamType'>VideoStreamType</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>text</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#TextStreamType'>TextStreamType</a></code>
+                <code><a class='link' href='#TextStreamType'>TextStreamType</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>subpicture</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#SubpictureStreamType'>SubpictureStreamType</a></code>
+                <code><a class='link' href='#SubpictureStreamType'>SubpictureStreamType</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4588,26 +4676,26 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### AudioCompressedFormat {:#AudioCompressedFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#42)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#74)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>aac</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioCompressedFormatAac'>AudioCompressedFormatAac</a></code>
+                <code><a class='link' href='#AudioCompressedFormatAac'>AudioCompressedFormatAac</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>sbc</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AudioCompressedFormatSbc'>AudioCompressedFormatSbc</a></code>
+                <code><a class='link' href='#AudioCompressedFormatSbc'>AudioCompressedFormatSbc</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### CryptoFormat {:#CryptoFormat}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#393)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#425)*
 
  CryptoFormat
 
@@ -4617,32 +4705,32 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>encrypted</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#EncryptedFormat'>EncryptedFormat</a></code>
+                <code><a class='link' href='#EncryptedFormat'>EncryptedFormat</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>decrypted</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#DecryptedFormat'>DecryptedFormat</a></code>
+                <code><a class='link' href='#DecryptedFormat'>DecryptedFormat</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### AacTransport {:#AacTransport}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#453)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#485)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>raw</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AacTransportRaw'>AacTransportRaw</a></code>
+                <code><a class='link' href='#AacTransportRaw'>AacTransportRaw</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### EncoderSettings {:#EncoderSettings}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#498)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#530)*
 
  Settings for encoders that tell them how to encode raw
  formats.
@@ -4651,13 +4739,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>sbc</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#SbcEncoderSettings'>SbcEncoderSettings</a></code>
+                <code><a class='link' href='#SbcEncoderSettings'>SbcEncoderSettings</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>aac</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media/index.html#AacEncoderSettings'>AacEncoderSettings</a></code>
+                <code><a class='link' href='#AacEncoderSettings'>AacEncoderSettings</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4833,7 +4921,7 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#407">kMaxOobBytesSize</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#439">kMaxOobBytesSize</a></td>
             <td>
                     <code>8192</code>
                 </td>

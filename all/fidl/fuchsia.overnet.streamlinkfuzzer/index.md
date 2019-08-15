@@ -9,7 +9,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### UntrustedInputPlan {:#UntrustedInputPlan}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#9)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#9)*
 
 
 
@@ -21,7 +21,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>link_description</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#UntrustedLinkDescription'>UntrustedLinkDescription</a></code>
+                <code><a class='link' href='#UntrustedLinkDescription'>UntrustedLinkDescription</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -36,7 +36,7 @@ Book: /_book.yaml
 </table>
 
 ### UntrustedReliableLink {:#UntrustedReliableLink}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#14)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#14)*
 
 
 
@@ -47,7 +47,7 @@ Book: /_book.yaml
 </table>
 
 ### UntrustedUnreliableLink {:#UntrustedUnreliableLink}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#16)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#16)*
 
 
 
@@ -58,7 +58,7 @@ Book: /_book.yaml
 </table>
 
 ### PeerToPeerPlan {:#PeerToPeerPlan}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#26)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#26)*
 
 
 
@@ -70,14 +70,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>link_description</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#PeerToPeerLinkDescription'>PeerToPeerLinkDescription</a></code>
+                <code><a class='link' href='#PeerToPeerLinkDescription'>PeerToPeerLinkDescription</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#PeerToPeerAction'>PeerToPeerAction</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#PeerToPeerAction'>PeerToPeerAction</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -85,7 +85,7 @@ Book: /_book.yaml
 </table>
 
 ### PeerToPeerAction {:#PeerToPeerAction}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#38)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#38)*
 
 
 
@@ -96,7 +96,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>node</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#NodeId'>NodeId</a></code>
+                <code><a class='link' href='#NodeId'>NodeId</a></code>
             </td>
             <td> Which node performs the action
 </td>
@@ -104,7 +104,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#PeerToPeerActionType'>PeerToPeerActionType</a></code>
+                <code><a class='link' href='#PeerToPeerActionType'>PeerToPeerActionType</a></code>
             </td>
             <td> The action to perform
 </td>
@@ -113,7 +113,7 @@ Book: /_book.yaml
 </table>
 
 ### Void {:#Void}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#46)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#46)*
 
 
 
@@ -125,7 +125,7 @@ Book: /_book.yaml
 </table>
 
 ### PeerToPeerReliableLink {:#PeerToPeerReliableLink}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#58)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#58)*
 
 
 
@@ -137,7 +137,7 @@ Book: /_book.yaml
 </table>
 
 ### PeerToPeerUnreliableLink {:#PeerToPeerUnreliableLink}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#62)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#62)*
 
 
 
@@ -149,14 +149,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>mutation_plan_1_to_2</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#StreamMutation'>StreamMutation</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#StreamMutation'>StreamMutation</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>mutation_plan_2_to_1</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#StreamMutation'>StreamMutation</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#StreamMutation'>StreamMutation</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -164,7 +164,7 @@ Book: /_book.yaml
 </table>
 
 ### InsertByte {:#InsertByte}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#79)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#79)*
 
 
 
@@ -195,7 +195,7 @@ Book: /_book.yaml
 ### NodeId {:#NodeId}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#32)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#32)*
 
  Which node does an action apply to
 
@@ -220,7 +220,7 @@ Type: <code>uint8</code>
 ## **XUNIONS**
 
 ### UntrustedLinkDescription {:#UntrustedLinkDescription}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#19)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#19)*
 
  A description of a link between nodes
 
@@ -228,19 +228,19 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>reliable</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#UntrustedReliableLink'>UntrustedReliableLink</a></code>
+                <code><a class='link' href='#UntrustedReliableLink'>UntrustedReliableLink</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>unreliable</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#UntrustedUnreliableLink'>UntrustedUnreliableLink</a></code>
+                <code><a class='link' href='#UntrustedUnreliableLink'>UntrustedUnreliableLink</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### PeerToPeerActionType {:#PeerToPeerActionType}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#48)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#48)*
 
 
 <table>
@@ -254,7 +254,7 @@ Type: <code>uint8</code>
         </tr><tr>
             <td><code>sent_packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#Void'>Void</a></code>
+                <code><a class='link' href='#Void'>Void</a></code>
             </td>
             <td> Acknowledge a prior send_packet request on node
 </td>
@@ -268,7 +268,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### PeerToPeerLinkDescription {:#PeerToPeerLinkDescription}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#68)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#68)*
 
  A description of a link between nodes
 
@@ -276,19 +276,19 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>reliable</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#PeerToPeerReliableLink'>PeerToPeerReliableLink</a></code>
+                <code><a class='link' href='#PeerToPeerReliableLink'>PeerToPeerReliableLink</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>unreliable</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.streamlinkfuzzer/index.html#PeerToPeerUnreliableLink'>PeerToPeerUnreliableLink</a></code>
+                <code><a class='link' href='#PeerToPeerUnreliableLink'>PeerToPeerUnreliableLink</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### StreamMutation {:#StreamMutation}
-*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/links/stream_link_fuzzer.test.fidl#74)*
+*Defined in [fuchsia.overnet.streamlinkfuzzer/stream_link_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/links/stream_link_fuzzer.test.fidl#74)*
 
  Describes a mutation to apply to a data stream
 

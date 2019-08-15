@@ -61,7 +61,7 @@ Book: /_book.yaml
             <td>4</td>
             <td><code>modules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular.storymodel/index.html#ModuleModel'>ModuleModel</a>&gt;[128]</code>
+                <code>vector&lt;<a class='link' href='#ModuleModel'>ModuleModel</a>&gt;[128]</code>
             </td>
             <td> A list of modules present in the story.
 

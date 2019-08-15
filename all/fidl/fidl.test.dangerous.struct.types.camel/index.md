@@ -3835,1484 +3835,1484 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>f0</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Abstract'>Abstract</a></code>
+                <code><a class='link' href='#Abstract'>Abstract</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f1</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Alignas'>Alignas</a></code>
+                <code><a class='link' href='#Alignas'>Alignas</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f2</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Alignof'>Alignof</a></code>
+                <code><a class='link' href='#Alignof'>Alignof</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f3</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#And'>And</a></code>
+                <code><a class='link' href='#And'>And</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f4</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#AndEq'>AndEq</a></code>
+                <code><a class='link' href='#AndEq'>AndEq</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f5</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#As'>As</a></code>
+                <code><a class='link' href='#As'>As</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f6</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Asm'>Asm</a></code>
+                <code><a class='link' href='#Asm'>Asm</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f7</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Assert'>Assert</a></code>
+                <code><a class='link' href='#Assert'>Assert</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f8</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Async'>Async</a></code>
+                <code><a class='link' href='#Async'>Async</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f9</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#AtomicCancel'>AtomicCancel</a></code>
+                <code><a class='link' href='#AtomicCancel'>AtomicCancel</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f10</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#AtomicCommit'>AtomicCommit</a></code>
+                <code><a class='link' href='#AtomicCommit'>AtomicCommit</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f11</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#AtomicNoexcept'>AtomicNoexcept</a></code>
+                <code><a class='link' href='#AtomicNoexcept'>AtomicNoexcept</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f12</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Auto'>Auto</a></code>
+                <code><a class='link' href='#Auto'>Auto</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f13</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Await'>Await</a></code>
+                <code><a class='link' href='#Await'>Await</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f14</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Become'>Become</a></code>
+                <code><a class='link' href='#Become'>Become</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f15</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Bitand'>Bitand</a></code>
+                <code><a class='link' href='#Bitand'>Bitand</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f16</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Bitor'>Bitor</a></code>
+                <code><a class='link' href='#Bitor'>Bitor</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f17</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Bool'>Bool</a></code>
+                <code><a class='link' href='#Bool'>Bool</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f18</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Box'>Box</a></code>
+                <code><a class='link' href='#Box'>Box</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f19</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Break'>Break</a></code>
+                <code><a class='link' href='#Break'>Break</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f20</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Byte'>Byte</a></code>
+                <code><a class='link' href='#Byte'>Byte</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f21</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Case'>Case</a></code>
+                <code><a class='link' href='#Case'>Case</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f22</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Catch'>Catch</a></code>
+                <code><a class='link' href='#Catch'>Catch</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f23</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Chan'>Chan</a></code>
+                <code><a class='link' href='#Chan'>Chan</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f24</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Char'>Char</a></code>
+                <code><a class='link' href='#Char'>Char</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f25</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Char16T'>Char16T</a></code>
+                <code><a class='link' href='#Char16T'>Char16T</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f26</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Char32T'>Char32T</a></code>
+                <code><a class='link' href='#Char32T'>Char32T</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f27</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Class'>Class</a></code>
+                <code><a class='link' href='#Class'>Class</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f28</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#CoAwait'>CoAwait</a></code>
+                <code><a class='link' href='#CoAwait'>CoAwait</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f29</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#CoReturn'>CoReturn</a></code>
+                <code><a class='link' href='#CoReturn'>CoReturn</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f30</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#CoYield'>CoYield</a></code>
+                <code><a class='link' href='#CoYield'>CoYield</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f31</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#CodingTraits'>CodingTraits</a></code>
+                <code><a class='link' href='#CodingTraits'>CodingTraits</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f32</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Compl'>Compl</a></code>
+                <code><a class='link' href='#Compl'>Compl</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f33</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Concept'>Concept</a></code>
+                <code><a class='link' href='#Concept'>Concept</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f34</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Const'>Const</a></code>
+                <code><a class='link' href='#Const'>Const</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f35</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#ConstCast'>ConstCast</a></code>
+                <code><a class='link' href='#ConstCast'>ConstCast</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f36</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Constexpr'>Constexpr</a></code>
+                <code><a class='link' href='#Constexpr'>Constexpr</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f37</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Continue'>Continue</a></code>
+                <code><a class='link' href='#Continue'>Continue</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f38</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Controller'>Controller</a></code>
+                <code><a class='link' href='#Controller'>Controller</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f39</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Covariant'>Covariant</a></code>
+                <code><a class='link' href='#Covariant'>Covariant</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f40</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Crate'>Crate</a></code>
+                <code><a class='link' href='#Crate'>Crate</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f41</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Decltype'>Decltype</a></code>
+                <code><a class='link' href='#Decltype'>Decltype</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f42</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Decoder'>Decoder</a></code>
+                <code><a class='link' href='#Decoder'>Decoder</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f43</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Default'>Default</a></code>
+                <code><a class='link' href='#Default'>Default</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f44</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Defer'>Defer</a></code>
+                <code><a class='link' href='#Defer'>Defer</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f45</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Deferred'>Deferred</a></code>
+                <code><a class='link' href='#Deferred'>Deferred</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f46</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Delete'>Delete</a></code>
+                <code><a class='link' href='#Delete'>Delete</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f47</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Do'>Do</a></code>
+                <code><a class='link' href='#Do'>Do</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f48</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Double'>Double</a></code>
+                <code><a class='link' href='#Double'>Double</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f49</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Dynamic'>Dynamic</a></code>
+                <code><a class='link' href='#Dynamic'>Dynamic</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f50</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#DynamicCast'>DynamicCast</a></code>
+                <code><a class='link' href='#DynamicCast'>DynamicCast</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f51</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Else'>Else</a></code>
+                <code><a class='link' href='#Else'>Else</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f52</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Encoder'>Encoder</a></code>
+                <code><a class='link' href='#Encoder'>Encoder</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f53</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#EnsureValuesInstantiated'>EnsureValuesInstantiated</a></code>
+                <code><a class='link' href='#EnsureValuesInstantiated'>EnsureValuesInstantiated</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f54</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Enum'>Enum</a></code>
+                <code><a class='link' href='#Enum'>Enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f55</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Err'>Err</a></code>
+                <code><a class='link' href='#Err'>Err</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f56</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Explicit'>Explicit</a></code>
+                <code><a class='link' href='#Explicit'>Explicit</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f57</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Export'>Export</a></code>
+                <code><a class='link' href='#Export'>Export</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f58</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Extends'>Extends</a></code>
+                <code><a class='link' href='#Extends'>Extends</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f59</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Extern'>Extern</a></code>
+                <code><a class='link' href='#Extern'>Extern</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f60</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#External'>External</a></code>
+                <code><a class='link' href='#External'>External</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f61</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Factory'>Factory</a></code>
+                <code><a class='link' href='#Factory'>Factory</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f62</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Fallthrough'>Fallthrough</a></code>
+                <code><a class='link' href='#Fallthrough'>Fallthrough</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f63</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#False'>False</a></code>
+                <code><a class='link' href='#False'>False</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f64</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Fidl'>Fidl</a></code>
+                <code><a class='link' href='#Fidl'>Fidl</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f65</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#FidlType'>FidlType</a></code>
+                <code><a class='link' href='#FidlType'>FidlType</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f66</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Final'>Final</a></code>
+                <code><a class='link' href='#Final'>Final</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f67</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Finally'>Finally</a></code>
+                <code><a class='link' href='#Finally'>Finally</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f68</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Float'>Float</a></code>
+                <code><a class='link' href='#Float'>Float</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f69</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Fn'>Fn</a></code>
+                <code><a class='link' href='#Fn'>Fn</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f70</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#For'>For</a></code>
+                <code><a class='link' href='#For'>For</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f71</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Friend'>Friend</a></code>
+                <code><a class='link' href='#Friend'>Friend</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f72</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Func'>Func</a></code>
+                <code><a class='link' href='#Func'>Func</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f73</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Future'>Future</a></code>
+                <code><a class='link' href='#Future'>Future</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f74</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Futures'>Futures</a></code>
+                <code><a class='link' href='#Futures'>Futures</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f75</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Get'>Get</a></code>
+                <code><a class='link' href='#Get'>Get</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f76</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Go'>Go</a></code>
+                <code><a class='link' href='#Go'>Go</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f77</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Goto'>Goto</a></code>
+                <code><a class='link' href='#Goto'>Goto</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f78</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#HasInvalidTag'>HasInvalidTag</a></code>
+                <code><a class='link' href='#HasInvalidTag'>HasInvalidTag</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f79</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#HashCode'>HashCode</a></code>
+                <code><a class='link' href='#HashCode'>HashCode</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f80</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#If'>If</a></code>
+                <code><a class='link' href='#If'>If</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f81</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Impl'>Impl</a></code>
+                <code><a class='link' href='#Impl'>Impl</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f82</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Implements'>Implements</a></code>
+                <code><a class='link' href='#Implements'>Implements</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f83</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Import'>Import</a></code>
+                <code><a class='link' href='#Import'>Import</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f84</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#In'>In</a></code>
+                <code><a class='link' href='#In'>In</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f85</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Index'>Index</a></code>
+                <code><a class='link' href='#Index'>Index</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f86</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Inline'>Inline</a></code>
+                <code><a class='link' href='#Inline'>Inline</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f87</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Int'>Int</a></code>
+                <code><a class='link' href='#Int'>Int</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f88</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Int16'>Int16</a></code>
+                <code><a class='link' href='#Int16'>Int16</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f89</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Int32'>Int32</a></code>
+                <code><a class='link' href='#Int32'>Int32</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f90</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Int64'>Int64</a></code>
+                <code><a class='link' href='#Int64'>Int64</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f91</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Int8'>Int8</a></code>
+                <code><a class='link' href='#Int8'>Int8</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f92</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Interface'>Interface</a></code>
+                <code><a class='link' href='#Interface'>Interface</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f93</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Is'>Is</a></code>
+                <code><a class='link' href='#Is'>Is</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f94</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Let'>Let</a></code>
+                <code><a class='link' href='#Let'>Let</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f95</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Lhs'>Lhs</a></code>
+                <code><a class='link' href='#Lhs'>Lhs</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f96</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Library'>Library</a></code>
+                <code><a class='link' href='#Library'>Library</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f97</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#List'>List</a></code>
+                <code><a class='link' href='#List'>List</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f98</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Long'>Long</a></code>
+                <code><a class='link' href='#Long'>Long</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f99</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Loop'>Loop</a></code>
+                <code><a class='link' href='#Loop'>Loop</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f100</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Macro'>Macro</a></code>
+                <code><a class='link' href='#Macro'>Macro</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f101</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Map'>Map</a></code>
+                <code><a class='link' href='#Map'>Map</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f102</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Match'>Match</a></code>
+                <code><a class='link' href='#Match'>Match</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f103</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Mixin'>Mixin</a></code>
+                <code><a class='link' href='#Mixin'>Mixin</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f104</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Mod'>Mod</a></code>
+                <code><a class='link' href='#Mod'>Mod</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f105</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Module'>Module</a></code>
+                <code><a class='link' href='#Module'>Module</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f106</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Move'>Move</a></code>
+                <code><a class='link' href='#Move'>Move</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f107</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Mut'>Mut</a></code>
+                <code><a class='link' href='#Mut'>Mut</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f108</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Mutable'>Mutable</a></code>
+                <code><a class='link' href='#Mutable'>Mutable</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f109</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Namespace'>Namespace</a></code>
+                <code><a class='link' href='#Namespace'>Namespace</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f110</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Never'>Never</a></code>
+                <code><a class='link' href='#Never'>Never</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f111</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#New'>New</a></code>
+                <code><a class='link' href='#New'>New</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f112</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#NoSuchMethod'>NoSuchMethod</a></code>
+                <code><a class='link' href='#NoSuchMethod'>NoSuchMethod</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f113</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Noexcept'>Noexcept</a></code>
+                <code><a class='link' href='#Noexcept'>Noexcept</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f114</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#None'>None</a></code>
+                <code><a class='link' href='#None'>None</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f115</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Not'>Not</a></code>
+                <code><a class='link' href='#Not'>Not</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f116</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#NotEq'>NotEq</a></code>
+                <code><a class='link' href='#NotEq'>NotEq</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f117</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Null'>Null</a></code>
+                <code><a class='link' href='#Null'>Null</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f118</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Nullptr'>Nullptr</a></code>
+                <code><a class='link' href='#Nullptr'>Nullptr</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f119</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Num'>Num</a></code>
+                <code><a class='link' href='#Num'>Num</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f120</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Object'>Object</a></code>
+                <code><a class='link' href='#Object'>Object</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f121</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Offset'>Offset</a></code>
+                <code><a class='link' href='#Offset'>Offset</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f122</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Offsetof'>Offsetof</a></code>
+                <code><a class='link' href='#Offsetof'>Offsetof</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f123</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Ok'>Ok</a></code>
+                <code><a class='link' href='#Ok'>Ok</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f124</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#OnOpen'>OnOpen</a></code>
+                <code><a class='link' href='#OnOpen'>OnOpen</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f125</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Operator'>Operator</a></code>
+                <code><a class='link' href='#Operator'>Operator</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f126</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Option'>Option</a></code>
+                <code><a class='link' href='#Option'>Option</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f127</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Or'>Or</a></code>
+                <code><a class='link' href='#Or'>Or</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f128</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#OrEq'>OrEq</a></code>
+                <code><a class='link' href='#OrEq'>OrEq</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f129</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Override'>Override</a></code>
+                <code><a class='link' href='#Override'>Override</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f130</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Package'>Package</a></code>
+                <code><a class='link' href='#Package'>Package</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f131</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Part'>Part</a></code>
+                <code><a class='link' href='#Part'>Part</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f132</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Priv'>Priv</a></code>
+                <code><a class='link' href='#Priv'>Priv</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f133</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Private'>Private</a></code>
+                <code><a class='link' href='#Private'>Private</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f134</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Proc'>Proc</a></code>
+                <code><a class='link' href='#Proc'>Proc</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f135</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Protected'>Protected</a></code>
+                <code><a class='link' href='#Protected'>Protected</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f136</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Proxy'>Proxy</a></code>
+                <code><a class='link' href='#Proxy'>Proxy</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f137</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Pub'>Pub</a></code>
+                <code><a class='link' href='#Pub'>Pub</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f138</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Public'>Public</a></code>
+                <code><a class='link' href='#Public'>Public</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f139</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Pure'>Pure</a></code>
+                <code><a class='link' href='#Pure'>Pure</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f140</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f141</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f142</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Register'>Register</a></code>
+                <code><a class='link' href='#Register'>Register</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f143</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#ReinterpretCast'>ReinterpretCast</a></code>
+                <code><a class='link' href='#ReinterpretCast'>ReinterpretCast</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f144</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Requires'>Requires</a></code>
+                <code><a class='link' href='#Requires'>Requires</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f145</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Result'>Result</a></code>
+                <code><a class='link' href='#Result'>Result</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f146</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Rethrow'>Rethrow</a></code>
+                <code><a class='link' href='#Rethrow'>Rethrow</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f147</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Return'>Return</a></code>
+                <code><a class='link' href='#Return'>Return</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f148</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Rhs'>Rhs</a></code>
+                <code><a class='link' href='#Rhs'>Rhs</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f149</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Rune'>Rune</a></code>
+                <code><a class='link' href='#Rune'>Rune</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f150</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#RuntimeType'>RuntimeType</a></code>
+                <code><a class='link' href='#RuntimeType'>RuntimeType</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f151</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Select'>Select</a></code>
+                <code><a class='link' href='#Select'>Select</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f152</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Self'>Self</a></code>
+                <code><a class='link' href='#Self'>Self</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f153</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Send'>Send</a></code>
+                <code><a class='link' href='#Send'>Send</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f154</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Set'>Set</a></code>
+                <code><a class='link' href='#Set'>Set</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f155</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#SetController'>SetController</a></code>
+                <code><a class='link' href='#SetController'>SetController</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f156</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Short'>Short</a></code>
+                <code><a class='link' href='#Short'>Short</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f157</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Signed'>Signed</a></code>
+                <code><a class='link' href='#Signed'>Signed</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f158</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Sizeof'>Sizeof</a></code>
+                <code><a class='link' href='#Sizeof'>Sizeof</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f159</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Some'>Some</a></code>
+                <code><a class='link' href='#Some'>Some</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f160</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Static'>Static</a></code>
+                <code><a class='link' href='#Static'>Static</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f161</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#StaticAssert'>StaticAssert</a></code>
+                <code><a class='link' href='#StaticAssert'>StaticAssert</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f162</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#StaticCast'>StaticCast</a></code>
+                <code><a class='link' href='#StaticCast'>StaticCast</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f163</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Stream'>Stream</a></code>
+                <code><a class='link' href='#Stream'>Stream</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f164</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#String'>String</a></code>
+                <code><a class='link' href='#String'>String</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f165</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Struct'>Struct</a></code>
+                <code><a class='link' href='#Struct'>Struct</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f166</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Stub'>Stub</a></code>
+                <code><a class='link' href='#Stub'>Stub</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f167</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Super'>Super</a></code>
+                <code><a class='link' href='#Super'>Super</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f168</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Switch'>Switch</a></code>
+                <code><a class='link' href='#Switch'>Switch</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f169</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Synchronized'>Synchronized</a></code>
+                <code><a class='link' href='#Synchronized'>Synchronized</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f170</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Template'>Template</a></code>
+                <code><a class='link' href='#Template'>Template</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f171</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#This'>This</a></code>
+                <code><a class='link' href='#This'>This</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f172</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#ThreadLocal'>ThreadLocal</a></code>
+                <code><a class='link' href='#ThreadLocal'>ThreadLocal</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f173</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Throw'>Throw</a></code>
+                <code><a class='link' href='#Throw'>Throw</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f174</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#ToString'>ToString</a></code>
+                <code><a class='link' href='#ToString'>ToString</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f175</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Trait'>Trait</a></code>
+                <code><a class='link' href='#Trait'>Trait</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f176</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#True'>True</a></code>
+                <code><a class='link' href='#True'>True</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f177</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Try'>Try</a></code>
+                <code><a class='link' href='#Try'>Try</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f178</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Type'>Type</a></code>
+                <code><a class='link' href='#Type'>Type</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f179</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Typedef'>Typedef</a></code>
+                <code><a class='link' href='#Typedef'>Typedef</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f180</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Typeid'>Typeid</a></code>
+                <code><a class='link' href='#Typeid'>Typeid</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f181</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Typename'>Typename</a></code>
+                <code><a class='link' href='#Typename'>Typename</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f182</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Typeof'>Typeof</a></code>
+                <code><a class='link' href='#Typeof'>Typeof</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f183</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Uint16'>Uint16</a></code>
+                <code><a class='link' href='#Uint16'>Uint16</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f184</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Uint32'>Uint32</a></code>
+                <code><a class='link' href='#Uint32'>Uint32</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f185</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Uint64'>Uint64</a></code>
+                <code><a class='link' href='#Uint64'>Uint64</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f186</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Uint8'>Uint8</a></code>
+                <code><a class='link' href='#Uint8'>Uint8</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f187</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Union'>Union</a></code>
+                <code><a class='link' href='#Union'>Union</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f188</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Unsafe'>Unsafe</a></code>
+                <code><a class='link' href='#Unsafe'>Unsafe</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f189</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Unsigned'>Unsigned</a></code>
+                <code><a class='link' href='#Unsigned'>Unsigned</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f190</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Unsized'>Unsized</a></code>
+                <code><a class='link' href='#Unsized'>Unsized</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f191</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Use'>Use</a></code>
+                <code><a class='link' href='#Use'>Use</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f192</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Using'>Using</a></code>
+                <code><a class='link' href='#Using'>Using</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f193</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f194</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#ValueOf'>ValueOf</a></code>
+                <code><a class='link' href='#ValueOf'>ValueOf</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f195</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#ValueUnion'>ValueUnion</a></code>
+                <code><a class='link' href='#ValueUnion'>ValueUnion</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f196</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#ValuesMap'>ValuesMap</a></code>
+                <code><a class='link' href='#ValuesMap'>ValuesMap</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f197</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Var'>Var</a></code>
+                <code><a class='link' href='#Var'>Var</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f198</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Vec'>Vec</a></code>
+                <code><a class='link' href='#Vec'>Vec</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f199</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Virtual'>Virtual</a></code>
+                <code><a class='link' href='#Virtual'>Virtual</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f200</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Void'>Void</a></code>
+                <code><a class='link' href='#Void'>Void</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f201</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Volatile'>Volatile</a></code>
+                <code><a class='link' href='#Volatile'>Volatile</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f202</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#WcharT'>WcharT</a></code>
+                <code><a class='link' href='#WcharT'>WcharT</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f203</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Where'>Where</a></code>
+                <code><a class='link' href='#Where'>Where</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f204</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Which'>Which</a></code>
+                <code><a class='link' href='#Which'>Which</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f205</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#While'>While</a></code>
+                <code><a class='link' href='#While'>While</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f206</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#With'>With</a></code>
+                <code><a class='link' href='#With'>With</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f207</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Xor'>Xor</a></code>
+                <code><a class='link' href='#Xor'>Xor</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f208</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#XorEq'>XorEq</a></code>
+                <code><a class='link' href='#XorEq'>XorEq</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f209</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Xunion'>Xunion</a></code>
+                <code><a class='link' href='#Xunion'>Xunion</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f210</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Yield'>Yield</a></code>
+                <code><a class='link' href='#Yield'>Yield</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f211</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.camel/index.html#Zx'>Zx</a></code>
+                <code><a class='link' href='#Zx'>Zx</a></code>
             </td>
             <td></td>
             <td>No default</td>

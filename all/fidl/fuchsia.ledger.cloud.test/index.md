@@ -25,7 +25,7 @@ Book: /_book.yaml
     <tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ledger.cloud.test/index.html#CloudController'>CloudController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#CloudController'>CloudController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -52,7 +52,7 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud.test/index.html#NetworkState'>NetworkState</a></code>
+                <code><a class='link' href='#NetworkState'>NetworkState</a></code>
             </td>
         </tr></table>
 

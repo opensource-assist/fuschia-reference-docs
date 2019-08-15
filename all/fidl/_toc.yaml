@@ -59,6 +59,8 @@ toc:
   path: /reference/fidl/fidl.test.before
 - title: fidl.test.compatibility
   path: /reference/fidl/fidl.test.compatibility
+- title: fidl.test.components
+  path: /reference/fidl/fidl.test.components
 - title: fidl.test.dangerous.constants.camel
   path: /reference/fidl/fidl.test.dangerous.constants.camel
 - title: fidl.test.dangerous.constants.lower
@@ -131,18 +133,6 @@ toc:
   path: /reference/fidl/fidl.test.dangerous.table.names.lower
 - title: fidl.test.dangerous.table.names.upper
   path: /reference/fidl/fidl.test.dangerous.table.names.upper
-- title: fidl.test.dangerous.union.names.camel
-  path: /reference/fidl/fidl.test.dangerous.union.names.camel
-- title: fidl.test.dangerous.union.names.lower
-  path: /reference/fidl/fidl.test.dangerous.union.names.lower
-- title: fidl.test.dangerous.union.names.upper
-  path: /reference/fidl/fidl.test.dangerous.union.names.upper
-- title: fidl.test.dangerous.union.types.camel
-  path: /reference/fidl/fidl.test.dangerous.union.types.camel
-- title: fidl.test.dangerous.union.types.lower
-  path: /reference/fidl/fidl.test.dangerous.union.types.lower
-- title: fidl.test.dangerous.union.types.upper
-  path: /reference/fidl/fidl.test.dangerous.union.types.upper
 - title: fidl.test.dangerous.using.camel
   path: /reference/fidl/fidl.test.dangerous.using.camel
 - title: fidl.test.dangerous.using.lower
@@ -161,16 +151,8 @@ toc:
   path: /reference/fidl/fuchsia.accessibility.semantics
 - title: fuchsia.amber
   path: /reference/fidl/fuchsia.amber
-- title: fuchsia.app
-  path: /reference/fidl/fuchsia.app
-- title: fuchsia.app.agent
-  path: /reference/fidl/fuchsia.app.agent
 - title: fuchsia.app.discover
   path: /reference/fidl/fuchsia.app.discover
-- title: fuchsia.app.sessioncontrol
-  path: /reference/fidl/fuchsia.app.sessioncontrol
-- title: fuchsia.app.sessionshell
-  path: /reference/fidl/fuchsia.app.sessionshell
 - title: fuchsia.auth
   path: /reference/fidl/fuchsia.auth
 - title: fuchsia.auth.account
@@ -231,6 +213,8 @@ toc:
   path: /reference/fidl/fuchsia.devicesettings
 - title: fuchsia.example.fostr
   path: /reference/fidl/fuchsia.example.fostr
+- title: fuchsia.examples
+  path: /reference/fidl/fuchsia.examples
 - title: fuchsia.examples.hello
   path: /reference/fidl/fuchsia.examples.hello
 - title: fuchsia.examples.intl.manager
@@ -239,6 +223,8 @@ toc:
   path: /reference/fidl/fuchsia.examples.intl.wisdom
 - title: fuchsia.examples.shadertoy
   path: /reference/fidl/fuchsia.examples.shadertoy
+- title: fuchsia.exception
+  path: /reference/fidl/fuchsia.exception
 - title: fuchsia.feedback
   path: /reference/fidl/fuchsia.feedback
 - title: fuchsia.fibonacci
@@ -253,6 +239,8 @@ toc:
   path: /reference/fidl/fuchsia.gpu.magma
 - title: fuchsia.hardware.audio
   path: /reference/fidl/fuchsia.hardware.audio
+- title: fuchsia.hardware.backlight
+  path: /reference/fidl/fuchsia.hardware.backlight
 - title: fuchsia.hardware.block
   path: /reference/fidl/fuchsia.hardware.block
 - title: fuchsia.hardware.block.partition
@@ -267,6 +255,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.ethernet
 - title: fuchsia.hardware.ethertap
   path: /reference/fidl/fuchsia.hardware.ethertap
+- title: fuchsia.hardware.input
+  path: /reference/fidl/fuchsia.hardware.input
 - title: fuchsia.hardware.mediacodec
   path: /reference/fidl/fuchsia.hardware.mediacodec
 - title: fuchsia.hardware.pty
@@ -321,6 +311,8 @@ toc:
   path: /reference/fidl/fuchsia.media.playback
 - title: fuchsia.media.sessions
   path: /reference/fidl/fuchsia.media.sessions
+- title: fuchsia.media.sessions2
+  path: /reference/fidl/fuchsia.media.sessions2
 - title: fuchsia.mediacodec
   path: /reference/fidl/fuchsia.mediacodec
 - title: fuchsia.mem
@@ -375,8 +367,6 @@ toc:
   path: /reference/fidl/fuchsia.netemul.sync
 - title: fuchsia.netstack
   path: /reference/fidl/fuchsia.netstack
-- title: fuchsia.omaha.client
-  path: /reference/fidl/fuchsia.omaha.client
 - title: fuchsia.overnet
   path: /reference/fidl/fuchsia.overnet
 - title: fuchsia.overnet.examples.interfacepassing
@@ -417,12 +407,12 @@ toc:
   path: /reference/fidl/fuchsia.settings
 - title: fuchsia.setui
   path: /reference/fidl/fuchsia.setui
-- title: fuchsia.shell.ermine
-  path: /reference/fidl/fuchsia.shell.ermine
 - title: fuchsia.simplecamera
   path: /reference/fidl/fuchsia.simplecamera
 - title: fuchsia.skia.skottie
   path: /reference/fidl/fuchsia.skia.skottie
+- title: fuchsia.space
+  path: /reference/fidl/fuchsia.space
 - title: fuchsia.speech
   path: /reference/fidl/fuchsia.speech
 - title: fuchsia.stash
@@ -453,8 +443,12 @@ toc:
   path: /reference/fidl/fuchsia.telephony.snoop
 - title: fuchsia.term
   path: /reference/fidl/fuchsia.term
+- title: fuchsia.test
+  path: /reference/fidl/fuchsia.test
 - title: fuchsia.test.echos
   path: /reference/fidl/fuchsia.test.echos
+- title: fuchsia.test.hub
+  path: /reference/fidl/fuchsia.test.hub
 - title: fuchsia.testing.chrealm
   path: /reference/fidl/fuchsia.testing.chrealm
 - title: fuchsia.testing.runner
@@ -473,6 +467,8 @@ toc:
   path: /reference/fidl/fuchsia.tts
 - title: fuchsia.ui.app
   path: /reference/fidl/fuchsia.ui.app
+- title: fuchsia.ui.brightness
+  path: /reference/fidl/fuchsia.ui.brightness
 - title: fuchsia.ui.gfx
   path: /reference/fidl/fuchsia.ui.gfx
 - title: fuchsia.ui.input
@@ -493,14 +489,12 @@ toc:
   path: /reference/fidl/fuchsia.ui.text
 - title: fuchsia.ui.text.testing
   path: /reference/fidl/fuchsia.ui.text.testing
+- title: fuchsia.ui.types
+  path: /reference/fidl/fuchsia.ui.types
 - title: fuchsia.ui.vectorial
   path: /reference/fidl/fuchsia.ui.vectorial
 - title: fuchsia.ui.views
   path: /reference/fidl/fuchsia.ui.views
-- title: fuchsia.ui.viewsv1
-  path: /reference/fidl/fuchsia.ui.viewsv1
-- title: fuchsia.ui.viewsv1token
-  path: /reference/fidl/fuchsia.ui.viewsv1token
 - title: fuchsia.update
   path: /reference/fidl/fuchsia.update
 - title: fuchsia.update.installer
@@ -551,6 +545,8 @@ toc:
   path: /reference/fidl/fuchsia.wlan.tap
 - title: fuchsia.zircon.benchmarks
   path: /reference/fidl/fuchsia.zircon.benchmarks
+- title: llcpptest.flexible.test
+  path: /reference/fidl/llcpptest.flexible.test
 - title: test.appmgr.integration
   path: /reference/fidl/test.appmgr.integration
 - title: test.component.mockrunner
@@ -565,6 +561,8 @@ toc:
   path: /reference/fidl/test.fidlcat.sys
 - title: test.fuchsia.service.foo
   path: /reference/fidl/test.fuchsia.service.foo
+- title: test.inspect.validate
+  path: /reference/fidl/test.inspect.validate
 - title: test.modular.dart
   path: /reference/fidl/test.modular.dart
 - title: test.modular.queuepersistence

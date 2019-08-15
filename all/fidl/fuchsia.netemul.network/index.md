@@ -46,7 +46,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#NetworkConfig'>NetworkConfig</a></code>
+                <code><a class='link' href='#NetworkConfig'>NetworkConfig</a></code>
             </td>
         </tr></table>
 
@@ -62,7 +62,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>net</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#Network'>Network</a>?</code>
+                <code><a class='link' href='#Network'>Network</a>?</code>
             </td>
         </tr></table>
 
@@ -87,7 +87,7 @@ Book: /_book.yaml
     <tr>
             <td><code>net</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#Network'>Network</a>?</code>
+                <code><a class='link' href='#Network'>Network</a>?</code>
             </td>
         </tr></table>
 
@@ -131,7 +131,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#EndpointConfig'>EndpointConfig</a></code>
+                <code><a class='link' href='#EndpointConfig'>EndpointConfig</a></code>
             </td>
         </tr></table>
 
@@ -147,7 +147,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>endpoint</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#Endpoint'>Endpoint</a>?</code>
+                <code><a class='link' href='#Endpoint'>Endpoint</a>?</code>
             </td>
         </tr></table>
 
@@ -172,7 +172,7 @@ Book: /_book.yaml
     <tr>
             <td><code>endpoint</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#Endpoint'>Endpoint</a>?</code>
+                <code><a class='link' href='#Endpoint'>Endpoint</a>?</code>
             </td>
         </tr></table>
 
@@ -234,7 +234,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#NetworkConfig'>NetworkConfig</a></code>
+                <code><a class='link' href='#NetworkConfig'>NetworkConfig</a></code>
             </td>
         </tr></table>
 
@@ -268,7 +268,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#NetworkConfig'>NetworkConfig</a></code>
+                <code><a class='link' href='#NetworkConfig'>NetworkConfig</a></code>
             </td>
         </tr></table>
 
@@ -343,7 +343,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ep</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.netemul.network/index.html#FakeEndpoint'>FakeEndpoint</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#FakeEndpoint'>FakeEndpoint</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -390,7 +390,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#EndpointConfig'>EndpointConfig</a></code>
+                <code><a class='link' href='#EndpointConfig'>EndpointConfig</a></code>
             </td>
         </tr></table>
 
@@ -464,7 +464,7 @@ Book: /_book.yaml
     <tr>
             <td><code>proxy</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.netemul.network/index.html#DeviceProxy'>DeviceProxy</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#DeviceProxy'>DeviceProxy</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -490,7 +490,7 @@ Book: /_book.yaml
     <tr>
             <td><code>net_manager</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.netemul.network/index.html#NetworkManager'>NetworkManager</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#NetworkManager'>NetworkManager</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -505,7 +505,7 @@ Book: /_book.yaml
     <tr>
             <td><code>endp_manager</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.netemul.network/index.html#EndpointManager'>EndpointManager</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#EndpointManager'>EndpointManager</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -514,7 +514,7 @@ Book: /_book.yaml
 ### Setup {:#Setup}
 
  Creates a collection of networks described by `networks`.
- `status` is ZX_OK for success
+ `status` is `ZX_OK` for success
  `setup_handle` is a resource that references and maintains the lifecycle of
                 the created networks and endpoints.
 
@@ -524,7 +524,7 @@ Book: /_book.yaml
     <tr>
             <td><code>networks</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.netemul.network/index.html#NetworkSetup'>NetworkSetup</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#NetworkSetup'>NetworkSetup</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -540,7 +540,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>setup_handle</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#SetupHandle'>SetupHandle</a>?</code>
+                <code><a class='link' href='#SetupHandle'>SetupHandle</a>?</code>
             </td>
         </tr></table>
 
@@ -634,7 +634,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>backing</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#EndpointBacking'>EndpointBacking</a></code>
+                <code><a class='link' href='#EndpointBacking'>EndpointBacking</a></code>
             </td>
             <td> Backing type of emulated endpoint.
 </td>
@@ -662,7 +662,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#NetworkConfig'>NetworkConfig</a></code>
+                <code><a class='link' href='#NetworkConfig'>NetworkConfig</a></code>
             </td>
             <td> NetworkConfig to use when creating network.
 </td>
@@ -670,7 +670,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>endpoints</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.netemul.network/index.html#EndpointSetup'>EndpointSetup</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#EndpointSetup'>EndpointSetup</a>&gt;</code>
             </td>
             <td> Collection of endpoints to create and attach to network.
 </td>
@@ -698,7 +698,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#EndpointConfig'>EndpointConfig</a>?</code>
+                <code><a class='link' href='#EndpointConfig'>EndpointConfig</a>?</code>
             </td>
             <td> Optional endpoint config, if not provided defaults will be used.
  Default values are: mtu = 1500, backing = ETHERTAP, mac = randomized.
@@ -752,7 +752,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>latency</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#LatencyConfig'>LatencyConfig</a></code>
+                <code><a class='link' href='#LatencyConfig'>LatencyConfig</a></code>
             </td>
             <td> Latency configuration.
 </td>
@@ -760,7 +760,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>packet_loss</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#LossConfig'>LossConfig</a></code>
+                <code><a class='link' href='#LossConfig'>LossConfig</a></code>
             </td>
             <td> Packet loss configuration.
 </td>
@@ -768,7 +768,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>reorder</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.network/index.html#ReorderConfig'>ReorderConfig</a></code>
+                <code><a class='link' href='#ReorderConfig'>ReorderConfig</a></code>
             </td>
             <td> Packet reordering configuration.
 </td>

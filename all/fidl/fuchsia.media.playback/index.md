@@ -31,7 +31,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>source_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Source'>Source</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -52,7 +52,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>source_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Source'>Source</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -68,12 +68,12 @@ Book: /_book.yaml
     <tr>
             <td><code>seeking_reader</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.playback/index.html#SeekingReader'>SeekingReader</a></code>
+                <code><a class='link' href='#SeekingReader'>SeekingReader</a></code>
             </td>
         </tr><tr>
             <td><code>source_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Source'>Source</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -113,7 +113,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>source_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#ElementarySource'>ElementarySource</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ElementarySource'>ElementarySource</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -130,7 +130,7 @@ Book: /_book.yaml
     <tr>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a>?</code>
+                <code><a class='link' href='#Source'>Source</a>?</code>
             </td>
         </tr></table>
 
@@ -149,7 +149,7 @@ Book: /_book.yaml
     <tr>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a></code>
+                <code><a class='link' href='#Source'>Source</a></code>
             </td>
         </tr><tr>
             <td><code>transition_pts</code></td>
@@ -176,7 +176,7 @@ Book: /_book.yaml
     <tr>
             <td><code>returned_source_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Source'>Source</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -255,7 +255,7 @@ Book: /_book.yaml
     <tr>
             <td><code>player_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.playback/index.html#PlayerStatus'>PlayerStatus</a></code>
+                <code><a class='link' href='#PlayerStatus'>PlayerStatus</a></code>
             </td>
         </tr></table>
 
@@ -317,7 +317,7 @@ Book: /_book.yaml
     <tr>
             <td><code>player_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#Player'>Player</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Player'>Player</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -410,7 +410,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>source_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Source'>Source</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -431,7 +431,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>source_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Source'>Source</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -447,12 +447,12 @@ Book: /_book.yaml
     <tr>
             <td><code>seeking_reader</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.playback/index.html#SeekingReader'>SeekingReader</a></code>
+                <code><a class='link' href='#SeekingReader'>SeekingReader</a></code>
             </td>
         </tr><tr>
             <td><code>source_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Source'>Source</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -492,7 +492,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>source_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#ElementarySource'>ElementarySource</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ElementarySource'>ElementarySource</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -509,7 +509,7 @@ Book: /_book.yaml
     <tr>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a>?</code>
+                <code><a class='link' href='#Source'>Source</a>?</code>
             </td>
         </tr></table>
 
@@ -528,7 +528,7 @@ Book: /_book.yaml
     <tr>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a></code>
+                <code><a class='link' href='#Source'>Source</a></code>
             </td>
         </tr><tr>
             <td><code>transition_pts</code></td>
@@ -555,7 +555,7 @@ Book: /_book.yaml
     <tr>
             <td><code>returned_source_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#Source'>Source</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Source'>Source</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -577,7 +577,7 @@ Book: /_book.yaml
     <tr>
             <td><code>source_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.playback/index.html#SourceStatus'>SourceStatus</a></code>
+                <code><a class='link' href='#SourceStatus'>SourceStatus</a></code>
             </td>
         </tr></table>
 
@@ -597,7 +597,7 @@ Book: /_book.yaml
     <tr>
             <td><code>source_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.playback/index.html#SourceStatus'>SourceStatus</a></code>
+                <code><a class='link' href='#SourceStatus'>SourceStatus</a></code>
             </td>
         </tr></table>
 
@@ -652,7 +652,7 @@ Book: /_book.yaml
     <tr>
             <td><code>source_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.playback/index.html#ElementarySource'>ElementarySource</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ElementarySource'>ElementarySource</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -732,7 +732,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>problem</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.playback/index.html#Problem'>Problem</a>?</code>
+                <code><a class='link' href='#Problem'>Problem</a>?</code>
             </td>
             <td> Indicates a problem preventing intended operation.
 </td>
@@ -901,7 +901,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>problem</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.media.playback/index.html#Problem'>Problem</a>?</code>
+                <code><a class='link' href='#Problem'>Problem</a>?</code>
             </td>
             <td> Indicates a problem preventing intended operation. A null value
  indicates that the source is functioning as intended.

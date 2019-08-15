@@ -103,21 +103,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>struct</code></td>
             <td>
-                <code><a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Struct'>Struct</a></code>
+                <code><a class='link' href='#Struct'>Struct</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>enum</code></td>
             <td>
-                <code><a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Enum'>Enum</a></code>
+                <code><a class='link' href='#Enum'>Enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>union</code></td>
             <td>
-                <code><a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Union'>Union</a></code>
+                <code><a class='link' href='#Union'>Union</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -142,14 +142,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>struct</code></td>
             <td>
-                <code><a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Struct'>Struct</a>?</code>
+                <code><a class='link' href='#Struct'>Struct</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>union</code></td>
             <td>
-                <code><a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Union'>Union</a>?</code>
+                <code><a class='link' href='#Union'>Union</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -251,21 +251,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>struct</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Struct'>Struct</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Struct'>Struct</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>enum</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Enum'>Enum</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Enum'>Enum</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>union</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Union'>Union</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Union'>Union</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -290,14 +290,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>struct</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Struct'>Struct</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Struct'>Struct</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>union</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Union'>Union</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Union'>Union</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -399,21 +399,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>struct</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Struct'>Struct</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Struct'>Struct</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>enum</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Enum'>Enum</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Enum'>Enum</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>union</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Union'>Union</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Union'>Union</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -438,14 +438,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>struct</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Struct'>Struct</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Struct'>Struct</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>union</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Union'>Union</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Union'>Union</a>&gt;?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -713,7 +713,7 @@ Type: <code>uint32</code>
             <td>13</td>
             <td><code>enum</code></td>
             <td>
-                <code><a class='link' href='../test.peridot.lib.fidl.jsonxdr/index.html#Enum'>Enum</a></code>
+                <code><a class='link' href='#Enum'>Enum</a></code>
             </td>
             <td></td>
         </tr><tr>

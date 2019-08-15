@@ -20,10 +20,10 @@ Book: /_book.yaml
  including the modular runtime running under it.
 
  On error, this connection is closed with the following epitaphs:
- * ZX_ERR_INVALID_ARGS: Run() failed to execute succesfully.
- * ZX_ERR_BAD_STATE: Other methods are called before Run() is called.
- * ZX_ERR_ALREADY_BOUND: Run() was already called.
- * ZX_ERR_ALREADY_EXISTS: The same environment service is being provided
+ * `ZX_ERR_INVALID_ARGS`: Run() failed to execute succesfully.
+ * `ZX_ERR_BAD_STATE`: Other methods are called before Run() is called.
+ * `ZX_ERR_ALREADY_BOUND`: Run() was already called.
+ * `ZX_ERR_ALREADY_EXISTS`: The same environment service is being provided
    twice.
 
 ### Run {:#Run}
@@ -34,10 +34,10 @@ Book: /_book.yaml
 
  This protocol connection is closed if Run() fails, with the following
  epitaphs:
-  * ZX_ERR_INVALID_ARGS: `spec` is mal-formed.
-  * ZX_ERR_ALREADY_EXISTS: The same environment service is being provided
+  * `ZX_ERR_INVALID_ARGS`: `spec` is mal-formed.
+  * `ZX_ERR_ALREADY_EXISTS`: The same environment service is being provided
     twice in `spec.env_services`
-  * ZX_ERR_ALREADY_BOUND: Run() was already called.
+  * `ZX_ERR_ALREADY_BOUND`: Run() was already called.
 
 #### Request
 <table>
@@ -45,7 +45,7 @@ Book: /_book.yaml
     <tr>
             <td><code>spec</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.testing/index.html#TestHarnessSpec'>TestHarnessSpec</a></code>
+                <code><a class='link' href='#TestHarnessSpec'>TestHarnessSpec</a></code>
             </td>
         </tr></table>
 
@@ -74,7 +74,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>intercepted_component</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.testing/index.html#InterceptedComponent'>InterceptedComponent</a></code>
+                <code><a class='link' href='#InterceptedComponent'>InterceptedComponent</a></code>
             </td>
         </tr></table>
 
@@ -86,9 +86,9 @@ Book: /_book.yaml
  names).
 
  This protocol connection is closed with the following epitaphs:
-  * ZX_ERR_BAD_STATE: if `ConnectToModularService()` is called before
+  * `ZX_ERR_BAD_STATE`: if `ConnectToModularService()` is called before
    `Run()`.
-  * ZX_ERR_INVALID_ARGS: if `service` is not set to a value.
+  * `ZX_ERR_INVALID_ARGS`: if `service` is not set to a value.
 
 #### Request
 <table>
@@ -96,7 +96,7 @@ Book: /_book.yaml
     <tr>
             <td><code>service</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.testing/index.html#ModularService'>ModularService</a></code>
+                <code><a class='link' href='#ModularService'>ModularService</a></code>
             </td>
         </tr></table>
 
@@ -250,7 +250,7 @@ Book: /_book.yaml
  Defines the setup of an environment running an instance of the modular
  framework used for testing purposes. This table is supplied to
  `TestHarness.Run()`. A malformed `TestHarnessSpec` will cause `TestHarness`
- connection to close with an epitaph of ZX_ERR_INVALID_ARGS.
+ connection to close with an epitaph of `ZX_ERR_INVALID_ARGS`.
 
  By default, the following services are made available to the hermetic
  environment:
@@ -304,7 +304,7 @@ Book: /_book.yaml
             <td>4</td>
             <td><code>components_to_intercept</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular.testing/index.html#InterceptSpec'>InterceptSpec</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#InterceptSpec'>InterceptSpec</a>&gt;</code>
             </td>
             <td> List of component URLs (and additional .cmx contents) to intercept.
 </td>
@@ -312,7 +312,7 @@ Book: /_book.yaml
             <td>6</td>
             <td><code>env_services</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular.testing/index.html#EnvironmentServicesSpec'>EnvironmentServicesSpec</a></code>
+                <code><a class='link' href='#EnvironmentServicesSpec'>EnvironmentServicesSpec</a></code>
             </td>
             <td> Options to configure the test harness environment. Use this to inject
  services into the environment.
@@ -359,7 +359,7 @@ Book: /_book.yaml
  Options for configuring the test harness environment with services.
 
  If the same service is provided in more than one place, `TestHarness`
- connection is closed with a ZX_ERR_ALREADY_EXISTS epitaph.
+ connection is closed with a `ZX_ERR_ALREADY_EXISTS` epitaph.
 
 
 <table>
@@ -378,7 +378,7 @@ Book: /_book.yaml
             <td>2</td>
             <td><code>services_from_components</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.modular.testing/index.html#ComponentService'>ComponentService</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ComponentService'>ComponentService</a>&gt;</code>
             </td>
             <td> A list of services provided by components to inject into the test
  harness environment. Multiple services may be provided by the same

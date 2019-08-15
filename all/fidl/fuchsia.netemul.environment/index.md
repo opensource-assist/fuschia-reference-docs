@@ -39,12 +39,12 @@ Book: /_book.yaml
     <tr>
             <td><code>child_env</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.netemul.environment/index.html#ManagedEnvironment'>ManagedEnvironment</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ManagedEnvironment'>ManagedEnvironment</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.environment/index.html#EnvironmentOptions'>EnvironmentOptions</a></code>
+                <code><a class='link' href='#EnvironmentOptions'>EnvironmentOptions</a></code>
             </td>
         </tr></table>
 
@@ -81,7 +81,7 @@ Book: /_book.yaml
     <tr>
             <td><code>device</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.environment/index.html#VirtualDevice'>VirtualDevice</a></code>
+                <code><a class='link' href='#VirtualDevice'>VirtualDevice</a></code>
             </td>
         </tr></table>
 
@@ -251,7 +251,7 @@ Book: /_book.yaml
             <td>2</td>
             <td><code>services</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.netemul.environment/index.html#LaunchService'>LaunchService</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#LaunchService'>LaunchService</a>&gt;</code>
             </td>
             <td> Services to register on environment.
  If none provided, no additional services will be registered.
@@ -262,7 +262,7 @@ Book: /_book.yaml
             <td>3</td>
             <td><code>devices</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.netemul.environment/index.html#VirtualDevice'>VirtualDevice</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#VirtualDevice'>VirtualDevice</a>&gt;</code>
             </td>
             <td> Devices to make available.
  If none provided, no devices will be made available.
@@ -280,7 +280,7 @@ Book: /_book.yaml
             <td>5</td>
             <td><code>logger_options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.environment/index.html#LoggerOptions'>LoggerOptions</a></code>
+                <code><a class='link' href='#LoggerOptions'>LoggerOptions</a></code>
             </td>
             <td> Logger Options.
  If none provided, log printing is disabled by default.

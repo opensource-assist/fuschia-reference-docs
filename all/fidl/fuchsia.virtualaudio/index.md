@@ -23,7 +23,7 @@ Book: /_book.yaml
     <tr>
             <td><code>control</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualaudio/index.html#Control'>Control</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Control'>Control</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -38,7 +38,7 @@ Book: /_book.yaml
     <tr>
             <td><code>input</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualaudio/index.html#Input'>Input</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Input'>Input</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -53,7 +53,7 @@ Book: /_book.yaml
     <tr>
             <td><code>output</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualaudio/index.html#Output'>Output</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Output'>Output</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -233,7 +233,7 @@ Book: /_book.yaml
  activated, format ranges are returned by the driver in response to an
  `AUDIO_STREAM_CMD_GET_FORMATS` command. sample_format_flags is of type
  audio_sample_format_t, and rate_family_flags is a bit field of possible
- constants beginning with ASF_RANGE_FLAG_FPS_. See audio.h for details.
+ constants beginning with `ASF_RANGE_FLAG_FPS_`. See audio.h for details.
 
 #### Request
 <table>
@@ -416,7 +416,7 @@ Book: /_book.yaml
  Set plug properties for this virtual device. This must be called before
  calling `Add()`, or after `Remove()`. Once the device is activated, plug
  information is returned by the driver in response to an
- `AUDIO_STREAM_CMD_PLUG_DETECT `command. This information is used by the
+ `AUDIO_STREAM_CMD_PLUG_DETECT` command. This information is used by the
  system when determining which device is default. This in turn is exposed
  to clients by the `fuchsia.media.AudioDeviceEnumerator` protocol: in
  `GetDevices()`, `GetDefaultInputDevice()`/`GetDefaultOutputDevice()` and
@@ -745,9 +745,10 @@ Book: /_book.yaml
 
 ### GetPosition {:#GetPosition}
 
- Return the current position (in bytes) within the ring buffer. This can
- only be called after the ring buffer is established. If the device has
- not yet Started streaming, then zero will always be returned.
+ Return the current position (in bytes) within the ring buffer, along
+ with the time (per MONOTONIC clock) that corresponds with that position.
+ This can only be called after the ring buffer is established. If the
+ device has not yet Started streaming, then zero will always be returned.
 
 #### Request
 <table>
@@ -759,14 +760,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -777,7 +778,10 @@ Book: /_book.yaml
  per-stream notifications is set by AudioCore, reported to VAD clients
  via `GetBuffer` or the `->OnBufferCreated` event. VirtualAudioDevice
  clients can enable an alternate notification frequency for a given
- stream by calling `SetNotificationFrequency`.
+ stream by calling `SetNotificationFrequency`. As with a direct call to
+ `GetPosition`, the returned parameters are the current position (in
+ bytes) in the ring buffer, as well as the time (per MONOTONIC clock)
+ that corresponds with that ring buffer position.
 
 
 
@@ -785,14 +789,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -928,7 +932,7 @@ Book: /_book.yaml
  activated, format ranges are returned by the driver in response to an
  `AUDIO_STREAM_CMD_GET_FORMATS` command. sample_format_flags is of type
  audio_sample_format_t, and rate_family_flags is a bit field of possible
- constants beginning with ASF_RANGE_FLAG_FPS_. See audio.h for details.
+ constants beginning with `ASF_RANGE_FLAG_FPS_`. See audio.h for details.
 
 #### Request
 <table>
@@ -1111,7 +1115,7 @@ Book: /_book.yaml
  Set plug properties for this virtual device. This must be called before
  calling `Add()`, or after `Remove()`. Once the device is activated, plug
  information is returned by the driver in response to an
- `AUDIO_STREAM_CMD_PLUG_DETECT `command. This information is used by the
+ `AUDIO_STREAM_CMD_PLUG_DETECT` command. This information is used by the
  system when determining which device is default. This in turn is exposed
  to clients by the `fuchsia.media.AudioDeviceEnumerator` protocol: in
  `GetDevices()`, `GetDefaultInputDevice()`/`GetDefaultOutputDevice()` and
@@ -1440,9 +1444,10 @@ Book: /_book.yaml
 
 ### GetPosition {:#GetPosition}
 
- Return the current position (in bytes) within the ring buffer. This can
- only be called after the ring buffer is established. If the device has
- not yet Started streaming, then zero will always be returned.
+ Return the current position (in bytes) within the ring buffer, along
+ with the time (per MONOTONIC clock) that corresponds with that position.
+ This can only be called after the ring buffer is established. If the
+ device has not yet Started streaming, then zero will always be returned.
 
 #### Request
 <table>
@@ -1454,14 +1459,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -1472,7 +1477,10 @@ Book: /_book.yaml
  per-stream notifications is set by AudioCore, reported to VAD clients
  via `GetBuffer` or the `->OnBufferCreated` event. VirtualAudioDevice
  clients can enable an alternate notification frequency for a given
- stream by calling `SetNotificationFrequency`.
+ stream by calling `SetNotificationFrequency`. As with a direct call to
+ `GetPosition`, the returned parameters are the current position (in
+ bytes) in the ring buffer, as well as the time (per MONOTONIC clock)
+ that corresponds with that ring buffer position.
 
 
 
@@ -1480,14 +1488,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -1623,7 +1631,7 @@ Book: /_book.yaml
  activated, format ranges are returned by the driver in response to an
  `AUDIO_STREAM_CMD_GET_FORMATS` command. sample_format_flags is of type
  audio_sample_format_t, and rate_family_flags is a bit field of possible
- constants beginning with ASF_RANGE_FLAG_FPS_. See audio.h for details.
+ constants beginning with `ASF_RANGE_FLAG_FPS_`. See audio.h for details.
 
 #### Request
 <table>
@@ -1806,7 +1814,7 @@ Book: /_book.yaml
  Set plug properties for this virtual device. This must be called before
  calling `Add()`, or after `Remove()`. Once the device is activated, plug
  information is returned by the driver in response to an
- `AUDIO_STREAM_CMD_PLUG_DETECT `command. This information is used by the
+ `AUDIO_STREAM_CMD_PLUG_DETECT` command. This information is used by the
  system when determining which device is default. This in turn is exposed
  to clients by the `fuchsia.media.AudioDeviceEnumerator` protocol: in
  `GetDevices()`, `GetDefaultInputDevice()`/`GetDefaultOutputDevice()` and
@@ -2135,9 +2143,10 @@ Book: /_book.yaml
 
 ### GetPosition {:#GetPosition}
 
- Return the current position (in bytes) within the ring buffer. This can
- only be called after the ring buffer is established. If the device has
- not yet Started streaming, then zero will always be returned.
+ Return the current position (in bytes) within the ring buffer, along
+ with the time (per MONOTONIC clock) that corresponds with that position.
+ This can only be called after the ring buffer is established. If the
+ device has not yet Started streaming, then zero will always be returned.
 
 #### Request
 <table>
@@ -2149,14 +2158,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -2167,7 +2176,10 @@ Book: /_book.yaml
  per-stream notifications is set by AudioCore, reported to VAD clients
  via `GetBuffer` or the `->OnBufferCreated` event. VirtualAudioDevice
  clients can enable an alternate notification frequency for a given
- stream by calling `SetNotificationFrequency`.
+ stream by calling `SetNotificationFrequency`. As with a direct call to
+ `GetPosition`, the returned parameters are the current position (in
+ bytes) in the ring buffer, as well as the time (per MONOTONIC clock)
+ that corresponds with that ring buffer position.
 
 
 
@@ -2175,14 +2187,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>monotonic_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
             <td><code>ring_position</code></td>
             <td>
                 <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>clock_time</code></td>
-            <td>
-                <code>int64</code>
             </td>
         </tr></table>
 
@@ -2217,7 +2229,7 @@ Book: /_book.yaml
 
 
 ## Configuration {:#Configuration}
-*Defined in [fuchsia.virtualaudio/virtual_audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualaudio/virtual_audio.fidl#202)*
+*Defined in [fuchsia.virtualaudio/virtual_audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualaudio/virtual_audio.fidl#206)*
 
  This protocol is conceptually a base protocol to Device. It exposes the
  methods used to specify the properties of a virtual audio device (its
@@ -2320,7 +2332,7 @@ Book: /_book.yaml
  activated, format ranges are returned by the driver in response to an
  `AUDIO_STREAM_CMD_GET_FORMATS` command. sample_format_flags is of type
  audio_sample_format_t, and rate_family_flags is a bit field of possible
- constants beginning with ASF_RANGE_FLAG_FPS_. See audio.h for details.
+ constants beginning with `ASF_RANGE_FLAG_FPS_`. See audio.h for details.
 
 #### Request
 <table>
@@ -2503,7 +2515,7 @@ Book: /_book.yaml
  Set plug properties for this virtual device. This must be called before
  calling `Add()`, or after `Remove()`. Once the device is activated, plug
  information is returned by the driver in response to an
- `AUDIO_STREAM_CMD_PLUG_DETECT `command. This information is used by the
+ `AUDIO_STREAM_CMD_PLUG_DETECT` command. This information is used by the
  system when determining which device is default. This in turn is exposed
  to clients by the `fuchsia.media.AudioDeviceEnumerator` protocol: in
  `GetDevices()`, `GetDefaultInputDevice()`/`GetDefaultOutputDevice()` and

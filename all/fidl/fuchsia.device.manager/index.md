@@ -14,7 +14,7 @@ Book: /_book.yaml
 ### Suspend {:#Suspend}
 
  Ask all devices to enter the suspend state indicated by `flags`. Flags should be some
- combination of DEVICE_SUSPEND_FLAG_* from the DDK.
+ combination of `DEVICE_SUSPEND_FLAG_*` from the DDK.
 
 #### Request
 <table>
@@ -38,7 +38,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## DeviceController {:#DeviceController}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#85)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#91)*
 
  Protocol for controlling devices in a devhost process from the devcoordinator
 
@@ -171,14 +171,14 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.manager/index.html#CompatibilityTestStatus'>CompatibilityTestStatus</a></code>
+                <code><a class='link' href='#CompatibilityTestStatus'>CompatibilityTestStatus</a></code>
             </td>
         </tr></table>
 
 
 
 ## DevhostController {:#DevhostController}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#123)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#129)*
 
  Protocol for controlling a devhost process from the devcoordinator
 
@@ -312,7 +312,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Coordinator {:#Coordinator}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#163)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#168)*
 
  Interface for the devices in devhosts to coordinate with the devcoordinator.
 
@@ -362,7 +362,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>device_add_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.manager/index.html#AddDeviceConfig'>AddDeviceConfig</a></code>
+                <code><a class='link' href='#AddDeviceConfig'>AddDeviceConfig</a></code>
             </td>
         </tr><tr>
             <td><code>client_remote</code></td>
@@ -376,14 +376,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>local_device_id</code></td>
-            <td>
-                <code>uint64</code>
+                <code><a class='link' href='#Coordinator_AddDevice_Result'>Coordinator_AddDevice_Result</a></code>
             </td>
         </tr></table>
 
@@ -438,14 +433,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>local_device_id</code></td>
-            <td>
-                <code>uint64</code>
+                <code><a class='link' href='#Coordinator_AddDeviceInvisible_Result'>Coordinator_AddDeviceInvisible_Result</a></code>
             </td>
         </tr></table>
 
@@ -453,11 +443,17 @@ Book: /_book.yaml
 
  Requests the devcoordinator schedule the removal of this device,
  and the unbinding of its children.
+ If |unbind_self| is true, the unbind hook for this device will also be called.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
-    </table>
+    <tr>
+            <td><code>unbind_self</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
 
 
 
@@ -474,7 +470,18 @@ Book: /_book.yaml
 
 ### UnbindDone {:#UnbindDone}
 
- Sent as the response to |Unbind| or |CompleteRemoval|.
+ Sent as the response to |Unbind|.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+
+### RemoveDone {:#RemoveDone}
+
+ Sent as the response to |CompleteRemoval|.
 
 #### Request
 <table>
@@ -497,9 +504,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Coordinator_RemoveDevice_Result'>Coordinator_RemoveDevice_Result</a></code>
             </td>
         </tr></table>
 
@@ -517,9 +524,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Coordinator_MakeVisible_Result'>Coordinator_MakeVisible_Result</a></code>
             </td>
         </tr></table>
 
@@ -545,9 +552,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Coordinator_BindDevice_Result'>Coordinator_BindDevice_Result</a></code>
             </td>
         </tr></table>
 
@@ -565,14 +572,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>path</code></td>
-            <td>
-                <code>string[1024]?</code>
+                <code><a class='link' href='#Coordinator_GetTopologicalPath_Result'>Coordinator_GetTopologicalPath_Result</a></code>
             </td>
         </tr></table>
 
@@ -595,19 +597,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>vmo</code></td>
-            <td>
-                <code>handle&lt;vmo&gt;?</code>
-            </td>
-        </tr><tr>
-            <td><code>size</code></td>
-            <td>
-                <code>uint64</code>
+                <code><a class='link' href='#Coordinator_LoadFirmware_Result'>Coordinator_LoadFirmware_Result</a></code>
             </td>
         </tr></table>
 
@@ -630,14 +622,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>data</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]?</code>
+                <code><a class='link' href='#Coordinator_GetMetadata_Result'>Coordinator_GetMetadata_Result</a></code>
             </td>
         </tr></table>
 
@@ -660,14 +647,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>size</code></td>
-            <td>
-                <code>uint64</code>
+                <code><a class='link' href='#Coordinator_GetMetadataSize_Result'>Coordinator_GetMetadataSize_Result</a></code>
             </td>
         </tr></table>
 
@@ -698,9 +680,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Coordinator_AddMetadata_Result'>Coordinator_AddMetadata_Result</a></code>
             </td>
         </tr></table>
 
@@ -737,9 +719,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Coordinator_PublishMetadata_Result'>Coordinator_PublishMetadata_Result</a></code>
             </td>
         </tr></table>
 
@@ -765,12 +747,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>components</code></td>
             <td>
-                <code>[8]</code>
-            </td>
-        </tr><tr>
-            <td><code>components_count</code></td>
-            <td>
-                <code>uint32</code>
+                <code>vector&lt;<a class='link' href='#DeviceComponent'>DeviceComponent</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>coresident_device_index</code></td>
@@ -784,9 +761,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Coordinator_AddCompositeDevice_Result'>Coordinator_AddCompositeDevice_Result</a></code>
             </td>
         </tr></table>
 
@@ -821,9 +798,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>s</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Coordinator_DirectoryWatch_Result'>Coordinator_DirectoryWatch_Result</a></code>
             </td>
         </tr></table>
 
@@ -850,9 +827,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Coordinator_RunCompatibilityTests_Result'>Coordinator_RunCompatibilityTests_Result</a></code>
             </td>
         </tr></table>
 
@@ -975,8 +952,238 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
+### Coordinator_AddDevice_Response {:#Coordinator_AddDevice_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#17)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>local_device_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Coordinator_AddDeviceInvisible_Response {:#Coordinator_AddDeviceInvisible_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>local_device_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Coordinator_RemoveDevice_Response {:#Coordinator_RemoveDevice_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#35)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Coordinator_MakeVisible_Response {:#Coordinator_MakeVisible_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#42)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Coordinator_BindDevice_Response {:#Coordinator_BindDevice_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#49)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Coordinator_GetTopologicalPath_Response {:#Coordinator_GetTopologicalPath_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#56)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Coordinator_LoadFirmware_Response {:#Coordinator_LoadFirmware_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#63)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>vmo</code></td>
+            <td>
+                <code>handle&lt;vmo&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>size</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Coordinator_GetMetadata_Response {:#Coordinator_GetMetadata_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#70)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>data</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[8192]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Coordinator_GetMetadataSize_Response {:#Coordinator_GetMetadataSize_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#77)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>size</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Coordinator_AddMetadata_Response {:#Coordinator_AddMetadata_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#84)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Coordinator_PublishMetadata_Response {:#Coordinator_PublishMetadata_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#91)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Coordinator_AddCompositeDevice_Response {:#Coordinator_AddCompositeDevice_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#98)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Coordinator_DirectoryWatch_Response {:#Coordinator_DirectoryWatch_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#105)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Coordinator_RunCompatibilityTests_Response {:#Coordinator_RunCompatibilityTests_Response}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#112)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### BindInstruction {:#BindInstruction}
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#19)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>op</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> bitfield that encodes the operation and execution conditions
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>arg</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> bitfield that encodes the arguments
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### DeviceComponentPart {:#DeviceComponentPart}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#56)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#62)*
 
 
 
@@ -994,7 +1201,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>match_program</code></td>
             <td>
-                <code>uint64[32]</code>
+                <code>[32]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1002,7 +1209,7 @@ Book: /_book.yaml
 </table>
 
 ### DeviceComponent {:#DeviceComponent}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#65)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#71)*
 
 
 
@@ -1034,7 +1241,7 @@ Book: /_book.yaml
 ### CompatibilityTestStatus {:#CompatibilityTestStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#74)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#80)*
 
  A enum of CompatibilityTestStatus
 
@@ -1073,6 +1280,274 @@ Type: <code>uint32</code>
 
 
 
+
+## **UNIONS**
+
+### Coordinator_AddDevice_Result {:#Coordinator_AddDevice_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#20)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_AddDevice_Response'>Coordinator_AddDevice_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_AddDeviceInvisible_Result {:#Coordinator_AddDeviceInvisible_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_AddDeviceInvisible_Response'>Coordinator_AddDeviceInvisible_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_RemoveDevice_Result {:#Coordinator_RemoveDevice_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#38)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_RemoveDevice_Response'>Coordinator_RemoveDevice_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_MakeVisible_Result {:#Coordinator_MakeVisible_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_MakeVisible_Response'>Coordinator_MakeVisible_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_BindDevice_Result {:#Coordinator_BindDevice_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#52)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_BindDevice_Response'>Coordinator_BindDevice_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_GetTopologicalPath_Result {:#Coordinator_GetTopologicalPath_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#59)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_GetTopologicalPath_Response'>Coordinator_GetTopologicalPath_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_LoadFirmware_Result {:#Coordinator_LoadFirmware_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#66)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_LoadFirmware_Response'>Coordinator_LoadFirmware_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_GetMetadata_Result {:#Coordinator_GetMetadata_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#73)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_GetMetadata_Response'>Coordinator_GetMetadata_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_GetMetadataSize_Result {:#Coordinator_GetMetadataSize_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#80)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_GetMetadataSize_Response'>Coordinator_GetMetadataSize_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_AddMetadata_Result {:#Coordinator_AddMetadata_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#87)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_AddMetadata_Response'>Coordinator_AddMetadata_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_PublishMetadata_Result {:#Coordinator_PublishMetadata_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#94)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_PublishMetadata_Response'>Coordinator_PublishMetadata_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_AddCompositeDevice_Result {:#Coordinator_AddCompositeDevice_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#101)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_AddCompositeDevice_Response'>Coordinator_AddCompositeDevice_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_DirectoryWatch_Result {:#Coordinator_DirectoryWatch_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#108)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_DirectoryWatch_Response'>Coordinator_DirectoryWatch_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_RunCompatibilityTests_Result {:#Coordinator_RunCompatibilityTests_Result}
+*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#115)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_RunCompatibilityTests_Response'>Coordinator_RunCompatibilityTests_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
 
 
 
@@ -1113,56 +1588,56 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#25">DEVICE_NAME_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#31">DEVICE_NAME_MAX</a></td>
             <td>
                     <code>31</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#29">DEVICE_PATH_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#35">DEVICE_PATH_MAX</a></td>
             <td>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#32">DEVICE_ARGS_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#38">DEVICE_ARGS_MAX</a></td>
             <td>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#35">METADATA_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#41">METADATA_MAX</a></td>
             <td>
                     <code>8192</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#38">PROPERTIES_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#44">PROPERTIES_MAX</a></td>
             <td>
                     <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#41">COMPONENTS_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#47">COMPONENTS_MAX</a></td>
             <td>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#44">DEVICE_COMPONENT_PARTS_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#50">DEVICE_COMPONENT_PARTS_MAX</a></td>
             <td>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#47">DEVICE_COMPONENT_PART_INSTRUCTIONS_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#53">DEVICE_COMPONENT_PART_INSTRUCTIONS_MAX</a></td>
             <td>
                     <code>32</code>
                 </td>

@@ -30,7 +30,7 @@ Book: /_book.yaml
  After processing this message, the `Launcher` is reset to its initial
  state and is ready to launch another process.
 
- `process` is present if, and only if, `status` is ZX_OK.
+ `process` is present if, and only if, `status` is `ZX_OK`.
 
 #### Request
 <table>
@@ -38,7 +38,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.process/index.html#LaunchInfo'>LaunchInfo</a></code>
+                <code><a class='link' href='#LaunchInfo'>LaunchInfo</a></code>
             </td>
         </tr></table>
 
@@ -68,7 +68,7 @@ Book: /_book.yaml
  The caller is responsible for calling `zx_process_start` using the data
  in `ProcessStartData` to actually start the process.
 
- `data` is present if, and only if, `status` is ZX_OK.
+ `data` is present if, and only if, `status` is `ZX_OK`.
 
 #### Request
 <table>
@@ -76,7 +76,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.process/index.html#LaunchInfo'>LaunchInfo</a></code>
+                <code><a class='link' href='#LaunchInfo'>LaunchInfo</a></code>
             </td>
         </tr></table>
 
@@ -92,7 +92,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.process/index.html#ProcessStartData'>ProcessStartData</a>?</code>
+                <code><a class='link' href='#ProcessStartData'>ProcessStartData</a>?</code>
             </td>
         </tr></table>
 
@@ -148,7 +148,7 @@ Book: /_book.yaml
     <tr>
             <td><code>names</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.process/index.html#NameInfo'>NameInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#NameInfo'>NameInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -166,7 +166,7 @@ Book: /_book.yaml
     <tr>
             <td><code>handles</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.process/index.html#HandleInfo'>HandleInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#HandleInfo'>HandleInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -198,7 +198,7 @@ Book: /_book.yaml
 
  If present, the `executable` is suitable for use as the `executable`
  property of `LaunchInfo`. If present, the `ldsvc` is suitable for use as
- the PA_LDSVC_LOADER handle when launching the process.
+ the `PA_LDSVC_LOADER` handle when launching the process.
 
  For example, the resolver might locate the given `name` inside a package
  and return the executable binary from the package as well as a shared
@@ -376,7 +376,7 @@ Book: /_book.yaml
             </td>
             <td> The vmar object that was created when the process was created.
 
- See <https://fuchsia.googlesource.com/fuchsia/+/master/zircon/docs/syscalls/process_create.md>.
+ See <https://fuchsia.googlesource.com/fuchsia/+/master/docs/zircon/syscalls/process_create.md>.
 </td>
             <td>No default</td>
         </tr><tr>

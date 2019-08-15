@@ -25,7 +25,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#OsInfo'>OsInfo</a></code>
+                <code><a class='link' href='#OsInfo'>OsInfo</a></code>
             </td>
         </tr></table>
 
@@ -38,12 +38,12 @@ Book: /_book.yaml
     <tr>
             <td><code>trusted_app</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#Uuid'>Uuid</a></code>
+                <code><a class='link' href='#Uuid'>Uuid</a></code>
             </td>
         </tr><tr>
             <td><code>parameter_set</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#ParameterSet'>ParameterSet</a></code>
+                <code><a class='link' href='#ParameterSet'>ParameterSet</a></code>
             </td>
         </tr></table>
 
@@ -59,7 +59,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>OpResult</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#OpResult'>OpResult</a></code>
+                <code><a class='link' href='#OpResult'>OpResult</a></code>
             </td>
         </tr></table>
 
@@ -82,7 +82,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>parameter_set</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#ParameterSet'>ParameterSet</a></code>
+                <code><a class='link' href='#ParameterSet'>ParameterSet</a></code>
             </td>
         </tr></table>
 
@@ -93,7 +93,7 @@ Book: /_book.yaml
     <tr>
             <td><code>OpResult</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#OpResult'>OpResult</a></code>
+                <code><a class='link' href='#OpResult'>OpResult</a></code>
             </td>
         </tr></table>
 
@@ -195,14 +195,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>uuid</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#Uuid'>Uuid</a></code>
+                <code><a class='link' href='#Uuid'>Uuid</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>revision</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#OsRevision'>OsRevision</a></code>
+                <code><a class='link' href='#OsRevision'>OsRevision</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -238,7 +238,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>direction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#Direction'>Direction</a></code>
+                <code><a class='link' href='#Direction'>Direction</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -277,7 +277,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>direction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#Direction'>Direction</a></code>
+                <code><a class='link' href='#Direction'>Direction</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -348,14 +348,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>return_origin</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#ReturnOrigin'>ReturnOrigin</a></code>
+                <code><a class='link' href='#ReturnOrigin'>ReturnOrigin</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>parameter_set</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#ParameterSet'>ParameterSet</a></code>
+                <code><a class='link' href='#ParameterSet'>ParameterSet</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -424,19 +424,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>empty</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#Empty'>Empty</a></code>
+                <code><a class='link' href='#Empty'>Empty</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>buffer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#Buffer'>Buffer</a></code>
+                <code><a class='link' href='#Buffer'>Buffer</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tee/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
         </tr></table>

@@ -22,7 +22,7 @@ Book: /_book.yaml
  provides an interface to the Controller for the new device. Closing the
  connection to `device` will also close the `controller` interface. If
  the display device already has a virtcon controller then this method
- will return ZX_ERR_ALREADY_BOUND.
+ will return `ZX_ERR_ALREADY_BOUND`.
 
 #### Request
 <table>
@@ -35,7 +35,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.hardware.display/index.html#Controller'>Controller</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Controller'>Controller</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -58,7 +58,7 @@ Book: /_book.yaml
  provides an interface to the Controller for the new device. Closing the
  connection to `device` will also close the `controller` interface. If
  the display device already has a primary controller then this method
- will return ZX_ERR_ALREADY_BOUND.
+ will return `ZX_ERR_ALREADY_BOUND`.
 
 #### Request
 <table>
@@ -71,7 +71,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.hardware.display/index.html#Controller'>Controller</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Controller'>Controller</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -115,7 +115,7 @@ Book: /_book.yaml
     <tr>
             <td><code>added</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.hardware.display/index.html#Info'>Info</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Info'>Info</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>removed</code></td>
@@ -133,7 +133,7 @@ Book: /_book.yaml
     <tr>
             <td><code>image_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ImageConfig'>ImageConfig</a></code>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
             </td>
         </tr><tr>
             <td><code>vmo</code></td>
@@ -172,7 +172,7 @@ Book: /_book.yaml
     <tr>
             <td><code>image_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ImageConfig'>ImageConfig</a></code>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
             </td>
         </tr><tr>
             <td><code>collection_id</code></td>
@@ -305,7 +305,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#Mode'>Mode</a></code>
+                <code><a class='link' href='#Mode'>Mode</a></code>
             </td>
         </tr></table>
 
@@ -375,7 +375,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>image_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ImageConfig'>ImageConfig</a></code>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
             </td>
         </tr></table>
 
@@ -395,17 +395,17 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>transform</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#Transform'>Transform</a></code>
+                <code><a class='link' href='#Transform'>Transform</a></code>
             </td>
         </tr><tr>
             <td><code>src_frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#Frame'>Frame</a></code>
+                <code><a class='link' href='#Frame'>Frame</a></code>
             </td>
         </tr><tr>
             <td><code>dest_frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#Frame'>Frame</a></code>
+                <code><a class='link' href='#Frame'>Frame</a></code>
             </td>
         </tr></table>
 
@@ -425,7 +425,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#AlphaMode'>AlphaMode</a></code>
+                <code><a class='link' href='#AlphaMode'>AlphaMode</a></code>
             </td>
         </tr><tr>
             <td><code>val</code></td>
@@ -450,7 +450,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>image_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ImageConfig'>ImageConfig</a></code>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
             </td>
         </tr></table>
 
@@ -556,12 +556,12 @@ Book: /_book.yaml
     <tr>
             <td><code>res</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ConfigResult'>ConfigResult</a></code>
+                <code><a class='link' href='#ConfigResult'>ConfigResult</a></code>
             </td>
         </tr><tr>
             <td><code>ops</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.hardware.display/index.html#ClientCompositionOp'>ClientCompositionOp</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ClientCompositionOp'>ClientCompositionOp</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -761,7 +761,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ImageConfig'>ImageConfig</a></code>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
             </td>
         </tr></table>
 
@@ -805,9 +805,149 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### ImportImageForCapture {:#ImportImageForCapture}
+
+ Imports a buffer collection backed VMO into the display controller. The VMO
+ will be used by display controller to capture the image being displayed.
+ Returns ZX_OK along with an image_id.
+ image_id must be used by the client to start capture and/or release
+ resources allocated for capture.
+ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>image_config</code></td>
+            <td>
+                <code><a class='link' href='#ImageConfig'>ImageConfig</a></code>
+            </td>
+        </tr><tr>
+            <td><code>collection_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>index</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_ImportImageForCapture_Result'>Controller_ImportImageForCapture_Result</a></code>
+            </td>
+        </tr></table>
+
+### StartCapture {:#StartCapture}
+
+ Starts capture. Client must provide a valid signal_event_id and
+ image_id. signal_event_id must have been imported into the driver
+ using ImportEvent FIDL API. Image_id is the id from ImportImageForCapture.
+ The client will get notified once capture is complete via signal_event_id.
+ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>signal_event_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_StartCapture_Result'>Controller_StartCapture_Result</a></code>
+            </td>
+        </tr></table>
+
+### ReleaseCapture {:#ReleaseCapture}
+
+ Releases resources allocated for capture.
+ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_ReleaseCapture_Result'>Controller_ReleaseCapture_Result</a></code>
+            </td>
+        </tr></table>
+
 
 
 ## **STRUCTS**
+
+### Controller_ImportImageForCapture_Response {:#Controller_ImportImageForCapture_Response}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Controller_StartCapture_Response {:#Controller_StartCapture_Response}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#52)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Controller_ReleaseCapture_Response {:#Controller_ReleaseCapture_Response}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#59)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
 
 ### Mode {:#Mode}
 *Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#20)*
@@ -898,7 +1038,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>modes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.hardware.display/index.html#Mode'>Mode</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Mode'>Mode</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -912,7 +1052,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>cursor_configs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.hardware.display/index.html#CursorInfo'>CursorInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CursorInfo'>CursorInfo</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1000,7 +1140,7 @@ Book: /_book.yaml
                 <code>uint32</code>
             </td>
             <td></td>
-            <td><a class='link' href='../fuchsia.hardware.display/index.html#typeSimple'>typeSimple</a></td>
+            <td><a class='link' href='#typeSimple'>typeSimple</a></td>
         </tr><tr>
             <td><code>planes</code></td>
             <td>
@@ -1075,7 +1215,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>opcode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.display/index.html#ClientCompositionOpcode'>ClientCompositionOpcode</a></code>
+                <code><a class='link' href='#ClientCompositionOpcode'>ClientCompositionOpcode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1247,6 +1387,65 @@ Type: <code>uint32</code>
 
 
 
+
+## **UNIONS**
+
+### Controller_ImportImageForCapture_Result {:#Controller_ImportImageForCapture_Result}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_ImportImageForCapture_Response'>Controller_ImportImageForCapture_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Controller_StartCapture_Result {:#Controller_StartCapture_Result}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#55)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_StartCapture_Response'>Controller_StartCapture_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Controller_ReleaseCapture_Result {:#Controller_ReleaseCapture_Result}
+*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_ReleaseCapture_Response'>Controller_ReleaseCapture_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
 
 
 

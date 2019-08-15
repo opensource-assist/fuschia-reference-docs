@@ -25,7 +25,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device/index.html#QueryResponse'>QueryResponse</a></code>
+                <code><a class='link' href='#QueryResponse'>QueryResponse</a></code>
             </td>
         </tr></table>
 
@@ -38,7 +38,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device/index.html#CreateIfaceRequest'>CreateIfaceRequest</a></code>
+                <code><a class='link' href='#CreateIfaceRequest'>CreateIfaceRequest</a></code>
             </td>
         </tr></table>
 
@@ -49,7 +49,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device/index.html#CreateIfaceResponse'>CreateIfaceResponse</a></code>
+                <code><a class='link' href='#CreateIfaceResponse'>CreateIfaceResponse</a></code>
             </td>
         </tr></table>
 
@@ -62,7 +62,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device/index.html#DestroyIfaceRequest'>DestroyIfaceRequest</a></code>
+                <code><a class='link' href='#DestroyIfaceRequest'>DestroyIfaceRequest</a></code>
             </td>
         </tr></table>
 
@@ -73,7 +73,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device/index.html#DestroyIfaceResponse'>DestroyIfaceResponse</a></code>
+                <code><a class='link' href='#DestroyIfaceResponse'>DestroyIfaceResponse</a></code>
             </td>
         </tr></table>
 
@@ -86,7 +86,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device/index.html#SetCountryRequest'>SetCountryRequest</a></code>
+                <code><a class='link' href='#SetCountryRequest'>SetCountryRequest</a></code>
             </td>
         </tr></table>
 
@@ -115,7 +115,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.wlan.device/index.html#Phy'>Phy</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Phy'>Phy</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -267,7 +267,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>supported_channels</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device/index.html#ChannelList'>ChannelList</a></code>
+                <code><a class='link' href='#ChannelList'>ChannelList</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -306,7 +306,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>supported_phys</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.device/index.html#SupportedPhy'>SupportedPhy</a>&gt;[8]</code>
+                <code>vector&lt;<a class='link' href='#SupportedPhy'>SupportedPhy</a>&gt;[8]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -320,21 +320,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>mac_roles</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.device/index.html#MacRole'>MacRole</a>&gt;[8]</code>
+                <code>vector&lt;<a class='link' href='#MacRole'>MacRole</a>&gt;[8]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>caps</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.device/index.html#Capability'>Capability</a>&gt;[8]</code>
+                <code>vector&lt;<a class='link' href='#Capability'>Capability</a>&gt;[8]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>bands</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.device/index.html#BandInfo'>BandInfo</a>&gt;[8]</code>
+                <code>vector&lt;<a class='link' href='#BandInfo'>BandInfo</a>&gt;[8]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -359,7 +359,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device/index.html#PhyInfo'>PhyInfo</a></code>
+                <code><a class='link' href='#PhyInfo'>PhyInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -377,7 +377,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>role</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device/index.html#MacRole'>MacRole</a></code>
+                <code><a class='link' href='#MacRole'>MacRole</a></code>
             </td>
             <td></td>
             <td>No default</td>

@@ -19,12 +19,12 @@ Book: /_book.yaml
     <tr>
             <td><code>p</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.test/index.html#Point'>Point</a></code>
+                <code><a class='link' href='#Point'>Point</a></code>
             </td>
         </tr><tr>
             <td><code>d</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.test/index.html#Direction'>Direction</a></code>
+                <code><a class='link' href='#Direction'>Direction</a></code>
             </td>
         </tr></table>
 
@@ -39,7 +39,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ps</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.test/index.html#Points'>Points</a></code>
+                <code><a class='link' href='#Points'>Points</a></code>
             </td>
         </tr></table>
 
@@ -107,7 +107,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>more_points</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.test/index.html#ArraysOfPoints'>ArraysOfPoints</a>?</code>
+                <code><a class='link' href='#ArraysOfPoints'>ArraysOfPoints</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -125,7 +125,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>p</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.examples.test/index.html#Point'>Point</a>&gt;[4]</code>
+                <code>vector&lt;<a class='link' href='#Point'>Point</a>&gt;[4]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -143,7 +143,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>d</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.examples.test/index.html#Direction'>Direction</a>&gt;[4]</code>
+                <code>vector&lt;<a class='link' href='#Direction'>Direction</a>&gt;[4]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -194,13 +194,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>one_point</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.test/index.html#Point'>Point</a></code>
+                <code><a class='link' href='#Point'>Point</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>many_points</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.test/index.html#ArraysOfPoints'>ArraysOfPoints</a></code>
+                <code><a class='link' href='#ArraysOfPoints'>ArraysOfPoints</a></code>
             </td>
             <td></td>
         </tr></table>

@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr>
             <td><code>context</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account.internal/index.html#AccountHandlerContext'>AccountHandlerContext</a></code>
+                <code><a class='link' href='#AccountHandlerContext'>AccountHandlerContext</a></code>
             </td>
         </tr><tr>
             <td><code>id</code></td>
@@ -48,7 +48,7 @@ Book: /_book.yaml
     <tr>
             <td><code>context</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account.internal/index.html#AccountHandlerContext'>AccountHandlerContext</a></code>
+                <code><a class='link' href='#AccountHandlerContext'>AccountHandlerContext</a></code>
             </td>
         </tr><tr>
             <td><code>id</code></td>

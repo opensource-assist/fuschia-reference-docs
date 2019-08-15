@@ -44,42 +44,42 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>in</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#Counter'>Counter</a></code>
+                <code><a class='link' href='#Counter'>Counter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>out</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#Counter'>Counter</a></code>
+                <code><a class='link' href='#Counter'>Counter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>drop</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#Counter'>Counter</a></code>
+                <code><a class='link' href='#Counter'>Counter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>in_bytes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#Counter'>Counter</a></code>
+                <code><a class='link' href='#Counter'>Counter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>out_bytes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#Counter'>Counter</a></code>
+                <code><a class='link' href='#Counter'>Counter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>drop_bytes</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#Counter'>Counter</a></code>
+                <code><a class='link' href='#Counter'>Counter</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -97,28 +97,28 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>any_packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#PacketCounter'>PacketCounter</a></code>
+                <code><a class='link' href='#PacketCounter'>PacketCounter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>mgmt_frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#PacketCounter'>PacketCounter</a></code>
+                <code><a class='link' href='#PacketCounter'>PacketCounter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>ctrl_frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#PacketCounter'>PacketCounter</a></code>
+                <code><a class='link' href='#PacketCounter'>PacketCounter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>data_frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#PacketCounter'>PacketCounter</a></code>
+                <code><a class='link' href='#PacketCounter'>PacketCounter</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -157,49 +157,49 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>svc_msg</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#PacketCounter'>PacketCounter</a></code>
+                <code><a class='link' href='#PacketCounter'>PacketCounter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>data_frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#PacketCounter'>PacketCounter</a></code>
+                <code><a class='link' href='#PacketCounter'>PacketCounter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>mgmt_frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#PacketCounter'>PacketCounter</a></code>
+                <code><a class='link' href='#PacketCounter'>PacketCounter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>tx_frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#PacketCounter'>PacketCounter</a></code>
+                <code><a class='link' href='#PacketCounter'>PacketCounter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>rx_frame</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#PacketCounter'>PacketCounter</a></code>
+                <code><a class='link' href='#PacketCounter'>PacketCounter</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>assoc_data_rssi</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#RssiStats'>RssiStats</a></code>
+                <code><a class='link' href='#RssiStats'>RssiStats</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>beacon_rssi</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#RssiStats'>RssiStats</a></code>
+                <code><a class='link' href='#RssiStats'>RssiStats</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -217,7 +217,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>not_used</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#PacketCounter'>PacketCounter</a></code>
+                <code><a class='link' href='#PacketCounter'>PacketCounter</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -235,14 +235,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>dispatcher_stats</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#DispatcherStats'>DispatcherStats</a></code>
+                <code><a class='link' href='#DispatcherStats'>DispatcherStats</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>mlme_stats</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#MlmeStats'>MlmeStats</a>?</code>
+                <code><a class='link' href='#MlmeStats'>MlmeStats</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -265,13 +265,13 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>client_mlme_stats</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#ClientMlmeStats'>ClientMlmeStats</a></code>
+                <code><a class='link' href='#ClientMlmeStats'>ClientMlmeStats</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>ap_mlme_stats</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.stats/index.html#ApMlmeStats'>ApMlmeStats</a></code>
+                <code><a class='link' href='#ApMlmeStats'>ApMlmeStats</a></code>
             </td>
             <td></td>
         </tr></table>

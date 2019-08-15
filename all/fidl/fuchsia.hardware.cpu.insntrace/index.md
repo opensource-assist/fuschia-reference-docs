@@ -22,7 +22,7 @@ Book: /_book.yaml
     <tr>
             <td><code>allocation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Allocation'>Allocation</a></code>
+                <code><a class='link' href='#Allocation'>Allocation</a></code>
             </td>
         </tr></table>
 
@@ -33,7 +33,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Controller_Initialize_Result'>Controller_Initialize_Result</a></code>
+                <code><a class='link' href='#Controller_Initialize_Result'>Controller_Initialize_Result</a></code>
             </td>
         </tr></table>
 
@@ -44,7 +44,7 @@ Book: /_book.yaml
  the trace).
  May be called multiple times.
  This can only fail when tracing in THREAD mode where tracing is
- terminated differently, in which case the error is ZX_ERR_BAD_STATE.
+ terminated differently, in which case the error is `ZX_ERR_BAD_STATE`.
 
 #### Request
 <table>
@@ -58,7 +58,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Controller_Terminate_Result'>Controller_Terminate_Result</a></code>
+                <code><a class='link' href='#Controller_Terminate_Result'>Controller_Terminate_Result</a></code>
             </td>
         </tr></table>
 
@@ -78,7 +78,7 @@ Book: /_book.yaml
     <tr>
             <td><code>allocation</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Allocation'>Allocation</a>?</code>
+                <code><a class='link' href='#Allocation'>Allocation</a>?</code>
             </td>
         </tr></table>
 
@@ -94,7 +94,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#BufferConfig'>BufferConfig</a></code>
+                <code><a class='link' href='#BufferConfig'>BufferConfig</a></code>
             </td>
         </tr></table>
 
@@ -105,7 +105,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Controller_AllocateBuffer_Result'>Controller_AllocateBuffer_Result</a></code>
+                <code><a class='link' href='#Controller_AllocateBuffer_Result'>Controller_AllocateBuffer_Result</a></code>
             </td>
         </tr></table>
 
@@ -135,7 +135,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Controller_AssignThreadBuffer_Result'>Controller_AssignThreadBuffer_Result</a></code>
+                <code><a class='link' href='#Controller_AssignThreadBuffer_Result'>Controller_AssignThreadBuffer_Result</a></code>
             </td>
         </tr></table>
 
@@ -165,7 +165,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Controller_ReleaseThreadBuffer_Result'>Controller_ReleaseThreadBuffer_Result</a></code>
+                <code><a class='link' href='#Controller_ReleaseThreadBuffer_Result'>Controller_ReleaseThreadBuffer_Result</a></code>
             </td>
         </tr></table>
 
@@ -190,7 +190,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#BufferConfig'>BufferConfig</a>?</code>
+                <code><a class='link' href='#BufferConfig'>BufferConfig</a>?</code>
             </td>
         </tr></table>
 
@@ -215,7 +215,7 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#BufferState'>BufferState</a>?</code>
+                <code><a class='link' href='#BufferState'>BufferState</a>?</code>
             </td>
         </tr></table>
 
@@ -382,7 +382,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Mode'>Mode</a></code>
+                <code><a class='link' href='#Mode'>Mode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -477,7 +477,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>address_range_0</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#AddressRange'>AddressRange</a></code>
+                <code><a class='link' href='#AddressRange'>AddressRange</a></code>
             </td>
             <td> If non-zero, tracing is restricted to these address ranges.
  TODO(dje): There's only two, and vectors don't currently work here,
@@ -487,7 +487,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>address_range_1</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#AddressRange'>AddressRange</a></code>
+                <code><a class='link' href='#AddressRange'>AddressRange</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -554,7 +554,7 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Controller_Initialize_Response'>Controller_Initialize_Response</a></code>
+                <code><a class='link' href='#Controller_Initialize_Response'>Controller_Initialize_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -573,7 +573,7 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Controller_Terminate_Response'>Controller_Terminate_Response</a></code>
+                <code><a class='link' href='#Controller_Terminate_Response'>Controller_Terminate_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -592,7 +592,7 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Controller_AllocateBuffer_Response'>Controller_AllocateBuffer_Response</a></code>
+                <code><a class='link' href='#Controller_AllocateBuffer_Response'>Controller_AllocateBuffer_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -611,7 +611,7 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Controller_AssignThreadBuffer_Response'>Controller_AssignThreadBuffer_Response</a></code>
+                <code><a class='link' href='#Controller_AssignThreadBuffer_Response'>Controller_AssignThreadBuffer_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -630,7 +630,7 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.cpu.insntrace/index.html#Controller_ReleaseThreadBuffer_Response'>Controller_ReleaseThreadBuffer_Response</a></code>
+                <code><a class='link' href='#Controller_ReleaseThreadBuffer_Response'>Controller_ReleaseThreadBuffer_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Provider {:#Provider}
-*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#23)*
+*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#24)*
 
  Experimental additions to `Provider`.
 
@@ -41,7 +41,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#Provider_GetTypefaceById_Result'>Provider_GetTypefaceById_Result</a></code>
+                <code><a class='link' href='#Provider_GetTypefaceById_Result'>Provider_GetTypefaceById_Result</a></code>
             </td>
         </tr></table>
 
@@ -59,12 +59,12 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#ListTypefacesRequest'>ListTypefacesRequest</a></code>
+                <code><a class='link' href='#ListTypefacesRequest'>ListTypefacesRequest</a></code>
             </td>
         </tr><tr>
             <td><code>iterator</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.fonts.experimental/index.html#ListTypefacesIterator'>ListTypefacesIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ListTypefacesIterator'>ListTypefacesIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -75,7 +75,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#Provider_ListTypefaces_Result'>Provider_ListTypefaces_Result</a></code>
+                <code><a class='link' href='#Provider_ListTypefaces_Result'>Provider_ListTypefaces_Result</a></code>
             </td>
         </tr></table>
 
@@ -109,12 +109,12 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#Provider_GetTypefacesByFamily_Result'>Provider_GetTypefacesByFamily_Result</a></code>
+                <code><a class='link' href='#Provider_GetTypefacesByFamily_Result'>Provider_GetTypefacesByFamily_Result</a></code>
             </td>
         </tr></table>
 
 ## ListTypefacesIterator {:#ListTypefacesIterator}
-*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#56)*
+*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#57)*
 
 
 ### GetNext {:#GetNext}
@@ -135,7 +135,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#TypefaceInfoResponse'>TypefaceInfoResponse</a></code>
+                <code><a class='link' href='#TypefaceInfoResponse'>TypefaceInfoResponse</a></code>
             </td>
         </tr></table>
 
@@ -183,7 +183,85 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#TypefaceInfoResponse'>TypefaceInfoResponse</a></code>
+                <code><a class='link' href='#TypefaceInfoResponse'>TypefaceInfoResponse</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### SlantRange {:#SlantRange}
+*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#109)*
+
+
+
+ Represents a range of acceptable `Slant`s. Both bounds are inclusive.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>lower</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.fonts/index.html'>fuchsia.fonts</a>/<a class='link' href='../fuchsia.fonts/index.html#Slant'>Slant</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>upper</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.fonts/index.html'>fuchsia.fonts</a>/<a class='link' href='../fuchsia.fonts/index.html#Slant'>Slant</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### WeightRange {:#WeightRange}
+*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#115)*
+
+
+
+ Represents a range of acceptable `Weight`s. Both bounds are inclusive.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>lower</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>upper</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### WidthRange {:#WidthRange}
+*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#121)*
+
+
+
+ Represents a range of acceptable `Width`s. Both bounds are inclusive.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>lower</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.fonts/index.html'>fuchsia.fonts</a>/<a class='link' href='../fuchsia.fonts/index.html#Width'>Width</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>upper</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.fonts/index.html'>fuchsia.fonts</a>/<a class='link' href='../fuchsia.fonts/index.html#Width'>Width</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -197,7 +275,7 @@ Book: /_book.yaml
 ### Error {:#Error}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#16)*
+*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#17)*
 
 
 
@@ -219,7 +297,7 @@ Type: <code>uint32</code>
 ### ListTypefacesRequest {:#ListTypefacesRequest}
 
 
-*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#65)*
+*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#66)*
 
  Query parameters for `ListTypefaces`. Results must match all included
  fields. All fields are optional; omitted fields will match any font.
@@ -231,7 +309,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>flags</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#ListTypefacesFlags'>ListTypefacesFlags</a></code>
+                <code><a class='link' href='#ListTypefacesFlags'>ListTypefacesFlags</a></code>
             </td>
             <td> Optional flags to modify matching behavior. Ignored if no other fields
  are set.
@@ -248,17 +326,30 @@ Type: <code>uint32</code>
 </td>
         </tr><tr>
             <td>3</td>
-            <td><code>styles</code></td>
+            <td><code>slant</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.fonts/index.html'>fuchsia.fonts</a>/<a class='link' href='../fuchsia.fonts/index.html#Style2'>Style2</a>&gt;[300]</code>
+                <code><a class='link' href='#SlantRange'>SlantRange</a></code>
             </td>
-            <td> Styles to match. Note that combining styles will change results.
- For example, `[{slant: UPRIGHT}, {weight: WEIGHT_BOLD}]` matches fonts
- that are upright *or* bold but `[{slant: UPRIGHT, weight: WEIGHT_BOLD}]`
- only matches fonts that are both upright *and* bold.
+            <td> Results must have a slant within this inclusive range.
 </td>
         </tr><tr>
             <td>4</td>
+            <td><code>weight</code></td>
+            <td>
+                <code><a class='link' href='#WeightRange'>WeightRange</a></code>
+            </td>
+            <td> Results must have a weight within this inclusive range.
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>width</code></td>
+            <td>
+                <code><a class='link' href='#WidthRange'>WidthRange</a></code>
+            </td>
+            <td> Results must have a width within this inclusive range.
+</td>
+        </tr><tr>
+            <td>6</td>
             <td><code>languages</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='../fuchsia.intl/index.html'>fuchsia.intl</a>/<a class='link' href='../fuchsia.intl/index.html#LocaleId'>LocaleId</a>&gt;[8]</code>
@@ -267,7 +358,7 @@ Type: <code>uint32</code>
  Each result must support all requested languages.
 </td>
         </tr><tr>
-            <td>5</td>
+            <td>7</td>
             <td><code>code_points</code></td>
             <td>
                 <code>vector&lt;uint32&gt;</code>
@@ -276,22 +367,21 @@ Type: <code>uint32</code>
  Each result must include all requested code points.
 </td>
         </tr><tr>
-            <td>6</td>
-            <td><code>generic_families</code></td>
+            <td>8</td>
+            <td><code>generic_family</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.fonts/index.html'>fuchsia.fonts</a>/<a class='link' href='../fuchsia.fonts/index.html#GenericFontFamily'>GenericFontFamily</a>&gt;</code>
+                <code><a class='link' href='../fuchsia.fonts/index.html'>fuchsia.fonts</a>/<a class='link' href='../fuchsia.fonts/index.html#GenericFontFamily'>GenericFontFamily</a></code>
             </td>
-            <td> Generic font families to match. Results will include fonts belonging to
- any requested generic family. Note that a font can only belong to one
- generic family, so there is no way to request a font belonging to
- all requested generic families.
+            <td> Generic font family which results must belong to. If a font's generic
+ family is not set, it will only be matched if this field is also not
+ set. However, omitting this field will still cause it to match any font.
 </td>
         </tr></table>
 
 ### TypefaceInfoResponse {:#TypefaceInfoResponse}
 
 
-*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#105)*
+*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#126)*
 
 
 
@@ -301,7 +391,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>results</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.fonts.experimental/index.html#TypefaceInfo'>TypefaceInfo</a>&gt;[16]</code>
+                <code>vector&lt;<a class='link' href='#TypefaceInfo'>TypefaceInfo</a>&gt;[16]</code>
             </td>
             <td></td>
         </tr></table>
@@ -309,7 +399,7 @@ Type: <code>uint32</code>
 ### TypefaceInfo {:#TypefaceInfo}
 
 
-*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#111)*
+*Defined in [fuchsia.fonts.experimental/provider.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#132)*
 
  Collection of typeface metadata that should be sufficient for clients to
  perform some kind of selection (likely via human) and request an exact font.
@@ -378,13 +468,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#Provider_GetTypefaceById_Response'>Provider_GetTypefaceById_Response</a></code>
+                <code><a class='link' href='#Provider_GetTypefaceById_Response'>Provider_GetTypefaceById_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -397,13 +487,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#Provider_ListTypefaces_Response'>Provider_ListTypefaces_Response</a></code>
+                <code><a class='link' href='#Provider_ListTypefaces_Response'>Provider_ListTypefaces_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -416,13 +506,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#Provider_GetTypefacesByFamily_Response'>Provider_GetTypefacesByFamily_Response</a></code>
+                <code><a class='link' href='#Provider_GetTypefacesByFamily_Response'>Provider_GetTypefacesByFamily_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts.experimental/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -456,7 +546,7 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#14">MAX_TYPEFACE_RESULTS</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#15">MAX_TYPEFACE_RESULTS</a></td>
             <td>
                     <code>16</code>
                 </td>

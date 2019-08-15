@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud.firestore/index.html#Config'>Config</a></code>
+                <code><a class='link' href='#Config'>Config</a></code>
             </td>
         </tr><tr>
             <td><code>token_manager</code></td>

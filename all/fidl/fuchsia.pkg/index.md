@@ -6,6 +6,45 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
+## PackageResolverAdmin {:#PackageResolverAdmin}
+*Defined in [fuchsia.pkg/admin.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/admin.fidl#9)*
+
+ Configures a package resolver.
+
+### SetExperimentState {:#SetExperimentState}
+
+ Sets an experiment toggle to a specific state (on or off).
+
+ Experiment states are not persisted and apply only while the resolver
+ is running.
+
+ + request `experiment_id` the experiment to enable or disable.
+ + request `state` the state the experimnet should be set to.
+ * error a zx.status value indicating success or failure.
+     Fails with `ZX_ERR_INVALID_ARGS if the experiment is unknown
+     to the resolver.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>experiment_id</code></td>
+            <td>
+                <code><a class='link' href='#ExperimentToggle'>ExperimentToggle</a></code>
+            </td>
+        </tr><tr>
+            <td><code>state</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
 ## PackageCache {:#PackageCache}
 *Defined in [fuchsia.pkg/cache.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/cache.fidl#15)*
 
@@ -42,7 +81,7 @@ Book: /_book.yaml
     <tr>
             <td><code>meta_far_blob</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#BlobInfo'>BlobInfo</a></code>
+                <code><a class='link' href='#BlobInfo'>BlobInfo</a></code>
             </td>
         </tr><tr>
             <td><code>selectors</code></td>
@@ -52,7 +91,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>needed_blobs</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.pkg/index.html#NeededBlobs'>NeededBlobs</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#NeededBlobs'>NeededBlobs</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>dir</code></td>
@@ -92,7 +131,7 @@ Book: /_book.yaml
     <tr>
             <td><code>meta_far_blob_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#BlobId'>BlobId</a></code>
+                <code><a class='link' href='#BlobId'>BlobId</a></code>
             </td>
         </tr><tr>
             <td><code>selectors</code></td>
@@ -143,7 +182,7 @@ Book: /_book.yaml
     <tr>
             <td><code>blobs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.pkg/index.html#BlobInfo'>BlobInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#BlobInfo'>BlobInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -168,12 +207,69 @@ Book: /_book.yaml
     <tr>
             <td><code>blob_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#BlobId'>BlobId</a></code>
+                <code><a class='link' href='#BlobId'>BlobId</a></code>
             </td>
         </tr><tr>
             <td><code>file</code></td>
             <td>
                 <code>request&lt;<a class='link' href='../fuchsia.io/index.html'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/index.html#File'>File</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+## FontResolver {:#FontResolver}
+*Defined in [fuchsia.pkg/font_resolver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/font_resolver.fidl#19)*
+
+ Resolves font packages from a registry.
+
+ This interface is intended to be implemented by package resolver components, and used
+ exclusively by fuchsia.fonts.Provider.
+
+ DEPRECATED. This is an interim solution, and will be revisited when Component Framework v2
+ becomes available and allows non-component packages and easier directory routing.
+
+### Resolve {:#Resolve}
+
+ Populates or updates the cache of a font package, fetching it if it is not present on the
+ local system.
+
+ + request `package_url` The package URL of a font package.
+ + request `directory_request` Request for a directory that will be resolved when the package
+   has been successfully cached. The directory should contain a single file, corresponding to
+   the asset filename. The client should retain the directory handle for as long as needed to
+   prevent the package from being evicted from cache.
+
+ - response `status` Outcome of the request.
+   * `ZX_OK` if the package was successfully opened.
+   * `ZX_ERR_ACCESS_DENIED` if the resolver does not have permission to fetch a package blob.
+   * `ZX_ERR_IO` if there is some other unspecified error during I/O.
+   * `ZX_ERR_NOT_FOUND` if the font package or a package blob does not exist, or is not known
+     to be a font package.
+   * `ZX_ERR_NO_SPACE` if there is no space available to store the package.
+   * `ZX_ERR_UNAVAILABLE` if the resolver is currently unable to fetch a package blob.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>package_url</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>directory_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.io/index.html'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/index.html#Directory'>Directory</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -214,7 +310,7 @@ Book: /_book.yaml
     <tr>
             <td><code>repo</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#RepositoryConfig'>RepositoryConfig</a></code>
+                <code><a class='link' href='#RepositoryConfig'>RepositoryConfig</a></code>
             </td>
         </tr></table>
 
@@ -290,7 +386,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>mirror</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#MirrorConfig'>MirrorConfig</a></code>
+                <code><a class='link' href='#MirrorConfig'>MirrorConfig</a></code>
             </td>
         </tr></table>
 
@@ -360,7 +456,7 @@ Book: /_book.yaml
     <tr>
             <td><code>iterator</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.pkg/index.html#RepositoryIterator'>RepositoryIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#RepositoryIterator'>RepositoryIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -391,7 +487,7 @@ Book: /_book.yaml
     <tr>
             <td><code>repos</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.pkg/index.html#RepositoryConfig'>RepositoryConfig</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RepositoryConfig'>RepositoryConfig</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -440,7 +536,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>update_policy</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#UpdatePolicy'>UpdatePolicy</a></code>
+                <code><a class='link' href='#UpdatePolicy'>UpdatePolicy</a></code>
             </td>
         </tr><tr>
             <td><code>dir</code></td>
@@ -497,7 +593,7 @@ Book: /_book.yaml
     <tr>
             <td><code>retention_index</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#BlobId'>BlobId</a></code>
+                <code><a class='link' href='#BlobId'>BlobId</a></code>
             </td>
         </tr></table>
 
@@ -549,7 +645,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>blob_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#BlobId'>BlobId</a></code>
+                <code><a class='link' href='#BlobId'>BlobId</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -594,6 +690,27 @@ Book: /_book.yaml
 
 
 
+## **ENUMS**
+
+### ExperimentToggle {:#ExperimentToggle}
+Type: <code>uint64</code>
+
+*Defined in [fuchsia.pkg/admin.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/admin.fidl#24)*
+
+ List of known experiment toggles
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>LIGHTBULB</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DOWNLOAD_BLOB</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr></table>
+
 
 
 ## **TABLES**
@@ -622,7 +739,7 @@ Book: /_book.yaml
             <td>2</td>
             <td><code>root_keys</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.pkg/index.html#RepositoryKeyConfig'>RepositoryKeyConfig</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RepositoryKeyConfig'>RepositoryKeyConfig</a>&gt;</code>
             </td>
             <td> A vector of public keys. Required.
 
@@ -632,7 +749,7 @@ Book: /_book.yaml
             <td>3</td>
             <td><code>mirrors</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.pkg/index.html#MirrorConfig'>MirrorConfig</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#MirrorConfig'>MirrorConfig</a>&gt;</code>
             </td>
             <td> The repository mirrors that serve the package contents. Required.
 </td>
@@ -678,7 +795,7 @@ Book: /_book.yaml
             <td>3</td>
             <td><code>blob_key</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg/index.html#RepositoryBlobKey'>RepositoryBlobKey</a></code>
+                <code><a class='link' href='#RepositoryBlobKey'>RepositoryBlobKey</a></code>
             </td>
             <td> The private (or symmetric) key used to decrypt blobs fetched from this mirror. Optional.
 </td>

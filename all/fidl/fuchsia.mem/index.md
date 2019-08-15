@@ -125,7 +125,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>buffer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+                <code><a class='link' href='#Buffer'>Buffer</a></code>
             </td>
             <td> The binary data provided out-of-line in a `Buffer`.
 </td>

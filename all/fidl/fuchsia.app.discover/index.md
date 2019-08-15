@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## DiscoverRegistry {:#DiscoverRegistry}
-*Defined in [fuchsia.app.discover/discover_registry.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#12)*
+*Defined in [fuchsia.app.discover/discover_registry.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#16)*
 
  Interface between sessionmgr and discovermgr to route service connections
  requests that require module scoping.
@@ -22,12 +22,12 @@ Book: /_book.yaml
     <tr>
             <td><code>module</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.app.discover/index.html#ModuleIdentifier'>ModuleIdentifier</a></code>
+                <code><a class='link' href='#ModuleIdentifier'>ModuleIdentifier</a></code>
             </td>
         </tr><tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.app.discover/index.html#ModuleOutputWriter'>ModuleOutputWriter</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ModuleOutputWriter'>ModuleOutputWriter</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -65,7 +65,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.app.discover/index.html#ModuleOutputWriter_Write_Result'>ModuleOutputWriter_Write_Result</a></code>
+                <code><a class='link' href='#ModuleOutputWriter_Write_Result'>ModuleOutputWriter_Write_Result</a></code>
             </td>
         </tr></table>
 
@@ -89,7 +89,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>iterator</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.app.discover/index.html#SuggestionsIterator'>SuggestionsIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#SuggestionsIterator'>SuggestionsIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -110,7 +110,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>interaction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.app.discover/index.html#InteractionType'>InteractionType</a></code>
+                <code><a class='link' href='#InteractionType'>InteractionType</a></code>
             </td>
         </tr></table>
 
@@ -138,7 +138,7 @@ Book: /_book.yaml
     <tr>
             <td><code>suggestions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.app.discover/index.html#Suggestion'>Suggestion</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Suggestion'>Suggestion</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -206,7 +206,7 @@ Type: <code>uint32</code>
 ### ModuleIdentifier {:#ModuleIdentifier}
 
 
-*Defined in [fuchsia.app.discover/discover_registry.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#17)*
+*Defined in [fuchsia.app.discover/discover_registry.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#21)*
 
 
 
@@ -216,7 +216,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>story_id</code></td>
             <td>
-                <code>string[1024]</code>
+                <code>string</code>
             </td>
             <td> The ID of the story to which the module belongs.
 </td>
@@ -270,13 +270,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.app.discover/index.html#ModuleOutputWriter_Write_Response'>ModuleOutputWriter_Write_Response</a></code>
+                <code><a class='link' href='#ModuleOutputWriter_Write_Response'>ModuleOutputWriter_Write_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.app.discover/index.html#OutputError'>OutputError</a></code>
+                <code><a class='link' href='#OutputError'>OutputError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -286,4 +286,19 @@ Type: <code>uint32</code>
 
 
 
+
+## **CONSTANTS**
+
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#8">STORY_ID_MAX_LENGTH</a></td>
+            <td>
+                    <code>1024</code>
+                </td>
+                <td><code>uint32</code></td>
+        </tr>
+    
+</table>
 

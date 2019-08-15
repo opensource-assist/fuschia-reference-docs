@@ -20,27 +20,27 @@ Book: /_book.yaml
     <tr>
             <td><code>keyboard_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#KeyboardType'>KeyboardType</a></code>
+                <code><a class='link' href='#KeyboardType'>KeyboardType</a></code>
             </td>
         </tr><tr>
             <td><code>action</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#InputMethodAction'>InputMethodAction</a></code>
+                <code><a class='link' href='#InputMethodAction'>InputMethodAction</a></code>
             </td>
         </tr><tr>
             <td><code>initial_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#TextInputState'>TextInputState</a></code>
+                <code><a class='link' href='#TextInputState'>TextInputState</a></code>
             </td>
         </tr><tr>
             <td><code>client</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#InputMethodEditorClient'>InputMethodEditorClient</a></code>
+                <code><a class='link' href='#InputMethodEditorClient'>InputMethodEditorClient</a></code>
             </td>
         </tr><tr>
             <td><code>editor</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ui.input/index.html#InputMethodEditor'>InputMethodEditor</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#InputMethodEditor'>InputMethodEditor</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -75,7 +75,7 @@ Book: /_book.yaml
     <tr>
             <td><code>event</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#InputEvent'>InputEvent</a></code>
+                <code><a class='link' href='#InputEvent'>InputEvent</a></code>
             </td>
         </tr></table>
 
@@ -144,12 +144,12 @@ Book: /_book.yaml
     <tr>
             <td><code>descriptor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#DeviceDescriptor'>DeviceDescriptor</a></code>
+                <code><a class='link' href='#DeviceDescriptor'>DeviceDescriptor</a></code>
             </td>
         </tr><tr>
             <td><code>input_device</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ui.input/index.html#InputDevice'>InputDevice</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#InputDevice'>InputDevice</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -169,7 +169,7 @@ Book: /_book.yaml
     <tr>
             <td><code>report</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#InputReport'>InputReport</a></code>
+                <code><a class='link' href='#InputReport'>InputReport</a></code>
             </td>
         </tr></table>
 
@@ -189,7 +189,7 @@ Book: /_book.yaml
     <tr>
             <td><code>keyboard_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#KeyboardType'>KeyboardType</a></code>
+                <code><a class='link' href='#KeyboardType'>KeyboardType</a></code>
             </td>
         </tr></table>
 
@@ -204,7 +204,7 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#TextInputState'>TextInputState</a></code>
+                <code><a class='link' href='#TextInputState'>TextInputState</a></code>
             </td>
         </tr></table>
 
@@ -219,7 +219,7 @@ Book: /_book.yaml
     <tr>
             <td><code>event</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#InputEvent'>InputEvent</a></code>
+                <code><a class='link' href='#InputEvent'>InputEvent</a></code>
             </td>
         </tr></table>
 
@@ -259,12 +259,12 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#TextInputState'>TextInputState</a></code>
+                <code><a class='link' href='#TextInputState'>TextInputState</a></code>
             </td>
         </tr><tr>
             <td><code>event</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#InputEvent'>InputEvent</a>?</code>
+                <code><a class='link' href='#InputEvent'>InputEvent</a>?</code>
             </td>
         </tr></table>
 
@@ -279,7 +279,7 @@ Book: /_book.yaml
     <tr>
             <td><code>action</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#InputMethodAction'>InputMethodAction</a></code>
+                <code><a class='link' href='#InputMethodAction'>InputMethodAction</a></code>
             </td>
         </tr></table>
 
@@ -307,7 +307,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>keyboard_event</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#KeyboardEvent'>KeyboardEvent</a></code>
+                <code><a class='link' href='#KeyboardEvent'>KeyboardEvent</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -332,7 +332,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>pointer_event</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#PointerEvent'>PointerEvent</a></code>
+                <code><a class='link' href='#PointerEvent'>PointerEvent</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -427,7 +427,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>phase</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#KeyboardEventPhase'>KeyboardEventPhase</a></code>
+                <code><a class='link' href='#KeyboardEventPhase'>KeyboardEventPhase</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -503,14 +503,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#PointerEventType'>PointerEventType</a></code>
+                <code><a class='link' href='#PointerEventType'>PointerEventType</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>phase</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#PointerEventPhase'>PointerEventPhase</a></code>
+                <code><a class='link' href='#PointerEventPhase'>PointerEventPhase</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -535,14 +535,14 @@ Book: /_book.yaml
                 <code>float32</code>
             </td>
             <td></td>
-            <td>0.0</td>
+            <td>0</td>
         </tr><tr>
             <td><code>radius_minor</code></td>
             <td>
                 <code>float32</code>
             </td>
             <td></td>
-            <td>0.0</td>
+            <td>0</td>
         </tr><tr>
             <td><code>buttons</code></td>
             <td>
@@ -644,7 +644,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>range</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -658,10 +658,10 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>scale</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#AxisScale'>AxisScale</a></code>
+                <code><a class='link' href='#AxisScale'>AxisScale</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='../fuchsia.ui.input/index.html#LINEAR'>LINEAR</a></td>
+            <td><a class='link' href='#AxisScale.LINEAR'>AxisScale.LINEAR</a></td>
         </tr>
 </table>
 
@@ -676,7 +676,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>range</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#RangeF'>RangeF</a></code>
+                <code><a class='link' href='#RangeF'>RangeF</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -686,14 +686,14 @@ Book: /_book.yaml
                 <code>float32</code>
             </td>
             <td></td>
-            <td>1.0</td>
+            <td>1</td>
         </tr><tr>
             <td><code>scale</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#AxisScale'>AxisScale</a></code>
+                <code><a class='link' href='#AxisScale'>AxisScale</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='../fuchsia.ui.input/index.html#LINEAR'>LINEAR</a></td>
+            <td><a class='link' href='#AxisScale.LINEAR'>AxisScale.LINEAR</a></td>
         </tr>
 </table>
 
@@ -762,28 +762,28 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>rel_x</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#Axis'>Axis</a></code>
+                <code><a class='link' href='#Axis'>Axis</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>rel_y</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#Axis'>Axis</a></code>
+                <code><a class='link' href='#Axis'>Axis</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>vscroll</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#Axis'>Axis</a>?</code>
+                <code><a class='link' href='#Axis'>Axis</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>hscroll</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#Axis'>Axis</a>?</code>
+                <code><a class='link' href='#Axis'>Axis</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -854,21 +854,21 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>x</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#Axis'>Axis</a></code>
+                <code><a class='link' href='#Axis'>Axis</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>y</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#Axis'>Axis</a></code>
+                <code><a class='link' href='#Axis'>Axis</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>pressure</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#Axis'>Axis</a>?</code>
+                <code><a class='link' href='#Axis'>Axis</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -960,14 +960,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>x</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#Axis'>Axis</a></code>
+                <code><a class='link' href='#Axis'>Axis</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>y</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#Axis'>Axis</a></code>
+                <code><a class='link' href='#Axis'>Axis</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1038,7 +1038,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>touches</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ui.input/index.html#Touch'>Touch</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Touch'>Touch</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1056,14 +1056,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#SensorType'>SensorType</a></code>
+                <code><a class='link' href='#SensorType'>SensorType</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>loc</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#SensorLocation'>SensorLocation</a></code>
+                <code><a class='link' href='#SensorLocation'>SensorLocation</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1197,49 +1197,49 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>device_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#DeviceInfo'>DeviceInfo</a>?</code>
+                <code><a class='link' href='#DeviceInfo'>DeviceInfo</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>keyboard</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#KeyboardDescriptor'>KeyboardDescriptor</a>?</code>
+                <code><a class='link' href='#KeyboardDescriptor'>KeyboardDescriptor</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>media_buttons</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#MediaButtonsDescriptor'>MediaButtonsDescriptor</a>?</code>
+                <code><a class='link' href='#MediaButtonsDescriptor'>MediaButtonsDescriptor</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>mouse</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#MouseDescriptor'>MouseDescriptor</a>?</code>
+                <code><a class='link' href='#MouseDescriptor'>MouseDescriptor</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>stylus</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#StylusDescriptor'>StylusDescriptor</a>?</code>
+                <code><a class='link' href='#StylusDescriptor'>StylusDescriptor</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>touchscreen</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#TouchscreenDescriptor'>TouchscreenDescriptor</a>?</code>
+                <code><a class='link' href='#TouchscreenDescriptor'>TouchscreenDescriptor</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>sensor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#SensorDescriptor'>SensorDescriptor</a>?</code>
+                <code><a class='link' href='#SensorDescriptor'>SensorDescriptor</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1264,42 +1264,42 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>keyboard</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#KeyboardReport'>KeyboardReport</a>?</code>
+                <code><a class='link' href='#KeyboardReport'>KeyboardReport</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>media_buttons</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#MediaButtonsReport'>MediaButtonsReport</a>?</code>
+                <code><a class='link' href='#MediaButtonsReport'>MediaButtonsReport</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>mouse</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#MouseReport'>MouseReport</a>?</code>
+                <code><a class='link' href='#MouseReport'>MouseReport</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>stylus</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#StylusReport'>StylusReport</a>?</code>
+                <code><a class='link' href='#StylusReport'>StylusReport</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>touchscreen</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#TouchscreenReport'>TouchscreenReport</a>?</code>
+                <code><a class='link' href='#TouchscreenReport'>TouchscreenReport</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>sensor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#SensorReport'>SensorReport</a>?</code>
+                <code><a class='link' href='#SensorReport'>SensorReport</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1390,7 +1390,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>affinity</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#TextAffinity'>TextAffinity</a></code>
+                <code><a class='link' href='#TextAffinity'>TextAffinity</a></code>
             </td>
             <td> If the text range is collapsed and has more than one visual location
  (e.g., occurs at a line break), which of the two locations to use when
@@ -1428,7 +1428,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>selection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#TextSelection'>TextSelection</a></code>
+                <code><a class='link' href='#TextSelection'>TextSelection</a></code>
             </td>
             <td> The range of text that is currently selected.
 </td>
@@ -1436,7 +1436,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>composing</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#TextRange'>TextRange</a></code>
+                <code><a class='link' href='#TextRange'>TextRange</a></code>
             </td>
             <td> The range of text that is still being composed.
 </td>
@@ -1738,7 +1738,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>send_keyboard_input</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#SendKeyboardInputCmd'>SendKeyboardInputCmd</a></code>
+                <code><a class='link' href='#SendKeyboardInputCmd'>SendKeyboardInputCmd</a></code>
             </td>
             <td> Commands for conveying input events to a `Session`.
  Structs defined in input_events.fidl.
@@ -1746,20 +1746,20 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>send_pointer_input</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#SendPointerInputCmd'>SendPointerInputCmd</a></code>
+                <code><a class='link' href='#SendPointerInputCmd'>SendPointerInputCmd</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>set_hard_keyboard_delivery</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#SetHardKeyboardDeliveryCmd'>SetHardKeyboardDeliveryCmd</a></code>
+                <code><a class='link' href='#SetHardKeyboardDeliveryCmd'>SetHardKeyboardDeliveryCmd</a></code>
             </td>
             <td> Command to enable/disable delivery of hard keyboard events.
 </td>
         </tr><tr>
             <td><code>set_parallel_dispatch</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#SetParallelDispatchCmd'>SetParallelDispatchCmd</a></code>
+                <code><a class='link' href='#SetParallelDispatchCmd'>SetParallelDispatchCmd</a></code>
             </td>
             <td> Command to enable/disable parallel delivery of input events.
 </td>
@@ -1774,19 +1774,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>pointer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#PointerEvent'>PointerEvent</a></code>
+                <code><a class='link' href='#PointerEvent'>PointerEvent</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>keyboard</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#KeyboardEvent'>KeyboardEvent</a></code>
+                <code><a class='link' href='#KeyboardEvent'>KeyboardEvent</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>focus</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input/index.html#FocusEvent'>FocusEvent</a></code>
+                <code><a class='link' href='#FocusEvent'>FocusEvent</a></code>
             </td>
             <td></td>
         </tr></table>

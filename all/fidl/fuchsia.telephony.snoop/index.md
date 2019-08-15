@@ -20,7 +20,7 @@ Book: /_book.yaml
     <tr>
             <td><code>msg</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.snoop/index.html#Message'>Message</a></code>
+                <code><a class='link' href='#Message'>Message</a></code>
             </td>
         </tr></table>
 
@@ -48,7 +48,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>direction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.snoop/index.html#Direction'>Direction</a></code>
+                <code><a class='link' href='#Direction'>Direction</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -105,7 +105,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>qmi_message</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.snoop/index.html#QmiMessage'>QmiMessage</a></code>
+                <code><a class='link' href='#QmiMessage'>QmiMessage</a></code>
             </td>
             <td></td>
         </tr></table>

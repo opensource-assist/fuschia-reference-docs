@@ -30,7 +30,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.block/index.html#BlockInfo'>BlockInfo</a>?</code>
+                <code><a class='link' href='#BlockInfo'>BlockInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -59,7 +59,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>stats</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.block/index.html#BlockStats'>BlockStats</a>?</code>
+                <code><a class='link' href='#BlockStats'>BlockStats</a>?</code>
             </td>
         </tr></table>
 
@@ -112,7 +112,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>vmoid</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.block/index.html#VmoID'>VmoID</a>?</code>
+                <code><a class='link' href='#VmoID'>VmoID</a>?</code>
             </td>
         </tr></table>
 

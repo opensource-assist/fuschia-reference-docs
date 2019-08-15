@@ -73,7 +73,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>mem_stats</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.virtualization/index.html#MemStat'>MemStat</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#MemStat'>MemStat</a>&gt;?</code>
             </td>
         </tr></table>
 
@@ -126,7 +126,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>env</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualization/index.html#Realm'>Realm</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Realm'>Realm</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -150,7 +150,7 @@ Book: /_book.yaml
     <tr>
             <td><code>env_infos</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.virtualization/index.html#EnvironmentInfo'>EnvironmentInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#EnvironmentInfo'>EnvironmentInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -172,7 +172,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>env</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualization/index.html#Realm'>Realm</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Realm'>Realm</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -221,12 +221,12 @@ Book: /_book.yaml
     <tr>
             <td><code>launch_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization/index.html#LaunchInfo'>LaunchInfo</a></code>
+                <code><a class='link' href='#LaunchInfo'>LaunchInfo</a></code>
             </td>
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualization/index.html#Guest'>Guest</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Guest'>Guest</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -257,7 +257,7 @@ Book: /_book.yaml
     <tr>
             <td><code>instances</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.virtualization/index.html#InstanceInfo'>InstanceInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#InstanceInfo'>InstanceInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -278,7 +278,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualization/index.html#Guest'>Guest</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Guest'>Guest</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -300,7 +300,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualization/index.html#BalloonController'>BalloonController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#BalloonController'>BalloonController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -316,7 +316,7 @@ Book: /_book.yaml
     <tr>
             <td><code>endpoint</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualization/index.html#HostVsockEndpoint'>HostVsockEndpoint</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#HostVsockEndpoint'>HostVsockEndpoint</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -493,12 +493,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>connector</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization/index.html#HostVsockConnector'>HostVsockConnector</a></code>
+                <code><a class='link' href='#HostVsockConnector'>HostVsockConnector</a></code>
             </td>
         </tr><tr>
             <td><code>acceptor</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualization/index.html#GuestVsockAcceptor'>GuestVsockAcceptor</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#GuestVsockAcceptor'>GuestVsockAcceptor</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -555,7 +555,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>acceptor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization/index.html#HostVsockAcceptor'>HostVsockAcceptor</a></code>
+                <code><a class='link' href='#HostVsockAcceptor'>HostVsockAcceptor</a></code>
             </td>
         </tr></table>
 
@@ -663,7 +663,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>instances</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.virtualization/index.html#InstanceInfo'>InstanceInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#InstanceInfo'>InstanceInfo</a>&gt;</code>
             </td>
             <td> List of guests running in this environment.
 </td>
@@ -720,7 +720,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization/index.html#BlockMode'>BlockMode</a></code>
+                <code><a class='link' href='#BlockMode'>BlockMode</a></code>
             </td>
             <td> The access mode for the block backing file.
 </td>
@@ -728,7 +728,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization/index.html#BlockFormat'>BlockFormat</a></code>
+                <code><a class='link' href='#BlockFormat'>BlockFormat</a></code>
             </td>
             <td> The data format of the backing file.
 </td>
@@ -767,7 +767,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>dispatcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization/index.html#WaylandDispatcher'>WaylandDispatcher</a></code>
+                <code><a class='link' href='#WaylandDispatcher'>WaylandDispatcher</a></code>
             </td>
             <td> The dispatcher for new virtio_wl connections.
 </td>
@@ -844,7 +844,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>block_devices</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.virtualization/index.html#BlockDevice'>BlockDevice</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#BlockDevice'>BlockDevice</a>&gt;?</code>
             </td>
             <td> A set of block devices to add to the virtual machine.
 </td>
@@ -852,7 +852,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>wayland_device</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization/index.html#WaylandDevice'>WaylandDevice</a>?</code>
+                <code><a class='link' href='#WaylandDevice'>WaylandDevice</a>?</code>
             </td>
             <td> An optional virtio_wl device.
 
@@ -862,7 +862,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>magma_device</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization/index.html#MagmaDevice'>MagmaDevice</a>?</code>
+                <code><a class='link' href='#MagmaDevice'>MagmaDevice</a>?</code>
             </td>
             <td> An optional virtio_magma device.
 

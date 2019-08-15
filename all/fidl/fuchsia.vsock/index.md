@@ -87,7 +87,7 @@ Book: /_book.yaml
     <tr>
             <td><code>con</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.vsock/index.html#ConnectionTransport'>ConnectionTransport</a>?</code>
+                <code><a class='link' href='#ConnectionTransport'>ConnectionTransport</a>?</code>
             </td>
         </tr></table>
 
@@ -119,7 +119,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>con</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.vsock/index.html#ConnectionTransport'>ConnectionTransport</a></code>
+                <code><a class='link' href='#ConnectionTransport'>ConnectionTransport</a></code>
             </td>
         </tr></table>
 
@@ -155,7 +155,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>acceptor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.vsock/index.html#Acceptor'>Acceptor</a></code>
+                <code><a class='link' href='#Acceptor'>Acceptor</a></code>
             </td>
         </tr></table>
 
@@ -195,7 +195,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>con</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.vsock/index.html#Connection'>Connection</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Connection'>Connection</a>&gt;</code>
             </td>
             <td> `Connection` interface that is retained by a vsock service that can be
  used to manipulate the state of a connection or perform more complex

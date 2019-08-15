@@ -14,7 +14,7 @@ Book: /_book.yaml
 ### Publish {:#Publish}
 
  Publish a bt-hci device using the provided `settings`. Each HciEmulator instance can only
- manage a single bt-hci device. Returns Emulator.HCI_ALREADY_PUBLISHED if the device has
+ manage a single bt-hci device. Returns Emulator.`HCI_ALREADY_PUBLISHED` if the device has
  already been published.
 
 #### Request
@@ -23,7 +23,7 @@ Book: /_book.yaml
     <tr>
             <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#EmulatorSettings'>EmulatorSettings</a></code>
+                <code><a class='link' href='#EmulatorSettings'>EmulatorSettings</a></code>
             </td>
         </tr></table>
 
@@ -34,7 +34,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#HciEmulator_Publish_Result'>HciEmulator_Publish_Result</a></code>
+                <code><a class='link' href='#HciEmulator_Publish_Result'>HciEmulator_Publish_Result</a></code>
             </td>
         </tr></table>
 
@@ -50,7 +50,7 @@ Book: /_book.yaml
     <tr>
             <td><code>peer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#FakePeer'>FakePeer</a></code>
+                <code><a class='link' href='#FakePeer'>FakePeer</a></code>
             </td>
         </tr></table>
 
@@ -61,13 +61,13 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#HciEmulator_AddPeer_Result'>HciEmulator_AddPeer_Result</a></code>
+                <code><a class='link' href='#HciEmulator_AddPeer_Result'>HciEmulator_AddPeer_Result</a></code>
             </td>
         </tr></table>
 
 ### RemovePeer {:#RemovePeer}
 
- Remove a previously inserted peer. Returns EmulatorPeerError.NOT_FOUND if `id` is not
+ Remove a previously inserted peer. Returns EmulatorPeerError.`NOT_FOUND` if `id` is not
  recognized.
 
 #### Request
@@ -87,15 +87,15 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#HciEmulator_RemovePeer_Result'>HciEmulator_RemovePeer_Result</a></code>
+                <code><a class='link' href='#HciEmulator_RemovePeer_Result'>HciEmulator_RemovePeer_Result</a></code>
             </td>
         </tr></table>
 
 ### WatchLeScanState {:#WatchLeScanState}
 
  Returns the latest state of the link layer LE scan procedure. This method returns when there
- is a state change since the last invocation of this method by this client (see [hanging get
- pattern](//docs/development/api/fidl.md#delay-responses-using-hanging-gets))
+ is a state change since the last invocation of this method by this client
+ (see [hanging get pattern](/docs/development/api/fidl.md#delay_responses_using_hanging_gets)).
 
 #### Request
 <table>
@@ -109,7 +109,7 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#LeScanState'>LeScanState</a></code>
+                <code><a class='link' href='#LeScanState'>LeScanState</a></code>
             </td>
         </tr></table>
 
@@ -577,13 +577,13 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Address'>Address</a></code>
             </td>
-            <td> The LE identity address and/or BD_ADDR of the peer. This field is mandatory.
+            <td> The LE identity address and/or `BD_ADDR` of the peer. This field is mandatory.
 </td>
         </tr><tr>
             <td>2</td>
             <td><code>le</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#LeParameters'>LeParameters</a></code>
+                <code><a class='link' href='#LeParameters'>LeParameters</a></code>
             </td>
             <td> Parameters used by this peer on the Low Energy transport. This field is optional. The peer
  will not be active on the LE transport if this field is not present. However, the peer must
@@ -593,7 +593,7 @@ Type: <code>uint8</code>
             <td>3</td>
             <td><code>bredr</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#BrEdrParameters'>BrEdrParameters</a></code>
+                <code><a class='link' href='#BrEdrParameters'>BrEdrParameters</a></code>
             </td>
             <td> Parameters used by this peer on the BR/EDR transport. This field is optional. The peer
  will not be active on the BR/EDR transport if this field is not present. However, the peer
@@ -624,7 +624,7 @@ Type: <code>uint8</code>
             <td>2</td>
             <td><code>advertisement</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#AdvertisingData'>AdvertisingData</a></code>
+                <code><a class='link' href='#AdvertisingData'>AdvertisingData</a></code>
             </td>
             <td> The advertising data contents. If not present, the advertising data sent by this peer will
  be empty.
@@ -633,7 +633,7 @@ Type: <code>uint8</code>
             <td>3</td>
             <td><code>scan_response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#AdvertisingData'>AdvertisingData</a></code>
+                <code><a class='link' href='#AdvertisingData'>AdvertisingData</a></code>
             </td>
             <td> The scan response data contents. When present, the fake controller will generate scannable
  advertising packets and scan response events.
@@ -708,7 +708,7 @@ Type: <code>uint8</code>
             <td>6</td>
             <td><code>own_address_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#LeAddressType'>LeAddressType</a></code>
+                <code><a class='link' href='#LeAddressType'>LeAddressType</a></code>
             </td>
             <td> The type of local device address used.
 </td>
@@ -730,15 +730,15 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Address'>Address</a></code>
             </td>
-            <td> The BD_ADDR (BR/EDR) or LE Public Device Address. Defaults to "00:00:00:00:00:00".
+            <td> The `BD_ADDR` (BR/EDR) or LE Public Device Address. Defaults to "00:00:00:00:00:00".
 </td>
         </tr><tr>
             <td>2</td>
             <td><code>hci_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#HciConfig'>HciConfig</a></code>
+                <code><a class='link' href='#HciConfig'>HciConfig</a></code>
             </td>
-            <td> Supported HCI command configuration. Defaults to "DUAL_MODE".
+            <td> Supported HCI command configuration. Defaults to "`DUAL_MODE`".
 </td>
         </tr><tr>
             <td>3</td>
@@ -752,18 +752,18 @@ Type: <code>uint8</code>
             <td>4</td>
             <td><code>acl_buffer_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#AclBufferSettings'>AclBufferSettings</a></code>
+                <code><a class='link' href='#AclBufferSettings'>AclBufferSettings</a></code>
             </td>
             <td> The ACL-U data buffer settings. Defaults to
     data_packet_length: 1024
     total_num_data_packets: 5
- IF `hci_config` is set to DUAL_MODE. Defaults to null otherwise.
+ IF `hci_config` is set to `DUAL_MODE`. Defaults to null otherwise.
 </td>
         </tr><tr>
             <td>5</td>
             <td><code>le_acl_buffer_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#AclBufferSettings'>AclBufferSettings</a></code>
+                <code><a class='link' href='#AclBufferSettings'>AclBufferSettings</a></code>
             </td>
             <td> The LE-U ACL data buffer settings. Defaults to
     data_packet_length: 251
@@ -783,13 +783,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#HciEmulator_Publish_Response'>HciEmulator_Publish_Response</a></code>
+                <code><a class='link' href='#HciEmulator_Publish_Response'>HciEmulator_Publish_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#EmulatorError'>EmulatorError</a></code>
+                <code><a class='link' href='#EmulatorError'>EmulatorError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -802,13 +802,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#HciEmulator_AddPeer_Response'>HciEmulator_AddPeer_Response</a></code>
+                <code><a class='link' href='#HciEmulator_AddPeer_Response'>HciEmulator_AddPeer_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#EmulatorPeerError'>EmulatorPeerError</a></code>
+                <code><a class='link' href='#EmulatorPeerError'>EmulatorPeerError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -821,13 +821,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#HciEmulator_RemovePeer_Response'>HciEmulator_RemovePeer_Response</a></code>
+                <code><a class='link' href='#HciEmulator_RemovePeer_Response'>HciEmulator_RemovePeer_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.test/index.html#EmulatorPeerError'>EmulatorPeerError</a></code>
+                <code><a class='link' href='#EmulatorPeerError'>EmulatorPeerError</a></code>
             </td>
             <td></td>
         </tr></table>

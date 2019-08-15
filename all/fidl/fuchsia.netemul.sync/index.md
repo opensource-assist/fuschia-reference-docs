@@ -23,7 +23,7 @@ Book: /_book.yaml
     <tr>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.sync/index.html#Event'>Event</a></code>
+                <code><a class='link' href='#Event'>Event</a></code>
             </td>
         </tr></table>
 
@@ -42,7 +42,7 @@ Book: /_book.yaml
     <tr>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.sync/index.html#Event'>Event</a></code>
+                <code><a class='link' href='#Event'>Event</a></code>
             </td>
         </tr></table>
 
@@ -64,7 +64,7 @@ Book: /_book.yaml
     <tr>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.sync/index.html#Event'>Event</a></code>
+                <code><a class='link' href='#Event'>Event</a></code>
             </td>
         </tr></table>
 
@@ -172,7 +172,7 @@ Book: /_book.yaml
     <tr>
             <td><code>data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.netemul.sync/index.html#Event'>Event</a></code>
+                <code><a class='link' href='#Event'>Event</a></code>
             </td>
         </tr><tr>
             <td><code>timeout</code></td>
@@ -220,7 +220,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>bus</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.netemul.sync/index.html#Bus'>Bus</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Bus'>Bus</a>&gt;</code>
             </td>
         </tr></table>
 

@@ -94,7 +94,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.term/index.html#Pty'>Pty</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Pty'>Pty</a>&gt;</code>
             </td>
         </tr></table>
 

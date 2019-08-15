@@ -35,7 +35,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>peers</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.overnet/index.html#Peer'>Peer</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Peer'>Peer</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -48,12 +48,12 @@ Book: /_book.yaml
     <tr>
             <td><code>service_name</code></td>
             <td>
-                <code>string</code>
+                <code>string[255]</code>
             </td>
         </tr><tr>
             <td><code>provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet/index.html#ServiceProvider'>ServiceProvider</a></code>
+                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a></code>
             </td>
         </tr></table>
 
@@ -73,7 +73,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>service_name</code></td>
             <td>
-                <code>string</code>
+                <code>string[255]</code>
             </td>
         </tr><tr>
             <td><code>chan</code></td>
@@ -85,7 +85,7 @@ Book: /_book.yaml
 
 
 ## ServiceProvider {:#ServiceProvider}
-*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#19)*
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#21)*
 
 
 ### ConnectToService {:#ConnectToService}
@@ -108,7 +108,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Peer {:#Peer}
-*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#23)*
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#25)*
 
 
 

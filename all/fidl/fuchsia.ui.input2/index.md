@@ -27,7 +27,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#KeyListener'>KeyListener</a></code>
+                <code><a class='link' href='#KeyListener'>KeyListener</a></code>
             </td>
         </tr></table>
 
@@ -52,7 +52,7 @@ Book: /_book.yaml
     <tr>
             <td><code>event</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#KeyEvent'>KeyEvent</a></code>
+                <code><a class='link' href='#KeyEvent'>KeyEvent</a></code>
             </td>
         </tr></table>
 
@@ -63,7 +63,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -582,7 +582,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>key</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#Key'>Key</a></code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
             <td> Physical key being pressed.
 
@@ -592,7 +592,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>phase</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#KeyEventPhase'>KeyEventPhase</a></code>
+                <code><a class='link' href='#KeyEventPhase'>KeyEventPhase</a></code>
             </td>
             <td> Phase of input.
 </td>
@@ -600,7 +600,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>modifiers</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.input2/index.html#Modifiers'>Modifiers</a></code>
+                <code><a class='link' href='#Modifiers'>Modifiers</a></code>
             </td>
             <td> Modifier keys being held.
 </td>
@@ -621,77 +621,77 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td>SHIFT</td>
             <td>1</td>
-            <td> Applies when either the LEFT_SHIFT or RIGHT_SHIFT modifier is pressed.
+            <td> Applies when either the `LEFT_SHIFT` or `RIGHT_SHIFT` modifier is pressed.
 </td>
         </tr><tr>
             <td>LEFT_SHIFT</td>
             <td>2</td>
-            <td> Applies when the LEFT_SHIFT modifier is pressed.
+            <td> Applies when the `LEFT_SHIFT` modifier is pressed.
 </td>
         </tr><tr>
             <td>RIGHT_SHIFT</td>
             <td>4</td>
-            <td> Applies when the RIGHT_SHIFT modifier is pressed.
+            <td> Applies when the `RIGHT_SHIFT` modifier is pressed.
 </td>
         </tr><tr>
             <td>CONTROL</td>
             <td>8</td>
-            <td> Applies when either the LEFT_CONTROL or RIGHT_CONTROL modifier is pressed.
+            <td> Applies when either the `LEFT_CONTROL` or `RIGHT_CONTROL` modifier is pressed.
 </td>
         </tr><tr>
             <td>LEFT_CONTROL</td>
             <td>16</td>
-            <td> Applies when the LEFT_CONTROL modifier is pressed.
+            <td> Applies when the `LEFT_CONTROL` modifier is pressed.
 </td>
         </tr><tr>
             <td>RIGHT_CONTROL</td>
             <td>32</td>
-            <td> Applies when the RIGHT_CONTROL modifier is pressed.
+            <td> Applies when the `RIGHT_CONTROL` modifier is pressed.
 </td>
         </tr><tr>
             <td>ALT</td>
             <td>64</td>
-            <td> Applies when either the LEFT_ALT or RIGHT_ALT modifier is pressed.
+            <td> Applies when either the `LEFT_ALT` or `RIGHT_ALT` modifier is pressed.
 </td>
         </tr><tr>
             <td>LEFT_ALT</td>
             <td>128</td>
-            <td> Applies when the LEFT_ALT modifier is pressed.
+            <td> Applies when the `LEFT_ALT` modifier is pressed.
 </td>
         </tr><tr>
             <td>RIGHT_ALT</td>
             <td>256</td>
-            <td> Applies when the RIGHT_ALT modifier is pressed.
+            <td> Applies when the `RIGHT_ALT` modifier is pressed.
 </td>
         </tr><tr>
             <td>META</td>
             <td>512</td>
-            <td> Applies when either the LEFT_META or RIGHT_META modifier is pressed.
+            <td> Applies when either the `LEFT_META` or `RIGHT_META` modifier is pressed.
 </td>
         </tr><tr>
             <td>LEFT_META</td>
             <td>1024</td>
-            <td> Applies when the LEFT_META modifier is pressed.
+            <td> Applies when the `LEFT_META` modifier is pressed.
 </td>
         </tr><tr>
             <td>RIGHT_META</td>
             <td>2048</td>
-            <td> Applies when the RIGHT_META modifier is pressed.
+            <td> Applies when the `RIGHT_META` modifier is pressed.
 </td>
         </tr><tr>
             <td>CAPS_LOCK</td>
             <td>4096</td>
-            <td> Applies when the CAPS_LOCK modifier is locked.
+            <td> Applies when the `CAPS_LOCK` modifier is locked.
 </td>
         </tr><tr>
             <td>NUM_LOCK</td>
             <td>8192</td>
-            <td> Applies when the NUM_LOCK modifier is locked.
+            <td> Applies when the `NUM_LOCK` modifier is locked.
 </td>
         </tr><tr>
             <td>SCROLL_LOCK</td>
             <td>16384</td>
-            <td> Applies when the SCROLL_LOCK modifier is locked.
+            <td> Applies when the `SCROLL_LOCK` modifier is locked.
 </td>
         </tr></table>
 

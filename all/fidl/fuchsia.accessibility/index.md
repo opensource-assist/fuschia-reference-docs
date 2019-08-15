@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## SettingsManager {:#SettingsManager}
-*Defined in [fuchsia.accessibility/settings.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility/settings.fidl#80)*
+*Defined in [fuchsia.accessibility/settings.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility/settings.fidl#75)*
 
  SettingsManager will be implemented by Accessibility Manager.
  The accessibility settings manager is an interface that allows other services to:
@@ -20,6 +20,7 @@ Book: /_book.yaml
 
 ### RegisterSettingProvider {:#RegisterSettingProvider}
 
+ Register Accessibility settings provider to make modification to accessibility settings.
 
 #### Request
 <table>
@@ -27,7 +28,7 @@ Book: /_book.yaml
     <tr>
             <td><code>settings_provider_request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.accessibility/index.html#SettingsProvider'>SettingsProvider</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#SettingsProvider'>SettingsProvider</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -35,6 +36,9 @@ Book: /_book.yaml
 
 ### Watch {:#Watch}
 
+ Registers a watcher to observe changes in accessibility settings.
+ When a watcher is registered by calling Watch(), SettingsManager will send all the
+ Settings as part of registration.
 
 #### Request
 <table>
@@ -42,20 +46,23 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.accessibility/index.html#SettingsWatcher'>SettingsWatcher</a></code>
+                <code><a class='link' href='#SettingsWatcher'>SettingsWatcher</a></code>
             </td>
         </tr></table>
 
 
 
 ## SettingsProvider {:#SettingsProvider}
-*Defined in [fuchsia.accessibility/settings.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility/settings.fidl#92)*
+*Defined in [fuchsia.accessibility/settings.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility/settings.fidl#87)*
 
  Interface to update Accessibility Settings. Various Accessibility Settings can be
  modified individually.
 
 ### SetMagnificationEnabled {:#SetMagnificationEnabled}
 
+ Enables or disables magnification depending on `magnification_enabled`.
+ When `magnification_enabled` is different from the existing setting,
+ the zoom factor is reset to 1.0.
 
 #### Request
 <table>
@@ -74,12 +81,15 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.accessibility/index.html#SettingsManagerStatus'>SettingsManagerStatus</a></code>
+                <code><a class='link' href='#SettingsManagerStatus'>SettingsManagerStatus</a></code>
             </td>
         </tr></table>
 
 ### SetMagnificationZoomFactor {:#SetMagnificationZoomFactor}
 
+ Sets value of zoom factor, provided that magnification is enabled.
+ Zoom factor must be > 1.0.
+ Returns ERROR if zoom is disabled or if magnification_zoom_factor < 1.0.
 
 #### Request
 <table>
@@ -98,12 +108,13 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.accessibility/index.html#SettingsManagerStatus'>SettingsManagerStatus</a></code>
+                <code><a class='link' href='#SettingsManagerStatus'>SettingsManagerStatus</a></code>
             </td>
         </tr></table>
 
 ### SetScreenReaderEnabled {:#SetScreenReaderEnabled}
 
+ Sets value of screen_reader_enabled, and returns OK.
 
 #### Request
 <table>
@@ -122,12 +133,13 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.accessibility/index.html#SettingsManagerStatus'>SettingsManagerStatus</a></code>
+                <code><a class='link' href='#SettingsManagerStatus'>SettingsManagerStatus</a></code>
             </td>
         </tr></table>
 
 ### SetColorInversionEnabled {:#SetColorInversionEnabled}
 
+ Sets value of color_inversion_enabled, and returns OK.
 
 #### Request
 <table>
@@ -146,12 +158,13 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.accessibility/index.html#SettingsManagerStatus'>SettingsManagerStatus</a></code>
+                <code><a class='link' href='#SettingsManagerStatus'>SettingsManagerStatus</a></code>
             </td>
         </tr></table>
 
 ### SetColorCorrection {:#SetColorCorrection}
 
+ Sets value of color_correction, and returns OK.
 
 #### Request
 <table>
@@ -159,7 +172,7 @@ Book: /_book.yaml
     <tr>
             <td><code>color_correction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.accessibility/index.html#ColorCorrection'>ColorCorrection</a></code>
+                <code><a class='link' href='#ColorCorrection'>ColorCorrection</a></code>
             </td>
         </tr></table>
 
@@ -170,18 +183,19 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.accessibility/index.html#SettingsManagerStatus'>SettingsManagerStatus</a></code>
+                <code><a class='link' href='#SettingsManagerStatus'>SettingsManagerStatus</a></code>
             </td>
         </tr></table>
 
 ## SettingsWatcher {:#SettingsWatcher}
-*Defined in [fuchsia.accessibility/settings.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility/settings.fidl#120)*
+*Defined in [fuchsia.accessibility/settings.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility/settings.fidl#115)*
 
  SettingsWatcher is the client side interface that Settings Manager can
  use to notify clients whenever Accessibility Settings change.
 
 ### OnSettingsChange {:#OnSettingsChange}
 
+ Called when accessibility settings elections change.
 
 #### Request
 <table>
@@ -189,7 +203,7 @@ Book: /_book.yaml
     <tr>
             <td><code>accessibility_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.accessibility/index.html#Settings'>Settings</a></code>
+                <code><a class='link' href='#Settings'>Settings</a></code>
             </td>
         </tr></table>
 
@@ -304,12 +318,12 @@ Type: <code>uint32</code>
             <td>5</td>
             <td><code>color_correction</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.accessibility/index.html#ColorCorrection'>ColorCorrection</a></code>
+                <code><a class='link' href='#ColorCorrection'>ColorCorrection</a></code>
             </td>
             <td> When color_correction is set to DISABLED, colors are displayed normally.
- When color_correction has a different value, colors are modified to correct for the specified
+ When color_correction has different value, colors are modified to correct for the specified
  type of color-blindness.
- No additional user input is required for correction to take place once enabled.
+ No additional user input is required for corrections to take place once enabled.
  Correction will continue to occur until color_correction is set to DISABLED.
 </td>
         </tr><tr>

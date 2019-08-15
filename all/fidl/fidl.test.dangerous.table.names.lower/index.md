@@ -3823,119 +3823,119 @@ Book: /_book.yaml
             <td>1</td>
             <td><code>f0</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#abstract'>abstract</a></code>
+                <code><a class='link' href='#abstract'>abstract</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>2</td>
             <td><code>f1</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#alignas'>alignas</a></code>
+                <code><a class='link' href='#alignas'>alignas</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>3</td>
             <td><code>f2</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#alignof'>alignof</a></code>
+                <code><a class='link' href='#alignof'>alignof</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>4</td>
             <td><code>f3</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#and'>and</a></code>
+                <code><a class='link' href='#and'>and</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>5</td>
             <td><code>f4</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#and_eq'>and_eq</a></code>
+                <code><a class='link' href='#and_eq'>and_eq</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>6</td>
             <td><code>f5</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#as'>as</a></code>
+                <code><a class='link' href='#as'>as</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>7</td>
             <td><code>f6</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#asm'>asm</a></code>
+                <code><a class='link' href='#asm'>asm</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>8</td>
             <td><code>f7</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#assert'>assert</a></code>
+                <code><a class='link' href='#assert'>assert</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>9</td>
             <td><code>f8</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#async'>async</a></code>
+                <code><a class='link' href='#async'>async</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>10</td>
             <td><code>f9</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#atomic_cancel'>atomic_cancel</a></code>
+                <code><a class='link' href='#atomic_cancel'>atomic_cancel</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>11</td>
             <td><code>f10</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#atomic_commit'>atomic_commit</a></code>
+                <code><a class='link' href='#atomic_commit'>atomic_commit</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>12</td>
             <td><code>f11</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#atomic_noexcept'>atomic_noexcept</a></code>
+                <code><a class='link' href='#atomic_noexcept'>atomic_noexcept</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>13</td>
             <td><code>f12</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#auto'>auto</a></code>
+                <code><a class='link' href='#auto'>auto</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>14</td>
             <td><code>f13</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#await'>await</a></code>
+                <code><a class='link' href='#await'>await</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>15</td>
             <td><code>f14</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#become'>become</a></code>
+                <code><a class='link' href='#become'>become</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>16</td>
             <td><code>f15</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#bitand'>bitand</a></code>
+                <code><a class='link' href='#bitand'>bitand</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>17</td>
             <td><code>f16</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#bitor'>bitor</a></code>
+                <code><a class='link' href='#bitor'>bitor</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -3949,14 +3949,14 @@ Book: /_book.yaml
             <td>19</td>
             <td><code>f18</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#box'>box</a></code>
+                <code><a class='link' href='#box'>box</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>20</td>
             <td><code>f19</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#break'>break</a></code>
+                <code><a class='link' href='#break'>break</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -3970,469 +3970,469 @@ Book: /_book.yaml
             <td>22</td>
             <td><code>f21</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#case'>case</a></code>
+                <code><a class='link' href='#case'>case</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>23</td>
             <td><code>f22</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#catch'>catch</a></code>
+                <code><a class='link' href='#catch'>catch</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>24</td>
             <td><code>f23</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#chan'>chan</a></code>
+                <code><a class='link' href='#chan'>chan</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>25</td>
             <td><code>f24</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#char'>char</a></code>
+                <code><a class='link' href='#char'>char</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>26</td>
             <td><code>f25</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#char16_t'>char16_t</a></code>
+                <code><a class='link' href='#char16_t'>char16_t</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>27</td>
             <td><code>f26</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#char32_t'>char32_t</a></code>
+                <code><a class='link' href='#char32_t'>char32_t</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>28</td>
             <td><code>f27</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#class'>class</a></code>
+                <code><a class='link' href='#class'>class</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>29</td>
             <td><code>f28</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#co_await'>co_await</a></code>
+                <code><a class='link' href='#co_await'>co_await</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>30</td>
             <td><code>f29</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#co_return'>co_return</a></code>
+                <code><a class='link' href='#co_return'>co_return</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>31</td>
             <td><code>f30</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#co_yield'>co_yield</a></code>
+                <code><a class='link' href='#co_yield'>co_yield</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>32</td>
             <td><code>f31</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#coding_traits'>coding_traits</a></code>
+                <code><a class='link' href='#coding_traits'>coding_traits</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>33</td>
             <td><code>f32</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#compl'>compl</a></code>
+                <code><a class='link' href='#compl'>compl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>34</td>
             <td><code>f33</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#concept'>concept</a></code>
+                <code><a class='link' href='#concept'>concept</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>35</td>
             <td><code>f34</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#const'>const</a></code>
+                <code><a class='link' href='#const'>const</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>36</td>
             <td><code>f35</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#const_cast'>const_cast</a></code>
+                <code><a class='link' href='#const_cast'>const_cast</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>37</td>
             <td><code>f36</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#constexpr'>constexpr</a></code>
+                <code><a class='link' href='#constexpr'>constexpr</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>38</td>
             <td><code>f37</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#continue'>continue</a></code>
+                <code><a class='link' href='#continue'>continue</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>39</td>
             <td><code>f38</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#controller'>controller</a></code>
+                <code><a class='link' href='#controller'>controller</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>40</td>
             <td><code>f39</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#covariant'>covariant</a></code>
+                <code><a class='link' href='#covariant'>covariant</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>41</td>
             <td><code>f40</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#crate'>crate</a></code>
+                <code><a class='link' href='#crate'>crate</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>42</td>
             <td><code>f41</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#decltype'>decltype</a></code>
+                <code><a class='link' href='#decltype'>decltype</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>43</td>
             <td><code>f42</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#decoder'>decoder</a></code>
+                <code><a class='link' href='#decoder'>decoder</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>44</td>
             <td><code>f43</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#default'>default</a></code>
+                <code><a class='link' href='#default'>default</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>45</td>
             <td><code>f44</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#defer'>defer</a></code>
+                <code><a class='link' href='#defer'>defer</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>46</td>
             <td><code>f45</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#deferred'>deferred</a></code>
+                <code><a class='link' href='#deferred'>deferred</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>47</td>
             <td><code>f46</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#delete'>delete</a></code>
+                <code><a class='link' href='#delete'>delete</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>48</td>
             <td><code>f47</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#do'>do</a></code>
+                <code><a class='link' href='#do'>do</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>49</td>
             <td><code>f48</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#double'>double</a></code>
+                <code><a class='link' href='#double'>double</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>50</td>
             <td><code>f49</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#dynamic'>dynamic</a></code>
+                <code><a class='link' href='#dynamic'>dynamic</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>51</td>
             <td><code>f50</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#dynamic_cast'>dynamic_cast</a></code>
+                <code><a class='link' href='#dynamic_cast'>dynamic_cast</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>52</td>
             <td><code>f51</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#else'>else</a></code>
+                <code><a class='link' href='#else'>else</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>53</td>
             <td><code>f52</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#encoder'>encoder</a></code>
+                <code><a class='link' href='#encoder'>encoder</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>54</td>
             <td><code>f53</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#ensure_values_instantiated'>ensure_values_instantiated</a></code>
+                <code><a class='link' href='#ensure_values_instantiated'>ensure_values_instantiated</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>55</td>
             <td><code>f54</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#enum'>enum</a></code>
+                <code><a class='link' href='#enum'>enum</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>56</td>
             <td><code>f55</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#err'>err</a></code>
+                <code><a class='link' href='#err'>err</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>57</td>
             <td><code>f56</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#explicit'>explicit</a></code>
+                <code><a class='link' href='#explicit'>explicit</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>58</td>
             <td><code>f57</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#export'>export</a></code>
+                <code><a class='link' href='#export'>export</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>59</td>
             <td><code>f58</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#extends'>extends</a></code>
+                <code><a class='link' href='#extends'>extends</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>60</td>
             <td><code>f59</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#extern'>extern</a></code>
+                <code><a class='link' href='#extern'>extern</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>61</td>
             <td><code>f60</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#external'>external</a></code>
+                <code><a class='link' href='#external'>external</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>62</td>
             <td><code>f61</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#factory'>factory</a></code>
+                <code><a class='link' href='#factory'>factory</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>63</td>
             <td><code>f62</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#fallthrough'>fallthrough</a></code>
+                <code><a class='link' href='#fallthrough'>fallthrough</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>64</td>
             <td><code>f63</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#false'>false</a></code>
+                <code><a class='link' href='#false'>false</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>65</td>
             <td><code>f64</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#fidl'>fidl</a></code>
+                <code><a class='link' href='#fidl'>fidl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>66</td>
             <td><code>f65</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#fidl_type'>fidl_type</a></code>
+                <code><a class='link' href='#fidl_type'>fidl_type</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>67</td>
             <td><code>f66</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#final'>final</a></code>
+                <code><a class='link' href='#final'>final</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>68</td>
             <td><code>f67</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#finally'>finally</a></code>
+                <code><a class='link' href='#finally'>finally</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>69</td>
             <td><code>f68</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#float'>float</a></code>
+                <code><a class='link' href='#float'>float</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>70</td>
             <td><code>f69</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#fn'>fn</a></code>
+                <code><a class='link' href='#fn'>fn</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>71</td>
             <td><code>f70</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#for'>for</a></code>
+                <code><a class='link' href='#for'>for</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>72</td>
             <td><code>f71</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#friend'>friend</a></code>
+                <code><a class='link' href='#friend'>friend</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>73</td>
             <td><code>f72</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#func'>func</a></code>
+                <code><a class='link' href='#func'>func</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>74</td>
             <td><code>f73</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#future'>future</a></code>
+                <code><a class='link' href='#future'>future</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>75</td>
             <td><code>f74</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#futures'>futures</a></code>
+                <code><a class='link' href='#futures'>futures</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>76</td>
             <td><code>f75</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#get'>get</a></code>
+                <code><a class='link' href='#get'>get</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>77</td>
             <td><code>f76</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#go'>go</a></code>
+                <code><a class='link' href='#go'>go</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>78</td>
             <td><code>f77</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#goto'>goto</a></code>
+                <code><a class='link' href='#goto'>goto</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>79</td>
             <td><code>f78</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#has_invalid_tag'>has_invalid_tag</a></code>
+                <code><a class='link' href='#has_invalid_tag'>has_invalid_tag</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>80</td>
             <td><code>f79</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#hash_code'>hash_code</a></code>
+                <code><a class='link' href='#hash_code'>hash_code</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>81</td>
             <td><code>f80</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#if'>if</a></code>
+                <code><a class='link' href='#if'>if</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>82</td>
             <td><code>f81</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#impl'>impl</a></code>
+                <code><a class='link' href='#impl'>impl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>83</td>
             <td><code>f82</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#implements'>implements</a></code>
+                <code><a class='link' href='#implements'>implements</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>84</td>
             <td><code>f83</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#import'>import</a></code>
+                <code><a class='link' href='#import'>import</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>85</td>
             <td><code>f84</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#in'>in</a></code>
+                <code><a class='link' href='#in'>in</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>86</td>
             <td><code>f85</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#index'>index</a></code>
+                <code><a class='link' href='#index'>index</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>87</td>
             <td><code>f86</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#inline'>inline</a></code>
+                <code><a class='link' href='#inline'>inline</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>88</td>
             <td><code>f87</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#int'>int</a></code>
+                <code><a class='link' href='#int'>int</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -4467,504 +4467,504 @@ Book: /_book.yaml
             <td>93</td>
             <td><code>f92</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#interface'>interface</a></code>
+                <code><a class='link' href='#interface'>interface</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>94</td>
             <td><code>f93</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#is'>is</a></code>
+                <code><a class='link' href='#is'>is</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>95</td>
             <td><code>f94</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#let'>let</a></code>
+                <code><a class='link' href='#let'>let</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>96</td>
             <td><code>f95</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#lhs'>lhs</a></code>
+                <code><a class='link' href='#lhs'>lhs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>97</td>
             <td><code>f96</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#library'>library</a></code>
+                <code><a class='link' href='#library'>library</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>98</td>
             <td><code>f97</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#list'>list</a></code>
+                <code><a class='link' href='#list'>list</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>99</td>
             <td><code>f98</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#long'>long</a></code>
+                <code><a class='link' href='#long'>long</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>100</td>
             <td><code>f99</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#loop'>loop</a></code>
+                <code><a class='link' href='#loop'>loop</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>101</td>
             <td><code>f100</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#macro'>macro</a></code>
+                <code><a class='link' href='#macro'>macro</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>102</td>
             <td><code>f101</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#map'>map</a></code>
+                <code><a class='link' href='#map'>map</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>103</td>
             <td><code>f102</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#match'>match</a></code>
+                <code><a class='link' href='#match'>match</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>104</td>
             <td><code>f103</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#mixin'>mixin</a></code>
+                <code><a class='link' href='#mixin'>mixin</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>105</td>
             <td><code>f104</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#mod'>mod</a></code>
+                <code><a class='link' href='#mod'>mod</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>106</td>
             <td><code>f105</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#module'>module</a></code>
+                <code><a class='link' href='#module'>module</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>107</td>
             <td><code>f106</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#move'>move</a></code>
+                <code><a class='link' href='#move'>move</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>108</td>
             <td><code>f107</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#mut'>mut</a></code>
+                <code><a class='link' href='#mut'>mut</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>109</td>
             <td><code>f108</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#mutable'>mutable</a></code>
+                <code><a class='link' href='#mutable'>mutable</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>110</td>
             <td><code>f109</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#namespace'>namespace</a></code>
+                <code><a class='link' href='#namespace'>namespace</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>111</td>
             <td><code>f110</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#never'>never</a></code>
+                <code><a class='link' href='#never'>never</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>112</td>
             <td><code>f111</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#new'>new</a></code>
+                <code><a class='link' href='#new'>new</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>113</td>
             <td><code>f112</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#no_such_method'>no_such_method</a></code>
+                <code><a class='link' href='#no_such_method'>no_such_method</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>114</td>
             <td><code>f113</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#noexcept'>noexcept</a></code>
+                <code><a class='link' href='#noexcept'>noexcept</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>115</td>
             <td><code>f114</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#none'>none</a></code>
+                <code><a class='link' href='#none'>none</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>116</td>
             <td><code>f115</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#not'>not</a></code>
+                <code><a class='link' href='#not'>not</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>117</td>
             <td><code>f116</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#not_eq'>not_eq</a></code>
+                <code><a class='link' href='#not_eq'>not_eq</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>118</td>
             <td><code>f117</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#null'>null</a></code>
+                <code><a class='link' href='#null'>null</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>119</td>
             <td><code>f118</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#nullptr'>nullptr</a></code>
+                <code><a class='link' href='#nullptr'>nullptr</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>120</td>
             <td><code>f119</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#num'>num</a></code>
+                <code><a class='link' href='#num'>num</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>121</td>
             <td><code>f120</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#object'>object</a></code>
+                <code><a class='link' href='#object'>object</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>122</td>
             <td><code>f121</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#offset'>offset</a></code>
+                <code><a class='link' href='#offset'>offset</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>123</td>
             <td><code>f122</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#offsetof'>offsetof</a></code>
+                <code><a class='link' href='#offsetof'>offsetof</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>124</td>
             <td><code>f123</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#ok'>ok</a></code>
+                <code><a class='link' href='#ok'>ok</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>125</td>
             <td><code>f124</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#on_open'>on_open</a></code>
+                <code><a class='link' href='#on_open'>on_open</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>126</td>
             <td><code>f125</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#operator'>operator</a></code>
+                <code><a class='link' href='#operator'>operator</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>127</td>
             <td><code>f126</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#option'>option</a></code>
+                <code><a class='link' href='#option'>option</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>128</td>
             <td><code>f127</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#or'>or</a></code>
+                <code><a class='link' href='#or'>or</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>129</td>
             <td><code>f128</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#or_eq'>or_eq</a></code>
+                <code><a class='link' href='#or_eq'>or_eq</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>130</td>
             <td><code>f129</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#override'>override</a></code>
+                <code><a class='link' href='#override'>override</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>131</td>
             <td><code>f130</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#package'>package</a></code>
+                <code><a class='link' href='#package'>package</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>132</td>
             <td><code>f131</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#part'>part</a></code>
+                <code><a class='link' href='#part'>part</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>133</td>
             <td><code>f132</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#priv'>priv</a></code>
+                <code><a class='link' href='#priv'>priv</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>134</td>
             <td><code>f133</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#private'>private</a></code>
+                <code><a class='link' href='#private'>private</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>135</td>
             <td><code>f134</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#proc'>proc</a></code>
+                <code><a class='link' href='#proc'>proc</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>136</td>
             <td><code>f135</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#protected'>protected</a></code>
+                <code><a class='link' href='#protected'>protected</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>137</td>
             <td><code>f136</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#proxy'>proxy</a></code>
+                <code><a class='link' href='#proxy'>proxy</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>138</td>
             <td><code>f137</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#pub'>pub</a></code>
+                <code><a class='link' href='#pub'>pub</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>139</td>
             <td><code>f138</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#public'>public</a></code>
+                <code><a class='link' href='#public'>public</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>140</td>
             <td><code>f139</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#pure'>pure</a></code>
+                <code><a class='link' href='#pure'>pure</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>141</td>
             <td><code>f140</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#range'>range</a></code>
+                <code><a class='link' href='#range'>range</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>142</td>
             <td><code>f141</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#ref'>ref</a></code>
+                <code><a class='link' href='#ref'>ref</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>143</td>
             <td><code>f142</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#register'>register</a></code>
+                <code><a class='link' href='#register'>register</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>144</td>
             <td><code>f143</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#reinterpret_cast'>reinterpret_cast</a></code>
+                <code><a class='link' href='#reinterpret_cast'>reinterpret_cast</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>145</td>
             <td><code>f144</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#requires'>requires</a></code>
+                <code><a class='link' href='#requires'>requires</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>146</td>
             <td><code>f145</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#result'>result</a></code>
+                <code><a class='link' href='#result'>result</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>147</td>
             <td><code>f146</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#rethrow'>rethrow</a></code>
+                <code><a class='link' href='#rethrow'>rethrow</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>148</td>
             <td><code>f147</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#return'>return</a></code>
+                <code><a class='link' href='#return'>return</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>149</td>
             <td><code>f148</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#rhs'>rhs</a></code>
+                <code><a class='link' href='#rhs'>rhs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>150</td>
             <td><code>f149</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#rune'>rune</a></code>
+                <code><a class='link' href='#rune'>rune</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>151</td>
             <td><code>f150</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#runtime_type'>runtime_type</a></code>
+                <code><a class='link' href='#runtime_type'>runtime_type</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>152</td>
             <td><code>f151</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#select'>select</a></code>
+                <code><a class='link' href='#select'>select</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>153</td>
             <td><code>f152</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#self'>self</a></code>
+                <code><a class='link' href='#self'>self</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>154</td>
             <td><code>f153</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#send'>send</a></code>
+                <code><a class='link' href='#send'>send</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>155</td>
             <td><code>f154</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#set'>set</a></code>
+                <code><a class='link' href='#set'>set</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>156</td>
             <td><code>f155</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#set_controller'>set_controller</a></code>
+                <code><a class='link' href='#set_controller'>set_controller</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>157</td>
             <td><code>f156</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#short'>short</a></code>
+                <code><a class='link' href='#short'>short</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>158</td>
             <td><code>f157</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#signed'>signed</a></code>
+                <code><a class='link' href='#signed'>signed</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>159</td>
             <td><code>f158</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#sizeof'>sizeof</a></code>
+                <code><a class='link' href='#sizeof'>sizeof</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>160</td>
             <td><code>f159</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#some'>some</a></code>
+                <code><a class='link' href='#some'>some</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>161</td>
             <td><code>f160</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#static'>static</a></code>
+                <code><a class='link' href='#static'>static</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>162</td>
             <td><code>f161</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#static_assert'>static_assert</a></code>
+                <code><a class='link' href='#static_assert'>static_assert</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>163</td>
             <td><code>f162</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#static_cast'>static_cast</a></code>
+                <code><a class='link' href='#static_cast'>static_cast</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>164</td>
             <td><code>f163</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#stream'>stream</a></code>
+                <code><a class='link' href='#stream'>stream</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -4978,126 +4978,126 @@ Book: /_book.yaml
             <td>166</td>
             <td><code>f165</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#struct'>struct</a></code>
+                <code><a class='link' href='#struct'>struct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>167</td>
             <td><code>f166</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#stub'>stub</a></code>
+                <code><a class='link' href='#stub'>stub</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>168</td>
             <td><code>f167</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#super'>super</a></code>
+                <code><a class='link' href='#super'>super</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>169</td>
             <td><code>f168</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#switch'>switch</a></code>
+                <code><a class='link' href='#switch'>switch</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>170</td>
             <td><code>f169</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#synchronized'>synchronized</a></code>
+                <code><a class='link' href='#synchronized'>synchronized</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>171</td>
             <td><code>f170</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#template'>template</a></code>
+                <code><a class='link' href='#template'>template</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>172</td>
             <td><code>f171</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#this'>this</a></code>
+                <code><a class='link' href='#this'>this</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>173</td>
             <td><code>f172</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#thread_local'>thread_local</a></code>
+                <code><a class='link' href='#thread_local'>thread_local</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>174</td>
             <td><code>f173</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#throw'>throw</a></code>
+                <code><a class='link' href='#throw'>throw</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>175</td>
             <td><code>f174</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#to_string'>to_string</a></code>
+                <code><a class='link' href='#to_string'>to_string</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>176</td>
             <td><code>f175</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#trait'>trait</a></code>
+                <code><a class='link' href='#trait'>trait</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>177</td>
             <td><code>f176</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#true'>true</a></code>
+                <code><a class='link' href='#true'>true</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>178</td>
             <td><code>f177</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#try'>try</a></code>
+                <code><a class='link' href='#try'>try</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>179</td>
             <td><code>f178</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#type'>type</a></code>
+                <code><a class='link' href='#type'>type</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>180</td>
             <td><code>f179</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#typedef'>typedef</a></code>
+                <code><a class='link' href='#typedef'>typedef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>181</td>
             <td><code>f180</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#typeid'>typeid</a></code>
+                <code><a class='link' href='#typeid'>typeid</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>182</td>
             <td><code>f181</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#typename'>typename</a></code>
+                <code><a class='link' href='#typename'>typename</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>183</td>
             <td><code>f182</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#typeof'>typeof</a></code>
+                <code><a class='link' href='#typeof'>typeof</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -5132,175 +5132,175 @@ Book: /_book.yaml
             <td>188</td>
             <td><code>f187</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#union'>union</a></code>
+                <code><a class='link' href='#union'>union</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>189</td>
             <td><code>f188</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#unsafe'>unsafe</a></code>
+                <code><a class='link' href='#unsafe'>unsafe</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>190</td>
             <td><code>f189</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#unsigned'>unsigned</a></code>
+                <code><a class='link' href='#unsigned'>unsigned</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>191</td>
             <td><code>f190</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#unsized'>unsized</a></code>
+                <code><a class='link' href='#unsized'>unsized</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>192</td>
             <td><code>f191</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#use'>use</a></code>
+                <code><a class='link' href='#use'>use</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>193</td>
             <td><code>f192</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#using'>using</a></code>
+                <code><a class='link' href='#using'>using</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>194</td>
             <td><code>f193</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#value'>value</a></code>
+                <code><a class='link' href='#value'>value</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>195</td>
             <td><code>f194</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#value_of'>value_of</a></code>
+                <code><a class='link' href='#value_of'>value_of</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>196</td>
             <td><code>f195</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#value_union'>value_union</a></code>
+                <code><a class='link' href='#value_union'>value_union</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>197</td>
             <td><code>f196</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#values_map'>values_map</a></code>
+                <code><a class='link' href='#values_map'>values_map</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>198</td>
             <td><code>f197</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#var'>var</a></code>
+                <code><a class='link' href='#var'>var</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>199</td>
             <td><code>f198</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#vec'>vec</a></code>
+                <code><a class='link' href='#vec'>vec</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>200</td>
             <td><code>f199</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#virtual'>virtual</a></code>
+                <code><a class='link' href='#virtual'>virtual</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>201</td>
             <td><code>f200</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#void'>void</a></code>
+                <code><a class='link' href='#void'>void</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>202</td>
             <td><code>f201</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#volatile'>volatile</a></code>
+                <code><a class='link' href='#volatile'>volatile</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>203</td>
             <td><code>f202</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#wchar_t'>wchar_t</a></code>
+                <code><a class='link' href='#wchar_t'>wchar_t</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>204</td>
             <td><code>f203</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#where'>where</a></code>
+                <code><a class='link' href='#where'>where</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>205</td>
             <td><code>f204</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#which'>which</a></code>
+                <code><a class='link' href='#which'>which</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>206</td>
             <td><code>f205</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#while'>while</a></code>
+                <code><a class='link' href='#while'>while</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>207</td>
             <td><code>f206</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#with'>with</a></code>
+                <code><a class='link' href='#with'>with</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>208</td>
             <td><code>f207</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#xor'>xor</a></code>
+                <code><a class='link' href='#xor'>xor</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>209</td>
             <td><code>f208</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#xor_eq'>xor_eq</a></code>
+                <code><a class='link' href='#xor_eq'>xor_eq</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>210</td>
             <td><code>f209</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#xunion'>xunion</a></code>
+                <code><a class='link' href='#xunion'>xunion</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>211</td>
             <td><code>f210</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#yield'>yield</a></code>
+                <code><a class='link' href='#yield'>yield</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>212</td>
             <td><code>f211</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.lower/index.html#zx'>zx</a></code>
+                <code><a class='link' href='#zx'>zx</a></code>
             </td>
             <td></td>
         </tr></table>

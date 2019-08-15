@@ -33,7 +33,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>structs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.dart.fidl.json/index.html#ExampleStruct2'>ExampleStruct2</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ExampleStruct2'>ExampleStruct2</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -146,13 +146,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>struct1</code></td>
             <td>
-                <code><a class='link' href='../test.dart.fidl.json/index.html#ExampleStruct'>ExampleStruct</a></code>
+                <code><a class='link' href='#ExampleStruct'>ExampleStruct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>struct2</code></td>
             <td>
-                <code><a class='link' href='../test.dart.fidl.json/index.html#ExampleStruct2'>ExampleStruct2</a></code>
+                <code><a class='link' href='#ExampleStruct2'>ExampleStruct2</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -169,13 +169,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>struct1</code></td>
             <td>
-                <code><a class='link' href='../test.dart.fidl.json/index.html#ExampleStruct'>ExampleStruct</a></code>
+                <code><a class='link' href='#ExampleStruct'>ExampleStruct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>struct2</code></td>
             <td>
-                <code><a class='link' href='../test.dart.fidl.json/index.html#ExampleStruct2'>ExampleStruct2</a></code>
+                <code><a class='link' href='#ExampleStruct2'>ExampleStruct2</a></code>
             </td>
             <td></td>
         </tr><tr>

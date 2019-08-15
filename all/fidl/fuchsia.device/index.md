@@ -36,9 +36,10 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Unbind {:#Unbind}
+### ScheduleUnbind {:#ScheduleUnbind}
 
  Disconnect this device and allow its parent to be bound again.
+ This may not complete before it returns.
 
 #### Request
 <table>
@@ -128,7 +129,7 @@ Book: /_book.yaml
 
 ### GetEventHandle {:#GetEventHandle}
 
- Get an event for monitoring device conditions (see DEVICE_SIGNAL_* constants)
+ Get an event for monitoring device conditions (see `DEVICE_SIGNAL_*` constants)
 
 #### Request
 <table>
@@ -297,7 +298,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device/index.html#NameProvider_GetDeviceName_Result'>NameProvider_GetDeviceName_Result</a></code>
+                <code><a class='link' href='#NameProvider_GetDeviceName_Result'>NameProvider_GetDeviceName_Result</a></code>
             </td>
         </tr></table>
 
@@ -339,7 +340,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device/index.html#NameProvider_GetDeviceName_Response'>NameProvider_GetDeviceName_Response</a></code>
+                <code><a class='link' href='#NameProvider_GetDeviceName_Response'>NameProvider_GetDeviceName_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

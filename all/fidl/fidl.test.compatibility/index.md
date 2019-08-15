@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#Struct'>Struct</a></code>
+                <code><a class='link' href='#Struct'>Struct</a></code>
             </td>
         </tr><tr>
             <td><code>forward_to_server</code></td>
@@ -35,7 +35,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#Struct'>Struct</a></code>
+                <code><a class='link' href='#Struct'>Struct</a></code>
             </td>
         </tr></table>
 
@@ -48,7 +48,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#Struct'>Struct</a></code>
+                <code><a class='link' href='#Struct'>Struct</a></code>
             </td>
         </tr><tr>
             <td><code>forward_to_server</code></td>
@@ -70,7 +70,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#Struct'>Struct</a></code>
+                <code><a class='link' href='#Struct'>Struct</a></code>
             </td>
         </tr></table>
 
@@ -83,7 +83,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#ArraysStruct'>ArraysStruct</a></code>
+                <code><a class='link' href='#ArraysStruct'>ArraysStruct</a></code>
             </td>
         </tr><tr>
             <td><code>forward_to_server</code></td>
@@ -99,7 +99,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#ArraysStruct'>ArraysStruct</a></code>
+                <code><a class='link' href='#ArraysStruct'>ArraysStruct</a></code>
             </td>
         </tr></table>
 
@@ -112,7 +112,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#VectorsStruct'>VectorsStruct</a></code>
+                <code><a class='link' href='#VectorsStruct'>VectorsStruct</a></code>
             </td>
         </tr><tr>
             <td><code>forward_to_server</code></td>
@@ -128,7 +128,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#VectorsStruct'>VectorsStruct</a></code>
+                <code><a class='link' href='#VectorsStruct'>VectorsStruct</a></code>
             </td>
         </tr></table>
 
@@ -141,7 +141,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#AllTypesTable'>AllTypesTable</a></code>
+                <code><a class='link' href='#AllTypesTable'>AllTypesTable</a></code>
             </td>
         </tr><tr>
             <td><code>forward_to_server</code></td>
@@ -157,7 +157,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#AllTypesTable'>AllTypesTable</a></code>
+                <code><a class='link' href='#AllTypesTable'>AllTypesTable</a></code>
             </td>
         </tr></table>
 
@@ -170,7 +170,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.test.compatibility/index.html#AllTypesXunion'>AllTypesXunion</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#AllTypesXunion'>AllTypesXunion</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>forward_to_server</code></td>
@@ -186,7 +186,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.test.compatibility/index.html#AllTypesXunion'>AllTypesXunion</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#AllTypesXunion'>AllTypesXunion</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -395,14 +395,14 @@ Book: /_book.yaml
                 <code>float32</code>
             </td>
             <td></td>
-            <td>1.30</td>
+            <td>1.3</td>
         </tr><tr>
             <td><code>f64</code></td>
             <td>
                 <code>float64</code>
             </td>
             <td></td>
-            <td>0.0000054</td>
+            <td>5.4e-06</td>
         </tr><tr>
             <td><code>s</code></td>
             <td>
@@ -1809,21 +1809,21 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_struct'>this_is_a_struct</a></code>
+                <code><a class='link' href='#this_is_a_struct'>this_is_a_struct</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nullable_s</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_struct'>this_is_a_struct</a>?</code>
+                <code><a class='link' href='#this_is_a_struct'>this_is_a_struct</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>es</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_an_empty_struct'>this_is_an_empty_struct</a></code>
+                <code><a class='link' href='#this_is_an_empty_struct'>this_is_an_empty_struct</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1841,14 +1841,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>u</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_union'>this_is_a_union</a></code>
+                <code><a class='link' href='#this_is_a_union'>this_is_a_union</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nullable_u</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_union'>this_is_a_union</a>?</code>
+                <code><a class='link' href='#this_is_a_union'>this_is_a_union</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1866,175 +1866,175 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>primitive_types</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#primitive_types'>primitive_types</a></code>
+                <code><a class='link' href='#primitive_types'>primitive_types</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>default_values</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#default_values'>default_values</a></code>
+                <code><a class='link' href='#default_values'>default_values</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>arrays</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#arrays'>arrays</a></code>
+                <code><a class='link' href='#arrays'>arrays</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>arrays_2d</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#arrays_2d'>arrays_2d</a></code>
+                <code><a class='link' href='#arrays_2d'>arrays_2d</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>vectors</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#vectors'>vectors</a></code>
+                <code><a class='link' href='#vectors'>vectors</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>handles</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#handles'>handles</a></code>
+                <code><a class='link' href='#handles'>handles</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>strings</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#strings'>strings</a></code>
+                <code><a class='link' href='#strings'>strings</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>default_enum</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#default_enum'>default_enum</a></code>
+                <code><a class='link' href='#default_enum'>default_enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>i8_enum</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#i8_enum'>i8_enum</a></code>
+                <code><a class='link' href='#i8_enum'>i8_enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>i16_enum</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#i16_enum'>i16_enum</a></code>
+                <code><a class='link' href='#i16_enum'>i16_enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>i32_enum</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#i32_enum'>i32_enum</a></code>
+                <code><a class='link' href='#i32_enum'>i32_enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>i64_enum</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#i64_enum'>i64_enum</a></code>
+                <code><a class='link' href='#i64_enum'>i64_enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>u8_enum</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#u8_enum'>u8_enum</a></code>
+                <code><a class='link' href='#u8_enum'>u8_enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>u16_enum</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#u16_enum'>u16_enum</a></code>
+                <code><a class='link' href='#u16_enum'>u16_enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>u32_enum</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#u32_enum'>u32_enum</a></code>
+                <code><a class='link' href='#u32_enum'>u32_enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>u64_enum</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#u64_enum'>u64_enum</a></code>
+                <code><a class='link' href='#u64_enum'>u64_enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>default_bits</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#default_bits'>default_bits</a></code>
+                <code><a class='link' href='#default_bits'>default_bits</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>u8_bits</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#u8_bits'>u8_bits</a></code>
+                <code><a class='link' href='#u8_bits'>u8_bits</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>u16_bits</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#u16_bits'>u16_bits</a></code>
+                <code><a class='link' href='#u16_bits'>u16_bits</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>u32_bits</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#u32_bits'>u32_bits</a></code>
+                <code><a class='link' href='#u32_bits'>u32_bits</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>u64_bits</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#u64_bits'>u64_bits</a></code>
+                <code><a class='link' href='#u64_bits'>u64_bits</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>structs</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#structs'>structs</a></code>
+                <code><a class='link' href='#structs'>structs</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>unions</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#unions'>unions</a></code>
+                <code><a class='link' href='#unions'>unions</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>table</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_table'>this_is_a_table</a></code>
+                <code><a class='link' href='#this_is_a_table'>this_is_a_table</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>xunion</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_xunion'>this_is_a_xunion</a></code>
+                <code><a class='link' href='#this_is_a_xunion'>this_is_a_xunion</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2329,14 +2329,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>enums</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.test.compatibility/index.html#default_enum'>default_enum</a>&gt;[3]</code>
+                <code>vector&lt;<a class='link' href='#default_enum'>default_enum</a>&gt;[3]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>bits</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.test.compatibility/index.html#default_bits'>default_bits</a>&gt;[3]</code>
+                <code>vector&lt;<a class='link' href='#default_bits'>default_bits</a>&gt;[3]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2371,28 +2371,28 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>structs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.test.compatibility/index.html#this_is_a_struct'>this_is_a_struct</a>&gt;[3]</code>
+                <code>vector&lt;<a class='link' href='#this_is_a_struct'>this_is_a_struct</a>&gt;[3]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nullable_structs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.test.compatibility/index.html#this_is_a_struct'>this_is_a_struct</a>&gt;[3]</code>
+                <code>vector&lt;<a class='link' href='#this_is_a_struct'>this_is_a_struct</a>&gt;[3]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>unions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.test.compatibility/index.html#this_is_a_union'>this_is_a_union</a>&gt;[3]</code>
+                <code>vector&lt;<a class='link' href='#this_is_a_union'>this_is_a_union</a>&gt;[3]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>nullable_unions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.test.compatibility/index.html#this_is_a_union'>this_is_a_union</a>&gt;[3]</code>
+                <code>vector&lt;<a class='link' href='#this_is_a_union'>this_is_a_union</a>&gt;[3]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2420,14 +2420,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>tables</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.test.compatibility/index.html#this_is_a_table'>this_is_a_table</a>&gt;[3]</code>
+                <code>vector&lt;<a class='link' href='#this_is_a_table'>this_is_a_table</a>&gt;[3]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>xunions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fidl.test.compatibility/index.html#this_is_a_xunion'>this_is_a_xunion</a>&gt;[3]</code>
+                <code>vector&lt;<a class='link' href='#this_is_a_xunion'>this_is_a_xunion</a>&gt;[3]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2808,14 +2808,14 @@ Type: <code>uint64</code>
             <td>12</td>
             <td><code>enum_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#default_enum'>default_enum</a></code>
+                <code><a class='link' href='#default_enum'>default_enum</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>13</td>
             <td><code>bits_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#default_bits'>default_bits</a></code>
+                <code><a class='link' href='#default_bits'>default_bits</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -2836,14 +2836,14 @@ Type: <code>uint64</code>
             <td>16</td>
             <td><code>struct_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_struct'>this_is_a_struct</a></code>
+                <code><a class='link' href='#this_is_a_struct'>this_is_a_struct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>17</td>
             <td><code>union_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_union'>this_is_a_union</a></code>
+                <code><a class='link' href='#this_is_a_union'>this_is_a_union</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -2864,14 +2864,14 @@ Type: <code>uint64</code>
             <td>20</td>
             <td><code>table_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_table'>this_is_a_table</a></code>
+                <code><a class='link' href='#this_is_a_table'>this_is_a_table</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>21</td>
             <td><code>xunion_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_xunion'>this_is_a_xunion</a></code>
+                <code><a class='link' href='#this_is_a_xunion'>this_is_a_xunion</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2996,13 +2996,13 @@ Type: <code>uint64</code>
         </tr><tr>
             <td><code>enum_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#default_enum'>default_enum</a></code>
+                <code><a class='link' href='#default_enum'>default_enum</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>bits_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#default_bits'>default_bits</a></code>
+                <code><a class='link' href='#default_bits'>default_bits</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -3020,13 +3020,13 @@ Type: <code>uint64</code>
         </tr><tr>
             <td><code>struct_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_struct'>this_is_a_struct</a></code>
+                <code><a class='link' href='#this_is_a_struct'>this_is_a_struct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>union_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_union'>this_is_a_union</a></code>
+                <code><a class='link' href='#this_is_a_union'>this_is_a_union</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -3044,13 +3044,13 @@ Type: <code>uint64</code>
         </tr><tr>
             <td><code>table_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_table'>this_is_a_table</a></code>
+                <code><a class='link' href='#this_is_a_table'>this_is_a_table</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>xunion_member</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.compatibility/index.html#this_is_a_xunion'>this_is_a_xunion</a></code>
+                <code><a class='link' href='#this_is_a_xunion'>this_is_a_xunion</a></code>
             </td>
             <td></td>
         </tr></table>

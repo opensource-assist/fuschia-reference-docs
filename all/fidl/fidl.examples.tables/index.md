@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>foo</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.tables/index.html#B'>B</a>?</code>
+                <code><a class='link' href='#B'>B</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -37,7 +37,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>bar</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.tables/index.html#A'>A</a>?</code>
+                <code><a class='link' href='#A'>A</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -73,7 +73,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>qux</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.tables/index.html#C'>C</a></code>
+                <code><a class='link' href='#C'>C</a></code>
             </td>
             <td></td>
             <td>No default</td>

@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## CloudProvider {:#CloudProvider}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#34)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#47)*
 
  Cloud service that powers cloud sync for a single user. Top-level interface
  of this file.
@@ -25,7 +25,7 @@ Book: /_book.yaml
     <tr>
             <td><code>device_set</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ledger.cloud/index.html#DeviceSet'>DeviceSet</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#DeviceSet'>DeviceSet</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -36,7 +36,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -60,7 +60,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>page_cloud</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ledger.cloud/index.html#PageCloud'>PageCloud</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#PageCloud'>PageCloud</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -71,12 +71,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
 ## DeviceSet {:#DeviceSet}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#47)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#60)*
 
  Cloud registry of devices participating in cloud sync.
 
@@ -94,7 +94,7 @@ Book: /_book.yaml
     <tr>
             <td><code>fingerprint</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[32]</code>
             </td>
         </tr></table>
 
@@ -105,7 +105,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -119,7 +119,7 @@ Book: /_book.yaml
     <tr>
             <td><code>fingerprint</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[32]</code>
             </td>
         </tr></table>
 
@@ -130,7 +130,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -145,8 +145,8 @@ Book: /_book.yaml
  The returned status is:
 
    - OK, if setting the watcher succeeded,
-   - NOT_FOUND, if the fingerprint was not found in the cloud
-   - NETWORK_ERROR, if the watcher couldn't be set due to a network error
+   - `NOT_FOUND`, if the fingerprint was not found in the cloud
+   - `NETWORK_ERROR`, if the watcher couldn't be set due to a network error
 
  If the returned status is not OK, the corresponding error call is also made
  on the watcher.
@@ -157,12 +157,12 @@ Book: /_book.yaml
     <tr>
             <td><code>fingerprint</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[32]</code>
             </td>
         </tr><tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#DeviceSetWatcher'>DeviceSetWatcher</a></code>
+                <code><a class='link' href='#DeviceSetWatcher'>DeviceSetWatcher</a></code>
             </td>
         </tr></table>
 
@@ -173,7 +173,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -194,12 +194,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
 ## DeviceSetWatcher {:#DeviceSetWatcher}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#79)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#92)*
 
  Watcher for push notifications from the cloud registry of devices
  participating in cloud sync.
@@ -219,8 +219,8 @@ Book: /_book.yaml
 ### OnError {:#OnError}
 
  Called when an error occured. Most common errors are:
-   - NOT_FOUND, if the fingerprint was not found in the cloud when registering the watcher.
-   - NETWORK_ERROR if the network connection is lost.
+   - `NOT_FOUND`, if the fingerprint was not found in the cloud when registering the watcher.
+   - `NETWORK_ERROR` if the network connection is lost.
 
  No further calls are made on the watcher after this is called.
 
@@ -230,14 +230,14 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
 
 
 ## PageCloud {:#PageCloud}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#139)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#225)*
 
  Handler for cloud sync of a single page.
 
@@ -264,7 +264,7 @@ Book: /_book.yaml
     <tr>
             <td><code>commits</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#CommitPack'>CommitPack</a></code>
+                <code><a class='link' href='#CommitPack'>CommitPack</a></code>
             </td>
         </tr></table>
 
@@ -275,7 +275,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -299,7 +299,7 @@ Book: /_book.yaml
     <tr>
             <td><code>min_position_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#PositionToken'>PositionToken</a>?</code>
+                <code><a class='link' href='#PositionToken'>PositionToken</a>?</code>
             </td>
         </tr></table>
 
@@ -310,17 +310,17 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>commits</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#CommitPack'>CommitPack</a>?</code>
+                <code><a class='link' href='#CommitPack'>CommitPack</a>?</code>
             </td>
         </tr><tr>
             <td><code>position_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#PositionToken'>PositionToken</a>?</code>
+                <code><a class='link' href='#PositionToken'>PositionToken</a>?</code>
             </td>
         </tr></table>
 
@@ -336,7 +336,7 @@ Book: /_book.yaml
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
         </tr><tr>
             <td><code>buffer</code></td>
@@ -346,7 +346,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>references</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#ReferencePack'>ReferencePack</a></code>
+                <code><a class='link' href='#ReferencePack'>ReferencePack</a></code>
             </td>
         </tr></table>
 
@@ -357,7 +357,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -374,7 +374,7 @@ Book: /_book.yaml
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
         </tr></table>
 
@@ -385,7 +385,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>buffer</code></td>
@@ -413,12 +413,12 @@ Book: /_book.yaml
     <tr>
             <td><code>min_position_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#PositionToken'>PositionToken</a>?</code>
+                <code><a class='link' href='#PositionToken'>PositionToken</a>?</code>
             </td>
         </tr><tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#PageCloudWatcher'>PageCloudWatcher</a></code>
+                <code><a class='link' href='#PageCloudWatcher'>PageCloudWatcher</a></code>
             </td>
         </tr></table>
 
@@ -429,12 +429,54 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
+            </td>
+        </tr></table>
+
+### GetDiff {:#GetDiff}
+
+ Fetches a diff for the commit with the given |commit_id|.
+
+ The base of the diff is either the empty page or a commit in
+ `possible_bases`. The bases may be unknown to the cloud if they have
+ been pruned from the cloud, but not from the Ledger. During the
+ migration to diffs, the cloud provider may also choose as a base any
+ commit that has been uploaded without diff. In that case, the tree at
+ this commit should be downloaded using GetObject.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>commit_id</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[128]</code>
+            </td>
+        </tr><tr>
+            <td><code>possible_bases</code></td>
+            <td>
+                <code>vector&lt;vector&gt;[32]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code><a class='link' href='#Status'>Status</a></code>
+            </td>
+        </tr><tr>
+            <td><code>diff</code></td>
+            <td>
+                <code><a class='link' href='#DiffPack'>DiffPack</a>?</code>
             </td>
         </tr></table>
 
 ## PageCloudWatcher {:#PageCloudWatcher}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#188)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#286)*
 
  Watcher for push notifications from cloud sync of a single page.
 
@@ -445,7 +487,7 @@ Book: /_book.yaml
  The method takes the list of new `commits` along with the `position_token`
  of the most recent of them.
 
- No subsequent calls are made until the client calls the callback of the
+ No subsequent calls are made until Ledger calls the callback of the
  previous one.
 
 #### Request
@@ -454,12 +496,12 @@ Book: /_book.yaml
     <tr>
             <td><code>commits</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#CommitPack'>CommitPack</a></code>
+                <code><a class='link' href='#CommitPack'>CommitPack</a></code>
             </td>
         </tr><tr>
             <td><code>position_token</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#PositionToken'>PositionToken</a></code>
+                <code><a class='link' href='#PositionToken'>PositionToken</a></code>
             </td>
         </tr></table>
 
@@ -475,7 +517,7 @@ Book: /_book.yaml
 
  The method takes the `id` and the content of the new object.
 
- No subsequent calls are made until the client calls the callback of the
+ No subsequent calls are made until Ledger calls the callback of the
  previous one.
 
 #### Request
@@ -484,7 +526,7 @@ Book: /_book.yaml
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
         </tr><tr>
             <td><code>buffer</code></td>
@@ -503,14 +545,14 @@ Book: /_book.yaml
 
  Called when an error occurs.
 
- No further calls are made on the watcher after this is called. The client
+ No further calls are made on the watcher after this is called. Ledger
  can then re-establish the watcher by calling SetWatcher() again.
 
  The status is one of:
 
-   - AUTH_ERROR, if the auth token needs a refresh
-   - NETWORK_ERROR, if the connection was dropped
-   - PARSE_ERROR, if an invalid server notification was received
+   - `AUTH_ERROR`, if the auth token needs a refresh
+   - `NETWORK_ERROR`, if the connection was dropped
+   - `PARSE_ERROR`, if an invalid server notification was received
 
 #### Request
 <table>
@@ -518,7 +560,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger.cloud/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -529,7 +571,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### CommitPack {:#CommitPack}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#93)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#106)*
 
 
 
@@ -548,7 +590,7 @@ Book: /_book.yaml
 </table>
 
 ### PositionToken {:#PositionToken}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#99)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#112)*
 
 
 
@@ -567,8 +609,19 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### EmptyPage {:#EmptyPage}
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#147)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### Commits {:#Commits}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#112)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#193)*
 
 
 
@@ -579,7 +632,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>commits</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ledger.cloud/index.html#Commit'>Commit</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Commit'>Commit</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -587,7 +640,7 @@ Book: /_book.yaml
 </table>
 
 ### References {:#References}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#117)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#198)*
 
 
 
@@ -605,8 +658,27 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### DiffPack {:#DiffPack}
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#203)*
+
+
+
+ Contains a Buffer containing the FIDL serialization of Diff.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>buffer</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### ReferencePack {:#ReferencePack}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#124)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#210)*
 
 
 
@@ -633,7 +705,7 @@ Book: /_book.yaml
 ### Status {:#Status}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#16)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#28)*
 
  Response status for cloud provider operations.
 
@@ -672,8 +744,30 @@ Type: <code>int32</code>
             <td><code>7</code></td>
             <td></td>
         </tr><tr>
+            <td><code>NOT_SUPPORTED</code></td>
+            <td><code>8</code></td>
+            <td></td>
+        </tr><tr>
             <td><code>UNKNOWN_ERROR</code></td>
             <td><code>-1</code></td>
+            <td></td>
+        </tr></table>
+
+### Operation {:#Operation}
+Type: <code>uint8</code>
+
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#187)*
+
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>INSERTION</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DELETION</code></td>
+            <td><code>2</code></td>
             <td></td>
         </tr></table>
 
@@ -684,7 +778,7 @@ Type: <code>int32</code>
 ### Commit {:#Commit}
 
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#104)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#117)*
 
  A commit as seen by the cloud.
 
@@ -695,19 +789,154 @@ Type: <code>int32</code>
             <td>1</td>
             <td><code>id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
-            <td></td>
+            <td> A unique commit identifier, chosen by Ledger. Required.
+
+ Two commits uploaded with the same identifier are to be considered
+ identical: they will have the same parents if present, and the cloud may
+ return the data and the diff from any of the uploads.
+</td>
         </tr><tr>
             <td>2</td>
             <td><code>data</code></td>
             <td>
                 <code>vector&lt;uint8&gt;</code>
             </td>
-            <td></td>
+            <td> Opaque data stored by Ledger. Required.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>diff</code></td>
+            <td>
+                <code><a class='link' href='#Diff'>Diff</a></code>
+            </td>
+            <td> A diff describing the content of the page at this commit. Optional.
+
+ Ledger will not send a diff for all commits: it may omit the diff when it
+ determines the content of the commit will not be used by any other Ledger
+ instance. During the transition to diffs, diff-unaware Ledgers will also
+ omit the diff.
+ The cloud provider should not include diffs in the commits it sends to
+ Ledger.
+</td>
+        </tr></table>
+
+### Diff {:#Diff}
+
+
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#156)*
+
+ A diff from a base state to a commit.
+
+ Diffs are sequences of insertions and deletions. Updates are encoded as a
+ deletion followed by an insertion. The cloud can match insertions and
+ deletions by an entry identifier chosen by Ledger (because of encryption,
+ the data will not match between insertions and deletions).
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>base_state</code></td>
+            <td>
+                <code><a class='link' href='#PageState'>PageState</a></code>
+            </td>
+            <td> Page state used as a reference point for the diff.
+
+ Ledger only uses as base state a commit that is already known to the
+ cloud, or the empty page.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>changes</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#DiffEntry'>DiffEntry</a>&gt;</code>
+            </td>
+            <td> List of changes from the base state to the commit.
+
+ The changes are to be applied in order.
+</td>
+        </tr></table>
+
+### DiffEntry {:#DiffEntry}
+
+
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#169)*
+
+ An entry in a Diff.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>entry_id</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[64]</code>
+            </td>
+            <td> Identifier of the entry. Required.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>operation</code></td>
+            <td>
+                <code><a class='link' href='#Operation'>Operation</a></code>
+            </td>
+            <td> Insertion or deletion. Required.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>data</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[512]</code>
+            </td>
+            <td> Data representing the content of the entry.
+
+ Required in diffs sent from Ledger. The cloud provider may omit this
+ information if the operation is a deletion. If an entry id was inserted/
+ deleted multiple times, the cloud provider can send any of the values.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>reference</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[128]</code>
+            </td>
+            <td> An optional reference to an object, given by its identifier.
+
+ Sent by Ledger when the value of the entry is not inlined in the `data`
+ field. The cloud provider may always omit this field in diffs.
+</td>
         </tr></table>
 
 
+
+## **UNIONS**
+
+### PageState {:#PageState}
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#139)*
+
+ Specification of a page state used as base for a diff.
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>empty_page</code></td>
+            <td>
+                <code><a class='link' href='#EmptyPage'>EmptyPage</a></code>
+            </td>
+            <td> The state is the empty page.
+</td>
+        </tr><tr>
+            <td><code>at_commit</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[128]</code>
+            </td>
+            <td> The state is the content of a page at the commit with the given
+ identifier.
+</td>
+        </tr></table>
 
 
 

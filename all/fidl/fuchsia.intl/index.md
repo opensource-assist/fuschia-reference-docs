@@ -34,7 +34,7 @@ Book: /_book.yaml
     <tr>
             <td><code>profile</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.intl/index.html#Profile'>Profile</a></code>
+                <code><a class='link' href='#Profile'>Profile</a></code>
             </td>
         </tr></table>
 
@@ -205,7 +205,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>locales</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.intl/index.html#LocaleId'>LocaleId</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#LocaleId'>LocaleId</a>&gt;</code>
             </td>
             <td> Ranked list of locales (in descending order).
 </td>
@@ -213,7 +213,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>calendars</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.intl/index.html#CalendarId'>CalendarId</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CalendarId'>CalendarId</a>&gt;</code>
             </td>
             <td> Ranked list of calendars (in descending order). The first entry is the primary calendar, and
  will be equal to the calendar indicated in `locales`.
@@ -223,7 +223,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>time_zones</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.intl/index.html#TimeZoneId'>TimeZoneId</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#TimeZoneId'>TimeZoneId</a>&gt;</code>
             </td>
             <td> Ranked list of time zones (in descending order). The first entry is the primary time zone,
  calendar indicated in `locales`.
@@ -234,7 +234,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>temperature_unit</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.intl/index.html#TemperatureUnit'>TemperatureUnit</a></code>
+                <code><a class='link' href='#TemperatureUnit'>TemperatureUnit</a></code>
             </td>
             <td> Selected temperature unit.
 </td>

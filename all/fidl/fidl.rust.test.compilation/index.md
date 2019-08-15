@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr>
             <td><code>test_x_union</code></td>
             <td>
-                <code><a class='link' href='../fidl.rust.test.compilation/index.html#TestXUnion'>TestXUnion</a></code>
+                <code><a class='link' href='#TestXUnion'>TestXUnion</a></code>
             </td>
         </tr></table>
 
@@ -30,7 +30,7 @@ Book: /_book.yaml
     <tr>
             <td><code>test_x_union</code></td>
             <td>
-                <code><a class='link' href='../fidl.rust.test.compilation/index.html#TestXUnion'>TestXUnion</a></code>
+                <code><a class='link' href='#TestXUnion'>TestXUnion</a></code>
             </td>
         </tr></table>
 
@@ -54,7 +54,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fidl.rust.test.compilation/index.html#TestInterface_TestErrorMethod_Result'>TestInterface_TestErrorMethod_Result</a></code>
+                <code><a class='link' href='#TestInterface_TestErrorMethod_Result'>TestInterface_TestErrorMethod_Result</a></code>
             </td>
         </tr></table>
 
@@ -145,13 +145,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fidl.rust.test.compilation/index.html#TestInterface_TestErrorMethod_Response'>TestInterface_TestErrorMethod_Response</a></code>
+                <code><a class='link' href='#TestInterface_TestErrorMethod_Response'>TestInterface_TestErrorMethod_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fidl.rust.test.compilation/index.html#ErrorReturn'>ErrorReturn</a></code>
+                <code><a class='link' href='#ErrorReturn'>ErrorReturn</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -164,7 +164,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>variant</code></td>
             <td>
-                <code><a class='link' href='../fidl.rust.test.compilation/index.html#HasBigArray'>HasBigArray</a></code>
+                <code><a class='link' href='#HasBigArray'>HasBigArray</a></code>
             </td>
             <td></td>
         </tr><tr>

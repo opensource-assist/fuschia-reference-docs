@@ -21,7 +21,7 @@ Book: /_book.yaml
     <tr>
             <td><code>aps</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.sme/index.html#EssInfo'>EssInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#EssInfo'>EssInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -46,7 +46,7 @@ Book: /_book.yaml
     <tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#ScanError'>ScanError</a></code>
+                <code><a class='link' href='#ScanError'>ScanError</a></code>
             </td>
         </tr></table>
 
@@ -65,7 +65,7 @@ Book: /_book.yaml
     <tr>
             <td><code>code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#ConnectResultCode'>ConnectResultCode</a></code>
+                <code><a class='link' href='#ConnectResultCode'>ConnectResultCode</a></code>
             </td>
         </tr></table>
 
@@ -82,12 +82,12 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#ScanRequest'>ScanRequest</a></code>
+                <code><a class='link' href='#ScanRequest'>ScanRequest</a></code>
             </td>
         </tr><tr>
             <td><code>txn</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.wlan.sme/index.html#ScanTransaction'>ScanTransaction</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#ScanTransaction'>ScanTransaction</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -102,12 +102,12 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#ConnectRequest'>ConnectRequest</a></code>
+                <code><a class='link' href='#ConnectRequest'>ConnectRequest</a></code>
             </td>
         </tr><tr>
             <td><code>txn</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.wlan.sme/index.html#ConnectTransaction'>ConnectTransaction</a>&gt;?</code>
+                <code>request&lt;<a class='link' href='#ConnectTransaction'>ConnectTransaction</a>&gt;?</code>
             </td>
         </tr></table>
 
@@ -142,7 +142,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#ClientStatusResponse'>ClientStatusResponse</a></code>
+                <code><a class='link' href='#ClientStatusResponse'>ClientStatusResponse</a></code>
             </td>
         </tr></table>
 
@@ -159,7 +159,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#ApConfig'>ApConfig</a></code>
+                <code><a class='link' href='#ApConfig'>ApConfig</a></code>
             </td>
         </tr></table>
 
@@ -170,7 +170,7 @@ Book: /_book.yaml
     <tr>
             <td><code>code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#StartApResultCode'>StartApResultCode</a></code>
+                <code><a class='link' href='#StartApResultCode'>StartApResultCode</a></code>
             </td>
         </tr></table>
 
@@ -201,7 +201,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#MeshConfig'>MeshConfig</a></code>
+                <code><a class='link' href='#MeshConfig'>MeshConfig</a></code>
             </td>
         </tr></table>
 
@@ -212,7 +212,7 @@ Book: /_book.yaml
     <tr>
             <td><code>code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#JoinMeshResultCode'>JoinMeshResultCode</a></code>
+                <code><a class='link' href='#JoinMeshResultCode'>JoinMeshResultCode</a></code>
             </td>
         </tr></table>
 
@@ -231,7 +231,7 @@ Book: /_book.yaml
     <tr>
             <td><code>code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#LeaveMeshResultCode'>LeaveMeshResultCode</a></code>
+                <code><a class='link' href='#LeaveMeshResultCode'>LeaveMeshResultCode</a></code>
             </td>
         </tr></table>
 
@@ -250,7 +250,7 @@ Book: /_book.yaml
     <tr>
             <td><code>code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#GetMeshPathTableResultCode'>GetMeshPathTableResultCode</a></code>
+                <code><a class='link' href='#GetMeshPathTableResultCode'>GetMeshPathTableResultCode</a></code>
             </td>
         </tr><tr>
             <td><code>path</code></td>
@@ -327,7 +327,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>best_bss</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#BssInfo'>BssInfo</a></code>
+                <code><a class='link' href='#BssInfo'>BssInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -345,7 +345,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#ScanErrorCode'>ScanErrorCode</a></code>
+                <code><a class='link' href='#ScanErrorCode'>ScanErrorCode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -467,14 +467,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>credential</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#Credential'>Credential</a></code>
+                <code><a class='link' href='#Credential'>Credential</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>radio_cfg</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#RadioConfig'>RadioConfig</a></code>
+                <code><a class='link' href='#RadioConfig'>RadioConfig</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -499,7 +499,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>connected_to</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#BssInfo'>BssInfo</a>?</code>
+                <code><a class='link' href='#BssInfo'>BssInfo</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -538,7 +538,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>radio_cfg</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#RadioConfig'>RadioConfig</a></code>
+                <code><a class='link' href='#RadioConfig'>RadioConfig</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -743,7 +743,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>none</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.sme/index.html#Empty'>Empty</a></code>
+                <code><a class='link' href='#Empty'>Empty</a></code>
             </td>
             <td> The network does not use credentials (open networks).
 </td>

@@ -23,7 +23,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr></table>
 
@@ -34,7 +34,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -47,7 +47,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr></table>
 
@@ -62,7 +62,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr><tr>
             <td><code>protocol_id</code></td>
@@ -78,7 +78,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -91,7 +91,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -107,7 +107,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -120,7 +120,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -136,7 +136,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -149,7 +149,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr></table>
 
@@ -160,7 +160,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -173,7 +173,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr><tr>
             <td><code>count</code></td>
@@ -194,7 +194,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -207,7 +207,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr><tr>
             <td><code>buffer</code></td>
@@ -228,7 +228,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -241,7 +241,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr></table>
 
@@ -252,7 +252,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -265,7 +265,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -281,7 +281,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -294,7 +294,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -310,7 +310,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -323,7 +323,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr></table>
 
@@ -334,7 +334,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -347,7 +347,7 @@ Book: /_book.yaml
     <tr>
             <td><code>record</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#HookInvocation'>HookInvocation</a></code>
+                <code><a class='link' href='#HookInvocation'>HookInvocation</a></code>
             </td>
         </tr></table>
 
@@ -358,7 +358,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -409,7 +409,7 @@ Book: /_book.yaml
     <tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.device.mock/index.html#Action'>Action</a>&gt;[10]</code>
+                <code>vector&lt;<a class='link' href='#Action'>Action</a>&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -535,7 +535,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>controller</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#MockDevice'>MockDevice</a>?</code>
+                <code><a class='link' href='#MockDevice'>MockDevice</a>?</code>
             </td>
             <td> If creating a mock device, the service the new device will listen to.
 </td>
@@ -599,21 +599,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>create_thread</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.device.mock/index.html#MockDeviceThread'>MockDeviceThread</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#MockDeviceThread'>MockDeviceThread</a>&gt;</code>
             </td>
             <td> Create a new thread with a processing loop.
 </td>
         </tr><tr>
             <td><code>remove_device</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#RemoveDeviceAction'>RemoveDeviceAction</a></code>
+                <code><a class='link' href='#RemoveDeviceAction'>RemoveDeviceAction</a></code>
             </td>
             <td> Invoke device_remove() on our device.
 </td>
         </tr><tr>
             <td><code>add_device</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.device.mock/index.html#AddDeviceAction'>AddDeviceAction</a></code>
+                <code><a class='link' href='#AddDeviceAction'>AddDeviceAction</a></code>
             </td>
             <td> Create a new child device
 </td>

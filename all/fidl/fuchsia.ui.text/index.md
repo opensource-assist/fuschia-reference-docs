@@ -35,7 +35,7 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#TextFieldState'>TextFieldState</a></code>
+                <code><a class='link' href='#TextFieldState'>TextFieldState</a></code>
             </td>
         </tr></table>
 
@@ -49,7 +49,7 @@ Book: /_book.yaml
     <tr>
             <td><code>old_position</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Position'>Position</a></code>
+                <code><a class='link' href='#Position'>Position</a></code>
             </td>
         </tr><tr>
             <td><code>offset</code></td>
@@ -70,12 +70,12 @@ Book: /_book.yaml
     <tr>
             <td><code>new_position</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Position'>Position</a></code>
+                <code><a class='link' href='#Position'>Position</a></code>
             </td>
         </tr><tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
         </tr></table>
 
@@ -91,7 +91,7 @@ Book: /_book.yaml
     <tr>
             <td><code>range</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
         </tr><tr>
             <td><code>revision</code></td>
@@ -112,7 +112,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
         </tr></table>
 
@@ -126,7 +126,7 @@ Book: /_book.yaml
     <tr>
             <td><code>range</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
         </tr><tr>
             <td><code>revision</code></td>
@@ -147,12 +147,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>start</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Position'>Position</a></code>
+                <code><a class='link' href='#Position'>Position</a></code>
             </td>
         </tr><tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
         </tr></table>
 
@@ -178,7 +178,7 @@ Book: /_book.yaml
 
  If the transaction's revision number (from BeginEdit) is still current,
  runs all edit commands queued in this transaction. If not, returns
- BAD_REVISION.
+ `BAD_REVISION`.
 
 #### Request
 <table>
@@ -192,7 +192,7 @@ Book: /_book.yaml
     <tr>
             <td><code>error</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Error'>Error</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
         </tr></table>
 
@@ -220,7 +220,7 @@ Book: /_book.yaml
     <tr>
             <td><code>range</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
         </tr><tr>
             <td><code>new_text</code></td>
@@ -241,7 +241,7 @@ Book: /_book.yaml
     <tr>
             <td><code>selection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Selection'>Selection</a></code>
+                <code><a class='link' href='#Selection'>Selection</a></code>
             </td>
         </tr></table>
 
@@ -258,12 +258,12 @@ Book: /_book.yaml
     <tr>
             <td><code>composition_range</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
         </tr><tr>
             <td><code>highlight_range</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Range'>Range</a>?</code>
+                <code><a class='link' href='#Range'>Range</a>?</code>
             </td>
         </tr></table>
 
@@ -290,7 +290,7 @@ Book: /_book.yaml
     <tr>
             <td><code>range</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
         </tr></table>
 
@@ -341,7 +341,7 @@ Book: /_book.yaml
     <tr>
             <td><code>text_field</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#TextField'>TextField</a></code>
+                <code><a class='link' href='#TextField'>TextField</a></code>
             </td>
         </tr></table>
 
@@ -417,21 +417,21 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>range</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>anchor</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#SelectionAnchor'>SelectionAnchor</a></code>
+                <code><a class='link' href='#SelectionAnchor'>SelectionAnchor</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>affinity</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Affinity'>Affinity</a></code>
+                <code><a class='link' href='#Affinity'>Affinity</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -453,14 +453,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>start</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Position'>Position</a></code>
+                <code><a class='link' href='#Position'>Position</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>end</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Position'>Position</a></code>
+                <code><a class='link' href='#Position'>Position</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -570,7 +570,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>document</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
             <td> (required) The start and end of the entire text field.
 </td>
@@ -578,7 +578,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>selection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Selection'>Selection</a></code>
+                <code><a class='link' href='#Selection'>Selection</a></code>
             </td>
             <td> (required) The currently selected range of text.
 </td>
@@ -586,7 +586,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>composition</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
             <td> The range that indicates the text that is being composed, or currently
  receiving suggestions from the keyboard. It should be displayed in some
@@ -596,7 +596,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>composition_highlight</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
             <td> Some keyboards, notably Japanese, give the user buttons to highlight just a
  subset of the composition string for suggestions. It must be equal to or a subset
@@ -607,7 +607,7 @@ Type: <code>uint32</code>
             <td>5</td>
             <td><code>dead_key_highlight</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.text/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
             <td> A dead key is a key combination you press before another key to add diacritical
  marks, accents, or other changes to the second key. After the first key, a

@@ -19,12 +19,12 @@ Book: /_book.yaml
     <tr>
             <td><code>profile</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#ProjectProfile'>ProjectProfile</a></code>
+                <code><a class='link' href='#ProjectProfile'>ProjectProfile</a></code>
             </td>
         </tr><tr>
             <td><code>logger</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.cobalt/index.html#Logger'>Logger</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Logger'>Logger</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -35,7 +35,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -48,12 +48,12 @@ Book: /_book.yaml
     <tr>
             <td><code>profile</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#ProjectProfile'>ProjectProfile</a></code>
+                <code><a class='link' href='#ProjectProfile'>ProjectProfile</a></code>
             </td>
         </tr><tr>
             <td><code>logger</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.cobalt/index.html#LoggerSimple'>LoggerSimple</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#LoggerSimple'>LoggerSimple</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -64,7 +64,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -82,12 +82,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>release_stage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#ReleaseStage'>ReleaseStage</a></code>
+                <code><a class='link' href='#ReleaseStage'>ReleaseStage</a></code>
             </td>
         </tr><tr>
             <td><code>logger</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.cobalt/index.html#Logger'>Logger</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Logger'>Logger</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -98,7 +98,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -116,12 +116,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>release_stage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#ReleaseStage'>ReleaseStage</a></code>
+                <code><a class='link' href='#ReleaseStage'>ReleaseStage</a></code>
             </td>
         </tr><tr>
             <td><code>logger</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.cobalt/index.html#LoggerSimple'>LoggerSimple</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#LoggerSimple'>LoggerSimple</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -132,7 +132,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -166,7 +166,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -210,7 +210,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -249,7 +249,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -288,7 +288,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -327,7 +327,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -356,7 +356,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -405,7 +405,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -439,7 +439,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -472,7 +472,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -516,7 +516,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -555,7 +555,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -594,7 +594,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -633,7 +633,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -662,7 +662,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -711,7 +711,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -745,7 +745,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -773,7 +773,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>histogram</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.cobalt/index.html#HistogramBucket'>HistogramBucket</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#HistogramBucket'>HistogramBucket</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -784,7 +784,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -802,7 +802,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>event_values</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.cobalt/index.html#CustomEventValue'>CustomEventValue</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CustomEventValue'>CustomEventValue</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -813,7 +813,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -826,7 +826,7 @@ Book: /_book.yaml
     <tr>
             <td><code>event</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#CobaltEvent'>CobaltEvent</a></code>
+                <code><a class='link' href='#CobaltEvent'>CobaltEvent</a></code>
             </td>
         </tr></table>
 
@@ -837,7 +837,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -850,7 +850,7 @@ Book: /_book.yaml
     <tr>
             <td><code>events</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.cobalt/index.html#CobaltEvent'>CobaltEvent</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CobaltEvent'>CobaltEvent</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -861,7 +861,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -895,7 +895,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -939,7 +939,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -978,7 +978,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -1017,7 +1017,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -1056,7 +1056,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -1085,7 +1085,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -1134,7 +1134,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -1168,7 +1168,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -1212,7 +1212,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -1229,7 +1229,7 @@ Book: /_book.yaml
     <tr>
             <td><code>experiments</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.cobalt/index.html#Experiment'>Experiment</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Experiment'>Experiment</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1240,7 +1240,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -1264,7 +1264,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -1418,7 +1418,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>release_stage</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#ReleaseStage'>ReleaseStage</a></code>
+                <code><a class='link' href='#ReleaseStage'>ReleaseStage</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1444,7 +1444,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1544,7 +1544,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>payload</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#EventPayload'>EventPayload</a></code>
+                <code><a class='link' href='#EventPayload'>EventPayload</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1682,13 +1682,13 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>event</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#Event'>Event</a></code>
+                <code><a class='link' href='#Event'>Event</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>event_count</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.cobalt/index.html#CountEvent'>CountEvent</a></code>
+                <code><a class='link' href='#CountEvent'>CountEvent</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1718,7 +1718,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>int_histogram</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.cobalt/index.html#HistogramBucket'>HistogramBucket</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#HistogramBucket'>HistogramBucket</a>&gt;</code>
             </td>
             <td></td>
         </tr></table>

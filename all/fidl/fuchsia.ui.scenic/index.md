@@ -20,12 +20,12 @@ Book: /_book.yaml
     <tr>
             <td><code>session</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ui.scenic/index.html#Session'>Session</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Session'>Session</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.scenic/index.html#SessionListener'>SessionListener</a>?</code>
+                <code><a class='link' href='#SessionListener'>SessionListener</a>?</code>
             </td>
         </tr></table>
 
@@ -89,7 +89,7 @@ Book: /_book.yaml
     <tr>
             <td><code>img_data</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.scenic/index.html#ScreenshotData'>ScreenshotData</a></code>
+                <code><a class='link' href='#ScreenshotData'>ScreenshotData</a></code>
             </td>
         </tr><tr>
             <td><code>success</code></td>
@@ -113,7 +113,7 @@ Book: /_book.yaml
     <tr>
             <td><code>cmds</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ui.scenic/index.html#Command'>Command</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Command'>Command</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -300,11 +300,46 @@ Book: /_book.yaml
     <tr>
             <td><code>events</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ui.scenic/index.html#Event'>Event</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Event'>Event</a>&gt;</code>
             </td>
         </tr></table>
 
 
+
+## Snapshooter {:#Snapshooter}
+*Defined in [fuchsia.ui.scenic/snapshooter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/snapshooter.fidl#11)*
+
+ Defines an interface to take view snapshots.
+
+### TakeViewSnapshot {:#TakeViewSnapshot}
+
+ Takes a snapshot of a view and returns it in a callback.
+
+ The `view_koid` identifies the view whose snapshot needs to be taken.
+
+ The callback is invoked with the VMO buffer containing the snapshot.
+ If successful, the buffer size is non-zero, otherwise it is 0.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>view_koid</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>snapshot</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+        </tr></table>
 
 
 
@@ -395,7 +430,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>unhandled</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.scenic/index.html#Command'>Command</a></code>
+                <code><a class='link' href='#Command'>Command</a></code>
             </td>
             <td></td>
         </tr></table>

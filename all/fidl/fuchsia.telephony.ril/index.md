@@ -63,7 +63,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#Setup_ConnectTransport_Result'>Setup_ConnectTransport_Result</a></code>
+                <code><a class='link' href='#Setup_ConnectTransport_Result'>Setup_ConnectTransport_Result</a></code>
             </td>
         </tr></table>
 
@@ -88,7 +88,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RadioInterfaceLayer_GetDeviceIdentity_Result'>RadioInterfaceLayer_GetDeviceIdentity_Result</a></code>
+                <code><a class='link' href='#RadioInterfaceLayer_GetDeviceIdentity_Result'>RadioInterfaceLayer_GetDeviceIdentity_Result</a></code>
             </td>
         </tr></table>
 
@@ -108,7 +108,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RadioInterfaceLayer_RadioPowerStatus_Result'>RadioInterfaceLayer_RadioPowerStatus_Result</a></code>
+                <code><a class='link' href='#RadioInterfaceLayer_RadioPowerStatus_Result'>RadioInterfaceLayer_RadioPowerStatus_Result</a></code>
             </td>
         </tr></table>
 
@@ -133,7 +133,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RadioInterfaceLayer_StartNetwork_Result'>RadioInterfaceLayer_StartNetwork_Result</a></code>
+                <code><a class='link' href='#RadioInterfaceLayer_StartNetwork_Result'>RadioInterfaceLayer_StartNetwork_Result</a></code>
             </td>
         </tr></table>
 
@@ -153,7 +153,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RadioInterfaceLayer_GetNetworkSettings_Result'>RadioInterfaceLayer_GetNetworkSettings_Result</a></code>
+                <code><a class='link' href='#RadioInterfaceLayer_GetNetworkSettings_Result'>RadioInterfaceLayer_GetNetworkSettings_Result</a></code>
             </td>
         </tr></table>
 
@@ -173,7 +173,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RadioInterfaceLayer_GetSignalStrength_Result'>RadioInterfaceLayer_GetSignalStrength_Result</a></code>
+                <code><a class='link' href='#RadioInterfaceLayer_GetSignalStrength_Result'>RadioInterfaceLayer_GetSignalStrength_Result</a></code>
             </td>
         </tr></table>
 
@@ -221,7 +221,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RadioPowerState'>RadioPowerState</a></code>
+                <code><a class='link' href='#RadioPowerState'>RadioPowerState</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -239,7 +239,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>conn</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#NetworkConnection'>NetworkConnection</a></code>
+                <code><a class='link' href='#NetworkConnection'>NetworkConnection</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -257,7 +257,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#NetworkSettings'>NetworkSettings</a></code>
+                <code><a class='link' href='#NetworkSettings'>NetworkSettings</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -397,13 +397,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#Setup_ConnectTransport_Response'>Setup_ConnectTransport_Response</a></code>
+                <code><a class='link' href='#Setup_ConnectTransport_Response'>Setup_ConnectTransport_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RilError'>RilError</a></code>
+                <code><a class='link' href='#RilError'>RilError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -416,13 +416,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RadioInterfaceLayer_GetDeviceIdentity_Response'>RadioInterfaceLayer_GetDeviceIdentity_Response</a></code>
+                <code><a class='link' href='#RadioInterfaceLayer_GetDeviceIdentity_Response'>RadioInterfaceLayer_GetDeviceIdentity_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RilError'>RilError</a></code>
+                <code><a class='link' href='#RilError'>RilError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -435,13 +435,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RadioInterfaceLayer_RadioPowerStatus_Response'>RadioInterfaceLayer_RadioPowerStatus_Response</a></code>
+                <code><a class='link' href='#RadioInterfaceLayer_RadioPowerStatus_Response'>RadioInterfaceLayer_RadioPowerStatus_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RilError'>RilError</a></code>
+                <code><a class='link' href='#RilError'>RilError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -454,13 +454,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RadioInterfaceLayer_StartNetwork_Response'>RadioInterfaceLayer_StartNetwork_Response</a></code>
+                <code><a class='link' href='#RadioInterfaceLayer_StartNetwork_Response'>RadioInterfaceLayer_StartNetwork_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RilError'>RilError</a></code>
+                <code><a class='link' href='#RilError'>RilError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -473,13 +473,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RadioInterfaceLayer_GetNetworkSettings_Response'>RadioInterfaceLayer_GetNetworkSettings_Response</a></code>
+                <code><a class='link' href='#RadioInterfaceLayer_GetNetworkSettings_Response'>RadioInterfaceLayer_GetNetworkSettings_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RilError'>RilError</a></code>
+                <code><a class='link' href='#RilError'>RilError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -492,13 +492,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RadioInterfaceLayer_GetSignalStrength_Response'>RadioInterfaceLayer_GetSignalStrength_Response</a></code>
+                <code><a class='link' href='#RadioInterfaceLayer_GetSignalStrength_Response'>RadioInterfaceLayer_GetSignalStrength_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.telephony.ril/index.html#RilError'>RilError</a></code>
+                <code><a class='link' href='#RilError'>RilError</a></code>
             </td>
             <td></td>
         </tr></table>

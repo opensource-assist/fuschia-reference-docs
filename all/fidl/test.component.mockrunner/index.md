@@ -107,7 +107,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>req</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../test.component.mockrunner/index.html#MockComponent'>MockComponent</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#MockComponent'>MockComponent</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -124,7 +124,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../test.component.mockrunner/index.html#ComponentInfo'>ComponentInfo</a></code>
+                <code><a class='link' href='#ComponentInfo'>ComponentInfo</a></code>
             </td>
         </tr></table>
 
@@ -156,7 +156,7 @@ Book: /_book.yaml
     <tr>
             <td><code>runner</code></td>
             <td>
-                <code><a class='link' href='../test.component.mockrunner/index.html#MockRunner'>MockRunner</a></code>
+                <code><a class='link' href='#MockRunner'>MockRunner</a></code>
             </td>
         </tr></table>
 

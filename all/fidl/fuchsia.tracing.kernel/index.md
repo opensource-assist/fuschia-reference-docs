@@ -78,7 +78,7 @@ Book: /_book.yaml
 ### GetBytesWritten {:#GetBytesWritten}
 
  Get the number of bytes written to the trace buffer.
- `size` is valid if, and only if, `status` is ZX_OK.
+ `size` is valid if, and only if, `status` is `ZX_OK`.
 
 #### Request
 <table>

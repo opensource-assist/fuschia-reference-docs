@@ -9,7 +9,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### RoutingTableFuzzPlan {:#RoutingTableFuzzPlan}
-*Defined in [fuchsia.overnet.routingtablefuzzer/routing_table_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/routing/routing_table_fuzzer.test.fidl#9)*
+*Defined in [fuchsia.overnet.routingtablefuzzer/routing_table_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/routing/routing_table_fuzzer.test.fidl#9)*
 
 
 
@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>actions</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.overnet.routingtablefuzzer/index.html#RoutingTableAction'>RoutingTableAction</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#RoutingTableAction'>RoutingTableAction</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -27,7 +27,7 @@ Book: /_book.yaml
 </table>
 
 ### Void {:#Void}
-*Defined in [fuchsia.overnet.routingtablefuzzer/routing_table_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/routing/routing_table_fuzzer.test.fidl#13)*
+*Defined in [fuchsia.overnet.routingtablefuzzer/routing_table_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/routing/routing_table_fuzzer.test.fidl#13)*
 
 
 
@@ -48,7 +48,7 @@ Book: /_book.yaml
 ## **XUNIONS**
 
 ### RoutingTableAction {:#RoutingTableAction}
-*Defined in [fuchsia.overnet.routingtablefuzzer/routing_table_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/lib/routing/routing_table_fuzzer.test.fidl#15)*
+*Defined in [fuchsia.overnet.routingtablefuzzer/routing_table_fuzzer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/overnet/deprecated/lib/routing/routing_table_fuzzer.test.fidl#15)*
 
 
 <table>
@@ -73,7 +73,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>update_flush</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.routingtablefuzzer/index.html#Void'>Void</a></code>
+                <code><a class='link' href='#Void'>Void</a></code>
             </td>
             <td></td>
         </tr></table>

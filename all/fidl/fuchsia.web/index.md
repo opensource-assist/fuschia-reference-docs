@@ -26,12 +26,12 @@ Book: /_book.yaml
     <tr>
             <td><code>params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#CreateContextParams'>CreateContextParams</a></code>
+                <code><a class='link' href='#CreateContextParams'>CreateContextParams</a></code>
             </td>
         </tr><tr>
             <td><code>context</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#Context'>Context</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Context'>Context</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -58,7 +58,7 @@ Book: /_book.yaml
     <tr>
             <td><code>frame</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#Frame'>Frame</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Frame'>Frame</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -74,7 +74,7 @@ Book: /_book.yaml
     <tr>
             <td><code>manager</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#CookieManager'>CookieManager</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#CookieManager'>CookieManager</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -83,7 +83,7 @@ Book: /_book.yaml
 ### GetRemoteDebuggingPort {:#GetRemoteDebuggingPort}
 
  Returns the port used for remote debugging.
- The ContextError will be set to REMOTE_DEBUGGING_PORT_NOT_OPENED if
+ The ContextError will be set to `REMOTE_DEBUGGING_PORT_NOT_OPENED` if
  |remote_debugging_port| was not set in CreateContextParams or the
  remote debugging service failed to start.
 
@@ -99,7 +99,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Context_GetRemoteDebuggingPort_Result'>Context_GetRemoteDebuggingPort_Result</a></code>
+                <code><a class='link' href='#Context_GetRemoteDebuggingPort_Result'>Context_GetRemoteDebuggingPort_Result</a></code>
             </td>
         </tr></table>
 
@@ -108,13 +108,18 @@ Book: /_book.yaml
 
  Provides methods for monitoring and accessing browser cookie state.
 
-### StartObservingChanges {:#StartObservingChanges}
+### ObserveCookieChanges {:#ObserveCookieChanges}
 
  Observe changes to all cookies named `name` that would be sent in a
  request to `url`.
- `url` may be un-set to observe changes across all URLs,
- Similarly, `name` may be un-set to observe changes across all cookie
- names.
+
+ If neither `url` nor `name` are set then all cookies are observed.
+ If only `url` is set then all cookies for that URL are observed.
+ If both are set then only cookies matching both fields are observed.
+
+ |changes| iterates over a stream of cookie changes. Additions or updates
+ are expressed as complete cookies, while deletions are expressed as
+ cookies with no |value| set.
 
 #### Request
 <table>
@@ -130,70 +135,66 @@ Book: /_book.yaml
                 <code>string?</code>
             </td>
         </tr><tr>
-            <td><code>listener</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.web/index.html#CookieChangeListener'>CookieChangeListener</a></code>
-            </td>
-        </tr></table>
-
-
-
-### GetCookies {:#GetCookies}
-
- Returns a list of Cookies whose CookieIds match `ids`.
- Entries in `cookies` will be omitted for any CookieIds which can't be
- found.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>ids</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.web/index.html#CookieId'>CookieId</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>cookies</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.web/index.html#Cookie'>Cookie</a>&gt;</code>
-            </td>
-        </tr></table>
-
-## CookieChangeListener {:#CookieChangeListener}
-*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#28)*
-
- Receives notifications about changes in a context's cookie store.
-
-### OnCookieChanged {:#OnCookieChanged}
-
- Notifies the observer whenever cookies are added, changed, or removed
- for observed URLs. `changes` is populated with information about the
- cookies that were changed, and how they were changed.
- Cookies' data can be accessed by calling GetCookie() with the CookieId.
- Future cookie change events will be buffered until the acknowledgement
- callback is invoked.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
             <td><code>changes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.web/index.html#CookieChangeEvent'>CookieChangeEvent</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#CookiesIterator'>CookiesIterator</a>&gt;</code>
             </td>
         </tr></table>
 
 
-#### Response
+
+### GetCookieList {:#GetCookieList}
+
+ Returns a list of Cookies, optionally limited to those matching `url`,
+ and optionally `name`.
+ |cookies| iterates over the matching cookies, including their |value|s.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>url</code></td>
+            <td>
+                <code>string?</code>
+            </td>
+        </tr><tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string?</code>
+            </td>
+        </tr><tr>
+            <td><code>cookies</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#CookiesIterator'>CookiesIterator</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+## CookiesIterator {:#CookiesIterator}
+*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#35)*
+
+ Used to iterator over a set of cookies, or a stream of changes to cookies.
+
+### GetNext {:#GetNext}
+
+ Fetches the next batch of cookies, or of changes to cookies.
+
+#### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>changed_cookies</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Cookie'>Cookie</a>&gt;</code>
+            </td>
+        </tr></table>
 
 ## Debug {:#Debug}
 *Defined in [fuchsia.web/debug.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/debug.fidl#9)*
@@ -213,7 +214,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#DevToolsListener'>DevToolsListener</a></code>
+                <code><a class='link' href='#DevToolsListener'>DevToolsListener</a></code>
             </td>
         </tr></table>
 
@@ -242,7 +243,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#DevToolsPerContextListener'>DevToolsPerContextListener</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#DevToolsPerContextListener'>DevToolsPerContextListener</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -329,7 +330,7 @@ Book: /_book.yaml
     <tr>
             <td><code>controller</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#NavigationController'>NavigationController</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#NavigationController'>NavigationController</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -350,8 +351,8 @@ Book: /_book.yaml
  the script in arbitrary or unpredictable ways.
 
  If an error occured, the FrameError will be set to one of these values:
- BUFFER_NOT_UTF8: `script` is not UTF-8 encoded.
- INVALID_ORIGIN: The Frame's current URL does not match any of the
+ `BUFFER_NOT_UTF8`: `script` is not UTF-8 encoded.
+ `INVALID_ORIGIN`: The Frame's current URL does not match any of the
                  values in `origins` or `origins` is an empty vector.
 
 #### Request
@@ -376,7 +377,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_ExecuteJavaScript_Result'>Frame_ExecuteJavaScript_Result</a></code>
+                <code><a class='link' href='#Frame_ExecuteJavaScript_Result'>Frame_ExecuteJavaScript_Result</a></code>
             </td>
         </tr></table>
 
@@ -407,7 +408,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_ExecuteJavaScriptNoResult_Result'>Frame_ExecuteJavaScriptNoResult_Result</a></code>
+                <code><a class='link' href='#Frame_ExecuteJavaScriptNoResult_Result'>Frame_ExecuteJavaScriptNoResult_Result</a></code>
             </td>
         </tr></table>
 
@@ -430,8 +431,8 @@ Book: /_book.yaml
  evaluated for all documents.
 
  If an error occured, the FrameError will be set to one of these values:
- BUFFER_NOT_UTF8: `script` is not UTF-8 encoded.
- INVALID_ORIGIN: `origins` is an empty vector.
+ `BUFFER_NOT_UTF8`: `script` is not UTF-8 encoded.
+ `INVALID_ORIGIN`: `origins` is an empty vector.
 
 #### Request
 <table>
@@ -460,7 +461,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_AddBeforeLoadJavaScript_Result'>Frame_AddBeforeLoadJavaScript_Result</a></code>
+                <code><a class='link' href='#Frame_AddBeforeLoadJavaScript_Result'>Frame_AddBeforeLoadJavaScript_Result</a></code>
             </td>
         </tr></table>
 
@@ -492,11 +493,11 @@ Book: /_book.yaml
  for more details on how the target origin policy is applied.
 
  If an error occured, the FrameError will be set to one of these values:
- INTERNAL_ERROR: The WebEngine failed to create a message pipe.
- BUFFER_NOT_UTF8: The script in `message`'s `data` property is not
+ `INTERNAL_ERROR`: The WebEngine failed to create a message pipe.
+ `BUFFER_NOT_UTF8`: The script in `message`'s `data` property is not
                   UTF-8 encoded.
- INVALID_ORIGIN: `origins` is an empty vector.
- NO_DATA_IN_MESSAGE: The `data` property is missing in `message`.
+ `INVALID_ORIGIN`: `origins` is an empty vector.
+ `NO_DATA_IN_MESSAGE`: The `data` property is missing in `message`.
 
 #### Request
 <table>
@@ -509,7 +510,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>message</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#WebMessage'>WebMessage</a></code>
+                <code><a class='link' href='#WebMessage'>WebMessage</a></code>
             </td>
         </tr></table>
 
@@ -520,7 +521,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_PostMessage_Result'>Frame_PostMessage_Result</a></code>
+                <code><a class='link' href='#Frame_PostMessage_Result'>Frame_PostMessage_Result</a></code>
             </td>
         </tr></table>
 
@@ -537,7 +538,7 @@ Book: /_book.yaml
     <tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationEventListener'>NavigationEventListener</a>?</code>
+                <code><a class='link' href='#NavigationEventListener'>NavigationEventListener</a>?</code>
             </td>
         </tr></table>
 
@@ -560,7 +561,7 @@ Book: /_book.yaml
     <tr>
             <td><code>level</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#ConsoleLogLevel'>ConsoleLogLevel</a></code>
+                <code><a class='link' href='#ConsoleLogLevel'>ConsoleLogLevel</a></code>
             </td>
         </tr></table>
 
@@ -592,7 +593,7 @@ Book: /_book.yaml
  channel for `provider` must remain open for the entirety of the Frame
  lifetime.
  Invalid usage will result in closure of the Frame channel with
- ERR_INVALID_ARGS.
+ `ERR_INVALID_ARGS`.
 
 #### Request
 <table>
@@ -600,7 +601,7 @@ Book: /_book.yaml
     <tr>
             <td><code>provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#AdditionalHeadersProvider'>AdditionalHeadersProvider</a></code>
+                <code><a class='link' href='#AdditionalHeadersProvider'>AdditionalHeadersProvider</a></code>
             </td>
         </tr></table>
 
@@ -610,8 +611,28 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
+### SetPopupFrameCreationListener {:#SetPopupFrameCreationListener}
+
+ Sets the listener for handling popup frame opened by web content.
+ If no listener is present, then any new popup frame will be blocked.
+
+ `listener`: The listener to use. Unregisters any existing listener if
+             null.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>listener</code></td>
+            <td>
+                <code><a class='link' href='#PopupFrameCreationListener'>PopupFrameCreationListener</a>?</code>
+            </td>
+        </tr></table>
+
+
+
 ## AdditionalHeadersProvider {:#AdditionalHeadersProvider}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#180)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#188)*
 
 
 ### GetHeaders {:#GetHeaders}
@@ -643,7 +664,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## MessagePort {:#MessagePort}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#214)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#222)*
 
  Represents one end of an HTML5 MessageChannel. Can be used to send
  and exchange Messages with the peered MessagePort in the Frame's script
@@ -657,9 +678,9 @@ Book: /_book.yaml
  callback before calling PostMessage() again.
 
  If an error occured, the FrameError will be set to this value:
- BUFFER_NOT_UTF8: The script in `message`'s `data` property is not
+ `BUFFER_NOT_UTF8`: The script in `message`'s `data` property is not
                   UTF-8 encoded.
- NO_DATA_IN_MESSAGE: The `data` property is missing in `message`.
+ `NO_DATA_IN_MESSAGE`: The `data` property is missing in `message`.
 
 #### Request
 <table>
@@ -667,7 +688,7 @@ Book: /_book.yaml
     <tr>
             <td><code>message</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#WebMessage'>WebMessage</a></code>
+                <code><a class='link' href='#WebMessage'>WebMessage</a></code>
             </td>
         </tr></table>
 
@@ -678,7 +699,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#MessagePort_PostMessage_Result'>MessagePort_PostMessage_Result</a></code>
+                <code><a class='link' href='#MessagePort_PostMessage_Result'>MessagePort_PostMessage_Result</a></code>
             </td>
         </tr></table>
 
@@ -702,9 +723,42 @@ Book: /_book.yaml
     <tr>
             <td><code>message</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#WebMessage'>WebMessage</a></code>
+                <code><a class='link' href='#WebMessage'>WebMessage</a></code>
             </td>
         </tr></table>
+
+## PopupFrameCreationListener {:#PopupFrameCreationListener}
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#251)*
+
+
+### OnPopupFrameCreated {:#OnPopupFrameCreated}
+
+ Called when a Frame has created a new popup |frame|.
+ Information about the popup frame, and how it was created, is provided
+ via |info|.
+ Additional popup frames are delivered after the the acknowledgement
+ callback is invoked.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>frame</code></td>
+            <td>
+                <code><a class='link' href='#Frame'>Frame</a></code>
+            </td>
+        </tr><tr>
+            <td><code>info</code></td>
+            <td>
+                <code><a class='link' href='#PopupFrameCreationInfo'>PopupFrameCreationInfo</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
 
 ## NavigationEventListener {:#NavigationEventListener}
 *Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#11)*
@@ -728,7 +782,7 @@ Book: /_book.yaml
     <tr>
             <td><code>change</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationState'>NavigationState</a></code>
+                <code><a class='link' href='#NavigationState'>NavigationState</a></code>
             </td>
         </tr></table>
 
@@ -739,7 +793,7 @@ Book: /_book.yaml
     </table>
 
 ## NavigationController {:#NavigationController}
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#30)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#33)*
 
  Provides methods for controlling and querying the navigation state
  of a Frame.
@@ -747,13 +801,15 @@ Book: /_book.yaml
 ### LoadUrl {:#LoadUrl}
 
  Tells the Frame to navigate to a `url`.
+ * `url`:    The address to navigate to.
+ * `params`: Additional parameters that affect how the resource will be
+   loaded (e.g. cookies, HTTP headers, etc.)
 
- `url`:    The address to navigate to.
- `params`: Additional parameters that affect how the resource will be
-           loaded (e.g. cookies, HTTP headers, etc.)
-
- If an error occured, the NavigationControllerError will be set:
- INVALID_URL: The `url` parameter is invalid.
+ If an error occured, the <a class='link' href='#fuchsia.web.NavigationControllerError'>fuchsia.web.NavigationControllerError</a> will
+ be set:
+ * `INVALID_URL`: The `url` parameter is invalid.
+ * `INVALID_HEADER`: At least one of the headers in
+   <a class='link' href='../fuchsia.web.LoadUrlParams/index.html'>fuchsia.web.LoadUrlParams</a>/<a class='link' href='../fuchsia.web.LoadUrlParams/index.html#headers'>headers</a> is invalid.
 
 #### Request
 <table>
@@ -766,7 +822,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#LoadUrlParams'>LoadUrlParams</a></code>
+                <code><a class='link' href='#LoadUrlParams'>LoadUrlParams</a></code>
             </td>
         </tr></table>
 
@@ -777,7 +833,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationController_LoadUrl_Result'>NavigationController_LoadUrl_Result</a></code>
+                <code><a class='link' href='#NavigationController_LoadUrl_Result'>NavigationController_LoadUrl_Result</a></code>
             </td>
         </tr></table>
 
@@ -820,7 +876,7 @@ Book: /_book.yaml
     <tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#ReloadType'>ReloadType</a></code>
+                <code><a class='link' href='#ReloadType'>ReloadType</a></code>
             </td>
         </tr></table>
 
@@ -843,7 +899,7 @@ Book: /_book.yaml
     <tr>
             <td><code>entry</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationState'>NavigationState</a></code>
+                <code><a class='link' href='#NavigationState'>NavigationState</a></code>
             </td>
         </tr></table>
 
@@ -870,7 +926,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_ExecuteJavaScript_Response {:#Frame_ExecuteJavaScript_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
 
 
 
@@ -888,7 +944,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_ExecuteJavaScriptNoResult_Response {:#Frame_ExecuteJavaScriptNoResult_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#31)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#30)*
 
 
 
@@ -899,7 +955,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_AddBeforeLoadJavaScript_Response {:#Frame_AddBeforeLoadJavaScript_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#38)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
 
 
 
@@ -910,7 +966,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_PostMessage_Response {:#Frame_PostMessage_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#46)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
 
 
 
@@ -932,7 +988,7 @@ Book: /_book.yaml
 </table>
 
 ### NavigationController_LoadUrl_Response {:#NavigationController_LoadUrl_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#71)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#73)*
 
 
 
@@ -957,28 +1013,6 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>REMOTE_DEBUGGING_PORT_NOT_OPENED</code></td>
             <td><code>1</code></td>
-            <td></td>
-        </tr></table>
-
-### CookieChangeType {:#CookieChangeType}
-Type: <code>uint32</code>
-
-*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#57)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>ADDED</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>MODIFIED</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>DELETED</code></td>
-            <td><code>2</code></td>
             <td></td>
         </tr></table>
 
@@ -1052,12 +1086,16 @@ Type: <code>int32</code>
             <td><code>INVALID_URL</code></td>
             <td><code>1</code></td>
             <td></td>
+        </tr><tr>
+            <td><code>INVALID_HEADER</code></td>
+            <td><code>2</code></td>
+            <td></td>
         </tr></table>
 
 ### ReloadType {:#ReloadType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#96)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#101)*
 
  Characterizes the type of reload.
 
@@ -1076,7 +1114,7 @@ Type: <code>uint32</code>
 ### LoadUrlReason {:#LoadUrlReason}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#105)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#110)*
 
  Characterizes the origin of a LoadUrl request.
 
@@ -1095,7 +1133,7 @@ Type: <code>uint32</code>
 ### PageType {:#PageType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#114)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#119)*
 
  Characterizes the page type in a NavigationState.
 
@@ -1178,7 +1216,7 @@ Type: <code>uint32</code>
 ### CookieId {:#CookieId}
 
 
-*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#38)*
+*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#40)*
 
 
 
@@ -1213,7 +1251,7 @@ Type: <code>uint32</code>
 ### Cookie {:#Cookie}
 
 
-*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#49)*
+*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#51)*
 
 
 
@@ -1223,7 +1261,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#CookieId'>CookieId</a></code>
+                <code><a class='link' href='#CookieId'>CookieId</a></code>
             </td>
             <td> A table with fields to identify a cookie.
 </td>
@@ -1237,38 +1275,10 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
-### CookieChangeEvent {:#CookieChangeEvent}
-
-
-*Defined in [fuchsia.web/cookie.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#63)*
-
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>id</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.web/index.html#CookieId'>CookieId</a></code>
-            </td>
-            <td> The identity of the cookie which was changed.
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>type</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.web/index.html#CookieChangeType'>CookieChangeType</a></code>
-            </td>
-            <td> Describes what type of change caused the CookieChangeEvent to be
- published.
-</td>
-        </tr></table>
-
 ### WebMessage {:#WebMessage}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#188)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#196)*
 
 
 
@@ -1287,7 +1297,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>incoming_transfer</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.web/index.html#IncomingTransferable'>IncomingTransferable</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#IncomingTransferable'>IncomingTransferable</a>&gt;</code>
             </td>
             <td> Optional list of objects transferred into the MessagePort from the FIDL
  client.
@@ -1296,17 +1306,46 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>outgoing_transfer</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.web/index.html#OutgoingTransferable'>OutgoingTransferable</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#OutgoingTransferable'>OutgoingTransferable</a>&gt;</code>
             </td>
             <td> Optional list of objects transferred out of the MessagePort to the FIDL
  client.
 </td>
         </tr></table>
 
+### PopupFrameCreationInfo {:#PopupFrameCreationInfo}
+
+
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#242)*
+
+ Specifies additional information about a newly created popup frame.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>initial_url</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td> The URL to which the popup frame was initially navigated.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>initiated_by_user</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> Set if the popup frame was created in response to UI interaction from the
+ user (e.g. a link was clicked).
+</td>
+        </tr></table>
+
 ### LoadUrlParams {:#LoadUrlParams}
 
 
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#56)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#61)*
 
  Additional parameters for modifying the behavior of LoadUrl().
 
@@ -1317,7 +1356,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#LoadUrlReason'>LoadUrlReason</a></code>
+                <code><a class='link' href='#LoadUrlReason'>LoadUrlReason</a></code>
             </td>
             <td> Provides a hint to the browser UI about how LoadUrl was triggered.
 </td>
@@ -1353,7 +1392,7 @@ Type: <code>uint32</code>
 ### NavigationState {:#NavigationState}
 
 
-*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#74)*
+*Defined in [fuchsia.web/navigation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/navigation.fidl#79)*
 
  Contains information about the Frame's navigation state.
 
@@ -1380,7 +1419,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>page_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#PageType'>PageType</a></code>
+                <code><a class='link' href='#PageType'>PageType</a></code>
             </td>
             <td> Indicates whether this was a navigation to an error page.
 </td>
@@ -1423,89 +1462,89 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Context_GetRemoteDebuggingPort_Response'>Context_GetRemoteDebuggingPort_Response</a></code>
+                <code><a class='link' href='#Context_GetRemoteDebuggingPort_Response'>Context_GetRemoteDebuggingPort_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#ContextError'>ContextError</a></code>
+                <code><a class='link' href='#ContextError'>ContextError</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Frame_ExecuteJavaScript_Result {:#Frame_ExecuteJavaScript_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_ExecuteJavaScript_Response'>Frame_ExecuteJavaScript_Response</a></code>
+                <code><a class='link' href='#Frame_ExecuteJavaScript_Response'>Frame_ExecuteJavaScript_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#FrameError'>FrameError</a></code>
+                <code><a class='link' href='#FrameError'>FrameError</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Frame_ExecuteJavaScriptNoResult_Result {:#Frame_ExecuteJavaScriptNoResult_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#33)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_ExecuteJavaScriptNoResult_Response'>Frame_ExecuteJavaScriptNoResult_Response</a></code>
+                <code><a class='link' href='#Frame_ExecuteJavaScriptNoResult_Response'>Frame_ExecuteJavaScriptNoResult_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#FrameError'>FrameError</a></code>
+                <code><a class='link' href='#FrameError'>FrameError</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Frame_AddBeforeLoadJavaScript_Result {:#Frame_AddBeforeLoadJavaScript_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#41)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#40)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_AddBeforeLoadJavaScript_Response'>Frame_AddBeforeLoadJavaScript_Response</a></code>
+                <code><a class='link' href='#Frame_AddBeforeLoadJavaScript_Response'>Frame_AddBeforeLoadJavaScript_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#FrameError'>FrameError</a></code>
+                <code><a class='link' href='#FrameError'>FrameError</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Frame_PostMessage_Result {:#Frame_PostMessage_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#49)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#Frame_PostMessage_Response'>Frame_PostMessage_Response</a></code>
+                <code><a class='link' href='#Frame_PostMessage_Response'>Frame_PostMessage_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#FrameError'>FrameError</a></code>
+                <code><a class='link' href='#FrameError'>FrameError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1518,32 +1557,32 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#MessagePort_PostMessage_Response'>MessagePort_PostMessage_Response</a></code>
+                <code><a class='link' href='#MessagePort_PostMessage_Response'>MessagePort_PostMessage_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#FrameError'>FrameError</a></code>
+                <code><a class='link' href='#FrameError'>FrameError</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### NavigationController_LoadUrl_Result {:#NavigationController_LoadUrl_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#74)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#76)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationController_LoadUrl_Response'>NavigationController_LoadUrl_Response</a></code>
+                <code><a class='link' href='#NavigationController_LoadUrl_Response'>NavigationController_LoadUrl_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#NavigationControllerError'>NavigationControllerError</a></code>
+                <code><a class='link' href='#NavigationControllerError'>NavigationControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1553,27 +1592,27 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### OutgoingTransferable {:#OutgoingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#202)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#210)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>message_port</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.web/index.html#MessagePort'>MessagePort</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#MessagePort'>MessagePort</a>&gt;</code>
             </td>
             <td></td>
         </tr></table>
 
 ### IncomingTransferable {:#IncomingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#206)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#214)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>message_port</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.web/index.html#MessagePort'>MessagePort</a></code>
+                <code><a class='link' href='#MessagePort'>MessagePort</a></code>
             </td>
             <td></td>
         </tr></table>

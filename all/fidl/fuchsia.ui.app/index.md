@@ -63,7 +63,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.app/index.html#ViewConfig'>ViewConfig</a></code>
+                <code><a class='link' href='#ViewConfig'>ViewConfig</a></code>
             </td>
         </tr></table>
 
@@ -90,11 +90,7 @@ Book: /_book.yaml
 
 
 ## ViewProvider {:#ViewProvider}
-*Defined in [fuchsia.ui.app/view_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.app/view_provider.fidl#24)*
-
- NOTE: This is likely not the ViewProvider you are looking for!  This is
- the new ViewProvider interface that will be deprecating the old one soon.
- The old ViewProvider is in fuchsia.ui.viewsv1.ViewProvider.
+*Defined in [fuchsia.ui.app/view_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.app/view_provider.fidl#19)*
 
  ViewProvider is the standard mechanism for two modules to each obtain half
  of a shared eventpair token.  The shared token is a capability allowing the

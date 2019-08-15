@@ -46,7 +46,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.testing.runner/index.html#TestResult'>TestResult</a></code>
+                <code><a class='link' href='#TestResult'>TestResult</a></code>
             </td>
         </tr></table>
 

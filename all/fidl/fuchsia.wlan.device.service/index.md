@@ -89,7 +89,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device.service/index.html#ListPhysResponse'>ListPhysResponse</a></code>
+                <code><a class='link' href='#ListPhysResponse'>ListPhysResponse</a></code>
             </td>
         </tr></table>
 
@@ -102,7 +102,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device.service/index.html#QueryPhyRequest'>QueryPhyRequest</a></code>
+                <code><a class='link' href='#QueryPhyRequest'>QueryPhyRequest</a></code>
             </td>
         </tr></table>
 
@@ -118,7 +118,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device.service/index.html#QueryPhyResponse'>QueryPhyResponse</a>?</code>
+                <code><a class='link' href='#QueryPhyResponse'>QueryPhyResponse</a>?</code>
             </td>
         </tr></table>
 
@@ -137,7 +137,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device.service/index.html#ListIfacesResponse'>ListIfacesResponse</a></code>
+                <code><a class='link' href='#ListIfacesResponse'>ListIfacesResponse</a></code>
             </td>
         </tr></table>
 
@@ -166,7 +166,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device.service/index.html#QueryIfaceResponse'>QueryIfaceResponse</a>?</code>
+                <code><a class='link' href='#QueryIfaceResponse'>QueryIfaceResponse</a>?</code>
             </td>
         </tr></table>
 
@@ -179,7 +179,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device.service/index.html#CreateIfaceRequest'>CreateIfaceRequest</a></code>
+                <code><a class='link' href='#CreateIfaceRequest'>CreateIfaceRequest</a></code>
             </td>
         </tr></table>
 
@@ -195,7 +195,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device.service/index.html#CreateIfaceResponse'>CreateIfaceResponse</a>?</code>
+                <code><a class='link' href='#CreateIfaceResponse'>CreateIfaceResponse</a>?</code>
             </td>
         </tr></table>
 
@@ -208,7 +208,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device.service/index.html#DestroyIfaceRequest'>DestroyIfaceRequest</a></code>
+                <code><a class='link' href='#DestroyIfaceRequest'>DestroyIfaceRequest</a></code>
             </td>
         </tr></table>
 
@@ -411,7 +411,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.wlan.device.service/index.html#DeviceWatcher'>DeviceWatcher</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#DeviceWatcher'>DeviceWatcher</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -426,7 +426,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.device.service/index.html#SetCountryRequest'>SetCountryRequest</a></code>
+                <code><a class='link' href='#SetCountryRequest'>SetCountryRequest</a></code>
             </td>
         </tr></table>
 
@@ -481,7 +481,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>phys</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.device.service/index.html#PhyListItem'>PhyListItem</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#PhyListItem'>PhyListItem</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -621,7 +621,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>ifaces</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.device.service/index.html#IfaceListItem'>IfaceListItem</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#IfaceListItem'>IfaceListItem</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>

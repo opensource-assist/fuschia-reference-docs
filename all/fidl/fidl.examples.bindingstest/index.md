@@ -92,7 +92,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>z</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#NoHandleStruct'>NoHandleStruct</a></code>
+                <code><a class='link' href='#NoHandleStruct'>NoHandleStruct</a></code>
             </td>
         </tr></table>
 
@@ -123,7 +123,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>z</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#NoHandleStruct'>NoHandleStruct</a></code>
+                <code><a class='link' href='#NoHandleStruct'>NoHandleStruct</a></code>
             </td>
         </tr></table>
 
@@ -136,7 +136,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#ExampleTable'>ExampleTable</a></code>
+                <code><a class='link' href='#ExampleTable'>ExampleTable</a></code>
             </td>
         </tr></table>
 
@@ -157,7 +157,7 @@ Book: /_book.yaml
     <tr>
             <td><code>received</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#ExampleTable'>ExampleTable</a></code>
+                <code><a class='link' href='#ExampleTable'>ExampleTable</a></code>
             </td>
         </tr></table>
 
@@ -218,7 +218,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>z</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#NoHandleStruct'>NoHandleStruct</a></code>
+                <code><a class='link' href='#NoHandleStruct'>NoHandleStruct</a></code>
             </td>
         </tr></table>
 
@@ -239,7 +239,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>z</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#NoHandleStruct'>NoHandleStruct</a></code>
+                <code><a class='link' href='#NoHandleStruct'>NoHandleStruct</a></code>
             </td>
         </tr></table>
 
@@ -252,7 +252,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#ExampleXunion'>ExampleXunion</a></code>
+                <code><a class='link' href='#ExampleXunion'>ExampleXunion</a></code>
             </td>
         </tr></table>
 
@@ -273,7 +273,7 @@ Book: /_book.yaml
     <tr>
             <td><code>received</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#ExampleXunion'>ExampleXunion</a></code>
+                <code><a class='link' href='#ExampleXunion'>ExampleXunion</a></code>
             </td>
         </tr></table>
 
@@ -286,7 +286,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#ExampleBits'>ExampleBits</a></code>
+                <code><a class='link' href='#ExampleBits'>ExampleBits</a></code>
             </td>
         </tr></table>
 
@@ -307,7 +307,7 @@ Book: /_book.yaml
     <tr>
             <td><code>received</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#ExampleBits'>ExampleBits</a></code>
+                <code><a class='link' href='#ExampleBits'>ExampleBits</a></code>
             </td>
         </tr></table>
 
@@ -380,7 +380,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>z</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#NoHandleStruct'>NoHandleStruct</a></code>
+                <code><a class='link' href='#NoHandleStruct'>NoHandleStruct</a></code>
             </td>
         </tr></table>
 
@@ -407,7 +407,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>z</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#NoHandleStruct'>NoHandleStruct</a></code>
+                <code><a class='link' href='#NoHandleStruct'>NoHandleStruct</a></code>
             </td>
         </tr></table>
 
@@ -495,7 +495,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorZero_Result'>TestServer_ReplyWithErrorZero_Result</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorZero_Result'>TestServer_ReplyWithErrorZero_Result</a></code>
             </td>
         </tr></table>
 
@@ -524,7 +524,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorOne_Result'>TestServer_ReplyWithErrorOne_Result</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorOne_Result'>TestServer_ReplyWithErrorOne_Result</a></code>
             </td>
         </tr></table>
 
@@ -558,7 +558,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorMore_Result'>TestServer_ReplyWithErrorMore_Result</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorMore_Result'>TestServer_ReplyWithErrorMore_Result</a></code>
             </td>
         </tr></table>
 
@@ -582,7 +582,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorEnumZero_Result'>TestServer_ReplyWithErrorEnumZero_Result</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorEnumZero_Result'>TestServer_ReplyWithErrorEnumZero_Result</a></code>
             </td>
         </tr></table>
 
@@ -611,7 +611,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorEnumOne_Result'>TestServer_ReplyWithErrorEnumOne_Result</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorEnumOne_Result'>TestServer_ReplyWithErrorEnumOne_Result</a></code>
             </td>
         </tr></table>
 
@@ -645,7 +645,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorEnumMore_Result'>TestServer_ReplyWithErrorEnumMore_Result</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorEnumMore_Result'>TestServer_ReplyWithErrorEnumMore_Result</a></code>
             </td>
         </tr></table>
 
@@ -929,7 +929,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>es</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#EmptyStruct'>EmptyStruct</a></code>
+                <code><a class='link' href='#EmptyStruct'>EmptyStruct</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -954,7 +954,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>table</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#SimpleTable'>SimpleTable</a></code>
+                <code><a class='link' href='#SimpleTable'>SimpleTable</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -972,7 +972,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>table</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TableWithStringAndVector'>TableWithStringAndVector</a></code>
+                <code><a class='link' href='#TableWithStringAndVector'>TableWithStringAndVector</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1015,7 +1015,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#SampleXUnion'>SampleXUnion</a></code>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1047,7 +1047,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#SampleXUnion'>SampleXUnion</a>?</code>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1072,7 +1072,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#XUnionInTable'>XUnionInTable</a></code>
+                <code><a class='link' href='#XUnionInTable'>XUnionInTable</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1304,7 +1304,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>xu</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#SampleXUnion'>SampleXUnion</a></code>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1328,7 +1328,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorZero_Response'>TestServer_ReplyWithErrorZero_Response</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorZero_Response'>TestServer_ReplyWithErrorZero_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1347,7 +1347,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorOne_Response'>TestServer_ReplyWithErrorOne_Response</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorOne_Response'>TestServer_ReplyWithErrorOne_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1366,7 +1366,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorMore_Response'>TestServer_ReplyWithErrorMore_Response</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorMore_Response'>TestServer_ReplyWithErrorMore_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1385,13 +1385,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorEnumZero_Response'>TestServer_ReplyWithErrorEnumZero_Response</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorEnumZero_Response'>TestServer_ReplyWithErrorEnumZero_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#EnumOne'>EnumOne</a></code>
+                <code><a class='link' href='#EnumOne'>EnumOne</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1404,13 +1404,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorEnumOne_Response'>TestServer_ReplyWithErrorEnumOne_Response</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorEnumOne_Response'>TestServer_ReplyWithErrorEnumOne_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#EnumOne'>EnumOne</a></code>
+                <code><a class='link' href='#EnumOne'>EnumOne</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1423,13 +1423,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#TestServer_ReplyWithErrorEnumMore_Response'>TestServer_ReplyWithErrorEnumMore_Response</a></code>
+                <code><a class='link' href='#TestServer_ReplyWithErrorEnumMore_Response'>TestServer_ReplyWithErrorEnumMore_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#EnumOne'>EnumOne</a></code>
+                <code><a class='link' href='#EnumOne'>EnumOne</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1504,13 +1504,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#Int64Struct'>Int64Struct</a></code>
+                <code><a class='link' href='#Int64Struct'>Int64Struct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>os</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#Int64Struct'>Int64Struct</a>?</code>
+                <code><a class='link' href='#Int64Struct'>Int64Struct</a>?</code>
             </td>
             <td></td>
         </tr><tr>
@@ -1564,13 +1564,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>su</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#SimpleUnion'>SimpleUnion</a></code>
+                <code><a class='link' href='#SimpleUnion'>SimpleUnion</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>st</code></td>
             <td>
-                <code><a class='link' href='../fidl.examples.bindingstest/index.html#SimpleTable'>SimpleTable</a></code>
+                <code><a class='link' href='#SimpleTable'>SimpleTable</a></code>
             </td>
             <td></td>
         </tr></table>

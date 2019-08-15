@@ -266,12 +266,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>command_buffer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.gpu.magma/index.html#CommandBuffer'>CommandBuffer</a></code>
+                <code><a class='link' href='#CommandBuffer'>CommandBuffer</a></code>
             </td>
         </tr><tr>
             <td><code>resources</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.gpu.magma/index.html#Resource'>Resource</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Resource'>Resource</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>wait_semaphores</code></td>
@@ -336,7 +336,7 @@ Book: /_book.yaml
 ### MapBufferGpu {:#MapBufferGpu}
 
  Maps `page_count` pages of `buffer` from `page_offset` onto the GPU in the connection's
- address space at `gpu_va`.  `flags` is a set of flags from MAGMA_GPU_MAP_FLAGS that
+ address space at `gpu_va`.  `flags` is a set of flags from `MAGMA_GPU_MAP_FLAGS` that
  specify how the GPU can access the buffer.
 
 #### Request

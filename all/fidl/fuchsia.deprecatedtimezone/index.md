@@ -127,7 +127,7 @@ Book: /_book.yaml
     <tr>
             <td><code>watcher</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.deprecatedtimezone/index.html#TimezoneWatcher'>TimezoneWatcher</a></code>
+                <code><a class='link' href='#TimezoneWatcher'>TimezoneWatcher</a></code>
             </td>
         </tr></table>
 

@@ -15,7 +15,7 @@ Book: /_book.yaml
  Seal data to an encrypted form.
 
  Seal data to an encrypted form. The sealed data can only be unsealed by the same KMS instance
- by using UnsealData. `plain_text` needs to be less than MAX_DATA_SIZE bytes.
+ by using UnsealData. `plain_text` needs to be less than `MAX_DATA_SIZE` bytes.
 
 #### Request
 <table>
@@ -34,7 +34,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>cipher_text</code></td>
@@ -66,7 +66,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>plain_text</code></td>
@@ -81,8 +81,8 @@ Book: /_book.yaml
 
  Generate an asymmetric key using `key_name` as the unique name. `key` is the generated
  asymmetric key interface request. If the `key_name` is not unique, you would get
- KEY_ALREADY_EXISTS. The generated key can be used to sign data. The algorithm used for
- generating asymmetric key is ECDSA_SHA512_P521.
+ `KEY_ALREADY_EXISTS`. The generated key can be used to sign data. The algorithm used for
+ generating asymmetric key is `ECDSA_SHA512_P521`.
 
 #### Request
 <table>
@@ -95,7 +95,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>key</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.kms/index.html#AsymmetricPrivateKey'>AsymmetricPrivateKey</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AsymmetricPrivateKey'>AsymmetricPrivateKey</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -106,7 +106,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -116,7 +116,7 @@ Book: /_book.yaml
 
  Generate an asymmetric key using `key_name` as the unique name and `key_algorithm` as
  algorithm. `key` is the generated asymmetric key interface request. If the `key_name` is not
- unique, you would get KEY_ALREADY_EXISTS.
+ unique, you would get `KEY_ALREADY_EXISTS`.
 
 #### Request
 <table>
@@ -129,12 +129,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>key_algorithm</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#AsymmetricKeyAlgorithm'>AsymmetricKeyAlgorithm</a></code>
+                <code><a class='link' href='#AsymmetricKeyAlgorithm'>AsymmetricKeyAlgorithm</a></code>
             </td>
         </tr><tr>
             <td><code>key</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.kms/index.html#AsymmetricPrivateKey'>AsymmetricPrivateKey</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AsymmetricPrivateKey'>AsymmetricPrivateKey</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -145,7 +145,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -156,7 +156,7 @@ Book: /_book.yaml
  Import an asymmetric private key using `key_name` as the unique name, `key_algorithm` as
  algorithm and `data` as key data. `key` is imported asymmetric key interface request. Key
  data should be in asn.1 encoded DER format. If the `key_name` is not unique, you would get
- KEY_ALREADY_EXISTS.
+ `KEY_ALREADY_EXISTS`.
 
 #### Request
 <table>
@@ -174,12 +174,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>key_algorithm</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#AsymmetricKeyAlgorithm'>AsymmetricKeyAlgorithm</a></code>
+                <code><a class='link' href='#AsymmetricKeyAlgorithm'>AsymmetricKeyAlgorithm</a></code>
             </td>
         </tr><tr>
             <td><code>key</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.kms/index.html#AsymmetricPrivateKey'>AsymmetricPrivateKey</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AsymmetricPrivateKey'>AsymmetricPrivateKey</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -190,7 +190,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -199,7 +199,7 @@ Book: /_book.yaml
  Get an asymmetric private key handle.
 
  Get an asymmetric private key handle using the `key_name`. If such key is not found, would
- return KEY_NOT_FOUND.
+ return `KEY_NOT_FOUND`.
 
 #### Request
 <table>
@@ -212,7 +212,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>key</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.kms/index.html#AsymmetricPrivateKey'>AsymmetricPrivateKey</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#AsymmetricPrivateKey'>AsymmetricPrivateKey</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -223,7 +223,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -232,8 +232,8 @@ Book: /_book.yaml
  Delete a key.
 
  Delete a key for `key_name`.  For all the current handle to the deleted key, they would
- become invalid and all following requests on those handles would return KEY_NOT_FOUND, user
- should close the invalid handles once get KEY_NOT_FOUND Status.
+ become invalid and all following requests on those handles would return `KEY_NOT_FOUND`, user
+ should close the invalid handles once get `KEY_NOT_FOUND` Status.
 
 #### Request
 <table>
@@ -252,7 +252,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -276,12 +276,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>key_origin</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#KeyOrigin'>KeyOrigin</a></code>
+                <code><a class='link' href='#KeyOrigin'>KeyOrigin</a></code>
             </td>
         </tr></table>
 
@@ -305,18 +305,18 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>key_origin</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#KeyOrigin'>KeyOrigin</a></code>
+                <code><a class='link' href='#KeyOrigin'>KeyOrigin</a></code>
             </td>
         </tr></table>
 
 ### Sign {:#Sign}
 
- Sign `data` using the current key. `data` needs to be less than MAX_DATA_SIZE bytes.
+ Sign `data` using the current key. `data` needs to be less than `MAX_DATA_SIZE` bytes.
 
 #### Request
 <table>
@@ -335,12 +335,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>signature</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Signature'>Signature</a>?</code>
+                <code><a class='link' href='#Signature'>Signature</a>?</code>
             </td>
         </tr></table>
 
@@ -360,12 +360,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>public_key</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#PublicKey'>PublicKey</a>?</code>
+                <code><a class='link' href='#PublicKey'>PublicKey</a>?</code>
             </td>
         </tr></table>
 
@@ -385,12 +385,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>key_algorithm</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#AsymmetricKeyAlgorithm'>AsymmetricKeyAlgorithm</a></code>
+                <code><a class='link' href='#AsymmetricKeyAlgorithm'>AsymmetricKeyAlgorithm</a></code>
             </td>
         </tr></table>
 
@@ -424,7 +424,7 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.kms/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>derived_key</code></td>

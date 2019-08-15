@@ -64,7 +64,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.shortcut/index.html#Listener'>Listener</a></code>
+                <code><a class='link' href='#Listener'>Listener</a></code>
             </td>
         </tr></table>
 
@@ -80,7 +80,7 @@ Book: /_book.yaml
     <tr>
             <td><code>shortcut</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ui.shortcut/index.html#Shortcut'>Shortcut</a></code>
+                <code><a class='link' href='#Shortcut'>Shortcut</a></code>
             </td>
         </tr></table>
 

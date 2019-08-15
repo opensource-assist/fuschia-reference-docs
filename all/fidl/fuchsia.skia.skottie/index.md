@@ -63,7 +63,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.skia.skottie/index.html#Options'>Options</a></code>
+                <code><a class='link' href='#Options'>Options</a></code>
             </td>
         </tr></table>
 
@@ -74,12 +74,12 @@ Book: /_book.yaml
     <tr>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.skia.skottie/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr><tr>
             <td><code>player</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.skia.skottie/index.html#Player'>Player</a>?</code>
+                <code><a class='link' href='#Player'>Player</a>?</code>
             </td>
         </tr></table>
 

@@ -111,12 +111,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.ethertap/index.html#Config'>Config</a></code>
+                <code><a class='link' href='#Config'>Config</a></code>
             </td>
         </tr><tr>
             <td><code>device</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.hardware.ethertap/index.html#TapDevice'>TapDevice</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#TapDevice'>TapDevice</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -165,7 +165,7 @@ Book: /_book.yaml
             <td>
                 <code>uint32</code>
             </td>
-            <td> Ethertap device mtu. If a value greater than MAX_MTU is provided, creating an ethertap
+            <td> Ethertap device mtu. If a value greater than `MAX_MTU` is provided, creating an ethertap
  device will fail.
 </td>
             <td>No default</td>

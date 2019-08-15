@@ -7,10 +7,10 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## DeprecatedNetworkSync {:#DeprecatedNetworkSync}
-*Defined in [fuchsia.time/deprecated_network_sync.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/netclock/deprecated_network_sync.fidl#12)*
+*Defined in [fuchsia.time/deprecated_network_sync.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/timekeeper/deprecated_network_sync.fidl#12)*
 
  Emits `UtcUpdated` events when the serving program changes the UTC offset tracked by
- ZX_CLOCK_UTC.
+ `ZX_CLOCK_UTC`.
 
  Do not take this API as a dependency, it will be deleted in the near future.
 
@@ -32,7 +32,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Utc {:#Utc}
-*Defined in [fuchsia.time/utc.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/netclock/utc.fidl#10)*
+*Defined in [fuchsia.time/utc.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/timekeeper/utc.fidl#10)*
 
  Metadata about a device's approximation of UTC time, commonly referred to as "system time."
 
@@ -54,7 +54,7 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.time/index.html#UtcState'>UtcState</a></code>
+                <code><a class='link' href='#UtcState'>UtcState</a></code>
             </td>
         </tr></table>
 
@@ -67,7 +67,7 @@ Book: /_book.yaml
 ### UtcSource {:#UtcSource}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.time/utc.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/netclock/utc.fidl#26)*
+*Defined in [fuchsia.time/utc.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/timekeeper/utc.fidl#26)*
 
  Describes the source from which the current UTC approximation was retrieved.
 
@@ -90,7 +90,7 @@ Type: <code>uint32</code>
 ### UtcState {:#UtcState}
 
 
-*Defined in [fuchsia.time/utc.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/netclock/utc.fidl#18)*
+*Defined in [fuchsia.time/utc.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/timekeeper/utc.fidl#18)*
 
  Describes the state of the clock.
 
@@ -109,7 +109,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.time/index.html#UtcSource'>UtcSource</a></code>
+                <code><a class='link' href='#UtcSource'>UtcSource</a></code>
             </td>
             <td> The source of our current UTC approximation.
 </td>

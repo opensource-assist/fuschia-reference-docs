@@ -3841,1484 +3841,1484 @@ Book: /_book.yaml
             <td>1</td>
             <td><code>f0</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Abstract'>Abstract</a></code>
+                <code><a class='link' href='#Abstract'>Abstract</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>2</td>
             <td><code>f1</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Alignas'>Alignas</a></code>
+                <code><a class='link' href='#Alignas'>Alignas</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>3</td>
             <td><code>f2</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Alignof'>Alignof</a></code>
+                <code><a class='link' href='#Alignof'>Alignof</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>4</td>
             <td><code>f3</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#And'>And</a></code>
+                <code><a class='link' href='#And'>And</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>5</td>
             <td><code>f4</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#AndEq'>AndEq</a></code>
+                <code><a class='link' href='#AndEq'>AndEq</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>6</td>
             <td><code>f5</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#As'>As</a></code>
+                <code><a class='link' href='#As'>As</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>7</td>
             <td><code>f6</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Asm'>Asm</a></code>
+                <code><a class='link' href='#Asm'>Asm</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>8</td>
             <td><code>f7</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Assert'>Assert</a></code>
+                <code><a class='link' href='#Assert'>Assert</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>9</td>
             <td><code>f8</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Async'>Async</a></code>
+                <code><a class='link' href='#Async'>Async</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>10</td>
             <td><code>f9</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#AtomicCancel'>AtomicCancel</a></code>
+                <code><a class='link' href='#AtomicCancel'>AtomicCancel</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>11</td>
             <td><code>f10</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#AtomicCommit'>AtomicCommit</a></code>
+                <code><a class='link' href='#AtomicCommit'>AtomicCommit</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>12</td>
             <td><code>f11</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#AtomicNoexcept'>AtomicNoexcept</a></code>
+                <code><a class='link' href='#AtomicNoexcept'>AtomicNoexcept</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>13</td>
             <td><code>f12</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Auto'>Auto</a></code>
+                <code><a class='link' href='#Auto'>Auto</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>14</td>
             <td><code>f13</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Await'>Await</a></code>
+                <code><a class='link' href='#Await'>Await</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>15</td>
             <td><code>f14</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Become'>Become</a></code>
+                <code><a class='link' href='#Become'>Become</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>16</td>
             <td><code>f15</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Bitand'>Bitand</a></code>
+                <code><a class='link' href='#Bitand'>Bitand</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>17</td>
             <td><code>f16</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Bitor'>Bitor</a></code>
+                <code><a class='link' href='#Bitor'>Bitor</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>18</td>
             <td><code>f17</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Bool'>Bool</a></code>
+                <code><a class='link' href='#Bool'>Bool</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>19</td>
             <td><code>f18</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Box'>Box</a></code>
+                <code><a class='link' href='#Box'>Box</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>20</td>
             <td><code>f19</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Break'>Break</a></code>
+                <code><a class='link' href='#Break'>Break</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>21</td>
             <td><code>f20</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Byte'>Byte</a></code>
+                <code><a class='link' href='#Byte'>Byte</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>22</td>
             <td><code>f21</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Case'>Case</a></code>
+                <code><a class='link' href='#Case'>Case</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>23</td>
             <td><code>f22</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Catch'>Catch</a></code>
+                <code><a class='link' href='#Catch'>Catch</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>24</td>
             <td><code>f23</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Chan'>Chan</a></code>
+                <code><a class='link' href='#Chan'>Chan</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>25</td>
             <td><code>f24</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Char'>Char</a></code>
+                <code><a class='link' href='#Char'>Char</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>26</td>
             <td><code>f25</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Char16T'>Char16T</a></code>
+                <code><a class='link' href='#Char16T'>Char16T</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>27</td>
             <td><code>f26</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Char32T'>Char32T</a></code>
+                <code><a class='link' href='#Char32T'>Char32T</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>28</td>
             <td><code>f27</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Class'>Class</a></code>
+                <code><a class='link' href='#Class'>Class</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>29</td>
             <td><code>f28</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#CoAwait'>CoAwait</a></code>
+                <code><a class='link' href='#CoAwait'>CoAwait</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>30</td>
             <td><code>f29</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#CoReturn'>CoReturn</a></code>
+                <code><a class='link' href='#CoReturn'>CoReturn</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>31</td>
             <td><code>f30</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#CoYield'>CoYield</a></code>
+                <code><a class='link' href='#CoYield'>CoYield</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>32</td>
             <td><code>f31</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#CodingTraits'>CodingTraits</a></code>
+                <code><a class='link' href='#CodingTraits'>CodingTraits</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>33</td>
             <td><code>f32</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Compl'>Compl</a></code>
+                <code><a class='link' href='#Compl'>Compl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>34</td>
             <td><code>f33</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Concept'>Concept</a></code>
+                <code><a class='link' href='#Concept'>Concept</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>35</td>
             <td><code>f34</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Const'>Const</a></code>
+                <code><a class='link' href='#Const'>Const</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>36</td>
             <td><code>f35</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#ConstCast'>ConstCast</a></code>
+                <code><a class='link' href='#ConstCast'>ConstCast</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>37</td>
             <td><code>f36</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Constexpr'>Constexpr</a></code>
+                <code><a class='link' href='#Constexpr'>Constexpr</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>38</td>
             <td><code>f37</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Continue'>Continue</a></code>
+                <code><a class='link' href='#Continue'>Continue</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>39</td>
             <td><code>f38</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Controller'>Controller</a></code>
+                <code><a class='link' href='#Controller'>Controller</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>40</td>
             <td><code>f39</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Covariant'>Covariant</a></code>
+                <code><a class='link' href='#Covariant'>Covariant</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>41</td>
             <td><code>f40</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Crate'>Crate</a></code>
+                <code><a class='link' href='#Crate'>Crate</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>42</td>
             <td><code>f41</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Decltype'>Decltype</a></code>
+                <code><a class='link' href='#Decltype'>Decltype</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>43</td>
             <td><code>f42</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Decoder'>Decoder</a></code>
+                <code><a class='link' href='#Decoder'>Decoder</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>44</td>
             <td><code>f43</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Default'>Default</a></code>
+                <code><a class='link' href='#Default'>Default</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>45</td>
             <td><code>f44</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Defer'>Defer</a></code>
+                <code><a class='link' href='#Defer'>Defer</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>46</td>
             <td><code>f45</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Deferred'>Deferred</a></code>
+                <code><a class='link' href='#Deferred'>Deferred</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>47</td>
             <td><code>f46</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Delete'>Delete</a></code>
+                <code><a class='link' href='#Delete'>Delete</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>48</td>
             <td><code>f47</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Do'>Do</a></code>
+                <code><a class='link' href='#Do'>Do</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>49</td>
             <td><code>f48</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Double'>Double</a></code>
+                <code><a class='link' href='#Double'>Double</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>50</td>
             <td><code>f49</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Dynamic'>Dynamic</a></code>
+                <code><a class='link' href='#Dynamic'>Dynamic</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>51</td>
             <td><code>f50</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#DynamicCast'>DynamicCast</a></code>
+                <code><a class='link' href='#DynamicCast'>DynamicCast</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>52</td>
             <td><code>f51</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Else'>Else</a></code>
+                <code><a class='link' href='#Else'>Else</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>53</td>
             <td><code>f52</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Encoder'>Encoder</a></code>
+                <code><a class='link' href='#Encoder'>Encoder</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>54</td>
             <td><code>f53</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#EnsureValuesInstantiated'>EnsureValuesInstantiated</a></code>
+                <code><a class='link' href='#EnsureValuesInstantiated'>EnsureValuesInstantiated</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>55</td>
             <td><code>f54</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Enum'>Enum</a></code>
+                <code><a class='link' href='#Enum'>Enum</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>56</td>
             <td><code>f55</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Err'>Err</a></code>
+                <code><a class='link' href='#Err'>Err</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>57</td>
             <td><code>f56</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Explicit'>Explicit</a></code>
+                <code><a class='link' href='#Explicit'>Explicit</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>58</td>
             <td><code>f57</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Export'>Export</a></code>
+                <code><a class='link' href='#Export'>Export</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>59</td>
             <td><code>f58</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Extends'>Extends</a></code>
+                <code><a class='link' href='#Extends'>Extends</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>60</td>
             <td><code>f59</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Extern'>Extern</a></code>
+                <code><a class='link' href='#Extern'>Extern</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>61</td>
             <td><code>f60</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#External'>External</a></code>
+                <code><a class='link' href='#External'>External</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>62</td>
             <td><code>f61</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Factory'>Factory</a></code>
+                <code><a class='link' href='#Factory'>Factory</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>63</td>
             <td><code>f62</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Fallthrough'>Fallthrough</a></code>
+                <code><a class='link' href='#Fallthrough'>Fallthrough</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>64</td>
             <td><code>f63</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#False'>False</a></code>
+                <code><a class='link' href='#False'>False</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>65</td>
             <td><code>f64</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Fidl'>Fidl</a></code>
+                <code><a class='link' href='#Fidl'>Fidl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>66</td>
             <td><code>f65</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#FidlType'>FidlType</a></code>
+                <code><a class='link' href='#FidlType'>FidlType</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>67</td>
             <td><code>f66</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Final'>Final</a></code>
+                <code><a class='link' href='#Final'>Final</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>68</td>
             <td><code>f67</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Finally'>Finally</a></code>
+                <code><a class='link' href='#Finally'>Finally</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>69</td>
             <td><code>f68</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Float'>Float</a></code>
+                <code><a class='link' href='#Float'>Float</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>70</td>
             <td><code>f69</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Fn'>Fn</a></code>
+                <code><a class='link' href='#Fn'>Fn</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>71</td>
             <td><code>f70</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#For'>For</a></code>
+                <code><a class='link' href='#For'>For</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>72</td>
             <td><code>f71</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Friend'>Friend</a></code>
+                <code><a class='link' href='#Friend'>Friend</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>73</td>
             <td><code>f72</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Func'>Func</a></code>
+                <code><a class='link' href='#Func'>Func</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>74</td>
             <td><code>f73</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Future'>Future</a></code>
+                <code><a class='link' href='#Future'>Future</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>75</td>
             <td><code>f74</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Futures'>Futures</a></code>
+                <code><a class='link' href='#Futures'>Futures</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>76</td>
             <td><code>f75</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Get'>Get</a></code>
+                <code><a class='link' href='#Get'>Get</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>77</td>
             <td><code>f76</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Go'>Go</a></code>
+                <code><a class='link' href='#Go'>Go</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>78</td>
             <td><code>f77</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Goto'>Goto</a></code>
+                <code><a class='link' href='#Goto'>Goto</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>79</td>
             <td><code>f78</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#HasInvalidTag'>HasInvalidTag</a></code>
+                <code><a class='link' href='#HasInvalidTag'>HasInvalidTag</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>80</td>
             <td><code>f79</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#HashCode'>HashCode</a></code>
+                <code><a class='link' href='#HashCode'>HashCode</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>81</td>
             <td><code>f80</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#If'>If</a></code>
+                <code><a class='link' href='#If'>If</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>82</td>
             <td><code>f81</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Impl'>Impl</a></code>
+                <code><a class='link' href='#Impl'>Impl</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>83</td>
             <td><code>f82</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Implements'>Implements</a></code>
+                <code><a class='link' href='#Implements'>Implements</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>84</td>
             <td><code>f83</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Import'>Import</a></code>
+                <code><a class='link' href='#Import'>Import</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>85</td>
             <td><code>f84</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#In'>In</a></code>
+                <code><a class='link' href='#In'>In</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>86</td>
             <td><code>f85</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Index'>Index</a></code>
+                <code><a class='link' href='#Index'>Index</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>87</td>
             <td><code>f86</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Inline'>Inline</a></code>
+                <code><a class='link' href='#Inline'>Inline</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>88</td>
             <td><code>f87</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Int'>Int</a></code>
+                <code><a class='link' href='#Int'>Int</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>89</td>
             <td><code>f88</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Int16'>Int16</a></code>
+                <code><a class='link' href='#Int16'>Int16</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>90</td>
             <td><code>f89</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Int32'>Int32</a></code>
+                <code><a class='link' href='#Int32'>Int32</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>91</td>
             <td><code>f90</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Int64'>Int64</a></code>
+                <code><a class='link' href='#Int64'>Int64</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>92</td>
             <td><code>f91</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Int8'>Int8</a></code>
+                <code><a class='link' href='#Int8'>Int8</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>93</td>
             <td><code>f92</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Interface'>Interface</a></code>
+                <code><a class='link' href='#Interface'>Interface</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>94</td>
             <td><code>f93</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Is'>Is</a></code>
+                <code><a class='link' href='#Is'>Is</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>95</td>
             <td><code>f94</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Let'>Let</a></code>
+                <code><a class='link' href='#Let'>Let</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>96</td>
             <td><code>f95</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Lhs'>Lhs</a></code>
+                <code><a class='link' href='#Lhs'>Lhs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>97</td>
             <td><code>f96</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Library'>Library</a></code>
+                <code><a class='link' href='#Library'>Library</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>98</td>
             <td><code>f97</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#List'>List</a></code>
+                <code><a class='link' href='#List'>List</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>99</td>
             <td><code>f98</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Long'>Long</a></code>
+                <code><a class='link' href='#Long'>Long</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>100</td>
             <td><code>f99</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Loop'>Loop</a></code>
+                <code><a class='link' href='#Loop'>Loop</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>101</td>
             <td><code>f100</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Macro'>Macro</a></code>
+                <code><a class='link' href='#Macro'>Macro</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>102</td>
             <td><code>f101</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Map'>Map</a></code>
+                <code><a class='link' href='#Map'>Map</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>103</td>
             <td><code>f102</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Match'>Match</a></code>
+                <code><a class='link' href='#Match'>Match</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>104</td>
             <td><code>f103</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Mixin'>Mixin</a></code>
+                <code><a class='link' href='#Mixin'>Mixin</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>105</td>
             <td><code>f104</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Mod'>Mod</a></code>
+                <code><a class='link' href='#Mod'>Mod</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>106</td>
             <td><code>f105</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Module'>Module</a></code>
+                <code><a class='link' href='#Module'>Module</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>107</td>
             <td><code>f106</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Move'>Move</a></code>
+                <code><a class='link' href='#Move'>Move</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>108</td>
             <td><code>f107</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Mut'>Mut</a></code>
+                <code><a class='link' href='#Mut'>Mut</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>109</td>
             <td><code>f108</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Mutable'>Mutable</a></code>
+                <code><a class='link' href='#Mutable'>Mutable</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>110</td>
             <td><code>f109</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Namespace'>Namespace</a></code>
+                <code><a class='link' href='#Namespace'>Namespace</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>111</td>
             <td><code>f110</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Never'>Never</a></code>
+                <code><a class='link' href='#Never'>Never</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>112</td>
             <td><code>f111</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#New'>New</a></code>
+                <code><a class='link' href='#New'>New</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>113</td>
             <td><code>f112</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#NoSuchMethod'>NoSuchMethod</a></code>
+                <code><a class='link' href='#NoSuchMethod'>NoSuchMethod</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>114</td>
             <td><code>f113</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Noexcept'>Noexcept</a></code>
+                <code><a class='link' href='#Noexcept'>Noexcept</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>115</td>
             <td><code>f114</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#None'>None</a></code>
+                <code><a class='link' href='#None'>None</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>116</td>
             <td><code>f115</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Not'>Not</a></code>
+                <code><a class='link' href='#Not'>Not</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>117</td>
             <td><code>f116</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#NotEq'>NotEq</a></code>
+                <code><a class='link' href='#NotEq'>NotEq</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>118</td>
             <td><code>f117</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Null'>Null</a></code>
+                <code><a class='link' href='#Null'>Null</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>119</td>
             <td><code>f118</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Nullptr'>Nullptr</a></code>
+                <code><a class='link' href='#Nullptr'>Nullptr</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>120</td>
             <td><code>f119</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Num'>Num</a></code>
+                <code><a class='link' href='#Num'>Num</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>121</td>
             <td><code>f120</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Object'>Object</a></code>
+                <code><a class='link' href='#Object'>Object</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>122</td>
             <td><code>f121</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Offset'>Offset</a></code>
+                <code><a class='link' href='#Offset'>Offset</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>123</td>
             <td><code>f122</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Offsetof'>Offsetof</a></code>
+                <code><a class='link' href='#Offsetof'>Offsetof</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>124</td>
             <td><code>f123</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Ok'>Ok</a></code>
+                <code><a class='link' href='#Ok'>Ok</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>125</td>
             <td><code>f124</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#OnOpen'>OnOpen</a></code>
+                <code><a class='link' href='#OnOpen'>OnOpen</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>126</td>
             <td><code>f125</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Operator'>Operator</a></code>
+                <code><a class='link' href='#Operator'>Operator</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>127</td>
             <td><code>f126</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Option'>Option</a></code>
+                <code><a class='link' href='#Option'>Option</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>128</td>
             <td><code>f127</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Or'>Or</a></code>
+                <code><a class='link' href='#Or'>Or</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>129</td>
             <td><code>f128</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#OrEq'>OrEq</a></code>
+                <code><a class='link' href='#OrEq'>OrEq</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>130</td>
             <td><code>f129</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Override'>Override</a></code>
+                <code><a class='link' href='#Override'>Override</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>131</td>
             <td><code>f130</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Package'>Package</a></code>
+                <code><a class='link' href='#Package'>Package</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>132</td>
             <td><code>f131</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Part'>Part</a></code>
+                <code><a class='link' href='#Part'>Part</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>133</td>
             <td><code>f132</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Priv'>Priv</a></code>
+                <code><a class='link' href='#Priv'>Priv</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>134</td>
             <td><code>f133</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Private'>Private</a></code>
+                <code><a class='link' href='#Private'>Private</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>135</td>
             <td><code>f134</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Proc'>Proc</a></code>
+                <code><a class='link' href='#Proc'>Proc</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>136</td>
             <td><code>f135</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Protected'>Protected</a></code>
+                <code><a class='link' href='#Protected'>Protected</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>137</td>
             <td><code>f136</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Proxy'>Proxy</a></code>
+                <code><a class='link' href='#Proxy'>Proxy</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>138</td>
             <td><code>f137</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Pub'>Pub</a></code>
+                <code><a class='link' href='#Pub'>Pub</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>139</td>
             <td><code>f138</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Public'>Public</a></code>
+                <code><a class='link' href='#Public'>Public</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>140</td>
             <td><code>f139</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Pure'>Pure</a></code>
+                <code><a class='link' href='#Pure'>Pure</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>141</td>
             <td><code>f140</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Range'>Range</a></code>
+                <code><a class='link' href='#Range'>Range</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>142</td>
             <td><code>f141</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Ref'>Ref</a></code>
+                <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>143</td>
             <td><code>f142</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Register'>Register</a></code>
+                <code><a class='link' href='#Register'>Register</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>144</td>
             <td><code>f143</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#ReinterpretCast'>ReinterpretCast</a></code>
+                <code><a class='link' href='#ReinterpretCast'>ReinterpretCast</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>145</td>
             <td><code>f144</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Requires'>Requires</a></code>
+                <code><a class='link' href='#Requires'>Requires</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>146</td>
             <td><code>f145</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Result'>Result</a></code>
+                <code><a class='link' href='#Result'>Result</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>147</td>
             <td><code>f146</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Rethrow'>Rethrow</a></code>
+                <code><a class='link' href='#Rethrow'>Rethrow</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>148</td>
             <td><code>f147</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Return'>Return</a></code>
+                <code><a class='link' href='#Return'>Return</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>149</td>
             <td><code>f148</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Rhs'>Rhs</a></code>
+                <code><a class='link' href='#Rhs'>Rhs</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>150</td>
             <td><code>f149</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Rune'>Rune</a></code>
+                <code><a class='link' href='#Rune'>Rune</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>151</td>
             <td><code>f150</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#RuntimeType'>RuntimeType</a></code>
+                <code><a class='link' href='#RuntimeType'>RuntimeType</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>152</td>
             <td><code>f151</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Select'>Select</a></code>
+                <code><a class='link' href='#Select'>Select</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>153</td>
             <td><code>f152</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Self'>Self</a></code>
+                <code><a class='link' href='#Self'>Self</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>154</td>
             <td><code>f153</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Send'>Send</a></code>
+                <code><a class='link' href='#Send'>Send</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>155</td>
             <td><code>f154</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Set'>Set</a></code>
+                <code><a class='link' href='#Set'>Set</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>156</td>
             <td><code>f155</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#SetController'>SetController</a></code>
+                <code><a class='link' href='#SetController'>SetController</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>157</td>
             <td><code>f156</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Short'>Short</a></code>
+                <code><a class='link' href='#Short'>Short</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>158</td>
             <td><code>f157</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Signed'>Signed</a></code>
+                <code><a class='link' href='#Signed'>Signed</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>159</td>
             <td><code>f158</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Sizeof'>Sizeof</a></code>
+                <code><a class='link' href='#Sizeof'>Sizeof</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>160</td>
             <td><code>f159</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Some'>Some</a></code>
+                <code><a class='link' href='#Some'>Some</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>161</td>
             <td><code>f160</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Static'>Static</a></code>
+                <code><a class='link' href='#Static'>Static</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>162</td>
             <td><code>f161</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#StaticAssert'>StaticAssert</a></code>
+                <code><a class='link' href='#StaticAssert'>StaticAssert</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>163</td>
             <td><code>f162</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#StaticCast'>StaticCast</a></code>
+                <code><a class='link' href='#StaticCast'>StaticCast</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>164</td>
             <td><code>f163</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Stream'>Stream</a></code>
+                <code><a class='link' href='#Stream'>Stream</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>165</td>
             <td><code>f164</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#String'>String</a></code>
+                <code><a class='link' href='#String'>String</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>166</td>
             <td><code>f165</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Struct'>Struct</a></code>
+                <code><a class='link' href='#Struct'>Struct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>167</td>
             <td><code>f166</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Stub'>Stub</a></code>
+                <code><a class='link' href='#Stub'>Stub</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>168</td>
             <td><code>f167</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Super'>Super</a></code>
+                <code><a class='link' href='#Super'>Super</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>169</td>
             <td><code>f168</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Switch'>Switch</a></code>
+                <code><a class='link' href='#Switch'>Switch</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>170</td>
             <td><code>f169</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Synchronized'>Synchronized</a></code>
+                <code><a class='link' href='#Synchronized'>Synchronized</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>171</td>
             <td><code>f170</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Template'>Template</a></code>
+                <code><a class='link' href='#Template'>Template</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>172</td>
             <td><code>f171</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#This'>This</a></code>
+                <code><a class='link' href='#This'>This</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>173</td>
             <td><code>f172</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#ThreadLocal'>ThreadLocal</a></code>
+                <code><a class='link' href='#ThreadLocal'>ThreadLocal</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>174</td>
             <td><code>f173</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Throw'>Throw</a></code>
+                <code><a class='link' href='#Throw'>Throw</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>175</td>
             <td><code>f174</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#ToString'>ToString</a></code>
+                <code><a class='link' href='#ToString'>ToString</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>176</td>
             <td><code>f175</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Trait'>Trait</a></code>
+                <code><a class='link' href='#Trait'>Trait</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>177</td>
             <td><code>f176</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#True'>True</a></code>
+                <code><a class='link' href='#True'>True</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>178</td>
             <td><code>f177</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Try'>Try</a></code>
+                <code><a class='link' href='#Try'>Try</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>179</td>
             <td><code>f178</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Type'>Type</a></code>
+                <code><a class='link' href='#Type'>Type</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>180</td>
             <td><code>f179</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Typedef'>Typedef</a></code>
+                <code><a class='link' href='#Typedef'>Typedef</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>181</td>
             <td><code>f180</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Typeid'>Typeid</a></code>
+                <code><a class='link' href='#Typeid'>Typeid</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>182</td>
             <td><code>f181</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Typename'>Typename</a></code>
+                <code><a class='link' href='#Typename'>Typename</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>183</td>
             <td><code>f182</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Typeof'>Typeof</a></code>
+                <code><a class='link' href='#Typeof'>Typeof</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>184</td>
             <td><code>f183</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Uint16'>Uint16</a></code>
+                <code><a class='link' href='#Uint16'>Uint16</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>185</td>
             <td><code>f184</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Uint32'>Uint32</a></code>
+                <code><a class='link' href='#Uint32'>Uint32</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>186</td>
             <td><code>f185</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Uint64'>Uint64</a></code>
+                <code><a class='link' href='#Uint64'>Uint64</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>187</td>
             <td><code>f186</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Uint8'>Uint8</a></code>
+                <code><a class='link' href='#Uint8'>Uint8</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>188</td>
             <td><code>f187</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Union'>Union</a></code>
+                <code><a class='link' href='#Union'>Union</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>189</td>
             <td><code>f188</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Unsafe'>Unsafe</a></code>
+                <code><a class='link' href='#Unsafe'>Unsafe</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>190</td>
             <td><code>f189</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Unsigned'>Unsigned</a></code>
+                <code><a class='link' href='#Unsigned'>Unsigned</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>191</td>
             <td><code>f190</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Unsized'>Unsized</a></code>
+                <code><a class='link' href='#Unsized'>Unsized</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>192</td>
             <td><code>f191</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Use'>Use</a></code>
+                <code><a class='link' href='#Use'>Use</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>193</td>
             <td><code>f192</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Using'>Using</a></code>
+                <code><a class='link' href='#Using'>Using</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>194</td>
             <td><code>f193</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Value'>Value</a></code>
+                <code><a class='link' href='#Value'>Value</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>195</td>
             <td><code>f194</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#ValueOf'>ValueOf</a></code>
+                <code><a class='link' href='#ValueOf'>ValueOf</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>196</td>
             <td><code>f195</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#ValueUnion'>ValueUnion</a></code>
+                <code><a class='link' href='#ValueUnion'>ValueUnion</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>197</td>
             <td><code>f196</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#ValuesMap'>ValuesMap</a></code>
+                <code><a class='link' href='#ValuesMap'>ValuesMap</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>198</td>
             <td><code>f197</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Var'>Var</a></code>
+                <code><a class='link' href='#Var'>Var</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>199</td>
             <td><code>f198</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Vec'>Vec</a></code>
+                <code><a class='link' href='#Vec'>Vec</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>200</td>
             <td><code>f199</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Virtual'>Virtual</a></code>
+                <code><a class='link' href='#Virtual'>Virtual</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>201</td>
             <td><code>f200</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Void'>Void</a></code>
+                <code><a class='link' href='#Void'>Void</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>202</td>
             <td><code>f201</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Volatile'>Volatile</a></code>
+                <code><a class='link' href='#Volatile'>Volatile</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>203</td>
             <td><code>f202</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#WcharT'>WcharT</a></code>
+                <code><a class='link' href='#WcharT'>WcharT</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>204</td>
             <td><code>f203</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Where'>Where</a></code>
+                <code><a class='link' href='#Where'>Where</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>205</td>
             <td><code>f204</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Which'>Which</a></code>
+                <code><a class='link' href='#Which'>Which</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>206</td>
             <td><code>f205</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#While'>While</a></code>
+                <code><a class='link' href='#While'>While</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>207</td>
             <td><code>f206</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#With'>With</a></code>
+                <code><a class='link' href='#With'>With</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>208</td>
             <td><code>f207</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Xor'>Xor</a></code>
+                <code><a class='link' href='#Xor'>Xor</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>209</td>
             <td><code>f208</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#XorEq'>XorEq</a></code>
+                <code><a class='link' href='#XorEq'>XorEq</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>210</td>
             <td><code>f209</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Xunion'>Xunion</a></code>
+                <code><a class='link' href='#Xunion'>Xunion</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>211</td>
             <td><code>f210</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Yield'>Yield</a></code>
+                <code><a class='link' href='#Yield'>Yield</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>212</td>
             <td><code>f211</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.table.names.camel/index.html#Zx'>Zx</a></code>
+                <code><a class='link' href='#Zx'>Zx</a></code>
             </td>
             <td></td>
         </tr></table>

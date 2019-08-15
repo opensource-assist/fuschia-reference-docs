@@ -42,7 +42,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.crash/index.html#Analyzer_OnNativeException_Result'>Analyzer_OnNativeException_Result</a></code>
+                <code><a class='link' href='#Analyzer_OnNativeException_Result'>Analyzer_OnNativeException_Result</a></code>
             </td>
         </tr></table>
 
@@ -67,7 +67,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>exception</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.crash/index.html#ManagedRuntimeException'>ManagedRuntimeException</a></code>
+                <code><a class='link' href='#ManagedRuntimeException'>ManagedRuntimeException</a></code>
             </td>
         </tr></table>
 
@@ -78,7 +78,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.crash/index.html#Analyzer_OnManagedRuntimeException_Result'>Analyzer_OnManagedRuntimeException_Result</a></code>
+                <code><a class='link' href='#Analyzer_OnManagedRuntimeException_Result'>Analyzer_OnManagedRuntimeException_Result</a></code>
             </td>
         </tr></table>
 
@@ -106,7 +106,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.crash/index.html#Analyzer_OnKernelPanicCrashLog_Result'>Analyzer_OnKernelPanicCrashLog_Result</a></code>
+                <code><a class='link' href='#Analyzer_OnKernelPanicCrashLog_Result'>Analyzer_OnKernelPanicCrashLog_Result</a></code>
             </td>
         </tr></table>
 
@@ -219,7 +219,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.crash/index.html#Analyzer_OnNativeException_Response'>Analyzer_OnNativeException_Response</a></code>
+                <code><a class='link' href='#Analyzer_OnNativeException_Response'>Analyzer_OnNativeException_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -238,7 +238,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.crash/index.html#Analyzer_OnManagedRuntimeException_Response'>Analyzer_OnManagedRuntimeException_Response</a></code>
+                <code><a class='link' href='#Analyzer_OnManagedRuntimeException_Response'>Analyzer_OnManagedRuntimeException_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -257,7 +257,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.crash/index.html#Analyzer_OnKernelPanicCrashLog_Response'>Analyzer_OnKernelPanicCrashLog_Response</a></code>
+                <code><a class='link' href='#Analyzer_OnKernelPanicCrashLog_Response'>Analyzer_OnKernelPanicCrashLog_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -281,13 +281,13 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>unknown</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.crash/index.html#UnknownException'>UnknownException</a></code>
+                <code><a class='link' href='#UnknownException'>UnknownException</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>dart</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.crash/index.html#GenericException'>GenericException</a></code>
+                <code><a class='link' href='#GenericException'>GenericException</a></code>
             </td>
             <td></td>
         </tr></table>

@@ -19,12 +19,12 @@ Book: /_book.yaml
     <tr>
             <td><code>requests</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.ap.policy/index.html#Requests'>Requests</a></code>
+                <code><a class='link' href='#Requests'>Requests</a></code>
             </td>
         </tr><tr>
             <td><code>updates</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.wlan.ap.policy/index.html#StateUpdates'>StateUpdates</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#StateUpdates'>StateUpdates</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -43,7 +43,7 @@ Book: /_book.yaml
     <tr>
             <td><code>params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.ap.policy/index.html#AccessPointParams'>AccessPointParams</a></code>
+                <code><a class='link' href='#AccessPointParams'>AccessPointParams</a></code>
             </td>
         </tr></table>
 
@@ -54,7 +54,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.ap.policy/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -78,7 +78,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.ap.policy/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -97,12 +97,12 @@ Book: /_book.yaml
     <tr>
             <td><code>ap_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.ap.policy/index.html#ApState'>ApState</a></code>
+                <code><a class='link' href='#ApState'>ApState</a></code>
             </td>
         </tr><tr>
             <td><code>previous_ap_state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.ap.policy/index.html#ApState'>ApState</a></code>
+                <code><a class='link' href='#ApState'>ApState</a></code>
             </td>
         </tr></table>
 
@@ -117,7 +117,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ap_band</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.ap.policy/index.html#ApBand'>ApBand</a></code>
+                <code><a class='link' href='#ApBand'>ApBand</a></code>
             </td>
         </tr><tr>
             <td><code>frequency</code></td>
@@ -127,7 +127,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>clients</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.ap.policy/index.html#ApClient'>ApClient</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ApClient'>ApClient</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -185,7 +185,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>band</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.ap.policy/index.html#ApBand'>ApBand</a></code>
+                <code><a class='link' href='#ApBand'>ApBand</a></code>
             </td>
             <td></td>
             <td>No default</td>

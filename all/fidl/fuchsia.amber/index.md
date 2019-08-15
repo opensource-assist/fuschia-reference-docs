@@ -45,7 +45,7 @@ Book: /_book.yaml
     <tr>
             <td><code>source</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.amber/index.html#SourceConfig'>SourceConfig</a></code>
+                <code><a class='link' href='#SourceConfig'>SourceConfig</a></code>
             </td>
         </tr></table>
 
@@ -83,7 +83,7 @@ Book: /_book.yaml
     <tr>
             <td><code>res</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.amber/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -103,7 +103,7 @@ Book: /_book.yaml
     <tr>
             <td><code>srcs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.amber/index.html#SourceConfig'>SourceConfig</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#SourceConfig'>SourceConfig</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -224,7 +224,7 @@ Book: /_book.yaml
     <tr>
             <td><code>device</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.amber/index.html#DeviceCode'>DeviceCode</a>?</code>
+                <code><a class='link' href='#DeviceCode'>DeviceCode</a>?</code>
             </td>
         </tr></table>
 
@@ -253,7 +253,7 @@ Book: /_book.yaml
     <tr>
             <td><code>res</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.amber/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#Status'>Status</a></code>
             </td>
         </tr></table>
 
@@ -316,7 +316,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>repo</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.amber/index.html#OpenedRepository'>OpenedRepository</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#OpenedRepository'>OpenedRepository</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -331,24 +331,8 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-## Events {:#Events}
-*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#201)*
-
-
-### OnOutOfSpace {:#OnOutOfSpace}
-
- Event that is triggered when an update failed because blobfs is out of
- storage.
-
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
 ## OpenedRepository {:#OpenedRepository}
-*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#207)*
+*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#200)*
 
 
 ### GetUpdateComplete {:#GetUpdateComplete}
@@ -379,14 +363,60 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>result</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.amber/index.html#FetchResult'>FetchResult</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#FetchResult'>FetchResult</a>&gt;</code>
             </td>
         </tr></table>
 
 
 
+### MerkleFor {:#MerkleFor}
+
+ Finds the merkle hash for the package identified by 'name' which has the
+ provided variant. Does not install the package or fetch any blobs.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>variant</code></td>
+            <td>
+                <code>string?</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>message</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>merkle</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>size</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr></table>
+
 ## FetchResult {:#FetchResult}
-*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#217)*
+*Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#214)*
 
  A protocol providing results for a OpenedRepository.GetUpdateComplete call.
  Only one event will be sent before the channel is closed.
@@ -676,7 +706,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>tlsClientConfig</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.amber/index.html#TLSClientConfig'>TLSClientConfig</a>?</code>
+                <code><a class='link' href='#TLSClientConfig'>TLSClientConfig</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -755,7 +785,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>rootKeys</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.amber/index.html#KeyConfig'>KeyConfig</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#KeyConfig'>KeyConfig</a>&gt;</code>
             </td>
             <td> A vector of public keys. These keys must match one of the trusted keys
  known to the system.
@@ -764,21 +794,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>transportConfig</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.amber/index.html#TransportConfig'>TransportConfig</a>?</code>
+                <code><a class='link' href='#TransportConfig'>TransportConfig</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>oauth2Config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.amber/index.html#OAuth2Config'>OAuth2Config</a>?</code>
+                <code><a class='link' href='#OAuth2Config'>OAuth2Config</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>statusConfig</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.amber/index.html#StatusConfig'>StatusConfig</a>?</code>
+                <code><a class='link' href='#StatusConfig'>StatusConfig</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -793,7 +823,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>blobKey</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.amber/index.html#BlobEncryptionKey'>BlobEncryptionKey</a>?</code>
+                <code><a class='link' href='#BlobEncryptionKey'>BlobEncryptionKey</a>?</code>
             </td>
             <td></td>
             <td>No default</td>

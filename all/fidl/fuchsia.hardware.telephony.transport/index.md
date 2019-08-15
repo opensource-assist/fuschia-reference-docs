@@ -31,7 +31,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.telephony.transport/index.html#Qmi_SetChannel_Result'>Qmi_SetChannel_Result</a></code>
+                <code><a class='link' href='#Qmi_SetChannel_Result'>Qmi_SetChannel_Result</a></code>
             </td>
         </tr></table>
 
@@ -77,7 +77,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.telephony.transport/index.html#Qmi_SetSnoopChannel_Result'>Qmi_SetSnoopChannel_Result</a></code>
+                <code><a class='link' href='#Qmi_SetSnoopChannel_Result'>Qmi_SetSnoopChannel_Result</a></code>
             </td>
         </tr></table>
 
@@ -123,7 +123,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.telephony.transport/index.html#Qmi_SetChannel_Response'>Qmi_SetChannel_Response</a></code>
+                <code><a class='link' href='#Qmi_SetChannel_Response'>Qmi_SetChannel_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -142,7 +142,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.telephony.transport/index.html#Qmi_SetSnoopChannel_Response'>Qmi_SetSnoopChannel_Response</a></code>
+                <code><a class='link' href='#Qmi_SetSnoopChannel_Response'>Qmi_SetSnoopChannel_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

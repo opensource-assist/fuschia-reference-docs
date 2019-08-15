@@ -3817,119 +3817,119 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>f0</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#abstract'>abstract</a></code>
+                <code><a class='link' href='#abstract'>abstract</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f1</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#alignas'>alignas</a></code>
+                <code><a class='link' href='#alignas'>alignas</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f2</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#alignof'>alignof</a></code>
+                <code><a class='link' href='#alignof'>alignof</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f3</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#and'>and</a></code>
+                <code><a class='link' href='#and'>and</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f4</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#and_eq'>and_eq</a></code>
+                <code><a class='link' href='#and_eq'>and_eq</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f5</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#as'>as</a></code>
+                <code><a class='link' href='#as'>as</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f6</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#asm'>asm</a></code>
+                <code><a class='link' href='#asm'>asm</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f7</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#assert'>assert</a></code>
+                <code><a class='link' href='#assert'>assert</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f8</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#async'>async</a></code>
+                <code><a class='link' href='#async'>async</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f9</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#atomic_cancel'>atomic_cancel</a></code>
+                <code><a class='link' href='#atomic_cancel'>atomic_cancel</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f10</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#atomic_commit'>atomic_commit</a></code>
+                <code><a class='link' href='#atomic_commit'>atomic_commit</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f11</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#atomic_noexcept'>atomic_noexcept</a></code>
+                <code><a class='link' href='#atomic_noexcept'>atomic_noexcept</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f12</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#auto'>auto</a></code>
+                <code><a class='link' href='#auto'>auto</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f13</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#await'>await</a></code>
+                <code><a class='link' href='#await'>await</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f14</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#become'>become</a></code>
+                <code><a class='link' href='#become'>become</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f15</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#bitand'>bitand</a></code>
+                <code><a class='link' href='#bitand'>bitand</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f16</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#bitor'>bitor</a></code>
+                <code><a class='link' href='#bitor'>bitor</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3943,14 +3943,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>f18</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#box'>box</a></code>
+                <code><a class='link' href='#box'>box</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f19</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#break'>break</a></code>
+                <code><a class='link' href='#break'>break</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3964,469 +3964,469 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>f21</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#case'>case</a></code>
+                <code><a class='link' href='#case'>case</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f22</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#catch'>catch</a></code>
+                <code><a class='link' href='#catch'>catch</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f23</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#chan'>chan</a></code>
+                <code><a class='link' href='#chan'>chan</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f24</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#char'>char</a></code>
+                <code><a class='link' href='#char'>char</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f25</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#char16_t'>char16_t</a></code>
+                <code><a class='link' href='#char16_t'>char16_t</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f26</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#char32_t'>char32_t</a></code>
+                <code><a class='link' href='#char32_t'>char32_t</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f27</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#class'>class</a></code>
+                <code><a class='link' href='#class'>class</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f28</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#co_await'>co_await</a></code>
+                <code><a class='link' href='#co_await'>co_await</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f29</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#co_return'>co_return</a></code>
+                <code><a class='link' href='#co_return'>co_return</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f30</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#co_yield'>co_yield</a></code>
+                <code><a class='link' href='#co_yield'>co_yield</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f31</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#coding_traits'>coding_traits</a></code>
+                <code><a class='link' href='#coding_traits'>coding_traits</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f32</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#compl'>compl</a></code>
+                <code><a class='link' href='#compl'>compl</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f33</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#concept'>concept</a></code>
+                <code><a class='link' href='#concept'>concept</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f34</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#const'>const</a></code>
+                <code><a class='link' href='#const'>const</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f35</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#const_cast'>const_cast</a></code>
+                <code><a class='link' href='#const_cast'>const_cast</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f36</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#constexpr'>constexpr</a></code>
+                <code><a class='link' href='#constexpr'>constexpr</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f37</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#continue'>continue</a></code>
+                <code><a class='link' href='#continue'>continue</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f38</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#controller'>controller</a></code>
+                <code><a class='link' href='#controller'>controller</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f39</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#covariant'>covariant</a></code>
+                <code><a class='link' href='#covariant'>covariant</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f40</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#crate'>crate</a></code>
+                <code><a class='link' href='#crate'>crate</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f41</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#decltype'>decltype</a></code>
+                <code><a class='link' href='#decltype'>decltype</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f42</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#decoder'>decoder</a></code>
+                <code><a class='link' href='#decoder'>decoder</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f43</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#default'>default</a></code>
+                <code><a class='link' href='#default'>default</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f44</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#defer'>defer</a></code>
+                <code><a class='link' href='#defer'>defer</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f45</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#deferred'>deferred</a></code>
+                <code><a class='link' href='#deferred'>deferred</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f46</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#delete'>delete</a></code>
+                <code><a class='link' href='#delete'>delete</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f47</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#do'>do</a></code>
+                <code><a class='link' href='#do'>do</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f48</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#double'>double</a></code>
+                <code><a class='link' href='#double'>double</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f49</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#dynamic'>dynamic</a></code>
+                <code><a class='link' href='#dynamic'>dynamic</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f50</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#dynamic_cast'>dynamic_cast</a></code>
+                <code><a class='link' href='#dynamic_cast'>dynamic_cast</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f51</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#else'>else</a></code>
+                <code><a class='link' href='#else'>else</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f52</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#encoder'>encoder</a></code>
+                <code><a class='link' href='#encoder'>encoder</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f53</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#ensure_values_instantiated'>ensure_values_instantiated</a></code>
+                <code><a class='link' href='#ensure_values_instantiated'>ensure_values_instantiated</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f54</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#enum'>enum</a></code>
+                <code><a class='link' href='#enum'>enum</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f55</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#err'>err</a></code>
+                <code><a class='link' href='#err'>err</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f56</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#explicit'>explicit</a></code>
+                <code><a class='link' href='#explicit'>explicit</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f57</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#export'>export</a></code>
+                <code><a class='link' href='#export'>export</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f58</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#extends'>extends</a></code>
+                <code><a class='link' href='#extends'>extends</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f59</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#extern'>extern</a></code>
+                <code><a class='link' href='#extern'>extern</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f60</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#external'>external</a></code>
+                <code><a class='link' href='#external'>external</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f61</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#factory'>factory</a></code>
+                <code><a class='link' href='#factory'>factory</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f62</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#fallthrough'>fallthrough</a></code>
+                <code><a class='link' href='#fallthrough'>fallthrough</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f63</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#false'>false</a></code>
+                <code><a class='link' href='#false'>false</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f64</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#fidl'>fidl</a></code>
+                <code><a class='link' href='#fidl'>fidl</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f65</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#fidl_type'>fidl_type</a></code>
+                <code><a class='link' href='#fidl_type'>fidl_type</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f66</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#final'>final</a></code>
+                <code><a class='link' href='#final'>final</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f67</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#finally'>finally</a></code>
+                <code><a class='link' href='#finally'>finally</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f68</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#float'>float</a></code>
+                <code><a class='link' href='#float'>float</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f69</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#fn'>fn</a></code>
+                <code><a class='link' href='#fn'>fn</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f70</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#for'>for</a></code>
+                <code><a class='link' href='#for'>for</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f71</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#friend'>friend</a></code>
+                <code><a class='link' href='#friend'>friend</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f72</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#func'>func</a></code>
+                <code><a class='link' href='#func'>func</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f73</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#future'>future</a></code>
+                <code><a class='link' href='#future'>future</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f74</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#futures'>futures</a></code>
+                <code><a class='link' href='#futures'>futures</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f75</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#get'>get</a></code>
+                <code><a class='link' href='#get'>get</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f76</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#go'>go</a></code>
+                <code><a class='link' href='#go'>go</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f77</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#goto'>goto</a></code>
+                <code><a class='link' href='#goto'>goto</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f78</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#has_invalid_tag'>has_invalid_tag</a></code>
+                <code><a class='link' href='#has_invalid_tag'>has_invalid_tag</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f79</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#hash_code'>hash_code</a></code>
+                <code><a class='link' href='#hash_code'>hash_code</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f80</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#if'>if</a></code>
+                <code><a class='link' href='#if'>if</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f81</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#impl'>impl</a></code>
+                <code><a class='link' href='#impl'>impl</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f82</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#implements'>implements</a></code>
+                <code><a class='link' href='#implements'>implements</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f83</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#import'>import</a></code>
+                <code><a class='link' href='#import'>import</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f84</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#in'>in</a></code>
+                <code><a class='link' href='#in'>in</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f85</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#index'>index</a></code>
+                <code><a class='link' href='#index'>index</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f86</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#inline'>inline</a></code>
+                <code><a class='link' href='#inline'>inline</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f87</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#int'>int</a></code>
+                <code><a class='link' href='#int'>int</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4461,504 +4461,504 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>f92</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#interface'>interface</a></code>
+                <code><a class='link' href='#interface'>interface</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f93</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#is'>is</a></code>
+                <code><a class='link' href='#is'>is</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f94</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#let'>let</a></code>
+                <code><a class='link' href='#let'>let</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f95</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#lhs'>lhs</a></code>
+                <code><a class='link' href='#lhs'>lhs</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f96</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#library'>library</a></code>
+                <code><a class='link' href='#library'>library</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f97</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#list'>list</a></code>
+                <code><a class='link' href='#list'>list</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f98</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#long'>long</a></code>
+                <code><a class='link' href='#long'>long</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f99</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#loop'>loop</a></code>
+                <code><a class='link' href='#loop'>loop</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f100</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#macro'>macro</a></code>
+                <code><a class='link' href='#macro'>macro</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f101</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#map'>map</a></code>
+                <code><a class='link' href='#map'>map</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f102</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#match'>match</a></code>
+                <code><a class='link' href='#match'>match</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f103</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#mixin'>mixin</a></code>
+                <code><a class='link' href='#mixin'>mixin</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f104</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#mod'>mod</a></code>
+                <code><a class='link' href='#mod'>mod</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f105</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#module'>module</a></code>
+                <code><a class='link' href='#module'>module</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f106</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#move'>move</a></code>
+                <code><a class='link' href='#move'>move</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f107</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#mut'>mut</a></code>
+                <code><a class='link' href='#mut'>mut</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f108</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#mutable'>mutable</a></code>
+                <code><a class='link' href='#mutable'>mutable</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f109</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#namespace'>namespace</a></code>
+                <code><a class='link' href='#namespace'>namespace</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f110</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#never'>never</a></code>
+                <code><a class='link' href='#never'>never</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f111</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#new'>new</a></code>
+                <code><a class='link' href='#new'>new</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f112</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#no_such_method'>no_such_method</a></code>
+                <code><a class='link' href='#no_such_method'>no_such_method</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f113</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#noexcept'>noexcept</a></code>
+                <code><a class='link' href='#noexcept'>noexcept</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f114</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#none'>none</a></code>
+                <code><a class='link' href='#none'>none</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f115</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#not'>not</a></code>
+                <code><a class='link' href='#not'>not</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f116</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#not_eq'>not_eq</a></code>
+                <code><a class='link' href='#not_eq'>not_eq</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f117</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#null'>null</a></code>
+                <code><a class='link' href='#null'>null</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f118</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#nullptr'>nullptr</a></code>
+                <code><a class='link' href='#nullptr'>nullptr</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f119</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#num'>num</a></code>
+                <code><a class='link' href='#num'>num</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f120</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#object'>object</a></code>
+                <code><a class='link' href='#object'>object</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f121</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#offset'>offset</a></code>
+                <code><a class='link' href='#offset'>offset</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f122</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#offsetof'>offsetof</a></code>
+                <code><a class='link' href='#offsetof'>offsetof</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f123</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#ok'>ok</a></code>
+                <code><a class='link' href='#ok'>ok</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f124</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#on_open'>on_open</a></code>
+                <code><a class='link' href='#on_open'>on_open</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f125</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#operator'>operator</a></code>
+                <code><a class='link' href='#operator'>operator</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f126</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#option'>option</a></code>
+                <code><a class='link' href='#option'>option</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f127</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#or'>or</a></code>
+                <code><a class='link' href='#or'>or</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f128</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#or_eq'>or_eq</a></code>
+                <code><a class='link' href='#or_eq'>or_eq</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f129</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#override'>override</a></code>
+                <code><a class='link' href='#override'>override</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f130</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#package'>package</a></code>
+                <code><a class='link' href='#package'>package</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f131</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#part'>part</a></code>
+                <code><a class='link' href='#part'>part</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f132</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#priv'>priv</a></code>
+                <code><a class='link' href='#priv'>priv</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f133</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#private'>private</a></code>
+                <code><a class='link' href='#private'>private</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f134</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#proc'>proc</a></code>
+                <code><a class='link' href='#proc'>proc</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f135</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#protected'>protected</a></code>
+                <code><a class='link' href='#protected'>protected</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f136</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#proxy'>proxy</a></code>
+                <code><a class='link' href='#proxy'>proxy</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f137</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#pub'>pub</a></code>
+                <code><a class='link' href='#pub'>pub</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f138</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#public'>public</a></code>
+                <code><a class='link' href='#public'>public</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f139</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#pure'>pure</a></code>
+                <code><a class='link' href='#pure'>pure</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f140</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#range'>range</a></code>
+                <code><a class='link' href='#range'>range</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f141</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#ref'>ref</a></code>
+                <code><a class='link' href='#ref'>ref</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f142</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#register'>register</a></code>
+                <code><a class='link' href='#register'>register</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f143</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#reinterpret_cast'>reinterpret_cast</a></code>
+                <code><a class='link' href='#reinterpret_cast'>reinterpret_cast</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f144</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#requires'>requires</a></code>
+                <code><a class='link' href='#requires'>requires</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f145</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#result'>result</a></code>
+                <code><a class='link' href='#result'>result</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f146</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#rethrow'>rethrow</a></code>
+                <code><a class='link' href='#rethrow'>rethrow</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f147</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#return'>return</a></code>
+                <code><a class='link' href='#return'>return</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f148</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#rhs'>rhs</a></code>
+                <code><a class='link' href='#rhs'>rhs</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f149</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#rune'>rune</a></code>
+                <code><a class='link' href='#rune'>rune</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f150</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#runtime_type'>runtime_type</a></code>
+                <code><a class='link' href='#runtime_type'>runtime_type</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f151</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#select'>select</a></code>
+                <code><a class='link' href='#select'>select</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f152</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#self'>self</a></code>
+                <code><a class='link' href='#self'>self</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f153</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#send'>send</a></code>
+                <code><a class='link' href='#send'>send</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f154</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#set'>set</a></code>
+                <code><a class='link' href='#set'>set</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f155</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#set_controller'>set_controller</a></code>
+                <code><a class='link' href='#set_controller'>set_controller</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f156</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#short'>short</a></code>
+                <code><a class='link' href='#short'>short</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f157</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#signed'>signed</a></code>
+                <code><a class='link' href='#signed'>signed</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f158</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#sizeof'>sizeof</a></code>
+                <code><a class='link' href='#sizeof'>sizeof</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f159</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#some'>some</a></code>
+                <code><a class='link' href='#some'>some</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f160</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#static'>static</a></code>
+                <code><a class='link' href='#static'>static</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f161</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#static_assert'>static_assert</a></code>
+                <code><a class='link' href='#static_assert'>static_assert</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f162</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#static_cast'>static_cast</a></code>
+                <code><a class='link' href='#static_cast'>static_cast</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f163</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#stream'>stream</a></code>
+                <code><a class='link' href='#stream'>stream</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -4972,126 +4972,126 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>f165</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#struct'>struct</a></code>
+                <code><a class='link' href='#struct'>struct</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f166</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#stub'>stub</a></code>
+                <code><a class='link' href='#stub'>stub</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f167</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#super'>super</a></code>
+                <code><a class='link' href='#super'>super</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f168</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#switch'>switch</a></code>
+                <code><a class='link' href='#switch'>switch</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f169</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#synchronized'>synchronized</a></code>
+                <code><a class='link' href='#synchronized'>synchronized</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f170</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#template'>template</a></code>
+                <code><a class='link' href='#template'>template</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f171</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#this'>this</a></code>
+                <code><a class='link' href='#this'>this</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f172</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#thread_local'>thread_local</a></code>
+                <code><a class='link' href='#thread_local'>thread_local</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f173</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#throw'>throw</a></code>
+                <code><a class='link' href='#throw'>throw</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f174</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#to_string'>to_string</a></code>
+                <code><a class='link' href='#to_string'>to_string</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f175</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#trait'>trait</a></code>
+                <code><a class='link' href='#trait'>trait</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f176</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#true'>true</a></code>
+                <code><a class='link' href='#true'>true</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f177</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#try'>try</a></code>
+                <code><a class='link' href='#try'>try</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f178</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#type'>type</a></code>
+                <code><a class='link' href='#type'>type</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f179</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#typedef'>typedef</a></code>
+                <code><a class='link' href='#typedef'>typedef</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f180</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#typeid'>typeid</a></code>
+                <code><a class='link' href='#typeid'>typeid</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f181</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#typename'>typename</a></code>
+                <code><a class='link' href='#typename'>typename</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f182</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#typeof'>typeof</a></code>
+                <code><a class='link' href='#typeof'>typeof</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -5126,175 +5126,175 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>f187</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#union'>union</a></code>
+                <code><a class='link' href='#union'>union</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f188</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#unsafe'>unsafe</a></code>
+                <code><a class='link' href='#unsafe'>unsafe</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f189</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#unsigned'>unsigned</a></code>
+                <code><a class='link' href='#unsigned'>unsigned</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f190</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#unsized'>unsized</a></code>
+                <code><a class='link' href='#unsized'>unsized</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f191</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#use'>use</a></code>
+                <code><a class='link' href='#use'>use</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f192</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#using'>using</a></code>
+                <code><a class='link' href='#using'>using</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f193</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#value'>value</a></code>
+                <code><a class='link' href='#value'>value</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f194</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#value_of'>value_of</a></code>
+                <code><a class='link' href='#value_of'>value_of</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f195</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#value_union'>value_union</a></code>
+                <code><a class='link' href='#value_union'>value_union</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f196</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#values_map'>values_map</a></code>
+                <code><a class='link' href='#values_map'>values_map</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f197</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#var'>var</a></code>
+                <code><a class='link' href='#var'>var</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f198</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#vec'>vec</a></code>
+                <code><a class='link' href='#vec'>vec</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f199</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#virtual'>virtual</a></code>
+                <code><a class='link' href='#virtual'>virtual</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f200</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#void'>void</a></code>
+                <code><a class='link' href='#void'>void</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f201</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#volatile'>volatile</a></code>
+                <code><a class='link' href='#volatile'>volatile</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f202</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#wchar_t'>wchar_t</a></code>
+                <code><a class='link' href='#wchar_t'>wchar_t</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f203</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#where'>where</a></code>
+                <code><a class='link' href='#where'>where</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f204</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#which'>which</a></code>
+                <code><a class='link' href='#which'>which</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f205</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#while'>while</a></code>
+                <code><a class='link' href='#while'>while</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f206</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#with'>with</a></code>
+                <code><a class='link' href='#with'>with</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f207</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#xor'>xor</a></code>
+                <code><a class='link' href='#xor'>xor</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f208</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#xor_eq'>xor_eq</a></code>
+                <code><a class='link' href='#xor_eq'>xor_eq</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f209</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#xunion'>xunion</a></code>
+                <code><a class='link' href='#xunion'>xunion</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f210</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#yield'>yield</a></code>
+                <code><a class='link' href='#yield'>yield</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>f211</code></td>
             <td>
-                <code><a class='link' href='../fidl.test.dangerous.struct.types.lower/index.html#zx'>zx</a></code>
+                <code><a class='link' href='#zx'>zx</a></code>
             </td>
             <td></td>
             <td>No default</td>

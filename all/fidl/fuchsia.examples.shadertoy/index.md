@@ -117,7 +117,7 @@ Book: /_book.yaml
     <tr>
             <td><code>toy</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.examples.shadertoy/index.html#Shadertoy'>Shadertoy</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Shadertoy'>Shadertoy</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>image_pipe</code></td>
@@ -137,7 +137,7 @@ Book: /_book.yaml
     <tr>
             <td><code>toy</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.examples.shadertoy/index.html#Shadertoy'>Shadertoy</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Shadertoy'>Shadertoy</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>view_token</code></td>

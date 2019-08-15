@@ -42,7 +42,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys.index/index.html#ComponentIndex_FuzzySearch_Result'>ComponentIndex_FuzzySearch_Result</a></code>
+                <code><a class='link' href='#ComponentIndex_FuzzySearch_Result'>ComponentIndex_FuzzySearch_Result</a></code>
             </td>
         </tr></table>
 
@@ -101,13 +101,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys.index/index.html#ComponentIndex_FuzzySearch_Response'>ComponentIndex_FuzzySearch_Response</a></code>
+                <code><a class='link' href='#ComponentIndex_FuzzySearch_Response'>ComponentIndex_FuzzySearch_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sys.index/index.html#FuzzySearchError'>FuzzySearchError</a></code>
+                <code><a class='link' href='#FuzzySearchError'>FuzzySearchError</a></code>
             </td>
             <td></td>
         </tr></table>

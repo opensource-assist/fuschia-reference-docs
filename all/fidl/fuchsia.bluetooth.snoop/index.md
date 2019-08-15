@@ -74,7 +74,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>packet</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.snoop/index.html#SnoopPacket'>SnoopPacket</a></code>
+                <code><a class='link' href='#SnoopPacket'>SnoopPacket</a></code>
             </td>
         </tr></table>
 
@@ -133,14 +133,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.snoop/index.html#PacketType'>PacketType</a></code>
+                <code><a class='link' href='#PacketType'>PacketType</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>timestamp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.snoop/index.html#Timestamp'>Timestamp</a></code>
+                <code><a class='link' href='#Timestamp'>Timestamp</a></code>
             </td>
             <td> Timestamp that the bt-snoop service received the packet from a snoop channel as measured
  by the host system.

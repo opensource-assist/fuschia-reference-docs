@@ -3,6 +3,7 @@ Book: /_book.yaml
 
 # fuchsia.overnet.omdp
 
+ This protocol is sent on UDP packets to announce Overnet nodes to the world.
 
 
 
@@ -28,7 +29,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>detail</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.overnet.omdp/index.html#BeaconDetail'>BeaconDetail</a></code>
+                <code><a class='link' href='#BeaconDetail'>BeaconDetail</a></code>
             </td>
             <td> Extra data about this node.
 </td>

@@ -21,7 +21,7 @@ Book: /_book.yaml
     <tr>
             <td><code>codecs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.mediacodec/index.html#CodecDescription'>CodecDescription</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CodecDescription'>CodecDescription</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -34,7 +34,7 @@ Book: /_book.yaml
     <tr>
             <td><code>decoder_params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.mediacodec/index.html#CreateDecoder_Params'>CreateDecoder_Params</a></code>
+                <code><a class='link' href='#CreateDecoder_Params'>CreateDecoder_Params</a></code>
             </td>
         </tr><tr>
             <td><code>decoder</code></td>
@@ -54,7 +54,7 @@ Book: /_book.yaml
     <tr>
             <td><code>encoder_params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.mediacodec/index.html#CreateEncoder_Params'>CreateEncoder_Params</a></code>
+                <code><a class='link' href='#CreateEncoder_Params'>CreateEncoder_Params</a></code>
             </td>
         </tr><tr>
             <td><code>encoder</code></td>
@@ -80,7 +80,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>codec_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.mediacodec/index.html#CodecType'>CodecType</a></code>
+                <code><a class='link' href='#CodecType'>CodecType</a></code>
             </td>
             <td></td>
             <td>No default</td>

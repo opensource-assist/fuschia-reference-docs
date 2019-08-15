@@ -12,7 +12,7 @@ Book: /_book.yaml
  Manages fuchsia-pkg:// rewrite rules.
 
  When a package resolver is asked to resolve a fuchsia-pkg URL, it must first
- iterate through its sequence of rewrite rules (given by <a class='link' href='../fuchsia.pkg.rewrite/index.html#List'>List</a>). The
+ iterate through its sequence of rewrite rules (given by <a class='link' href='#List'>List</a>). The
  rewrite engine will rewrite the given URL with the first rule that:
  * matches the given URL
  * produces a valid URL when applied to the given URL
@@ -31,7 +31,7 @@ Book: /_book.yaml
     <tr>
             <td><code>transaction</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.pkg.rewrite/index.html#EditTransaction'>EditTransaction</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#EditTransaction'>EditTransaction</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -49,7 +49,7 @@ Book: /_book.yaml
     <tr>
             <td><code>iterator</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.pkg.rewrite/index.html#RuleIterator'>RuleIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#RuleIterator'>RuleIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -59,7 +59,7 @@ Book: /_book.yaml
 
  Return an iterator over all static (immutable) rewrite rules. These
  rules are handled as lower priority than dynamic rules and cannot be
- modified (although they can be overridden) by <a class='link' href='../fuchsia.pkg.rewrite/index.html#EditTransaction'>EditTransaction</a>s.
+ modified (although they can be overridden) by <a class='link' href='#EditTransaction'>EditTransaction</a>s.
 
  + request `iterator` is a request for an iterator.
 
@@ -69,7 +69,7 @@ Book: /_book.yaml
     <tr>
             <td><code>iterator</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.pkg.rewrite/index.html#RuleIterator'>RuleIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#RuleIterator'>RuleIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -88,9 +88,9 @@ Book: /_book.yaml
  + request `url` the url to rewrite.
  - response `rewritten` the rewritten url.
  * error `ZX_ERR_INVALID_ARGS` If `url` is not a valid `fuchsia-pkg://`
-    URL. See <a class='link' href='../fuchsia.pkg.rewrite/index.html#fuchsia-pkg URL'>fuchsia-pkg URL</a>.
+    URL. See <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>.
 
- <a class='link' href='../fuchsia.pkg.rewrite/index.html#fuchsia-pkg URL'>fuchsia-pkg URL</a>:
+ <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>:
     https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/package_url.md
 
 #### Request
@@ -110,7 +110,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg.rewrite/index.html#Engine_TestApply_Result'>Engine_TestApply_Result</a></code>
+                <code><a class='link' href='#Engine_TestApply_Result'>Engine_TestApply_Result</a></code>
             </td>
         </tr></table>
 
@@ -132,7 +132,7 @@ Book: /_book.yaml
     <tr>
             <td><code>iterator</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.pkg.rewrite/index.html#RuleIterator'>RuleIterator</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#RuleIterator'>RuleIterator</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -159,9 +159,9 @@ Book: /_book.yaml
 
  * status `ZX_OK` if the rule was staged to be added.
  * status `ZX_ERR_INVALID_ARGS` If `url` is not a valid `fuchsia-pkg://`
-    URL. See <a class='link' href='../fuchsia.pkg.rewrite/index.html#fuchsia-pkg URL'>fuchsia-pkg URL</a>.
+    URL. See <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>.
 
- <a class='link' href='../fuchsia.pkg.rewrite/index.html#fuchsia-pkg URL'>fuchsia-pkg URL</a>:
+ <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>:
     https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/package_url.md
 
 #### Request
@@ -170,7 +170,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rule</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg.rewrite/index.html#Rule'>Rule</a></code>
+                <code><a class='link' href='#Rule'>Rule</a></code>
             </td>
         </tr></table>
 
@@ -212,13 +212,13 @@ Book: /_book.yaml
 ## RuleIterator {:#RuleIterator}
 *Defined in [fuchsia.pkg.rewrite/rewrite.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg.rewrite/rewrite.fidl#164)*
 
- The iterator over all the rewrite rules defined in a <a class='link' href='../fuchsia.pkg.rewrite/index.html#Engine'>Engine</a>.
+ The iterator over all the rewrite rules defined in a <a class='link' href='#Engine'>Engine</a>.
 
 ### Next {:#Next}
 
  Advance the iterator and return the next batch of rules.
 
- - response `rules` a vector of <a class='link' href='../fuchsia.pkg.rewrite/index.html#Rule'>Rule</a> rules. Will return an empty
+ - response `rules` a vector of <a class='link' href='#Rule'>Rule</a> rules. Will return an empty
     vector when there are no more rules.
 
 #### Request
@@ -233,7 +233,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.pkg.rewrite/index.html#Rule'>Rule</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Rule'>Rule</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -373,7 +373,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg.rewrite/index.html#Engine_TestApply_Response'>Engine_TestApply_Response</a></code>
+                <code><a class='link' href='#Engine_TestApply_Response'>Engine_TestApply_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -397,7 +397,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>literal</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.pkg.rewrite/index.html#LiteralRule'>LiteralRule</a></code>
+                <code><a class='link' href='#LiteralRule'>LiteralRule</a></code>
             </td>
             <td></td>
         </tr></table>

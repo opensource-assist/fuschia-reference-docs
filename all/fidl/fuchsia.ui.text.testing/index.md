@@ -63,7 +63,7 @@ Book: /_book.yaml
     <tr>
             <td><code>results</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ui.text.testing/index.html#TestInfo'>TestInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#TestInfo'>TestInfo</a>&gt;</code>
             </td>
         </tr></table>
 

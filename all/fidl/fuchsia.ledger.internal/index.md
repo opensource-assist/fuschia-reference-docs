@@ -48,7 +48,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>repository</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ledger.internal/index.html#LedgerRepository'>LedgerRepository</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#LedgerRepository'>LedgerRepository</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -115,7 +115,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ledger_repository</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ledger.internal/index.html#LedgerRepository'>LedgerRepository</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#LedgerRepository'>LedgerRepository</a>&gt;</code>
             </td>
         </tr></table>
 

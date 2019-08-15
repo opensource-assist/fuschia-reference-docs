@@ -44,7 +44,7 @@ Book: /_book.yaml
     <tr>
             <td><code>vars</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../test.processbuilder/index.html#EnvVar'>EnvVar</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#EnvVar'>EnvVar</a>&gt;</code>
             </td>
         </tr></table>
 

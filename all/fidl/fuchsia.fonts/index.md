@@ -25,7 +25,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#Request'>Request</a></code>
+                <code><a class='link' href='#Request'>Request</a></code>
             </td>
         </tr></table>
 
@@ -36,7 +36,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#Response'>Response</a>?</code>
+                <code><a class='link' href='#Response'>Response</a>?</code>
             </td>
         </tr></table>
 
@@ -66,7 +66,7 @@ Book: /_book.yaml
     <tr>
             <td><code>family_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#FamilyInfo'>FamilyInfo</a>?</code>
+                <code><a class='link' href='#FamilyInfo'>FamilyInfo</a>?</code>
             </td>
         </tr></table>
 
@@ -82,7 +82,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#TypefaceRequest'>TypefaceRequest</a></code>
+                <code><a class='link' href='#TypefaceRequest'>TypefaceRequest</a></code>
             </td>
         </tr></table>
 
@@ -93,7 +93,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#TypefaceResponse'>TypefaceResponse</a></code>
+                <code><a class='link' href='#TypefaceResponse'>TypefaceResponse</a></code>
             </td>
         </tr></table>
 
@@ -112,7 +112,7 @@ Book: /_book.yaml
     <tr>
             <td><code>family</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#FamilyName'>FamilyName</a></code>
+                <code><a class='link' href='#FamilyName'>FamilyName</a></code>
             </td>
         </tr></table>
 
@@ -123,7 +123,7 @@ Book: /_book.yaml
     <tr>
             <td><code>family_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#FontFamilyInfo'>FontFamilyInfo</a></code>
+                <code><a class='link' href='#FontFamilyInfo'>FontFamilyInfo</a></code>
             </td>
         </tr></table>
 
@@ -149,7 +149,7 @@ Book: /_book.yaml
  case-insensitive. In case when there is no specified family or the
  specified family doesn't have glyph for the requested `character` then
  a font from another family may be returned. This behavior can be disabled
- using REQUEST_FLAG_NO_FALLBACK.
+ using `REQUEST_FLAG_NO_FALLBACK`.
 </td>
             <td>No default</td>
         </tr><tr>
@@ -173,10 +173,10 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>slant</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#Slant'>Slant</a></code>
+                <code><a class='link' href='#Slant'>Slant</a></code>
             </td>
             <td></td>
-            <td><a class='link' href='../fuchsia.fonts/index.html#UPRIGHT'>UPRIGHT</a></td>
+            <td><a class='link' href='#Slant.UPRIGHT'>Slant.UPRIGHT</a></td>
         </tr><tr>
             <td><code>language</code></td>
             <td>
@@ -200,13 +200,13 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>fallback_group</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#FallbackGroup'>FallbackGroup</a></code>
+                <code><a class='link' href='#FallbackGroup'>FallbackGroup</a></code>
             </td>
             <td> Fallback group preference. Caller can leave this field set to NONE. In
  that case the font provider will use fallback group of the specified font
  family.
 </td>
-            <td><a class='link' href='../fuchsia.fonts/index.html#NONE'>NONE</a></td>
+            <td><a class='link' href='#FallbackGroup.NONE'>FallbackGroup.NONE</a></td>
         </tr><tr>
             <td><code>flags</code></td>
             <td>
@@ -281,7 +281,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>slant</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#Slant'>Slant</a></code>
+                <code><a class='link' href='#Slant'>Slant</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -313,7 +313,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>styles</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.fonts/index.html#Style'>Style</a>&gt;[300]</code>
+                <code>vector&lt;<a class='link' href='#Style'>Style</a>&gt;[300]</code>
             </td>
             <td> Unordered list of all available styles in the family.
 </td>
@@ -529,7 +529,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>query</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#TypefaceQuery'>TypefaceQuery</a></code>
+                <code><a class='link' href='#TypefaceQuery'>TypefaceQuery</a></code>
             </td>
             <td> Parameters for looking up a typeface.
 </td>
@@ -537,7 +537,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>flags</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#TypefaceRequestFlags'>TypefaceRequestFlags</a></code>
+                <code><a class='link' href='#TypefaceRequestFlags'>TypefaceRequestFlags</a></code>
             </td>
             <td> Flags for how to process the request, such as which kinds of substitutions are permitted.
 </td>
@@ -557,7 +557,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>family</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#FamilyName'>FamilyName</a></code>
+                <code><a class='link' href='#FamilyName'>FamilyName</a></code>
             </td>
             <td> Desired font family name, e.g. "Roboto". Font family search is case-insensitive.
 
@@ -569,7 +569,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>style</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#Style2'>Style2</a></code>
+                <code><a class='link' href='#Style2'>Style2</a></code>
             </td>
             <td> Style properties of the desired typeface.
 </td>
@@ -599,7 +599,7 @@ Type: <code>uint32</code>
             <td>5</td>
             <td><code>fallback_family</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#GenericFontFamily'>GenericFontFamily</a></code>
+                <code><a class='link' href='#GenericFontFamily'>GenericFontFamily</a></code>
             </td>
             <td> A generic font family to fall back to if an exact match is unavailable or does not contain
  the requested code point.
@@ -673,7 +673,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>name</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#FamilyName'>FamilyName</a></code>
+                <code><a class='link' href='#FamilyName'>FamilyName</a></code>
             </td>
             <td> Canonical font family name. Note that this may be different from the value passed to
  `GetFontFamilyInfo()` due to the resolution of font aliases, and/or differences in
@@ -683,7 +683,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>styles</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.fonts/index.html#Style2'>Style2</a>&gt;[300]</code>
+                <code>vector&lt;<a class='link' href='#Style2'>Style2</a>&gt;[300]</code>
             </td>
             <td> Unordered list of all available styles in the family.
 </td>
@@ -703,7 +703,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>slant</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#Slant'>Slant</a></code>
+                <code><a class='link' href='#Slant'>Slant</a></code>
             </td>
             <td> See `Slant`.
 </td>
@@ -725,7 +725,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>width</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.fonts/index.html#Width'>Width</a></code>
+                <code><a class='link' href='#Width'>Width</a></code>
             </td>
             <td> See `Width`.
 </td>

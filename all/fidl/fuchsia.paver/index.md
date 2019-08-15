@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## PayloadStream {:#PayloadStream}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#45)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#46)*
 
  Protocol for streaming the FVM payload.
 
@@ -52,14 +52,20 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#ReadResult'>ReadResult</a></code>
+                <code><a class='link' href='#ReadResult'>ReadResult</a></code>
             </td>
         </tr></table>
 
 ## Paver {:#Paver}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#55)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#62)*
 
  Protocol for managing boot partitions.
+
+ Most of the protocol methods rely on auto-discovery of the storage device
+ which will be paved. If the device has no pre-initialized storage devices or
+ multiple, the methods will fail. For devices with dynamic partitions (i.e. GPT),
+ |InitializePartitionTables| and |WipeVolumes| can be used to control which device is
+ paved to.
 
 ### QueryActiveConfiguration {:#QueryActiveConfiguration}
 
@@ -77,7 +83,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Paver_QueryActiveConfiguration_Result'>Paver_QueryActiveConfiguration_Result</a></code>
+                <code><a class='link' href='#Paver_QueryActiveConfiguration_Result'>Paver_QueryActiveConfiguration_Result</a></code>
             </td>
         </tr></table>
 
@@ -93,7 +99,7 @@ Book: /_book.yaml
     <tr>
             <td><code>configuration</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Configuration'>Configuration</a></code>
+                <code><a class='link' href='#Configuration'>Configuration</a></code>
             </td>
         </tr></table>
 
@@ -130,34 +136,13 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### ForceRecoveryConfiguration {:#ForceRecoveryConfiguration}
-
- Force the next reboot to boot into the recovery configuration. Does not persist between
- subsequent boots.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr></table>
-
 ### WriteAsset {:#WriteAsset}
 
  Writes partition corresponding to `configuration` and `asset` with data from `payload`.
  Will zero out rest of the partition if `payload` is smaller than the size of the partition
  being written.
 
- Returns ZX_ERR_INVALID_ARGS if `configuration` specifies active configuration.
+ Returns `ZX_ERR_INVALID_ARGS` if `configuration` specifies active configuration.
 
 #### Request
 <table>
@@ -165,12 +150,12 @@ Book: /_book.yaml
     <tr>
             <td><code>configuration</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Configuration'>Configuration</a></code>
+                <code><a class='link' href='#Configuration'>Configuration</a></code>
             </td>
         </tr><tr>
             <td><code>asset</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Asset'>Asset</a></code>
+                <code><a class='link' href='#Asset'>Asset</a></code>
             </td>
         </tr><tr>
             <td><code>payload</code></td>
@@ -201,7 +186,7 @@ Book: /_book.yaml
     <tr>
             <td><code>payload</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.paver/index.html#PayloadStream'>PayloadStream</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#PayloadStream'>PayloadStream</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -279,10 +264,82 @@ Book: /_book.yaml
  Notable use cases include recovering from corrupted FVM as well as setting device to a
  "clean" state for automation.
 
+ If |block_device| is not provided, the paver will perform a search for
+ the the FVM. If multiple block devices have valid GPT, |block_device| can be provided
+ to specify which one to target. It assumed that channel backing
+ |block_device| also implements `fuchsia.io.Node` for now.
+
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
-    </table>
+    <tr>
+            <td><code>block_device</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.hardware.block/index.html'>fuchsia.hardware.block</a>/<a class='link' href='../fuchsia.hardware.block/index.html#Block'>Block</a>&gt;?</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+### InitializePartitionTables {:#InitializePartitionTables}
+
+ Initializes GPT on given block device and then adds an FVM partition.
+
+ |gpt_block_device| specifies the block device to use. It assumed that channel
+ backing |gpt_block_device| also implements `fuchsia.io.Node` for now.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>gpt_block_device</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.hardware.block/index.html'>fuchsia.hardware.block</a>/<a class='link' href='../fuchsia.hardware.block/index.html#Block'>Block</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+### WipePartitionTables {:#WipePartitionTables}
+
+ Wipes all entries from the partition table of the specified block device.
+ Currently only supported on devices with a GPT.
+
+ If |block_device| is not provided, the paver will perform a search for
+ the the FVM. If multiple block devices have valid GPT, |block_device| can be provided
+ to specify which one to target. It assumed that channel backing
+ |block_device| also implements `fuchsia.io.Node` for now.
+
+ *WARNING*: This API may destructively remove non-fuchsia maintained partitions from
+ the block device.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>block_device</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.hardware.block/index.html'>fuchsia.hardware.block</a>/<a class='link' href='../fuchsia.hardware.block/index.html#Block'>Block</a>&gt;?</code>
+            </td>
+        </tr></table>
 
 
 #### Response
@@ -310,7 +367,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>configuration</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Configuration'>Configuration</a></code>
+                <code><a class='link' href='#Configuration'>Configuration</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -318,7 +375,7 @@ Book: /_book.yaml
 </table>
 
 ### ReadInfo {:#ReadInfo}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#27)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#28)*
 
 
 
@@ -351,7 +408,7 @@ Book: /_book.yaml
 ### Configuration {:#Configuration}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#12)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#13)*
 
  Describes the version of an asset.
 
@@ -374,7 +431,7 @@ Type: <code>uint32</code>
 ### Asset {:#Asset}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#20)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#21)*
 
  Describes assets which may be updated. Each asset has 3 versions, each tied to a particular
  configuration.
@@ -405,7 +462,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#Paver_QueryActiveConfiguration_Response'>Paver_QueryActiveConfiguration_Response</a></code>
+                <code><a class='link' href='#Paver_QueryActiveConfiguration_Response'>Paver_QueryActiveConfiguration_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -417,7 +474,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### ReadResult {:#ReadResult}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#34)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#35)*
 
 
 <table>
@@ -438,7 +495,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.paver/index.html#ReadInfo'>ReadInfo</a></code>
+                <code><a class='link' href='#ReadInfo'>ReadInfo</a></code>
             </td>
             <td> Information about location of successfully read data within pre-registered VMO.
 </td>

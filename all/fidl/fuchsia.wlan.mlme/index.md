@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#ScanRequest'>ScanRequest</a></code>
+                <code><a class='link' href='#ScanRequest'>ScanRequest</a></code>
             </td>
         </tr></table>
 
@@ -36,7 +36,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#ScanResult'>ScanResult</a></code>
+                <code><a class='link' href='#ScanResult'>ScanResult</a></code>
             </td>
         </tr></table>
 
@@ -51,7 +51,7 @@ Book: /_book.yaml
     <tr>
             <td><code>end</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#ScanEnd'>ScanEnd</a></code>
+                <code><a class='link' href='#ScanEnd'>ScanEnd</a></code>
             </td>
         </tr></table>
 
@@ -64,7 +64,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#JoinRequest'>JoinRequest</a></code>
+                <code><a class='link' href='#JoinRequest'>JoinRequest</a></code>
             </td>
         </tr></table>
 
@@ -81,7 +81,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#JoinConfirm'>JoinConfirm</a></code>
+                <code><a class='link' href='#JoinConfirm'>JoinConfirm</a></code>
             </td>
         </tr></table>
 
@@ -94,7 +94,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AuthenticateRequest'>AuthenticateRequest</a></code>
+                <code><a class='link' href='#AuthenticateRequest'>AuthenticateRequest</a></code>
             </td>
         </tr></table>
 
@@ -111,7 +111,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AuthenticateConfirm'>AuthenticateConfirm</a></code>
+                <code><a class='link' href='#AuthenticateConfirm'>AuthenticateConfirm</a></code>
             </td>
         </tr></table>
 
@@ -126,7 +126,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ind</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AuthenticateIndication'>AuthenticateIndication</a></code>
+                <code><a class='link' href='#AuthenticateIndication'>AuthenticateIndication</a></code>
             </td>
         </tr></table>
 
@@ -139,7 +139,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AuthenticateResponse'>AuthenticateResponse</a></code>
+                <code><a class='link' href='#AuthenticateResponse'>AuthenticateResponse</a></code>
             </td>
         </tr></table>
 
@@ -154,7 +154,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#DeauthenticateRequest'>DeauthenticateRequest</a></code>
+                <code><a class='link' href='#DeauthenticateRequest'>DeauthenticateRequest</a></code>
             </td>
         </tr></table>
 
@@ -171,7 +171,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#DeauthenticateConfirm'>DeauthenticateConfirm</a></code>
+                <code><a class='link' href='#DeauthenticateConfirm'>DeauthenticateConfirm</a></code>
             </td>
         </tr></table>
 
@@ -186,7 +186,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ind</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#DeauthenticateIndication'>DeauthenticateIndication</a></code>
+                <code><a class='link' href='#DeauthenticateIndication'>DeauthenticateIndication</a></code>
             </td>
         </tr></table>
 
@@ -199,7 +199,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AssociateRequest'>AssociateRequest</a></code>
+                <code><a class='link' href='#AssociateRequest'>AssociateRequest</a></code>
             </td>
         </tr></table>
 
@@ -216,7 +216,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AssociateConfirm'>AssociateConfirm</a></code>
+                <code><a class='link' href='#AssociateConfirm'>AssociateConfirm</a></code>
             </td>
         </tr></table>
 
@@ -231,7 +231,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ind</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AssociateIndication'>AssociateIndication</a></code>
+                <code><a class='link' href='#AssociateIndication'>AssociateIndication</a></code>
             </td>
         </tr></table>
 
@@ -244,7 +244,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AssociateResponse'>AssociateResponse</a></code>
+                <code><a class='link' href='#AssociateResponse'>AssociateResponse</a></code>
             </td>
         </tr></table>
 
@@ -259,7 +259,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#DisassociateRequest'>DisassociateRequest</a></code>
+                <code><a class='link' href='#DisassociateRequest'>DisassociateRequest</a></code>
             </td>
         </tr></table>
 
@@ -276,7 +276,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#DisassociateConfirm'>DisassociateConfirm</a></code>
+                <code><a class='link' href='#DisassociateConfirm'>DisassociateConfirm</a></code>
             </td>
         </tr></table>
 
@@ -291,7 +291,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ind</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#DisassociateIndication'>DisassociateIndication</a></code>
+                <code><a class='link' href='#DisassociateIndication'>DisassociateIndication</a></code>
             </td>
         </tr></table>
 
@@ -304,7 +304,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#ResetRequest'>ResetRequest</a></code>
+                <code><a class='link' href='#ResetRequest'>ResetRequest</a></code>
             </td>
         </tr></table>
 
@@ -319,7 +319,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#StartRequest'>StartRequest</a></code>
+                <code><a class='link' href='#StartRequest'>StartRequest</a></code>
             </td>
         </tr></table>
 
@@ -336,7 +336,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#StartConfirm'>StartConfirm</a></code>
+                <code><a class='link' href='#StartConfirm'>StartConfirm</a></code>
             </td>
         </tr></table>
 
@@ -349,7 +349,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#StopRequest'>StopRequest</a></code>
+                <code><a class='link' href='#StopRequest'>StopRequest</a></code>
             </td>
         </tr></table>
 
@@ -366,7 +366,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#StopConfirm'>StopConfirm</a></code>
+                <code><a class='link' href='#StopConfirm'>StopConfirm</a></code>
             </td>
         </tr></table>
 
@@ -379,7 +379,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#SetKeysRequest'>SetKeysRequest</a></code>
+                <code><a class='link' href='#SetKeysRequest'>SetKeysRequest</a></code>
             </td>
         </tr></table>
 
@@ -394,7 +394,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#DeleteKeysRequest'>DeleteKeysRequest</a></code>
+                <code><a class='link' href='#DeleteKeysRequest'>DeleteKeysRequest</a></code>
             </td>
         </tr></table>
 
@@ -409,7 +409,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#EapolRequest'>EapolRequest</a></code>
+                <code><a class='link' href='#EapolRequest'>EapolRequest</a></code>
             </td>
         </tr></table>
 
@@ -426,7 +426,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#EapolConfirm'>EapolConfirm</a></code>
+                <code><a class='link' href='#EapolConfirm'>EapolConfirm</a></code>
             </td>
         </tr></table>
 
@@ -441,7 +441,7 @@ Book: /_book.yaml
     <tr>
             <td><code>action</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MeshPeeringOpenAction'>MeshPeeringOpenAction</a></code>
+                <code><a class='link' href='#MeshPeeringOpenAction'>MeshPeeringOpenAction</a></code>
             </td>
         </tr></table>
 
@@ -454,7 +454,7 @@ Book: /_book.yaml
     <tr>
             <td><code>action</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MeshPeeringOpenAction'>MeshPeeringOpenAction</a></code>
+                <code><a class='link' href='#MeshPeeringOpenAction'>MeshPeeringOpenAction</a></code>
             </td>
         </tr></table>
 
@@ -471,7 +471,7 @@ Book: /_book.yaml
     <tr>
             <td><code>action</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MeshPeeringConfirmAction'>MeshPeeringConfirmAction</a></code>
+                <code><a class='link' href='#MeshPeeringConfirmAction'>MeshPeeringConfirmAction</a></code>
             </td>
         </tr></table>
 
@@ -484,7 +484,7 @@ Book: /_book.yaml
     <tr>
             <td><code>action</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MeshPeeringConfirmAction'>MeshPeeringConfirmAction</a></code>
+                <code><a class='link' href='#MeshPeeringConfirmAction'>MeshPeeringConfirmAction</a></code>
             </td>
         </tr></table>
 
@@ -499,7 +499,7 @@ Book: /_book.yaml
     <tr>
             <td><code>peering</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MeshPeeringParams'>MeshPeeringParams</a></code>
+                <code><a class='link' href='#MeshPeeringParams'>MeshPeeringParams</a></code>
             </td>
         </tr></table>
 
@@ -514,7 +514,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#GetMeshPathTableRequest'>GetMeshPathTableRequest</a></code>
+                <code><a class='link' href='#GetMeshPathTableRequest'>GetMeshPathTableRequest</a></code>
             </td>
         </tr></table>
 
@@ -540,7 +540,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ind</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#SignalReportIndication'>SignalReportIndication</a></code>
+                <code><a class='link' href='#SignalReportIndication'>SignalReportIndication</a></code>
             </td>
         </tr></table>
 
@@ -555,7 +555,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ind</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#EapolIndication'>EapolIndication</a></code>
+                <code><a class='link' href='#EapolIndication'>EapolIndication</a></code>
             </td>
         </tr></table>
 
@@ -568,7 +568,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#SetControlledPortRequest'>SetControlledPortRequest</a></code>
+                <code><a class='link' href='#SetControlledPortRequest'>SetControlledPortRequest</a></code>
             </td>
         </tr></table>
 
@@ -589,7 +589,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#DeviceInfo'>DeviceInfo</a></code>
+                <code><a class='link' href='#DeviceInfo'>DeviceInfo</a></code>
             </td>
         </tr></table>
 
@@ -614,7 +614,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#StatsQueryResponse'>StatsQueryResponse</a></code>
+                <code><a class='link' href='#StatsQueryResponse'>StatsQueryResponse</a></code>
             </td>
         </tr></table>
 
@@ -633,7 +633,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MinstrelListResponse'>MinstrelListResponse</a></code>
+                <code><a class='link' href='#MinstrelListResponse'>MinstrelListResponse</a></code>
             </td>
         </tr></table>
 
@@ -646,7 +646,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MinstrelStatsRequest'>MinstrelStatsRequest</a></code>
+                <code><a class='link' href='#MinstrelStatsRequest'>MinstrelStatsRequest</a></code>
             </td>
         </tr></table>
 
@@ -657,7 +657,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MinstrelStatsResponse'>MinstrelStatsResponse</a></code>
+                <code><a class='link' href='#MinstrelStatsResponse'>MinstrelStatsResponse</a></code>
             </td>
         </tr></table>
 
@@ -670,7 +670,7 @@ Book: /_book.yaml
     <tr>
             <td><code>req</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#StartCaptureFramesRequest'>StartCaptureFramesRequest</a></code>
+                <code><a class='link' href='#StartCaptureFramesRequest'>StartCaptureFramesRequest</a></code>
             </td>
         </tr></table>
 
@@ -681,7 +681,7 @@ Book: /_book.yaml
     <tr>
             <td><code>resp</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#StartCaptureFramesResponse'>StartCaptureFramesResponse</a></code>
+                <code><a class='link' href='#StartCaptureFramesResponse'>StartCaptureFramesResponse</a></code>
             </td>
         </tr></table>
 
@@ -706,7 +706,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#CapturedFrameResult'>CapturedFrameResult</a></code>
+                <code><a class='link' href='#CapturedFrameResult'>CapturedFrameResult</a></code>
             </td>
         </tr></table>
 
@@ -724,7 +724,7 @@ Book: /_book.yaml
     <tr>
             <td><code>request</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.wlan.mlme/index.html#MLME'>MLME</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#MLME'>MLME</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -752,7 +752,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>bss_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#BSSTypes'>BSSTypes</a></code>
+                <code><a class='link' href='#BSSTypes'>BSSTypes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -773,7 +773,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>scan_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#ScanTypes'>ScanTypes</a></code>
+                <code><a class='link' href='#ScanTypes'>ScanTypes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1358,42 +1358,42 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>ht_cap_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#HtCapabilityInfo'>HtCapabilityInfo</a></code>
+                <code><a class='link' href='#HtCapabilityInfo'>HtCapabilityInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>ampdu_params</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AmpduParams'>AmpduParams</a></code>
+                <code><a class='link' href='#AmpduParams'>AmpduParams</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>mcs_set</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#SupportedMcsSet'>SupportedMcsSet</a></code>
+                <code><a class='link' href='#SupportedMcsSet'>SupportedMcsSet</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>ht_ext_cap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#HtExtCapabilities'>HtExtCapabilities</a></code>
+                <code><a class='link' href='#HtExtCapabilities'>HtExtCapabilities</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>txbf_cap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#TxBfCapability'>TxBfCapability</a></code>
+                <code><a class='link' href='#TxBfCapability'>TxBfCapability</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>asel_cap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AselCapability'>AselCapability</a></code>
+                <code><a class='link' href='#AselCapability'>AselCapability</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1520,14 +1520,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>ht_op_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#HTOperationInfo'>HTOperationInfo</a></code>
+                <code><a class='link' href='#HTOperationInfo'>HTOperationInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>basic_mcs_set</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#SupportedMcsSet'>SupportedMcsSet</a></code>
+                <code><a class='link' href='#SupportedMcsSet'>SupportedMcsSet</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1767,14 +1767,14 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>vht_cap_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#VhtCapabilitiesInfo'>VhtCapabilitiesInfo</a></code>
+                <code><a class='link' href='#VhtCapabilitiesInfo'>VhtCapabilitiesInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>vht_mcs_nss</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#VhtMcsNss'>VhtMcsNss</a></code>
+                <code><a class='link' href='#VhtMcsNss'>VhtMcsNss</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1813,7 +1813,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>basic_mcs</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#BasicVhtMcsNss'>BasicVhtMcsNss</a></code>
+                <code><a class='link' href='#BasicVhtMcsNss'>BasicVhtMcsNss</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1845,7 +1845,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>bss_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#BSSTypes'>BSSTypes</a></code>
+                <code><a class='link' href='#BSSTypes'>BSSTypes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1880,7 +1880,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>cap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#CapabilityInfo'>CapabilityInfo</a></code>
+                <code><a class='link' href='#CapabilityInfo'>CapabilityInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1938,28 +1938,28 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>ht_cap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#HtCapabilities'>HtCapabilities</a>?</code>
+                <code><a class='link' href='#HtCapabilities'>HtCapabilities</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>ht_op</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#HtOperation'>HtOperation</a>?</code>
+                <code><a class='link' href='#HtOperation'>HtOperation</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>vht_cap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#VhtCapabilities'>VhtCapabilities</a>?</code>
+                <code><a class='link' href='#VhtCapabilities'>VhtCapabilities</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>vht_op</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#VhtOperation'>VhtOperation</a>?</code>
+                <code><a class='link' href='#VhtOperation'>VhtOperation</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1998,7 +1998,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>bss</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#BSSDescription'>BSSDescription</a></code>
+                <code><a class='link' href='#BSSDescription'>BSSDescription</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2023,7 +2023,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#ScanResultCodes'>ScanResultCodes</a></code>
+                <code><a class='link' href='#ScanResultCodes'>ScanResultCodes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2041,7 +2041,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>selected_bss</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#BSSDescription'>BSSDescription</a></code>
+                <code><a class='link' href='#BSSDescription'>BSSDescription</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2094,7 +2094,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>result_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#JoinResultCodes'>JoinResultCodes</a></code>
+                <code><a class='link' href='#JoinResultCodes'>JoinResultCodes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2119,7 +2119,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>auth_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AuthenticationTypes'>AuthenticationTypes</a></code>
+                <code><a class='link' href='#AuthenticationTypes'>AuthenticationTypes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2151,14 +2151,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>auth_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AuthenticationTypes'>AuthenticationTypes</a></code>
+                <code><a class='link' href='#AuthenticationTypes'>AuthenticationTypes</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>result_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AuthenticateResultCodes'>AuthenticateResultCodes</a></code>
+                <code><a class='link' href='#AuthenticateResultCodes'>AuthenticateResultCodes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2183,7 +2183,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>auth_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AuthenticationTypes'>AuthenticationTypes</a></code>
+                <code><a class='link' href='#AuthenticationTypes'>AuthenticationTypes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2208,7 +2208,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>result_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AuthenticateResultCodes'>AuthenticateResultCodes</a></code>
+                <code><a class='link' href='#AuthenticateResultCodes'>AuthenticateResultCodes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2233,7 +2233,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>reason_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#ReasonCode'>ReasonCode</a></code>
+                <code><a class='link' href='#ReasonCode'>ReasonCode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2276,7 +2276,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>reason_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#ReasonCode'>ReasonCode</a></code>
+                <code><a class='link' href='#ReasonCode'>ReasonCode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2326,7 +2326,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>result_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AssociateResultCodes'>AssociateResultCodes</a></code>
+                <code><a class='link' href='#AssociateResultCodes'>AssociateResultCodes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2397,7 +2397,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>result_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#AssociateResultCodes'>AssociateResultCodes</a></code>
+                <code><a class='link' href='#AssociateResultCodes'>AssociateResultCodes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2547,7 +2547,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>bss_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#BSSTypes'>BSSTypes</a></code>
+                <code><a class='link' href='#BSSTypes'>BSSTypes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2575,7 +2575,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>country</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#Country'>Country</a></code>
+                <code><a class='link' href='#Country'>Country</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2621,7 +2621,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>result_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#StartResultCodes'>StartResultCodes</a></code>
+                <code><a class='link' href='#StartResultCodes'>StartResultCodes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2657,7 +2657,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>result_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#StopResultCodes'>StopResultCodes</a></code>
+                <code><a class='link' href='#StopResultCodes'>StopResultCodes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2689,7 +2689,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>key_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#KeyType'>KeyType</a></code>
+                <code><a class='link' href='#KeyType'>KeyType</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2735,7 +2735,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>keylist</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.mlme/index.html#SetKeyDescriptor'>SetKeyDescriptor</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#SetKeyDescriptor'>SetKeyDescriptor</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2760,7 +2760,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>key_type</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#KeyType'>KeyType</a></code>
+                <code><a class='link' href='#KeyType'>KeyType</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2785,7 +2785,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>keylist</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.mlme/index.html#DeleteKeyDescriptor'>DeleteKeyDescriptor</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#DeleteKeyDescriptor'>DeleteKeyDescriptor</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2835,7 +2835,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>result_code</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#EapolResultCodes'>EapolResultCodes</a></code>
+                <code><a class='link' href='#EapolResultCodes'>EapolResultCodes</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2948,35 +2948,35 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>mesh_config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MeshConfiguration'>MeshConfiguration</a></code>
+                <code><a class='link' href='#MeshConfiguration'>MeshConfiguration</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>ht_cap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#HtCapabilities'>HtCapabilities</a>?</code>
+                <code><a class='link' href='#HtCapabilities'>HtCapabilities</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>ht_op</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#HtOperation'>HtOperation</a>?</code>
+                <code><a class='link' href='#HtOperation'>HtOperation</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>vht_cap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#VhtCapabilities'>VhtCapabilities</a>?</code>
+                <code><a class='link' href='#VhtCapabilities'>VhtCapabilities</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>vht_op</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#VhtOperation'>VhtOperation</a>?</code>
+                <code><a class='link' href='#VhtOperation'>VhtOperation</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2994,7 +2994,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>common</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MeshPeeringCommon'>MeshPeeringCommon</a></code>
+                <code><a class='link' href='#MeshPeeringCommon'>MeshPeeringCommon</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3012,7 +3012,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>common</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MeshPeeringCommon'>MeshPeeringCommon</a></code>
+                <code><a class='link' href='#MeshPeeringCommon'>MeshPeeringCommon</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3172,21 +3172,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>cap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#CapabilityInfo'>CapabilityInfo</a></code>
+                <code><a class='link' href='#CapabilityInfo'>CapabilityInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>ht_cap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#HtCapabilities'>HtCapabilities</a>?</code>
+                <code><a class='link' href='#HtCapabilities'>HtCapabilities</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>vht_cap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#VhtCapabilities'>VhtCapabilities</a>?</code>
+                <code><a class='link' href='#VhtCapabilities'>VhtCapabilities</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3211,14 +3211,14 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>role</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MacRole'>MacRole</a></code>
+                <code><a class='link' href='#MacRole'>MacRole</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>bands</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.wlan.mlme/index.html#BandCapabilities'>BandCapabilities</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#BandCapabilities'>BandCapabilities</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3322,7 +3322,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#ControlledPortState'>ControlledPortState</a></code>
+                <code><a class='link' href='#ControlledPortState'>ControlledPortState</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3340,7 +3340,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>mgmt_frame_flags</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MgmtFrameCaptureFlags'>MgmtFrameCaptureFlags</a></code>
+                <code><a class='link' href='#MgmtFrameCaptureFlags'>MgmtFrameCaptureFlags</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3365,7 +3365,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>supported_mgmt_frames</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.wlan.mlme/index.html#MgmtFrameCaptureFlags'>MgmtFrameCaptureFlags</a></code>
+                <code><a class='link' href='#MgmtFrameCaptureFlags'>MgmtFrameCaptureFlags</a></code>
             </td>
             <td></td>
             <td>No default</td>

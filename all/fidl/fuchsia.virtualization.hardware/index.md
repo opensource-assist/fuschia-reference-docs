@@ -180,7 +180,7 @@ Book: /_book.yaml
     <tr>
             <td><code>start_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#StartInfo'>StartInfo</a></code>
+                <code><a class='link' href='#StartInfo'>StartInfo</a></code>
             </td>
         </tr></table>
 
@@ -307,7 +307,7 @@ Book: /_book.yaml
     <tr>
             <td><code>start_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#StartInfo'>StartInfo</a></code>
+                <code><a class='link' href='#StartInfo'>StartInfo</a></code>
             </td>
         </tr><tr>
             <td><code>id</code></td>
@@ -434,7 +434,7 @@ Book: /_book.yaml
     <tr>
             <td><code>start_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#StartInfo'>StartInfo</a></code>
+                <code><a class='link' href='#StartInfo'>StartInfo</a></code>
             </td>
         </tr><tr>
             <td><code>socket</code></td>
@@ -578,12 +578,12 @@ Book: /_book.yaml
     <tr>
             <td><code>start_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#StartInfo'>StartInfo</a></code>
+                <code><a class='link' href='#StartInfo'>StartInfo</a></code>
             </td>
         </tr><tr>
             <td><code>view_listener</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#ViewListener'>ViewListener</a>?</code>
+                <code><a class='link' href='#ViewListener'>ViewListener</a>?</code>
             </td>
         </tr></table>
 
@@ -696,7 +696,7 @@ Book: /_book.yaml
     <tr>
             <td><code>start_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#StartInfo'>StartInfo</a></code>
+                <code><a class='link' href='#StartInfo'>StartInfo</a></code>
             </td>
         </tr></table>
 
@@ -798,7 +798,7 @@ Book: /_book.yaml
     <tr>
             <td><code>start_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#StartInfo'>StartInfo</a></code>
+                <code><a class='link' href='#StartInfo'>StartInfo</a></code>
             </td>
         </tr><tr>
             <td><code>vmar</code></td>
@@ -808,7 +808,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>wayland_importer</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#VirtioWaylandImporter'>VirtioWaylandImporter</a>?</code>
+                <code><a class='link' href='#VirtioWaylandImporter'>VirtioWaylandImporter</a>?</code>
             </td>
         </tr></table>
 
@@ -915,7 +915,7 @@ Book: /_book.yaml
     <tr>
             <td><code>start_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#StartInfo'>StartInfo</a></code>
+                <code><a class='link' href='#StartInfo'>StartInfo</a></code>
             </td>
         </tr></table>
 
@@ -1017,7 +1017,7 @@ Book: /_book.yaml
     <tr>
             <td><code>start_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#StartInfo'>StartInfo</a></code>
+                <code><a class='link' href='#StartInfo'>StartInfo</a></code>
             </td>
         </tr></table>
 
@@ -1147,7 +1147,7 @@ Book: /_book.yaml
     <tr>
             <td><code>start_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#StartInfo'>StartInfo</a></code>
+                <code><a class='link' href='#StartInfo'>StartInfo</a></code>
             </td>
         </tr><tr>
             <td><code>vmar</code></td>
@@ -1176,7 +1176,7 @@ Book: /_book.yaml
     <tr>
             <td><code>importer</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.virtualization.hardware/index.html#VirtioWaylandImporter'>VirtioWaylandImporter</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#VirtioWaylandImporter'>VirtioWaylandImporter</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1226,7 +1226,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>trap</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.virtualization.hardware/index.html#Trap'>Trap</a></code>
+                <code><a class='link' href='#Trap'>Trap</a></code>
             </td>
             <td> The trap associated with a device. It is up to the device to set this
  trap during device setup.

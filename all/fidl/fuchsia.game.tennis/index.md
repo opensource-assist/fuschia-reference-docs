@@ -25,7 +25,7 @@ Book: /_book.yaml
     <tr>
             <td><code>state</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.game.tennis/index.html#GameState'>GameState</a></code>
+                <code><a class='link' href='#GameState'>GameState</a></code>
             </td>
         </tr></table>
 
@@ -43,7 +43,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>paddle</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.game.tennis/index.html#Paddle'>Paddle</a></code>
+                <code><a class='link' href='#Paddle'>Paddle</a></code>
             </td>
         </tr></table>
 

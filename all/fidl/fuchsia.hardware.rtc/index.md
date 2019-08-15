@@ -25,7 +25,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rtc</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.rtc/index.html#Time'>Time</a></code>
+                <code><a class='link' href='#Time'>Time</a></code>
             </td>
         </tr></table>
 
@@ -38,7 +38,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rtc</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.hardware.rtc/index.html#Time'>Time</a></code>
+                <code><a class='link' href='#Time'>Time</a></code>
             </td>
         </tr></table>
 

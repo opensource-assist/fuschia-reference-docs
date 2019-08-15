@@ -28,7 +28,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>client</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller'>Controller</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Controller'>Controller</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -39,12 +39,122 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#PeerManager_GetControllerForTarget_Result'>PeerManager_GetControllerForTarget_Result</a></code>
+                <code><a class='link' href='#PeerManager_GetControllerForTarget_Result'>PeerManager_GetControllerForTarget_Result</a></code>
+            </td>
+        </tr></table>
+
+### SetAbsoluteVolumeHandler {:#SetAbsoluteVolumeHandler}
+
+ Set the absolute volume handler for the peer specified at `peer_id` to handle absolute
+ volume commands and notifications received from the peer. Only one handler may be set with
+ a peer at at time. If a second handler is registered it will be dropped and an error will
+ be returned.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>peer_id</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>handler</code></td>
+            <td>
+                <code><a class='link' href='#AbsoluteVolumeHandler'>AbsoluteVolumeHandler</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#PeerManager_SetAbsoluteVolumeHandler_Result'>PeerManager_SetAbsoluteVolumeHandler_Result</a></code>
+            </td>
+        </tr></table>
+
+## AbsoluteVolumeHandler {:#AbsoluteVolumeHandler}
+*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#92)*
+
+ Handler for absolute volume requests from a remote peer. See AVRCP v 1.6.2 section 6.13.2.
+ Absolute volume is represented as a percentage using one byte with the most significant bit
+ reserved. 0% is represented as 0x0 and 100% as 0x7f. Volume should scaled between the
+ two values.
+
+### SetVolume {:#SetVolume}
+
+ Requests that the absolute volume of the player be changed.
+ `requested_volume` is the requested volume by the peer.
+ Returns the actual volume set locally by the handler.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requested_volume</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>set_volume</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+        </tr></table>
+
+### OnVolumeChanged {:#OnVolumeChanged}
+
+ Returns latest volume of the handler to the AVRCP service. This function should return
+ immediately on the first call and if the volume has changed since the last call to this
+ function, otherwise it should only return when the volume has been changed.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>new_volume</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+        </tr></table>
+
+### GetCurrentVolume {:#GetCurrentVolume}
+
+ Returns the current volume immediately.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>volume</code></td>
+            <td>
+                <code>uint8</code>
             </td>
         </tr></table>
 
 ## Controller {:#Controller}
-*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#86)*
+*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#111)*
 
  Client wrapper for local controller (CT) -> remote target (TG) AVCTP connections between devices.
  A client is high level construct and does not represent a connection with a device.
@@ -67,7 +177,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_GetPlayerApplicationSettings_Result'>Controller_GetPlayerApplicationSettings_Result</a></code>
+                <code><a class='link' href='#Controller_GetPlayerApplicationSettings_Result'>Controller_GetPlayerApplicationSettings_Result</a></code>
             </td>
         </tr></table>
 
@@ -89,22 +199,21 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_GetMediaAttributes_Result'>Controller_GetMediaAttributes_Result</a></code>
+                <code><a class='link' href='#Controller_GetMediaAttributes_Result'>Controller_GetMediaAttributes_Result</a></code>
             </td>
         </tr></table>
 
 ### SetAbsoluteVolume {:#SetAbsoluteVolume}
 
- Sets the absolute volume on the device. Values can range from 0x00 to 0x7F
- (with 100% volume being 0x7F). This is in addition to the relative volume change
- commands that can be sent over AV\C. You will get a volume changed notification event
- as part of successfully sending this.
+ Request the absolute volume on the peer be changed. Returns the actual volume set by the
+ peer. Values can range from 0x00 to 0x7F (with 100% volume being 0x7F). You may not get a
+ volume changed notification event from the remote peer as result of changing this.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>volume</code></td>
+            <td><code>requested_volume</code></td>
             <td>
                 <code>uint8</code>
             </td>
@@ -117,7 +226,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SetAbsoluteVolume_Result'>Controller_SetAbsoluteVolume_Result</a></code>
+                <code><a class='link' href='#Controller_SetAbsoluteVolume_Result'>Controller_SetAbsoluteVolume_Result</a></code>
             </td>
         </tr></table>
 
@@ -131,7 +240,7 @@ Book: /_book.yaml
     <tr>
             <td><code>battery_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#BatteryStatus'>BatteryStatus</a></code>
+                <code><a class='link' href='#BatteryStatus'>BatteryStatus</a></code>
             </td>
         </tr></table>
 
@@ -142,19 +251,19 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_InformBatteryStatus_Result'>Controller_InformBatteryStatus_Result</a></code>
+                <code><a class='link' href='#Controller_InformBatteryStatus_Result'>Controller_InformBatteryStatus_Result</a></code>
             </td>
         </tr></table>
 
 ### SetNotificationFilter {:#SetNotificationFilter}
 
- Filters notifications that will be received with <a class='link' href='../fuchsia.bluetooth.avrcp/index.html#OnNotification'>OnNotification</a>. Not all notifications
+ Filters notifications that will be received with <a class='link' href='#OnNotification'>OnNotification</a>. Not all notifications
  are supported by all peers. Resetting the notification filter may trigger all requested
- notification types to post their current value to <a class='link' href='../fuchsia.bluetooth.avrcp/index.html#OnNotification'>OnNotification</a> immediately.
+ notification types to post their current value to <a class='link' href='#OnNotification'>OnNotification</a> immediately.
 
  The `position_change_interval` argument is used to set the interval in seconds that the
- controller client would like to be notified of TRACK_POS_CHANGED events.
- `position_change_interval` is ignored if TRACK_POS is not set. The position change interval
+ controller client would like to be notified of `TRACK_POS_CHANGED` events.
+ `position_change_interval` is ignored if `TRACK_POS` is not set. The position change interval
  is best effort and not a guarantee and events may arrive more frequently or less frequently
  than requested.
 
@@ -164,7 +273,7 @@ Book: /_book.yaml
     <tr>
             <td><code>notifications</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Notifications'>Notifications</a></code>
+                <code><a class='link' href='#Notifications'>Notifications</a></code>
             </td>
         </tr><tr>
             <td><code>position_change_interval</code></td>
@@ -179,10 +288,10 @@ Book: /_book.yaml
 
  Incoming notification events from the target peer. `timestamp` is monotonic wall time
  of when the event was received by the peer.
- You must call <a class='link' href='../fuchsia.bluetooth.avrcp/index.html#NotifyNotificationHandled'>NotifyNotificationHandled</a> after receving a notification event to
+ You must call <a class='link' href='#NotifyNotificationHandled'>NotifyNotificationHandled</a> after receving a notification event to
  acknowledge delivery. Multiple non-discrete events may be combined into a single
  notification if acknowledged after a new event arrives from a peer.
- Call <a class='link' href='../fuchsia.bluetooth.avrcp/index.html#SetNotificationFilter'>SetNotificationFilter</a> to set the notifications that are requested of the peer.
+ Call <a class='link' href='#SetNotificationFilter'>SetNotificationFilter</a> to set the notifications that are requested of the peer.
  All notifications are discrete state changes except volume change and position change
  notifications.
 
@@ -199,13 +308,13 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>notification</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Notification'>Notification</a></code>
+                <code><a class='link' href='#Notification'>Notification</a></code>
             </td>
         </tr></table>
 
 ### NotifyNotificationHandled {:#NotifyNotificationHandled}
 
- Call to acknowledge handling of a notification from <a class='link' href='../fuchsia.bluetooth.avrcp/index.html#OnNotification'>OnNotification</a>.
+ Call to acknowledge handling of a notification from <a class='link' href='#OnNotification'>OnNotification</a>.
 
 #### Request
 <table>
@@ -235,7 +344,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SetAddressedPlayer_Result'>Controller_SetAddressedPlayer_Result</a></code>
+                <code><a class='link' href='#Controller_SetAddressedPlayer_Result'>Controller_SetAddressedPlayer_Result</a></code>
             </td>
         </tr></table>
 
@@ -249,7 +358,7 @@ Book: /_book.yaml
     <tr>
             <td><code>command</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#AvcPanelCommand'>AvcPanelCommand</a></code>
+                <code><a class='link' href='#AvcPanelCommand'>AvcPanelCommand</a></code>
             </td>
         </tr></table>
 
@@ -260,7 +369,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SendCommand_Result'>Controller_SendCommand_Result</a></code>
+                <code><a class='link' href='#Controller_SendCommand_Result'>Controller_SendCommand_Result</a></code>
             </td>
         </tr></table>
 
@@ -279,44 +388,8 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
-### Controller_GetPlayerApplicationSettings_Response {:#Controller_GetPlayerApplicationSettings_Response}
+### PeerManager_SetAbsoluteVolumeHandler_Response {:#PeerManager_SetAbsoluteVolumeHandler_Response}
 *Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>settings</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### Controller_GetMediaAttributes_Response {:#Controller_GetMediaAttributes_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>attributes</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#MediaAttributes'>MediaAttributes</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### Controller_SetAbsoluteVolume_Response {:#Controller_SetAbsoluteVolume_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
 
 
 
@@ -326,8 +399,62 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
+### Controller_GetPlayerApplicationSettings_Response {:#Controller_GetPlayerApplicationSettings_Response}
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#22)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>settings</code></td>
+            <td>
+                <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Controller_GetMediaAttributes_Response {:#Controller_GetMediaAttributes_Response}
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#29)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>attributes</code></td>
+            <td>
+                <code><a class='link' href='#MediaAttributes'>MediaAttributes</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Controller_SetAbsoluteVolume_Response {:#Controller_SetAbsoluteVolume_Response}
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#36)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>set_volume</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Controller_InformBatteryStatus_Response {:#Controller_InformBatteryStatus_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#30)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#43)*
 
 
 
@@ -338,7 +465,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_SetAddressedPlayer_Response {:#Controller_SetAddressedPlayer_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#40)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#53)*
 
 
 
@@ -349,7 +476,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_SendCommand_Response {:#Controller_SendCommand_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#47)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#60)*
 
 
 
@@ -378,21 +505,21 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>repeat_status_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#RepeatStatusMode'>RepeatStatusMode</a></code>
+                <code><a class='link' href='#RepeatStatusMode'>RepeatStatusMode</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>shuffle_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ShuffleMode'>ShuffleMode</a></code>
+                <code><a class='link' href='#ShuffleMode'>ShuffleMode</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>scan_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ScanMode'>ScanMode</a></code>
+                <code><a class='link' href='#ScanMode'>ScanMode</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -589,7 +716,7 @@ Type: <code>uint8</code>
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#46)*
 
  Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
- Format for EVENT_SYSTEM_STATUS_CHANGED.
+ Format for `EVENT_SYSTEM_STATUS_CHANGED`.
 
 
 <table>
@@ -613,7 +740,7 @@ Type: <code>uint8</code>
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#54)*
 
  Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
- Format for EVENT_PLAYBACK_STATUS_CHANGED.
+ Format for `EVENT_PLAYBACK_STATUS_CHANGED`.
 
 
 <table>
@@ -649,7 +776,7 @@ Type: <code>uint8</code>
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#66)*
 
  Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
- Format for EVENT_BATT_STATUS_CHANGED.
+ Format for `EVENT_BATT_STATUS_CHANGED`.
  Same encoding also defined by 6.5.8 (InformBatteryStatusOfCT).
 
 
@@ -1019,7 +1146,7 @@ Type: <code>uint8</code>
 ### Notification {:#Notification}
 
 
-*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#53)*
+*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#59)*
 
  Event data from incoming target notifications.
 
@@ -1030,9 +1157,9 @@ Type: <code>uint8</code>
             <td>1</td>
             <td><code>status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#PlaybackStatus'>PlaybackStatus</a></code>
+                <code><a class='link' href='#PlaybackStatus'>PlaybackStatus</a></code>
             </td>
-            <td> EVENT_PLAYBACK_STATUS_CHANGED event data
+            <td> `EVENT_PLAYBACK_STATUS_CHANGED` event data
 </td>
         </tr><tr>
             <td>2</td>
@@ -1040,7 +1167,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> EVENT_TRACK_CHANGED event data
+            <td> `EVENT_TRACK_CHANGED` event data
 </td>
         </tr><tr>
             <td>3</td>
@@ -1048,31 +1175,31 @@ Type: <code>uint8</code>
             <td>
                 <code>uint32</code>
             </td>
-            <td> EVENT_TRACK_POS_CHANGED event data
+            <td> `EVENT_TRACK_POS_CHANGED` event data
 </td>
         </tr><tr>
             <td>4</td>
             <td><code>battery_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#BatteryStatus'>BatteryStatus</a></code>
+                <code><a class='link' href='#BatteryStatus'>BatteryStatus</a></code>
             </td>
-            <td> EVENT_BATT_STATUS_CHANGED event data
+            <td> `EVENT_BATT_STATUS_CHANGED` event data
 </td>
         </tr><tr>
             <td>5</td>
             <td><code>system_status</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#SystemStatus'>SystemStatus</a></code>
+                <code><a class='link' href='#SystemStatus'>SystemStatus</a></code>
             </td>
-            <td> EVENT_SYSTEM_STATUS_CHANGED event data
+            <td> `EVENT_SYSTEM_STATUS_CHANGED` event data
 </td>
         </tr><tr>
             <td>6</td>
             <td><code>application_settings</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
+                <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
             </td>
-            <td> EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED event data
+            <td> `EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED` event data
 </td>
         </tr><tr>
             <td>7</td>
@@ -1080,7 +1207,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint16</code>
             </td>
-            <td> EVENT_ADDRESSED_PLAYER_CHANGED event data
+            <td> `EVENT_ADDRESSED_PLAYER_CHANGED` event data
 </td>
         </tr><tr>
             <td>8</td>
@@ -1088,7 +1215,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint8</code>
             </td>
-            <td> EVENT_VOLUME_CHANGED event data
+            <td> `EVENT_VOLUME_CHANGED` event data
 </td>
         </tr><tr>
             <td>9</td>
@@ -1096,7 +1223,7 @@ Type: <code>uint8</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> CONNECTION_CHANGE event data
+            <td> `CONNECTION_CHANGE` event data
 </td>
         </tr></table>
 
@@ -1112,7 +1239,26 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#PeerManager_GetControllerForTarget_Response'>PeerManager_GetControllerForTarget_Response</a></code>
+                <code><a class='link' href='#PeerManager_GetControllerForTarget_Response'>PeerManager_GetControllerForTarget_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### PeerManager_SetAbsoluteVolumeHandler_Result {:#PeerManager_SetAbsoluteVolumeHandler_Result}
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#PeerManager_SetAbsoluteVolumeHandler_Response'>PeerManager_SetAbsoluteVolumeHandler_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1124,115 +1270,115 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_GetPlayerApplicationSettings_Result {:#Controller_GetPlayerApplicationSettings_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#25)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_GetPlayerApplicationSettings_Response'>Controller_GetPlayerApplicationSettings_Response</a></code>
+                <code><a class='link' href='#Controller_GetPlayerApplicationSettings_Response'>Controller_GetPlayerApplicationSettings_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Controller_GetMediaAttributes_Result {:#Controller_GetMediaAttributes_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#32)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_GetMediaAttributes_Response'>Controller_GetMediaAttributes_Response</a></code>
+                <code><a class='link' href='#Controller_GetMediaAttributes_Response'>Controller_GetMediaAttributes_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Controller_SetAbsoluteVolume_Result {:#Controller_SetAbsoluteVolume_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#39)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SetAbsoluteVolume_Response'>Controller_SetAbsoluteVolume_Response</a></code>
+                <code><a class='link' href='#Controller_SetAbsoluteVolume_Response'>Controller_SetAbsoluteVolume_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Controller_InformBatteryStatus_Result {:#Controller_InformBatteryStatus_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#33)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#46)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_InformBatteryStatus_Response'>Controller_InformBatteryStatus_Response</a></code>
+                <code><a class='link' href='#Controller_InformBatteryStatus_Response'>Controller_InformBatteryStatus_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Controller_SetAddressedPlayer_Result {:#Controller_SetAddressedPlayer_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#43)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#56)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SetAddressedPlayer_Response'>Controller_SetAddressedPlayer_Response</a></code>
+                <code><a class='link' href='#Controller_SetAddressedPlayer_Response'>Controller_SetAddressedPlayer_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
 
 ### Controller_SendCommand_Result {:#Controller_SendCommand_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#50)*
+*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#63)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#Controller_SendCommand_Response'>Controller_SendCommand_Response</a></code>
+                <code><a class='link' href='#Controller_SendCommand_Response'>Controller_SendCommand_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/index.html#ControllerError'>ControllerError</a></code>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1250,42 +1396,42 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td>PLAYBACK_STATUS</td>
             <td>1</td>
-            <td> AVRCP EVENT_PLAYBACK_STATUS_CHANGED Notification
+            <td> AVRCP `EVENT_PLAYBACK_STATUS_CHANGED` Notification
 </td>
         </tr><tr>
             <td>TRACK</td>
             <td>2</td>
-            <td> AVRCP EVENT_TRACK_CHANGED Notification
+            <td> AVRCP `EVENT_TRACK_CHANGED` Notification
 </td>
         </tr><tr>
             <td>TRACK_POS</td>
             <td>4</td>
-            <td> AVRCP EVENT_TRACK_POS_CHANGED Notification
+            <td> AVRCP `EVENT_TRACK_POS_CHANGED` Notification
 </td>
         </tr><tr>
             <td>BATT_STATUS</td>
             <td>8</td>
-            <td> AVRCP EVENT_BATT_STATUS_CHANGED Notification
+            <td> AVRCP `EVENT_BATT_STATUS_CHANGED` Notification
 </td>
         </tr><tr>
             <td>SYSTEM_STATUS</td>
             <td>16</td>
-            <td> AVRCP EVENT_SYSTEM_STATUS_CHANGED Notification
+            <td> AVRCP `EVENT_SYSTEM_STATUS_CHANGED` Notification
 </td>
         </tr><tr>
             <td>PLAYER_APPLICATION_SETTINGS</td>
             <td>32</td>
-            <td> AVRCP EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED Notification
+            <td> AVRCP `EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED` Notification
 </td>
         </tr><tr>
             <td>ADDRESSED_PLAYER</td>
             <td>64</td>
-            <td> AVRCP EVENT_ADDRESSED_PLAYER_CHANGED Notification
+            <td> AVRCP `EVENT_ADDRESSED_PLAYER_CHANGED` Notification
 </td>
         </tr><tr>
             <td>VOLUME</td>
             <td>128</td>
-            <td> AVRCP EVENT_VOLUME_CHANGED Notification
+            <td> AVRCP `EVENT_VOLUME_CHANGED` Notification
 </td>
         </tr><tr>
             <td>CONNECTION</td>

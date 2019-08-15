@@ -31,7 +31,7 @@ Book: /_book.yaml
     <tr>
             <td><code>config</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#ProviderConfig'>ProviderConfig</a></code>
+                <code><a class='link' href='#ProviderConfig'>ProviderConfig</a></code>
             </td>
         </tr></table>
 
@@ -43,7 +43,7 @@ Book: /_book.yaml
 
  If tracing has already started the provider must ignore the request.
 
- There is no result. The provider must send a TRACE_PROVIDER_STARTED
+ There is no result. The provider must send a `TRACE_PROVIDER_STARTED`
  packet on `fifo` to indicate success/failure of starting.
 
 #### Request
@@ -52,7 +52,7 @@ Book: /_book.yaml
     <tr>
             <td><code>options</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#StartOptions'>StartOptions</a></code>
+                <code><a class='link' href='#StartOptions'>StartOptions</a></code>
             </td>
         </tr></table>
 
@@ -65,7 +65,7 @@ Book: /_book.yaml
  If tracing has already stopped the provider must ignore the request.
 
  Once the provider has finished writing any final events to the trace
- buffer, it must send a TRACE_PROVIDER_STOPPED packet on `fifo`.
+ buffer, it must send a `TRACE_PROVIDER_STOPPED` packet on `fifo`.
  Note that multiple `Start,Stop` requests can be received between
  `Initialize,Terminate`.
 
@@ -115,7 +115,7 @@ Book: /_book.yaml
     <tr>
             <td><code>provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#Provider'>Provider</a></code>
+                <code><a class='link' href='#Provider'>Provider</a></code>
             </td>
         </tr><tr>
             <td><code>pid</code></td>
@@ -135,7 +135,7 @@ Book: /_book.yaml
 
  Registers the trace provider synchronously. The call doesn't return
  until the provider is registered.
- On return `s` is ZX_OK if registration was successful.
+ On return `s` is `ZX_OK` if registration was successful.
  `started` is true if tracing has already started, which is a hint to
  the provider to wait for the Start() message before continuing if it
  wishes to not drop trace records before Start() is received.
@@ -149,7 +149,7 @@ Book: /_book.yaml
     <tr>
             <td><code>provider</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#Provider'>Provider</a></code>
+                <code><a class='link' href='#Provider'>Provider</a></code>
             </td>
         </tr><tr>
             <td><code>pid</code></td>
@@ -195,7 +195,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>buffering_mode</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#BufferingMode'>BufferingMode</a></code>
+                <code><a class='link' href='#BufferingMode'>BufferingMode</a></code>
             </td>
             <td> `buffering_mode` specifies what happens when the buffer fills.
 </td>
@@ -242,7 +242,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>buffer_disposition</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.tracing.provider/index.html#BufferDisposition'>BufferDisposition</a></code>
+                <code><a class='link' href='#BufferDisposition'>BufferDisposition</a></code>
             </td>
             <td> Whether and how to clear the buffer when starting data collection.
  This allows, for example, multiple Start/Stop trace runs to be
