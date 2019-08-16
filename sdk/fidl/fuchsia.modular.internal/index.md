@@ -210,7 +210,7 @@ Book: /_book.yaml
             <td>1</td>
             <td><code>story_info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#StoryInfo'>StoryInfo</a></code>
+                <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#StoryInfo2'>StoryInfo2</a></code>
             </td>
             <td> Metadata available to the SessionShell.
 </td>

@@ -2009,6 +2009,11 @@ Book: /_book.yaml
             <td>
                 <code>uint64</code>
             </td>
+        </tr><tr>
+            <td><code>error</code></td>
+            <td>
+                <code><a class='link' href='#StreamError'>StreamError</a></code>
+            </td>
         </tr></table>
 
 ### OnStreamFailed2 {:#OnStreamFailed2}
