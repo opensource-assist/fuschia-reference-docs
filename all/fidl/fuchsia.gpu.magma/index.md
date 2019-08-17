@@ -495,15 +495,15 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.gpu.magma/magma.fidl#28">kReceiveBufferSize</a></td>
             <td>
                     <code>2048</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Primary declarations.
+</td>
         </tr>
     
 </table>

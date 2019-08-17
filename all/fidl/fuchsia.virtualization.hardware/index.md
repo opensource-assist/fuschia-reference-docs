@@ -1278,15 +1278,17 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualization.hardware/device.fidl#17">EVENT_SET_QUEUE</a></td>
             <td>
                     <code>0</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The following EVENT_* constants indicate which user signal is associated with an event.
+ The value 0 is `ZX_USER_SIGNAL_0`, 1 is `ZX_USER_SIGNAL_1` etc.
+ Set a flag to inspect queues on the next interrupt.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualization.hardware/device.fidl#19">EVENT_SET_CONFIG</a></td>
@@ -1294,6 +1296,8 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Set a flag to inspect configs on the next interrupt.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualization.hardware/device.fidl#21">EVENT_SET_INTERRUPT</a></td>
@@ -1301,6 +1305,8 @@ Book: /_book.yaml
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> If a flag is set, send an interrupt to the device.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualization.hardware/device.fidl#154">kVirtioWaylandInvalidVfdId</a></td>
@@ -1308,6 +1314,7 @@ Book: /_book.yaml
                     <code>0</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

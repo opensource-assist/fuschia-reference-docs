@@ -627,15 +627,14 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/dev/test/mock-device/mock-device.fidl#25">MAX_PROPERTIES_LEN</a></td>
             <td>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/dev/test/mock-device/mock-device.fidl#26">MAX_NAME_LEN</a></td>
@@ -643,6 +642,7 @@ Book: /_book.yaml
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/dev/test/mock-device/mock-device.fidl#69">MAX_ACTIONS</a></td>
@@ -650,6 +650,7 @@ Book: /_book.yaml
                     <code>10</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/dev/test/mock-device/mock-device.fidl#70">MAX_WRITE_BYTES</a></td>
@@ -657,6 +658,7 @@ Book: /_book.yaml
                     <code>16384</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

@@ -194,15 +194,15 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#11">OPT_TRACE</a></td>
             <td>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Enables tracing of the ethertap device itself.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#13">OPT_TRACE_PACKETS</a></td>
@@ -210,6 +210,8 @@ Book: /_book.yaml
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Enables tracing of individual packets.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#17">OPT_REPORT_PARAM</a></td>
@@ -217,6 +219,10 @@ Book: /_book.yaml
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Report EthernetImplSetParam() over EthertapController, and return success from
+ EthernetImplSetParam().  If this option is not set, EthernetImplSetParam() will return
+ `ZX_ERR_NOT_SUPPORTED`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#19">OPT_ONLINE</a></td>
@@ -224,6 +230,8 @@ Book: /_book.yaml
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Starts ethertap device with link online.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#22">MAX_MTU</a></td>
@@ -231,6 +239,8 @@ Book: /_book.yaml
                     <code>2000</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum MTU supported by ethertap driver.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#24">MAX_PARAM_DATA</a></td>
@@ -238,6 +248,8 @@ Book: /_book.yaml
                     <code>64</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum size of trailing data on params report.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#26">MAX_NAME_LENGTH</a></td>
@@ -245,6 +257,8 @@ Book: /_book.yaml
                     <code>30</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum length of tap device name.
+</td>
         </tr>
     
 </table>

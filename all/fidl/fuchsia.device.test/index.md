@@ -204,13 +204,13 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-test/test.fidl#10">CONTROL_DEVICE</a></td>
             <td><code>/dev/test/test</code></td>
                     <td><code>String</code></td>
+            <td> The path which can be used to open the control device
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-test/test.fidl#46">MAX_DEVICE_NAME_LEN</a></td>
@@ -218,6 +218,8 @@ Book: /_book.yaml
                     <code>31</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum device name len.  This value must match `ZX_DEVICE_NAME_MAX`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-test/test.fidl#49">MAX_DEVICE_PATH_LEN</a></td>
@@ -225,6 +227,8 @@ Book: /_book.yaml
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum device path len
+</td>
         </tr>
     
 </table>

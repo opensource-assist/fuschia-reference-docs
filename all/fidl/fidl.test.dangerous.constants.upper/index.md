@@ -20,15 +20,14 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#6">ABSTRACT</a></td>
             <td>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#7">ALIGNAS</a></td>
@@ -36,6 +35,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#8">ALIGNOF</a></td>
@@ -43,6 +43,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#9">AND</a></td>
@@ -50,6 +51,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#10">AND_EQ</a></td>
@@ -57,6 +59,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#11">AS</a></td>
@@ -64,6 +67,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#12">ASM</a></td>
@@ -71,6 +75,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#13">ASSERT</a></td>
@@ -78,6 +83,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#14">ASYNC</a></td>
@@ -85,6 +91,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#15">ATOMIC_CANCEL</a></td>
@@ -92,6 +99,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#16">ATOMIC_COMMIT</a></td>
@@ -99,6 +107,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#17">ATOMIC_NOEXCEPT</a></td>
@@ -106,6 +115,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#18">AUTO</a></td>
@@ -113,6 +123,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#19">AWAIT</a></td>
@@ -120,6 +131,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#20">BECOME</a></td>
@@ -127,6 +139,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#21">BITAND</a></td>
@@ -134,6 +147,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#22">BITOR</a></td>
@@ -141,6 +155,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#23">BOOL</a></td>
@@ -148,6 +163,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#24">BOX</a></td>
@@ -155,6 +171,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#25">BREAK</a></td>
@@ -162,6 +179,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#26">BYTE</a></td>
@@ -169,6 +187,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#27">CASE</a></td>
@@ -176,6 +195,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#28">CATCH</a></td>
@@ -183,6 +203,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#29">CHAN</a></td>
@@ -190,6 +211,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#30">CHAR</a></td>
@@ -197,6 +219,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#31">CHAR16_T</a></td>
@@ -204,6 +227,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#32">CHAR32_T</a></td>
@@ -211,6 +235,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#33">CLASS</a></td>
@@ -218,6 +243,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#34">CO_AWAIT</a></td>
@@ -225,6 +251,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#35">CO_RETURN</a></td>
@@ -232,6 +259,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#36">CO_YIELD</a></td>
@@ -239,6 +267,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#37">CODING_TRAITS</a></td>
@@ -246,6 +275,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#38">COMPL</a></td>
@@ -253,6 +283,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#39">CONCEPT</a></td>
@@ -260,6 +291,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#40">CONST</a></td>
@@ -267,6 +299,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#41">CONST_CAST</a></td>
@@ -274,6 +307,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#42">CONSTEXPR</a></td>
@@ -281,6 +315,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#43">CONTINUE</a></td>
@@ -288,6 +323,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#44">CONTROLLER</a></td>
@@ -295,6 +331,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#45">COVARIANT</a></td>
@@ -302,6 +339,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#46">CRATE</a></td>
@@ -309,6 +347,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#47">DECLTYPE</a></td>
@@ -316,6 +355,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#48">DECODER</a></td>
@@ -323,6 +363,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#49">DEFAULT</a></td>
@@ -330,6 +371,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#50">DEFER</a></td>
@@ -337,6 +379,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#51">DEFERRED</a></td>
@@ -344,6 +387,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#52">DELETE</a></td>
@@ -351,6 +395,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#53">DO</a></td>
@@ -358,6 +403,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#54">DOUBLE</a></td>
@@ -365,6 +411,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#55">DYNAMIC</a></td>
@@ -372,6 +419,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#56">DYNAMIC_CAST</a></td>
@@ -379,6 +427,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#57">ELSE</a></td>
@@ -386,6 +435,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#58">ENCODER</a></td>
@@ -393,6 +443,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#59">ENSURE_VALUES_INSTANTIATED</a></td>
@@ -400,6 +451,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#60">ENUM</a></td>
@@ -407,6 +459,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#61">ERR</a></td>
@@ -414,6 +467,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#62">EXPLICIT</a></td>
@@ -421,6 +475,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#63">EXPORT</a></td>
@@ -428,6 +483,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#64">EXTENDS</a></td>
@@ -435,6 +491,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#65">EXTERN</a></td>
@@ -442,6 +499,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#66">EXTERNAL</a></td>
@@ -449,6 +507,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#67">FACTORY</a></td>
@@ -456,6 +515,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#68">FALLTHROUGH</a></td>
@@ -463,6 +523,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#69">FALSE</a></td>
@@ -470,6 +531,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#70">FIDL</a></td>
@@ -477,6 +539,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#71">FIDL_TYPE</a></td>
@@ -484,6 +547,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#72">FINAL</a></td>
@@ -491,6 +555,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#73">FINALLY</a></td>
@@ -498,6 +563,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#74">FLOAT</a></td>
@@ -505,6 +571,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#75">FN</a></td>
@@ -512,6 +579,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#76">FOR</a></td>
@@ -519,6 +587,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#77">FRIEND</a></td>
@@ -526,6 +595,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#78">FUNC</a></td>
@@ -533,6 +603,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#79">FUTURE</a></td>
@@ -540,6 +611,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#80">FUTURES</a></td>
@@ -547,6 +619,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#81">GET</a></td>
@@ -554,6 +627,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#82">GO</a></td>
@@ -561,6 +635,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#83">GOTO</a></td>
@@ -568,6 +643,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#84">HAS_INVALID_TAG</a></td>
@@ -575,6 +651,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#85">HASH_CODE</a></td>
@@ -582,6 +659,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#86">IF</a></td>
@@ -589,6 +667,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#87">IMPL</a></td>
@@ -596,6 +675,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#88">IMPLEMENTS</a></td>
@@ -603,6 +683,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#89">IMPORT</a></td>
@@ -610,6 +691,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#90">IN</a></td>
@@ -617,6 +699,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#91">INDEX</a></td>
@@ -624,6 +707,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#92">INLINE</a></td>
@@ -631,6 +715,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#93">INT</a></td>
@@ -638,6 +723,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#94">INT16</a></td>
@@ -645,6 +731,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#95">INT32</a></td>
@@ -652,6 +739,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#96">INT64</a></td>
@@ -659,6 +747,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#97">INT8</a></td>
@@ -666,6 +755,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#98">INTERFACE</a></td>
@@ -673,6 +763,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#99">IS</a></td>
@@ -680,6 +771,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#100">LET</a></td>
@@ -687,6 +779,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#101">LHS</a></td>
@@ -694,6 +787,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#102">LIBRARY</a></td>
@@ -701,6 +795,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#103">LIST</a></td>
@@ -708,6 +803,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#104">LONG</a></td>
@@ -715,6 +811,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#105">LOOP</a></td>
@@ -722,6 +819,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#106">MACRO</a></td>
@@ -729,6 +827,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#107">MAP</a></td>
@@ -736,6 +835,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#108">MATCH</a></td>
@@ -743,6 +843,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#109">MIXIN</a></td>
@@ -750,6 +851,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#110">MOD</a></td>
@@ -757,6 +859,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#111">MODULE</a></td>
@@ -764,6 +867,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#112">MOVE</a></td>
@@ -771,6 +875,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#113">MUT</a></td>
@@ -778,6 +883,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#114">MUTABLE</a></td>
@@ -785,6 +891,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#115">NAMESPACE</a></td>
@@ -792,6 +899,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#116">NEVER</a></td>
@@ -799,6 +907,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#117">NEW</a></td>
@@ -806,6 +915,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#118">NO_SUCH_METHOD</a></td>
@@ -813,6 +923,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#119">NOEXCEPT</a></td>
@@ -820,6 +931,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#120">NONE</a></td>
@@ -827,6 +939,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#121">NOT</a></td>
@@ -834,6 +947,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#122">NOT_EQ</a></td>
@@ -841,6 +955,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#123">NULL</a></td>
@@ -848,6 +963,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#124">NULLPTR</a></td>
@@ -855,6 +971,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#125">NUM</a></td>
@@ -862,6 +979,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#126">OBJECT</a></td>
@@ -869,6 +987,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#127">OFFSET</a></td>
@@ -876,6 +995,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#128">OFFSETOF</a></td>
@@ -883,6 +1003,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#129">OK</a></td>
@@ -890,6 +1011,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#130">ON_OPEN</a></td>
@@ -897,6 +1019,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#131">OPERATOR</a></td>
@@ -904,6 +1027,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#132">OPTION</a></td>
@@ -911,6 +1035,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#133">OR</a></td>
@@ -918,6 +1043,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#134">OR_EQ</a></td>
@@ -925,6 +1051,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#135">OVERRIDE</a></td>
@@ -932,6 +1059,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#136">PACKAGE</a></td>
@@ -939,6 +1067,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#137">PART</a></td>
@@ -946,6 +1075,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#138">PRIV</a></td>
@@ -953,6 +1083,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#139">PRIVATE</a></td>
@@ -960,6 +1091,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#140">PROC</a></td>
@@ -967,6 +1099,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#141">PROTECTED</a></td>
@@ -974,6 +1107,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#142">PROXY</a></td>
@@ -981,6 +1115,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#143">PUB</a></td>
@@ -988,6 +1123,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#144">PUBLIC</a></td>
@@ -995,6 +1131,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#145">PURE</a></td>
@@ -1002,6 +1139,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#146">RANGE</a></td>
@@ -1009,6 +1147,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#147">REF</a></td>
@@ -1016,6 +1155,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#148">REGISTER</a></td>
@@ -1023,6 +1163,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#149">REINTERPRET_CAST</a></td>
@@ -1030,6 +1171,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#150">REQUIRES</a></td>
@@ -1037,6 +1179,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#151">RESULT</a></td>
@@ -1044,6 +1187,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#152">RETHROW</a></td>
@@ -1051,6 +1195,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#153">RETURN</a></td>
@@ -1058,6 +1203,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#154">RHS</a></td>
@@ -1065,6 +1211,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#155">RUNE</a></td>
@@ -1072,6 +1219,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#156">RUNTIME_TYPE</a></td>
@@ -1079,6 +1227,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#157">SELECT</a></td>
@@ -1086,6 +1235,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#158">SELF</a></td>
@@ -1093,6 +1243,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#159">SEND</a></td>
@@ -1100,6 +1251,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#160">SET</a></td>
@@ -1107,6 +1259,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#161">SET_CONTROLLER</a></td>
@@ -1114,6 +1267,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#162">SHORT</a></td>
@@ -1121,6 +1275,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#163">SIGNED</a></td>
@@ -1128,6 +1283,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#164">SIZEOF</a></td>
@@ -1135,6 +1291,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#165">SOME</a></td>
@@ -1142,6 +1299,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#166">STATIC</a></td>
@@ -1149,6 +1307,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#167">STATIC_ASSERT</a></td>
@@ -1156,6 +1315,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#168">STATIC_CAST</a></td>
@@ -1163,6 +1323,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#169">STREAM</a></td>
@@ -1170,6 +1331,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#170">STRING</a></td>
@@ -1177,6 +1339,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#171">STRUCT</a></td>
@@ -1184,6 +1347,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#172">STUB</a></td>
@@ -1191,6 +1355,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#173">SUPER</a></td>
@@ -1198,6 +1363,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#174">SWITCH</a></td>
@@ -1205,6 +1371,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#175">SYNCHRONIZED</a></td>
@@ -1212,6 +1379,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#176">TEMPLATE</a></td>
@@ -1219,6 +1387,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#177">THIS</a></td>
@@ -1226,6 +1395,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#178">THREAD_LOCAL</a></td>
@@ -1233,6 +1403,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#179">THROW</a></td>
@@ -1240,6 +1411,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#180">TO_STRING</a></td>
@@ -1247,6 +1419,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#181">TRAIT</a></td>
@@ -1254,6 +1427,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#182">TRUE</a></td>
@@ -1261,6 +1435,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#183">TRY</a></td>
@@ -1268,6 +1443,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#184">TYPE</a></td>
@@ -1275,6 +1451,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#185">TYPEDEF</a></td>
@@ -1282,6 +1459,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#186">TYPEID</a></td>
@@ -1289,6 +1467,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#187">TYPENAME</a></td>
@@ -1296,6 +1475,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#188">TYPEOF</a></td>
@@ -1303,6 +1483,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#189">UINT16</a></td>
@@ -1310,6 +1491,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#190">UINT32</a></td>
@@ -1317,6 +1499,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#191">UINT64</a></td>
@@ -1324,6 +1507,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#192">UINT8</a></td>
@@ -1331,6 +1515,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#193">UNION</a></td>
@@ -1338,6 +1523,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#194">UNSAFE</a></td>
@@ -1345,6 +1531,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#195">UNSIGNED</a></td>
@@ -1352,6 +1539,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#196">UNSIZED</a></td>
@@ -1359,6 +1547,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#197">USE</a></td>
@@ -1366,6 +1555,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#198">USING</a></td>
@@ -1373,6 +1563,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#199">VALUE</a></td>
@@ -1380,6 +1571,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#200">VALUE_OF</a></td>
@@ -1387,6 +1579,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#201">VALUE_UNION</a></td>
@@ -1394,6 +1587,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#202">VALUES_MAP</a></td>
@@ -1401,6 +1595,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#203">VAR</a></td>
@@ -1408,6 +1603,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#204">VEC</a></td>
@@ -1415,6 +1611,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#205">VIRTUAL</a></td>
@@ -1422,6 +1619,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#206">VOID</a></td>
@@ -1429,6 +1627,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#207">VOLATILE</a></td>
@@ -1436,6 +1635,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#208">WCHAR_T</a></td>
@@ -1443,6 +1643,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#209">WHERE</a></td>
@@ -1450,6 +1651,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#210">WHICH</a></td>
@@ -1457,6 +1659,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#211">WHILE</a></td>
@@ -1464,6 +1667,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#212">WITH</a></td>
@@ -1471,6 +1675,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#213">XOR</a></td>
@@ -1478,6 +1683,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#214">XOR_EQ</a></td>
@@ -1485,6 +1691,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#215">XUNION</a></td>
@@ -1492,6 +1699,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#216">YIELD</a></td>
@@ -1499,6 +1707,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.constants.upper.test.fidl#217">ZX</a></td>
@@ -1506,6 +1715,7 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

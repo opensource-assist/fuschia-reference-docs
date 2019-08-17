@@ -149,6 +149,8 @@ toc:
   path: /reference/fidl/fuchsia.accessibility
 - title: fuchsia.accessibility.semantics
   path: /reference/fidl/fuchsia.accessibility.semantics
+- title: fuchsia.accessibility.tts
+  path: /reference/fidl/fuchsia.accessibility.tts
 - title: fuchsia.amber
   path: /reference/fidl/fuchsia.amber
 - title: fuchsia.app.discover
@@ -371,14 +373,8 @@ toc:
   path: /reference/fidl/fuchsia.overnet
 - title: fuchsia.overnet.examples.interfacepassing
   path: /reference/fidl/fuchsia.overnet.examples.interfacepassing
-- title: fuchsia.overnet.omdp
-  path: /reference/fidl/fuchsia.overnet.omdp
 - title: fuchsia.overnet.protocol
   path: /reference/fidl/fuchsia.overnet.protocol
-- title: fuchsia.overnet.routingtablefuzzer
-  path: /reference/fidl/fuchsia.overnet.routingtablefuzzer
-- title: fuchsia.overnet.streamlinkfuzzer
-  path: /reference/fidl/fuchsia.overnet.streamlinkfuzzer
 - title: fuchsia.paver
   path: /reference/fidl/fuchsia.paver
 - title: fuchsia.perfmon.cpu

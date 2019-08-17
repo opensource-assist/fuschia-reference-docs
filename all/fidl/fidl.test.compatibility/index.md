@@ -3201,15 +3201,14 @@ Type: <code>uint64</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/compatibility_test/compatibility_service.test.fidl#60">arrays_size</a></td>
             <td>
                     <code>3</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/compatibility_test/compatibility_service.test.fidl#106">vectors_size</a></td>
@@ -3217,6 +3216,7 @@ Type: <code>uint64</code>
                     <code>3</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/compatibility_test/compatibility_service.test.fidl#266">strings_size</a></td>
@@ -3224,6 +3224,7 @@ Type: <code>uint64</code>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

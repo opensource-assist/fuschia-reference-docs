@@ -2138,15 +2138,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#7">MAX_FACET_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#8">MAX_CHILD_NAME_LENGTH</a></td>
@@ -2154,6 +2153,7 @@ Type: <code>uint32</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#9">MAX_COLLECTION_NAME_LENGTH</a></td>
@@ -2161,6 +2161,7 @@ Type: <code>uint32</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#10">MAX_STORAGE_NAME_LENGTH</a></td>
@@ -2168,6 +2169,7 @@ Type: <code>uint32</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#11">MAX_PATH_LENGTH</a></td>
@@ -2175,6 +2177,7 @@ Type: <code>uint32</code>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#12">MAX_URL_LENGTH</a></td>
@@ -2182,6 +2185,7 @@ Type: <code>uint32</code>
                     <code>4096</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#13">MAX_MONIKER_LENGTH</a></td>
@@ -2189,6 +2193,7 @@ Type: <code>uint32</code>
                     <code>4096</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#16">ERR_COMPONENT_DIED</a></td>
@@ -2196,6 +2201,8 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>int32</code></td>
+            <td> Error produced when a component terminates unexpected.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#9">MAX_WORK_ID_LENGTH</a></td>
@@ -2203,6 +2210,7 @@ Type: <code>uint32</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

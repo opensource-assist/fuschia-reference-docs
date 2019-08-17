@@ -1455,15 +1455,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#11">invalidId</a></td>
             <td>
                     <code>0</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#34">modeInterlaced</a></td>
@@ -1471,6 +1470,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>int32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#45">identifierMaxLen</a></td>
@@ -1478,6 +1478,7 @@ Type: <code>uint32</code>
                     <code>128</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#94">typeSimple</a></td>
@@ -1485,6 +1486,7 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

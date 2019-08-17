@@ -132,15 +132,14 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.storymodel/constants.fidl#7">MAX_STORY_NAME_LENGTH</a></td>
             <td>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.storymodel/constants.fidl#9">MAX_MODULES_PER_STORY</a></td>
@@ -148,6 +147,7 @@ Book: /_book.yaml
                     <code>128</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.storymodel/constants.fidl#10">MAX_MODULE_NAME_LENGTH</a></td>
@@ -155,6 +155,7 @@ Book: /_book.yaml
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

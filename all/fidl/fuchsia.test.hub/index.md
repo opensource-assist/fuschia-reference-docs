@@ -71,15 +71,16 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/fuchsia.test.hub.fidl#11">MAX_NUM_ENTRIES</a></td>
             <td>
                     <code>100</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> The maximum number of entries to report within a directory in tests.
+ This capacity is currently set somewhat arbitrarily.
+</td>
         </tr>
     
 </table>

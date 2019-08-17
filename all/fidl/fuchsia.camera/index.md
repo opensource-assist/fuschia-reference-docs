@@ -586,15 +586,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#13">MAX_FORMATS_PER_RESPONSE</a></td>
             <td>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#18">CAMERA_OUTPUT_UNKNOWN</a></td>
@@ -602,6 +601,10 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> A coarse set of capabilities.  This struct is used in the camera description
+ to help filter out cameras which will not have the needed capabilities.
+ This set of declarations would be the bitfield: CameraOutputCapabilities.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#19">CAMERA_OUTPUT_STILL_IMAGE</a></td>
@@ -609,6 +612,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#20">CAMERA_OUTPUT_BURST</a></td>
@@ -616,6 +620,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#21">CAMERA_OUTPUT_STREAM</a></td>
@@ -623,6 +628,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#22">CAMERA_OUTPUT_HDR</a></td>
@@ -630,6 +636,7 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#23">CAMERA_OUTPUT_DEPTH</a></td>
@@ -637,6 +644,7 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#24">CAMERA_OUTPUT_STEREO</a></td>
@@ -644,6 +652,7 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

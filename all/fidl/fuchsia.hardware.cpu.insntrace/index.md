@@ -649,15 +649,14 @@ Type: <code>uint8</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-cpu-insntrace/insntrace.fidl#9">API_VERSION</a></td>
             <td>
                     <code>0</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-cpu-insntrace/insntrace.fidl#13">MAX_NUM_TRACES</a></td>
@@ -665,6 +664,9 @@ Type: <code>uint8</code>
                     <code>64</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td> The maximum number of traces that can be collected at once.
+ A "trace" is the instruction stream for one entity, cpu or thread.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-cpu-insntrace/insntrace.fidl#16">MAX_NUM_ADDR_RANGES</a></td>
@@ -672,6 +674,8 @@ Type: <code>uint8</code>
                     <code>2</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td> The maximum number of supported address ranges.
+</td>
         </tr>
     
 </table>

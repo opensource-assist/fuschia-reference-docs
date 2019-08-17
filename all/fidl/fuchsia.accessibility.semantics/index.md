@@ -509,15 +509,15 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#11">MAX_TREE_DEPTH</a></td>
             <td>
                     <code>256</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maximum depth of the semantic tree.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#14">MAX_FAN_OUT</a></td>
@@ -525,6 +525,8 @@ Type: <code>uint32</code>
                     <code>256</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maximum number of children for a node in the semantic tree.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#17">MAX_NODES_PER_UPDATE</a></td>
@@ -532,6 +534,8 @@ Type: <code>uint32</code>
                     <code>2048</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maximum number of semantic nodes that may be sent in a single update.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#20">MAX_LABEL_SIZE</a></td>
@@ -539,6 +543,8 @@ Type: <code>uint32</code>
                     <code>16384</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maximum size of a label string, in bytes.
+</td>
         </tr>
     
 </table>

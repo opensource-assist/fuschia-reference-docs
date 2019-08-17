@@ -861,15 +861,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/constants.fidl#7">MAX_VALUE_LENGTH</a></td>
             <td>
                     <code>512</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#65">kPropertyBroadcast</a></td>
@@ -877,6 +876,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#66">kPropertyRead</a></td>
@@ -884,6 +884,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#67">kPropertyWriteWithoutResponse</a></td>
@@ -891,6 +892,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#68">kPropertyWrite</a></td>
@@ -898,6 +900,7 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#69">kPropertyNotify</a></td>
@@ -905,6 +908,7 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#70">kPropertyIndicate</a></td>
@@ -912,6 +916,7 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#71">kPropertyAuthenticatedSignedWrites</a></td>
@@ -919,6 +924,7 @@ Type: <code>uint32</code>
                     <code>64</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#72">kPropertyReliableWrite</a></td>
@@ -926,6 +932,7 @@ Type: <code>uint32</code>
                     <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#73">kPropertyWritableAuxiliaries</a></td>
@@ -933,6 +940,7 @@ Type: <code>uint32</code>
                     <code>512</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

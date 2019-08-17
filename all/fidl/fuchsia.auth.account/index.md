@@ -1169,15 +1169,16 @@ Type: <code>uint8</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.auth.account/account_manager.fidl#11">MAX_ACCOUNTS_PER_DEVICE</a></td>
             <td>
                     <code>128</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum number of Fuchsia accounts that may be simultaneously provisioned
+ on a device. This number may be increased in the future.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.auth.account/account_manager.fidl#15">MAX_PERSONAE_PER_ACCOUNT</a></td>
@@ -1185,6 +1186,9 @@ Type: <code>uint8</code>
                     <code>128</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum number of personae that may be simultaneously defined within a
+ Fuchsia account. This number may be increased in the future.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.auth.account/account_manager.fidl#19">MAX_ID_SIZE</a></td>
@@ -1192,6 +1196,9 @@ Type: <code>uint8</code>
                     <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum length of the global Fuchsia account and persona identifiers,
+ in bytes.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.auth.account/account_manager.fidl#22">MAX_NAME_SIZE</a></td>
@@ -1199,6 +1206,8 @@ Type: <code>uint8</code>
                     <code>128</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum length of the (UTF-8 encoded) human readable names, in bytes.
+</td>
         </tr>
     
 </table>

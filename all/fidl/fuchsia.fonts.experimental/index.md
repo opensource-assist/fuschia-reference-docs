@@ -542,15 +542,16 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#15">MAX_TYPEFACE_RESULTS</a></td>
             <td>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum number of font families that can be returned in a
+ `TypefaceInfoResponse`.
+</td>
         </tr>
     
 </table>

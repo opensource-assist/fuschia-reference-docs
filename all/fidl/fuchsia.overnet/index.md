@@ -85,7 +85,7 @@ Book: /_book.yaml
 
 
 ## ServiceProvider {:#ServiceProvider}
-*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#21)*
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#20)*
 
 
 ### ConnectToService {:#ConnectToService}
@@ -108,7 +108,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Peer {:#Peer}
-*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#25)*
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#24)*
 
 
 

@@ -303,15 +303,14 @@ Type: <code>uint8</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#17">MAX_DESC_LEN</a></td>
             <td>
                     <code>8192</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#18">MAX_REPORT_LEN</a></td>
@@ -319,6 +318,7 @@ Type: <code>uint8</code>
                     <code>8192</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#19">MAX_REPORT_IDS</a></td>
@@ -326,6 +326,7 @@ Type: <code>uint8</code>
                     <code>256</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     
 </table>

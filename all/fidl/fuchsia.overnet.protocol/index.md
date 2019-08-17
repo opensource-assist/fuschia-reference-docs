@@ -4,152 +4,6 @@ Book: /_book.yaml
 # fuchsia.overnet.protocol
 
 
-## **PROTOCOLS**
-
-## Peer {:#Peer}
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#15)*
-
- Older peer-to-peer protocol between two Overnet nodes.
- Each end of the Overnet connection stream implements this protocol.
-
-### ConnectToService {:#ConnectToService}
-
- Create a new stream, labelled `stream_id`, to communicate with the
- advertised service `service_name`.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>service_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>stream_id</code></td>
-            <td>
-                <code><a class='link' href='#StreamId'>StreamId</a></code>
-            </td>
-        </tr></table>
-
-
-
-### Ping {:#Ping}
-
- Ping request/response. Return value is the amount of time the service
- used to fulfill the response.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>response</code></td>
-            <td>
-                <code>int64</code>
-            </td>
-        </tr></table>
-
-### UpdateNodeDescription {:#UpdateNodeDescription}
-
- Update the description of a single node.
- This message is broadcast from a node whenever the description changes.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>desc</code></td>
-            <td>
-                <code><a class='link' href='#PeerDescription'>PeerDescription</a></code>
-            </td>
-        </tr></table>
-
-
-
-### UpdateNodeStatus {:#UpdateNodeStatus}
-
- Gossip routing: update the status of a single node.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>node</code></td>
-            <td>
-                <code><a class='link' href='#NodeStatus'>NodeStatus</a></code>
-            </td>
-        </tr></table>
-
-
-
-### UpdateLinkStatus {:#UpdateLinkStatus}
-
- Gossip routing: update the status of a single link between nodes.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>link</code></td>
-            <td>
-                <code><a class='link' href='#LinkStatus'>LinkStatus</a></code>
-            </td>
-        </tr></table>
-
-
-
-## ZirconChannel {:#ZirconChannel}
-*Defined in [fuchsia.overnet.protocol/zircon_proxy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/zircon_proxy.fidl#45)*
-
- Proxy protocol for channels.
- This protocol is published for each side of the Overnet stream.
-
-### Message {:#Message}
-
- Send a message to the stream's peer.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>message</code></td>
-            <td>
-                <code><a class='link' href='#ZirconChannelMessage'>ZirconChannelMessage</a></code>
-            </td>
-        </tr></table>
-
-
-
-## ZirconSocket {:#ZirconSocket}
-*Defined in [fuchsia.overnet.protocol/zircon_proxy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/zircon_proxy.fidl#53)*
-
- Proxy protocol for sockets.
- This protocol is published for each side of the Overnet stream.
-
-### Message {:#Message}
-
- Send some bytes to the stream's peer.
- For datagram sockets, this is one datagram.
- For stream sockets, this is the next bundle of bytes.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>bytes</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 
 
 ## **STRUCTS**
@@ -193,7 +47,7 @@ Book: /_book.yaml
 </table>
 
 ### ConnectToService {:#ConnectToService}
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#45)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#24)*
 
 
 
@@ -440,7 +294,7 @@ Type: <code>uint32</code>
 ### ConnectToServiceOptions {:#ConnectToServiceOptions}
 
 
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#55)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#34)*
 
  Options for service connection formation.
 
@@ -577,7 +431,7 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### PeerMessage {:#PeerMessage}
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#33)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#12)*
 
  Peer-to-peer protocol between two Overnet nodes.
  Client quic connections send this xunion to servers over quic stream 0.
@@ -636,15 +490,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#10">MAX_SERVICE_NAME_LENGTH</a></td>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#8">MAX_SERVICE_NAME_LENGTH</a></td>
             <td>
                     <code>255</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/routing.fidl#9">METRIC_VERSION_TOMBSTONE</a></td>
@@ -652,6 +505,9 @@ Type: <code>uint32</code>
                     <code>18446744073709551615</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> If a LinkStatus or NodeStatus version is set to this value, that link or node
+ is considered dead and should be expunged soon.
+</td>
         </tr>
     
 </table>

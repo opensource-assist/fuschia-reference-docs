@@ -163,15 +163,16 @@ Type: <code>uint16</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#76">MUTED_GAIN_DB</a></td>
             <td>
                     <code>-160</code>
                 </td>
                 <td><code>float32</code></td>
+            <td> Gain value producing silence. Gain values less than this value are permitted,
+ but produce the same effect as this value.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#79">MAX_GAIN_DB</a></td>
@@ -179,6 +180,8 @@ Type: <code>uint16</code>
                     <code>24</code>
                 </td>
                 <td><code>float32</code></td>
+            <td> Maximum permitted gain value.
+</td>
         </tr>
     
 </table>

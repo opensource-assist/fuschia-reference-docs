@@ -50,15 +50,14 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/tools/fidl/examples/example-6.test.fidl#7">x</a></td>
             <td>
                     <code>23</code>
                 </td>
                 <td><code>int32</code></td>
+            <td></td>
         </tr>
     
 </table>

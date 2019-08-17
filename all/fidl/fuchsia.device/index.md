@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Controller {:#Controller}
-*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#37)*
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#104)*
 
  Interface for manipulating a device in a devhost
 
@@ -251,9 +251,9 @@ Book: /_book.yaml
 
 ### RunCompatibilityTests {:#RunCompatibilityTests}
 
- RunCompatibilityTests: Runs compatibility tests for the driver that binds to this device.
- The |hook_wait_time| is the time that the driver expects to take for each device hook in
- nanoseconds.
+ Runs compatibility tests for the driver that binds to this device.
+ The |hook_wait_time| is the time that the driver expects to take for
+ each device hook in nanoseconds.
  Returns whether the driver passed the compatibility check.
 
 #### Request
@@ -306,6 +306,56 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
+### DevicePowerStateInfo {:#DevicePowerStateInfo}
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#86)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>state_id</code></td>
+            <td>
+                <code><a class='link' href='#DevicePowerState'>DevicePowerState</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>is_supported</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> Is this state supported?
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>restore_latency</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> Restore time for coming out of this state to working D0 state.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>wakeup_capable</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> Is this device wakeup_capable?
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>system_wake_state</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td> Deepest system system sleep state that the device can wake the system from.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### NameProvider_GetDeviceName_Response {:#NameProvider_GetDeviceName_Response}
 *Defined in [fuchsia.device/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
 
@@ -325,6 +375,38 @@ Book: /_book.yaml
 </table>
 
 
+
+## **ENUMS**
+
+### DevicePowerState {:#DevicePowerState}
+Type: <code>uint8</code>
+
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#40)*
+
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>DEVICE_POWER_STATE_D0</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DEVICE_POWER_STATE_D1</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DEVICE_POWER_STATE_D2</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DEVICE_POWER_STATE_D3HOT</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DEVICE_POWER_STATE_D3COLD</code></td>
+            <td><code>4</code></td>
+            <td></td>
+        </tr></table>
 
 
 
@@ -359,15 +441,15 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#10">MAX_DEVICE_NAME_LEN</a></td>
             <td>
                     <code>32</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maxmium length for a device name
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#12">MAX_DEVICE_PATH_LEN</a></td>
@@ -375,6 +457,8 @@ Book: /_book.yaml
                     <code>1024</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maximum length of a device path
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#14">MAX_DRIVER_NAME_LEN</a></td>
@@ -382,6 +466,8 @@ Book: /_book.yaml
                     <code>32</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maxmium length for a driver name
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#16">MAX_DRIVER_PATH_LEN</a></td>
@@ -389,46 +475,83 @@ Book: /_book.yaml
                     <code>1024</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Maximum length for a driver path
+</td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#20">DEVICE_SIGNAL_READABLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#19">MAX_DEVICE_POWER_STATES</a></td>
+            <td>
+                    <code>5</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Maximum device power states. In future this should account
+ for performant states.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#20">MIN_DEVICE_POWER_STATES</a></td>
+            <td>
+                    <code>2</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#24">DEVICE_SIGNAL_READABLE</a></td>
             <td>
                     <code>16777216</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Signal that will be active on a device event handle if the device's read() method
+ will return data.
+</td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#24">DEVICE_SIGNAL_OOB</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#28">DEVICE_SIGNAL_OOB</a></td>
             <td>
                     <code>33554432</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Signal that will be active on a device event handle if the device has some out-of-band
+ mechanism that needs attention.
+ This is primarily used by the PTY support.
+</td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#27">DEVICE_SIGNAL_WRITABLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#31">DEVICE_SIGNAL_WRITABLE</a></td>
             <td>
                     <code>67108864</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Signal that will be active on a device event handle if the device's write() method
+ will accept data.
+</td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#30">DEVICE_SIGNAL_ERROR</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#34">DEVICE_SIGNAL_ERROR</a></td>
             <td>
                     <code>134217728</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Signal that will be active on a device event handle if the device has encountered an error.
+ This is primarily used by the PTY support.
+</td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#33">DEVICE_SIGNAL_HANGUP</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#37">DEVICE_SIGNAL_HANGUP</a></td>
             <td>
                     <code>268435456</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Signal that will be active on a device event handle if the device has been disconnected.
+ This is primarily used by the PTY support.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/name-provider.fidl#9">DEFAULT_DEVICE_NAME</a></td>
             <td><code>fuchsia</code></td>
                     <td><code>String</code></td>
+            <td></td>
         </tr>
     
 </table>

@@ -780,24 +780,16 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
- A PTY (pseudoterminal) emulates terminal devices, with a "server" side
- (which represents the keyboard+monitor side of the terminal and is obtained
- by opening /dev/misc/ptmx) and a number of "client" sides which are obtained
- by calling `OpenClient`.
-
- Client PTYs are identified by the `id` used in the `OpenClient` call. The
- first Client PTY *must* be 0, and it is the only Client PTY that is allowed
- to create additional Client PTYs, receive Events, etc. It is the
- Controlling PTY.
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#21">FEATURE_RAW</a></td>
             <td>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> When Feature Raw is enabled, OOB Events like ^c, ^z, etc are not generated.
+ Instead the character is read from the read() input path.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#29">EVENT_HANGUP</a></td>
@@ -805,6 +797,8 @@ Book: /_book.yaml
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The terminal has no active client.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#31">EVENT_INTERRUPT</a></td>
@@ -812,6 +806,8 @@ Book: /_book.yaml
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The terminal received a ^C control character.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#33">EVENT_SUSPEND</a></td>
@@ -819,6 +815,8 @@ Book: /_book.yaml
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The terminal received a ^Z control character.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#35">EVENT_MASK</a></td>
@@ -826,6 +824,8 @@ Book: /_book.yaml
                     <code>7</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> All events
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#38">SIGNAL_EVENT</a></td>
@@ -833,6 +833,8 @@ Book: /_book.yaml
                     <code>33554432</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> When an event is pending, this signal is asserted on the Controlling PTY.
+</td>
         </tr>
     
 </table>

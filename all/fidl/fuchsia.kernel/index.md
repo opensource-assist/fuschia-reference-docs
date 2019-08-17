@@ -158,15 +158,15 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-kernel/kernel-debug.fidl#10">DEBUG_COMMAND_MAX</a></td>
             <td>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum number of bytes in a command string
+</td>
         </tr>
     
 </table>

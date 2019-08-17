@@ -4870,15 +4870,15 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#705">kLabelMaxLength</a></td>
             <td>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum length for a resource label.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/events.fidl#9">kMetricsEventMask</a></td>
@@ -4886,6 +4886,9 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Reports metrics information.
+ This event type is only reported for node resources.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/events.fidl#10">kSizeChangeHintEventMask</a></td>
@@ -4893,6 +4896,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

@@ -283,15 +283,14 @@ Type: <code>int8</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#18">MAX_TAGS</a></td>
             <td>
                     <code>5</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#21">MAX_TAG_LEN_BYTES</a></td>
@@ -299,6 +298,7 @@ Type: <code>int8</code>
                     <code>63</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#45">MAX_TAGS_PER_LOG_MESSAGE</a></td>
@@ -306,6 +306,7 @@ Type: <code>int8</code>
                     <code>5</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#83">MAX_LOG_MANY_SIZE_BYTES</a></td>
@@ -313,6 +314,7 @@ Type: <code>int8</code>
                     <code>16384</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     
 </table>

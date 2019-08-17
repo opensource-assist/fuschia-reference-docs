@@ -289,15 +289,15 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#8">STORY_ID_MAX_LENGTH</a></td>
             <td>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Maximum length of a story id.
+</td>
         </tr>
     
 </table>

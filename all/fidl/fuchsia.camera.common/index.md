@@ -395,15 +395,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-camera-common/common.fidl#13">CAMERA_OUTPUT_UNKNOWN</a></td>
             <td>
                     <code>0</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-camera-common/common.fidl#14">CAMERA_OUTPUT_STILL_IMAGE</a></td>
@@ -411,6 +410,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-camera-common/common.fidl#15">CAMERA_OUTPUT_BURST</a></td>
@@ -418,6 +418,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-camera-common/common.fidl#16">CAMERA_OUTPUT_STREAM</a></td>
@@ -425,6 +426,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-camera-common/common.fidl#17">CAMERA_OUTPUT_HDR</a></td>
@@ -432,6 +434,7 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-camera-common/common.fidl#18">CAMERA_OUTPUT_DEPTH</a></td>
@@ -439,6 +442,7 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-camera-common/common.fidl#19">CAMERA_OUTPUT_STEREO</a></td>
@@ -446,6 +450,7 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

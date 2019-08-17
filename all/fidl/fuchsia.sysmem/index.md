@@ -2223,15 +2223,14 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#16">FORMAT_MODIFIER_NONE</a></td>
             <td>
                     <code>0</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#18">FORMAT_MODIFIER_VENDOR_NONE</a></td>
@@ -2239,6 +2238,7 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#19">FORMAT_MODIFIER_VENDOR_INTEL</a></td>
@@ -2246,6 +2246,7 @@ Type: <code>uint32</code>
                     <code>72057594037927936</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#20">FORMAT_MODIFIER_VENDOR_AMD</a></td>
@@ -2253,6 +2254,7 @@ Type: <code>uint32</code>
                     <code>144115188075855872</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#21">FORMAT_MODIFIER_VENDOR_NVIDIA</a></td>
@@ -2260,6 +2262,7 @@ Type: <code>uint32</code>
                     <code>216172782113783808</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#22">FORMAT_MODIFIER_VENDOR_SAMSUNG</a></td>
@@ -2267,6 +2270,7 @@ Type: <code>uint32</code>
                     <code>288230376151711744</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#23">FORMAT_MODIFIER_VENDOR_QCOM</a></td>
@@ -2274,6 +2278,7 @@ Type: <code>uint32</code>
                     <code>360287970189639680</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#24">FORMAT_MODIFIER_VENDOR_VIVANTE</a></td>
@@ -2281,6 +2286,7 @@ Type: <code>uint32</code>
                     <code>432345564227567616</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#25">FORMAT_MODIFIER_VENDOR_BROADCOM</a></td>
@@ -2288,6 +2294,7 @@ Type: <code>uint32</code>
                     <code>504403158265495552</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#26">FORMAT_MODIFIER_VENDOR_ARM</a></td>
@@ -2295,6 +2302,7 @@ Type: <code>uint32</code>
                     <code>576460752303423488</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#28">FORMAT_MODIFIER_VALUE_RESERVED</a></td>
@@ -2302,6 +2310,7 @@ Type: <code>uint32</code>
                     <code>72057594037927935</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#30">FORMAT_MODIFIER_INVALID</a></td>
@@ -2309,6 +2318,7 @@ Type: <code>uint32</code>
                     <code><a class='link' href='#FORMAT_MODIFIER_VALUE_RESERVED'>FORMAT_MODIFIER_VALUE_RESERVED</a></code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#32">FORMAT_MODIFIER_LINEAR</a></td>
@@ -2316,6 +2326,7 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#39">FORMAT_MODIFIER_INTEL_I915_X_TILED</a></td>
@@ -2323,6 +2334,7 @@ Type: <code>uint32</code>
                     <code>72057594037927937</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#40">FORMAT_MODIFIER_INTEL_I915_Y_TILED</a></td>
@@ -2330,6 +2342,7 @@ Type: <code>uint32</code>
                     <code>72057594037927938</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#41">FORMAT_MODIFIER_INTEL_I915_YF_TILED</a></td>
@@ -2337,6 +2350,7 @@ Type: <code>uint32</code>
                     <code>72057594037927939</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#56">FORMAT_MODIFIER_ARM_AFBC_16x16</a></td>
@@ -2344,6 +2358,7 @@ Type: <code>uint32</code>
                     <code>576460752303423489</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#57">FORMAT_MODIFIER_ARM_AFBC_32x8</a></td>
@@ -2351,6 +2366,7 @@ Type: <code>uint32</code>
                     <code>576460752303423490</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#21">noneUsage</a></td>
@@ -2358,6 +2374,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#25">cpuUsageRead</a></td>
@@ -2365,6 +2382,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#26">cpuUsageReadOften</a></td>
@@ -2372,6 +2390,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#27">cpuUsageWrite</a></td>
@@ -2379,6 +2398,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#28">cpuUsageWriteOften</a></td>
@@ -2386,6 +2406,7 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#32">vulkanUsageTransferSrc</a></td>
@@ -2393,6 +2414,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#33">vulkanUsageTransferDst</a></td>
@@ -2400,6 +2422,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#34">vulkanUsageSampled</a></td>
@@ -2407,6 +2430,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#35">vulkanUsageStorage</a></td>
@@ -2414,6 +2438,7 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#36">vulkanUsageColorAttachment</a></td>
@@ -2421,6 +2446,7 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#37">vulkanUsageStencilAttachment</a></td>
@@ -2428,6 +2454,7 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#38">vulkanUsageTransientAttachment</a></td>
@@ -2435,6 +2462,7 @@ Type: <code>uint32</code>
                     <code>64</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#39">vulkanUsageInputAttachment</a></td>
@@ -2442,6 +2470,7 @@ Type: <code>uint32</code>
                     <code>128</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#42">displayUsageLayer</a></td>
@@ -2449,6 +2478,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#43">displayUsageCursor</a></td>
@@ -2456,6 +2486,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#47">videoUsageHwDecoder</a></td>
@@ -2463,6 +2494,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#48">videoUsageHwEncoder</a></td>
@@ -2470,6 +2502,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#51">videoUsageHwProtected</a></td>
@@ -2477,6 +2510,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

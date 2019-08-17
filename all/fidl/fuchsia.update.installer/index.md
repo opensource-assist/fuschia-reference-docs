@@ -504,15 +504,15 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update.installer/progress.fidl#88">PERCENT_MAX</a></td>
             <td>
                     <code>100</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> Fixed precision decimal representing 100%.
+</td>
         </tr>
     
 </table>

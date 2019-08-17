@@ -1035,15 +1035,15 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#96">NetInterfaceFlagUp</a></td>
             <td>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Flags for NetInterface.flags.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#97">NetInterfaceFlagDhcp</a></td>
@@ -1051,6 +1051,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

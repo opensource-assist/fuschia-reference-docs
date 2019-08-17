@@ -2613,15 +2613,15 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#31">FILE_SIGNAL_READABLE</a></td>
             <td>
                     <code>16777216</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Indicates the file is ready for reading.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#33">FILE_SIGNAL_WRITABLE</a></td>
@@ -2629,6 +2629,8 @@ Type: <code>uint32</code>
                     <code>33554432</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Indicates the file is ready for writing.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#74">DEVICE_SIGNAL_READABLE</a></td>
@@ -2636,34 +2638,44 @@ Type: <code>uint32</code>
                     <code>16777216</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Indicates the device is ready for reading.
+</td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#76">DEVICE_SIGNAL_WRITABLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#76">DEVICE_SIGNAL_OOB</a></td>
             <td>
                     <code>33554432</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Indicates an out-of-band state transition has occurred.
+</td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#78">DEVICE_SIGNAL_ERROR</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#78">DEVICE_SIGNAL_WRITABLE</a></td>
             <td>
                     <code>67108864</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Indicates the device is ready for writing.
+</td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#80">DEVICE_SIGNAL_HANGUP</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#80">DEVICE_SIGNAL_ERROR</a></td>
             <td>
                     <code>134217728</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Indicates the device has encountered an error state.
+</td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#82">DEVICE_SIGNAL_OOB</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#82">DEVICE_SIGNAL_HANGUP</a></td>
             <td>
                     <code>268435456</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Indicates the device has hung up on the current connection.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#98">OPEN_RIGHT_READABLE</a></td>
@@ -2671,6 +2683,8 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Can read from target object.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#100">OPEN_RIGHT_WRITABLE</a></td>
@@ -2678,6 +2692,8 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Can write to target object.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#102">OPEN_RIGHT_ADMIN</a></td>
@@ -2685,6 +2701,8 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Connection can mount/umount filesystem.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#105">OPEN_FLAG_CREATE</a></td>
@@ -2692,6 +2710,8 @@ Type: <code>uint32</code>
                     <code>65536</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Create the object if it doesn't exist.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#107">OPEN_FLAG_CREATE_IF_ABSENT</a></td>
@@ -2699,6 +2719,8 @@ Type: <code>uint32</code>
                     <code>131072</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> (with Create) Fail if the object already exists.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#109">OPEN_FLAG_TRUNCATE</a></td>
@@ -2706,6 +2728,8 @@ Type: <code>uint32</code>
                     <code>262144</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Truncate the object before usage.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#112">OPEN_FLAG_DIRECTORY</a></td>
@@ -2713,6 +2737,9 @@ Type: <code>uint32</code>
                     <code>524288</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Assert that the object to be opened is a directory.
+ Return an error if the target object is not a directory.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#114">OPEN_FLAG_APPEND</a></td>
@@ -2720,6 +2747,8 @@ Type: <code>uint32</code>
                     <code>1048576</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Seek to the end of the object before all writes.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#116">OPEN_FLAG_NO_REMOTE</a></td>
@@ -2727,6 +2756,8 @@ Type: <code>uint32</code>
                     <code>2097152</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> If the object is a mount point, open the local directory.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#127">OPEN_FLAG_NODE_REFERENCE</a></td>
@@ -2734,6 +2765,17 @@ Type: <code>uint32</code>
                     <code>4194304</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Open a reference to the object, not the object itself.
+ It is ONLY valid to pass the following flags together with `OPEN_FLAG_NODE_REFERENCE`:
+ - `OPEN_FLAG_DIRECTORY`
+ - `OPEN_FLAG_NOT_DIRECTORY`
+ - `OPEN_FLAG_DESCRIBE`
+ otherwise an error is returned.
+ If an object is opened or cloned using this method, the resulting connection does not carry
+ any permission flags.
+ The resulting node allows a limited set of operations: `GetAttr`, `Clone`, `Close`, `Describe`,
+ and, if the node is a file, these extra operations: `GetFlags`, `SetFlags`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#130">OPEN_FLAGS_ALLOWED_WITH_NODE_REFERENCE</a></td>
@@ -2741,6 +2783,9 @@ Type: <code>uint32</code>
                     <code>46661632</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Binary OR of `OPEN_FLAG_DIRECTORY`, OPEN_FLAG_NOT_DIRECTORY, OPEN_FLAG_DESCRIBE, and
+ `OPEN_FLAG_NODE_REFERENCE`. Flags used when opening a node reference must fall within this mask.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#133">OPEN_FLAG_DESCRIBE</a></td>
@@ -2748,6 +2793,9 @@ Type: <code>uint32</code>
                     <code>8388608</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Requests that an "OnOpen" event is sent to the interface request.
+ The event will contain a non-null NodeInfo if the open/clone is successful.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#150">OPEN_FLAG_POSIX</a></td>
@@ -2755,6 +2803,23 @@ Type: <code>uint32</code>
                     <code>16777216</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Specify this flag to request POSIX-compatibility. Currently, it affects permission handling.
+ During Open:
+ - If the target path is a directory, the rights on the new connection expands to include
+   `OPEN_RIGHT_WRITABLE` if and only if the current connection and all intermediate mount points
+   are writable.
+ - Otherwise, this flag is ignored. It is an access denied error to request more rights
+   than those on the current connection, or any intermediate mount points.
+
+ If the posix compatibility flag is not specified, opening always uses the requested rights,
+ failing the operation with access denied error if requested rights exceeds the rights attached
+ to the current connection.
+
+ If the requesting connection is read-only and the requested rights are read-only, the flag
+ may be ignored by the server, and is not forwarded downstream. This is an implementation detail,
+ necessary to enforce hierarchical permissions across mount points, and should have no effect
+ on the expected behavior for clients.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#153">OPEN_FLAG_NOT_DIRECTORY</a></td>
@@ -2762,6 +2827,9 @@ Type: <code>uint32</code>
                     <code>33554432</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Assert that the object to be opened is not a directory.
+ Return an error if the target object is a directory.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#157">CLONE_FLAG_SAME_RIGHTS</a></td>
@@ -2769,6 +2837,10 @@ Type: <code>uint32</code>
                     <code>67108864</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> When used during clone, the new connection inherits the rights on the source connection,
+ regardless if it is a file or directory. Otherwise, clone attempts to use the requested rights.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#224">MODE_PROTECTION_MASK</a></td>
@@ -2776,6 +2848,11 @@ Type: <code>uint32</code>
                     <code>4095</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Bits reserved for posix protections. Native fuchsia filesystems
+ are not required to set bits contained within `MODE_PROTECTION_MASK`,
+ but filesystems that wish to do so may refer to sys/stat.h for their
+ definitions.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#228">MODE_TYPE_MASK</a></td>
@@ -2783,6 +2860,10 @@ Type: <code>uint32</code>
                     <code>1044480</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Bits indicating node type. The canonical mechanism to check
+ for a node type is to take 'mode', bitwise AND it with the
+ `MODE_TYPE_MASK`, and check exact equality against a mode type.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#229">MODE_TYPE_DIRECTORY</a></td>
@@ -2790,6 +2871,7 @@ Type: <code>uint32</code>
                     <code>16384</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#230">MODE_TYPE_BLOCK_DEVICE</a></td>
@@ -2797,6 +2879,7 @@ Type: <code>uint32</code>
                     <code>24576</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#231">MODE_TYPE_FILE</a></td>
@@ -2804,6 +2887,7 @@ Type: <code>uint32</code>
                     <code>32768</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#232">MODE_TYPE_SOCKET</a></td>
@@ -2811,6 +2895,7 @@ Type: <code>uint32</code>
                     <code>49152</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#233">MODE_TYPE_SERVICE</a></td>
@@ -2818,6 +2903,7 @@ Type: <code>uint32</code>
                     <code>65536</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#253">MAX_IOCTL_HANDLES</a></td>
@@ -2825,6 +2911,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#257">MAX_BUF</a></td>
@@ -2832,6 +2919,9 @@ Type: <code>uint32</code>
                     <code>8192</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> The maximal buffer size which can be transmitted for buffered operations.
+ This capacity is currently set somewhat arbitrarily.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#261">MAX_PATH</a></td>
@@ -2839,6 +2929,8 @@ Type: <code>uint32</code>
                     <code>4096</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> The maximum length, in bytes, of a filesystem string.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#263">MAX_FILENAME</a></td>
@@ -2846,6 +2938,8 @@ Type: <code>uint32</code>
                     <code>255</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> The maximum length, in bytes, of a single filesystem component.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#267">NODE_ATTRIBUTE_FLAG_CREATION_TIME</a></td>
@@ -2853,6 +2947,9 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The fields of 'attributes' which are used to update the Node are indicated
+ by the 'flags' argument.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#268">NODE_ATTRIBUTE_FLAG_MODIFICATION_TIME</a></td>
@@ -2860,6 +2957,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#281">VMO_FLAG_READ</a></td>
@@ -2867,6 +2965,8 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Requests that the VMO be readable.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#284">VMO_FLAG_WRITE</a></td>
@@ -2874,6 +2974,8 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Requests that the VMO be writable.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#287">VMO_FLAG_EXEC</a></td>
@@ -2881,6 +2983,8 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Requests that the VMO be executable.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#292">VMO_FLAG_PRIVATE</a></td>
@@ -2888,6 +2992,10 @@ Type: <code>uint32</code>
                     <code>65536</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Require a copy-on-write clone of the underlying VMO.
+ The request should fail if the VMO is not cloned.
+ May not be supplied with fuchsia_io_`VMO_FLAG_EXACT`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#297">VMO_FLAG_EXACT</a></td>
@@ -2895,6 +3003,10 @@ Type: <code>uint32</code>
                     <code>131072</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Require an exact (non-cloned) handle to the underlying VMO.
+ The request should fail if a handle to the exact VMO is not returned.
+ May not be supplied with `VMO_FLAG_PRIVATE`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#366">DIRENT_TYPE_UNKNOWN</a></td>
@@ -2902,6 +3014,8 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> A dirent with an unknown type.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#368">DIRENT_TYPE_DIRECTORY</a></td>
@@ -2909,6 +3023,8 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> A dirent representing a directory object.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#370">DIRENT_TYPE_BLOCK_DEVICE</a></td>
@@ -2916,6 +3032,8 @@ Type: <code>uint32</code>
                     <code>6</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> A dirent representing a block device object.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#372">DIRENT_TYPE_FILE</a></td>
@@ -2923,6 +3041,8 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> A dirent representing a file object.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#374">DIRENT_TYPE_SOCKET</a></td>
@@ -2930,6 +3050,8 @@ Type: <code>uint32</code>
                     <code>12</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> A dirent representing a socket object.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#376">DIRENT_TYPE_SERVICE</a></td>
@@ -2937,6 +3059,8 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> A dirent representing a service object.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#380">INO_UNKNOWN</a></td>
@@ -2944,6 +3068,9 @@ Type: <code>uint32</code>
                     <code>18446744073709551615</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td> Nodes which do not have ino values should return this value
+ from Readdir and GetAttr.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#383">WATCH_EVENT_DELETED</a></td>
@@ -2951,6 +3078,8 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> Indicates the directory being watched has been deleted.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#385">WATCH_EVENT_ADDED</a></td>
@@ -2958,6 +3087,8 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> Indicates a node has been created (either new or moved) into a directory.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#387">WATCH_EVENT_REMOVED</a></td>
@@ -2965,6 +3096,8 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> Identifies a node has been removed (either deleted or moved) from the directory.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#389">WATCH_EVENT_EXISTING</a></td>
@@ -2972,6 +3105,8 @@ Type: <code>uint32</code>
                     <code>3</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> Identifies a node already existed in the directory when watching started.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#391">WATCH_EVENT_IDLE</a></td>
@@ -2979,6 +3114,8 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint8</code></td>
+            <td> Identifies that no more `WATCH_EVENT_EXISTING` events will be sent.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#394">WATCH_MASK_DELETED</a></td>
@@ -2986,6 +3123,8 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_DELETED`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#396">WATCH_MASK_ADDED</a></td>
@@ -2993,6 +3132,8 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_ADDED`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#398">WATCH_MASK_REMOVED</a></td>
@@ -3000,6 +3141,8 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_REMOVED`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#400">WATCH_MASK_EXISTING</a></td>
@@ -3007,6 +3150,8 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_EXISTING`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#402">WATCH_MASK_IDLE</a></td>
@@ -3014,6 +3159,8 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_IDLE`.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#404">WATCH_MASK_ALL</a></td>
@@ -3021,6 +3168,8 @@ Type: <code>uint32</code>
                     <code>31</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Used by Directory::Watch. Requests transmission of all watcher events.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#564">MOUNT_CREATE_FLAG_REPLACE</a></td>
@@ -3028,6 +3177,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#566">MAX_FS_NAME_BUFFER</a></td>
@@ -3035,6 +3185,7 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     
 </table>

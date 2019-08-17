@@ -125,15 +125,14 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/topaz/app/term/term.fidl#9">MAX_BUF</a></td>
             <td>
                     <code>900</code>
                 </td>
                 <td><code>uint64</code></td>
+            <td></td>
         </tr>
     
 </table>

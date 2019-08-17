@@ -762,15 +762,18 @@ Type: <code>uint32</code>
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/font_provider.fidl#26">REQUEST_FLAG_NO_FALLBACK</a></td>
             <td>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Deprecated. See `FaceRequestFlags`.
+ Disables font fallback. The service won't try to search fallback font set if
+ there is no requested font family or if it doesn't contain requested
+ character.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/font_provider.fidl#31">REQUEST_FLAG_EXACT_MATCH</a></td>
@@ -778,6 +781,10 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> Deprecated. See `FaceRequestFlags`.
+ Disables approximate style matching. The service will only return font that
+ matches the requested style exactly.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#11">MAX_FAMILY_NAME_LENGTH</a></td>
@@ -785,6 +792,8 @@ Type: <code>uint32</code>
                     <code>128</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum length of a font family name.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#14">MAX_FACE_QUERY_LANGUAGES</a></td>
@@ -792,6 +801,8 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum number of preferred languages allowed in a typeface query.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#17">MAX_FAMILY_STYLES</a></td>
@@ -799,6 +810,8 @@ Type: <code>uint32</code>
                     <code>300</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td> The maximum number of styles that will be returned for a font family.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#10">WEIGHT_THIN</a></td>
@@ -806,6 +819,7 @@ Type: <code>uint32</code>
                     <code>100</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#11">WEIGHT_EXTRA_LIGHT</a></td>
@@ -813,6 +827,7 @@ Type: <code>uint32</code>
                     <code>200</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#12">WEIGHT_LIGHT</a></td>
@@ -820,6 +835,7 @@ Type: <code>uint32</code>
                     <code>300</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#13">WEIGHT_NORMAL</a></td>
@@ -827,6 +843,7 @@ Type: <code>uint32</code>
                     <code>400</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#14">WEIGHT_MEDIUM</a></td>
@@ -834,6 +851,7 @@ Type: <code>uint32</code>
                     <code>500</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#15">WEIGHT_SEMI_BOLD</a></td>
@@ -841,6 +859,7 @@ Type: <code>uint32</code>
                     <code>600</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#16">WEIGHT_BOLD</a></td>
@@ -848,6 +867,7 @@ Type: <code>uint32</code>
                     <code>700</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#17">WEIGHT_EXTRA_BOLD</a></td>
@@ -855,6 +875,7 @@ Type: <code>uint32</code>
                     <code>800</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#18">WEIGHT_BLACK</a></td>
@@ -862,6 +883,7 @@ Type: <code>uint32</code>
                     <code>900</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     
 </table>

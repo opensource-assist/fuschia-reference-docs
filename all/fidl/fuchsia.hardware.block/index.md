@@ -312,15 +312,14 @@ Book: /_book.yaml
 
 ## **CONSTANTS**
 
-
-
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#10">FLAG_READONLY</a></td>
             <td>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#13">FLAG_REMOVABLE</a></td>
@@ -328,6 +327,7 @@ Book: /_book.yaml
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#16">FLAG_BOOTPART</a></td>
@@ -335,6 +335,7 @@ Book: /_book.yaml
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#20">MAX_TRANSFER_UNBOUNDED</a></td>
@@ -342,6 +343,7 @@ Book: /_book.yaml
                     <code>4294967295</code>
                 </td>
                 <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#72">VMOID_INVALID</a></td>
@@ -349,6 +351,7 @@ Book: /_book.yaml
                     <code>0</code>
                 </td>
                 <td><code>uint16</code></td>
+            <td></td>
         </tr>
     
 </table>
