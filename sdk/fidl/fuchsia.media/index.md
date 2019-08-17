@@ -605,7 +605,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## AudioCore {:#AudioCore}
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#8)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#80)*
 
 
 ### CreateAudioRenderer {:#CreateAudioRenderer}
@@ -788,6 +788,59 @@ Book: /_book.yaml
                 <code>float32</code>
             </td>
         </tr></table>
+
+
+
+### SetInteraction {:#SetInteraction}
+
+ SetInteraction allows changing how audio_core handles interactions of multiple active
+ streams simultaneously.  If streams of Usage `active` are processing audio, and streams of
+ Usage `affected` are as well, the Behavior specified will be applied to the streams of Usage
+ `affected`.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>active</code></td>
+            <td>
+                <code><a class='link' href='#Usage'>Usage</a></code>
+            </td>
+        </tr><tr>
+            <td><code>affected</code></td>
+            <td>
+                <code><a class='link' href='#Usage'>Usage</a></code>
+            </td>
+        </tr><tr>
+            <td><code>behavior</code></td>
+            <td>
+                <code><a class='link' href='#Behavior'>Behavior</a></code>
+            </td>
+        </tr></table>
+
+
+
+### ResetInteractions {:#ResetInteractions}
+
+ Re-initializes the set of rules that are currently governing the interaction of streams in
+ audio_core.  The default behavior is 'NONE'.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+
+### LoadDefaults {:#LoadDefaults}
+
+ Re-loads the platform policy configuration.  Falls back to a default config if the platform
+ does not provide a config.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
 
 
 
@@ -3311,7 +3364,7 @@ Book: /_book.yaml
 ### AudioRenderUsage {:#AudioRenderUsage}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#81)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#11)*
 
  Usage annotating the purpose of the stream being used to render audio.
  An AudioRenderer's usage cannot be changed after creation.  The
@@ -3345,7 +3398,7 @@ Type: <code>uint32</code>
 ### AudioCaptureUsage {:#AudioCaptureUsage}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#108)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#38)*
 
  Usages annotating the purpose of the stream being used to capture audio. The
  AudioCaptureUsage is used by audio policy to dictate how audio streams
@@ -3371,10 +3424,33 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### Behavior {:#Behavior}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#63)*
+
+ The behaviors applied to streams when multiple are active.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>NONE</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DUCK</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>MUTE</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr></table>
+
 ### AudioOutputRoutingPolicy {:#AudioOutputRoutingPolicy}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#139)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#165)*
 
 
 
@@ -4475,7 +4551,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Usage {:#Usage}
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#132)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#74)*
 
 
 <table>
@@ -4829,7 +4905,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#103">RENDER_USAGE_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#33">RENDER_USAGE_COUNT</a></td>
             <td>
                     <code>5</code>
                 </td>
@@ -4837,7 +4913,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#130">CAPTURE_USAGE_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#60">CAPTURE_USAGE_COUNT</a></td>
             <td>
                     <code>4</code>
                 </td>

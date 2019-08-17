@@ -20,6 +20,9 @@ Book: /_book.yaml
  - `settings` all current values of the accessibility settings.
  * see <a class='link' href='#AccessibilitySettings'>AccessibilitySettings</a> for their meaning.
 
+ This call may fail if AccessibilitySettings are not accessible, possibly because of file
+ system errors, not being supported on this product, or general service failures.
+
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
@@ -30,9 +33,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>settings</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#AccessibilitySettings'>AccessibilitySettings</a></code>
+                <code><a class='link' href='#Accessibility_Watch_Result'>Accessibility_Watch_Result</a></code>
             </td>
         </tr></table>
 
@@ -55,7 +58,12 @@ Book: /_book.yaml
 #### Response
 <table>
     <tr><th>Name</th><th>Type</th></tr>
-    </table>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Accessibility_Set_Result'>Accessibility_Set_Result</a></code>
+            </td>
+        </tr></table>
 
 ## Display {:#Display}
 *Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#9)*
@@ -324,8 +332,37 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
+### Accessibility_Watch_Response {:#Accessibility_Watch_Response}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>settings</code></td>
+            <td>
+                <code><a class='link' href='#AccessibilitySettings'>AccessibilitySettings</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Accessibility_Set_Response {:#Accessibility_Set_Response}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### Display_Watch_Response {:#Display_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#6)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
 
 
 
@@ -343,7 +380,7 @@ Book: /_book.yaml
 </table>
 
 ### Display_Set_Response {:#Display_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#13)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
 
 
 
@@ -354,7 +391,7 @@ Book: /_book.yaml
 </table>
 
 ### Intl_Watch_Response {:#Intl_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
 
 
 
@@ -372,7 +409,7 @@ Book: /_book.yaml
 </table>
 
 ### Intl_Set_Response {:#Intl_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#31)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#41)*
 
 
 
@@ -383,7 +420,7 @@ Book: /_book.yaml
 </table>
 
 ### Privacy_Watch_Response {:#Privacy_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#38)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
 
 
 
@@ -401,7 +438,7 @@ Book: /_book.yaml
 </table>
 
 ### Privacy_Set_Response {:#Privacy_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#55)*
 
 
 
@@ -412,7 +449,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Watch_Response {:#System_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#52)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
 
 
 
@@ -430,7 +467,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Set_Response {:#System_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#59)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#69)*
 
 
 
@@ -447,7 +484,7 @@ Book: /_book.yaml
 ### ColorBlindnessType {:#ColorBlindnessType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#47)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#50)*
 
 
 
@@ -473,7 +510,7 @@ Type: <code>uint32</code>
 ### CaptionFontFamily {:#CaptionFontFamily}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#94)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#97)*
 
  Font family groups for closed captions, specified by 47 CFR §79.102(k).
 
@@ -516,7 +553,7 @@ Type: <code>uint32</code>
 ### EdgeStyle {:#EdgeStyle}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#106)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#109)*
 
  Edge style for fonts as specified in 47 CFR §79.103(c)(7)
 
@@ -593,7 +630,7 @@ Type: <code>uint32</code>
 ### AccessibilitySettings {:#AccessibilitySettings}
 
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#26)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#29)*
 
  Supported accessibility settings.
 
@@ -654,7 +691,7 @@ Type: <code>uint32</code>
 ### CaptionsSettings {:#CaptionsSettings}
 
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#63)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#66)*
 
  What kind of sources get closed captions, and how they look.
 
@@ -706,7 +743,7 @@ Type: <code>uint32</code>
 ### CaptionFontStyle {:#CaptionFontStyle}
 
 
-*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#81)*
+*Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#84)*
 
  Font, size, and color of closed captions text.
 
@@ -898,8 +935,46 @@ Type: <code>uint32</code>
 
 ## **UNIONS**
 
+### Accessibility_Watch_Result {:#Accessibility_Watch_Result}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Accessibility_Watch_Response'>Accessibility_Watch_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Accessibility_Set_Result {:#Accessibility_Set_Result}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Accessibility_Set_Response'>Accessibility_Set_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### Display_Watch_Result {:#Display_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
 
 
 <table>
@@ -918,7 +993,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Display_Set_Result {:#Display_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
 
 
 <table>
@@ -937,7 +1012,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Intl_Watch_Result {:#Intl_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
 
 
 <table>
@@ -956,7 +1031,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Intl_Set_Result {:#Intl_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#44)*
 
 
 <table>
@@ -975,7 +1050,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Privacy_Watch_Result {:#Privacy_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#41)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#51)*
 
 
 <table>
@@ -994,7 +1069,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Privacy_Set_Result {:#Privacy_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#58)*
 
 
 <table>
@@ -1013,7 +1088,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### System_Watch_Result {:#System_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#55)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#65)*
 
 
 <table>
@@ -1032,7 +1107,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### System_Set_Result {:#System_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#72)*
 
 
 <table>
