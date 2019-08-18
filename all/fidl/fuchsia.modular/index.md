@@ -2913,7 +2913,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryPuppetMaster {:#StoryPuppetMaster}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#77)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#74)*
 
 
 ### Enqueue {:#Enqueue}
@@ -5605,17 +5605,6 @@ Book: /_book.yaml
             <td></td>
             <td>No default</td>
         </tr>
-</table>
-
-### WatchSessionOptions {:#WatchSessionOptions}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#74)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
 ### SetFocusState {:#SetFocusState}
