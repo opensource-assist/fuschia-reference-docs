@@ -219,7 +219,6 @@ Book: /_book.yaml
  access to memory (and other external resources).  Any modification to
  resources made via the Session API are automatically synchronized.
 
-
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
@@ -269,7 +268,7 @@ Book: /_book.yaml
 
 
 ## SessionListener {:#SessionListener}
-*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#135)*
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#133)*
 
  Listens for events which occur within the session.
 
@@ -306,40 +305,10 @@ Book: /_book.yaml
 
 
 
-## Snapshooter {:#Snapshooter}
-*Defined in [fuchsia.ui.scenic/snapshooter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/snapshooter.fidl#11)*
+## Snapshot {:#Snapshot}
+*Defined in [fuchsia.ui.scenic/snapshot.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/snapshot.fidl#9)*
 
  Defines an interface to take view snapshots.
-
-### TakeViewSnapshot {:#TakeViewSnapshot}
-
- Takes a snapshot of a view and returns it in a callback.
-
- The `view_koid` identifies the view whose snapshot needs to be taken.
-
- The callback is invoked with the VMO buffer containing the snapshot.
- If successful, the buffer size is non-zero, otherwise it is 0.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>view_koid</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>snapshot</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
-            </td>
-        </tr></table>
 
 
 

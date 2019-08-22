@@ -115,7 +115,7 @@ Book: /_book.yaml
 
 
 ## AudioCapturer {:#AudioCapturer}
-*Defined in [fuchsia.media/audio_capturer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_capturer.fidl#260)*
+*Defined in [fuchsia.media/audio_capturer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_capturer.fidl#256)*
 
  AudioCapturer
 
@@ -658,6 +658,7 @@ Book: /_book.yaml
  notifications. Setting System Mute to true leads to the same outcome as
  setting System Gain to MUTED_GAIN_DB: all audio output across the system
  is silenced.
+
  Sets the systemwide gain in decibels. `gain_db` values are clamped to
  the range -160 db to 0 db, inclusive. This setting is applied to all
  audio output devices. Audio input devices are unaffected.
@@ -2050,26 +2051,6 @@ Book: /_book.yaml
 
 
 ### OnStreamFailed {:#OnStreamFailed}
-
-
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>stream_lifetime_ordinal</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>error</code></td>
-            <td>
-                <code><a class='link' href='#StreamError'>StreamError</a></code>
-            </td>
-        </tr></table>
-
-### OnStreamFailed2 {:#OnStreamFailed2}
 
 
 
@@ -4987,25 +4968,61 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#20">METADATA_LABEL_PUBLISHER</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#20">METADATA_LABEL_TRACK_NUMBER</a></td>
+            <td><code>fuchsia.media.track_number</code></td>
+                    <td><code>String</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#21">METADATA_LABEL_PUBLISHER</a></td>
             <td><code>fuchsia.media.publisher</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#21">METADATA_LABEL_GENRE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#22">METADATA_LABEL_GENRE</a></td>
             <td><code>fuchsia.media.genre</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#22">METADATA_LABEL_COMPOSER</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#23">METADATA_LABEL_COMPOSER</a></td>
             <td><code>fuchsia.media.composer</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#26">METADATA_SOURCE_TITLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#24">METADATA_LABEL_SUBTITLE</a></td>
+            <td><code>fuchsia.media.subtitle</code></td>
+                    <td><code>String</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#25">METADATA_LABEL_RELEASE_DATE</a></td>
+            <td><code>fuchsia.media.release_date</code></td>
+                    <td><code>String</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#26">METADATA_LABEL_EPISODE</a></td>
+            <td><code>fuchsia.media.episode</code></td>
+                    <td><code>String</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#27">METADATA_LABEL_SEASON</a></td>
+            <td><code>fuchsia.media.season</code></td>
+                    <td><code>String</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#28">METADATA_LABEL_STUDIO</a></td>
+            <td><code>fuchsia.media.studio</code></td>
+                    <td><code>String</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#32">METADATA_SOURCE_TITLE</a></td>
             <td><code>fuchsia.media.source_title</code></td>
                     <td><code>String</code></td>
             <td> The title of the source of the media, e.g. a player, streaming service, or

@@ -6,8 +6,8 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
-## SnapshotCallbackHACK {:#SnapshotCallbackHACK}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#384)*
+## SnapshotCallbackDEPRECATED {:#SnapshotCallbackDEPRECATED}
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#386)*
 
 
 ### OnData {:#OnData}
@@ -68,7 +68,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### CreateResourceCmd {:#CreateResourceCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#101)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#103)*
 
 
 
@@ -96,7 +96,7 @@ Book: /_book.yaml
 </table>
 
 ### ReleaseResourceCmd {:#ReleaseResourceCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#114)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#116)*
 
 
 
@@ -122,7 +122,7 @@ Book: /_book.yaml
 </table>
 
 ### ExportResourceCmd {:#ExportResourceCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#127)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#129)*
 
 
 
@@ -155,7 +155,7 @@ Book: /_book.yaml
 </table>
 
 ### ImportResourceCmd {:#ImportResourceCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#154)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#156)*
 
 
 
@@ -206,7 +206,7 @@ Book: /_book.yaml
 </table>
 
 ### SetTagCmd {:#SetTagCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#174)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#176)*
 
 
 
@@ -245,7 +245,7 @@ Book: /_book.yaml
 </table>
 
 ### DetachCmd {:#DetachCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#189)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#191)*
 
 
 
@@ -273,7 +273,7 @@ Book: /_book.yaml
 </table>
 
 ### SetTranslationCmd {:#SetTranslationCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#197)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#199)*
 
 
 
@@ -302,7 +302,7 @@ Book: /_book.yaml
 </table>
 
 ### SetScaleCmd {:#SetScaleCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#206)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#208)*
 
 
 
@@ -331,7 +331,7 @@ Book: /_book.yaml
 </table>
 
 ### SetRotationCmd {:#SetRotationCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#215)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#217)*
 
 
 
@@ -360,7 +360,7 @@ Book: /_book.yaml
 </table>
 
 ### SetAnchorCmd {:#SetAnchorCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#224)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#226)*
 
 
 
@@ -389,7 +389,7 @@ Book: /_book.yaml
 </table>
 
 ### SetSizeCmd {:#SetSizeCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#235)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#237)*
 
 
 
@@ -420,7 +420,7 @@ Book: /_book.yaml
 </table>
 
 ### SetOpacityCmd {:#SetOpacityCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#245)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#247)*
 
 
 
@@ -450,7 +450,7 @@ Book: /_book.yaml
 </table>
 
 ### SendSizeChangeHintCmdHACK {:#SendSizeChangeHintCmdHACK}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#256)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#258)*
 
 
 
@@ -488,7 +488,7 @@ Book: /_book.yaml
 </table>
 
 ### AddChildCmd {:#AddChildCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#271)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#273)*
 
 
 
@@ -522,7 +522,7 @@ Book: /_book.yaml
 </table>
 
 ### AddPartCmd {:#AddPartCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#291)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#293)*
 
 
 
@@ -562,7 +562,7 @@ Book: /_book.yaml
 </table>
 
 ### DetachChildrenCmd {:#DetachChildrenCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#297)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#299)*
 
 
 
@@ -581,7 +581,7 @@ Book: /_book.yaml
 </table>
 
 ### SetShapeCmd {:#SetShapeCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#315)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#317)*
 
 
 
@@ -619,7 +619,7 @@ Book: /_book.yaml
 </table>
 
 ### SetMaterialCmd {:#SetMaterialCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#334)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#336)*
 
 
 
@@ -657,7 +657,7 @@ Book: /_book.yaml
 </table>
 
 ### SetClipCmd {:#SetClipCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#359)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#361)*
 
 
 
@@ -705,7 +705,7 @@ Book: /_book.yaml
 </table>
 
 ### SetHitTestBehaviorCmd {:#SetHitTestBehaviorCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#370)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#372)*
 
 
 
@@ -735,7 +735,7 @@ Book: /_book.yaml
 </table>
 
 ### SetViewPropertiesCmd {:#SetViewPropertiesCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#379)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#381)*
 
 
 
@@ -763,8 +763,8 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### TakeSnapshotCmdHACK {:#TakeSnapshotCmdHACK}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#388)*
+### TakeSnapshotCmdDEPRECATED {:#TakeSnapshotCmdDEPRECATED}
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#390)*
 
 
 
@@ -781,7 +781,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>callback</code></td>
             <td>
-                <code><a class='link' href='#SnapshotCallbackHACK'>SnapshotCallbackHACK</a></code>
+                <code><a class='link' href='#SnapshotCallbackDEPRECATED'>SnapshotCallbackDEPRECATED</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -789,7 +789,7 @@ Book: /_book.yaml
 </table>
 
 ### SetCameraCmd {:#SetCameraCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#399)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#401)*
 
 
 
@@ -820,7 +820,7 @@ Book: /_book.yaml
 </table>
 
 ### SetCameraTransformCmd {:#SetCameraTransformCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#412)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#414)*
 
 
 
@@ -867,7 +867,7 @@ Book: /_book.yaml
 </table>
 
 ### SetCameraProjectionCmd {:#SetCameraProjectionCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#428)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#430)*
 
 
 
@@ -901,7 +901,7 @@ Book: /_book.yaml
 </table>
 
 ### SetStereoCameraProjectionCmd {:#SetStereoCameraProjectionCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#443)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#445)*
 
 
 
@@ -942,8 +942,46 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### SetCameraClipSpaceTransformCmd {:#SetCameraClipSpaceTransformCmd}
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#457)*
+
+
+
+ Sets a camera's clip-space transform.
+
+ Constraints:
+ - `camera_id` refs a `Camera`.
+ - `translation` is the desired translation, in Vulkan NDC.
+ - `scale` is the scale factor to apply before translation.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>camera_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>translation</code></td>
+            <td>
+                <code><a class='link' href='#vec2'>vec2</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>scale</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### SetCameraPoseBufferCmd {:#SetCameraPoseBufferCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#521)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#535)*
 
 
 
@@ -1061,7 +1099,7 @@ Book: /_book.yaml
 </table>
 
 ### SetLightColorCmd {:#SetLightColorCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#530)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#544)*
 
 
 
@@ -1087,7 +1125,7 @@ Book: /_book.yaml
 </table>
 
 ### SetLightDirectionCmd {:#SetLightDirectionCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#536)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#550)*
 
 
 
@@ -1113,7 +1151,7 @@ Book: /_book.yaml
 </table>
 
 ### AddLightCmd {:#AddLightCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#544)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#558)*
 
 
 
@@ -1141,7 +1179,7 @@ Book: /_book.yaml
 </table>
 
 ### DetachLightCmd {:#DetachLightCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#551)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#565)*
 
 
 
@@ -1161,7 +1199,7 @@ Book: /_book.yaml
 </table>
 
 ### DetachLightsCmd {:#DetachLightsCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#556)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#570)*
 
 
 
@@ -1180,7 +1218,7 @@ Book: /_book.yaml
 </table>
 
 ### SetTextureCmd {:#SetTextureCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#569)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#583)*
 
 
 
@@ -1214,7 +1252,7 @@ Book: /_book.yaml
 </table>
 
 ### SetColorCmd {:#SetColorCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#581)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#595)*
 
 
 
@@ -1246,7 +1284,7 @@ Book: /_book.yaml
 </table>
 
 ### MeshVertexFormat {:#MeshVertexFormat}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#613)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#627)*
 
 
 
@@ -1281,7 +1319,7 @@ Book: /_book.yaml
 </table>
 
 ### BindMeshBuffersCmd {:#BindMeshBuffersCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#622)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#636)*
 
 
 
@@ -1362,7 +1400,7 @@ Book: /_book.yaml
 </table>
 
 ### AddLayerCmd {:#AddLayerCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#641)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#655)*
 
 
 
@@ -1393,7 +1431,7 @@ Book: /_book.yaml
 </table>
 
 ### RemoveLayerCmd {:#RemoveLayerCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#651)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#665)*
 
 
 
@@ -1423,7 +1461,7 @@ Book: /_book.yaml
 </table>
 
 ### RemoveAllLayersCmd {:#RemoveAllLayersCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#659)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#673)*
 
 
 
@@ -1444,7 +1482,7 @@ Book: /_book.yaml
 </table>
 
 ### SetLayerStackCmd {:#SetLayerStackCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#667)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#681)*
 
 
 
@@ -1473,7 +1511,7 @@ Book: /_book.yaml
 </table>
 
 ### SetRendererCmd {:#SetRendererCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#676)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#690)*
 
 
 
@@ -1502,7 +1540,7 @@ Book: /_book.yaml
 </table>
 
 ### SetRendererParamCmd {:#SetRendererParamCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#685)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#699)*
 
 
 
@@ -1531,7 +1569,7 @@ Book: /_book.yaml
 </table>
 
 ### SetEventMaskCmd {:#SetEventMaskCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#699)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#713)*
 
 
 
@@ -1565,7 +1603,7 @@ Book: /_book.yaml
 </table>
 
 ### SetLabelCmd {:#SetLabelCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#717)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#731)*
 
 
 
@@ -1600,7 +1638,7 @@ Book: /_book.yaml
 </table>
 
 ### SetDisableClippingCmd {:#SetDisableClippingCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#731)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#745)*
 
 
 
@@ -1634,7 +1672,7 @@ Book: /_book.yaml
 </table>
 
 ### SetImportFocusCmdDEPRECATED {:#SetImportFocusCmdDEPRECATED}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#737)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#751)*
 
 
 
@@ -1645,7 +1683,7 @@ Book: /_book.yaml
 </table>
 
 ### SetClipPlanesCmd {:#SetClipPlanesCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#745)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#759)*
 
 
 
@@ -1675,7 +1713,7 @@ Book: /_book.yaml
 </table>
 
 ### SetPointLightPositionCmd {:#SetPointLightPositionCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#751)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#765)*
 
 
 
@@ -1701,7 +1739,7 @@ Book: /_book.yaml
 </table>
 
 ### SetPointLightFalloffCmd {:#SetPointLightFalloffCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#765)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#779)*
 
 
 
@@ -1732,60 +1770,6 @@ Book: /_book.yaml
 </table>
 
 ### SceneAddAmbientLightCmd {:#SceneAddAmbientLightCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#772)*
-
-
-
- Adds the light specified by `light_id` specified by `light_id` to the scene
- identified by `scene_id`.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>scene_id</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>light_id</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### SceneAddDirectionalLightCmd {:#SceneAddDirectionalLightCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#779)*
-
-
-
- Adds the light specified by `light_id` specified by `light_id` to the scene
- identified by `scene_id`.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>scene_id</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>light_id</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### SceneAddPointLightCmd {:#SceneAddPointLightCmd}
 *Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#786)*
 
 
@@ -1812,8 +1796,62 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### SceneAddDirectionalLightCmd {:#SceneAddDirectionalLightCmd}
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#793)*
+
+
+
+ Adds the light specified by `light_id` specified by `light_id` to the scene
+ identified by `scene_id`.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>scene_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>light_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### SceneAddPointLightCmd {:#SceneAddPointLightCmd}
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#800)*
+
+
+
+ Adds the light specified by `light_id` specified by `light_id` to the scene
+ identified by `scene_id`.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>scene_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>light_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### SetDisplayColorConversionCmdHACK {:#SetDisplayColorConversionCmdHACK}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#805)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#819)*
 
 
 
@@ -1866,7 +1904,7 @@ Book: /_book.yaml
 </table>
 
 ### SetDisplayRotationCmdHACK {:#SetDisplayRotationCmdHACK}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#823)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#837)*
 
 
 
@@ -1902,7 +1940,7 @@ Book: /_book.yaml
 </table>
 
 ### SetEnableDebugViewBoundsCmd {:#SetEnableDebugViewBoundsCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#831)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#845)*
 
 
 
@@ -1927,7 +1965,7 @@ Book: /_book.yaml
 </table>
 
 ### SetViewHolderBoundsColorCmd {:#SetViewHolderBoundsColorCmd}
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#838)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#852)*
 
 
 
@@ -2344,26 +2382,6 @@ Book: /_book.yaml
 
 
 
- These are the types of nodes that can be created within a Scenic `Session`.
-
- All nodes have an associated transform, which distinguishes them from mere
- resources.  Nodes may also have one or more node Characteristics:
-
- These are characteristics that each type of `Node` either has or doesn't.
- These constrain operations that reference nodes; violations will cause the
- `Session` connection to be closed.  For example, `NodeAddChildOp` must target
- a node with the "has_children" characteristic.  These characteristics are not
- explicitly reflected in the Session API; instead, they must be enforced by
- implementations of the API.
- - has_children: The node can contain other nodes as children.
- - has_parent: The node can be a child of another node.  If this is false,
-   the node can only be a direct descendant of its containing scene.
- - has_parts:  The node can contain other nodes as parts.  All parts must be
-   from the same session as their parent.
- - has_clip:  The node can contain a clip node as a child.
- - is_clip:  The node can clip other nodes.
- - has_shape: The node can contain ShapeNodes as children.
- - has_material:  The node can have a Material resource applied to it.
  Characteristics:
  - has_parent
  - has_shape
@@ -3093,8 +3111,6 @@ Book: /_book.yaml
 
 
 
- The shapes defined in this file can be used to define the rendered shape of
- an `ObjectNode`, and to define the clip region of a `ClipNode`.
  Rectangle centered at (0,0).
 
 
@@ -3958,7 +3974,7 @@ Book: /_book.yaml
 ### MeshIndexFormat {:#MeshIndexFormat}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#607)*
+*Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#621)*
 
  Set a mesh's indices and vertices.
 
@@ -4278,7 +4294,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>take_snapshot_cmd</code></td>
             <td>
-                <code><a class='link' href='#TakeSnapshotCmdHACK'>TakeSnapshotCmdHACK</a></code>
+                <code><a class='link' href='#TakeSnapshotCmdDEPRECATED'>TakeSnapshotCmdDEPRECATED</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -4483,6 +4499,12 @@ Type: <code>uint32</code>
             <td><code>set_view_holder_bounds_color</code></td>
             <td>
                 <code><a class='link' href='#SetViewHolderBoundsColorCmd'>SetViewHolderBoundsColorCmd</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>set_camera_clip_space_transform</code></td>
+            <td>
+                <code><a class='link' href='#SetCameraClipSpaceTransformCmd'>SetCameraClipSpaceTransformCmd</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -4872,7 +4894,7 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#705">kLabelMaxLength</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#719">kLabelMaxLength</a></td>
             <td>
                     <code>32</code>
                 </td>

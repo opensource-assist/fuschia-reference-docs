@@ -3,8 +3,6 @@ Book: /_book.yaml
 
 # fuchsia.modular
 
- This file contains the definition of Link as well as the structure
- of the data it holds.
 
 ## **PROTOCOLS**
 
@@ -2112,7 +2110,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## FocusController {:#FocusController}
-*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#22)*
+*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#21)*
 
  This file has interfaces for 2 pieces of information: (1) The story
  that is currently in focus and (2) stories that are visible to the
@@ -2158,7 +2156,7 @@ Book: /_book.yaml
 
 
 ## FocusRequestWatcher {:#FocusRequestWatcher}
-*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#31)*
+*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#30)*
 
  Implemented by session shell. OnFocusRequest() gets called whenever there
  is a new request to change focus on this device. Requests can be
@@ -2180,7 +2178,7 @@ Book: /_book.yaml
 
 
 ## FocusProvider {:#FocusProvider}
-*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#38)*
+*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#37)*
 
  Implemented by sessionmgr. Given to session shell and session agents through
  their namespace. Focus is persisted on the ledger.
@@ -2243,7 +2241,7 @@ Book: /_book.yaml
 
 
 ## FocusWatcher {:#FocusWatcher}
-*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#58)*
+*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#57)*
 
  Implemented by anyone who is interested in getting updates when focus
  changes.
@@ -2264,7 +2262,7 @@ Book: /_book.yaml
 
 
 ## VisibleStoriesController {:#VisibleStoriesController}
-*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#76)*
+*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#75)*
 
  Implemented by sessionmgr. Given to session shell through its namespace.
 
@@ -2369,7 +2367,7 @@ Book: /_book.yaml
     </table>
 
 ## SessionShellContext {:#SessionShellContext}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#59)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#58)*
 
  This interface allows a `SessionShell` to request capabilities from its
  creator in a way that is more explicit about the services that are
@@ -2548,7 +2546,7 @@ Book: /_book.yaml
 
 
 ## SessionShellPresentationProvider {:#SessionShellPresentationProvider}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#87)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#85)*
 
  Session shell provides this service to the framework which may plumb it to
  different subscribers, such as story shell and intelligence provider.
@@ -2772,6 +2770,7 @@ Book: /_book.yaml
  value in the Link, even if it's empty.
 
  The LinkWatcher connection will be closed if the owning Link handle closed.
+
  All connections to a Link and LinkWatcher are closed once the story the
  link belongs to is stopped.
 
@@ -2851,7 +2850,7 @@ Book: /_book.yaml
 
 
 ## PuppetMaster {:#PuppetMaster}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#52)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#55)*
 
 
 ### ControlStory {:#ControlStory}
@@ -2913,7 +2912,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryPuppetMaster {:#StoryPuppetMaster}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#74)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#77)*
 
 
 ### Enqueue {:#Enqueue}
@@ -2986,6 +2985,35 @@ Book: /_book.yaml
             <td><code>result</code></td>
             <td>
                 <code><a class='link' href='#StoryPuppetMaster_SetStoryInfoExtra_Result'>StoryPuppetMaster_SetStoryInfoExtra_Result</a></code>
+            </td>
+        </tr></table>
+
+### Annotate {:#Annotate}
+
+ Attach the `annotations` to the story. If the story does not yet exist,
+ it will be created.
+
+ Existing annotations with the same key will be overwritten, or
+ deleted if new value is null.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>annotations</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[50]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#StoryPuppetMaster_Annotate_Result'>StoryPuppetMaster_Annotate_Result</a></code>
             </td>
         </tr></table>
 
@@ -5406,7 +5434,7 @@ Book: /_book.yaml
 </table>
 
 ### FocusInfo {:#FocusInfo}
-*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#63)*
+*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#62)*
 
 
 
@@ -5443,7 +5471,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewIdentifier {:#ViewIdentifier}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#51)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#50)*
 
 
 
@@ -5575,8 +5603,19 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
+### StoryPuppetMaster_Annotate_Response {:#StoryPuppetMaster_Annotate_Response}
+*Defined in [fuchsia.modular/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#164)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### ExecuteResult {:#ExecuteResult}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#37)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#40)*
 
 
 
@@ -5854,7 +5893,7 @@ Book: /_book.yaml
 </table>
 
 ### StoryInfoExtraEntry {:#StoryInfoExtraEntry}
-*Defined in [fuchsia.modular/story_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_info.fidl#41)*
+*Defined in [fuchsia.modular/story_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_info.fidl#47)*
 
 
 
@@ -6307,6 +6346,25 @@ Book: /_book.yaml
 
 ## **ENUMS**
 
+### AnnotationError {:#AnnotationError}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#54)*
+
+ Error returned from calls to Annotate().
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>VALUE_TOO_BIG</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>TOO_MANY_ANNOTATIONS</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr></table>
+
 ### FocusedStateState {:#FocusedStateState}
 Type: <code>uint32</code>
 
@@ -6493,7 +6551,7 @@ Type: <code>uint32</code>
 ### ExecuteStatus {:#ExecuteStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#7)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#10)*
 
 
 
@@ -6531,7 +6589,7 @@ Type: <code>uint32</code>
 ### ConfigureStoryError {:#ConfigureStoryError}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#32)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#35)*
 
 
 
@@ -6850,6 +6908,17 @@ Type: <code>uint32</code>
 
  A value of zero means the story has never been focused.
 </td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>annotations</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[100]</code>
+            </td>
+            <td> Collection of user-defined key-value attributes that describe
+ this story.
+
+ The `Annotation.value` field of each `Annotation` is always set.
+</td>
         </tr></table>
 
 ### SurfaceInfo2 {:#SurfaceInfo2}
@@ -7024,6 +7093,25 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### StoryPuppetMaster_Annotate_Result {:#StoryPuppetMaster_Annotate_Result}
+*Defined in [fuchsia.modular/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#167)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StoryPuppetMaster_Annotate_Response'>StoryPuppetMaster_Annotate_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#AnnotationError'>AnnotationError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### StoryCommand {:#StoryCommand}
 *Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#17)*
 
@@ -7123,7 +7211,7 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### AnnotationValue {:#AnnotationValue}
-*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#41)*
+*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#47)*
 
  The value of a <a class='link' href='#Annotation'>Annotation</a>.
 
@@ -7162,7 +7250,25 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#19">MAX_ANNOTATION_KEY_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#19">MAX_ANNOTATIONS_PER_STORY</a></td>
+            <td>
+                    <code>100</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Maximum number of annotations on a single story.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#22">MAX_ANNOTATIONS_PER_MODULE</a></td>
+            <td>
+                    <code>100</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Maximum number of annotations on a single module.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#25">MAX_ANNOTATION_KEY_LENGTH</a></td>
             <td>
                     <code>256</code>
                 </td>
@@ -7171,7 +7277,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#23">MAX_ANNOTATION_VALUE_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#29">MAX_ANNOTATION_VALUE_LENGTH</a></td>
             <td>
                     <code>1024</code>
                 </td>
@@ -7181,7 +7287,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#29">MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#35">MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES</a></td>
             <td>
                     <code>102400</code>
                 </td>
@@ -7190,6 +7296,15 @@ Type: <code>uint32</code>
  bytes.
 
  Does not apply to other fields; see <a class='link' href='#MAX_ANNOTATION_VALUE_LENGTH'>MAX_ANNOTATION_VALUE_LENGTH</a>.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#8">MAX_ANNOTATE_SIZE</a></td>
+            <td>
+                    <code>50</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Maximum number of annotations that can be passed to StoryPuppetMaster.Annotate.
 </td>
         </tr>
     

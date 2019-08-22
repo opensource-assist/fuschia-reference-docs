@@ -1385,9 +1385,6 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.auth/auth_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.auth/auth_provider.fidl#14)*
 
- This file defines an auth provider service that can be used by Garnet's
- Token Manager service to mint oauth tokens for clients such as Framework,
- Ledger, gmail or chat module.
  Specifies the success/failure status from auth provider.
 
 

@@ -65,6 +65,58 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## Audio {:#Audio}
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#11)*
+
+ Settings related to audio.
+
+### Watch {:#Watch}
+
+ Gets the current [AudioSettings]. Returns immediately on first call;
+ subsequent calls return when the value changes.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Audio_Watch_Result'>Audio_Watch_Result</a></code>
+            </td>
+        </tr></table>
+
+### Set {:#Set}
+
+ Sets audio settings. Any field not explicitly set in the table performs a
+ no-op, and will not make any changes.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>settings</code></td>
+            <td>
+                <code><a class='link' href='#AudioSettings'>AudioSettings</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Audio_Set_Result'>Audio_Set_Result</a></code>
+            </td>
+        </tr></table>
+
 ## Display {:#Display}
 *Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#9)*
 
@@ -276,6 +328,60 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## Setup {:#Setup}
+*Defined in [fuchsia.settings/setup.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/setup.fidl#9)*
+
+ Settings that influence the device's setup behavior.
+
+### Watch {:#Watch}
+
+ Gets the current [SetupSettings]. Returns immediately on first call;
+ subsequent calls return when the value changes.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>settings</code></td>
+            <td>
+                <code><a class='link' href='#SetupSettings'>SetupSettings</a></code>
+            </td>
+        </tr></table>
+
+### Set {:#Set}
+
+ Changes the settings specified in [SetupSettings]. Any field not set in
+ the table will not perform any system operation. An error will be
+ returned if the provided settings is an invalid change (for example, if
+ it is empty).
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>settings</code></td>
+            <td>
+                <code><a class='link' href='#SetupSettings'>SetupSettings</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Setup_Set_Result'>Setup_Set_Result</a></code>
+            </td>
+        </tr></table>
+
 ## System {:#System}
 *Defined in [fuchsia.settings/system.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/system.fidl#9)*
 
@@ -361,8 +467,37 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
-### Display_Watch_Response {:#Display_Watch_Response}
+### Audio_Watch_Response {:#Audio_Watch_Response}
 *Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>settings</code></td>
+            <td>
+                <code><a class='link' href='#AudioSettings'>AudioSettings</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Audio_Set_Response {:#Audio_Set_Response}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Display_Watch_Response {:#Display_Watch_Response}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#30)*
 
 
 
@@ -380,7 +515,7 @@ Book: /_book.yaml
 </table>
 
 ### Display_Set_Response {:#Display_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
 
 
 
@@ -391,7 +526,7 @@ Book: /_book.yaml
 </table>
 
 ### Intl_Watch_Response {:#Intl_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
 
 
 
@@ -409,7 +544,7 @@ Book: /_book.yaml
 </table>
 
 ### Intl_Set_Response {:#Intl_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#41)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#55)*
 
 
 
@@ -420,7 +555,7 @@ Book: /_book.yaml
 </table>
 
 ### Privacy_Watch_Response {:#Privacy_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
 
 
 
@@ -438,7 +573,18 @@ Book: /_book.yaml
 </table>
 
 ### Privacy_Set_Response {:#Privacy_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#55)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#69)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Setup_Set_Response {:#Setup_Set_Response}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#78)*
 
 
 
@@ -449,7 +595,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Watch_Response {:#System_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#85)*
 
 
 
@@ -467,7 +613,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Set_Response {:#System_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#69)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#92)*
 
 
 
@@ -578,6 +724,29 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>OUTLINE</code></td>
             <td><code>4</code></td>
+            <td></td>
+        </tr></table>
+
+### AudioStreamSettingSource {:#AudioStreamSettingSource}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#22)*
+
+ The source of the volume settings. The volume is set according to the source.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>DEFAULT</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>USER</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SYSTEM</code></td>
+            <td><code>2</code></td>
             <td></td>
         </tr></table>
 
@@ -785,6 +954,91 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### Volume {:#Volume}
+
+
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#35)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>level</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td> The volume level ranged [0.0, 1.0]. The level maps to a dbfs value from a volume
+ curve in the setting service.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>muted</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> True if the volume should be muted. If this is true, then the volume is silent,
+ regardless of |level|.
+</td>
+        </tr></table>
+
+### AudioStreamSettings {:#AudioStreamSettings}
+
+
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#45)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>stream</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.media/index.html'>fuchsia.media</a>/<a class='link' href='../fuchsia.media/index.html#AudioRenderUsage'>AudioRenderUsage</a></code>
+            </td>
+            <td> The audio stream which the settings are applying to.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#AudioStreamSettingSource'>AudioStreamSettingSource</a></code>
+            </td>
+            <td> The volume of |stream| is set according to the volume settings from |source|.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>user_volume</code></td>
+            <td>
+                <code><a class='link' href='#Volume'>Volume</a></code>
+            </td>
+            <td> User level volume setting. If the |source| is USER, then the volume is set to
+ |user_volume|.
+</td>
+        </tr></table>
+
+### AudioSettings {:#AudioSettings}
+
+
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#57)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>streams</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#AudioStreamSettings'>AudioStreamSettings</a>&gt;[5]</code>
+            </td>
+            <td> Contains the volume setting for all audio stream settings. There should only be
+ one AudioStreamSettings for each fuchsia.media.AudioRenderUsage.
+</td>
+        </tr></table>
+
 ### DisplaySettings {:#DisplaySettings}
 
 
@@ -911,6 +1165,26 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### SetupSettings {:#SetupSettings}
+
+
+*Defined in [fuchsia.settings/setup.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/setup.fidl#21)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>enabled_configuration_interfaces</code></td>
+            <td>
+                <code><a class='link' href='#ConfigurationInterfaces'>ConfigurationInterfaces</a></code>
+            </td>
+            <td> Specifies the network interfaces that the device can be configured
+ over during setup.
+</td>
+        </tr></table>
+
 ### SystemSettings {:#SystemSettings}
 
 
@@ -973,8 +1247,46 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### Display_Watch_Result {:#Display_Watch_Result}
+### Audio_Watch_Result {:#Audio_Watch_Result}
 *Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Audio_Watch_Response'>Audio_Watch_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Audio_Set_Result {:#Audio_Set_Result}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Audio_Set_Response'>Audio_Set_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Display_Watch_Result {:#Display_Watch_Result}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#33)*
 
 
 <table>
@@ -993,7 +1305,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Display_Set_Result {:#Display_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#40)*
 
 
 <table>
@@ -1012,7 +1324,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Intl_Watch_Result {:#Intl_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#51)*
 
 
 <table>
@@ -1031,7 +1343,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Intl_Set_Result {:#Intl_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#44)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#58)*
 
 
 <table>
@@ -1050,7 +1362,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Privacy_Watch_Result {:#Privacy_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#51)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#65)*
 
 
 <table>
@@ -1069,7 +1381,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Privacy_Set_Result {:#Privacy_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#58)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#72)*
 
 
 <table>
@@ -1087,8 +1399,27 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### Setup_Set_Result {:#Setup_Set_Result}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#81)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Setup_Set_Response'>Setup_Set_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### System_Watch_Result {:#System_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#65)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#88)*
 
 
 <table>
@@ -1107,7 +1438,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### System_Set_Result {:#System_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#72)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#95)*
 
 
 <table>
@@ -1128,6 +1459,22 @@ Type: <code>uint32</code>
 
 
 
+
+## **BITS**
+### ConfigurationInterfaces {:#ConfigurationInterfaces}
+Type: <code>uint32</code>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td>ETHERNET</td>
+            <td>1</td>
+            <td></td>
+        </tr><tr>
+            <td>WIFI</td>
+            <td>2</td>
+            <td></td>
+        </tr></table>
 
 
 

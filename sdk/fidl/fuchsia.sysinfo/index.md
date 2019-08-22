@@ -10,30 +10,6 @@ Book: /_book.yaml
 *Defined in [fuchsia.sysinfo/sysinfo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysinfo/sysinfo.fidl#23)*
 
 
-### GetRootJob {:#GetRootJob}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>job</code></td>
-            <td>
-                <code>handle&lt;job&gt;?</code>
-            </td>
-        </tr></table>
-
 ### GetHypervisorResource {:#GetHypervisorResource}
 
 

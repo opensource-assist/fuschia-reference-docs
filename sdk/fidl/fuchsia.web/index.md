@@ -38,7 +38,7 @@ Book: /_book.yaml
 
 
 ## Context {:#Context}
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#58)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#88)*
 
  Manages browsing state (e.g. LocalStorage, cookies, etc) associated with
  a set of Frames.
@@ -127,7 +127,7 @@ Book: /_book.yaml
     <tr>
             <td><code>url</code></td>
             <td>
-                <code>string?</code>
+                <code>string[65536]?</code>
             </td>
         </tr><tr>
             <td><code>name</code></td>
@@ -155,7 +155,7 @@ Book: /_book.yaml
     <tr>
             <td><code>url</code></td>
             <td>
-                <code>string?</code>
+                <code>string[65536]?</code>
             </td>
         </tr><tr>
             <td><code>name</code></td>
@@ -275,7 +275,7 @@ Book: /_book.yaml
 
 
 ## Frame {:#Frame}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#49)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#47)*
 
 
 ### CreateView {:#CreateView}
@@ -298,19 +298,19 @@ Book: /_book.yaml
 
 
 
-### GetMediaSession {:#GetMediaSession}
+### GetMediaPlayer {:#GetMediaPlayer}
 
- Returns a Session interface through which media (i.e. video/audio)
+ Returns a Player interface through which media (i.e. video/audio)
  playback in the frame may be observed, and/or controlled. Only one
- media Session may be active at a time, for each Frame.
+ media Player may be active at a time, for each Frame.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>session</code></td>
+            <td><code>player</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.sessions/index.html'>fuchsia.media.sessions</a>/<a class='link' href='../fuchsia.media.sessions/index.html#Session'>Session</a>&gt;</code>
+                <code>request&lt;<a class='link' href='../fuchsia.media.sessions2/index.html'>fuchsia.media.sessions2</a>/<a class='link' href='../fuchsia.media.sessions2/index.html#Player'>Player</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -505,7 +505,7 @@ Book: /_book.yaml
     <tr>
             <td><code>target_origin</code></td>
             <td>
-                <code>string</code>
+                <code>string[65536]</code>
             </td>
         </tr><tr>
             <td><code>message</code></td>
@@ -631,8 +631,35 @@ Book: /_book.yaml
 
 
 
+### SetUrlRequestRewriteRules {:#SetUrlRequestRewriteRules}
+
+ Supplies a set of <a class='link' href='#fuchsia.web.UrlRequestRewriteRule'>fuchsia.web.UrlRequestRewriteRule</a> to apply on every subsequent URL
+ request.
+ * `rules` are cumulative and applied in order.
+ * `rules` will be validated before being applied. If `rules` are invalid, the
+   <a class='link' href='#fuchsia.web.Frame'>fuchsia.web.Frame</a> will be closed with `ERR_INVALID_ARGS`.
+ * <a class='link' href='../fuchsia.web.Frame/index.html'>fuchsia.web.Frame</a>/<a class='link' href='../fuchsia.web.Frame/index.html#SetUrlRequestRewriteRules'>SetUrlRequestRewriteRules</a> must not be called again until its
+   acknowledgement callback has been processed. If this happens, the <a class='link' href='#fuchsia.web.Frame'>fuchsia.web.Frame</a>
+   will be closed with `ERR_BAD_STATE`.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>rules</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#UrlRequestRewriteRule'>UrlRequestRewriteRule</a>&gt;[4096]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
 ## AdditionalHeadersProvider {:#AdditionalHeadersProvider}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#188)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#199)*
 
 
 ### GetHeaders {:#GetHeaders}
@@ -664,7 +691,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## MessagePort {:#MessagePort}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#222)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#233)*
 
  Represents one end of an HTML5 MessageChannel. Can be used to send
  and exchange Messages with the peered MessagePort in the Frame's script
@@ -728,7 +755,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## PopupFrameCreationListener {:#PopupFrameCreationListener}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#251)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#262)*
 
 
 ### OnPopupFrameCreated {:#OnPopupFrameCreated}
@@ -817,7 +844,7 @@ Book: /_book.yaml
     <tr>
             <td><code>url</code></td>
             <td>
-                <code>string</code>
+                <code>string[65536]</code>
             </td>
         </tr><tr>
             <td><code>params</code></td>
@@ -977,7 +1004,7 @@ Book: /_book.yaml
 </table>
 
 ### MessagePort_PostMessage_Response {:#MessagePort_PostMessage_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#60)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
 
 
 
@@ -988,7 +1015,7 @@ Book: /_book.yaml
 </table>
 
 ### NavigationController_LoadUrl_Response {:#NavigationController_LoadUrl_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#73)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#75)*
 
 
 
@@ -1019,7 +1046,7 @@ Type: <code>int32</code>
 ### ConsoleLogLevel {:#ConsoleLogLevel}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#16)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#14)*
 
 
 
@@ -1049,7 +1076,7 @@ Type: <code>int32</code>
 ### FrameError {:#FrameError}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#34)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#32)*
 
  Represents the return status of a Frame method.
 
@@ -1153,10 +1180,56 @@ Type: <code>uint32</code>
 
 ## **TABLES**
 
+### ContentDirectoryProvider {:#ContentDirectoryProvider}
+
+
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#46)*
+
+ Defines a provider which hosts resources from a fuchsia.io.Directory.
+ Content can GET resource files via the provider, but not enumerate
+ directories. Resources can be accessed by their URLs:
+
+    content://<provider-name>/<path/to/resource>
+
+ By default the MIME types of files are determined automatically by
+ "sniffing" the contents of the files. No content encoding will be
+ declared, which browsers will interpret as meaning "text/plain".
+ Content type and encoding metadata may optionally be specified explicitly
+ by metadata/ files which reside alongside the file. Metadata is expressed
+ in JSON files, named are the files they describe with a "._metadata" suffix.
+ For example, the file "index.html" would have the a metadata file called
+ "index.html._metadata", with the following contents:
+    {
+      "charset": "utf-8",
+      "mime": "text/html"
+    }
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>name</code></td>
+            <td>
+                <code>string[255]</code>
+            </td>
+            <td> Name of the provider.
+ Must be non-empty and composed solely of alphanumerics, dots, and dashes.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>directory</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.io/index.html'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/index.html#Directory'>Directory</a></code>
+            </td>
+            <td> Directory containing the files served by this provider.
+</td>
+        </tr></table>
+
 ### CreateContextParams {:#CreateContextParams}
 
 
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#28)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#55)*
 
 
 
@@ -1210,6 +1283,14 @@ Type: <code>uint32</code>
  Context.GetRemoteDebuggingPort() API.
  This is only for testing purposes and should not be set in production
  code.
+</td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>content_directories</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#ContentDirectoryProvider'>ContentDirectoryProvider</a>&gt;[100]</code>
+            </td>
+            <td> List of providers whose contents will be served by content:// URLs.
 </td>
         </tr></table>
 
@@ -1278,7 +1359,7 @@ Type: <code>uint32</code>
 ### WebMessage {:#WebMessage}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#196)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#207)*
 
 
 
@@ -1316,7 +1397,7 @@ Type: <code>uint32</code>
 ### PopupFrameCreationInfo {:#PopupFrameCreationInfo}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#242)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#253)*
 
  Specifies additional information about a newly created popup frame.
 
@@ -1327,7 +1408,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>initial_url</code></td>
             <td>
-                <code>string</code>
+                <code>string[65536]</code>
             </td>
             <td> The URL to which the popup frame was initially navigated.
 </td>
@@ -1364,7 +1445,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>referrer_url</code></td>
             <td>
-                <code>string</code>
+                <code>string[65536]</code>
             </td>
             <td> The URL that linked to the resource being requested.
 </td>
@@ -1403,7 +1484,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>url</code></td>
             <td>
-                <code>string</code>
+                <code>string[65536]</code>
             </td>
             <td> The page's URL.
 </td>
@@ -1448,6 +1529,154 @@ Type: <code>uint32</code>
             <td> Indicates that the main document's statically declared resources have
  been loaded.
 </td>
+        </tr></table>
+
+### UrlRequestRewriteRule {:#UrlRequestRewriteRule}
+
+
+*Defined in [fuchsia.web/url_request_rewrite_rules.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/url_request_rewrite_rules.fidl#9)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>hosts_filter</code></td>
+            <td>
+                <code>vector&lt;string&gt;[4096]</code>
+            </td>
+            <td> Set of hosts to apply the rules to. If not set, the rule will apply to every request,
+ independent of host.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>schemes_filter</code></td>
+            <td>
+                <code>vector&lt;string&gt;[4096]</code>
+            </td>
+            <td> Set of schemes to apply the rules to. If not set, the rule will apply to every request,
+ independent of scheme.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>rewrites</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#UrlRequestRewrite'>UrlRequestRewrite</a>&gt;[4096]</code>
+            </td>
+            <td> URL request rewrites to apply.
+</td>
+        </tr></table>
+
+### UrlRequestRewriteAddHeaders {:#UrlRequestRewriteAddHeaders}
+
+
+*Defined in [fuchsia.web/url_request_rewrite_rules.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/url_request_rewrite_rules.fidl#41)*
+
+ Adds `headers` to the URL request. If a header is already present in the original URL request,
+ it will be overwritten.
+ * `headers` must be set.
+ * Each <a class='link' href='#fuchsia.net.http.Header'>fuchsia.net.http.Header</a> in `headers` must have a valid HTTP header name and value,
+   per [RFC 7230 section  3.2](https://tools.ietf.org/html/rfc7230#section-3.2).
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>headers</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='../fuchsia.net.http/index.html'>fuchsia.net.http</a>/<a class='link' href='../fuchsia.net.http/index.html#Header'>Header</a>&gt;[4096]</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### UrlRequestRewriteRemoveHeader {:#UrlRequestRewriteRemoveHeader}
+
+
+*Defined in [fuchsia.web/url_request_rewrite_rules.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/url_request_rewrite_rules.fidl#50)*
+
+ If `query_pattern` in the URL query, removes `header_name` from the list of headers. If
+ `query_pattern` is not set, removes `header_name` from the list of headers unconditionally.
+ * `header_name` must be set.
+ * `header_name` must be a valid HTTP header name, per
+   [RFC 7230 section 3.2](https://tools.ietf.org/html/rfc7230#section-3.2).
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>query_pattern</code></td>
+            <td>
+                <code>string[65536]</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>header_name</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[4096]</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### UrlRequestRewriteSubstituteQueryPattern {:#UrlRequestRewriteSubstituteQueryPattern}
+
+
+*Defined in [fuchsia.web/url_request_rewrite_rules.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/url_request_rewrite_rules.fidl#58)*
+
+ If `pattern` is found in the URL request query, replaces it with `substitution`.
+ * `pattern` and `substitution` must be set.
+ * `substitution` must be a valid [URL unit](https://url.spec.whatwg.org/#url-units).
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>pattern</code></td>
+            <td>
+                <code>string[65536]</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>substitution</code></td>
+            <td>
+                <code>string[65536]</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### UrlRequestRewriteReplaceUrl {:#UrlRequestRewriteReplaceUrl}
+
+
+*Defined in [fuchsia.web/url_request_rewrite_rules.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/url_request_rewrite_rules.fidl#68)*
+
+ If the URL in the URL request ends with `url_ends_with`, rewrites the URL to `new_url`.
+ * `url_ends_with` and `new_url` must be set.
+ * `url_ends_with` must be a valid
+   [path-relative-URL string](https://url.spec.whatwg.org/#path-relative-url-string).
+ * `new_url` must be a [valid URL string](https://url.spec.whatwg.org/#valid-url-string).
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>url_ends_with</code></td>
+            <td>
+                <code>string[65536]</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>new_url</code></td>
+            <td>
+                <code>string[65536]</code>
+            </td>
+            <td></td>
         </tr></table>
 
 
@@ -1550,7 +1779,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### MessagePort_PostMessage_Result {:#MessagePort_PostMessage_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#63)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#65)*
 
 
 <table>
@@ -1569,7 +1798,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### NavigationController_LoadUrl_Result {:#NavigationController_LoadUrl_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#76)*
+*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#78)*
 
 
 <table>
@@ -1592,7 +1821,7 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### OutgoingTransferable {:#OutgoingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#210)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#221)*
 
 
 <table>
@@ -1605,7 +1834,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### IncomingTransferable {:#IncomingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#214)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#225)*
 
 
 <table>
@@ -1617,7 +1846,88 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### UrlRequestRewrite {:#UrlRequestRewrite}
+*Defined in [fuchsia.web/url_request_rewrite_rules.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/url_request_rewrite_rules.fidl#22)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>add_headers</code></td>
+            <td>
+                <code><a class='link' href='#UrlRequestRewriteAddHeaders'>UrlRequestRewriteAddHeaders</a></code>
+            </td>
+            <td> Adds a set of headers to a URL request.
+</td>
+        </tr><tr>
+            <td><code>remove_header</code></td>
+            <td>
+                <code><a class='link' href='#UrlRequestRewriteRemoveHeader'>UrlRequestRewriteRemoveHeader</a></code>
+            </td>
+            <td> Removes a header based on the presence of a pattern in the URL query.
+</td>
+        </tr><tr>
+            <td><code>substitute_query_pattern</code></td>
+            <td>
+                <code><a class='link' href='#UrlRequestRewriteSubstituteQueryPattern'>UrlRequestRewriteSubstituteQueryPattern</a></code>
+            </td>
+            <td> Substitutes a pattern in the URL query.
+</td>
+        </tr><tr>
+            <td><code>replace_url</code></td>
+            <td>
+                <code><a class='link' href='#UrlRequestRewriteReplaceUrl'>UrlRequestRewriteReplaceUrl</a></code>
+            </td>
+            <td> Replaces a URL if the original URL ends with a pattern.
+</td>
+        </tr></table>
 
 
 
+
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#8">MAX_URL_LENGTH</a></td>
+            <td>
+                    <code>65536</code>
+                </td>
+                <td><code>int32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#12">MAX_URL_SCHEME_NAME_LENGTH</a></td>
+            <td>
+                    <code>255</code>
+                </td>
+                <td><code>int32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#16">MAX_HOST_LENGTH</a></td>
+            <td>
+                    <code>255</code>
+                </td>
+                <td><code>int32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#20">MAX_HEADERS_COUNT</a></td>
+            <td>
+                    <code>4096</code>
+                </td>
+                <td><code>int32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#23">MAX_RULE_COUNT</a></td>
+            <td>
+                    <code>4096</code>
+                </td>
+                <td><code>int32</code></td>
+            <td></td>
+        </tr>
+    
+</table>
 

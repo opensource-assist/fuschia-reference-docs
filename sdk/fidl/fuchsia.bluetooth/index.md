@@ -79,8 +79,6 @@ Book: /_book.yaml
 
 
 
- DEPRECATED: Do not use these types in new code. Prefer tables to group optional primitive
- fields.
 
 
 <table>

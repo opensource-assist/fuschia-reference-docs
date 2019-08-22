@@ -63,6 +63,8 @@ toc:
   path: /reference/fidl/fuchsia.devicesettings
 - title: fuchsia.exception
   path: /reference/fidl/fuchsia.exception
+- title: fuchsia.factory
+  path: /reference/fidl/fuchsia.factory
 - title: fuchsia.feedback
   path: /reference/fidl/fuchsia.feedback
 - title: fuchsia.gpu.magma
@@ -105,8 +107,6 @@ toc:
   path: /reference/fidl/fuchsia.media.audio
 - title: fuchsia.media.playback
   path: /reference/fidl/fuchsia.media.playback
-- title: fuchsia.media.sessions
-  path: /reference/fidl/fuchsia.media.sessions
 - title: fuchsia.media.sessions2
   path: /reference/fidl/fuchsia.media.sessions2
 - title: fuchsia.mem
@@ -199,6 +199,8 @@ toc:
   path: /reference/fidl/fuchsia.tracing.provider
 - title: fuchsia.ui.app
   path: /reference/fidl/fuchsia.ui.app
+- title: fuchsia.ui.focus
+  path: /reference/fidl/fuchsia.ui.focus
 - title: fuchsia.ui.gfx
   path: /reference/fidl/fuchsia.ui.gfx
 - title: fuchsia.ui.input
@@ -213,6 +215,8 @@ toc:
   path: /reference/fidl/fuchsia.ui.policy.accessibility
 - title: fuchsia.ui.scenic
   path: /reference/fidl/fuchsia.ui.scenic
+- title: fuchsia.ui.scenic.internal
+  path: /reference/fidl/fuchsia.ui.scenic.internal
 - title: fuchsia.ui.types
   path: /reference/fidl/fuchsia.ui.types
 - title: fuchsia.ui.vectorial
