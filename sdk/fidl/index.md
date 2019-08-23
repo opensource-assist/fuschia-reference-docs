@@ -108,10 +108,6 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.device.display/index">fuchsia.device.display</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.device.manager/index">fuchsia.device.manager</a></td>
     <td></td>
 </tr>
@@ -401,6 +397,10 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.ui.app/index">fuchsia.ui.app</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.ui.brightness/index">fuchsia.ui.brightness</a></td>
     <td></td>
 </tr>
 <tr>

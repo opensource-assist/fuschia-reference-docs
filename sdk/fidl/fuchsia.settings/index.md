@@ -218,7 +218,12 @@ Book: /_book.yaml
 #### Response
 <table>
     <tr><th>Name</th><th>Type</th></tr>
-    </table>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#DoNotDisturb_Set_Result'>DoNotDisturb_Set_Result</a></code>
+            </td>
+        </tr></table>
 
 ## Intl {:#Intl}
 *Defined in [fuchsia.settings/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/intl.fidl#12)*
@@ -525,8 +530,19 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
+### DoNotDisturb_Set_Response {:#DoNotDisturb_Set_Response}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#46)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### Intl_Watch_Response {:#Intl_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#53)*
 
 
 
@@ -544,7 +560,7 @@ Book: /_book.yaml
 </table>
 
 ### Intl_Set_Response {:#Intl_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#55)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#60)*
 
 
 
@@ -555,7 +571,7 @@ Book: /_book.yaml
 </table>
 
 ### Privacy_Watch_Response {:#Privacy_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#67)*
 
 
 
@@ -573,7 +589,7 @@ Book: /_book.yaml
 </table>
 
 ### Privacy_Set_Response {:#Privacy_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#69)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#74)*
 
 
 
@@ -584,7 +600,7 @@ Book: /_book.yaml
 </table>
 
 ### Setup_Set_Response {:#Setup_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#78)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#83)*
 
 
 
@@ -595,7 +611,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Watch_Response {:#System_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#85)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#90)*
 
 
 
@@ -613,7 +629,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Set_Response {:#System_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#92)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#97)*
 
 
 
@@ -1323,8 +1339,27 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### DoNotDisturb_Set_Result {:#DoNotDisturb_Set_Result}
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#49)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#DoNotDisturb_Set_Response'>DoNotDisturb_Set_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### Intl_Watch_Result {:#Intl_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#51)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#56)*
 
 
 <table>
@@ -1343,7 +1378,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Intl_Set_Result {:#Intl_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#58)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#63)*
 
 
 <table>
@@ -1362,7 +1397,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Privacy_Watch_Result {:#Privacy_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#65)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#70)*
 
 
 <table>
@@ -1381,7 +1416,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Privacy_Set_Result {:#Privacy_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#72)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#77)*
 
 
 <table>
@@ -1400,7 +1435,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Setup_Set_Result {:#Setup_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#81)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#86)*
 
 
 <table>
@@ -1419,7 +1454,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### System_Watch_Result {:#System_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#88)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#93)*
 
 
 <table>
@@ -1438,7 +1473,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### System_Set_Result {:#System_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#95)*
+*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#100)*
 
 
 <table>

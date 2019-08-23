@@ -53,8 +53,6 @@ toc:
   path: /reference/fidl/fuchsia.developer.tiles
 - title: fuchsia.device
   path: /reference/fidl/fuchsia.device
-- title: fuchsia.device.display
-  path: /reference/fidl/fuchsia.device.display
 - title: fuchsia.device.manager
   path: /reference/fidl/fuchsia.device.manager
 - title: fuchsia.device.test
@@ -199,6 +197,8 @@ toc:
   path: /reference/fidl/fuchsia.tracing.provider
 - title: fuchsia.ui.app
   path: /reference/fidl/fuchsia.ui.app
+- title: fuchsia.ui.brightness
+  path: /reference/fidl/fuchsia.ui.brightness
 - title: fuchsia.ui.focus
   path: /reference/fidl/fuchsia.ui.focus
 - title: fuchsia.ui.gfx
