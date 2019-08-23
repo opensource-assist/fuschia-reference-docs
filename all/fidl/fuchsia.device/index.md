@@ -277,6 +277,27 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### GetDevicePowerCaps {:#GetDevicePowerCaps}
+
+ Gets the device power capabilities. Used by the system wide power manager
+ to manage power for this device.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_GetDevicePowerCaps_Result'>Controller_GetDevicePowerCaps_Result</a></code>
+            </td>
+        </tr></table>
+
 ## NameProvider {:#NameProvider}
 *Defined in [fuchsia.device/name-provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/name-provider.fidl#13)*
 
@@ -305,6 +326,24 @@ Book: /_book.yaml
 
 
 ## **STRUCTS**
+
+### Controller_GetDevicePowerCaps_Response {:#Controller_GetDevicePowerCaps_Response}
+*Defined in [fuchsia.device/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>dpstates</code></td>
+            <td>
+                <code>[5]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
 
 ### DevicePowerStateInfo {:#DevicePowerStateInfo}
 *Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#86)*
@@ -357,7 +396,7 @@ Book: /_book.yaml
 </table>
 
 ### NameProvider_GetDeviceName_Response {:#NameProvider_GetDeviceName_Response}
-*Defined in [fuchsia.device/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
+*Defined in [fuchsia.device/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#31)*
 
 
 
@@ -414,8 +453,27 @@ Type: <code>uint8</code>
 
 ## **UNIONS**
 
-### NameProvider_GetDeviceName_Result {:#NameProvider_GetDeviceName_Result}
+### Controller_GetDevicePowerCaps_Result {:#Controller_GetDevicePowerCaps_Result}
 *Defined in [fuchsia.device/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_GetDevicePowerCaps_Response'>Controller_GetDevicePowerCaps_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### NameProvider_GetDeviceName_Result {:#NameProvider_GetDeviceName_Result}
+*Defined in [fuchsia.device/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
 
 
 <table>

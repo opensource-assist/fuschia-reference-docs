@@ -236,12 +236,12 @@ Type: <code>uint32</code>
 
 ## **TABLES**
 
-### GenericCrashReport {:#GenericCrashReport}
+### CrashReport {:#CrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#35)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#20)*
 
- Represents a generic crash report.
+ Represents a crash report.
 
 
 <table>
@@ -256,6 +256,14 @@ Type: <code>uint32</code>
 </td>
         </tr><tr>
             <td>2</td>
+            <td><code>specific_report</code></td>
+            <td>
+                <code><a class='link' href='#SpecificCrashReport'>SpecificCrashReport</a></code>
+            </td>
+            <td> The specific report that depends on the type of crashes.
+</td>
+        </tr><tr>
+            <td>3</td>
             <td><code>annotations</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[32]</code>
@@ -264,7 +272,7 @@ Type: <code>uint32</code>
  crash report. Keys should be unique.
 </td>
         </tr><tr>
-            <td>3</td>
+            <td>4</td>
             <td><code>attachments</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#Attachment'>Attachment</a>&gt;[16]</code>
@@ -274,10 +282,31 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### GenericCrashReport {:#GenericCrashReport}
+
+
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#52)*
+
+ Represents a generic crash report.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>signature</code></td>
+            <td>
+                <code>string[128]</code>
+            </td>
+            <td> A text signature that the crash server can use to group similar crashes together, e.g.,
+ "kernel-panic" or "oom".
+</td>
+        </tr></table>
+
 ### NativeCrashReport {:#NativeCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#49)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#59)*
 
  Represents a crash report for a native exception out of which the client has built a minidump.
 
@@ -286,24 +315,18 @@ Type: <code>uint32</code>
     <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
     <tr>
             <td>1</td>
-            <td><code>base_report</code></td>
-            <td>
-                <code><a class='link' href='#GenericCrashReport'>GenericCrashReport</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td>2</td>
             <td><code>minidump</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
             </td>
-            <td></td>
+            <td> The core dump in the Minidump format.
+</td>
         </tr></table>
 
 ### RuntimeCrashReport {:#RuntimeCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#56)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#65)*
 
  Represents a crash report for a runtime exception, applicable to most languages.
 
@@ -312,34 +335,27 @@ Type: <code>uint32</code>
     <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
     <tr>
             <td>1</td>
-            <td><code>base_report</code></td>
-            <td>
-                <code><a class='link' href='#GenericCrashReport'>GenericCrashReport</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>type</code></td>
+            <td><code>exception_type</code></td>
             <td>
                 <code>string[128]</code>
             </td>
-            <td> Exception type, e.g., "FileSystemException".
+            <td> The exception type, e.g., "FileSystemException".
 </td>
         </tr><tr>
-            <td>3</td>
-            <td><code>message</code></td>
+            <td>2</td>
+            <td><code>exception_message</code></td>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Exception message, e.g., "cannot open file".
+            <td> The exception message, e.g., "cannot open file".
 </td>
         </tr><tr>
-            <td>4</td>
-            <td><code>stack_trace</code></td>
+            <td>3</td>
+            <td><code>exception_stack_trace</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
             </td>
-            <td> Text representation of the stack trace.
+            <td> The text representation of the exception stack trace.
 </td>
         </tr></table>
 
@@ -421,10 +437,10 @@ Type: <code>uint32</code>
 
 ## **XUNIONS**
 
-### CrashReport {:#CrashReport}
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#23)*
+### SpecificCrashReport {:#SpecificCrashReport}
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#40)*
 
- Represents a crash report.
+ Represents a specific crash report.
 
  Add a new member when the server needs to special case how it handles certain annotations and
  attachments for a given type of crashes, e.g., a `RuntimeCrashReport` for Javascript.

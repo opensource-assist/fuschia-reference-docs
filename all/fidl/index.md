@@ -456,6 +456,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.factory/index">fuchsia.factory</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.feedback/index">fuchsia.feedback</a></td>
     <td></td>
 </tr>
@@ -627,10 +631,6 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.media.sessions/index">fuchsia.media.sessions</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.media.sessions2/index">fuchsia.media.sessions2</a></td>
     <td></td>
 </tr>
@@ -648,9 +648,7 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.modular/index">fuchsia.modular</a></td>
-    <td> This file contains the definition of Link as well as the structure
- of the data it holds.
-</td>
+    <td></td>
 </tr>
 <tr>
     <td><a href="fuchsia.modular.auth/index">fuchsia.modular.auth</a></td>
@@ -938,6 +936,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.ui.focus/index">fuchsia.ui.focus</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.ui.gfx/index">fuchsia.ui.gfx</a></td>
     <td></td>
 </tr>
@@ -963,6 +965,10 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.ui.scenic/index">fuchsia.ui.scenic</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.ui.scenic.internal/index">fuchsia.ui.scenic.internal</a></td>
     <td></td>
 </tr>
 <tr>
@@ -1123,7 +1129,12 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="test.inspect.validate/index">test.inspect.validate</a></td>
-    <td></td>
+    <td> The Inspect VMO Validator program starts and controls a "puppet" program to
+ exercise each Inspect library. This file defines the protocol to exercise
+ the library (and report the result of commands). (After executing some
+ commands, the Validator program will analyze the VMO contents for
+ correctness and memory-packing efficiency.)
+</td>
 </tr>
 <tr>
     <td><a href="test.modular.dart/index">test.modular.dart</a></td>

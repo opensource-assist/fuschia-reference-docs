@@ -14,6 +14,199 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
+### ThreeByte {:#ThreeByte}
+*Defined in [conformance/alignment.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/alignment.test.fidl#7)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>elem1</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>elem2</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>elem3</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### FiveByte {:#FiveByte}
+*Defined in [conformance/alignment.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/alignment.test.fidl#13)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>elem1</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>elem2</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### ThreeByteInStruct {:#ThreeByteInStruct}
+*Defined in [conformance/alignment.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/alignment.test.fidl#18)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>elem1</code></td>
+            <td>
+                <code><a class='link' href='#ThreeByte'>ThreeByte</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>elem2</code></td>
+            <td>
+                <code><a class='link' href='#ThreeByte'>ThreeByte</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>elem3</code></td>
+            <td>
+                <code><a class='link' href='#ThreeByte'>ThreeByte</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### FiveByteInStruct {:#FiveByteInStruct}
+*Defined in [conformance/alignment.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/alignment.test.fidl#24)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>elem1</code></td>
+            <td>
+                <code><a class='link' href='#FiveByte'>FiveByte</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>elem2</code></td>
+            <td>
+                <code><a class='link' href='#FiveByte'>FiveByte</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>elem3</code></td>
+            <td>
+                <code><a class='link' href='#FiveByte'>FiveByte</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### ThreeByteInVector {:#ThreeByteInVector}
+*Defined in [conformance/alignment.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/alignment.test.fidl#30)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>elems</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#ThreeByte'>ThreeByte</a>&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### FiveByteInVector {:#FiveByteInVector}
+*Defined in [conformance/alignment.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/alignment.test.fidl#34)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>elems</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#FiveByte'>FiveByte</a>&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### ThreeByteInArray {:#ThreeByteInArray}
+*Defined in [conformance/alignment.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/alignment.test.fidl#38)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>elems</code></td>
+            <td>
+                <code>[3]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### FiveByteInArray {:#FiveByteInArray}
+*Defined in [conformance/alignment.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/alignment.test.fidl#42)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>elems</code></td>
+            <td>
+                <code>[3]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### StructWithInt {:#StructWithInt}
 *Defined in [conformance/arrays_and_vectors.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/arrays_and_vectors.test.fidl#12)*
 

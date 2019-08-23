@@ -48,8 +48,6 @@ Book: /_book.yaml
 
 ### OnTerminated {:#OnTerminated}
 
- DEPRECATED: Use OnTerminated instead of Wait().
- 3: Wait()
  Event that is triggered when the component is terminated.
 
  This event provides the return code of the process and reason for

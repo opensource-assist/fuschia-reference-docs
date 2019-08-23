@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## HciEmulator {:#HciEmulator}
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#144)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#113)*
 
  Protocol used to emulate a Bluetooth controller that supports the standard Bluetooth HCI.
 
@@ -91,11 +91,16 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### WatchLeScanState {:#WatchLeScanState}
+### WatchLeScanStates {:#WatchLeScanStates}
 
- Returns the latest state of the link layer LE scan procedure. This method returns when there
- is a state change since the last invocation of this method by this client
- (see [hanging get pattern](/docs/development/api/fidl.md#delay_responses_using_hanging_gets)).
+ Returns the most recent set of state transitions for the link layer LE scan procedure. This
+ method returns when there has been a state change since the last invocation of this method
+ by this client.
+
+ Only one call to this method can be outstanding at a given time. The
+ <a class='link' href='#HciEmulator'>HciEmulator</a> channel will be closed if a call received when one is
+ already pending.
+ (see [hanging get pattern](//docs/development/api/fidl.md#delay-responses-using-hanging-gets))
 
 #### Request
 <table>
@@ -107,9 +112,36 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>state</code></td>
+            <td><code>states</code></td>
             <td>
-                <code><a class='link' href='#LeScanState'>LeScanState</a></code>
+                <code>vector&lt;<a class='link' href='#LeScanState'>LeScanState</a>&gt;</code>
+            </td>
+        </tr></table>
+
+### WatchLegacyAdvertisingStates {:#WatchLegacyAdvertisingStates}
+
+ Returns the most recent set of state transitions for the link layer LE legacy advertising
+ procedure. This method returns when there has been a state change since the last invocation
+ of this method by this client.
+
+ Only one call to this method can be outstanding at a given time. The
+ <a class='link' href='#HciEmulator'>HciEmulator</a> channel will be closed if a call received when one is
+ already pending.
+ (see [hanging get pattern](//docs/development/api/fidl.md#delay-responses-using-hanging-gets))
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>states</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#LegacyAdvertisingState'>LegacyAdvertisingState</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -158,7 +190,7 @@ Book: /_book.yaml
 </table>
 
 ### AclBufferSettings {:#AclBufferSettings}
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#111)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#80)*
 
 
 
@@ -192,7 +224,7 @@ Book: /_book.yaml
 ### EmulatorError {:#EmulatorError}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#13)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#10)*
 
  Error codes that can be generated for emulator-wide configurations.
 
@@ -211,7 +243,7 @@ Type: <code>uint32</code>
 ### EmulatorPeerError {:#EmulatorPeerError}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#19)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#16)*
 
  Error codes that are generated for functions that manipulate fake peers.
 
@@ -231,29 +263,10 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### LeAddressType {:#LeAddressType}
-Type: <code>uint32</code>
-
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#26)*
-
- The Bluetooth device address type used with link layer procedures.
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>PUBLIC</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>RANDOM</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr></table>
-
 ### HciConfig {:#HciConfig}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#102)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#71)*
 
  Pre-set HCI configurations.
 
@@ -557,6 +570,37 @@ Type: <code>uint8</code>
             <td></td>
         </tr></table>
 
+### LegacyAdvertisingType {:#LegacyAdvertisingType}
+Type: <code>uint8</code>
+
+*Defined in [fuchsia.bluetooth.test/le_procedures.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#13)*
+
+ LE legacy advertising types from Bluetooth Core Specification 5.1 Vol 2, Part E, Section 7.8.5.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>ADV_IND</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ADV_DIRECT_IND</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ADV_SCAN_IND</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ADV_NONCONN_IND</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SCAN_RSP</code></td>
+            <td><code>4</code></td>
+            <td></td>
+        </tr></table>
+
 
 
 ## **TABLES**
@@ -564,7 +608,7 @@ Type: <code>uint8</code>
 ### FakePeer {:#FakePeer}
 
 
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#32)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#23)*
 
  Represents a peer that a FakeController can be configured to emulate.
 
@@ -604,7 +648,7 @@ Type: <code>uint8</code>
 ### LeParameters {:#LeParameters}
 
 
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#53)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#44)*
 
  Parameters used to emulate a peer's behavior over the Low Energy transport.
 
@@ -643,7 +687,7 @@ Type: <code>uint8</code>
 ### BrEdrParameters {:#BrEdrParameters}
 
 
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#70)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#61)*
 
  Parameters used to emulate a peer's behavior over the BR/EDR transport.
 
@@ -652,72 +696,10 @@ Type: <code>uint8</code>
     <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
     </table>
 
-### LeScanState {:#LeScanState}
-
-
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#76)*
-
- Represents the LE scan state. The fields are present if scan parameters have been
- configured.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>enabled</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> True if a scan is enabled.
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>active</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> True if an active scan is enabled. Otherwise the scan is passive.
-</td>
-        </tr><tr>
-            <td>3</td>
-            <td><code>interval</code></td>
-            <td>
-                <code>uint16</code>
-            </td>
-            <td> The scan interval and window parameters. These are defined in Bluetotoh controller
- "timeslices" where 1 slice = 0.625 ms. Valid values range from 0x4 (2.5 ms) to 0x4000 (10.24
- ms).
-</td>
-        </tr><tr>
-            <td>4</td>
-            <td><code>window</code></td>
-            <td>
-                <code>uint16</code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td>5</td>
-            <td><code>filter_duplicates</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> True if duplicate filtering has been enabled.
-</td>
-        </tr><tr>
-            <td>6</td>
-            <td><code>own_address_type</code></td>
-            <td>
-                <code><a class='link' href='#LeAddressType'>LeAddressType</a></code>
-            </td>
-            <td> The type of local device address used.
-</td>
-        </tr></table>
-
 ### EmulatorSettings {:#EmulatorSettings}
 
 
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#120)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#89)*
 
  Controller settings used by the emulator.
 
@@ -768,6 +750,137 @@ Type: <code>uint8</code>
             <td> The LE-U ACL data buffer settings. Defaults to
     data_packet_length: 251
     total_num_data_packets: 5
+</td>
+        </tr></table>
+
+### LegacyAdvertisingState {:#LegacyAdvertisingState}
+
+
+*Defined in [fuchsia.bluetooth.test/le_procedures.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#31)*
+
+ Controller parameters for legacy advertising.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>enabled</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> True if advertising has been enabled using the HCI_LE_Set_Advertising_Enable command.
+ This field is always present.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>type</code></td>
+            <td>
+                <code><a class='link' href='#LegacyAdvertisingType'>LegacyAdvertisingType</a></code>
+            </td>
+            <td> The most recently configured advertising type. This field is always present. Defaults to
+ <a class='link' href='#LegacyAdvertisingType.ADV_IND'>LegacyAdvertisingType.ADV_IND</a>.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>address_type</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#AddressType'>AddressType</a></code>
+            </td>
+            <td> The LE address type being used for advertising. This field is always present. Defaults to
+ <a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#AddressType.PUBLIC'>AddressType.PUBLIC</a>.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>interval_min</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td> The host-specified advertising interval range parameters. Present only if configured.
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>interval_max</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>advertising_data</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[31]</code>
+            </td>
+            <td> Any configured advertising and scan response data. Present only if either field is non-zero.
+</td>
+        </tr><tr>
+            <td>7</td>
+            <td><code>scan_response</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[31]</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### LeScanState {:#LeScanState}
+
+
+*Defined in [fuchsia.bluetooth.test/le_procedures.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#55)*
+
+ Represents the LE scan state. The fields are present if scan parameters have been
+ configured.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>enabled</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> True if a scan is enabled.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>active</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> True if an active scan is enabled. Otherwise the scan is passive.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>interval</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td> The scan interval and window parameters. These are defined in Bluetooth controller
+ "timeslices" where 1 slice = 0.625 ms. Valid values range from 0x4 (2.5 ms) to 0x4000 (10.24
+ ms).
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>window</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>filter_duplicates</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> True if duplicate filtering has been enabled.
+</td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>address_type</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#AddressType'>AddressType</a></code>
+            </td>
+            <td> The type of local device address used.
 </td>
         </tr></table>
 
@@ -837,7 +950,7 @@ Type: <code>uint8</code>
 ## **XUNIONS**
 
 ### AdvertisingData {:#AdvertisingData}
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#47)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#38)*
 
 
 <table>
@@ -863,7 +976,7 @@ Type: <code>uint8</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#9">MAX_LEGACY_ADVERTISING_DATA_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#9">MAX_LEGACY_ADVERTISING_DATA_LENGTH</a></td>
             <td>
                     <code>31</code>
                 </td>
@@ -871,7 +984,7 @@ Type: <code>uint8</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#10">MAX_EXTENDED_ADVERTISING_DATA_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#10">MAX_EXTENDED_ADVERTISING_DATA_LENGTH</a></td>
             <td>
                     <code>251</code>
                 </td>

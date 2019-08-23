@@ -69,6 +69,62 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## SessionDiscoverContext {:#SessionDiscoverContext}
+*Defined in [fuchsia.app.discover/story_discover_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#13)*
+
+ Provided to session shells to communicate with discover.
+
+### GetStoryContext {:#GetStoryContext}
+
+ The session shell can act as the story shell. Gets a a story control
+ service.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>story_id</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+        </tr><tr>
+            <td><code>request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#StoryDiscoverContext'>StoryDiscoverContext</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+## StoryDiscoverContext {:#StoryDiscoverContext}
+*Defined in [fuchsia.app.discover/story_discover_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#21)*
+
+
+### GetSurfaceData {:#GetSurfaceData}
+
+ Gets the surface data for the given |surface_id|.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>surface_id</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>surface_data</code></td>
+            <td>
+                <code><a class='link' href='#SurfaceData'>SurfaceData</a></code>
+            </td>
+        </tr></table>
+
 ## Suggestions {:#Suggestions}
 *Defined in [fuchsia.app.discover/suggestions_service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/suggestions_service.fidl#12)*
 
@@ -231,6 +287,34 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### SurfaceData {:#SurfaceData}
+
+
+*Defined in [fuchsia.app.discover/story_discover_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#27)*
+
+ Information about a surface in the story.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>action</code></td>
+            <td>
+                <code>string[512]</code>
+            </td>
+            <td> The name of the action that triggered the creation of that surface.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>parameter_types</code></td>
+            <td>
+                <code>vector&lt;string&gt;</code>
+            </td>
+            <td> The types of the parameters for each parameter of the action.
+</td>
+        </tr></table>
+
 ### Suggestion {:#Suggestion}
 
 
@@ -298,6 +382,30 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
             <td> Maximum length of a story id.
 </td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#35">ACTION_NAME_MAX_LENGTH</a></td>
+            <td>
+                    <code>512</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#36">PARAMETER_TYPE_NAME_MAX_LENGTH</a></td>
+            <td>
+                    <code>512</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#37">SURFACE_ID_MAX_LENGTH</a></td>
+            <td>
+                    <code>1024</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
         </tr>
     
 </table>

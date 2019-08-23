@@ -379,10 +379,10 @@ Book: /_book.yaml
 ## WorkScheduler {:#WorkScheduler}
 *Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#39)*
 
- Framework service: API for scheduling, inspecting, and canceling work. Each component instance
- can access work items that it has scheduled (but not others' scheduled work items). Work items
- are scheduled _roughly_ at the specified time and frequency; the service implementation may
- specify its notion of _roughly_, and may provide a configuration API to tune this notion.
+ Framework service: API for scheduling and canceling work. Each component instance can access
+ work items that it has scheduled (but not others' scheduled work items). Work items are
+ scheduled _roughly_ at the specified time and frequency; the service implementation may specify
+ its notion of _roughly_, and may provide a configuration API to tune this notion.
 
  Each scheduled work item is identified by a client-provided `WorkId`. Each scheduled work item
  has a `WorkId` that is unique with respect to scheduled work items belonging to the same
@@ -420,33 +420,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### GetWorkById {:#GetWorkById}
-
- Get the current status of the scheduled work item identified by `work_id`. Note that
- canceled work items, and work items that do not repeat and has already run are not
- considered scheduled (and cannot be queried via this method).
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>work_id</code></td>
-            <td>
-                <code>string[100]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>result</code></td>
-            <td>
-                <code><a class='link' href='#WorkScheduler_GetWorkById_Result'>WorkScheduler_GetWorkById_Result</a></code>
-            </td>
-        </tr></table>
-
 ### CancelWork {:#CancelWork}
 
  Cancel the scheduled work item specified by `work_id`.
@@ -473,7 +446,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Worker {:#Worker}
-*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#60)*
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#55)*
 
  Component-exposed service: Work scheduler connects to this service to invoke scheduled work item
  callbacks. The service implementation is responsible for invoking the code that corresponds to
@@ -745,26 +718,8 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
-### WorkScheduler_GetWorkById_Response {:#WorkScheduler_GetWorkById_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#44)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>work_status</code></td>
-            <td>
-                <code><a class='link' href='#WorkStatus'>WorkStatus</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### WorkScheduler_CancelWork_Response {:#WorkScheduler_CancelWork_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#51)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#44)*
 
 
 
@@ -775,7 +730,7 @@ Book: /_book.yaml
 </table>
 
 ### Worker_DoWork_Response {:#Worker_DoWork_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#58)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#51)*
 
 
 
@@ -1781,35 +1736,6 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
-### WorkStatus {:#WorkStatus}
-
-
-*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#65)*
-
- Snapshot of the status of a scheduled work item.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>next_run_utc_time</code></td>
-            <td>
-                <code>int64</code>
-            </td>
-            <td> Estimated next time to run this work item, interpreted like `ZX_CLOCK_UTC`: number of wall
- clock nanoseconds since the Unix epoch (midnight on January 1 1970) in UTC.
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>period</code></td>
-            <td>
-                <code>int64</code>
-            </td>
-            <td> Period for rerunning work; unspecified when work is one-shot instead of repeating.
-</td>
-        </tr></table>
-
 
 
 ## **UNIONS**
@@ -1909,27 +1835,8 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### WorkScheduler_GetWorkById_Result {:#WorkScheduler_GetWorkById_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#47)*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>response</code></td>
-            <td>
-                <code><a class='link' href='#WorkScheduler_GetWorkById_Response'>WorkScheduler_GetWorkById_Response</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>err</code></td>
-            <td>
-                <code><a class='link' href='#Error'>Error</a></code>
-            </td>
-            <td></td>
-        </tr></table>
-
 ### WorkScheduler_CancelWork_Result {:#WorkScheduler_CancelWork_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#54)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#47)*
 
 
 <table>
@@ -1948,7 +1855,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Worker_DoWork_Result {:#Worker_DoWork_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#61)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#54)*
 
 
 <table>
@@ -2123,12 +2030,12 @@ Type: <code>uint32</code>
             <td> A non-negative delay to wait before scheduling work.
 </td>
         </tr><tr>
-            <td><code>utc_time</code></td>
+            <td><code>monotonic_time</code></td>
             <td>
                 <code>int64</code>
             </td>
-            <td> A fixed point in time to start scheduling work, interpreted like `ZX_CLOCK_UTC`: number of
- wall clock nanoseconds since the Unix epoch (midnight on January 1 1970) in UTC.
+            <td> A fixed point in time to start scheduling work, interpreted like `ZX_CLOCK_MONOTONIC`:
+ number of nanoseconds since the system was powered on.
 </td>
         </tr></table>
 

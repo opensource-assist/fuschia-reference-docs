@@ -1285,9 +1285,7 @@ Book: /_book.yaml
                     <code>0</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> The following EVENT_* constants indicate which user signal is associated with an event.
- The value 0 is `ZX_USER_SIGNAL_0`, 1 is `ZX_USER_SIGNAL_1` etc.
- Set a flag to inspect queues on the next interrupt.
+            <td> Set a flag to inspect queues on the next interrupt.
 </td>
         </tr>
     <tr>

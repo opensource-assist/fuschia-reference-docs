@@ -120,9 +120,6 @@ Book: /_book.yaml
 
 ### GetRouteTable {:#GetRouteTable}
 
- DEPRECATED: see devicesettings.fidl
- Returns the netstack's node name.
- 5: GetNodeName() -> (string node_name);
  Returns current route table.
 
 #### Request

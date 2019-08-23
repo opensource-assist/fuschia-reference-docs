@@ -198,6 +198,7 @@ Book: /_book.yaml
 
  Turn off data collection.
  May be called any time after `Initialize()` has been called and before
+ `Terminate()`. If called at other times the call is ignored.
  May be called multiple times.
 
 #### Request

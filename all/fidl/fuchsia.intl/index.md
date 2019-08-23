@@ -226,6 +226,7 @@ Type: <code>uint32</code>
                 <code>vector&lt;<a class='link' href='#TimeZoneId'>TimeZoneId</a>&gt;</code>
             </td>
             <td> Ranked list of time zones (in descending order). The first entry is the primary time zone,
+ which should be used by default for formatting dates and times; it will be equal to the
  calendar indicated in `locales`.
  The list is intended for use by applications that can display multiple time zones, e.g.
  a world clock.

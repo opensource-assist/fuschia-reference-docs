@@ -84,7 +84,7 @@ Book: /_book.yaml
             <td></td>
             <td>No default</td>
         </tr><tr>
-            <td><code>volt_mv</code></td>
+            <td><code>volt_uv</code></td>
             <td>
                 <code>uint32</code>
             </td>

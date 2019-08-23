@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## BaseInterfaceController {:#BaseInterfaceController}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#39)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#31)*
 
 
 ### GetInterfaceInfo {:#GetInterfaceInfo}
@@ -26,7 +26,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='#InterfaceInfo'>InterfaceInfo</a></code>
+                <code><a class='link' href='../fuchsia.net.stack/index.html'>fuchsia.net.stack</a>/<a class='link' href='../fuchsia.net.stack/index.html#InterfaceInfo'>InterfaceInfo</a></code>
             </td>
         </tr></table>
 
@@ -125,7 +125,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StandardInterfaceController {:#StandardInterfaceController}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#60)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#52)*
 
  Controller of physical and virtual interfaces.
 
@@ -145,7 +145,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='#InterfaceInfo'>InterfaceInfo</a></code>
+                <code><a class='link' href='../fuchsia.net.stack/index.html'>fuchsia.net.stack</a>/<a class='link' href='../fuchsia.net.stack/index.html#InterfaceInfo'>InterfaceInfo</a></code>
             </td>
         </tr></table>
 
@@ -244,7 +244,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## BridgeInterfaceController {:#BridgeInterfaceController}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#65)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#57)*
 
  Controller of  bridging interfaces.
 
@@ -264,7 +264,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='#InterfaceInfo'>InterfaceInfo</a></code>
+                <code><a class='link' href='../fuchsia.net.stack/index.html'>fuchsia.net.stack</a>/<a class='link' href='../fuchsia.net.stack/index.html#InterfaceInfo'>InterfaceInfo</a></code>
             </td>
         </tr></table>
 
@@ -363,7 +363,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Observer {:#Observer}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#73)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#65)*
 
 
 ### ListInterfaces {:#ListInterfaces}
@@ -382,7 +382,7 @@ Book: /_book.yaml
     <tr>
             <td><code>infos</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#InterfaceInfo'>InterfaceInfo</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='../fuchsia.net.stack/index.html'>fuchsia.net.stack</a>/<a class='link' href='../fuchsia.net.stack/index.html#InterfaceInfo'>InterfaceInfo</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>status</code></td>
@@ -412,7 +412,7 @@ Book: /_book.yaml
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='#InterfaceInfo'>InterfaceInfo</a>?</code>
+                <code><a class='link' href='../fuchsia.net.stack/index.html'>fuchsia.net.stack</a>/<a class='link' href='../fuchsia.net.stack/index.html#InterfaceInfo'>InterfaceInfo</a>?</code>
             </td>
         </tr><tr>
             <td><code>status</code></td>
@@ -442,7 +442,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## BasePolicy {:#BasePolicy}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#84)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#76)*
 
 
 ### AddInterface {:#AddInterface}
@@ -506,7 +506,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## PrivilegedPolicy {:#PrivilegedPolicy}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#102)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#94)*
 
 
 ### GetInterfaceController {:#GetInterfaceController}
@@ -542,35 +542,8 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
-### InterfaceInfo {:#InterfaceInfo}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#11)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Interface name.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>properties</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.net.stack/index.html'>fuchsia.net.stack</a>/<a class='link' href='../fuchsia.net.stack/index.html#InterfaceProperties'>InterfaceProperties</a></code>
-            </td>
-            <td> All info of an interface except the interface name.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### InterfaceNameUpdate {:#InterfaceNameUpdate}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#20)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#12)*
 
 
 
@@ -598,7 +571,7 @@ Book: /_book.yaml
 ### Events {:#Events}
 
 
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#25)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#17)*
 
 
 
@@ -627,7 +600,7 @@ Book: /_book.yaml
 ## **UNIONS**
 
 ### EthernetControllerRequest {:#EthernetControllerRequest}
-*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#33)*
+*Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#25)*
 
 
 <table>
