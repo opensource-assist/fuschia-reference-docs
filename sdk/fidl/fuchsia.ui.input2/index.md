@@ -67,7 +67,64 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## KeyboardLayoutState {:#KeyboardLayoutState}
+*Defined in [fuchsia.ui.input2/layout.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#13)*
 
+ Input method editors should implement this protocol to populate
+ `KeyEvent.symbol` field based on current key layout.
+
+### Watch {:#Watch}
+
+ Get current key layout. Returns immediately on first call;
+ subsequent calls return when the value changes.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>layout</code></td>
+            <td>
+                <code><a class='link' href='#KeyboardLayout'>KeyboardLayout</a></code>
+            </td>
+        </tr></table>
+
+
+
+## **STRUCTS**
+
+### PhysicalKeyMapEntry {:#PhysicalKeyMapEntry}
+*Defined in [fuchsia.ui.input2/layout.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#42)*
+
+
+
+ A mapping of a physical key to a key.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>physical_key</code></td>
+            <td>
+                <code><a class='link' href='#Key'>Key</a></code>
+            </td>
+            <td> Physical key that's being mapped.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>key</code></td>
+            <td>
+                <code><a class='link' href='#Key'>Key</a></code>
+            </td>
+            <td> A key to which the physical key is mapped to.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
 
 
 
@@ -571,7 +628,7 @@ Type: <code>uint32</code>
 ### KeyEvent {:#KeyEvent}
 
 
-*Defined in [fuchsia.ui.input2/events.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/events.fidl#17)*
+*Defined in [fuchsia.ui.input2/events.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/events.fidl#23)*
 
  Keyboard event is generated to reflect key input.
 
@@ -584,9 +641,16 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Key'>Key</a></code>
             </td>
-            <td> Physical key being pressed.
+            <td> The key that was pressed or released, taking the keyboard layout into account.
 
- Keyboard layout is applied (QWERTY/AZERTY/Dvorak/etc).
+ Use this value for the following purposes:
+ -  interpreting keyboard shortcuts such as CTRL+C
+
+ The input system derives this value from `physical_key` by consulting the
+ physical key map of the `KeyboardLayout` that was active for the keyboard when
+ when the key was pressed.  Note that the same value will be reported when
+ the key is released even if the keyboard layout changes in the interim between press
+ and release.
 </td>
         </tr><tr>
             <td>2</td>
@@ -603,6 +667,123 @@ Type: <code>uint32</code>
                 <code><a class='link' href='#Modifiers'>Modifiers</a></code>
             </td>
             <td> Modifier keys being held.
+</td>
+        </tr></table>
+
+### KeyboardLayout {:#KeyboardLayout}
+
+
+*Defined in [fuchsia.ui.input2/layout.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#28)*
+
+ Collection of key maps.
+
+ A physical key is first converted to key using `key_map`.
+ The key is then used to populate `symbol` using `symbol_map`.
+ Maps in `KeySymbolMap` should be searched for the key mapping in the order
+ they are included.
+ First key mapping found in an applicable map should be used.
+ Only maps with matching modifiers should be used.
+ See `KeySymbolMap` for modifiers matching criteria and examples.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>key_map</code></td>
+            <td>
+                <code><a class='link' href='#PhysicalKeyMap'>PhysicalKeyMap</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>symbol_map</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#KeySymbolMap'>KeySymbolMap</a>&gt;[64]</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### PhysicalKeyMap {:#PhysicalKeyMap}
+
+
+*Defined in [fuchsia.ui.input2/layout.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#36)*
+
+ Key map describes a conversion of a physical key to a key.
+ Physical keys not included here are translated directly into keys.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>entries</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#PhysicalKeyMapEntry'>PhysicalKeyMapEntry</a>&gt;[1024]</code>
+            </td>
+            <td> Collection of keys that should be explicitly mapped.
+</td>
+        </tr></table>
+
+### KeySymbolMap {:#KeySymbolMap}
+
+
+*Defined in [fuchsia.ui.input2/layout.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#79)*
+
+ Key map describes a conversion of a key to symbol representation.
+
+ The map should be validated using key event modifier states.
+ Map is applied if every modifier in the 'modifiers' list is active,
+ and all other active modifiers are members of the 'optional_modifiers' list.
+ If a modifier is enabled and not listed in neither `modifiers` nor
+ `optional_modifiers`, the map should be ignored.
+
+ Example:
+   Keyboard has NumLock and CapsLock enabled, and user presses Shift + Key.A
+
+   Map1:
+     modifiers: "CapsLock"
+     optional_modifiers: "NumLock"
+   Map2:
+     modifiers: "Shift",
+     optional_modifiers: "NumLock", "CapsLock", "ScrollLock"
+   Map3:
+     modifiers: None
+     optional_modifiers: "Shift", "CapsLock"
+
+ Map1 should be ignored, since "Shift" is pressed but is not included in
+ `modifiers` or `optional_modifiers`.
+
+ Map2 should be searched, since required "Shift" is enabled, and all other
+ enabled modifiers are included in `optional_modifiers`.
+
+ Map3 should be ignored, since "NumLock" is enabled but not included in
+ `modifiers` or `optional_modifiers`.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>modifiers</code></td>
+            <td>
+                <code><a class='link' href='#Modifiers'>Modifiers</a></code>
+            </td>
+            <td> Combination of modifiers required for this map to be applied.
+ E.g. if CAPS_LOCK bit is set for this map, the map will be
+ applied if the Caps Lock state is ON.
+ Otherwise this map will be ignored if Caps Lock is off.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>optional_modifiers</code></td>
+            <td>
+                <code><a class='link' href='#Modifiers'>Modifiers</a></code>
+            </td>
+            <td> Combination of modifiers that may be enabled for this map to be applied.
+ E.g. if CAPS_LOCK bit is set for this map, the map will be
+ applied if Caps Lock state is ON.
+ Also it may be applied if Caps Lock is off.
 </td>
         </tr></table>
 
@@ -696,4 +877,26 @@ Type: <code>uint32</code>
         </tr></table>
 
 
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#7">MAX_ENTRIES_PER_MAP</a></td>
+            <td>
+                    <code>1024</code>
+                </td>
+                <td><code>uint64</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#8">MAX_MAPS_PER_LAYOUT</a></td>
+            <td>
+                    <code>64</code>
+                </td>
+                <td><code>uint64</code></td>
+            <td></td>
+        </tr>
+    
+</table>
 

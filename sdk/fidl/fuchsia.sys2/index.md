@@ -306,17 +306,28 @@ Book: /_book.yaml
 
 
 ## ComponentController {:#ComponentController}
-*Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#83)*
+*Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#94)*
 
  An interface for binding client connections and controlling the lifetime
  of a component instance started using `ComponentRunner.Start()`.
 
- Closing the client endpoint of the controller interface implicitly stops the
- controlled component instance exactly as if `Stop()` had been called.
-
  When the controlled component instance terminates or becomes inaccessible
  for any reason, the server invokes `OnEpitaph()` and closes its endpoint
  of the controller interface.
+
+ LIFECYCLE
+
+ A component may exist in one of two states, Started or Stopped. The component
+ is Started from time `ComponentRunner.Start()` is called until the
+ ComponentRunner closes the ComponentController handle. The component then
+ transitions to Stopped.
+
+ `Stop()` is called to indicate a ComponentRunner should end a component's
+ execution. `Kill()` indicates that a runner must halt a component's
+ execution immediately and close the ComponentController's server end. After
+ the ComponentController is closed the component manager can tear down the
+ namespace it hosts for the stopped component. The component manager may
+ call `Kill()` without first having called `Stop()`.
 
  EPITAPH
 
@@ -339,7 +350,7 @@ Book: /_book.yaml
 
 ### Stop {:#Stop}
 
- Stops the controlled component instance.
+ Requests the runner to stop the controlled component instance.
 
  After stopping the component instance, the server should report
  an epitaph then close its endpoint of the controller interface.
@@ -351,30 +362,45 @@ Book: /_book.yaml
 
 
 
-### Bind {:#Bind}
+### Kill {:#Kill}
 
- Binds a client to the component instance's `exports` directory
- if it has one.  If the instance does not offer exports, then the
- controller should close the `exports` interface request.
+ Stop this component immediately. This ComponentRunner must immediately
+ kill the component instance, set an epitaph set on the channel, and
+ close the channel. After the channel closes, the component instance will
+ be considered by the component manager to be Stopped and the component's
+ namespace will be torn down.
 
- The `client_moniker` identifies the client to the component instance.
+ Kill() may have been preceeded by Stop(), but that is not guaranteed.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>client_moniker</code></td>
-            <td>
-                <code><a class='link' href='#Moniker'>Moniker</a></code>
-            </td>
-        </tr><tr>
-            <td><code>exports</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.io/index.html'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/index.html#Directory'>Directory</a>&gt;</code>
-            </td>
-        </tr></table>
+    </table>
 
 
+
+## SystemController {:#SystemController}
+*Defined in [fuchsia.sys2/system_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/system_controller.fidl#10)*
+
+ An interface implemented by ComponentManager that requests the
+ ComponentManager stop all components and exit.
+
+### Shutdown {:#Shutdown}
+
+ Stop all components, return an empty result, close this protocol's
+ channel, and exit ComponentManager. If this is the root ComponentManager
+ is exited we expect the system will reboot.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
 
 ## WorkScheduler {:#WorkScheduler}
 *Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#39)*
@@ -708,7 +734,7 @@ Book: /_book.yaml
 </table>
 
 ### WorkScheduler_ScheduleWork_Response {:#WorkScheduler_ScheduleWork_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#39)*
 
 
 
@@ -719,7 +745,7 @@ Book: /_book.yaml
 </table>
 
 ### WorkScheduler_CancelWork_Response {:#WorkScheduler_CancelWork_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#44)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#46)*
 
 
 
@@ -730,7 +756,7 @@ Book: /_book.yaml
 </table>
 
 ### Worker_DoWork_Response {:#Worker_DoWork_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#51)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#53)*
 
 
 
@@ -1817,7 +1843,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### WorkScheduler_ScheduleWork_Result {:#WorkScheduler_ScheduleWork_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#40)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#42)*
 
 
 <table>
@@ -1836,7 +1862,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### WorkScheduler_CancelWork_Result {:#WorkScheduler_CancelWork_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#47)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#49)*
 
 
 <table>
@@ -1855,7 +1881,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Worker_DoWork_Result {:#Worker_DoWork_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#54)*
+*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#56)*
 
 
 <table>
