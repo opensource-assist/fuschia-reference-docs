@@ -87,7 +87,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Analyzer_OnNativeException_Response {:#Analyzer_OnNativeException_Response}
-*Defined in [fuchsia.crash/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -98,7 +98,7 @@ Book: /_book.yaml
 </table>
 
 ### Analyzer_OnManagedRuntimeException_Response {:#Analyzer_OnManagedRuntimeException_Response}
-*Defined in [fuchsia.crash/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*generated*
 
 
 
@@ -173,7 +173,7 @@ Book: /_book.yaml
 ## **UNIONS**
 
 ### Analyzer_OnNativeException_Result {:#Analyzer_OnNativeException_Result}
-*Defined in [fuchsia.crash/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>
@@ -192,7 +192,7 @@ Book: /_book.yaml
         </tr></table>
 
 ### Analyzer_OnManagedRuntimeException_Result {:#Analyzer_OnManagedRuntimeException_Result}
-*Defined in [fuchsia.crash/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+*generated*
 
 
 <table>

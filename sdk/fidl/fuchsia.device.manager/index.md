@@ -953,7 +953,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Coordinator_AddDevice_Response {:#Coordinator_AddDevice_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#17)*
+*generated*
 
 
 
@@ -971,7 +971,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_AddDeviceInvisible_Response {:#Coordinator_AddDeviceInvisible_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
+*generated*
 
 
 
@@ -989,7 +989,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_RemoveDevice_Response {:#Coordinator_RemoveDevice_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#35)*
+*generated*
 
 
 
@@ -1000,7 +1000,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_MakeVisible_Response {:#Coordinator_MakeVisible_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#42)*
+*generated*
 
 
 
@@ -1011,7 +1011,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_BindDevice_Response {:#Coordinator_BindDevice_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#49)*
+*generated*
 
 
 
@@ -1022,7 +1022,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_GetTopologicalPath_Response {:#Coordinator_GetTopologicalPath_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#56)*
+*generated*
 
 
 
@@ -1040,7 +1040,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_LoadFirmware_Response {:#Coordinator_LoadFirmware_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#63)*
+*generated*
 
 
 
@@ -1065,7 +1065,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_GetMetadata_Response {:#Coordinator_GetMetadata_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#70)*
+*generated*
 
 
 
@@ -1083,7 +1083,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_GetMetadataSize_Response {:#Coordinator_GetMetadataSize_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#77)*
+*generated*
 
 
 
@@ -1101,7 +1101,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_AddMetadata_Response {:#Coordinator_AddMetadata_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#84)*
+*generated*
 
 
 
@@ -1112,7 +1112,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_PublishMetadata_Response {:#Coordinator_PublishMetadata_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#91)*
+*generated*
 
 
 
@@ -1123,7 +1123,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_AddCompositeDevice_Response {:#Coordinator_AddCompositeDevice_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#98)*
+*generated*
 
 
 
@@ -1134,7 +1134,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_DirectoryWatch_Response {:#Coordinator_DirectoryWatch_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#105)*
+*generated*
 
 
 
@@ -1145,7 +1145,7 @@ Book: /_book.yaml
 </table>
 
 ### Coordinator_RunCompatibilityTests_Response {:#Coordinator_RunCompatibilityTests_Response}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#112)*
+*generated*
 
 
 
@@ -1284,7 +1284,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Coordinator_AddDevice_Result {:#Coordinator_AddDevice_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#20)*
+*generated*
 
 
 <table>
@@ -1303,7 +1303,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_AddDeviceInvisible_Result {:#Coordinator_AddDeviceInvisible_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+*generated*
 
 
 <table>
@@ -1322,7 +1322,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_RemoveDevice_Result {:#Coordinator_RemoveDevice_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#38)*
+*generated*
 
 
 <table>
@@ -1341,7 +1341,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_MakeVisible_Result {:#Coordinator_MakeVisible_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
+*generated*
 
 
 <table>
@@ -1360,7 +1360,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_BindDevice_Result {:#Coordinator_BindDevice_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#52)*
+*generated*
 
 
 <table>
@@ -1379,7 +1379,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_GetTopologicalPath_Result {:#Coordinator_GetTopologicalPath_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#59)*
+*generated*
 
 
 <table>
@@ -1398,7 +1398,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_LoadFirmware_Result {:#Coordinator_LoadFirmware_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#66)*
+*generated*
 
 
 <table>
@@ -1417,7 +1417,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_GetMetadata_Result {:#Coordinator_GetMetadata_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#73)*
+*generated*
 
 
 <table>
@@ -1436,7 +1436,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_GetMetadataSize_Result {:#Coordinator_GetMetadataSize_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#80)*
+*generated*
 
 
 <table>
@@ -1455,7 +1455,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_AddMetadata_Result {:#Coordinator_AddMetadata_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#87)*
+*generated*
 
 
 <table>
@@ -1474,7 +1474,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_PublishMetadata_Result {:#Coordinator_PublishMetadata_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#94)*
+*generated*
 
 
 <table>
@@ -1493,7 +1493,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_AddCompositeDevice_Result {:#Coordinator_AddCompositeDevice_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#101)*
+*generated*
 
 
 <table>
@@ -1512,7 +1512,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_DirectoryWatch_Result {:#Coordinator_DirectoryWatch_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#108)*
+*generated*
 
 
 <table>
@@ -1531,7 +1531,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Coordinator_RunCompatibilityTests_Result {:#Coordinator_RunCompatibilityTests_Result}
-*Defined in [fuchsia.device.manager/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#115)*
+*generated*
 
 
 <table>

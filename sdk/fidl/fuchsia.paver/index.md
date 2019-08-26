@@ -357,7 +357,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Paver_QueryActiveConfiguration_Response {:#Paver_QueryActiveConfiguration_Response}
-*Defined in [fuchsia.paver/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#6)*
+*generated*
 
 
 
@@ -455,7 +455,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Paver_QueryActiveConfiguration_Result {:#Paver_QueryActiveConfiguration_Result}
-*Defined in [fuchsia.paver/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*generated*
 
 
 <table>

@@ -94,7 +94,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### NameLookup_LookupIp_Response {:#NameLookup_LookupIp_Response}
-*Defined in [fuchsia.net/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#3)*
+*generated*
 
 
 
@@ -112,7 +112,7 @@ Book: /_book.yaml
 </table>
 
 ### NameLookup_LookupHostname_Response {:#NameLookup_LookupHostname_Response}
-*Defined in [fuchsia.net/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#10)*
+*generated*
 
 
 
@@ -323,7 +323,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### NameLookup_LookupIp_Result {:#NameLookup_LookupIp_Result}
-*Defined in [fuchsia.net/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#6)*
+*generated*
 
 
 <table>
@@ -342,7 +342,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### NameLookup_LookupHostname_Result {:#NameLookup_LookupHostname_Result}
-*Defined in [fuchsia.net/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#13)*
+*generated*
 
 
 <table>

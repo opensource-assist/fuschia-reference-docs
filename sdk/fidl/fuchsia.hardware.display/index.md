@@ -910,7 +910,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Controller_ImportImageForCapture_Response {:#Controller_ImportImageForCapture_Response}
-*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
+*generated*
 
 
 
@@ -928,7 +928,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_StartCapture_Response {:#Controller_StartCapture_Response}
-*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#52)*
+*generated*
 
 
 
@@ -939,7 +939,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_ReleaseCapture_Response {:#Controller_ReleaseCapture_Response}
-*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#59)*
+*generated*
 
 
 
@@ -1391,7 +1391,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Controller_ImportImageForCapture_Result {:#Controller_ImportImageForCapture_Result}
-*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
+*generated*
 
 
 <table>
@@ -1410,7 +1410,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Controller_StartCapture_Result {:#Controller_StartCapture_Result}
-*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#55)*
+*generated*
 
 
 <table>
@@ -1429,7 +1429,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Controller_ReleaseCapture_Result {:#Controller_ReleaseCapture_Result}
-*Defined in [fuchsia.hardware.display/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
+*generated*
 
 
 <table>

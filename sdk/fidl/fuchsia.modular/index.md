@@ -5593,7 +5593,7 @@ Book: /_book.yaml
 </table>
 
 ### StoryPuppetMaster_SetStoryInfoExtra_Response {:#StoryPuppetMaster_SetStoryInfoExtra_Response}
-*Defined in [fuchsia.modular/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#157)*
+*generated*
 
 
 
@@ -5604,7 +5604,7 @@ Book: /_book.yaml
 </table>
 
 ### StoryPuppetMaster_Annotate_Response {:#StoryPuppetMaster_Annotate_Response}
-*Defined in [fuchsia.modular/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#164)*
+*generated*
 
 
 
@@ -7075,7 +7075,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### StoryPuppetMaster_SetStoryInfoExtra_Result {:#StoryPuppetMaster_SetStoryInfoExtra_Result}
-*Defined in [fuchsia.modular/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#160)*
+*generated*
 
 
 <table>
@@ -7094,7 +7094,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### StoryPuppetMaster_Annotate_Result {:#StoryPuppetMaster_Annotate_Result}
-*Defined in [fuchsia.modular/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#167)*
+*generated*
 
 
 <table>

@@ -378,7 +378,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### PeerManager_GetControllerForTarget_Response {:#PeerManager_GetControllerForTarget_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -389,7 +389,7 @@ Book: /_book.yaml
 </table>
 
 ### PeerManager_SetAbsoluteVolumeHandler_Response {:#PeerManager_SetAbsoluteVolumeHandler_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*generated*
 
 
 
@@ -400,7 +400,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_GetPlayerApplicationSettings_Response {:#Controller_GetPlayerApplicationSettings_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#22)*
+*generated*
 
 
 
@@ -418,7 +418,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_GetMediaAttributes_Response {:#Controller_GetMediaAttributes_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#29)*
+*generated*
 
 
 
@@ -436,7 +436,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_SetAbsoluteVolume_Response {:#Controller_SetAbsoluteVolume_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#36)*
+*generated*
 
 
 
@@ -454,7 +454,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_InformBatteryStatus_Response {:#Controller_InformBatteryStatus_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#43)*
+*generated*
 
 
 
@@ -465,7 +465,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_SetAddressedPlayer_Response {:#Controller_SetAddressedPlayer_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#53)*
+*generated*
 
 
 
@@ -476,7 +476,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_SendCommand_Response {:#Controller_SendCommand_Response}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#60)*
+*generated*
 
 
 
@@ -1232,7 +1232,7 @@ Type: <code>uint8</code>
 ## **UNIONS**
 
 ### PeerManager_GetControllerForTarget_Result {:#PeerManager_GetControllerForTarget_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>
@@ -1251,7 +1251,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### PeerManager_SetAbsoluteVolumeHandler_Result {:#PeerManager_SetAbsoluteVolumeHandler_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+*generated*
 
 
 <table>
@@ -1270,7 +1270,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_GetPlayerApplicationSettings_Result {:#Controller_GetPlayerApplicationSettings_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#25)*
+*generated*
 
 
 <table>
@@ -1289,7 +1289,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_GetMediaAttributes_Result {:#Controller_GetMediaAttributes_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#32)*
+*generated*
 
 
 <table>
@@ -1308,7 +1308,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_SetAbsoluteVolume_Result {:#Controller_SetAbsoluteVolume_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#39)*
+*generated*
 
 
 <table>
@@ -1327,7 +1327,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_InformBatteryStatus_Result {:#Controller_InformBatteryStatus_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#46)*
+*generated*
 
 
 <table>
@@ -1346,7 +1346,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_SetAddressedPlayer_Result {:#Controller_SetAddressedPlayer_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#56)*
+*generated*
 
 
 <table>
@@ -1365,7 +1365,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_SendCommand_Result {:#Controller_SendCommand_Result}
-*Defined in [fuchsia.bluetooth.avrcp/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#63)*
+*generated*
 
 
 <table>

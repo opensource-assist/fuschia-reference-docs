@@ -452,7 +452,7 @@ Book: /_book.yaml
 </table>
 
 ### Peripheral_StartAdvertising_Response {:#Peripheral_StartAdvertising_Response}
-*Defined in [fuchsia.bluetooth.le/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
+*generated*
 
 
 
@@ -921,7 +921,7 @@ Type: <code>uint8</code>
 ## **UNIONS**
 
 ### Peripheral_StartAdvertising_Result {:#Peripheral_StartAdvertising_Result}
-*Defined in [fuchsia.bluetooth.le/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
+*generated*
 
 
 <table>

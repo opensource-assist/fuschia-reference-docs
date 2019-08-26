@@ -444,7 +444,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Accessibility_Watch_Response {:#Accessibility_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -462,7 +462,7 @@ Book: /_book.yaml
 </table>
 
 ### Accessibility_Set_Response {:#Accessibility_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*generated*
 
 
 
@@ -473,7 +473,7 @@ Book: /_book.yaml
 </table>
 
 ### Audio_Watch_Response {:#Audio_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
+*generated*
 
 
 
@@ -491,7 +491,7 @@ Book: /_book.yaml
 </table>
 
 ### Audio_Set_Response {:#Audio_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
+*generated*
 
 
 
@@ -502,7 +502,7 @@ Book: /_book.yaml
 </table>
 
 ### Display_Watch_Response {:#Display_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#30)*
+*generated*
 
 
 
@@ -520,7 +520,7 @@ Book: /_book.yaml
 </table>
 
 ### Display_Set_Response {:#Display_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
+*generated*
 
 
 
@@ -531,7 +531,7 @@ Book: /_book.yaml
 </table>
 
 ### DoNotDisturb_Set_Response {:#DoNotDisturb_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#46)*
+*generated*
 
 
 
@@ -542,7 +542,7 @@ Book: /_book.yaml
 </table>
 
 ### Intl_Watch_Response {:#Intl_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#53)*
+*generated*
 
 
 
@@ -560,7 +560,7 @@ Book: /_book.yaml
 </table>
 
 ### Intl_Set_Response {:#Intl_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#60)*
+*generated*
 
 
 
@@ -571,7 +571,7 @@ Book: /_book.yaml
 </table>
 
 ### Privacy_Watch_Response {:#Privacy_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#67)*
+*generated*
 
 
 
@@ -589,7 +589,7 @@ Book: /_book.yaml
 </table>
 
 ### Privacy_Set_Response {:#Privacy_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#74)*
+*generated*
 
 
 
@@ -600,7 +600,7 @@ Book: /_book.yaml
 </table>
 
 ### Setup_Set_Response {:#Setup_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#83)*
+*generated*
 
 
 
@@ -611,7 +611,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Watch_Response {:#System_Watch_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#90)*
+*generated*
 
 
 
@@ -629,7 +629,7 @@ Book: /_book.yaml
 </table>
 
 ### System_Set_Response {:#System_Set_Response}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#97)*
+*generated*
 
 
 
@@ -1226,7 +1226,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Accessibility_Watch_Result {:#Accessibility_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>
@@ -1245,7 +1245,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Accessibility_Set_Result {:#Accessibility_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+*generated*
 
 
 <table>
@@ -1264,7 +1264,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Audio_Watch_Result {:#Audio_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
+*generated*
 
 
 <table>
@@ -1283,7 +1283,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Audio_Set_Result {:#Audio_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
+*generated*
 
 
 <table>
@@ -1302,7 +1302,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Display_Watch_Result {:#Display_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#33)*
+*generated*
 
 
 <table>
@@ -1321,7 +1321,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Display_Set_Result {:#Display_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#40)*
+*generated*
 
 
 <table>
@@ -1340,7 +1340,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### DoNotDisturb_Set_Result {:#DoNotDisturb_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#49)*
+*generated*
 
 
 <table>
@@ -1359,7 +1359,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Intl_Watch_Result {:#Intl_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#56)*
+*generated*
 
 
 <table>
@@ -1378,7 +1378,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Intl_Set_Result {:#Intl_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#63)*
+*generated*
 
 
 <table>
@@ -1397,7 +1397,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Privacy_Watch_Result {:#Privacy_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#70)*
+*generated*
 
 
 <table>
@@ -1416,7 +1416,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Privacy_Set_Result {:#Privacy_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#77)*
+*generated*
 
 
 <table>
@@ -1435,7 +1435,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Setup_Set_Result {:#Setup_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#86)*
+*generated*
 
 
 <table>
@@ -1454,7 +1454,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### System_Watch_Result {:#System_Watch_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#93)*
+*generated*
 
 
 <table>
@@ -1473,7 +1473,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### System_Set_Result {:#System_Set_Result}
-*Defined in [fuchsia.settings/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#100)*
+*generated*
 
 
 <table>

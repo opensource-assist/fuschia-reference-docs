@@ -242,7 +242,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Engine_TestApply_Response {:#Engine_TestApply_Response}
-*Defined in [fuchsia.pkg.rewrite/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 
@@ -366,7 +366,7 @@ Book: /_book.yaml
 ## **UNIONS**
 
 ### Engine_TestApply_Result {:#Engine_TestApply_Result}
-*Defined in [fuchsia.pkg.rewrite/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#8)*
+*generated*
 
 
 <table>

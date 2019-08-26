@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## GainControl {:#GainControl}
-*Defined in [fuchsia.media.audio/gain_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#16)*
+*Defined in [fuchsia.media.audio/gain_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#17)*
 
  Enables control and monitoring of audio gain. This interface is typically
  a tear-off of other interfaces. For example, `fuchsia.media.audio.Renderer`
@@ -130,6 +130,81 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## VolumeControl {:#VolumeControl}
+*Defined in [fuchsia.media.audio/volume_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#4)*
+
+ A protocol for controlling volume.
+
+### SetVolume {:#SetVolume}
+
+ Sets the volume of the audio element to the given value in
+ [0.0, 1.0]. If the value is provided is outside of [0.0, 1.0],
+ the value is clamped before application.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>volume</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+        </tr></table>
+
+
+
+### SetMute {:#SetMute}
+
+ Sets whether the controlled element is muted. Mute is not the same
+ as setting volume to 0.0; volume will persist for the duration of
+ a mute. If volume was 0.5 before mute, volume will resume at 0.5
+ following unmute.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>mute</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+
+
+### OnVolumeMuteChanged {:#OnVolumeMuteChanged}
+
+ Emitted when the volume or mute state of the audio element changes.
+
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>new_volume</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+        </tr><tr>
+            <td><code>new_muted</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+### NotifyVolumeMuteChangedHandled {:#NotifyVolumeMuteChangedHandled}
+
+ Acknowledges receipt of a volume or mute change event. Clients must
+ acknowledge receipt to continue receiving events.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+
 
 
 
@@ -139,7 +214,7 @@ Book: /_book.yaml
 ### RampType {:#RampType}
 Type: <code>uint16</code>
 
-*Defined in [fuchsia.media.audio/gain_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#82)*
+*Defined in [fuchsia.media.audio/gain_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#83)*
 
  Enumerates gain control ramp types.
 
@@ -165,7 +240,7 @@ Type: <code>uint16</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#76">MUTED_GAIN_DB</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#77">MUTED_GAIN_DB</a></td>
             <td>
                     <code>-160</code>
                 </td>
@@ -175,7 +250,7 @@ Type: <code>uint16</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#79">MAX_GAIN_DB</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#80">MAX_GAIN_DB</a></td>
             <td>
                     <code>24</code>
                 </td>

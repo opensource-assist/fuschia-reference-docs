@@ -283,7 +283,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Publisher_PublishServiceInstance_Response {:#Publisher_PublishServiceInstance_Response}
-*Defined in [fuchsia.net.mdns/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 
@@ -468,7 +468,7 @@ Type: <code>int32</code>
 ## **UNIONS**
 
 ### Publisher_PublishServiceInstance_Result {:#Publisher_PublishServiceInstance_Result}
-*Defined in [fuchsia.net.mdns/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#8)*
+*generated*
 
 
 <table>

@@ -51,7 +51,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### ComponentIndex_FuzzySearch_Response {:#ComponentIndex_FuzzySearch_Response}
-*Defined in [fuchsia.sys.index/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -94,7 +94,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### ComponentIndex_FuzzySearch_Result {:#ComponentIndex_FuzzySearch_Result}
-*Defined in [fuchsia.sys.index/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>

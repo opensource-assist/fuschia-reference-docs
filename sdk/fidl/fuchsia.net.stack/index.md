@@ -407,7 +407,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Stack_EnablePacketFilter_Response {:#Stack_EnablePacketFilter_Response}
-*Defined in [fuchsia.net.stack/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
+*generated*
 
 
 
@@ -418,7 +418,7 @@ Book: /_book.yaml
 </table>
 
 ### Stack_DisablePacketFilter_Response {:#Stack_DisablePacketFilter_Response}
-*Defined in [fuchsia.net.stack/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#31)*
+*generated*
 
 
 
@@ -750,7 +750,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Stack_EnablePacketFilter_Result {:#Stack_EnablePacketFilter_Result}
-*Defined in [fuchsia.net.stack/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+*generated*
 
 
 <table>
@@ -769,7 +769,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Stack_DisablePacketFilter_Result {:#Stack_DisablePacketFilter_Result}
-*Defined in [fuchsia.net.stack/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
+*generated*
 
 
 <table>

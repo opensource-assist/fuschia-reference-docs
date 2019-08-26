@@ -217,7 +217,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Controller_Initialize_Response {:#Controller_Initialize_Response}
-*Defined in [fuchsia.perfmon.cpu/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#4)*
+*generated*
 
 
 
@@ -228,7 +228,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_StageConfig_Response {:#Controller_StageConfig_Response}
-*Defined in [fuchsia.perfmon.cpu/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#15)*
+*generated*
 
 
 
@@ -239,7 +239,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_Start_Response {:#Controller_Start_Response}
-*Defined in [fuchsia.perfmon.cpu/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
+*generated*
 
 
 
@@ -452,7 +452,7 @@ Book: /_book.yaml
 ## **UNIONS**
 
 ### Controller_Initialize_Result {:#Controller_Initialize_Result}
-*Defined in [fuchsia.perfmon.cpu/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#7)*
+*generated*
 
 
 <table>
@@ -471,7 +471,7 @@ Book: /_book.yaml
         </tr></table>
 
 ### Controller_StageConfig_Result {:#Controller_StageConfig_Result}
-*Defined in [fuchsia.perfmon.cpu/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#18)*
+*generated*
 
 
 <table>
@@ -490,7 +490,7 @@ Book: /_book.yaml
         </tr></table>
 
 ### Controller_Start_Result {:#Controller_Start_Result}
-*Defined in [fuchsia.perfmon.cpu/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#29)*
+*generated*
 
 
 <table>

@@ -35,7 +35,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Manager_Gc_Response {:#Manager_Gc_Response}
-*Defined in [fuchsia.space/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -70,7 +70,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Manager_Gc_Result {:#Manager_Gc_Result}
-*Defined in [fuchsia.space/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>

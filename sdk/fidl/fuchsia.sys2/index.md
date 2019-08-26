@@ -647,7 +647,7 @@ Book: /_book.yaml
 </table>
 
 ### Realm_BindChild_Response {:#Realm_BindChild_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -658,7 +658,7 @@ Book: /_book.yaml
 </table>
 
 ### Realm_CreateChild_Response {:#Realm_CreateChild_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*generated*
 
 
 
@@ -669,7 +669,7 @@ Book: /_book.yaml
 </table>
 
 ### Realm_DestroyChild_Response {:#Realm_DestroyChild_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
+*generated*
 
 
 
@@ -680,7 +680,7 @@ Book: /_book.yaml
 </table>
 
 ### Realm_ListChildren_Response {:#Realm_ListChildren_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
+*generated*
 
 
 
@@ -734,7 +734,7 @@ Book: /_book.yaml
 </table>
 
 ### WorkScheduler_ScheduleWork_Response {:#WorkScheduler_ScheduleWork_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#39)*
+*generated*
 
 
 
@@ -745,7 +745,7 @@ Book: /_book.yaml
 </table>
 
 ### WorkScheduler_CancelWork_Response {:#WorkScheduler_CancelWork_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#46)*
+*generated*
 
 
 
@@ -756,7 +756,7 @@ Book: /_book.yaml
 </table>
 
 ### Worker_DoWork_Response {:#Worker_DoWork_Response}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#53)*
+*generated*
 
 
 
@@ -1767,7 +1767,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Realm_BindChild_Result {:#Realm_BindChild_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>
@@ -1786,7 +1786,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Realm_CreateChild_Result {:#Realm_CreateChild_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+*generated*
 
 
 <table>
@@ -1805,7 +1805,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Realm_DestroyChild_Result {:#Realm_DestroyChild_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
+*generated*
 
 
 <table>
@@ -1824,7 +1824,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Realm_ListChildren_Result {:#Realm_ListChildren_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
+*generated*
 
 
 <table>
@@ -1843,7 +1843,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### WorkScheduler_ScheduleWork_Result {:#WorkScheduler_ScheduleWork_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#42)*
+*generated*
 
 
 <table>
@@ -1862,7 +1862,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### WorkScheduler_CancelWork_Result {:#WorkScheduler_CancelWork_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#49)*
+*generated*
 
 
 <table>
@@ -1881,7 +1881,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Worker_DoWork_Result {:#Worker_DoWork_Result}
-*Defined in [fuchsia.sys2/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#56)*
+*generated*
 
 
 <table>
