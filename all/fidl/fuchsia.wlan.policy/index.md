@@ -335,7 +335,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### ClientController_SaveNetwork_Response {:#ClientController_SaveNetwork_Response}
-*Defined in [fuchsia.wlan.policy/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*generated*
 
 
 
@@ -346,7 +346,7 @@ Book: /_book.yaml
 </table>
 
 ### ClientController_RemoveNetwork_Response {:#ClientController_RemoveNetwork_Response}
-*Defined in [fuchsia.wlan.policy/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
+*generated*
 
 
 
@@ -357,7 +357,7 @@ Book: /_book.yaml
 </table>
 
 ### ScanResultIterator_GetNext_Response {:#ScanResultIterator_GetNext_Response}
-*Defined in [fuchsia.wlan.policy/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
+*generated*
 
 
 
@@ -773,7 +773,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### ClientController_SaveNetwork_Result {:#ClientController_SaveNetwork_Result}
-*Defined in [fuchsia.wlan.policy/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+*generated*
 
 
 <table>
@@ -792,7 +792,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### ClientController_RemoveNetwork_Result {:#ClientController_RemoveNetwork_Result}
-*Defined in [fuchsia.wlan.policy/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
+*generated*
 
 
 <table>
@@ -811,7 +811,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### ScanResultIterator_GetNext_Result {:#ScanResultIterator_GetNext_Result}
-*Defined in [fuchsia.wlan.policy/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#29)*
+*generated*
 
 
 <table>

@@ -161,7 +161,7 @@ Book: /_book.yaml
     <tr>
             <td><code>services</code></td>
             <td>
-                <code>request&lt;<a class='link' href='#ServiceProvider'>ServiceProvider</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Provider'>Provider</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -286,7 +286,7 @@ Book: /_book.yaml
 
 
 
-## ServiceProvider {:#ServiceProvider}
+## Provider {:#Provider}
 *Defined in [test.fidlcat.sys/sys.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/sys.test.fidl#375)*
 
 
@@ -544,7 +544,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>provider</code></td>
             <td>
-                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a>?</code>
+                <code><a class='link' href='#Provider'>Provider</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -711,7 +711,7 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/sys.test.fidl#113">kLabelMaxLength</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/sys.test.fidl#113">LABEL_MAX_LENGTH</a></td>
             <td>
                     <code>32</code>
                 </td>

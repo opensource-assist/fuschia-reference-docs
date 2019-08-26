@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## ModulePackageIndexer {:#ModulePackageIndexer}
-*Defined in [fuchsia.maxwell.internal/module_package_indexer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/module_manifest_source/fidl/module_package_indexer.fidl#8)*
+*Defined in [fuchsia.maxwell.internal/module_package_indexer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/module_manifest_source/fidl/module_package_indexer.fidl#8)*
 
 
 ### IndexManifest {:#IndexManifest}

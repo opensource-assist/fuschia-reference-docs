@@ -152,7 +152,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Engine_Enqueue_Response {:#Engine_Enqueue_Response}
-*Defined in [fuchsia.accessibility.tts/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -163,7 +163,7 @@ Book: /_book.yaml
 </table>
 
 ### Engine_Speak_Response {:#Engine_Speak_Response}
-*Defined in [fuchsia.accessibility.tts/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*generated*
 
 
 
@@ -174,7 +174,7 @@ Book: /_book.yaml
 </table>
 
 ### TtsManager_OpenEngine_Response {:#TtsManager_OpenEngine_Response}
-*Defined in [fuchsia.accessibility.tts/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#18)*
+*generated*
 
 
 
@@ -185,7 +185,7 @@ Book: /_book.yaml
 </table>
 
 ### EngineRegistry_RegisterEngine_Response {:#EngineRegistry_RegisterEngine_Response}
-*Defined in [fuchsia.accessibility.tts/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#25)*
+*generated*
 
 
 
@@ -286,7 +286,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Engine_Enqueue_Result {:#Engine_Enqueue_Result}
-*Defined in [fuchsia.accessibility.tts/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>
@@ -305,7 +305,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Engine_Speak_Result {:#Engine_Speak_Result}
-*Defined in [fuchsia.accessibility.tts/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+*generated*
 
 
 <table>
@@ -324,7 +324,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### TtsManager_OpenEngine_Result {:#TtsManager_OpenEngine_Result}
-*Defined in [fuchsia.accessibility.tts/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#21)*
+*generated*
 
 
 <table>
@@ -343,7 +343,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### EngineRegistry_RegisterEngine_Result {:#EngineRegistry_RegisterEngine_Result}
-*Defined in [fuchsia.accessibility.tts/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#28)*
+*generated*
 
 
 <table>

@@ -1089,7 +1089,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Page_CreateReferenceFromSocket_Response {:#Page_CreateReferenceFromSocket_Response}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#15)*
+*generated*
 
 
 
@@ -1107,7 +1107,7 @@ Book: /_book.yaml
 </table>
 
 ### Page_CreateReferenceFromBuffer_Response {:#Page_CreateReferenceFromBuffer_Response}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#22)*
+*generated*
 
 
 
@@ -1125,7 +1125,7 @@ Book: /_book.yaml
 </table>
 
 ### PageSnapshot_Get_Response {:#PageSnapshot_Get_Response}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#41)*
+*generated*
 
 
 
@@ -1143,7 +1143,7 @@ Book: /_book.yaml
 </table>
 
 ### PageSnapshot_GetInline_Response {:#PageSnapshot_GetInline_Response}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
+*generated*
 
 
 
@@ -1161,7 +1161,7 @@ Book: /_book.yaml
 </table>
 
 ### PageSnapshot_Fetch_Response {:#PageSnapshot_Fetch_Response}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#55)*
+*generated*
 
 
 
@@ -1179,7 +1179,7 @@ Book: /_book.yaml
 </table>
 
 ### PageSnapshot_FetchPartial_Response {:#PageSnapshot_FetchPartial_Response}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
+*generated*
 
 
 
@@ -1675,7 +1675,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Page_CreateReferenceFromSocket_Result {:#Page_CreateReferenceFromSocket_Result}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#18)*
+*generated*
 
 
 <table>
@@ -1694,7 +1694,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Page_CreateReferenceFromBuffer_Result {:#Page_CreateReferenceFromBuffer_Result}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#25)*
+*generated*
 
 
 <table>
@@ -1713,7 +1713,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### PageSnapshot_Get_Result {:#PageSnapshot_Get_Result}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#44)*
+*generated*
 
 
 <table>
@@ -1732,7 +1732,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### PageSnapshot_GetInline_Result {:#PageSnapshot_GetInline_Result}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#51)*
+*generated*
 
 
 <table>
@@ -1751,7 +1751,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### PageSnapshot_Fetch_Result {:#PageSnapshot_Fetch_Result}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#58)*
+*generated*
 
 
 <table>
@@ -1770,7 +1770,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### PageSnapshot_FetchPartial_Result {:#PageSnapshot_FetchPartial_Result}
-*Defined in [fuchsia.ledger/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#65)*
+*generated*
 
 
 <table>

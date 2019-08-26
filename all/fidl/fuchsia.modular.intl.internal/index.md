@@ -9,7 +9,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### RawProfileData {:#RawProfileData}
-*Defined in [fuchsia.modular.intl.internal/internal.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/bin/basemgr/intl_property_provider_impl/internal.fidl#12)*
+*Defined in [fuchsia.modular.intl.internal/internal.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/bin/basemgr/intl_property_provider_impl/internal.fidl#12)*
 
 
 

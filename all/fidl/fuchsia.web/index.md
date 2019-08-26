@@ -935,7 +935,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Context_GetRemoteDebuggingPort_Response {:#Context_GetRemoteDebuggingPort_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 
@@ -953,7 +953,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_ExecuteJavaScript_Response {:#Frame_ExecuteJavaScript_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#23)*
+*generated*
 
 
 
@@ -971,7 +971,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_ExecuteJavaScriptNoResult_Response {:#Frame_ExecuteJavaScriptNoResult_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#30)*
+*generated*
 
 
 
@@ -982,7 +982,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_AddBeforeLoadJavaScript_Response {:#Frame_AddBeforeLoadJavaScript_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#37)*
+*generated*
 
 
 
@@ -993,7 +993,7 @@ Book: /_book.yaml
 </table>
 
 ### Frame_PostMessage_Response {:#Frame_PostMessage_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#45)*
+*generated*
 
 
 
@@ -1004,7 +1004,7 @@ Book: /_book.yaml
 </table>
 
 ### MessagePort_PostMessage_Response {:#MessagePort_PostMessage_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#62)*
+*generated*
 
 
 
@@ -1015,7 +1015,7 @@ Book: /_book.yaml
 </table>
 
 ### NavigationController_LoadUrl_Response {:#NavigationController_LoadUrl_Response}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#75)*
+*generated*
 
 
 
@@ -1684,7 +1684,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Context_GetRemoteDebuggingPort_Result {:#Context_GetRemoteDebuggingPort_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#8)*
+*generated*
 
 
 <table>
@@ -1703,7 +1703,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Frame_ExecuteJavaScript_Result {:#Frame_ExecuteJavaScript_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#26)*
+*generated*
 
 
 <table>
@@ -1722,7 +1722,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Frame_ExecuteJavaScriptNoResult_Result {:#Frame_ExecuteJavaScriptNoResult_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#33)*
+*generated*
 
 
 <table>
@@ -1741,7 +1741,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Frame_AddBeforeLoadJavaScript_Result {:#Frame_AddBeforeLoadJavaScript_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#40)*
+*generated*
 
 
 <table>
@@ -1760,7 +1760,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Frame_PostMessage_Result {:#Frame_PostMessage_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
+*generated*
 
 
 <table>
@@ -1779,7 +1779,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### MessagePort_PostMessage_Result {:#MessagePort_PostMessage_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#65)*
+*generated*
 
 
 <table>
@@ -1798,7 +1798,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### NavigationController_LoadUrl_Result {:#NavigationController_LoadUrl_Result}
-*Defined in [fuchsia.web/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#78)*
+*generated*
 
 
 <table>

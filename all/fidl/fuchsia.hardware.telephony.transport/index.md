@@ -86,7 +86,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Qmi_SetChannel_Response {:#Qmi_SetChannel_Response}
-*Defined in [fuchsia.hardware.telephony.transport/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -97,7 +97,7 @@ Book: /_book.yaml
 </table>
 
 ### Qmi_SetSnoopChannel_Response {:#Qmi_SetSnoopChannel_Response}
-*Defined in [fuchsia.hardware.telephony.transport/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#11)*
+*generated*
 
 
 
@@ -116,7 +116,7 @@ Book: /_book.yaml
 ## **UNIONS**
 
 ### Qmi_SetChannel_Result {:#Qmi_SetChannel_Result}
-*Defined in [fuchsia.hardware.telephony.transport/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>
@@ -135,7 +135,7 @@ Book: /_book.yaml
         </tr></table>
 
 ### Qmi_SetSnoopChannel_Result {:#Qmi_SetSnoopChannel_Result}
-*Defined in [fuchsia.hardware.telephony.transport/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#14)*
+*generated*
 
 
 <table>

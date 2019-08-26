@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## TerminateService {:#TerminateService}
-*Defined in [test.peridot.lib.fidl.appclient/app_client_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/app_client_unittest.fidl#10)*
+*Defined in [test.peridot.lib.fidl.appclient/app_client_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/app_client_unittest.fidl#10)*
 
 
 ### Terminate {:#Terminate}

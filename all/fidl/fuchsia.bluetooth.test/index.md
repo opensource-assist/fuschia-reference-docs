@@ -150,7 +150,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### HciEmulator_Publish_Response {:#HciEmulator_Publish_Response}
-*Defined in [fuchsia.bluetooth.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -161,7 +161,7 @@ Book: /_book.yaml
 </table>
 
 ### HciEmulator_AddPeer_Response {:#HciEmulator_AddPeer_Response}
-*Defined in [fuchsia.bluetooth.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*generated*
 
 
 
@@ -179,7 +179,7 @@ Book: /_book.yaml
 </table>
 
 ### HciEmulator_RemovePeer_Response {:#HciEmulator_RemovePeer_Response}
-*Defined in [fuchsia.bluetooth.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
+*generated*
 
 
 
@@ -889,7 +889,7 @@ Type: <code>uint8</code>
 ## **UNIONS**
 
 ### HciEmulator_Publish_Result {:#HciEmulator_Publish_Result}
-*Defined in [fuchsia.bluetooth.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>
@@ -908,7 +908,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### HciEmulator_AddPeer_Result {:#HciEmulator_AddPeer_Result}
-*Defined in [fuchsia.bluetooth.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+*generated*
 
 
 <table>
@@ -927,7 +927,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### HciEmulator_RemovePeer_Result {:#HciEmulator_RemovePeer_Result}
-*Defined in [fuchsia.bluetooth.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
+*generated*
 
 
 <table>

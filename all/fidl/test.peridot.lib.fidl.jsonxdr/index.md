@@ -9,7 +9,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### RequiredData {:#RequiredData}
-*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/json_xdr_unittest.fidl#7)*
+*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/json_xdr_unittest.fidl#7)*
 
 
 
@@ -125,7 +125,7 @@ Book: /_book.yaml
 </table>
 
 ### OptionalData {:#OptionalData}
-*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/json_xdr_unittest.fidl#25)*
+*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/json_xdr_unittest.fidl#25)*
 
 
 
@@ -157,7 +157,7 @@ Book: /_book.yaml
 </table>
 
 ### RequiredRepeatedRequiredData {:#RequiredRepeatedRequiredData}
-*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/json_xdr_unittest.fidl#31)*
+*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/json_xdr_unittest.fidl#31)*
 
 
 
@@ -273,7 +273,7 @@ Book: /_book.yaml
 </table>
 
 ### RequiredRepeatedOptionalData {:#RequiredRepeatedOptionalData}
-*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/json_xdr_unittest.fidl#49)*
+*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/json_xdr_unittest.fidl#49)*
 
 
 
@@ -305,7 +305,7 @@ Book: /_book.yaml
 </table>
 
 ### OptionalRepeatedRequiredData {:#OptionalRepeatedRequiredData}
-*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/json_xdr_unittest.fidl#58)*
+*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/json_xdr_unittest.fidl#58)*
 
 
 
@@ -421,7 +421,7 @@ Book: /_book.yaml
 </table>
 
 ### OptionalRepeatedOptionalData {:#OptionalRepeatedOptionalData}
-*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/json_xdr_unittest.fidl#76)*
+*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/json_xdr_unittest.fidl#76)*
 
 
 
@@ -453,7 +453,7 @@ Book: /_book.yaml
 </table>
 
 ### ArrayData {:#ArrayData}
-*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/json_xdr_unittest.fidl#82)*
+*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/json_xdr_unittest.fidl#82)*
 
 
 
@@ -569,7 +569,7 @@ Book: /_book.yaml
 </table>
 
 ### Struct {:#Struct}
-*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/json_xdr_unittest.fidl#103)*
+*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/json_xdr_unittest.fidl#103)*
 
 
 
@@ -593,7 +593,7 @@ Book: /_book.yaml
 ### Enum {:#Enum}
 Type: <code>uint32</code>
 
-*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/json_xdr_unittest.fidl#107)*
+*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/json_xdr_unittest.fidl#107)*
 
 
 
@@ -619,7 +619,7 @@ Type: <code>uint32</code>
 ### FillWithDefaultValues {:#FillWithDefaultValues}
 
 
-*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/json_xdr_unittest.fidl#121)*
+*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/json_xdr_unittest.fidl#121)*
 
 
 
@@ -730,7 +730,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Union {:#Union}
-*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/peridot/lib/fidl/json_xdr_unittest.fidl#114)*
+*Defined in [test.peridot.lib.fidl.jsonxdr/json_xdr_unittest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/modular/lib/fidl/json_xdr_unittest.fidl#114)*
 
 
 <table>

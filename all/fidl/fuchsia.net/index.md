@@ -89,63 +89,12 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-## SocketProvider {:#SocketProvider}
-*Defined in [fuchsia.net/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net/socket.fidl#48)*
-
- SocketProvider implements the POSIX sockets API.
-
-### GetAddrInfo {:#GetAddrInfo}
-
- Retrieves information about the address of a node and/or service. The number of valid
- results in `res` is given by the `count` return value.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>node</code></td>
-            <td>
-                <code>string[256]?</code>
-            </td>
-        </tr><tr>
-            <td><code>service</code></td>
-            <td>
-                <code>string[256]?</code>
-            </td>
-        </tr><tr>
-            <td><code>hints</code></td>
-            <td>
-                <code><a class='link' href='#AddrInfoHints'>AddrInfoHints</a>?</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code><a class='link' href='#AddrInfoStatus'>AddrInfoStatus</a></code>
-            </td>
-        </tr><tr>
-            <td><code>nres</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>res</code></td>
-            <td>
-                <code>[4]</code>
-            </td>
-        </tr></table>
-
 
 
 ## **STRUCTS**
 
 ### NameLookup_LookupIp_Response {:#NameLookup_LookupIp_Response}
-*Defined in [fuchsia.net/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#3)*
+*generated*
 
 
 
@@ -163,7 +112,7 @@ Book: /_book.yaml
 </table>
 
 ### NameLookup_LookupHostname_Response {:#NameLookup_LookupHostname_Response}
-*Defined in [fuchsia.net/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#10)*
+*generated*
 
 
 
@@ -337,123 +286,6 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### AddrInfoHints {:#AddrInfoHints}
-*Defined in [fuchsia.net/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net/socket.fidl#25)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>flags</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>family</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>sock_type</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>protocol</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### AddrStorage {:#AddrStorage}
-*Defined in [fuchsia.net/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net/socket.fidl#32)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>val</code></td>
-            <td>
-                <code>uint8[16]</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>len</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### AddrInfo {:#AddrInfo}
-*Defined in [fuchsia.net/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net/socket.fidl#37)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>flags</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>family</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>sock_type</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>protocol</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>addr</code></td>
-            <td>
-                <code><a class='link' href='#AddrStorage'>AddrStorage</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>port</code></td>
-            <td>
-                <code>uint16</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
 
 
 ## **ENUMS**
@@ -484,48 +316,6 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### AddrInfoStatus {:#AddrInfoStatus}
-Type: <code>uint32</code>
-
-*Defined in [fuchsia.net/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net/socket.fidl#7)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>ok</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>bad_flags</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>no_name</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>again</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>fail</code></td>
-            <td><code>4</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>no_data</code></td>
-            <td><code>5</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>buffer_overflow</code></td>
-            <td><code>6</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>system_error</code></td>
-            <td><code>7</code></td>
-            <td></td>
-        </tr></table>
-
 
 
 
@@ -533,7 +323,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### NameLookup_LookupIp_Result {:#NameLookup_LookupIp_Result}
-*Defined in [fuchsia.net/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#6)*
+*generated*
 
 
 <table>
@@ -552,7 +342,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### NameLookup_LookupHostname_Result {:#NameLookup_LookupHostname_Result}
-*Defined in [fuchsia.net/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#13)*
+*generated*
 
 
 <table>

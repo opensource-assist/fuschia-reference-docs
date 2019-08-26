@@ -309,7 +309,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Controller_Initialize_Response {:#Controller_Initialize_Response}
-*Defined in [fuchsia.hardware.cpu.insntrace/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -320,7 +320,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_Terminate_Response {:#Controller_Terminate_Response}
-*Defined in [fuchsia.hardware.cpu.insntrace/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*generated*
 
 
 
@@ -331,7 +331,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_AllocateBuffer_Response {:#Controller_AllocateBuffer_Response}
-*Defined in [fuchsia.hardware.cpu.insntrace/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#18)*
+*generated*
 
 
 
@@ -349,7 +349,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_AssignThreadBuffer_Response {:#Controller_AssignThreadBuffer_Response}
-*Defined in [fuchsia.hardware.cpu.insntrace/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#25)*
+*generated*
 
 
 
@@ -360,7 +360,7 @@ Book: /_book.yaml
 </table>
 
 ### Controller_ReleaseThreadBuffer_Response {:#Controller_ReleaseThreadBuffer_Response}
-*Defined in [fuchsia.hardware.cpu.insntrace/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#32)*
+*generated*
 
 
 
@@ -547,7 +547,7 @@ Type: <code>uint8</code>
 ## **UNIONS**
 
 ### Controller_Initialize_Result {:#Controller_Initialize_Result}
-*Defined in [fuchsia.hardware.cpu.insntrace/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>
@@ -566,7 +566,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_Terminate_Result {:#Controller_Terminate_Result}
-*Defined in [fuchsia.hardware.cpu.insntrace/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+*generated*
 
 
 <table>
@@ -585,7 +585,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_AllocateBuffer_Result {:#Controller_AllocateBuffer_Result}
-*Defined in [fuchsia.hardware.cpu.insntrace/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#21)*
+*generated*
 
 
 <table>
@@ -604,7 +604,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_AssignThreadBuffer_Result {:#Controller_AssignThreadBuffer_Result}
-*Defined in [fuchsia.hardware.cpu.insntrace/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#28)*
+*generated*
 
 
 <table>
@@ -623,7 +623,7 @@ Type: <code>uint8</code>
         </tr></table>
 
 ### Controller_ReleaseThreadBuffer_Result {:#Controller_ReleaseThreadBuffer_Result}
-*Defined in [fuchsia.hardware.cpu.insntrace/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#35)*
+*generated*
 
 
 <table>

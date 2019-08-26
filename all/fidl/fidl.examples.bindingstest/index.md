@@ -697,7 +697,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### TestServer_ReplyWithErrorZero_Response {:#TestServer_ReplyWithErrorZero_Response}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#36)*
+*generated*
 
 
 
@@ -708,7 +708,7 @@ Book: /_book.yaml
 </table>
 
 ### TestServer_ReplyWithErrorOne_Response {:#TestServer_ReplyWithErrorOne_Response}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#43)*
+*generated*
 
 
 
@@ -726,7 +726,7 @@ Book: /_book.yaml
 </table>
 
 ### TestServer_ReplyWithErrorMore_Response {:#TestServer_ReplyWithErrorMore_Response}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#50)*
+*generated*
 
 
 
@@ -751,7 +751,7 @@ Book: /_book.yaml
 </table>
 
 ### TestServer_ReplyWithErrorEnumZero_Response {:#TestServer_ReplyWithErrorEnumZero_Response}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#57)*
+*generated*
 
 
 
@@ -762,7 +762,7 @@ Book: /_book.yaml
 </table>
 
 ### TestServer_ReplyWithErrorEnumOne_Response {:#TestServer_ReplyWithErrorEnumOne_Response}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#64)*
+*generated*
 
 
 
@@ -780,7 +780,7 @@ Book: /_book.yaml
 </table>
 
 ### TestServer_ReplyWithErrorEnumMore_Response {:#TestServer_ReplyWithErrorEnumMore_Response}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#71)*
+*generated*
 
 
 
@@ -1321,7 +1321,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### TestServer_ReplyWithErrorZero_Result {:#TestServer_ReplyWithErrorZero_Result}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#39)*
+*generated*
 
 
 <table>
@@ -1340,7 +1340,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### TestServer_ReplyWithErrorOne_Result {:#TestServer_ReplyWithErrorOne_Result}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#46)*
+*generated*
 
 
 <table>
@@ -1359,7 +1359,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### TestServer_ReplyWithErrorMore_Result {:#TestServer_ReplyWithErrorMore_Result}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#53)*
+*generated*
 
 
 <table>
@@ -1378,7 +1378,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### TestServer_ReplyWithErrorEnumZero_Result {:#TestServer_ReplyWithErrorEnumZero_Result}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#60)*
+*generated*
 
 
 <table>
@@ -1397,7 +1397,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### TestServer_ReplyWithErrorEnumOne_Result {:#TestServer_ReplyWithErrorEnumOne_Result}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#67)*
+*generated*
 
 
 <table>
@@ -1416,7 +1416,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### TestServer_ReplyWithErrorEnumMore_Result {:#TestServer_ReplyWithErrorEnumMore_Result}
-*Defined in [fidl.examples.bindingstest/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#74)*
+*generated*
 
 
 <table>

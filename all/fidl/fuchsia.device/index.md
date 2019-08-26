@@ -298,6 +298,74 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### Suspend {:#Suspend}
+
+ Transition this device from a working to a sleep state or from a sleep state to a deeper sleep
+ state. TODO(ravoorir): At the moment, this will call the suspend hook only on this device.
+ In a future change, this api will result in suspend hook being called on all the children and
+ descendants before transitioning this device.
+ On success, the out_state is same as requested_state.
+ On failure, the out_state is the state the device can go into at this point, depending
+ on the configuration of its children. For example, a device cannot go into the
+ requested_state, if the requested_state does not support a descendant's wake configuration.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requested_state</code></td>
+            <td>
+                <code><a class='link' href='#DevicePowerState'>DevicePowerState</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>out_state</code></td>
+            <td>
+                <code><a class='link' href='#DevicePowerState'>DevicePowerState</a></code>
+            </td>
+        </tr></table>
+
+### Resume {:#Resume}
+
+ Transition this device from a sleep state to a working state.
+ TODO(ravoorir): At the moment, this will call the resume hook only on this device.
+ In a future change, this api will result in resume hook being called on all the children
+ after the current device is transitioned.
+ On success, the out_state has the actual state of the device. The out_state could be
+ different from the requested_state, if the device could not resume to the requested
+ performant state, but the device could resume to a working state.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requested_state</code></td>
+            <td>
+                <code><a class='link' href='#DevicePowerState'>DevicePowerState</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_Resume_Result'>Controller_Resume_Result</a></code>
+            </td>
+        </tr></table>
+
 ## NameProvider {:#NameProvider}
 *Defined in [fuchsia.device/name-provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/name-provider.fidl#13)*
 
@@ -328,7 +396,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Controller_GetDevicePowerCaps_Response {:#Controller_GetDevicePowerCaps_Response}
-*Defined in [fuchsia.device/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
+*generated*
 
 
 
@@ -339,6 +407,24 @@ Book: /_book.yaml
             <td><code>dpstates</code></td>
             <td>
                 <code>[5]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Controller_Resume_Response {:#Controller_Resume_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>out_state</code></td>
+            <td>
+                <code><a class='link' href='#DevicePowerState'>DevicePowerState</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -396,7 +482,7 @@ Book: /_book.yaml
 </table>
 
 ### NameProvider_GetDeviceName_Response {:#NameProvider_GetDeviceName_Response}
-*Defined in [fuchsia.device/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#31)*
+*generated*
 
 
 
@@ -454,7 +540,7 @@ Type: <code>uint8</code>
 ## **UNIONS**
 
 ### Controller_GetDevicePowerCaps_Result {:#Controller_GetDevicePowerCaps_Result}
-*Defined in [fuchsia.device/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+*generated*
 
 
 <table>
@@ -472,8 +558,27 @@ Type: <code>uint8</code>
             <td></td>
         </tr></table>
 
+### Controller_Resume_Result {:#Controller_Resume_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_Resume_Response'>Controller_Resume_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### NameProvider_GetDeviceName_Result {:#NameProvider_GetDeviceName_Result}
-*Defined in [fuchsia.device/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#34)*
+*generated*
 
 
 <table>

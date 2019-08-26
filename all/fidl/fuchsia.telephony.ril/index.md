@@ -182,7 +182,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Setup_ConnectTransport_Response {:#Setup_ConnectTransport_Response}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#4)*
+*generated*
 
 
 
@@ -193,7 +193,7 @@ Book: /_book.yaml
 </table>
 
 ### RadioInterfaceLayer_GetDeviceIdentity_Response {:#RadioInterfaceLayer_GetDeviceIdentity_Response}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#11)*
+*generated*
 
 
 
@@ -211,7 +211,7 @@ Book: /_book.yaml
 </table>
 
 ### RadioInterfaceLayer_RadioPowerStatus_Response {:#RadioInterfaceLayer_RadioPowerStatus_Response}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#18)*
+*generated*
 
 
 
@@ -229,7 +229,7 @@ Book: /_book.yaml
 </table>
 
 ### RadioInterfaceLayer_StartNetwork_Response {:#RadioInterfaceLayer_StartNetwork_Response}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#25)*
+*generated*
 
 
 
@@ -247,7 +247,7 @@ Book: /_book.yaml
 </table>
 
 ### RadioInterfaceLayer_GetNetworkSettings_Response {:#RadioInterfaceLayer_GetNetworkSettings_Response}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#32)*
+*generated*
 
 
 
@@ -265,7 +265,7 @@ Book: /_book.yaml
 </table>
 
 ### RadioInterfaceLayer_GetSignalStrength_Response {:#RadioInterfaceLayer_GetSignalStrength_Response}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#39)*
+*generated*
 
 
 
@@ -390,7 +390,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Setup_ConnectTransport_Result {:#Setup_ConnectTransport_Result}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#7)*
+*generated*
 
 
 <table>
@@ -409,7 +409,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### RadioInterfaceLayer_GetDeviceIdentity_Result {:#RadioInterfaceLayer_GetDeviceIdentity_Result}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#14)*
+*generated*
 
 
 <table>
@@ -428,7 +428,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### RadioInterfaceLayer_RadioPowerStatus_Result {:#RadioInterfaceLayer_RadioPowerStatus_Result}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#21)*
+*generated*
 
 
 <table>
@@ -447,7 +447,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### RadioInterfaceLayer_StartNetwork_Result {:#RadioInterfaceLayer_StartNetwork_Result}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#28)*
+*generated*
 
 
 <table>
@@ -466,7 +466,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### RadioInterfaceLayer_GetNetworkSettings_Result {:#RadioInterfaceLayer_GetNetworkSettings_Result}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#35)*
+*generated*
 
 
 <table>
@@ -485,7 +485,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### RadioInterfaceLayer_GetSignalStrength_Result {:#RadioInterfaceLayer_GetSignalStrength_Result}
-*Defined in [fuchsia.telephony.ril/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#42)*
+*generated*
 
 
 <table>

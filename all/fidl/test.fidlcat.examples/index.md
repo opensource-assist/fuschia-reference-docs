@@ -19,7 +19,7 @@ Book: /_book.yaml
     <tr>
             <td><code>value</code></td>
             <td>
-                <code>string?</code>
+                <code>string[100]?</code>
             </td>
         </tr></table>
 
@@ -30,7 +30,7 @@ Book: /_book.yaml
     <tr>
             <td><code>response</code></td>
             <td>
-                <code>string?</code>
+                <code>string[100]?</code>
             </td>
         </tr></table>
 
@@ -57,7 +57,7 @@ Book: /_book.yaml
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>string</code>
+                <code>string[100]</code>
             </td>
         </tr></table>
 
@@ -257,7 +257,7 @@ Book: /_book.yaml
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>string</code>
+                <code>string[100]</code>
             </td>
         </tr><tr>
             <td><code>i32</code></td>
@@ -307,7 +307,7 @@ Book: /_book.yaml
     <tr>
             <td><code>v_1</code></td>
             <td>
-                <code>vector&lt;int32&gt;?</code>
+                <code>vector&lt;int32&gt;[10]?</code>
             </td>
         </tr></table>
 
@@ -342,7 +342,7 @@ Book: /_book.yaml
     <tr>
             <td><code>vec</code></td>
             <td>
-                <code>vector&lt;string&gt;</code>
+                <code>vector&lt;string&gt;[10]</code>
             </td>
         </tr><tr>
             <td><code>i32</code></td>
@@ -362,12 +362,12 @@ Book: /_book.yaml
     <tr>
             <td><code>v_1</code></td>
             <td>
-                <code>vector&lt;string&gt;</code>
+                <code>vector&lt;string&gt;[10]</code>
             </td>
         </tr><tr>
             <td><code>v_2</code></td>
             <td>
-                <code>vector&lt;string&gt;</code>
+                <code>vector&lt;string&gt;[10]</code>
             </td>
         </tr></table>
 
@@ -382,7 +382,7 @@ Book: /_book.yaml
     <tr>
             <td><code>v</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[100]</code>
             </td>
         </tr></table>
 
@@ -397,7 +397,7 @@ Book: /_book.yaml
     <tr>
             <td><code>v</code></td>
             <td>
-                <code>vector&lt;uint32&gt;</code>
+                <code>vector&lt;uint32&gt;[100]</code>
             </td>
         </tr></table>
 
@@ -412,7 +412,7 @@ Book: /_book.yaml
     <tr>
             <td><code>p</code></td>
             <td>
-                <code><a class='link' href='#primitive_types'>primitive_types</a></code>
+                <code><a class='link' href='#PrimitiveTypes'>PrimitiveTypes</a></code>
             </td>
         </tr></table>
 
@@ -427,7 +427,7 @@ Book: /_book.yaml
     <tr>
             <td><code>p</code></td>
             <td>
-                <code><a class='link' href='#primitive_types'>primitive_types</a>?</code>
+                <code><a class='link' href='#PrimitiveTypes'>PrimitiveTypes</a>?</code>
             </td>
         </tr></table>
 
@@ -442,7 +442,7 @@ Book: /_book.yaml
     <tr>
             <td><code>p</code></td>
             <td>
-                <code><a class='link' href='#primitive_types'>primitive_types</a>?</code>
+                <code><a class='link' href='#PrimitiveTypes'>PrimitiveTypes</a>?</code>
             </td>
         </tr><tr>
             <td><code>i</code></td>
@@ -462,7 +462,7 @@ Book: /_book.yaml
     <tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='#two_string_struct'>two_string_struct</a></code>
+                <code><a class='link' href='#TwoStringStruct'>TwoStringStruct</a></code>
             </td>
         </tr><tr>
             <td><code>i32</code></td>
@@ -482,7 +482,7 @@ Book: /_book.yaml
     <tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='#two_string_struct'>two_string_struct</a>?</code>
+                <code><a class='link' href='#TwoStringStruct'>TwoStringStruct</a>?</code>
             </td>
         </tr><tr>
             <td><code>i32</code></td>
@@ -502,7 +502,7 @@ Book: /_book.yaml
     <tr>
             <td><code>isu</code></td>
             <td>
-                <code><a class='link' href='#int_struct_union'>int_struct_union</a></code>
+                <code><a class='link' href='#IntStructUnion'>IntStructUnion</a></code>
             </td>
         </tr><tr>
             <td><code>i</code></td>
@@ -522,7 +522,7 @@ Book: /_book.yaml
     <tr>
             <td><code>isu</code></td>
             <td>
-                <code><a class='link' href='#int_struct_union'>int_struct_union</a>?</code>
+                <code><a class='link' href='#IntStructUnion'>IntStructUnion</a>?</code>
             </td>
         </tr><tr>
             <td><code>i</code></td>
@@ -547,7 +547,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>isu</code></td>
             <td>
-                <code><a class='link' href='#int_struct_union'>int_struct_union</a>?</code>
+                <code><a class='link' href='#IntStructUnion'>IntStructUnion</a>?</code>
             </td>
         </tr></table>
 
@@ -562,7 +562,7 @@ Book: /_book.yaml
     <tr>
             <td><code>isu</code></td>
             <td>
-                <code><a class='link' href='#int_struct_xunion'>int_struct_xunion</a></code>
+                <code><a class='link' href='#IntStructXunion'>IntStructXunion</a></code>
             </td>
         </tr><tr>
             <td><code>i</code></td>
@@ -582,7 +582,7 @@ Book: /_book.yaml
     <tr>
             <td><code>isu</code></td>
             <td>
-                <code><a class='link' href='#int_struct_xunion'>int_struct_xunion</a>?</code>
+                <code><a class='link' href='#IntStructXunion'>IntStructXunion</a>?</code>
             </td>
         </tr><tr>
             <td><code>i</code></td>
@@ -607,7 +607,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>isu</code></td>
             <td>
-                <code><a class='link' href='#int_struct_xunion'>int_struct_xunion</a>?</code>
+                <code><a class='link' href='#IntStructXunion'>IntStructXunion</a>?</code>
             </td>
         </tr></table>
 
@@ -622,7 +622,7 @@ Book: /_book.yaml
     <tr>
             <td><code>u</code></td>
             <td>
-                <code><a class='link' href='#u8_u16_union'>u8_u16_union</a></code>
+                <code><a class='link' href='#U8U16Union'>U8U16Union</a></code>
             </td>
         </tr><tr>
             <td><code>i</code></td>
@@ -642,7 +642,7 @@ Book: /_book.yaml
     <tr>
             <td><code>u</code></td>
             <td>
-                <code><a class='link' href='#u8_u16_xunion'>u8_u16_xunion</a></code>
+                <code><a class='link' href='#U8U16Xunion'>U8U16Xunion</a></code>
             </td>
         </tr><tr>
             <td><code>i</code></td>
@@ -653,7 +653,7 @@ Book: /_book.yaml
 
 
 
-### DefaultEnum {:#DefaultEnum}
+### DefaultEnumMessage {:#DefaultEnumMessage}
 
 
 #### Request
@@ -662,13 +662,13 @@ Book: /_book.yaml
     <tr>
             <td><code>ev</code></td>
             <td>
-                <code><a class='link' href='#default_enum'>default_enum</a></code>
+                <code><a class='link' href='#DefaultEnum'>DefaultEnum</a></code>
             </td>
         </tr></table>
 
 
 
-### I8Enum {:#I8Enum}
+### I8EnumMessage {:#I8EnumMessage}
 
 
 #### Request
@@ -677,13 +677,13 @@ Book: /_book.yaml
     <tr>
             <td><code>ev</code></td>
             <td>
-                <code><a class='link' href='#i8_enum'>i8_enum</a></code>
+                <code><a class='link' href='#I8Enum'>I8Enum</a></code>
             </td>
         </tr></table>
 
 
 
-### I16Enum {:#I16Enum}
+### I16EnumMessage {:#I16EnumMessage}
 
 
 #### Request
@@ -692,7 +692,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ev</code></td>
             <td>
-                <code><a class='link' href='#i16_enum'>i16_enum</a></code>
+                <code><a class='link' href='#I16Enum'>I16Enum</a></code>
             </td>
         </tr></table>
 
@@ -707,7 +707,7 @@ Book: /_book.yaml
     <tr>
             <td><code>table</code></td>
             <td>
-                <code><a class='link' href='#value_table'>value_table</a></code>
+                <code><a class='link' href='#ValueTable'>ValueTable</a></code>
             </td>
         </tr><tr>
             <td><code>i</code></td>
@@ -748,7 +748,7 @@ Book: /_book.yaml
 
 
 
-### HandleStruct {:#HandleStruct}
+### HandleStructMessage {:#HandleStructMessage}
 
 
 #### Request
@@ -757,13 +757,13 @@ Book: /_book.yaml
     <tr>
             <td><code>hs</code></td>
             <td>
-                <code><a class='link' href='#handle_struct'>handle_struct</a></code>
+                <code><a class='link' href='#HandleStruct'>HandleStruct</a></code>
             </td>
         </tr></table>
 
 
 
-### TraversalOrder {:#TraversalOrder}
+### TraversalOrderMessage {:#TraversalOrderMessage}
 
 
 #### Request
@@ -772,7 +772,7 @@ Book: /_book.yaml
     <tr>
             <td><code>t</code></td>
             <td>
-                <code><a class='link' href='#traversal_order'>traversal_order</a></code>
+                <code><a class='link' href='#TraversalOrder'>TraversalOrder</a></code>
             </td>
         </tr></table>
 
@@ -811,7 +811,7 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
-### primitive_types {:#primitive_types}
+### PrimitiveTypes {:#PrimitiveTypes}
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#71)*
 
 
@@ -822,7 +822,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>s</code></td>
             <td>
-                <code>string</code>
+                <code>string[100]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -906,7 +906,7 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### two_string_struct {:#two_string_struct}
+### TwoStringStruct {:#TwoStringStruct}
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#86)*
 
 
@@ -917,21 +917,21 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>value1</code></td>
             <td>
-                <code>string</code>
+                <code>string[100]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>value2</code></td>
             <td>
-                <code>string</code>
+                <code>string[100]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr>
 </table>
 
-### handle_struct {:#handle_struct}
+### HandleStruct {:#HandleStruct}
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#129)*
 
 
@@ -963,7 +963,7 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### opt_handle_struct {:#opt_handle_struct}
+### OptHandleStruct {:#OptHandleStruct}
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#135)*
 
 
@@ -988,7 +988,7 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### traversal_order {:#traversal_order}
+### TraversalOrder {:#TraversalOrder}
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#140)*
 
 
@@ -999,7 +999,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>s</code></td>
             <td>
-                <code><a class='link' href='#opt_handle_struct'>opt_handle_struct</a>?</code>
+                <code><a class='link' href='#OptHandleStruct'>OptHandleStruct</a>?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1024,7 +1024,7 @@ Book: /_book.yaml
 
 ## **ENUMS**
 
-### default_enum {:#default_enum}
+### DefaultEnum {:#DefaultEnum}
 Type: <code>uint32</code>
 
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#111)*
@@ -1033,12 +1033,12 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>x</code></td>
+            <td><code>X</code></td>
             <td><code>23</code></td>
             <td></td>
         </tr></table>
 
-### i8_enum {:#i8_enum}
+### I8Enum {:#I8Enum}
 Type: <code>int8</code>
 
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#115)*
@@ -1047,12 +1047,12 @@ Type: <code>int8</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>x</code></td>
+            <td><code>X</code></td>
             <td><code>-23</code></td>
             <td></td>
         </tr></table>
 
-### i16_enum {:#i16_enum}
+### I16Enum {:#I16Enum}
 Type: <code>int16</code>
 
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#119)*
@@ -1061,7 +1061,7 @@ Type: <code>int16</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>x</code></td>
+            <td><code>X</code></td>
             <td><code>-23</code></td>
             <td></td>
         </tr></table>
@@ -1070,7 +1070,7 @@ Type: <code>int16</code>
 
 ## **TABLES**
 
-### value_table {:#value_table}
+### ValueTable {:#ValueTable}
 
 
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#123)*
@@ -1090,14 +1090,14 @@ Type: <code>int16</code>
             <td>2</td>
             <td><code>second_struct</code></td>
             <td>
-                <code><a class='link' href='#two_string_struct'>two_string_struct</a></code>
+                <code><a class='link' href='#TwoStringStruct'>TwoStringStruct</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>3</td>
             <td><code>third_union</code></td>
             <td>
-                <code><a class='link' href='#int_struct_union'>int_struct_union</a></code>
+                <code><a class='link' href='#IntStructUnion'>IntStructUnion</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1106,7 +1106,7 @@ Type: <code>int16</code>
 
 ## **UNIONS**
 
-### int_struct_union {:#int_struct_union}
+### IntStructUnion {:#IntStructUnion}
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#91)*
 
 
@@ -1120,12 +1120,12 @@ Type: <code>int16</code>
         </tr><tr>
             <td><code>variant_tss</code></td>
             <td>
-                <code><a class='link' href='#two_string_struct'>two_string_struct</a></code>
+                <code><a class='link' href='#TwoStringStruct'>TwoStringStruct</a></code>
             </td>
             <td></td>
         </tr></table>
 
-### u8_u16_union {:#u8_u16_union}
+### U8U16Union {:#U8U16Union}
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#101)*
 
 
@@ -1148,7 +1148,7 @@ Type: <code>int16</code>
 
 ## **XUNIONS**
 
-### int_struct_xunion {:#int_struct_xunion}
+### IntStructXunion {:#IntStructXunion}
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#96)*
 
 
@@ -1162,12 +1162,12 @@ Type: <code>int16</code>
         </tr><tr>
             <td><code>variant_tss</code></td>
             <td>
-                <code><a class='link' href='#two_string_struct'>two_string_struct</a></code>
+                <code><a class='link' href='#TwoStringStruct'>TwoStringStruct</a></code>
             </td>
             <td></td>
         </tr></table>
 
-### u8_u16_xunion {:#u8_u16_xunion}
+### U8U16Xunion {:#U8U16Xunion}
 *Defined in [test.fidlcat.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidlcat/lib/testdata/types.test.fidl#106)*
 
 

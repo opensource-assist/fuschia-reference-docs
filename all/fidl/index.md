@@ -928,6 +928,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.ui.activity/index">fuchsia.ui.activity</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.ui.app/index">fuchsia.ui.app</a></td>
     <td></td>
 </tr>
@@ -1126,15 +1130,6 @@ Book: /_book.yaml
 <tr>
     <td><a href="test.fuchsia.service.foo/index">test.fuchsia.service.foo</a></td>
     <td></td>
-</tr>
-<tr>
-    <td><a href="test.inspect.validate/index">test.inspect.validate</a></td>
-    <td> The Inspect VMO Validator program starts and controls a "puppet" program to
- exercise each Inspect library. This file defines the protocol to exercise
- the library (and report the result of commands). (After executing some
- commands, the Validator program will analyze the VMO contents for
- correctness and memory-packing efficiency.)
-</td>
 </tr>
 <tr>
     <td><a href="test.modular.dart/index">test.modular.dart</a></td>

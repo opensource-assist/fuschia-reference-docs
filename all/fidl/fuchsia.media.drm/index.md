@@ -660,7 +660,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### ContentDecryptionModule_SetServerCertificate_Response {:#ContentDecryptionModule_SetServerCertificate_Response}
-*Defined in [fuchsia.media.drm/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#3)*
+*generated*
 
 
 
@@ -671,7 +671,7 @@ Book: /_book.yaml
 </table>
 
 ### LicenseSession_GenerateLicenseRequest_Response {:#LicenseSession_GenerateLicenseRequest_Response}
-*Defined in [fuchsia.media.drm/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
+*generated*
 
 
 
@@ -682,7 +682,7 @@ Book: /_book.yaml
 </table>
 
 ### LicenseSession_ProcessLicenseResponse_Response {:#LicenseSession_ProcessLicenseResponse_Response}
-*Defined in [fuchsia.media.drm/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+*generated*
 
 
 
@@ -793,7 +793,7 @@ Book: /_book.yaml
 </table>
 
 ### Provisioner_SetServerCertificate_Response {:#Provisioner_SetServerCertificate_Response}
-*Defined in [fuchsia.media.drm/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#39)*
+*generated*
 
 
 
@@ -804,7 +804,7 @@ Book: /_book.yaml
 </table>
 
 ### Provisioner_ProcessProvisioningResponse_Response {:#Provisioner_ProcessProvisioningResponse_Response}
-*Defined in [fuchsia.media.drm/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#48)*
+*generated*
 
 
 
@@ -1039,7 +1039,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### ContentDecryptionModule_SetServerCertificate_Result {:#ContentDecryptionModule_SetServerCertificate_Result}
-*Defined in [fuchsia.media.drm/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#6)*
+*generated*
 
 
 <table>
@@ -1058,7 +1058,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### LicenseSession_GenerateLicenseRequest_Result {:#LicenseSession_GenerateLicenseRequest_Result}
-*Defined in [fuchsia.media.drm/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#22)*
+*generated*
 
 
 <table>
@@ -1077,7 +1077,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### LicenseSession_ProcessLicenseResponse_Result {:#LicenseSession_ProcessLicenseResponse_Result}
-*Defined in [fuchsia.media.drm/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#30)*
+*generated*
 
 
 <table>
@@ -1096,7 +1096,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Provisioner_SetServerCertificate_Result {:#Provisioner_SetServerCertificate_Result}
-*Defined in [fuchsia.media.drm/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#42)*
+*generated*
 
 
 <table>
@@ -1115,7 +1115,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Provisioner_ProcessProvisioningResponse_Result {:#Provisioner_ProcessProvisioningResponse_Result}
-*Defined in [fuchsia.media.drm/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#51)*
+*generated*
 
 
 <table>

@@ -461,6 +461,8 @@ toc:
   path: /reference/fidl/fuchsia.tracing.provider
 - title: fuchsia.tts
   path: /reference/fidl/fuchsia.tts
+- title: fuchsia.ui.activity
+  path: /reference/fidl/fuchsia.ui.activity
 - title: fuchsia.ui.app
   path: /reference/fidl/fuchsia.ui.app
 - title: fuchsia.ui.brightness
@@ -561,8 +563,6 @@ toc:
   path: /reference/fidl/test.fidlcat.sys
 - title: test.fuchsia.service.foo
   path: /reference/fidl/test.fuchsia.service.foo
-- title: test.inspect.validate
-  path: /reference/fidl/test.inspect.validate
 - title: test.modular.dart
   path: /reference/fidl/test.modular.dart
 - title: test.modular.queuepersistence

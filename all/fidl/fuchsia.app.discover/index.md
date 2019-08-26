@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## DiscoverRegistry {:#DiscoverRegistry}
-*Defined in [fuchsia.app.discover/discover_registry.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#16)*
+*Defined in [fuchsia.app.discover/discover_registry.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#24)*
 
  Interface between sessionmgr and discovermgr to route service connections
  requests that require module scoping.
@@ -33,9 +33,31 @@ Book: /_book.yaml
 
 
 
-## ModuleOutputWriter {:#ModuleOutputWriter}
-*Defined in [fuchsia.app.discover/module_output.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/module_output.fidl#8)*
+### RegisterStoryModule {:#RegisterStoryModule}
 
+ Retrieves a story module controller for the module identified by `module`.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>module</code></td>
+            <td>
+                <code><a class='link' href='#ModuleIdentifier'>ModuleIdentifier</a></code>
+            </td>
+        </tr><tr>
+            <td><code>request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#StoryModule'>StoryModule</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+## ModuleOutputWriter {:#ModuleOutputWriter}
+*Defined in [fuchsia.app.discover/module_output.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/module_output.fidl#15)*
+
+ DEPRECATED in favor of StoryModule.
 
 ### Write {:#Write}
 
@@ -49,12 +71,12 @@ Book: /_book.yaml
     <tr>
             <td><code>output_name</code></td>
             <td>
-                <code>string</code>
+                <code>string[128]</code>
             </td>
         </tr><tr>
             <td><code>entity_reference</code></td>
             <td>
-                <code>string?</code>
+                <code>string[1024]?</code>
             </td>
         </tr></table>
 
@@ -70,7 +92,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## SessionDiscoverContext {:#SessionDiscoverContext}
-*Defined in [fuchsia.app.discover/story_discover_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#13)*
+*Defined in [fuchsia.app.discover/story_discover_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#27)*
 
  Provided to session shells to communicate with discover.
 
@@ -97,8 +119,63 @@ Book: /_book.yaml
 
 
 ## StoryDiscoverContext {:#StoryDiscoverContext}
-*Defined in [fuchsia.app.discover/story_discover_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#21)*
+*Defined in [fuchsia.app.discover/story_discover_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#35)*
 
+
+### SetProperty {:#SetProperty}
+
+ Sets the value for the given story property |key|.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>key</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#StoryDiscoverContext_SetProperty_Result'>StoryDiscoverContext_SetProperty_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetProperty {:#GetProperty}
+
+ Gets the value for the given story property |key|.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>key</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#StoryDiscoverContext_GetProperty_Result'>StoryDiscoverContext_GetProperty_Result</a></code>
+            </td>
+        </tr></table>
 
 ### GetSurfaceData {:#GetSurfaceData}
 
@@ -124,6 +201,95 @@ Book: /_book.yaml
                 <code><a class='link' href='#SurfaceData'>SurfaceData</a></code>
             </td>
         </tr></table>
+
+## StoryModule {:#StoryModule}
+*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#10)*
+
+
+### WriteOutput {:#WriteOutput}
+
+ Writes the `entity_reference` to the module's `output_parameter_name`
+ output. If no entity is provided, the output will be unset.
+ Return happens upon completion of a successful write.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>output_name</code></td>
+            <td>
+                <code>string[128]</code>
+            </td>
+        </tr><tr>
+            <td><code>entity_reference</code></td>
+            <td>
+                <code>string[1024]?</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#StoryModule_WriteOutput_Result'>StoryModule_WriteOutput_Result</a></code>
+            </td>
+        </tr></table>
+
+### AddModuleToStory {:#AddModuleToStory}
+
+ Starts a mod by issuing an intent to it. Gets a `controller` for the
+ mod for future intent issuing, stopping, etc.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>intent</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#Intent'>Intent</a></code>
+            </td>
+        </tr><tr>
+            <td><code>controller</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#ModuleController'>ModuleController</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+## ModuleController {:#ModuleController}
+*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#21)*
+
+
+### IssueIntent {:#IssueIntent}
+
+ Issues an intent to the mod.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>intent</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#Intent'>Intent</a></code>
+            </td>
+        </tr></table>
+
+
+
+### Stop {:#Stop}
+
+ Stops a module and removes it from the story.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
 
 ## Suggestions {:#Suggestions}
 *Defined in [fuchsia.app.discover/suggestions_service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/suggestions_service.fidl#12)*
@@ -203,7 +369,47 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### ModuleOutputWriter_Write_Response {:#ModuleOutputWriter_Write_Response}
-*Defined in [fuchsia.app.discover/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#3)*
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### StoryDiscoverContext_SetProperty_Response {:#StoryDiscoverContext_SetProperty_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### StoryDiscoverContext_GetProperty_Response {:#StoryDiscoverContext_GetProperty_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### StoryModule_WriteOutput_Response {:#StoryModule_WriteOutput_Response}
+*generated*
 
 
 
@@ -217,10 +423,33 @@ Book: /_book.yaml
 
 ## **ENUMS**
 
+### StoryDiscoverContextError {:#StoryDiscoverContextError}
+Type: <code>int32</code>
+
+*Defined in [fuchsia.app.discover/story_discover_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#14)*
+
+ Error code for StoryDiscoverContext services.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>STORAGE</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>STRING_CONVERSION</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>NOT_FOUND</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr></table>
+
 ### OutputError {:#OutputError}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.app.discover/module_output.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/module_output.fidl#16)*
+*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#30)*
 
  Errors that can occur when writing to an output.
 
@@ -262,7 +491,7 @@ Type: <code>uint32</code>
 ### ModuleIdentifier {:#ModuleIdentifier}
 
 
-*Defined in [fuchsia.app.discover/discover_registry.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#21)*
+*Defined in [fuchsia.app.discover/discover_registry.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#32)*
 
 
 
@@ -272,7 +501,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>story_id</code></td>
             <td>
-                <code>string</code>
+                <code>string[1024]</code>
             </td>
             <td> The ID of the story to which the module belongs.
 </td>
@@ -280,7 +509,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>module_path</code></td>
             <td>
-                <code>vector&lt;string&gt;</code>
+                <code>vector&lt;string&gt;[512]</code>
             </td>
             <td> The named path leading up to this module instance. This path is a unique
  identifier of the module in the story.
@@ -290,7 +519,7 @@ Type: <code>uint32</code>
 ### SurfaceData {:#SurfaceData}
 
 
-*Defined in [fuchsia.app.discover/story_discover_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#27)*
+*Defined in [fuchsia.app.discover/story_discover_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#47)*
 
  Information about a surface in the story.
 
@@ -347,7 +576,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### ModuleOutputWriter_Write_Result {:#ModuleOutputWriter_Write_Result}
-*Defined in [fuchsia.app.discover/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#6)*
+*generated*
 
 
 <table>
@@ -355,6 +584,63 @@ Type: <code>uint32</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#ModuleOutputWriter_Write_Response'>ModuleOutputWriter_Write_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#OutputError'>OutputError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### StoryDiscoverContext_SetProperty_Result {:#StoryDiscoverContext_SetProperty_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StoryDiscoverContext_SetProperty_Response'>StoryDiscoverContext_SetProperty_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#StoryDiscoverContextError'>StoryDiscoverContextError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### StoryDiscoverContext_GetProperty_Result {:#StoryDiscoverContext_GetProperty_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StoryDiscoverContext_GetProperty_Response'>StoryDiscoverContext_GetProperty_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#StoryDiscoverContextError'>StoryDiscoverContextError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### StoryModule_WriteOutput_Result {:#StoryModule_WriteOutput_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StoryModule_WriteOutput_Response'>StoryModule_WriteOutput_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -384,7 +670,16 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#35">ACTION_NAME_MAX_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#14">MODULE_PATH_MAX_LENGTH</a></td>
+            <td>
+                    <code>512</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Maximum length of a module path.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#15">MODULE_PATH_PART_MAX_LENGTH</a></td>
             <td>
                     <code>512</code>
                 </td>
@@ -392,7 +687,23 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#36">PARAMETER_TYPE_NAME_MAX_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/module_output.fidl#7">OUTPUT_NAME_MAX_LENGTH</a></td>
+            <td>
+                    <code>128</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/module_output.fidl#8">ENTITY_REFERENCE_MAX_LENGTH</a></td>
+            <td>
+                    <code>1024</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#55">ACTION_NAME_MAX_LENGTH</a></td>
             <td>
                     <code>512</code>
                 </td>
@@ -400,7 +711,15 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#37">SURFACE_ID_MAX_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#56">PARAMETER_TYPE_NAME_MAX_LENGTH</a></td>
+            <td>
+                    <code>512</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#57">SURFACE_ID_MAX_LENGTH</a></td>
             <td>
                     <code>1024</code>
                 </td>

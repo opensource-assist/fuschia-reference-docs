@@ -235,7 +235,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### PeerManagerExt_GetControllerForTarget_Response {:#PeerManagerExt_GetControllerForTarget_Response}
-*Defined in [fuchsia.bluetooth.avrcp.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -246,7 +246,7 @@ Book: /_book.yaml
 </table>
 
 ### ControllerExt_GetEventsSupported_Response {:#ControllerExt_GetEventsSupported_Response}
-*Defined in [fuchsia.bluetooth.avrcp.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#15)*
+*generated*
 
 
 
@@ -264,7 +264,7 @@ Book: /_book.yaml
 </table>
 
 ### ControllerExt_SendRawVendorDependentCommand_Response {:#ControllerExt_SendRawVendorDependentCommand_Response}
-*Defined in [fuchsia.bluetooth.avrcp.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#24)*
+*generated*
 
 
 
@@ -332,7 +332,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### PeerManagerExt_GetControllerForTarget_Result {:#PeerManagerExt_GetControllerForTarget_Result}
-*Defined in [fuchsia.bluetooth.avrcp.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>
@@ -351,7 +351,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### ControllerExt_GetEventsSupported_Result {:#ControllerExt_GetEventsSupported_Result}
-*Defined in [fuchsia.bluetooth.avrcp.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#18)*
+*generated*
 
 
 <table>
@@ -370,7 +370,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### ControllerExt_SendRawVendorDependentCommand_Result {:#ControllerExt_SendRawVendorDependentCommand_Result}
-*Defined in [fuchsia.bluetooth.avrcp.test/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#27)*
+*generated*
 
 
 <table>

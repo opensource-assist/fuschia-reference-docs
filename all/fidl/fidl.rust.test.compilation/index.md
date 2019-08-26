@@ -63,7 +63,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### TestInterface_TestErrorMethod_Response {:#TestInterface_TestErrorMethod_Response}
-*Defined in [fidl.rust.test.compilation/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#4)*
+*generated*
 
 
 
@@ -138,7 +138,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### TestInterface_TestErrorMethod_Result {:#TestInterface_TestErrorMethod_Result}
-*Defined in [fidl.rust.test.compilation/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#7)*
+*generated*
 
 
 <table>

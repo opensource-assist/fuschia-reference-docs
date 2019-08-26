@@ -156,7 +156,7 @@ Book: /_book.yaml
 </table>
 
 ### CrashReporter_File_Response {:#CrashReporter_File_Response}
-*Defined in [fuchsia.feedback/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -167,7 +167,7 @@ Book: /_book.yaml
 </table>
 
 ### DataProvider_GetData_Response {:#DataProvider_GetData_Response}
-*Defined in [fuchsia.feedback/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*generated*
 
 
 
@@ -185,7 +185,7 @@ Book: /_book.yaml
 </table>
 
 ### Screenshot {:#Screenshot}
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#51)*
+*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#57)*
 
 
 
@@ -217,7 +217,7 @@ Book: /_book.yaml
 ### ImageEncoding {:#ImageEncoding}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#46)*
+*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#52)*
 
  The encoding used for the image.
 
@@ -389,6 +389,15 @@ Type: <code>uint32</code>
             </td>
             <td> A vector of key-value string-to-VMO pairs. Keys are guaranteed to be unique.
 </td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>attachment_bundle</code></td>
+            <td>
+                <code><a class='link' href='#Attachment'>Attachment</a></code>
+            </td>
+            <td> A bundle of Attachments objects stored as an Attachment itself, e.g., it
+ could be a ZIP archive bundling a vector of Attachment objects.
+</td>
         </tr></table>
 
 
@@ -396,7 +405,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### CrashReporter_File_Result {:#CrashReporter_File_Result}
-*Defined in [fuchsia.feedback/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>
@@ -415,7 +424,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### DataProvider_GetData_Result {:#DataProvider_GetData_Result}
-*Defined in [fuchsia.feedback/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+*generated*
 
 
 <table>

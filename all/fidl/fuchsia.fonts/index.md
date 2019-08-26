@@ -6,6 +6,34 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
+## FontSetEventListener {:#FontSetEventListener}
+*Defined in [fuchsia.fonts/events.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/events.fidl#10)*
+
+ Protocol for listening to possible events that may occur in the `Provider`'s set of fonts.
+
+ Register a listener using <a class='link' href='#Provider.RegisterFontSetEventListener'>Provider.RegisterFontSetEventListener</a>.
+
+### OnFontSetUpdated {:#OnFontSetUpdated}
+
+ The set of fonts available in the `Provider` has changed. See
+ <a class='link' href='#FontSetUpdatedEvent'>FontSetUpdatedEvent</a>.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>event</code></td>
+            <td>
+                <code><a class='link' href='#FontSetUpdatedEvent'>FontSetUpdatedEvent</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
 ## Provider {:#Provider}
 *Defined in [fuchsia.fonts/font_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/font_provider.fidl#109)*
 
@@ -126,6 +154,29 @@ Book: /_book.yaml
                 <code><a class='link' href='#FontFamilyInfo'>FontFamilyInfo</a></code>
             </td>
         </tr></table>
+
+### RegisterFontSetEventListener {:#RegisterFontSetEventListener}
+
+ Register a listener to be notified when the set of available fonts or mappings has changed.
+ A client can register as many listeners as it wishes.
+
+ To unregister, close the channel.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>listener</code></td>
+            <td>
+                <code><a class='link' href='#FontSetEventListener'>FontSetEventListener</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
 
 
 
@@ -514,6 +565,20 @@ Type: <code>uint32</code>
 
 
 ## **TABLES**
+
+### FontSetUpdatedEvent {:#FontSetUpdatedEvent}
+
+
+*Defined in [fuchsia.fonts/events.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/events.fidl#23)*
+
+ An event indicating that the set of fonts available in the `Provider` has changed. This is most
+ frequently caused by an ephemeral font being downloaded and cached. Clients should consider
+ re-requesting fonts and re-rendering any displayed text.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
 
 ### TypefaceRequest {:#TypefaceRequest}
 

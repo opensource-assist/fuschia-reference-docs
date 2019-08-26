@@ -144,7 +144,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Provider_GetTypefaceById_Response {:#Provider_GetTypefaceById_Response}
-*Defined in [fuchsia.fonts.experimental/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#2)*
+*generated*
 
 
 
@@ -162,7 +162,7 @@ Book: /_book.yaml
 </table>
 
 ### Provider_ListTypefaces_Response {:#Provider_ListTypefaces_Response}
-*Defined in [fuchsia.fonts.experimental/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#9)*
+*generated*
 
 
 
@@ -173,7 +173,7 @@ Book: /_book.yaml
 </table>
 
 ### Provider_GetTypefacesByFamily_Response {:#Provider_GetTypefacesByFamily_Response}
-*Defined in [fuchsia.fonts.experimental/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#16)*
+*generated*
 
 
 
@@ -461,7 +461,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### Provider_GetTypefaceById_Result {:#Provider_GetTypefaceById_Result}
-*Defined in [fuchsia.fonts.experimental/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#5)*
+*generated*
 
 
 <table>
@@ -480,7 +480,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Provider_ListTypefaces_Result {:#Provider_ListTypefaces_Result}
-*Defined in [fuchsia.fonts.experimental/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#12)*
+*generated*
 
 
 <table>
@@ -499,7 +499,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Provider_GetTypefacesByFamily_Result {:#Provider_GetTypefacesByFamily_Result}
-*Defined in [fuchsia.fonts.experimental/generated](https://fuchsia.googlesource.com/fuchsia/+/master/generated#19)*
+*generated*
 
 
 <table>
