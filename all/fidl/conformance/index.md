@@ -234,13 +234,6 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>arr_empty</code></td>
-            <td>
-                <code>int32[0]</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
             <td><code>arr_int</code></td>
             <td>
                 <code>int32[2]</code>
@@ -272,7 +265,7 @@ Book: /_book.yaml
 </table>
 
 ### StructWithVectors {:#StructWithVectors}
-*Defined in [conformance/arrays_and_vectors.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/arrays_and_vectors.test.fidl#24)*
+*Defined in [conformance/arrays_and_vectors.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/arrays_and_vectors.test.fidl#23)*
 
 
 
