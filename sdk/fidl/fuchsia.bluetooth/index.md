@@ -36,6 +36,31 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### DeviceClass {:#DeviceClass}
+*Defined in [fuchsia.bluetooth/device_class.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#14)*
+
+
+
+ The "Class of Device/Service" is a variable-format field that defines the category of a
+ Bluetooth device. The bitfield is divided into segments called "major service class",
+ "major device class", and "minor device class".
+
+ No assumptions about the specific functionality or characteristics of any application should be
+ based solely on its inclusion within a Major or Minor device class. For more information, see
+ https://www.bluetooth.com/specifications/assigned-numbers/baseband.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Id {:#Id}
 *Defined in [fuchsia.bluetooth/id.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/id.fidl#8)*
 
@@ -517,4 +542,107 @@ Type: <code>uint32</code>
 
 
 
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#19">MAJOR_DEVICE_CLASS_MASK</a></td>
+            <td>
+                    <code>7936</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Constants for the major device class field. The major device class is defined by bits 12-8.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#21">MAJOR_DEVICE_CLASS_MISCELLANEOUS</a></td>
+            <td>
+                    <code>0</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#22">MAJOR_DEVICE_CLASS_COMPUTER</a></td>
+            <td>
+                    <code>256</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#23">MAJOR_DEVICE_CLASS_PHONE</a></td>
+            <td>
+                    <code>512</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#24">MAJOR_DEVICE_CLASS_LAN</a></td>
+            <td>
+                    <code>768</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#25">MAJOR_DEVICE_CLASS_AUDIO_VIDEO</a></td>
+            <td>
+                    <code>1024</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#26">MAJOR_DEVICE_CLASS_PERIPHERAL</a></td>
+            <td>
+                    <code>1280</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#27">MAJOR_DEVICE_CLASS_IMAGING</a></td>
+            <td>
+                    <code>1536</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#28">MAJOR_DEVICE_CLASS_WEARABLE</a></td>
+            <td>
+                    <code>1792</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#29">MAJOR_DEVICE_CLASS_TOY</a></td>
+            <td>
+                    <code>2048</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#30">MAJOR_DEVICE_CLASS_HEALTH</a></td>
+            <td>
+                    <code>2304</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#31">MAJOR_DEVICE_CLASS_UNCATEGORIZED</a></td>
+            <td>
+                    <code>7936</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    
+</table>
 

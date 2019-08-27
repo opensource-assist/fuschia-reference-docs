@@ -3,6 +3,8 @@ toc:
   path: /reference/fidl/index.md
 - title: fidl.examples.echo
   path: /reference/fidl/fidl.examples.echo
+- title: fuchsia.accessibility
+  path: /reference/fidl/fuchsia.accessibility
 - title: fuchsia.amber
   path: /reference/fidl/fuchsia.amber
 - title: fuchsia.auth
@@ -61,8 +63,6 @@ toc:
   path: /reference/fidl/fuchsia.devicesettings
 - title: fuchsia.exception
   path: /reference/fidl/fuchsia.exception
-- title: fuchsia.factory
-  path: /reference/fidl/fuchsia.factory
 - title: fuchsia.feedback
   path: /reference/fidl/fuchsia.feedback
 - title: fuchsia.gpu.magma

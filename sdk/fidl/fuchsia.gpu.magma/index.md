@@ -227,30 +227,6 @@ Book: /_book.yaml
 
 
 
-### ExecuteCommandBuffer {:#ExecuteCommandBuffer}
-
- Submits a command buffer for execution on the GPU.
- Note that the buffer referred to by `command_buffer` must contain a valid
- magma_system_command_buffer and all associated data structures
- Transfers ownership of `command_buffer`.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>command_buffer</code></td>
-            <td>
-                <code>handle&lt;handle&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>context_id</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr></table>
-
-
-
 ### ExecuteCommandBufferWithResources {:#ExecuteCommandBufferWithResources}
 
  Submits a command buffer for execution on the GPU, with associated resources.

@@ -8,6 +8,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.accessibility/index">fuchsia.accessibility</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.amber/index">fuchsia.amber</a></td>
     <td></td>
 </tr>
@@ -121,10 +125,6 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.exception/index">fuchsia.exception</a></td>
-    <td></td>
-</tr>
-<tr>
-    <td><a href="fuchsia.factory/index">fuchsia.factory</a></td>
     <td></td>
 </tr>
 <tr>

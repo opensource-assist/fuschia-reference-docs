@@ -280,12 +280,25 @@ Type: <code>uint32</code>
             <td> A vector of key-value string-to-VMO pairs representing arbitrary data that should be
  attached to a crash report. Keys should be unique.
 </td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>event_id</code></td>
+            <td>
+                <code>string[128]</code>
+            </td>
+            <td> A text ID that the crash server can use to group multiple crash reports related to the
+ same event.
+
+ Unlike the crash signature, crash reports sharing the same ID correspond to different
+ crashes, but can be considered as belonging to the same event, e.g., a crash in a low-level
+ server causing a crash in a high-level UI widget.
+</td>
         </tr></table>
 
 ### GenericCrashReport {:#GenericCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#52)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#60)*
 
  Represents a generic crash report.
 
@@ -294,19 +307,23 @@ Type: <code>uint32</code>
     <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
     <tr>
             <td>1</td>
-            <td><code>signature</code></td>
+            <td><code>crash_signature</code></td>
             <td>
                 <code>string[128]</code>
             </td>
-            <td> A text signature that the crash server can use to group similar crashes together, e.g.,
+            <td> A text signature that the crash server can use to track the same crash over time, e.g.,
  "kernel-panic" or "oom".
+
+ Unlike the event ID, crash reports sharing the same signature correspond to the same crash,
+ but happening over multiple events, e.g., a null pointer exception in a server whenever
+ asked the same request.
 </td>
         </tr></table>
 
 ### NativeCrashReport {:#NativeCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#59)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#71)*
 
  Represents a crash report for a native exception out of which the client has built a minidump.
 
@@ -326,7 +343,7 @@ Type: <code>uint32</code>
 ### RuntimeCrashReport {:#RuntimeCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#65)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#77)*
 
  Represents a crash report for a runtime exception, applicable to most languages.
 
@@ -447,7 +464,7 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### SpecificCrashReport {:#SpecificCrashReport}
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#40)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#48)*
 
  Represents a specific crash report.
 
