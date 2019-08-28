@@ -131,7 +131,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## VolumeControl {:#VolumeControl}
-*Defined in [fuchsia.media.audio/volume_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#4)*
+*Defined in [fuchsia.media.audio/volume_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#8)*
 
  A protocol for controlling volume.
 

@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## CrashReporter {:#CrashReporter}
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#11)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#12)*
 
  Provides the ability to file crash reports.
 
@@ -102,7 +102,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Annotation {:#Annotation}
-*Defined in [fuchsia.feedback/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/annotation.fidl#8)*
+*Defined in [fuchsia.feedback/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/annotation.fidl#9)*
 
 
 
@@ -129,7 +129,7 @@ Book: /_book.yaml
 </table>
 
 ### Attachment {:#Attachment}
-*Defined in [fuchsia.feedback/attachment.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/attachment.fidl#10)*
+*Defined in [fuchsia.feedback/attachment.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/attachment.fidl#11)*
 
 
 
@@ -239,7 +239,7 @@ Type: <code>uint32</code>
 ### CrashReport {:#CrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#20)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#21)*
 
  Represents a crash report.
 
@@ -298,7 +298,7 @@ Type: <code>uint32</code>
 ### GenericCrashReport {:#GenericCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#60)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#61)*
 
  Represents a generic crash report.
 
@@ -323,7 +323,7 @@ Type: <code>uint32</code>
 ### NativeCrashReport {:#NativeCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#71)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#72)*
 
  Represents a crash report for a native exception out of which the client has built a minidump.
 
@@ -343,7 +343,7 @@ Type: <code>uint32</code>
 ### RuntimeCrashReport {:#RuntimeCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#77)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#78)*
 
  Represents a crash report for a runtime exception, applicable to most languages.
 
@@ -464,7 +464,7 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### SpecificCrashReport {:#SpecificCrashReport}
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#48)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#49)*
 
  Represents a specific crash report.
 
