@@ -263,6 +263,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.input
 - title: fuchsia.hardware.mediacodec
   path: /reference/fidl/fuchsia.hardware.mediacodec
+- title: fuchsia.hardware.power
+  path: /reference/fidl/fuchsia.hardware.power
 - title: fuchsia.hardware.pty
   path: /reference/fidl/fuchsia.hardware.pty
 - title: fuchsia.hardware.rtc

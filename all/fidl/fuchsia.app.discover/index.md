@@ -203,7 +203,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryModule {:#StoryModule}
-*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#10)*
+*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#13)*
 
 
 ### WriteOutput {:#WriteOutput}
@@ -238,10 +238,10 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### AddModuleToStory {:#AddModuleToStory}
+### IssueIntent {:#IssueIntent}
 
- Starts a mod by issuing an intent to it. Gets a `controller` for the
- mod for future intent issuing, stopping, etc.
+ Starts a mod by issuing an intent to it or re-issues an intent to the mod
+ with the given name.
 
 #### Request
 <table>
@@ -252,44 +252,17 @@ Book: /_book.yaml
                 <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#Intent'>Intent</a></code>
             </td>
         </tr><tr>
-            <td><code>controller</code></td>
+            <td><code>mod_name</code></td>
             <td>
-                <code>request&lt;<a class='link' href='#ModuleController'>ModuleController</a>&gt;</code>
+                <code>string[512]</code>
             </td>
         </tr></table>
 
 
-
-## ModuleController {:#ModuleController}
-*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#21)*
-
-
-### IssueIntent {:#IssueIntent}
-
- Issues an intent to the mod.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>intent</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.modular/index.html'>fuchsia.modular</a>/<a class='link' href='../fuchsia.modular/index.html#Intent'>Intent</a></code>
-            </td>
-        </tr></table>
-
-
-
-### Stop {:#Stop}
-
- Stops a module and removes it from the story.
-
-#### Request
+#### Response
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
-
-
 
 ## Suggestions {:#Suggestions}
 *Defined in [fuchsia.app.discover/suggestions_service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/suggestions_service.fidl#12)*
@@ -449,7 +422,7 @@ Type: <code>int32</code>
 ### OutputError {:#OutputError}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#30)*
+*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#25)*
 
  Errors that can occur when writing to an output.
 
@@ -722,6 +695,14 @@ Type: <code>uint32</code>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#57">SURFACE_ID_MAX_LENGTH</a></td>
             <td>
                     <code>1024</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#9">MODULE_NAME_MAX_LENGTH</a></td>
+            <td>
+                    <code>512</code>
                 </td>
                 <td><code>uint32</code></td>
             <td></td>

@@ -528,6 +528,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.hardware.power/index">fuchsia.hardware.power</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.hardware.pty/index">fuchsia.hardware.pty</a></td>
     <td> A PTY (pseudoterminal) emulates terminal devices, with a "server" side
  (which represents the keyboard+monitor side of the terminal and is obtained

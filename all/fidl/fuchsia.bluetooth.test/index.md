@@ -6,6 +6,33 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
+## Peer {:#Peer}
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#104)*
+
+ Protocol used to drive the state of a fake peer device.
+
+### AssignConnectionStatus {:#AssignConnectionStatus}
+
+ Assign a HCI `status` for the controller to generate in response to connection requests.
+ Applies to all successive HCI_Create_Connection and HCI_LE_Create_Connection commands. The
+ procedure is acknowledged with an empty response.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code><a class='link' href='#HciError'>HciError</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
 ## HciEmulator {:#HciEmulator}
 *Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#113)*
 
@@ -38,19 +65,33 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### AddPeer {:#AddPeer}
+### AddLowEnergyPeer {:#AddLowEnergyPeer}
 
- Inserts a new peer device to be emulated by this controller. Returns an error if `peer` is
- improperly configured (e.g. does not contain an address). On success, returns an `id` that
- can be used to refer to the created peer.
+ Inserts a new LE peer device to be emulated by this controller. Once registered, the state
+ of the fake peer can be driven and observed using the `peer` handle.
+
+ A reply will be sent to acknowledge the creation of the fake peer. If a peer cannot be
+ initialized (e.g. due to a missing required field in `parameters` or for containing an
+ address that is already emulated) the `peer` handle will be closed and an error reply will
+ be sent.
+
+ The peer will appear in advertising reports and respond to requests according to its
+ configuration as long as the `peer` channel is open. The emulator stops emulating this peer
+ when the channel gets closed, which makes it no longer discoverable and not respond to any
+ requests.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
+            <td><code>parameters</code></td>
+            <td>
+                <code><a class='link' href='#LowEnergyPeerParameters'>LowEnergyPeerParameters</a></code>
+            </td>
+        </tr><tr>
             <td><code>peer</code></td>
             <td>
-                <code><a class='link' href='#FakePeer'>FakePeer</a></code>
+                <code>request&lt;<a class='link' href='#Peer'>Peer</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -61,22 +102,37 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#HciEmulator_AddPeer_Result'>HciEmulator_AddPeer_Result</a></code>
+                <code><a class='link' href='#HciEmulator_AddLowEnergyPeer_Result'>HciEmulator_AddLowEnergyPeer_Result</a></code>
             </td>
         </tr></table>
 
-### RemovePeer {:#RemovePeer}
+### AddBredrPeer {:#AddBredrPeer}
 
- Remove a previously inserted peer. Returns EmulatorPeerError.`NOT_FOUND` if `id` is not
- recognized.
+ Inserts a new BR/EDR peer device to be emulated by this controller. Once registered, the state
+ of the fake peer can be driven and observed using the `peer` handle.
+
+ A reply will be sent to acknowledge the creation of the fake peer. If a peer cannot be
+ initialized (e.g. due to a missing required field in `parameters` or for containing an
+ address that is already emulated) the `peer` handle will be closed and an error reply will
+ be sent.
+
+ The peer will appear in inquiry results and respond to requests according to its
+ configuration as long as the `peer` channel is open. The emulator stops emulating this peer
+ when the channel gets closed, which makes it no longer discoverable and not respond to any
+ requests.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>id</code></td>
+            <td><code>parameters</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#PeerId'>PeerId</a></code>
+                <code><a class='link' href='#BredrPeerParameters'>BredrPeerParameters</a></code>
+            </td>
+        </tr><tr>
+            <td><code>peer</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#Peer'>Peer</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -87,7 +143,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#HciEmulator_RemovePeer_Result'>HciEmulator_RemovePeer_Result</a></code>
+                <code><a class='link' href='#HciEmulator_AddBredrPeer_Result'>HciEmulator_AddBredrPeer_Result</a></code>
             </td>
         </tr></table>
 
@@ -160,7 +216,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
-### HciEmulator_AddPeer_Response {:#HciEmulator_AddPeer_Response}
+### HciEmulator_AddLowEnergyPeer_Response {:#HciEmulator_AddLowEnergyPeer_Response}
 *generated*
 
 
@@ -168,17 +224,10 @@ Book: /_book.yaml
 
 
 <table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>id</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#PeerId'>PeerId</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
-### HciEmulator_RemovePeer_Response {:#HciEmulator_RemovePeer_Response}
+### HciEmulator_AddBredrPeer_Response {:#HciEmulator_AddBredrPeer_Response}
 *generated*
 
 
@@ -190,7 +239,7 @@ Book: /_book.yaml
 </table>
 
 ### AclBufferSettings {:#AclBufferSettings}
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#80)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#37)*
 
 
 
@@ -213,6 +262,24 @@ Book: /_book.yaml
             </td>
             <td> The maximum number of ACL frames that the controller can buffer.
 </td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### AdvertisingData {:#AdvertisingData}
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#68)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>data</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[31]</code>
+            </td>
+            <td></td>
             <td>No default</td>
         </tr>
 </table>
@@ -266,7 +333,7 @@ Type: <code>uint32</code>
 ### HciConfig {:#HciConfig}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#71)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#28)*
 
  Pre-set HCI configurations.
 
@@ -605,101 +672,10 @@ Type: <code>uint8</code>
 
 ## **TABLES**
 
-### FakePeer {:#FakePeer}
-
-
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#23)*
-
- Represents a peer that a FakeController can be configured to emulate.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>address</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Address'>Address</a></code>
-            </td>
-            <td> The LE identity address and/or `BD_ADDR` of the peer. This field is mandatory.
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>le</code></td>
-            <td>
-                <code><a class='link' href='#LeParameters'>LeParameters</a></code>
-            </td>
-            <td> Parameters used by this peer on the Low Energy transport. This field is optional. The peer
- will not be active on the LE transport if this field is not present. However, the peer must
- support at least one transport.
-</td>
-        </tr><tr>
-            <td>3</td>
-            <td><code>bredr</code></td>
-            <td>
-                <code><a class='link' href='#BrEdrParameters'>BrEdrParameters</a></code>
-            </td>
-            <td> Parameters used by this peer on the BR/EDR transport. This field is optional. The peer
- will not be active on the BR/EDR transport if this field is not present. However, the peer
- must support at least one transport.
-</td>
-        </tr></table>
-
-### LeParameters {:#LeParameters}
-
-
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#44)*
-
- Parameters used to emulate a peer's behavior over the Low Energy transport.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>connectable</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> If true, the peer will send connectable advertisements and accept connection requests. The
- peer will ignore connection requests if not connectable.
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>advertisement</code></td>
-            <td>
-                <code><a class='link' href='#AdvertisingData'>AdvertisingData</a></code>
-            </td>
-            <td> The advertising data contents. If not present, the advertising data sent by this peer will
- be empty.
-</td>
-        </tr><tr>
-            <td>3</td>
-            <td><code>scan_response</code></td>
-            <td>
-                <code><a class='link' href='#AdvertisingData'>AdvertisingData</a></code>
-            </td>
-            <td> The scan response data contents. When present, the fake controller will generate scannable
- advertising packets and scan response events.
-</td>
-        </tr></table>
-
-### BrEdrParameters {:#BrEdrParameters}
-
-
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#61)*
-
- Parameters used to emulate a peer's behavior over the BR/EDR transport.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    </table>
-
 ### EmulatorSettings {:#EmulatorSettings}
 
 
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#89)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#46)*
 
  Controller settings used by the emulator.
 
@@ -750,6 +726,90 @@ Type: <code>uint8</code>
             <td> The LE-U ACL data buffer settings. Defaults to
     data_packet_length: 251
     total_num_data_packets: 5
+</td>
+        </tr></table>
+
+### LowEnergyPeerParameters {:#LowEnergyPeerParameters}
+
+
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#73)*
+
+ Parameters used to emulate a peer's behavior over the Low Energy transport.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>address</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Address'>Address</a></code>
+            </td>
+            <td> The LE identity address of the peer. This field is mandatory.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>connectable</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> When present and true, the peer will send connectable advertisements and accept connection
+ requests. The peer will ignore connection requests if not connectable.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>advertisement</code></td>
+            <td>
+                <code><a class='link' href='#AdvertisingData'>AdvertisingData</a></code>
+            </td>
+            <td> The advertising data contents. If not present, the advertising data sent by this peer will
+ be empty.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>scan_response</code></td>
+            <td>
+                <code><a class='link' href='#AdvertisingData'>AdvertisingData</a></code>
+            </td>
+            <td> The scan response data contents. When present, the fake controller will generate scannable
+ advertising packets and scan response events.
+</td>
+        </tr></table>
+
+### BredrPeerParameters {:#BredrPeerParameters}
+
+
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#91)*
+
+ Parameters used to emulate a peer's behavior over the BR/EDR transport.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>address</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Address'>Address</a></code>
+            </td>
+            <td> The BD_ADDR of the peer. This field is mandatory.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>connectable</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> When present and true, the peer will accept connection requests. The peer will ignore
+ connection requests if not connectable.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>device_class</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#DeviceClass'>DeviceClass</a></code>
+            </td>
+            <td> The device class reported in the inquiry response for this peer during device discovery.
 </td>
         </tr></table>
 
@@ -907,7 +967,7 @@ Type: <code>uint8</code>
             <td></td>
         </tr></table>
 
-### HciEmulator_AddPeer_Result {:#HciEmulator_AddPeer_Result}
+### HciEmulator_AddLowEnergyPeer_Result {:#HciEmulator_AddLowEnergyPeer_Result}
 *generated*
 
 
@@ -915,7 +975,7 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='#HciEmulator_AddPeer_Response'>HciEmulator_AddPeer_Response</a></code>
+                <code><a class='link' href='#HciEmulator_AddLowEnergyPeer_Response'>HciEmulator_AddLowEnergyPeer_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -926,7 +986,7 @@ Type: <code>uint8</code>
             <td></td>
         </tr></table>
 
-### HciEmulator_RemovePeer_Result {:#HciEmulator_RemovePeer_Result}
+### HciEmulator_AddBredrPeer_Result {:#HciEmulator_AddBredrPeer_Result}
 *generated*
 
 
@@ -934,7 +994,7 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='#HciEmulator_RemovePeer_Response'>HciEmulator_RemovePeer_Response</a></code>
+                <code><a class='link' href='#HciEmulator_AddBredrPeer_Response'>HciEmulator_AddBredrPeer_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -946,27 +1006,6 @@ Type: <code>uint8</code>
         </tr></table>
 
 
-
-## **XUNIONS**
-
-### AdvertisingData {:#AdvertisingData}
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#38)*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>legacy_data</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[31]</code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>extended_data</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[251]</code>
-            </td>
-            <td></td>
-        </tr></table>
 
 
 
