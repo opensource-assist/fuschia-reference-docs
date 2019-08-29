@@ -463,8 +463,6 @@ toc:
   path: /reference/fidl/fuchsia.tracing.provider
 - title: fuchsia.tts
   path: /reference/fidl/fuchsia.tts
-- title: fuchsia.ui.activity
-  path: /reference/fidl/fuchsia.ui.activity
 - title: fuchsia.ui.app
   path: /reference/fidl/fuchsia.ui.app
 - title: fuchsia.ui.brightness
