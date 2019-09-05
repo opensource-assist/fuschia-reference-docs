@@ -1099,6 +1099,15 @@ Type: <code>uint32</code>
 </td>
         </tr><tr>
             <td>3</td>
+            <td><code>target</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The destination to which the service is exposed: either the component's realm or the
+ framework.
+</td>
+        </tr><tr>
+            <td>4</td>
             <td><code>target_path</code></td>
             <td>
                 <code>string[1024]</code>
@@ -1112,7 +1121,7 @@ Type: <code>uint32</code>
 ### ExposeLegacyServiceDecl {:#ExposeLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#42)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#46)*
 
  Declares a legacy service exposed to a component's containing realm, such as
  a legacy service exposed by the component or one of its children at runtime.
@@ -1143,6 +1152,15 @@ Type: <code>uint32</code>
 </td>
         </tr><tr>
             <td>3</td>
+            <td><code>target</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The destination to which the legacy service is exposed: either the component's realm or the
+ framework.
+</td>
+        </tr><tr>
+            <td>4</td>
             <td><code>target_path</code></td>
             <td>
                 <code>string[1024]</code>
@@ -1156,7 +1174,7 @@ Type: <code>uint32</code>
 ### ExposeDirectoryDecl {:#ExposeDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#59)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#67)*
 
  Declares a directory exposed to a component's containing realm, such as a
  directory exposed by the component or one of its children at runtime.
@@ -1166,15 +1184,6 @@ Type: <code>uint32</code>
     <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
     <tr>
             <td>1</td>
-            <td><code>source_path</code></td>
-            <td>
-                <code>string[1024]</code>
-            </td>
-            <td> Path identifying the directory, by which it was presented to this
- component.
-</td>
-        </tr><tr>
-            <td>2</td>
             <td><code>source</code></td>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
@@ -1183,7 +1192,25 @@ Type: <code>uint32</code>
  be `self` or `child`.
 </td>
         </tr><tr>
+            <td>2</td>
+            <td><code>source_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> Path identifying the directory, by which it was presented to this
+ component.
+</td>
+        </tr><tr>
             <td>3</td>
+            <td><code>target</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The destination to which the directory is exposed: either the component's realm or the
+ framework.
+</td>
+        </tr><tr>
+            <td>4</td>
             <td><code>target_path</code></td>
             <td>
                 <code>string[1024]</code>
@@ -1410,6 +1437,15 @@ Type: <code>uint32</code>
 </td>
         </tr><tr>
             <td>2</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The provider of the underlying directory capability relative to the
+ component itself. Must be `realm`, `self`, or `child`.
+</td>
+        </tr><tr>
+            <td>3</td>
             <td><code>source_path</code></td>
             <td>
                 <code>string[1024]</code>
@@ -1417,15 +1453,6 @@ Type: <code>uint32</code>
             <td> The incoming path to the directory capability. If "source == SELF", this
  is a path in the component's outgoing directory. Otherwise, it is the
  path by which the capability was presented to the component.
-</td>
-        </tr><tr>
-            <td>3</td>
-            <td><code>source</code></td>
-            <td>
-                <code><a class='link' href='#Ref'>Ref</a></code>
-            </td>
-            <td> The provider of the underlying directory capability relative to the
- component itself. Must be `realm`, `self`, or `child`.
 </td>
         </tr></table>
 
@@ -1906,8 +1933,8 @@ Type: <code>uint32</code>
 ### ExposeDecl {:#ExposeDecl}
 *Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#9)*
 
- Declares a capability exposed to a component's containing realm, such as a
- legacy service exposed by the component or one of its children at runtime.
+ Declares a capability exposed to either a component's containing realm or to the framework.
+ For example, a legacy service exposed by the component at runtime.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>

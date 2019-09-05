@@ -8,7 +8,7 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.accessibility/index">fuchsia.accessibility</a></td>
+    <td><a href="fuchsia.accessibility.semantics/index">fuchsia.accessibility.semantics</a></td>
     <td></td>
 </tr>
 <tr>
@@ -25,6 +25,10 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.auth.account.internal/index">fuchsia.auth.account.internal</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.auth.oldtokens/index">fuchsia.auth.oldtokens</a></td>
     <td></td>
 </tr>
 <tr>
@@ -84,6 +88,26 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.camera2/index">fuchsia.camera2</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.camera2.hal/index">fuchsia.camera2.hal</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.castauth/index">fuchsia.castauth</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.castsetup/index">fuchsia.castsetup</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.castsysteminfo/index">fuchsia.castsysteminfo</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.cobalt/index">fuchsia.cobalt</a></td>
     <td></td>
 </tr>
@@ -128,7 +152,15 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.factory/index">fuchsia.factory</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.feedback/index">fuchsia.feedback</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.fonts/index">fuchsia.fonts</a></td>
     <td></td>
 </tr>
 <tr>
@@ -149,6 +181,18 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.hardware.ethernet/index">fuchsia.hardware.ethernet</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.hardware.goldfish.address.space/index">fuchsia.hardware.goldfish.address.space</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.hardware.goldfish.control/index">fuchsia.hardware.goldfish.control</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.hardware.goldfish.pipe/index">fuchsia.hardware.goldfish.pipe</a></td>
     <td></td>
 </tr>
 <tr>
@@ -211,11 +255,19 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.media.drm/index">fuchsia.media.drm</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.media.playback/index">fuchsia.media.playback</a></td>
     <td></td>
 </tr>
 <tr>
     <td><a href="fuchsia.media.sessions2/index">fuchsia.media.sessions2</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.mediacodec/index">fuchsia.mediacodec</a></td>
     <td></td>
 </tr>
 <tr>
@@ -329,6 +381,10 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.setui/index">fuchsia.setui</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.simplecamera/index">fuchsia.simplecamera</a></td>
     <td></td>
 </tr>
 <tr>

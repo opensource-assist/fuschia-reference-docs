@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Administrator {:#Administrator}
-*Defined in [fuchsia.device.manager/administrator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#15)*
+*Defined in [fuchsia.device.manager/administrator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#32)*
 
  Provides administration services for the device manager service and the device tree it controls.
 
@@ -1238,6 +1238,43 @@ Book: /_book.yaml
 
 ## **ENUMS**
 
+### SystemPowerState {:#SystemPowerState}
+Type: <code>uint8</code>
+
+*Defined in [fuchsia.device.manager/administrator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#20)*
+
+ TODO(ravoorir): When the system power states are properly defined,
+ remove the suspend flags. For now, treat each suspend flag as a system
+ power state.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>SYSTEM_POWER_STATE_REBOOT</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SYSTEM_POWER_STATE_REBOOT_BOOTLOADER</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SYSTEM_POWER_STATE_REBOOT_RECOVERY</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SYSTEM_POWER_STATE_POWEROFF</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SYSTEM_POWER_STATE_MEXEC</code></td>
+            <td><code>4</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SYSTEM_POWER_STATE_SUSPEND_RAM</code></td>
+            <td><code>5</code></td>
+            <td></td>
+        </tr></table>
+
 ### CompatibilityTestStatus {:#CompatibilityTestStatus}
 Type: <code>uint32</code>
 
@@ -1554,6 +1591,7 @@ Type: <code>uint32</code>
 
 
 ## **BITS**
+
 ### AddDeviceConfig {:#AddDeviceConfig}
 Type: <code>uint32</code>
 
@@ -1577,13 +1615,53 @@ Type: <code>uint32</code>
                     <code>3705405696</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Check the DDK for all available flags.
+            <td> All available suspend flags
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#11">SUSPEND_FLAG_POWEROFF</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#11">SUSPEND_FLAG_REBOOT_BOOTLOADER</a></td>
+            <td>
+                    <code>3705405697</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#12">SUSPEND_FLAG_REBOOT_RECOVERY</a></td>
+            <td>
+                    <code>3705405698</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#13">SUSPEND_FLAG_POWEROFF</a></td>
             <td>
                     <code>3705405952</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#14">SUSPEND_FLAG_MEXEC</a></td>
+            <td>
+                    <code>3705406208</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#15">SUSPEND_FLAG_SUSPEND_RAM</a></td>
+            <td>
+                    <code>3705406464</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#28">MAX_SYSTEM_POWER_STATES</a></td>
+            <td>
+                    <code>6</code>
                 </td>
                 <td><code>uint32</code></td>
             <td></td>

@@ -6,6 +6,174 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
+## AccessPointProvider {:#AccessPointProvider}
+*Defined in [fuchsia.wlan.policy/access_point_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/access_point_provider.fidl#18)*
+
+ The AccessPointProvider API provides a mechanism for access point
+ control and is intended to be called by applications or entities representing
+ the user (ex, Settings). This API is not intended to be called by other
+ applications to change wlan state without explicit user control.
+
+ The second aim of this API design is to eliminate the "last-caller wins"
+ paradigm by limiting the number of controlling applications.  A single caller
+ at a time is permitted to make API calls that impact wlan state.
+
+### GetController {:#GetController}
+
+ Control channel used by a single caller to trigger wlan access point (ap) mode
+ state changes.  The caller also provides a channel to receive wlan ap updates.
+ Only one caller can have the control channel open at a time.  Attempts to
+ register as a controller while there is an active control registration
+ will result in the new caller's provided channel being closed.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requests</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#AccessPointController'>AccessPointController</a>&gt;</code>
+            </td>
+        </tr><tr>
+            <td><code>updates</code></td>
+            <td>
+                <code><a class='link' href='#AccessPointStateUpdates'>AccessPointStateUpdates</a></code>
+            </td>
+        </tr></table>
+
+
+
+## AccessPointListener {:#AccessPointListener}
+*Defined in [fuchsia.wlan.policy/access_point_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/access_point_provider.fidl#30)*
+
+ The AccessPointListener API provides a mechanism for callers to receive state change
+ updates about wlan access point operation.
+
+### GetListener {:#GetListener}
+
+ Registration for callers to receive wlan access point (ap) mode state updates.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>updates</code></td>
+            <td>
+                <code><a class='link' href='#AccessPointStateUpdates'>AccessPointStateUpdates</a></code>
+            </td>
+        </tr></table>
+
+
+
+## AccessPointController {:#AccessPointController}
+*Defined in [fuchsia.wlan.policy/access_point_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/access_point_provider.fidl#38)*
+
+ AccessPointControllers allow the caller to trigger wlan state changes.  This
+ includes whether the device will act as an access point and provide a wlan
+ network for other co-located devices.
+
+### StartAccessPoint {:#StartAccessPoint}
+
+ Enables wlan to initiate AccessPoint operation using the provided network
+ configuration, connectivity mode and band.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>config</code></td>
+            <td>
+                <code><a class='link' href='#NetworkConfig'>NetworkConfig</a></code>
+            </td>
+        </tr><tr>
+            <td><code>mode</code></td>
+            <td>
+                <code><a class='link' href='#ConnectivityMode'>ConnectivityMode</a></code>
+            </td>
+        </tr><tr>
+            <td><code>band</code></td>
+            <td>
+                <code><a class='link' href='#OperatingBand'>OperatingBand</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.wlan.common/index.html'>fuchsia.wlan.common</a>/<a class='link' href='../fuchsia.wlan.common/index.html#RequestStatus'>RequestStatus</a></code>
+            </td>
+        </tr></table>
+
+### StopAccessPoint {:#StopAccessPoint}
+
+ Deactivate AccessPoint operation for a specified network configuration.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>config</code></td>
+            <td>
+                <code><a class='link' href='#NetworkConfig'>NetworkConfig</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.wlan.common/index.html'>fuchsia.wlan.common</a>/<a class='link' href='../fuchsia.wlan.common/index.html#RequestStatus'>RequestStatus</a></code>
+            </td>
+        </tr></table>
+
+### StopAllAccessPoints {:#StopAllAccessPoints}
+
+ Deactivates all AccessPoints currently operating on the device.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+
+## AccessPointStateUpdates {:#AccessPointStateUpdates}
+*Defined in [fuchsia.wlan.policy/access_point_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/access_point_provider.fidl#52)*
+
+ AccessPoint operation status changes along with associated connection status.
+
+### OnAccessPointStateUpdate {:#OnAccessPointStateUpdate}
+
+ Updates registered listeners with the current summary of wlan access point
+ operating states.  This will be called when there are changes with active
+ access point networks - both the number of access points and their
+ individual activity.  Registered listeners are responsible for deciding
+ what information has changed (this is dependent on when they last
+ acknowledged the update).
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>access_points</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#AccessPointState'>AccessPointState</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
 ## ClientProvider {:#ClientProvider}
 *Defined in [fuchsia.wlan.policy/client_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/client_provider.fidl#19)*
 
@@ -405,7 +573,7 @@ Book: /_book.yaml
 </table>
 
 ### Empty {:#Empty}
-*Defined in [fuchsia.wlan.policy/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/types.fidl#54)*
+*Defined in [fuchsia.wlan.policy/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/types.fidl#66)*
 
 
 
@@ -419,6 +587,48 @@ Book: /_book.yaml
 
 
 ## **ENUMS**
+
+### ConnectivityMode {:#ConnectivityMode}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.wlan.policy/access_point_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/access_point_provider.fidl#83)*
+
+ Connectivity operating mode for the access point.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>LOCAL_ONLY</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>UNRESTRICTED</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr></table>
+
+### OperatingState {:#OperatingState}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.wlan.policy/access_point_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/access_point_provider.fidl#94)*
+
+ Current detailed operating state for an access point.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>FAILED</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>STARTING</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ACTIVE</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr></table>
 
 ### ScanErrorCode {:#ScanErrorCode}
 Type: <code>uint32</code>
@@ -587,9 +797,106 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### OperatingBand {:#OperatingBand}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.wlan.policy/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/types.fidl#53)*
+
+ Operating band for wlan control request and status updates.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>ANY</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ONLY_2_4GHZ</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ONLY_5GHZ</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr></table>
+
 
 
 ## **TABLES**
+
+### AccessPointState {:#AccessPointState}
+
+
+*Defined in [fuchsia.wlan.policy/access_point_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/access_point_provider.fidl#65)*
+
+ Information about the individual operating access points.  This includes limited
+ information about any connected clients.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>state</code></td>
+            <td>
+                <code><a class='link' href='#OperatingState'>OperatingState</a></code>
+            </td>
+            <td> Current access point operating state
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>mode</code></td>
+            <td>
+                <code><a class='link' href='#ConnectivityMode'>ConnectivityMode</a></code>
+            </td>
+            <td> Requested operating connectivity mode
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>band</code></td>
+            <td>
+                <code><a class='link' href='#OperatingBand'>OperatingBand</a></code>
+            </td>
+            <td> Access point operating band.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>frequency</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> Access point operating frequency (in MHz).
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>clients</code></td>
+            <td>
+                <code><a class='link' href='#ConnectedClientInformation'>ConnectedClientInformation</a></code>
+            </td>
+            <td> Information about connected clients
+</td>
+        </tr></table>
+
+### ConnectedClientInformation {:#ConnectedClientInformation}
+
+
+*Defined in [fuchsia.wlan.policy/access_point_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.policy/access_point_provider.fidl#109)*
+
+ Connected client information.  This is initially limited to the number of
+ connected clients.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>count</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td> Number of connected clients
+</td>
+        </tr></table>
 
 ### ScanResult {:#ScanResult}
 
@@ -660,7 +967,7 @@ Type: <code>uint32</code>
             <td>3</td>
             <td><code>frequency</code></td>
             <td>
-                <code>int32</code>
+                <code>uint32</code>
             </td>
             <td> Operating frequency for this network (in MHz).
 </td>
