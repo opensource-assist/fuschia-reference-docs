@@ -65,9 +65,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>err</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
+                <code><a class='link' href='#Stack_DelEthernetInterface_Result'>Stack_DelEthernetInterface_Result</a></code>
             </td>
         </tr></table>
 
@@ -140,9 +140,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>err</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
+                <code><a class='link' href='#Stack_EnableInterface_Result'>Stack_EnableInterface_Result</a></code>
             </td>
         </tr></table>
 
@@ -165,9 +165,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>err</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
+                <code><a class='link' href='#Stack_DisableInterface_Result'>Stack_DisableInterface_Result</a></code>
             </td>
         </tr></table>
 
@@ -196,9 +196,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>err</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
+                <code><a class='link' href='#Stack_AddInterfaceAddress_Result'>Stack_AddInterfaceAddress_Result</a></code>
             </td>
         </tr></table>
 
@@ -227,9 +227,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>err</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
+                <code><a class='link' href='#Stack_DelInterfaceAddress_Result'>Stack_DelInterfaceAddress_Result</a></code>
             </td>
         </tr></table>
 
@@ -273,9 +273,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>err</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
+                <code><a class='link' href='#Stack_AddForwardingEntry_Result'>Stack_AddForwardingEntry_Result</a></code>
             </td>
         </tr></table>
 
@@ -300,9 +300,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>err</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
+                <code><a class='link' href='#Stack_DelForwardingEntry_Result'>Stack_DelForwardingEntry_Result</a></code>
             </td>
         </tr></table>
 
@@ -403,7 +403,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Log {:#Log}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#202)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#204)*
 
 
 ### SetLogLevel {:#SetLogLevel}
@@ -426,15 +426,92 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>err</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
+                <code><a class='link' href='#Log_SetLogLevel_Result'>Log_SetLogLevel_Result</a></code>
             </td>
         </tr></table>
 
 
 
 ## **STRUCTS**
+
+### Stack_DelEthernetInterface_Response {:#Stack_DelEthernetInterface_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Stack_EnableInterface_Response {:#Stack_EnableInterface_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Stack_DisableInterface_Response {:#Stack_DisableInterface_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Stack_AddInterfaceAddress_Response {:#Stack_AddInterfaceAddress_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Stack_DelInterfaceAddress_Response {:#Stack_DelInterfaceAddress_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Stack_AddForwardingEntry_Response {:#Stack_AddForwardingEntry_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Stack_DelForwardingEntry_Response {:#Stack_DelForwardingEntry_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
 
 ### Stack_EnablePacketFilter_Response {:#Stack_EnablePacketFilter_Response}
 *generated*
@@ -448,6 +525,17 @@ Book: /_book.yaml
 </table>
 
 ### Stack_DisablePacketFilter_Response {:#Stack_DisablePacketFilter_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Log_SetLogLevel_Response {:#Log_SetLogLevel_Response}
 *generated*
 
 
@@ -776,7 +864,7 @@ Type: <code>uint32</code>
 ### LogLevelFilter {:#LogLevelFilter}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#192)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#194)*
 
  Note LogLevelFilter and protocol Log is transient,
  and is planned to be deprecated by logger.fidl's LogLevelFilter.
@@ -816,6 +904,139 @@ Type: <code>int32</code>
 
 ## **UNIONS**
 
+### Stack_DelEthernetInterface_Result {:#Stack_DelEthernetInterface_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Stack_DelEthernetInterface_Response'>Stack_DelEthernetInterface_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Stack_EnableInterface_Result {:#Stack_EnableInterface_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Stack_EnableInterface_Response'>Stack_EnableInterface_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Stack_DisableInterface_Result {:#Stack_DisableInterface_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Stack_DisableInterface_Response'>Stack_DisableInterface_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Stack_AddInterfaceAddress_Result {:#Stack_AddInterfaceAddress_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Stack_AddInterfaceAddress_Response'>Stack_AddInterfaceAddress_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Stack_DelInterfaceAddress_Result {:#Stack_DelInterfaceAddress_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Stack_DelInterfaceAddress_Response'>Stack_DelInterfaceAddress_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Stack_AddForwardingEntry_Result {:#Stack_AddForwardingEntry_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Stack_AddForwardingEntry_Response'>Stack_AddForwardingEntry_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Stack_DelForwardingEntry_Result {:#Stack_DelForwardingEntry_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Stack_DelForwardingEntry_Response'>Stack_DelForwardingEntry_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### Stack_EnablePacketFilter_Result {:#Stack_EnablePacketFilter_Result}
 *generated*
 
@@ -844,6 +1065,25 @@ Type: <code>int32</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Stack_DisablePacketFilter_Response'>Stack_DisablePacketFilter_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Log_SetLogLevel_Result {:#Log_SetLogLevel_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Log_SetLogLevel_Response'>Log_SetLogLevel_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

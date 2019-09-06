@@ -73,6 +73,10 @@ toc:
   path: /reference/fidl/fuchsia.device.test
 - title: fuchsia.devicesettings
   path: /reference/fidl/fuchsia.devicesettings
+- title: fuchsia.diagnostics
+  path: /reference/fidl/fuchsia.diagnostics
+- title: fuchsia.diagnostics.inspect
+  path: /reference/fidl/fuchsia.diagnostics.inspect
 - title: fuchsia.exception
   path: /reference/fidl/fuchsia.exception
 - title: fuchsia.factory
@@ -149,6 +153,8 @@ toc:
   path: /reference/fidl/fuchsia.modular.testing
 - title: fuchsia.net
   path: /reference/fidl/fuchsia.net
+- title: fuchsia.net.dhcp
+  path: /reference/fidl/fuchsia.net.dhcp
 - title: fuchsia.net.dns
   path: /reference/fidl/fuchsia.net.dns
 - title: fuchsia.net.filter

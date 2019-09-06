@@ -148,6 +148,14 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.diagnostics/index">fuchsia.diagnostics</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.diagnostics.inspect/index">fuchsia.diagnostics.inspect</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.exception/index">fuchsia.exception</a></td>
     <td></td>
 </tr>
@@ -300,6 +308,10 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.net/index">fuchsia.net</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.net.dhcp/index">fuchsia.net.dhcp</a></td>
     <td></td>
 </tr>
 <tr>
