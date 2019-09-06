@@ -1388,6 +1388,7 @@ Type: <code>uint8</code>
 
 
 ## **BITS**
+
 ### Notifications {:#Notifications}
 Type: <code>uint32</code>
 

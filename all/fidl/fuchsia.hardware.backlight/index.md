@@ -7,11 +7,12 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Device {:#Device}
-*Defined in [fuchsia.hardware.backlight/backlight.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-backlight/backlight.fidl#15)*
+*Defined in [fuchsia.hardware.backlight/backlight.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-backlight/backlight.fidl#17)*
 
 
 ### GetState {:#GetState}
 
+ Gets the current backlight brightness
 
 #### Request
 <table>
@@ -31,6 +32,7 @@ Book: /_book.yaml
 
 ### SetState {:#SetState}
 
+ Sets the current backlight brightness
 
 #### Request
 <table>
@@ -49,7 +51,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### State {:#State}
-*Defined in [fuchsia.hardware.backlight/backlight.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-backlight/backlight.fidl#7)*
+*Defined in [fuchsia.hardware.backlight/backlight.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-backlight/backlight.fidl#8)*
 
 
 
@@ -57,7 +59,7 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>on</code></td>
+            <td><code>backlight_on</code></td>
             <td>
                 <code>bool</code>
             </td>
@@ -66,9 +68,12 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>brightness</code></td>
             <td>
-                <code>uint8</code>
+                <code>float64</code>
             </td>
-            <td></td>
+            <td> The unitless brightness value on a linear scale where 0.0 is the minimum
+ brightness and 1.0 is the maximum brightness - represents the current /
+ desired brightness as a percentage within the supported range.
+</td>
             <td>No default</td>
         </tr>
 </table>

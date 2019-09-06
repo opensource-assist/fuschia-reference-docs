@@ -2034,6 +2034,7 @@ Type: <code>uint64</code>
 
 
 ## **BITS**
+
 ### default_bits {:#default_bits}
 Type: <code>uint32</code>
 
@@ -2043,7 +2044,9 @@ Type: <code>uint32</code>
             <td>x</td>
             <td>64</td>
             <td></td>
-        </tr></table>### u8_bits {:#u8_bits}
+        </tr></table>
+
+### u8_bits {:#u8_bits}
 Type: <code>uint8</code>
 
 
@@ -2052,7 +2055,9 @@ Type: <code>uint8</code>
             <td>x</td>
             <td>1</td>
             <td></td>
-        </tr></table>### u16_bits {:#u16_bits}
+        </tr></table>
+
+### u16_bits {:#u16_bits}
 Type: <code>uint16</code>
 
 
@@ -2065,7 +2070,9 @@ Type: <code>uint16</code>
             <td>y</td>
             <td>4</td>
             <td></td>
-        </tr></table>### u32_bits {:#u32_bits}
+        </tr></table>
+
+### u32_bits {:#u32_bits}
 Type: <code>uint32</code>
 
 
@@ -2074,7 +2081,9 @@ Type: <code>uint32</code>
             <td>x</td>
             <td>8</td>
             <td></td>
-        </tr></table>### u64_bits {:#u64_bits}
+        </tr></table>
+
+### u64_bits {:#u64_bits}
 Type: <code>uint64</code>
 
 

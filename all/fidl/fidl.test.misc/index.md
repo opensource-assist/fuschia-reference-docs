@@ -620,6 +620,7 @@ Type: <code>uint32</code>
 
 
 ## **BITS**
+
 ### Uint32Bits {:#Uint32Bits}
 Type: <code>uint32</code>
 
@@ -633,7 +634,9 @@ Type: <code>uint32</code>
             <td>TWO</td>
             <td>2</td>
             <td></td>
-        </tr></table>### SampleBits {:#SampleBits}
+        </tr></table>
+
+### SampleBits {:#SampleBits}
 Type: <code>uint32</code>
 
 

@@ -513,6 +513,7 @@ Book: /_book.yaml
 
 
 ## **BITS**
+
 ### PropertyFlags {:#PropertyFlags}
 Type: <code>uint64</code>
 
@@ -523,7 +524,9 @@ Type: <code>uint64</code>
             <td>1</td>
             <td> The architecture supports LBR records (Last Branch Records).
 </td>
-        </tr></table>### EventConfigFlags {:#EventConfigFlags}
+        </tr></table>
+
+### EventConfigFlags {:#EventConfigFlags}
 Type: <code>uint32</code>
 
 

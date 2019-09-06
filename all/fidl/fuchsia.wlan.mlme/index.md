@@ -4391,6 +4391,7 @@ Type: <code>uint32</code>
 
 
 ## **BITS**
+
 ### MgmtFrameCaptureFlags {:#MgmtFrameCaptureFlags}
 Type: <code>uint32</code>
 

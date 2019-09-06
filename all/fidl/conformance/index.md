@@ -530,6 +530,42 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### Length2StringWrapper {:#Length2StringWrapper}
+*Defined in [conformance/strings.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/strings.test.fidl#7)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>length_2_string</code></td>
+            <td>
+                <code>string[2]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### StringWrapper {:#StringWrapper}
+*Defined in [conformance/strings.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/strings.test.fidl#11)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>str</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### EmptyStruct {:#EmptyStruct}
 *Defined in [conformance/structs.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/structs.test.fidl#7)*
 
@@ -806,6 +842,24 @@ Book: /_book.yaml
             <td><code>xu</code></td>
             <td>
                 <code><a class='link' href='#SampleStrictXUnion'>SampleStrictXUnion</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TestFlexibleXUnionInStruct {:#TestFlexibleXUnionInStruct}
+*Defined in [conformance/xunion.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/xunion.test.fidl#49)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>xu</code></td>
+            <td>
+                <code><a class='link' href='#SampleXUnion'>SampleXUnion</a></code>
             </td>
             <td></td>
             <td>No default</td>

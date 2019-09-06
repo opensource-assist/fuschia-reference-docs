@@ -57,7 +57,7 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>viewRef</code></td>
+            <td><code>view_ref</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.ui.views/index.html'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/index.html#ViewRef'>ViewRef</a></code>
             </td>
@@ -85,6 +85,10 @@ Book: /_book.yaml
         </tr></table>
 
 
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
 
 ## Listener {:#Listener}
 *Defined in [fuchsia.ui.shortcut/registry.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.shortcut/registry.fidl#42)*

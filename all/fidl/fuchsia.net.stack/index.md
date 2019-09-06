@@ -402,6 +402,36 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## Log {:#Log}
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#202)*
+
+
+### SetLogLevel {:#SetLogLevel}
+
+ Dynamically set a syslog level.
+ See syslog/logger.go for level definition.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>level</code></td>
+            <td>
+                <code><a class='link' href='#LogLevelFilter'>LogLevelFilter</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a>?</code>
+            </td>
+        </tr></table>
+
 
 
 ## **STRUCTS**
@@ -740,6 +770,43 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>IO</code></td>
             <td><code>8</code></td>
+            <td></td>
+        </tr></table>
+
+### LogLevelFilter {:#LogLevelFilter}
+Type: <code>int32</code>
+
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#192)*
+
+ Note LogLevelFilter and protocol Log is transient,
+ and is planned to be deprecated by logger.fidl's LogLevelFilter.
+ This definition is to support syslog/logger.go and Netstack2.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>TRACE</code></td>
+            <td><code>-2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DEBUG</code></td>
+            <td><code>-1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>INFO</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>WARN</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ERROR</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>FATAL</code></td>
+            <td><code>3</code></td>
             <td></td>
         </tr></table>
 

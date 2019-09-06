@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Filter {:#Filter}
-*Defined in [fuchsia.net.filter/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/commands.fidl#15)*
+*Defined in [fuchsia.net.filter/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/commands.fidl#19)*
 
 
 ### Enable {:#Enable}
@@ -59,7 +59,7 @@ Book: /_book.yaml
 ### GetRules {:#GetRules}
 
  GetRules gets the current rules. They do not include NAT or RDR rules.
- (use GetNATRules or GetRDRRules instead).
+ (use GetNatRules or GetRdrRules instead).
 
  GetRules also returns a generation number associated with the current
  rules.
@@ -76,7 +76,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Rule'>Rule</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Rule'>Rule</a>&gt;[128]</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -93,7 +93,7 @@ Book: /_book.yaml
 ### UpdateRules {:#UpdateRules}
 
  UpdateRules updates the current rules. It does not update NAT or RDR rules
- (use UpdateNATRules or UpdateRDRRules instead).
+ (use UpdateNatRules or UpdateRdrRules instead).
 
  UpdateRules takes a generation number that is previously returned from
  GetRules. To successfully update the current rules, the generation number
@@ -108,7 +108,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Rule'>Rule</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Rule'>Rule</a>&gt;[128]</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -128,11 +128,11 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### GetNATRules {:#GetNATRules}
+### GetNatRules {:#GetNatRules}
 
- GetNATRules gets the current NAT rules.
+ GetNatRules gets the current NAT rules.
 
- It also returns a generation number that can be passed to UpdateNATRules.
+ It also returns a generation number that can be passed to UpdateNatRules.
 
 
 #### Request
@@ -147,7 +147,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#NAT'>NAT</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Nat'>Nat</a>&gt;[128]</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -161,13 +161,13 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### UpdateNATRules {:#UpdateNATRules}
+### UpdateNatRules {:#UpdateNatRules}
 
- UpdateNATRules updates the current NAT rules.
+ UpdateNatRules updates the current NAT rules.
 
- It takes a generation number that is returned from GetNATRules. To
+ It takes a generation number that is returned from GetNatRules. To
  successfully update the current rules, the generation number passed to
- UpdateNATRules needs to be up-to-date.
+ UpdateNatRules needs to be up-to-date.
 
 #### Request
 <table>
@@ -175,7 +175,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#NAT'>NAT</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Nat'>Nat</a>&gt;[128]</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -195,11 +195,11 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### GetRDRRules {:#GetRDRRules}
+### GetRdrRules {:#GetRdrRules}
 
- GetRDRRules gets the current RDR rules.
+ GetRdrRules gets the current RDR rules.
 
- It also returns a generation number that can be passed to UpdateRDRRules.
+ It also returns a generation number that can be passed to UpdateRdrRules.
 
 #### Request
 <table>
@@ -213,7 +213,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#RDR'>RDR</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Rdr'>Rdr</a>&gt;[128]</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -227,13 +227,13 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### UpdateRDRRules {:#UpdateRDRRules}
+### UpdateRdrRules {:#UpdateRdrRules}
 
- UpdateRDRRules updates the previous RDR rules with new rules.
+ UpdateRdrRules updates the previous RDR rules with new rules.
 
- It takes a generation number that is returned from GetRDRRules. To
+ It takes a generation number that is returned from GetRdrRules. To
  successfully update the current rules, the generation number passed to
- UpdateRDRRules needs to be up-to-date.
+ UpdateRdrRules needs to be up-to-date.
 
 #### Request
 <table>
@@ -241,7 +241,7 @@ Book: /_book.yaml
     <tr>
             <td><code>rules</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#RDR'>RDR</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Rdr'>Rdr</a>&gt;[128]</code>
             </td>
         </tr><tr>
             <td><code>generation</code></td>
@@ -265,8 +265,34 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
+### PortRange {:#PortRange}
+*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#29)*
+
+
+
+ PortRange specifies an inclusive range of port numbers.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>start</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>end</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Rule {:#Rule}
-*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#31)*
+*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#35)*
 
 
 
@@ -319,9 +345,9 @@ Book: /_book.yaml
 </td>
             <td>No default</td>
         </tr><tr>
-            <td><code>src_port</code></td>
+            <td><code>src_port_range</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#PortRange'>PortRange</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -341,9 +367,9 @@ Book: /_book.yaml
 </td>
             <td>No default</td>
         </tr><tr>
-            <td><code>dst_port</code></td>
+            <td><code>dst_port_range</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#PortRange'>PortRange</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -362,7 +388,7 @@ Book: /_book.yaml
             <td></td>
             <td>No default</td>
         </tr><tr>
-            <td><code>keepState</code></td>
+            <td><code>keep_state</code></td>
             <td>
                 <code>bool</code>
             </td>
@@ -371,8 +397,8 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### NAT {:#NAT}
-*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#52)*
+### Nat {:#Nat}
+*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#56)*
 
 
 
@@ -412,8 +438,8 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### RDR {:#RDR}
-*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#61)*
+### Rdr {:#Rdr}
+*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#65)*
 
 
 
@@ -437,9 +463,9 @@ Book: /_book.yaml
             <td></td>
             <td>No default</td>
         </tr><tr>
-            <td><code>dst_port</code></td>
+            <td><code>dst_port_range</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#PortRange'>PortRange</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -451,9 +477,9 @@ Book: /_book.yaml
             <td></td>
             <td>No default</td>
         </tr><tr>
-            <td><code>new_dst_port</code></td>
+            <td><code>new_dst_port_range</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#PortRange'>PortRange</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -474,25 +500,26 @@ Book: /_book.yaml
 ### Status {:#Status}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.net.filter/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/commands.fidl#7)*
+*Defined in [fuchsia.net.filter/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/commands.fidl#8)*
 
+ Status codes for commands.
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>ok</code></td>
+            <td><code>OK</code></td>
             <td><code>0</code></td>
             <td></td>
         </tr><tr>
-            <td><code>err_internal</code></td>
+            <td><code>ERR_INTERNAL</code></td>
             <td><code>1</code></td>
             <td></td>
         </tr><tr>
-            <td><code>err_generation_mismatch</code></td>
+            <td><code>ERR_GENERATION_MISMATCH</code></td>
             <td><code>2</code></td>
             <td></td>
         </tr><tr>
-            <td><code>err_bad_rule</code></td>
+            <td><code>ERR_BAD_RULE</code></td>
             <td><code>3</code></td>
             <td></td>
         </tr></table>
@@ -507,11 +534,11 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>incoming</code></td>
+            <td><code>INCOMING</code></td>
             <td><code>0</code></td>
             <td></td>
         </tr><tr>
-            <td><code>outgoing</code></td>
+            <td><code>OUTGOING</code></td>
             <td><code>1</code></td>
             <td></td>
         </tr></table>
@@ -525,15 +552,15 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>pass</code></td>
+            <td><code>PASS</code></td>
             <td><code>0</code></td>
             <td></td>
         </tr><tr>
-            <td><code>drop</code></td>
+            <td><code>DROP</code></td>
             <td><code>1</code></td>
             <td></td>
         </tr><tr>
-            <td><code>drop_reset</code></td>
+            <td><code>DROP_RESET</code></td>
             <td><code>2</code></td>
             <td></td>
         </tr></table>
@@ -547,27 +574,19 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>ip</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>icmp</code></td>
+            <td><code>ICMP</code></td>
             <td><code>1</code></td>
             <td></td>
         </tr><tr>
-            <td><code>tcp</code></td>
+            <td><code>TCP</code></td>
             <td><code>6</code></td>
             <td></td>
         </tr><tr>
-            <td><code>udp</code></td>
+            <td><code>UDP</code></td>
             <td><code>17</code></td>
             <td></td>
         </tr><tr>
-            <td><code>ipv6</code></td>
-            <td><code>41</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>icmpv6</code></td>
+            <td><code>ICMPV6</code></td>
             <td><code>58</code></td>
             <td></td>
         </tr></table>
@@ -581,4 +600,19 @@ Type: <code>uint32</code>
 
 
 
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/commands.fidl#16">MAX_RULES</a></td>
+            <td>
+                    <code>128</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> The maximum number of rules.
+</td>
+        </tr>
+    
+</table>
 

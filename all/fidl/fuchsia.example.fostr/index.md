@@ -154,6 +154,7 @@ Type: <code>uint32</code>
 
 
 ## **BITS**
+
 ### ExampleBits {:#ExampleBits}
 Type: <code>uint32</code>
 

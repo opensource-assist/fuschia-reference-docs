@@ -324,6 +324,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.auth.oldtokens/index">fuchsia.auth.oldtokens</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.auth.testing/index">fuchsia.auth.testing</a></td>
     <td></td>
 </tr>
@@ -380,6 +384,26 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.camera2/index">fuchsia.camera2</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.camera2.hal/index">fuchsia.camera2.hal</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.castauth/index">fuchsia.castauth</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.castsetup/index">fuchsia.castsetup</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.castsysteminfo/index">fuchsia.castsysteminfo</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.cobalt/index">fuchsia.cobalt</a></td>
     <td></td>
 </tr>
@@ -425,6 +449,14 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.devicesettings/index">fuchsia.devicesettings</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.diagnostics/index">fuchsia.diagnostics</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.diagnostics.inspect/index">fuchsia.diagnostics.inspect</a></td>
     <td></td>
 </tr>
 <tr>
@@ -517,6 +549,18 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.hardware.ethertap/index">fuchsia.hardware.ethertap</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.hardware.goldfish.address.space/index">fuchsia.hardware.goldfish.address.space</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.hardware.goldfish.control/index">fuchsia.hardware.goldfish.control</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.hardware.goldfish.pipe/index">fuchsia.hardware.goldfish.pipe</a></td>
     <td></td>
 </tr>
 <tr>
@@ -703,6 +747,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.net.icmp/index">fuchsia.net.icmp</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.net.mdns/index">fuchsia.net.mdns</a></td>
     <td></td>
 </tr>
@@ -728,6 +776,10 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.netemul.example/index">fuchsia.netemul.example</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.netemul.guest/index">fuchsia.netemul.guest</a></td>
     <td></td>
 </tr>
 <tr>
@@ -932,6 +984,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.ui.activity/index">fuchsia.ui.activity</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.ui.app/index">fuchsia.ui.app</a></td>
     <td></td>
 </tr>
@@ -965,6 +1021,10 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.ui.policy.accessibility/index">fuchsia.ui.policy.accessibility</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.ui.remotewidgets/index">fuchsia.ui.remotewidgets</a></td>
     <td></td>
 </tr>
 <tr>

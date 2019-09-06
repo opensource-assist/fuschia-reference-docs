@@ -148,6 +148,7 @@ Book: /_book.yaml
 
 
 ## **BITS**
+
 ### SampleBits {:#SampleBits}
 Type: <code>uint8</code>
 

@@ -161,6 +161,8 @@ toc:
   path: /reference/fidl/fuchsia.auth.account
 - title: fuchsia.auth.account.internal
   path: /reference/fidl/fuchsia.auth.account.internal
+- title: fuchsia.auth.oldtokens
+  path: /reference/fidl/fuchsia.auth.oldtokens
 - title: fuchsia.auth.testing
   path: /reference/fidl/fuchsia.auth.testing
 - title: fuchsia.bluetooth
@@ -189,6 +191,16 @@ toc:
   path: /reference/fidl/fuchsia.camera
 - title: fuchsia.camera.common
   path: /reference/fidl/fuchsia.camera.common
+- title: fuchsia.camera2
+  path: /reference/fidl/fuchsia.camera2
+- title: fuchsia.camera2.hal
+  path: /reference/fidl/fuchsia.camera2.hal
+- title: fuchsia.castauth
+  path: /reference/fidl/fuchsia.castauth
+- title: fuchsia.castsetup
+  path: /reference/fidl/fuchsia.castsetup
+- title: fuchsia.castsysteminfo
+  path: /reference/fidl/fuchsia.castsysteminfo
 - title: fuchsia.cobalt
   path: /reference/fidl/fuchsia.cobalt
 - title: fuchsia.crash
@@ -213,6 +225,10 @@ toc:
   path: /reference/fidl/fuchsia.device.test
 - title: fuchsia.devicesettings
   path: /reference/fidl/fuchsia.devicesettings
+- title: fuchsia.diagnostics
+  path: /reference/fidl/fuchsia.diagnostics
+- title: fuchsia.diagnostics.inspect
+  path: /reference/fidl/fuchsia.diagnostics.inspect
 - title: fuchsia.example.fostr
   path: /reference/fidl/fuchsia.example.fostr
 - title: fuchsia.examples
@@ -259,6 +275,12 @@ toc:
   path: /reference/fidl/fuchsia.hardware.ethernet
 - title: fuchsia.hardware.ethertap
   path: /reference/fidl/fuchsia.hardware.ethertap
+- title: fuchsia.hardware.goldfish.address.space
+  path: /reference/fidl/fuchsia.hardware.goldfish.address.space
+- title: fuchsia.hardware.goldfish.control
+  path: /reference/fidl/fuchsia.hardware.goldfish.control
+- title: fuchsia.hardware.goldfish.pipe
+  path: /reference/fidl/fuchsia.hardware.goldfish.pipe
 - title: fuchsia.hardware.input
   path: /reference/fidl/fuchsia.hardware.input
 - title: fuchsia.hardware.mediacodec
@@ -349,6 +371,8 @@ toc:
   path: /reference/fidl/fuchsia.net.filter
 - title: fuchsia.net.http
   path: /reference/fidl/fuchsia.net.http
+- title: fuchsia.net.icmp
+  path: /reference/fidl/fuchsia.net.icmp
 - title: fuchsia.net.mdns
   path: /reference/fidl/fuchsia.net.mdns
 - title: fuchsia.net.oldhttp
@@ -363,6 +387,8 @@ toc:
   path: /reference/fidl/fuchsia.netemul.environment
 - title: fuchsia.netemul.example
   path: /reference/fidl/fuchsia.netemul.example
+- title: fuchsia.netemul.guest
+  path: /reference/fidl/fuchsia.netemul.guest
 - title: fuchsia.netemul.network
   path: /reference/fidl/fuchsia.netemul.network
 - title: fuchsia.netemul.sandbox
@@ -463,6 +489,8 @@ toc:
   path: /reference/fidl/fuchsia.tracing.provider
 - title: fuchsia.tts
   path: /reference/fidl/fuchsia.tts
+- title: fuchsia.ui.activity
+  path: /reference/fidl/fuchsia.ui.activity
 - title: fuchsia.ui.app
   path: /reference/fidl/fuchsia.ui.app
 - title: fuchsia.ui.brightness
@@ -481,6 +509,8 @@ toc:
   path: /reference/fidl/fuchsia.ui.policy
 - title: fuchsia.ui.policy.accessibility
   path: /reference/fidl/fuchsia.ui.policy.accessibility
+- title: fuchsia.ui.remotewidgets
+  path: /reference/fidl/fuchsia.ui.remotewidgets
 - title: fuchsia.ui.scenic
   path: /reference/fidl/fuchsia.ui.scenic
 - title: fuchsia.ui.scenic.internal

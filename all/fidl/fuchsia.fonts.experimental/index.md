@@ -522,6 +522,7 @@ Type: <code>uint32</code>
 
 
 ## **BITS**
+
 ### ListTypefacesFlags {:#ListTypefacesFlags}
 Type: <code>uint32</code>
 
