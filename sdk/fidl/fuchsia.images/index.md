@@ -209,6 +209,268 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## ImagePipe2 {:#ImagePipe2}
+*Defined in [fuchsia.images/image_pipe2.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.images/image_pipe2.fidl#71)*
+
+ ImagePipe is a mechanism for streaming shared images between a producer
+ and a consumer which may be running in different processes.
+
+ Conceptually, the image pipe maintains a table of image resources supplied
+ by the producer into which graphical content may be stored as well as a
+ presentation queue containing a sequence of images which the producer has
+ asked the consumer to present.
+
+ The presentation queue is initially empty.
+
+ Each entry in the presentation queue consists of an image together with a
+ pair of optional synchronization fences:
+ - Acquire fence: signaled by the producer when the image is ready to be consumed
+ - Release fence: signaled by the consumer when the image is free to be freed or
+   modified by the producer
+
+ The producer performs the following sequence of steps to present content:
+ - Allocate and add some number of BufferCollections to the image pipe to allow
+ consumer to set constraints.
+ - Allocate and add some number of images (often 2 or 3) to the image pipe
+   to establish a pool using `AddImage()`.
+ - Obtain the next available image from the pool.
+ - Ask the consumer to enqueue an image for presentation and provide fences
+   using `PresentImage()`.
+ - Start rendering the image.
+ - Signal the image's acquire fence when rendering is complete.
+ - Loop to present more image, listen for signals on release fences to recycle
+   images back into the pool.
+
+ The consumer performs the following sequence of steps for each image which
+ is enqueued in the presentation queue:
+ - Await signals on the image's acquire fence.
+ - If the fence wait cannot be satisfied or if some other error is detected,
+   close the image pipe.
+   Otherwise, begin presenting the image's content.
+ - Retire the previously presented image (if any) from the presentation queue
+   and signal its release fence when no longer needed.
+ - Continue presenting the same image until the next one is ready.  Loop.
+
+ If the producer wants to close the image pipe, it should:
+ - Close its side of the connection.
+ - Wait on all release fences for buffers that it has submitted with
+   `PresentImage()`.
+ - Proceed with resource cleanup.
+
+ When the consumer detects the image pipe has closed, it should:
+ - Stop using/presenting any images from the pipe.
+ - Unmap all memory objects associated with the images in the pipe.
+ - Close all BufferCollection resources.
+ - Signal all release fences for presented and queued buffers.
+ - Close all handles to fences.
+ - Close its side of the connection.
+
+ When either party detects that a fence has been abandoned (remotely closed
+ without being signaled) it should assume that the associated image is in
+ an indeterminate state.  This will typically happen when the other party
+ (or one of its delegates) has crashed.  The safest course of action is to
+ close the image pipe, release all resources which were shared with the
+ other party, and re-establish the connection to recover.
+
+### AddBufferCollection {:#AddBufferCollection}
+
+ Adds a BufferCollection resource to the image pipe.
+
+ The producer is expected to set constraints on this resource for images added
+ via `AddImage()`. The consumer can set its constraints on
+ `buffer_collection_token` before or after. Note that the buffers won’t be
+ allocated until all BufferCollectionToken instances are used to set
+ constraints, on both the producer and consumer side. See collection.fidl for
+ details.
+
+ The following errors will cause the connection to be closed:
+ - `buffer_collection_id` is already registered
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>buffer_collection_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>buffer_collection_token</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.sysmem/index.html'>fuchsia.sysmem</a>/<a class='link' href='../fuchsia.sysmem/index.html#BufferCollectionToken'>BufferCollectionToken</a></code>
+            </td>
+        </tr></table>
+
+
+
+### AddImage {:#AddImage}
+
+ Adds an image resource to image pipe.
+
+ `buffer_collection_id` refers to the BufferCollectionToken instance that is
+ registered via `AddBufferCollection()`. The underlying memory objects allocated
+ are used to address to the image data. `buffer_collection_id` refers to the
+ index of the memory object allocated in BufferCollection.
+
+ `image_format` specifiies image properties. `coded_width` and `coded_height` are
+ used to set image dimensions.
+
+ It is valid to create multiple images backed by the same memory object; they
+ may even overlap.  Consumers must detect this and handle it accordingly.
+
+ The following errors will cause the connection to be closed:
+ - `image_id` is already registered
+ - `buffer_collection_id` refers to an unregistered BufferCollection.
+ - `buffer_collection_index` points to a resource index out of the initialized
+     BufferCollection bounds
+ - No resource is allocated in the registered BufferCollection.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>buffer_collection_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>buffer_collection_index</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>image_format</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.sysmem/index.html'>fuchsia.sysmem</a>/<a class='link' href='../fuchsia.sysmem/index.html#ImageFormat_2'>ImageFormat_2</a></code>
+            </td>
+        </tr></table>
+
+
+
+### RemoveBufferCollection {:#RemoveBufferCollection}
+
+ Removes a BufferCollection resource from the pipe.
+
+ The `buffer_collection_id` resource is detached as well as all Images that are
+ associated with that BufferCollection. Leads to the same results as calling
+ `RemoveImage()` on all Images for `buffer_collection_id`.
+
+ The producer must wait for all release fences associated with the Images to
+ be signaled before freeing or modifying the underlying memory object since
+ the image may still be in use in the presentation queue.
+
+ The following errors will cause the connection to be closed:
+ - `buffer_collection_id` does not reference a currently registered BufferCollection
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>buffer_collection_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+
+
+### RemoveImage {:#RemoveImage}
+
+ Removes an image resource from the pipe.
+
+ The `image_id` is detached from the image resource and is free to be
+ reused to add a new image resource.
+
+ Removing an image from the image pipe does not affect the presentation
+ queue or the currently presented image.
+
+ The producer must wait for all release fences associated with the image to
+ be signaled before freeing or modifying the underlying memory object since
+ the image may still be in use in the presentation queue.
+
+ The following errors will cause the connection to be closed:
+ - `image_id` does not reference a currently registered image resource
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+
+
+### PresentImage {:#PresentImage}
+
+ Enqueues the specified image for presentation by the consumer.
+
+ The `acquire_fences` are a set of fences which must all be signaled by the
+ producer before the consumer presents the image.
+ The `release_fences` are set of fences which must all be signaled by the
+ consumer before it is safe for the producer to free or modify the image.
+ `presentation_time` specifies the time on or after which the
+ client would like the enqueued operations should take visible effect
+ (light up pixels on the screen), expressed in nanoseconds in the
+ `CLOCK_MONOTONIC` timebase.  Desired presentation times must be
+ monotonically non-decreasing.
+
+ `presentation_info` returns timing information about the submitted frame
+ and future frames (see presentation_info.fidl).
+
+ The producer may decide not to signal `acquire_fences` for an image.
+ In that case, if a later image is enqueued and later image’s
+ `presentation_time` is reached, the consumer presents the later image when
+ later image’s `acquire_fences` are signaled. The consumer also signals
+ earlier image’s `release_fences` and removes it from the presentation queue.
+ This sequence works as a cancellation mechanism.
+
+ The following errors will cause the connection to be closed:
+ - `image_id` does not reference a currently registered image resource
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>presentation_time</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>acquire_fences</code></td>
+            <td>
+                <code>vector&lt;event&gt;[16]</code>
+            </td>
+        </tr><tr>
+            <td><code>release_fences</code></td>
+            <td>
+                <code>vector&lt;event&gt;[16]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>presentation_info</code></td>
+            <td>
+                <code><a class='link' href='#PresentationInfo'>PresentationInfo</a></code>
+            </td>
+        </tr></table>
+
 ## ImagePipe {:#ImagePipe}
 *Defined in [fuchsia.images/image_pipe.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.images/image_pipe.fidl#64)*
 
@@ -398,6 +660,268 @@ Book: /_book.yaml
             <td><code>release_fences</code></td>
             <td>
                 <code>vector&lt;event&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>presentation_info</code></td>
+            <td>
+                <code><a class='link' href='#PresentationInfo'>PresentationInfo</a></code>
+            </td>
+        </tr></table>
+
+## ImagePipe2 {:#ImagePipe2}
+*Defined in [fuchsia.images/image_pipe2.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.images/image_pipe2.fidl#71)*
+
+ ImagePipe is a mechanism for streaming shared images between a producer
+ and a consumer which may be running in different processes.
+
+ Conceptually, the image pipe maintains a table of image resources supplied
+ by the producer into which graphical content may be stored as well as a
+ presentation queue containing a sequence of images which the producer has
+ asked the consumer to present.
+
+ The presentation queue is initially empty.
+
+ Each entry in the presentation queue consists of an image together with a
+ pair of optional synchronization fences:
+ - Acquire fence: signaled by the producer when the image is ready to be consumed
+ - Release fence: signaled by the consumer when the image is free to be freed or
+   modified by the producer
+
+ The producer performs the following sequence of steps to present content:
+ - Allocate and add some number of BufferCollections to the image pipe to allow
+ consumer to set constraints.
+ - Allocate and add some number of images (often 2 or 3) to the image pipe
+   to establish a pool using `AddImage()`.
+ - Obtain the next available image from the pool.
+ - Ask the consumer to enqueue an image for presentation and provide fences
+   using `PresentImage()`.
+ - Start rendering the image.
+ - Signal the image's acquire fence when rendering is complete.
+ - Loop to present more image, listen for signals on release fences to recycle
+   images back into the pool.
+
+ The consumer performs the following sequence of steps for each image which
+ is enqueued in the presentation queue:
+ - Await signals on the image's acquire fence.
+ - If the fence wait cannot be satisfied or if some other error is detected,
+   close the image pipe.
+   Otherwise, begin presenting the image's content.
+ - Retire the previously presented image (if any) from the presentation queue
+   and signal its release fence when no longer needed.
+ - Continue presenting the same image until the next one is ready.  Loop.
+
+ If the producer wants to close the image pipe, it should:
+ - Close its side of the connection.
+ - Wait on all release fences for buffers that it has submitted with
+   `PresentImage()`.
+ - Proceed with resource cleanup.
+
+ When the consumer detects the image pipe has closed, it should:
+ - Stop using/presenting any images from the pipe.
+ - Unmap all memory objects associated with the images in the pipe.
+ - Close all BufferCollection resources.
+ - Signal all release fences for presented and queued buffers.
+ - Close all handles to fences.
+ - Close its side of the connection.
+
+ When either party detects that a fence has been abandoned (remotely closed
+ without being signaled) it should assume that the associated image is in
+ an indeterminate state.  This will typically happen when the other party
+ (or one of its delegates) has crashed.  The safest course of action is to
+ close the image pipe, release all resources which were shared with the
+ other party, and re-establish the connection to recover.
+
+### AddBufferCollection {:#AddBufferCollection}
+
+ Adds a BufferCollection resource to the image pipe.
+
+ The producer is expected to set constraints on this resource for images added
+ via `AddImage()`. The consumer can set its constraints on
+ `buffer_collection_token` before or after. Note that the buffers won’t be
+ allocated until all BufferCollectionToken instances are used to set
+ constraints, on both the producer and consumer side. See collection.fidl for
+ details.
+
+ The following errors will cause the connection to be closed:
+ - `buffer_collection_id` is already registered
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>buffer_collection_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>buffer_collection_token</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.sysmem/index.html'>fuchsia.sysmem</a>/<a class='link' href='../fuchsia.sysmem/index.html#BufferCollectionToken'>BufferCollectionToken</a></code>
+            </td>
+        </tr></table>
+
+
+
+### AddImage {:#AddImage}
+
+ Adds an image resource to image pipe.
+
+ `buffer_collection_id` refers to the BufferCollectionToken instance that is
+ registered via `AddBufferCollection()`. The underlying memory objects allocated
+ are used to address to the image data. `buffer_collection_id` refers to the
+ index of the memory object allocated in BufferCollection.
+
+ `image_format` specifiies image properties. `coded_width` and `coded_height` are
+ used to set image dimensions.
+
+ It is valid to create multiple images backed by the same memory object; they
+ may even overlap.  Consumers must detect this and handle it accordingly.
+
+ The following errors will cause the connection to be closed:
+ - `image_id` is already registered
+ - `buffer_collection_id` refers to an unregistered BufferCollection.
+ - `buffer_collection_index` points to a resource index out of the initialized
+     BufferCollection bounds
+ - No resource is allocated in the registered BufferCollection.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>buffer_collection_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>buffer_collection_index</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>image_format</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.sysmem/index.html'>fuchsia.sysmem</a>/<a class='link' href='../fuchsia.sysmem/index.html#ImageFormat_2'>ImageFormat_2</a></code>
+            </td>
+        </tr></table>
+
+
+
+### RemoveBufferCollection {:#RemoveBufferCollection}
+
+ Removes a BufferCollection resource from the pipe.
+
+ The `buffer_collection_id` resource is detached as well as all Images that are
+ associated with that BufferCollection. Leads to the same results as calling
+ `RemoveImage()` on all Images for `buffer_collection_id`.
+
+ The producer must wait for all release fences associated with the Images to
+ be signaled before freeing or modifying the underlying memory object since
+ the image may still be in use in the presentation queue.
+
+ The following errors will cause the connection to be closed:
+ - `buffer_collection_id` does not reference a currently registered BufferCollection
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>buffer_collection_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+
+
+### RemoveImage {:#RemoveImage}
+
+ Removes an image resource from the pipe.
+
+ The `image_id` is detached from the image resource and is free to be
+ reused to add a new image resource.
+
+ Removing an image from the image pipe does not affect the presentation
+ queue or the currently presented image.
+
+ The producer must wait for all release fences associated with the image to
+ be signaled before freeing or modifying the underlying memory object since
+ the image may still be in use in the presentation queue.
+
+ The following errors will cause the connection to be closed:
+ - `image_id` does not reference a currently registered image resource
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+
+
+### PresentImage {:#PresentImage}
+
+ Enqueues the specified image for presentation by the consumer.
+
+ The `acquire_fences` are a set of fences which must all be signaled by the
+ producer before the consumer presents the image.
+ The `release_fences` are set of fences which must all be signaled by the
+ consumer before it is safe for the producer to free or modify the image.
+ `presentation_time` specifies the time on or after which the
+ client would like the enqueued operations should take visible effect
+ (light up pixels on the screen), expressed in nanoseconds in the
+ `CLOCK_MONOTONIC` timebase.  Desired presentation times must be
+ monotonically non-decreasing.
+
+ `presentation_info` returns timing information about the submitted frame
+ and future frames (see presentation_info.fidl).
+
+ The producer may decide not to signal `acquire_fences` for an image.
+ In that case, if a later image is enqueued and later image’s
+ `presentation_time` is reached, the consumer presents the later image when
+ later image’s `acquire_fences` are signaled. The consumer also signals
+ earlier image’s `release_fences` and removes it from the presentation queue.
+ This sequence works as a cancellation mechanism.
+
+ The following errors will cause the connection to be closed:
+ - `image_id` does not reference a currently registered image resource
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>image_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>presentation_time</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>acquire_fences</code></td>
+            <td>
+                <code>vector&lt;event&gt;[16]</code>
+            </td>
+        </tr><tr>
+            <td><code>release_fences</code></td>
+            <td>
+                <code>vector&lt;event&gt;[16]</code>
             </td>
         </tr></table>
 
@@ -973,4 +1497,26 @@ Type: <code>uint32</code>
 
 
 
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.images/image_pipe2.fidl#10">MAX_ACQUIRE_RELEASE_FENCE_COUNT</a></td>
+            <td>
+                    <code>16</code>
+                </td>
+                <td><code>int32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.images/image_pipe2.fidl#10">MAX_ACQUIRE_RELEASE_FENCE_COUNT</a></td>
+            <td>
+                    <code>16</code>
+                </td>
+                <td><code>int32</code></td>
+            <td></td>
+        </tr>
+    
+</table>
 

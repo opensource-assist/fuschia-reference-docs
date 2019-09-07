@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Peer {:#Peer}
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#104)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#109)*
 
  Protocol used to drive the state of a fake peer device.
 
@@ -33,8 +33,63 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
+### EmulateLeConnectionComplete {:#EmulateLeConnectionComplete}
+
+ Emulates a LE connection event. Does nothing if the peer is already connected. The
+ `role` parameter determines the link layer connection role.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>role</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#ConnectionRole'>ConnectionRole</a></code>
+            </td>
+        </tr></table>
+
+
+
+### EmulateDisconnectionComplete {:#EmulateDisconnectionComplete}
+
+ Emulate disconnection. Does nothing if the peer is not connected.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+
+### WatchConnectionStates {:#WatchConnectionStates}
+
+ Watch connection state changes using the
+ [hanging get pattern](//docs/development/api/fidl.md#delay-responses-using-hanging-gets).
+ Notifies the most recent controller connection state if there has been a change since the
+ last time this method was called.
+
+ Only one call to this method can be outstanding at a given time. The
+ <a class='link' href='#Peer'>Peer</a> channel will be closed if a call is received when one is
+ already pending.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>states</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#ConnectionState'>ConnectionState</a>&gt;</code>
+            </td>
+        </tr></table>
+
 ## HciEmulator {:#HciEmulator}
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#113)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#135)*
 
  Protocol used to emulate a Bluetooth controller that supports the standard Bluetooth HCI.
 
@@ -345,6 +400,24 @@ Type: <code>uint32</code>
             <td></td>
         </tr><tr>
             <td><code>LE_ONLY</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr></table>
+
+### ConnectionState {:#ConnectionState}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#103)*
+
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>CONNECTED</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DISCONNECTED</code></td>
             <td><code>2</code></td>
             <td></td>
         </tr></table>
