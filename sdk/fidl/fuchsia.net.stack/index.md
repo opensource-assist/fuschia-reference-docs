@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Stack {:#Stack}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#130)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#126)*
 
 
 ### AddEthernetInterface {:#AddEthernetInterface}
@@ -35,14 +35,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>err</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
-            </td>
-        </tr><tr>
-            <td><code>id</code></td>
-            <td>
-                <code>uint64</code>
+                <code><a class='link' href='#Stack_AddEthernetInterface_Result'>Stack_AddEthernetInterface_Result</a></code>
             </td>
         </tr></table>
 
@@ -110,14 +105,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>info</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#InterfaceInfo'>InterfaceInfo</a>?</code>
-            </td>
-        </tr><tr>
-            <td><code>err</code></td>
-            <td>
-                <code><a class='link' href='#Error'>Error</a>?</code>
+                <code><a class='link' href='#Stack_GetInterfaceInfo_Result'>Stack_GetInterfaceInfo_Result</a></code>
             </td>
         </tr></table>
 
@@ -403,7 +393,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Log {:#Log}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#204)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#198)*
 
 
 ### SetLogLevel {:#SetLogLevel}
@@ -436,6 +426,24 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
+### Stack_AddEthernetInterface_Response {:#Stack_AddEthernetInterface_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Stack_DelEthernetInterface_Response {:#Stack_DelEthernetInterface_Response}
 *generated*
 
@@ -445,6 +453,24 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Stack_GetInterfaceInfo_Response {:#Stack_GetInterfaceInfo_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>info</code></td>
+            <td>
+                <code><a class='link' href='#InterfaceInfo'>InterfaceInfo</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
 </table>
 
 ### Stack_EnableInterface_Response {:#Stack_EnableInterface_Response}
@@ -743,24 +769,6 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### Error {:#Error}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#125)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>type</code></td>
-            <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
 
 
 ## **ENUMS**
@@ -864,7 +872,7 @@ Type: <code>uint32</code>
 ### LogLevelFilter {:#LogLevelFilter}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#194)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#188)*
 
  Note LogLevelFilter and protocol Log is transient,
  and is planned to be deprecated by logger.fidl's LogLevelFilter.
@@ -904,6 +912,25 @@ Type: <code>int32</code>
 
 ## **UNIONS**
 
+### Stack_AddEthernetInterface_Result {:#Stack_AddEthernetInterface_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Stack_AddEthernetInterface_Response'>Stack_AddEthernetInterface_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### Stack_DelEthernetInterface_Result {:#Stack_DelEthernetInterface_Result}
 *generated*
 
@@ -913,6 +940,25 @@ Type: <code>int32</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Stack_DelEthernetInterface_Response'>Stack_DelEthernetInterface_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Stack_GetInterfaceInfo_Result {:#Stack_GetInterfaceInfo_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Stack_GetInterfaceInfo_Response'>Stack_GetInterfaceInfo_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
