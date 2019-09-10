@@ -4708,6 +4708,14 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#52">videoUsageCapture</a></td>
+            <td>
+                    <code>8</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#16">FORMAT_MODIFIER_NONE</a></td>
             <td>
                     <code>0</code>
@@ -4991,6 +4999,14 @@ Type: <code>uint32</code>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#51">videoUsageHwProtected</a></td>
             <td>
                     <code>4</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#52">videoUsageCapture</a></td>
+            <td>
+                    <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
             <td></td>
