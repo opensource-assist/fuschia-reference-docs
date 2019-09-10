@@ -735,6 +735,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.net.dhcp/index">fuchsia.net.dhcp</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.net.dns/index">fuchsia.net.dns</a></td>
     <td></td>
 </tr>
@@ -933,10 +937,6 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.telephony.snoop/index">fuchsia.telephony.snoop</a></td>
-    <td></td>
-</tr>
-<tr>
-    <td><a href="fuchsia.term/index">fuchsia.term</a></td>
     <td></td>
 </tr>
 <tr>

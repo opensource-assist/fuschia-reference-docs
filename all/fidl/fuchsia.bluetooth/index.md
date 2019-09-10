@@ -690,6 +690,27 @@ Type: <code>uint16</code>
             <td></td>
         </tr></table>
 
+### ConnectionRole {:#ConnectionRole}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.bluetooth/connection_role.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/connection_role.fidl#10)*
+
+ Refers to the role of a Bluetooth device (local or peer) in a physical channel piconet. See
+ [Bluetooth Vocabulary Guide](//src/connectivity/bluetooth/docs/vocabulary.md) for more
+ information.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>LEADER</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>FOLLOWER</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr></table>
+
 ### ErrorCode {:#ErrorCode}
 Type: <code>uint32</code>
 
@@ -991,6 +1012,27 @@ Type: <code>uint16</code>
         </tr><tr>
             <td><code>SPORTS_ACTIVITY_LOCATION_AND_NAV_POD</code></td>
             <td><code>5188</code></td>
+            <td></td>
+        </tr></table>
+
+### ConnectionRole {:#ConnectionRole}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.bluetooth/connection_role.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/connection_role.fidl#10)*
+
+ Refers to the role of a Bluetooth device (local or peer) in a physical channel piconet. See
+ [Bluetooth Vocabulary Guide](//src/connectivity/bluetooth/docs/vocabulary.md) for more
+ information.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>LEADER</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>FOLLOWER</code></td>
+            <td><code>2</code></td>
             <td></td>
         </tr></table>
 

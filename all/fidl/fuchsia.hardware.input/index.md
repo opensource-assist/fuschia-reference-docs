@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Device {:#Device}
-*Defined in [fuchsia.hardware.input/input.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#28)*
+*Defined in [fuchsia.hardware.input/input.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#29)*
 
 
 ### GetBootProtocol {:#GetBootProtocol}
@@ -158,6 +158,54 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### GetReports {:#GetReports}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>data</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[8192]</code>
+            </td>
+        </tr></table>
+
+### GetReportsEvent {:#GetReportsEvent}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>event</code></td>
+            <td>
+                <code>handle&lt;event&gt;</code>
+            </td>
+        </tr></table>
+
 ### GetReport {:#GetReport}
 
 
@@ -272,7 +320,7 @@ Type: <code>uint32</code>
 ### ReportType {:#ReportType}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.hardware.input/input.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#21)*
+*Defined in [fuchsia.hardware.input/input.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#22)*
 
 
 
@@ -321,7 +369,15 @@ Type: <code>uint8</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#19">MAX_REPORT_IDS</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#19">MAX_REPORT_DATA</a></td>
+            <td>
+                    <code>8192</code>
+                </td>
+                <td><code>uint16</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#20">MAX_REPORT_IDS</a></td>
             <td>
                     <code>256</code>
                 </td>

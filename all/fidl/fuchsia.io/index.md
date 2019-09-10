@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Node {:#Node}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#161)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#164)*
 
  Node defines the minimal interface for entities which can be accessed in a filesystem.
 
@@ -250,7 +250,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## File {:#File}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#301)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#304)*
 
  File defines the interface of a node which contains a flat layout of data.
 
@@ -793,7 +793,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## DirectoryWatcher {:#DirectoryWatcher}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#420)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#423)*
 
  DirectoryWatcher transmits messages from a filesystem server
  about events happening in the filesystem. Clients can register
@@ -816,7 +816,7 @@ Book: /_book.yaml
 
 
 ## Directory {:#Directory}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#427)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#430)*
 
  Directory defines a node which is capable of containing other Objects.
 
@@ -1398,7 +1398,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## DirectoryAdmin {:#DirectoryAdmin}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#599)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#602)*
 
  DirectoryAdmin defines a directory which is capable of handling
  administrator tasks within the filesystem.
@@ -2142,7 +2142,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Node {:#Node}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#161)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#164)*
 
  Node defines the minimal interface for entities which can be accessed in a filesystem.
 
@@ -2385,7 +2385,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## File {:#File}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#301)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#304)*
 
  File defines the interface of a node which contains a flat layout of data.
 
@@ -2928,7 +2928,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## DirectoryWatcher {:#DirectoryWatcher}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#420)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#423)*
 
  DirectoryWatcher transmits messages from a filesystem server
  about events happening in the filesystem. Clients can register
@@ -2951,7 +2951,7 @@ Book: /_book.yaml
 
 
 ## Directory {:#Directory}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#427)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#430)*
 
  Directory defines a node which is capable of containing other Objects.
 
@@ -3533,7 +3533,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## DirectoryAdmin {:#DirectoryAdmin}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#599)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#602)*
 
  DirectoryAdmin defines a directory which is capable of handling
  administrator tasks within the filesystem.
@@ -4449,7 +4449,7 @@ Book: /_book.yaml
 </table>
 
 ### NodeAttributes {:#NodeAttributes}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#236)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#239)*
 
 
 
@@ -4517,7 +4517,7 @@ Book: /_book.yaml
 </table>
 
 ### WatchedEvent {:#WatchedEvent}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#408)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#411)*
 
 
 
@@ -4550,7 +4550,7 @@ Book: /_book.yaml
 </table>
 
 ### FilesystemInfo {:#FilesystemInfo}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#568)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#571)*
 
 
 
@@ -4817,7 +4817,7 @@ Book: /_book.yaml
 </table>
 
 ### NodeAttributes {:#NodeAttributes}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#236)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#239)*
 
 
 
@@ -4885,7 +4885,7 @@ Book: /_book.yaml
 </table>
 
 ### WatchedEvent {:#WatchedEvent}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#408)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#411)*
 
 
 
@@ -4918,7 +4918,7 @@ Book: /_book.yaml
 </table>
 
 ### FilesystemInfo {:#FilesystemInfo}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#568)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#571)*
 
 
 
@@ -5023,7 +5023,7 @@ Book: /_book.yaml
 ### SeekOrigin {:#SeekOrigin}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#271)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#274)*
 
  Update the Seek offset.
 
@@ -5046,7 +5046,7 @@ Type: <code>uint32</code>
 ### SeekOrigin {:#SeekOrigin}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#271)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#274)*
 
  Update the Seek offset.
 
@@ -5290,7 +5290,16 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#105">OPEN_FLAG_CREATE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#104">OPEN_RIGHT_EXECUTABLE</a></td>
+            <td>
+                    <code>8</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Connection can map target object executable.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#107">OPEN_FLAG_CREATE</a></td>
             <td>
                     <code>65536</code>
                 </td>
@@ -5299,7 +5308,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#107">OPEN_FLAG_CREATE_IF_ABSENT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#109">OPEN_FLAG_CREATE_IF_ABSENT</a></td>
             <td>
                     <code>131072</code>
                 </td>
@@ -5308,7 +5317,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#109">OPEN_FLAG_TRUNCATE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#111">OPEN_FLAG_TRUNCATE</a></td>
             <td>
                     <code>262144</code>
                 </td>
@@ -5317,7 +5326,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#112">OPEN_FLAG_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#114">OPEN_FLAG_DIRECTORY</a></td>
             <td>
                     <code>524288</code>
                 </td>
@@ -5327,7 +5336,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#114">OPEN_FLAG_APPEND</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#116">OPEN_FLAG_APPEND</a></td>
             <td>
                     <code>1048576</code>
                 </td>
@@ -5336,7 +5345,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#116">OPEN_FLAG_NO_REMOTE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#118">OPEN_FLAG_NO_REMOTE</a></td>
             <td>
                     <code>2097152</code>
                 </td>
@@ -5345,7 +5354,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#127">OPEN_FLAG_NODE_REFERENCE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#129">OPEN_FLAG_NODE_REFERENCE</a></td>
             <td>
                     <code>4194304</code>
                 </td>
@@ -5363,7 +5372,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#130">OPEN_FLAGS_ALLOWED_WITH_NODE_REFERENCE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#132">OPEN_FLAGS_ALLOWED_WITH_NODE_REFERENCE</a></td>
             <td>
                     <code>46661632</code>
                 </td>
@@ -5373,7 +5382,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#133">OPEN_FLAG_DESCRIBE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#135">OPEN_FLAG_DESCRIBE</a></td>
             <td>
                     <code>8388608</code>
                 </td>
@@ -5383,16 +5392,17 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#150">OPEN_FLAG_POSIX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#153">OPEN_FLAG_POSIX</a></td>
             <td>
                     <code>16777216</code>
                 </td>
                 <td><code>uint32</code></td>
             <td> Specify this flag to request POSIX-compatibility. Currently, it affects permission handling.
  During Open:
- - If the target path is a directory, the rights on the new connection expands to include
+ - If the target path is a directory, the rights on the new connection expand to include
    `OPEN_RIGHT_WRITABLE` if and only if the current connection and all intermediate mount points
-   are writable.
+   are writable, and to include `OPEN_RIGHT_EXECUTABLE` if and only if the current connection and
+   all intermediate mount points are executable.
  - Otherwise, this flag is ignored. It is an access denied error to request more rights
    than those on the current connection, or any intermediate mount points.
 
@@ -5407,7 +5417,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#153">OPEN_FLAG_NOT_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#156">OPEN_FLAG_NOT_DIRECTORY</a></td>
             <td>
                     <code>33554432</code>
                 </td>
@@ -5417,7 +5427,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#157">CLONE_FLAG_SAME_RIGHTS</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#160">CLONE_FLAG_SAME_RIGHTS</a></td>
             <td>
                     <code>67108864</code>
                 </td>
@@ -5428,7 +5438,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#224">MODE_PROTECTION_MASK</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#227">MODE_PROTECTION_MASK</a></td>
             <td>
                     <code>4095</code>
                 </td>
@@ -5440,7 +5450,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#228">MODE_TYPE_MASK</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#231">MODE_TYPE_MASK</a></td>
             <td>
                     <code>1044480</code>
                 </td>
@@ -5451,7 +5461,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#229">MODE_TYPE_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#232">MODE_TYPE_DIRECTORY</a></td>
             <td>
                     <code>16384</code>
                 </td>
@@ -5459,7 +5469,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#230">MODE_TYPE_BLOCK_DEVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#233">MODE_TYPE_BLOCK_DEVICE</a></td>
             <td>
                     <code>24576</code>
                 </td>
@@ -5467,7 +5477,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#231">MODE_TYPE_FILE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#234">MODE_TYPE_FILE</a></td>
             <td>
                     <code>32768</code>
                 </td>
@@ -5475,7 +5485,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#232">MODE_TYPE_SOCKET</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#235">MODE_TYPE_SOCKET</a></td>
             <td>
                     <code>49152</code>
                 </td>
@@ -5483,7 +5493,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#233">MODE_TYPE_SERVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#236">MODE_TYPE_SERVICE</a></td>
             <td>
                     <code>65536</code>
                 </td>
@@ -5491,7 +5501,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#253">MAX_IOCTL_HANDLES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#256">MAX_IOCTL_HANDLES</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -5499,7 +5509,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#257">MAX_BUF</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#260">MAX_BUF</a></td>
             <td>
                     <code>8192</code>
                 </td>
@@ -5509,7 +5519,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#261">MAX_PATH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#264">MAX_PATH</a></td>
             <td>
                     <code>4096</code>
                 </td>
@@ -5518,7 +5528,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#263">MAX_FILENAME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#266">MAX_FILENAME</a></td>
             <td>
                     <code>255</code>
                 </td>
@@ -5527,7 +5537,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#267">NODE_ATTRIBUTE_FLAG_CREATION_TIME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#270">NODE_ATTRIBUTE_FLAG_CREATION_TIME</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -5537,7 +5547,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#268">NODE_ATTRIBUTE_FLAG_MODIFICATION_TIME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#271">NODE_ATTRIBUTE_FLAG_MODIFICATION_TIME</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -5545,7 +5555,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#281">VMO_FLAG_READ</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#284">VMO_FLAG_READ</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -5554,7 +5564,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#284">VMO_FLAG_WRITE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#287">VMO_FLAG_WRITE</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -5563,7 +5573,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#287">VMO_FLAG_EXEC</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#290">VMO_FLAG_EXEC</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -5572,7 +5582,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#292">VMO_FLAG_PRIVATE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#295">VMO_FLAG_PRIVATE</a></td>
             <td>
                     <code>65536</code>
                 </td>
@@ -5583,7 +5593,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#297">VMO_FLAG_EXACT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#300">VMO_FLAG_EXACT</a></td>
             <td>
                     <code>131072</code>
                 </td>
@@ -5594,7 +5604,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#366">DIRENT_TYPE_UNKNOWN</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#369">DIRENT_TYPE_UNKNOWN</a></td>
             <td>
                     <code>0</code>
                 </td>
@@ -5603,7 +5613,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#368">DIRENT_TYPE_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#371">DIRENT_TYPE_DIRECTORY</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -5612,7 +5622,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#370">DIRENT_TYPE_BLOCK_DEVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#373">DIRENT_TYPE_BLOCK_DEVICE</a></td>
             <td>
                     <code>6</code>
                 </td>
@@ -5621,7 +5631,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#372">DIRENT_TYPE_FILE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#375">DIRENT_TYPE_FILE</a></td>
             <td>
                     <code>8</code>
                 </td>
@@ -5630,7 +5640,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#374">DIRENT_TYPE_SOCKET</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#377">DIRENT_TYPE_SOCKET</a></td>
             <td>
                     <code>12</code>
                 </td>
@@ -5639,7 +5649,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#376">DIRENT_TYPE_SERVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#379">DIRENT_TYPE_SERVICE</a></td>
             <td>
                     <code>16</code>
                 </td>
@@ -5648,7 +5658,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#380">INO_UNKNOWN</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#383">INO_UNKNOWN</a></td>
             <td>
                     <code>18446744073709551615</code>
                 </td>
@@ -5658,7 +5668,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#383">WATCH_EVENT_DELETED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#386">WATCH_EVENT_DELETED</a></td>
             <td>
                     <code>0</code>
                 </td>
@@ -5667,7 +5677,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#385">WATCH_EVENT_ADDED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#388">WATCH_EVENT_ADDED</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -5676,7 +5686,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#387">WATCH_EVENT_REMOVED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#390">WATCH_EVENT_REMOVED</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -5685,7 +5695,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#389">WATCH_EVENT_EXISTING</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#392">WATCH_EVENT_EXISTING</a></td>
             <td>
                     <code>3</code>
                 </td>
@@ -5694,7 +5704,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#391">WATCH_EVENT_IDLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#394">WATCH_EVENT_IDLE</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -5703,7 +5713,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#394">WATCH_MASK_DELETED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#397">WATCH_MASK_DELETED</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -5712,7 +5722,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#396">WATCH_MASK_ADDED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#399">WATCH_MASK_ADDED</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -5721,7 +5731,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#398">WATCH_MASK_REMOVED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#401">WATCH_MASK_REMOVED</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -5730,7 +5740,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#400">WATCH_MASK_EXISTING</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#403">WATCH_MASK_EXISTING</a></td>
             <td>
                     <code>8</code>
                 </td>
@@ -5739,7 +5749,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#402">WATCH_MASK_IDLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#405">WATCH_MASK_IDLE</a></td>
             <td>
                     <code>16</code>
                 </td>
@@ -5748,7 +5758,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#404">WATCH_MASK_ALL</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#407">WATCH_MASK_ALL</a></td>
             <td>
                     <code>31</code>
                 </td>
@@ -5757,7 +5767,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#564">MOUNT_CREATE_FLAG_REPLACE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#567">MOUNT_CREATE_FLAG_REPLACE</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -5765,7 +5775,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#566">MAX_FS_NAME_BUFFER</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#569">MAX_FS_NAME_BUFFER</a></td>
             <td>
                     <code>32</code>
                 </td>
@@ -5863,7 +5873,16 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#105">OPEN_FLAG_CREATE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#104">OPEN_RIGHT_EXECUTABLE</a></td>
+            <td>
+                    <code>8</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Connection can map target object executable.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#107">OPEN_FLAG_CREATE</a></td>
             <td>
                     <code>65536</code>
                 </td>
@@ -5872,7 +5891,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#107">OPEN_FLAG_CREATE_IF_ABSENT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#109">OPEN_FLAG_CREATE_IF_ABSENT</a></td>
             <td>
                     <code>131072</code>
                 </td>
@@ -5881,7 +5900,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#109">OPEN_FLAG_TRUNCATE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#111">OPEN_FLAG_TRUNCATE</a></td>
             <td>
                     <code>262144</code>
                 </td>
@@ -5890,7 +5909,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#112">OPEN_FLAG_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#114">OPEN_FLAG_DIRECTORY</a></td>
             <td>
                     <code>524288</code>
                 </td>
@@ -5900,7 +5919,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#114">OPEN_FLAG_APPEND</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#116">OPEN_FLAG_APPEND</a></td>
             <td>
                     <code>1048576</code>
                 </td>
@@ -5909,7 +5928,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#116">OPEN_FLAG_NO_REMOTE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#118">OPEN_FLAG_NO_REMOTE</a></td>
             <td>
                     <code>2097152</code>
                 </td>
@@ -5918,7 +5937,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#127">OPEN_FLAG_NODE_REFERENCE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#129">OPEN_FLAG_NODE_REFERENCE</a></td>
             <td>
                     <code>4194304</code>
                 </td>
@@ -5936,7 +5955,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#130">OPEN_FLAGS_ALLOWED_WITH_NODE_REFERENCE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#132">OPEN_FLAGS_ALLOWED_WITH_NODE_REFERENCE</a></td>
             <td>
                     <code>46661632</code>
                 </td>
@@ -5946,7 +5965,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#133">OPEN_FLAG_DESCRIBE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#135">OPEN_FLAG_DESCRIBE</a></td>
             <td>
                     <code>8388608</code>
                 </td>
@@ -5956,16 +5975,17 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#150">OPEN_FLAG_POSIX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#153">OPEN_FLAG_POSIX</a></td>
             <td>
                     <code>16777216</code>
                 </td>
                 <td><code>uint32</code></td>
             <td> Specify this flag to request POSIX-compatibility. Currently, it affects permission handling.
  During Open:
- - If the target path is a directory, the rights on the new connection expands to include
+ - If the target path is a directory, the rights on the new connection expand to include
    `OPEN_RIGHT_WRITABLE` if and only if the current connection and all intermediate mount points
-   are writable.
+   are writable, and to include `OPEN_RIGHT_EXECUTABLE` if and only if the current connection and
+   all intermediate mount points are executable.
  - Otherwise, this flag is ignored. It is an access denied error to request more rights
    than those on the current connection, or any intermediate mount points.
 
@@ -5980,7 +6000,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#153">OPEN_FLAG_NOT_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#156">OPEN_FLAG_NOT_DIRECTORY</a></td>
             <td>
                     <code>33554432</code>
                 </td>
@@ -5990,7 +6010,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#157">CLONE_FLAG_SAME_RIGHTS</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#160">CLONE_FLAG_SAME_RIGHTS</a></td>
             <td>
                     <code>67108864</code>
                 </td>
@@ -6001,7 +6021,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#224">MODE_PROTECTION_MASK</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#227">MODE_PROTECTION_MASK</a></td>
             <td>
                     <code>4095</code>
                 </td>
@@ -6013,7 +6033,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#228">MODE_TYPE_MASK</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#231">MODE_TYPE_MASK</a></td>
             <td>
                     <code>1044480</code>
                 </td>
@@ -6024,7 +6044,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#229">MODE_TYPE_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#232">MODE_TYPE_DIRECTORY</a></td>
             <td>
                     <code>16384</code>
                 </td>
@@ -6032,7 +6052,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#230">MODE_TYPE_BLOCK_DEVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#233">MODE_TYPE_BLOCK_DEVICE</a></td>
             <td>
                     <code>24576</code>
                 </td>
@@ -6040,7 +6060,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#231">MODE_TYPE_FILE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#234">MODE_TYPE_FILE</a></td>
             <td>
                     <code>32768</code>
                 </td>
@@ -6048,7 +6068,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#232">MODE_TYPE_SOCKET</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#235">MODE_TYPE_SOCKET</a></td>
             <td>
                     <code>49152</code>
                 </td>
@@ -6056,7 +6076,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#233">MODE_TYPE_SERVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#236">MODE_TYPE_SERVICE</a></td>
             <td>
                     <code>65536</code>
                 </td>
@@ -6064,7 +6084,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#253">MAX_IOCTL_HANDLES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#256">MAX_IOCTL_HANDLES</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -6072,7 +6092,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#257">MAX_BUF</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#260">MAX_BUF</a></td>
             <td>
                     <code>8192</code>
                 </td>
@@ -6082,7 +6102,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#261">MAX_PATH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#264">MAX_PATH</a></td>
             <td>
                     <code>4096</code>
                 </td>
@@ -6091,7 +6111,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#263">MAX_FILENAME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#266">MAX_FILENAME</a></td>
             <td>
                     <code>255</code>
                 </td>
@@ -6100,7 +6120,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#267">NODE_ATTRIBUTE_FLAG_CREATION_TIME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#270">NODE_ATTRIBUTE_FLAG_CREATION_TIME</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -6110,7 +6130,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#268">NODE_ATTRIBUTE_FLAG_MODIFICATION_TIME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#271">NODE_ATTRIBUTE_FLAG_MODIFICATION_TIME</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -6118,7 +6138,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#281">VMO_FLAG_READ</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#284">VMO_FLAG_READ</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -6127,7 +6147,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#284">VMO_FLAG_WRITE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#287">VMO_FLAG_WRITE</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -6136,7 +6156,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#287">VMO_FLAG_EXEC</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#290">VMO_FLAG_EXEC</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -6145,7 +6165,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#292">VMO_FLAG_PRIVATE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#295">VMO_FLAG_PRIVATE</a></td>
             <td>
                     <code>65536</code>
                 </td>
@@ -6156,7 +6176,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#297">VMO_FLAG_EXACT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#300">VMO_FLAG_EXACT</a></td>
             <td>
                     <code>131072</code>
                 </td>
@@ -6167,7 +6187,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#366">DIRENT_TYPE_UNKNOWN</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#369">DIRENT_TYPE_UNKNOWN</a></td>
             <td>
                     <code>0</code>
                 </td>
@@ -6176,7 +6196,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#368">DIRENT_TYPE_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#371">DIRENT_TYPE_DIRECTORY</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -6185,7 +6205,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#370">DIRENT_TYPE_BLOCK_DEVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#373">DIRENT_TYPE_BLOCK_DEVICE</a></td>
             <td>
                     <code>6</code>
                 </td>
@@ -6194,7 +6214,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#372">DIRENT_TYPE_FILE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#375">DIRENT_TYPE_FILE</a></td>
             <td>
                     <code>8</code>
                 </td>
@@ -6203,7 +6223,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#374">DIRENT_TYPE_SOCKET</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#377">DIRENT_TYPE_SOCKET</a></td>
             <td>
                     <code>12</code>
                 </td>
@@ -6212,7 +6232,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#376">DIRENT_TYPE_SERVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#379">DIRENT_TYPE_SERVICE</a></td>
             <td>
                     <code>16</code>
                 </td>
@@ -6221,7 +6241,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#380">INO_UNKNOWN</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#383">INO_UNKNOWN</a></td>
             <td>
                     <code>18446744073709551615</code>
                 </td>
@@ -6231,7 +6251,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#383">WATCH_EVENT_DELETED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#386">WATCH_EVENT_DELETED</a></td>
             <td>
                     <code>0</code>
                 </td>
@@ -6240,7 +6260,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#385">WATCH_EVENT_ADDED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#388">WATCH_EVENT_ADDED</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -6249,7 +6269,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#387">WATCH_EVENT_REMOVED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#390">WATCH_EVENT_REMOVED</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -6258,7 +6278,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#389">WATCH_EVENT_EXISTING</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#392">WATCH_EVENT_EXISTING</a></td>
             <td>
                     <code>3</code>
                 </td>
@@ -6267,7 +6287,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#391">WATCH_EVENT_IDLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#394">WATCH_EVENT_IDLE</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -6276,7 +6296,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#394">WATCH_MASK_DELETED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#397">WATCH_MASK_DELETED</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -6285,7 +6305,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#396">WATCH_MASK_ADDED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#399">WATCH_MASK_ADDED</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -6294,7 +6314,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#398">WATCH_MASK_REMOVED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#401">WATCH_MASK_REMOVED</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -6303,7 +6323,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#400">WATCH_MASK_EXISTING</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#403">WATCH_MASK_EXISTING</a></td>
             <td>
                     <code>8</code>
                 </td>
@@ -6312,7 +6332,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#402">WATCH_MASK_IDLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#405">WATCH_MASK_IDLE</a></td>
             <td>
                     <code>16</code>
                 </td>
@@ -6321,7 +6341,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#404">WATCH_MASK_ALL</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#407">WATCH_MASK_ALL</a></td>
             <td>
                     <code>31</code>
                 </td>
@@ -6330,7 +6350,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#564">MOUNT_CREATE_FLAG_REPLACE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#567">MOUNT_CREATE_FLAG_REPLACE</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -6338,7 +6358,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#566">MAX_FS_NAME_BUFFER</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#569">MAX_FS_NAME_BUFFER</a></td>
             <td>
                     <code>32</code>
                 </td>

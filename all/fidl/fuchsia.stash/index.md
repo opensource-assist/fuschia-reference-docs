@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## ListIterator {:#ListIterator}
-*Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#45)*
+*Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#55)*
 
  The iterator returned when a series of keys are being listed. Returns an
  empty vector when there are no more remaining ListItems.
@@ -32,7 +32,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## GetIterator {:#GetIterator}
-*Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#51)*
+*Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#61)*
 
  The iterator returned when a series of keys are being read. Returns an
  empty vector when there are no more remaining KeyValues.
@@ -57,7 +57,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoreAccessor {:#StoreAccessor}
-*Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#56)*
+*Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#66)*
 
  The interface returned when a new accessor is created.
 
@@ -195,8 +195,32 @@ Book: /_book.yaml
 
 
 
+### Flush {:#Flush}
+
+ Atomically causes all of the state modifications that happened
+ in this accessor to take place, returning only when those
+ modifications were written to disk.
+ This operation is equivalent to Commit.
+ Returns a FlushError if this operations could not be committed.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#StoreAccessor_Flush_Result'>StoreAccessor_Flush_Result</a></code>
+            </td>
+        </tr></table>
+
 ## Store {:#Store}
-*Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#84)*
+*Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#101)*
 
  Interface used to interact with a given client's key/value store
 
@@ -242,7 +266,7 @@ Book: /_book.yaml
 
 
 ## SecureStore {:#SecureStore}
-*Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#99)*
+*Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#116)*
 
  Interface used to interact with a given client's key/value store. The bytes
  type is disabled in this store.
@@ -291,6 +315,17 @@ Book: /_book.yaml
 
 
 ## **STRUCTS**
+
+### StoreAccessor_Flush_Response {:#StoreAccessor_Flush_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
 
 ### ListItem {:#ListItem}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#22)*
@@ -380,11 +415,48 @@ Type: <code>uint8</code>
             <td></td>
         </tr></table>
 
+### FlushError {:#FlushError}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#45)*
+
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>READ_ONLY</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>COMMIT_FAILED</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr></table>
+
 
 
 
 
 ## **UNIONS**
+
+### StoreAccessor_Flush_Result {:#StoreAccessor_Flush_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StoreAccessor_Flush_Response'>StoreAccessor_Flush_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#FlushError'>FlushError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
 
 ### Value {:#Value}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#35)*

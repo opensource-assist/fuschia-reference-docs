@@ -203,7 +203,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryModule {:#StoryModule}
-*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#13)*
+*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#17)*
 
 
 ### WriteOutput {:#WriteOutput}
@@ -263,6 +263,61 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
+
+### WriteInstanceState {:#WriteInstanceState}
+
+ Writes the `instance_state` item with the given key to storage.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>key</code></td>
+            <td>
+                <code>string[128]</code>
+            </td>
+        </tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#StoryModule_WriteInstanceState_Result'>StoryModule_WriteInstanceState_Result</a></code>
+            </td>
+        </tr></table>
+
+### ReadInstanceState {:#ReadInstanceState}
+
+ Reads the `instance_state` item with the given key from storage.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>key</code></td>
+            <td>
+                <code>string[128]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#StoryModule_ReadInstanceState_Result'>StoryModule_ReadInstanceState_Result</a></code>
+            </td>
+        </tr></table>
 
 ## Suggestions {:#Suggestions}
 *Defined in [fuchsia.app.discover/suggestions_service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/suggestions_service.fidl#12)*
@@ -392,6 +447,35 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
+### StoryModule_WriteInstanceState_Response {:#StoryModule_WriteInstanceState_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### StoryModule_ReadInstanceState_Response {:#StoryModule_ReadInstanceState_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 
 
 ## **ENUMS**
@@ -422,7 +506,7 @@ Type: <code>int32</code>
 ### OutputError {:#OutputError}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#25)*
+*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#35)*
 
  Errors that can occur when writing to an output.
 
@@ -438,6 +522,29 @@ Type: <code>int32</code>
             <td></td>
         </tr><tr>
             <td><code>INVALID_ENTITY_TYPE</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr></table>
+
+### InstanceStateError {:#InstanceStateError}
+Type: <code>int32</code>
+
+*Defined in [fuchsia.app.discover/story_module.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#49)*
+
+ Errors that can occur when handling instance state.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>STORAGE</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>STRING_CONVERSION</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>INVALID_KEY</code></td>
             <td><code>3</code></td>
             <td></td>
         </tr></table>
@@ -624,6 +731,44 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### StoryModule_WriteInstanceState_Result {:#StoryModule_WriteInstanceState_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StoryModule_WriteInstanceState_Response'>StoryModule_WriteInstanceState_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#InstanceStateError'>InstanceStateError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### StoryModule_ReadInstanceState_Result {:#StoryModule_ReadInstanceState_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StoryModule_ReadInstanceState_Response'>StoryModule_ReadInstanceState_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#InstanceStateError'>InstanceStateError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 
 
 
@@ -700,9 +845,17 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#9">MODULE_NAME_MAX_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#10">MODULE_NAME_MAX_LENGTH</a></td>
             <td>
                     <code>512</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#11">STATE_KEY_MAX_LENGTH</a></td>
+            <td>
+                    <code>128</code>
                 </td>
                 <td><code>uint32</code></td>
             <td></td>

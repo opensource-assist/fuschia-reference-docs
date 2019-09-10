@@ -365,6 +365,8 @@ toc:
   path: /reference/fidl/fuchsia.modular.testing
 - title: fuchsia.net
   path: /reference/fidl/fuchsia.net
+- title: fuchsia.net.dhcp
+  path: /reference/fidl/fuchsia.net.dhcp
 - title: fuchsia.net.dns
   path: /reference/fidl/fuchsia.net.dns
 - title: fuchsia.net.filter
@@ -465,8 +467,6 @@ toc:
   path: /reference/fidl/fuchsia.telephony.ril
 - title: fuchsia.telephony.snoop
   path: /reference/fidl/fuchsia.telephony.snoop
-- title: fuchsia.term
-  path: /reference/fidl/fuchsia.term
 - title: fuchsia.test
   path: /reference/fidl/fuchsia.test
 - title: fuchsia.test.echos
