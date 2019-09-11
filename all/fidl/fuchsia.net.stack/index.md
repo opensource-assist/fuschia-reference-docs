@@ -827,7 +827,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### ErrorType {:#ErrorType}
+### Error {:#Error}
 Type: <code>uint32</code>
 
 *Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#114)*
@@ -926,7 +926,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -945,7 +945,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -964,7 +964,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -983,7 +983,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1002,7 +1002,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1021,7 +1021,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1040,7 +1040,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1059,7 +1059,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1078,7 +1078,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1097,7 +1097,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1116,7 +1116,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1135,7 +1135,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code><a class='link' href='#ErrorType'>ErrorType</a></code>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>

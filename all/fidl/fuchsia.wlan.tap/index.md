@@ -11,7 +11,7 @@ Book: /_book.yaml
 
  Instruct the wlantap-ctl device to creates a fake wlantap-phy device based on the
  `WlantapPhyConfig` passed in. The newly created wlantap-phy device will use the channel to
- allow a `WlantapPhy` client to observe and control its behavior
+ allow a `WlantapPhy` client to observe and control its behavior.
 
 ### CreatePhy {:#CreatePhy}
 
@@ -43,11 +43,19 @@ Book: /_book.yaml
         </tr></table>
 
 ## WlantapPhy {:#WlantapPhy}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#89)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#112)*
 
+ Allow the test program to observe and control the behavior of the wlantap-phy device.
+ A wlantap-phy device is a special vendor device and its driver (Fuchsia being the vendor)
+ used for testing purpose.
+ Implements a subset of |wlanmac_ifc_t| and |wlanmac_protocol_ops_t| in
+ //garnet/lib/wlan/protocol/include/wlan/protocol/mac.h
+ Implements a subset of |WlanphyImpl| protocol in
+ //zircon/system/banjo/ddk.protocol.wlanphyimpl/wlanphy-impl.banjo
 
 ### Rx {:#Rx}
 
+ The device "receives" a frame "over the air" and pass it up to driver.
 
 #### Request
 <table>
@@ -73,6 +81,7 @@ Book: /_book.yaml
 
 ### Status {:#Status}
 
+ The device report its status to the driver. (Not used).
 
 #### Request
 <table>
@@ -93,6 +102,8 @@ Book: /_book.yaml
 
 ### ReportTxStatus {:#ReportTxStatus}
 
+ For rate selection (Minstrel), the device's last frame transmission is a success/failure,
+ with a certain number of retries.
 
 #### Request
 <table>
@@ -113,6 +124,7 @@ Book: /_book.yaml
 
 ### Tx {:#Tx}
 
+ The device is to send a frame "over the air".
 
 
 
@@ -126,8 +138,27 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### WlanmacStart {:#WlanmacStart}
+
+ The device created by its parent device (wlantap-phy: wlanphy) is
+ detected and being connected by wlanstack/wlancfg.
+ The device is to enter the "running" state.
+
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>args</code></td>
+            <td>
+                <code><a class='link' href='#WlanmacStartArgs'>WlanmacStartArgs</a></code>
+            </td>
+        </tr></table>
+
 ### SetChannel {:#SetChannel}
 
+ The device is to switch to the specified channel.
 
 
 
@@ -143,6 +174,8 @@ Book: /_book.yaml
 
 ### ConfigureBss {:#ConfigureBss}
 
+ AP: The device is to use args.config as a template for beacon frames.
+ Client: The device is to be configured with this BSS as it peer.
 
 
 
@@ -158,6 +191,7 @@ Book: /_book.yaml
 
 ### SetKey {:#SetKey}
 
+ The device is to install the keys (often coming from RSN, exceptions apply).
 
 
 
@@ -171,23 +205,10 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### WlanmacStart {:#WlanmacStart}
-
-
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>args</code></td>
-            <td>
-                <code><a class='link' href='#WlanmacStartArgs'>WlanmacStartArgs</a></code>
-            </td>
-        </tr></table>
-
 ### SetCountry {:#SetCountry}
 
+ The device is to change its radio and power settings to conform to the regulation of the
+ specified country.
 
 
 
@@ -239,10 +260,13 @@ Book: /_book.yaml
 </table>
 
 ### WlanRxInfo {:#WlanRxInfo}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#26)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#28)*
 
 
 
+ Information pertaining to incoming packets. One WlanRxInfo is associated with each packet.
+ You are encouraged to use the default value in //src/connectivity/wlan/testing/hw-sim/src/lib.rs
+ See wlan_rx_info_t for details about each field.
 
 
 <table>
@@ -313,10 +337,13 @@ Book: /_book.yaml
 </table>
 
 ### WlanTxInfo {:#WlanTxInfo}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#39)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#43)*
 
 
 
+ Instruction from generic WLAN driver on how to send a packet. One WlanTxInfo per packet.
+ These values are populated by the wlantap driver and should not be specified manually.
+ See wlan_tx_info_t for details about each field.
 
 
 <table>
@@ -366,10 +393,12 @@ Book: /_book.yaml
 </table>
 
 ### WlanTxPacket {:#WlanTxPacket}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#48)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#54)*
 
 
 
+ An outgoing packet that is to be "sent" by the wlantap device. |data| contains the packet
+ in its wire format.
 
 
 <table>
@@ -391,10 +420,13 @@ Book: /_book.yaml
 </table>
 
 ### WlanBssConfig {:#WlanBssConfig}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#54)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#62)*
 
 
 
+ BSS that is to be configured, or "remembered", by the wlantap device.
+ These values are populated by the wlantap driver and should not be specified manually.
+ See wlan_bss_config_t for details about each field.
 
 
 <table>
@@ -423,10 +455,13 @@ Book: /_book.yaml
 </table>
 
 ### WlanKeyConfig {:#WlanKeyConfig}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#61)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#71)*
 
 
 
+ Configuration pertaining to security keys, often used by RSN and other secure authentication.
+ These values are populated by the wlantap driver and should not be specified manually.
+ See wlan_key_config_t for details about each field.
 
 
 <table>
@@ -483,10 +518,13 @@ Book: /_book.yaml
 </table>
 
 ### WlanTxStatusEntry {:#WlanTxStatusEntry}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#72)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#84)*
 
 
 
+ One entry in a WlanTxStatus report, 1 report can contain up to 8 entries (see below).
+ These values are populated by the wlantap driver and should not be specified manually.
+ See wlan_tx_status_entry_t for details about each field.
 
 
 <table>
@@ -508,10 +546,13 @@ Book: /_book.yaml
 </table>
 
 ### WlanTxStatus {:#WlanTxStatus}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#78)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#92)*
 
 
 
+ TX status report used by Minstrel rate selection algorithm. One report per packet.
+ You are encouraged to use the default value in //src/connectivity/wlan/testing/hw-sim/src/lib.rs
+ See wlan_tx_status_t for details about each field.
 
 
 <table>
@@ -540,10 +581,13 @@ Book: /_book.yaml
 </table>
 
 ### SetCountryArgs {:#SetCountryArgs}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#85)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#101)*
 
 
 
+ Country code the device is to switch to.
+ These values are populated by the wlantap driver and should not be specified manually.
+ See also phy.fidl SetCountryRequest/Response.
 
 
 <table>
@@ -558,7 +602,7 @@ Book: /_book.yaml
 </table>
 
 ### TxArgs {:#TxArgs}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#104)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#152)*
 
 
 
@@ -583,7 +627,7 @@ Book: /_book.yaml
 </table>
 
 ### SetChannelArgs {:#SetChannelArgs}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#109)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#157)*
 
 
 
@@ -608,7 +652,7 @@ Book: /_book.yaml
 </table>
 
 ### ConfigureBssArgs {:#ConfigureBssArgs}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#114)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#162)*
 
 
 
@@ -633,7 +677,7 @@ Book: /_book.yaml
 </table>
 
 ### SetKeyArgs {:#SetKeyArgs}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#119)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#167)*
 
 
 
@@ -658,7 +702,7 @@ Book: /_book.yaml
 </table>
 
 ### WlanmacStartArgs {:#WlanmacStartArgs}
-*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#124)*
+*Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#172)*
 
 
 
