@@ -2527,7 +2527,7 @@ Book: /_book.yaml
 </table>
 
 ### ImagePipeArgs {:#ImagePipeArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#66)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#67)*
 
 
 
@@ -2544,8 +2544,27 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### ImagePipe2Args {:#ImagePipe2Args}
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#72)*
+
+
+
+ `ImagePipe2` is a `Resource` that can be used as a `Texture` for a `Material`.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>image_pipe_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.images/index.html'>fuchsia.images</a>/<a class='link' href='../fuchsia.images/index.html#ImagePipe2'>ImagePipe2</a>&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### MemoryArgs {:#MemoryArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#73)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#79)*
 
 
 
@@ -2579,7 +2598,7 @@ Book: /_book.yaml
 </table>
 
 ### ImageArgs {:#ImageArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#87)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#93)*
 
 
 
@@ -2612,7 +2631,7 @@ Book: /_book.yaml
 </table>
 
 ### BufferArgs {:#BufferArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#95)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#101)*
 
 
 
@@ -2645,7 +2664,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewArgs {:#ViewArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#112)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#118)*
 
 
 
@@ -2681,7 +2700,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewArgs2 {:#ViewArgs2}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#117)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#123)*
 
 
 
@@ -2706,7 +2725,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewArgs3 {:#ViewArgs3}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#139)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#145)*
 
 
 
@@ -2764,7 +2783,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewHolderArgs {:#ViewHolderArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#157)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#163)*
 
 
 
@@ -2798,7 +2817,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewHolderArgs2 {:#ViewHolderArgs2}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#162)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#168)*
 
 
 
@@ -2823,7 +2842,7 @@ Book: /_book.yaml
 </table>
 
 ### CompositorArgs {:#CompositorArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#170)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#176)*
 
 
 
@@ -2843,7 +2862,7 @@ Book: /_book.yaml
 </table>
 
 ### DisplayCompositorArgs {:#DisplayCompositorArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#177)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#183)*
 
 
 
@@ -2863,7 +2882,7 @@ Book: /_book.yaml
 </table>
 
 ### ImagePipeCompositorArgs {:#ImagePipeCompositorArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#184)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#190)*
 
 
 
@@ -2883,7 +2902,7 @@ Book: /_book.yaml
 </table>
 
 ### LayerStackArgs {:#LayerStackArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#195)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#201)*
 
 
 
@@ -2908,7 +2927,7 @@ Book: /_book.yaml
 </table>
 
 ### LayerArgs {:#LayerArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#214)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#220)*
 
 
 
@@ -2940,7 +2959,7 @@ Book: /_book.yaml
 </table>
 
 ### SceneArgs {:#SceneArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#225)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#231)*
 
 
 
@@ -2964,7 +2983,7 @@ Book: /_book.yaml
 </table>
 
 ### CameraArgs {:#CameraArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#237)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#243)*
 
 
 
@@ -2989,7 +3008,7 @@ Book: /_book.yaml
 </table>
 
 ### StereoCameraArgs {:#StereoCameraArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#248)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#254)*
 
 
 
@@ -3013,7 +3032,7 @@ Book: /_book.yaml
 </table>
 
 ### RendererArgs {:#RendererArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#258)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#264)*
 
 
 
@@ -3036,7 +3055,7 @@ Book: /_book.yaml
 </table>
 
 ### AmbientLightArgs {:#AmbientLightArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#268)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#274)*
 
 
 
@@ -3059,7 +3078,7 @@ Book: /_book.yaml
 </table>
 
 ### DirectionalLightArgs {:#DirectionalLightArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#283)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#289)*
 
 
 
@@ -3087,7 +3106,7 @@ Book: /_book.yaml
 </table>
 
 ### PointLightArgs {:#PointLightArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#297)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#303)*
 
 
 
@@ -3114,7 +3133,7 @@ Book: /_book.yaml
 </table>
 
 ### MaterialArgs {:#MaterialArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#308)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#314)*
 
 
 
@@ -3138,7 +3157,7 @@ Book: /_book.yaml
 </table>
 
 ### VariableArgs {:#VariableArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#314)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#320)*
 
 
 
@@ -6427,7 +6446,7 @@ Book: /_book.yaml
 </table>
 
 ### ImagePipeArgs {:#ImagePipeArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#66)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#67)*
 
 
 
@@ -6444,8 +6463,27 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### ImagePipe2Args {:#ImagePipe2Args}
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#72)*
+
+
+
+ `ImagePipe2` is a `Resource` that can be used as a `Texture` for a `Material`.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>image_pipe_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.images/index.html'>fuchsia.images</a>/<a class='link' href='../fuchsia.images/index.html#ImagePipe2'>ImagePipe2</a>&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### MemoryArgs {:#MemoryArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#73)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#79)*
 
 
 
@@ -6479,7 +6517,7 @@ Book: /_book.yaml
 </table>
 
 ### ImageArgs {:#ImageArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#87)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#93)*
 
 
 
@@ -6512,7 +6550,7 @@ Book: /_book.yaml
 </table>
 
 ### BufferArgs {:#BufferArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#95)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#101)*
 
 
 
@@ -6545,7 +6583,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewArgs {:#ViewArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#112)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#118)*
 
 
 
@@ -6581,7 +6619,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewArgs2 {:#ViewArgs2}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#117)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#123)*
 
 
 
@@ -6606,7 +6644,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewArgs3 {:#ViewArgs3}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#139)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#145)*
 
 
 
@@ -6664,7 +6702,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewHolderArgs {:#ViewHolderArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#157)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#163)*
 
 
 
@@ -6698,7 +6736,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewHolderArgs2 {:#ViewHolderArgs2}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#162)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#168)*
 
 
 
@@ -6723,7 +6761,7 @@ Book: /_book.yaml
 </table>
 
 ### CompositorArgs {:#CompositorArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#170)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#176)*
 
 
 
@@ -6743,7 +6781,7 @@ Book: /_book.yaml
 </table>
 
 ### DisplayCompositorArgs {:#DisplayCompositorArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#177)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#183)*
 
 
 
@@ -6763,7 +6801,7 @@ Book: /_book.yaml
 </table>
 
 ### ImagePipeCompositorArgs {:#ImagePipeCompositorArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#184)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#190)*
 
 
 
@@ -6783,7 +6821,7 @@ Book: /_book.yaml
 </table>
 
 ### LayerStackArgs {:#LayerStackArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#195)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#201)*
 
 
 
@@ -6808,7 +6846,7 @@ Book: /_book.yaml
 </table>
 
 ### LayerArgs {:#LayerArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#214)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#220)*
 
 
 
@@ -6840,7 +6878,7 @@ Book: /_book.yaml
 </table>
 
 ### SceneArgs {:#SceneArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#225)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#231)*
 
 
 
@@ -6864,7 +6902,7 @@ Book: /_book.yaml
 </table>
 
 ### CameraArgs {:#CameraArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#237)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#243)*
 
 
 
@@ -6889,7 +6927,7 @@ Book: /_book.yaml
 </table>
 
 ### StereoCameraArgs {:#StereoCameraArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#248)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#254)*
 
 
 
@@ -6913,7 +6951,7 @@ Book: /_book.yaml
 </table>
 
 ### RendererArgs {:#RendererArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#258)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#264)*
 
 
 
@@ -6936,7 +6974,7 @@ Book: /_book.yaml
 </table>
 
 ### AmbientLightArgs {:#AmbientLightArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#268)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#274)*
 
 
 
@@ -6959,7 +6997,7 @@ Book: /_book.yaml
 </table>
 
 ### DirectionalLightArgs {:#DirectionalLightArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#283)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#289)*
 
 
 
@@ -6987,7 +7025,7 @@ Book: /_book.yaml
 </table>
 
 ### PointLightArgs {:#PointLightArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#297)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#303)*
 
 
 
@@ -7014,7 +7052,7 @@ Book: /_book.yaml
 </table>
 
 ### MaterialArgs {:#MaterialArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#308)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#314)*
 
 
 
@@ -7038,7 +7076,7 @@ Book: /_book.yaml
 </table>
 
 ### VariableArgs {:#VariableArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#314)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#320)*
 
 
 
@@ -8020,7 +8058,7 @@ Type: <code>uint32</code>
 ### ImportSpec {:#ImportSpec}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#324)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#330)*
 
  Describes an exported resource that is to be imported by an
  ImportResourceCmd.
@@ -8197,7 +8235,7 @@ Type: <code>uint32</code>
 ### ImportSpec {:#ImportSpec}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#324)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#330)*
 
  Describes an exported resource that is to be imported by an
  ImportResourceCmd.
@@ -8751,7 +8789,7 @@ Type: <code>uint32</code>
 *Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#12)*
 
  These are all of the types of resources that can be created within a
- `Session`.
+ `Session`. Add new fields only to the bottom of the list.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -8938,6 +8976,12 @@ Type: <code>uint32</code>
             <td><code>view3</code></td>
             <td>
                 <code><a class='link' href='#ViewArgs3'>ViewArgs3</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>image_pipe2</code></td>
+            <td>
+                <code><a class='link' href='#ImagePipe2Args'>ImagePipe2Args</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -9481,7 +9525,7 @@ Type: <code>uint32</code>
 *Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#12)*
 
  These are all of the types of resources that can be created within a
- `Session`.
+ `Session`. Add new fields only to the bottom of the list.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -9668,6 +9712,12 @@ Type: <code>uint32</code>
             <td><code>view3</code></td>
             <td>
                 <code><a class='link' href='#ViewArgs3'>ViewArgs3</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>image_pipe2</code></td>
+            <td>
+                <code><a class='link' href='#ImagePipe2Args'>ImagePipe2Args</a></code>
             </td>
             <td></td>
         </tr></table>
