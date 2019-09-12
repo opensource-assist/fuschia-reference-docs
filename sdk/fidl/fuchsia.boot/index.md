@@ -119,14 +119,39 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-## Log {:#Log}
+## ReadOnlyLog {:#ReadOnlyLog}
 *Defined in [fuchsia.boot/log.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-boot/log.fidl#9)*
 
- Protocol for providing the kernel log.
+ Protocol for providing the kernel log, readable.
 
 ### Get {:#Get}
 
- Get the kernel `log`.
+ Get read-only handle to the kernel `log`.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>log</code></td>
+            <td>
+                <code>handle&lt;debuglog&gt;</code>
+            </td>
+        </tr></table>
+
+## WriteOnlyLog {:#WriteOnlyLog}
+*Defined in [fuchsia.boot/log.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-boot/log.fidl#16)*
+
+ Protocol for providing the kernel log, writable.
+
+### Get {:#Get}
+
+ Get write-only handle to the kernel `log`.
 
 #### Request
 <table>

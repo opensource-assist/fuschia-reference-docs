@@ -884,11 +884,11 @@ Book: /_book.yaml
 </td>
             <td>No default</td>
         </tr><tr>
-            <td><code>allow_parent_runners</code></td>
+            <td><code>use_parent_runners</code></td>
             <td>
                 <code>bool</code>
             </td>
-            <td> True if components in this environment can share a runner provided
+            <td> True if components in this environment will share a runner provided
  by the parent environment. If false, a new runner will be started
  in this environment for components.
 </td>
@@ -1250,11 +1250,11 @@ Book: /_book.yaml
 </td>
             <td>No default</td>
         </tr><tr>
-            <td><code>allow_parent_runners</code></td>
+            <td><code>use_parent_runners</code></td>
             <td>
                 <code>bool</code>
             </td>
-            <td> True if components in this environment can share a runner provided
+            <td> True if components in this environment will share a runner provided
  by the parent environment. If false, a new runner will be started
  in this environment for components.
 </td>

@@ -139,8 +139,11 @@ Book: /_book.yaml
 ### WriteAsset {:#WriteAsset}
 
  Writes partition corresponding to `configuration` and `asset` with data from `payload`.
- Will zero out rest of the partition if `payload` is smaller than the size of the partition
- being written.
+ `payload` may need to be resized to the partition size, so the provided vmo must have
+ been created with `ZX_VMO_RESIZABLE` or must be a child VMO that was created with
+ `ZX_VMO_CHILD_RESIZABLE`. Will zero out rest of the partition if `payload` is smaller
+ than the size of the partition being written.
+
 
  Returns `ZX_ERR_INVALID_ARGS` if `configuration` specifies active configuration.
 
@@ -204,6 +207,10 @@ Book: /_book.yaml
 ### WriteBootloader {:#WriteBootloader}
 
  Writes bootloader partition with data from `payload`.
+
+ `payload` may need to be resized to the partition size, so the provided vmo must have
+ been created with `ZX_VMO_RESIZABLE` or must be a child VMO that was created with
+ `ZX_VMO_CHILD_RESIZABLE`.
 
 #### Request
 <table>

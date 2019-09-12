@@ -117,6 +117,34 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## Device {:#Device}
+*Defined in [fuchsia.settings/device.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/device.fidl#8)*
+
+
+### Watch {:#Watch}
+
+ Notifies of a change in information about the device.
+
+ On a given connection, the first call will return the current `settings` value while
+ subsequent calls will only return the new `settings` value upon a value change. This
+ follows the hanging get pattern.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>device_settings</code></td>
+            <td>
+                <code><a class='link' href='#DeviceSettings'>DeviceSettings</a></code>
+            </td>
+        </tr></table>
+
 ## Display {:#Display}
 *Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#9)*
 
@@ -547,6 +575,34 @@ Book: /_book.yaml
             <td><code>result</code></td>
             <td>
                 <code><a class='link' href='#Audio_Set_Result'>Audio_Set_Result</a></code>
+            </td>
+        </tr></table>
+
+## Device {:#Device}
+*Defined in [fuchsia.settings/device.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/device.fidl#8)*
+
+
+### Watch {:#Watch}
+
+ Notifies of a change in information about the device.
+
+ On a given connection, the first call will return the current `settings` value while
+ subsequent calls will only return the new `settings` value upon a value change. This
+ follows the hanging get pattern.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>device_settings</code></td>
+            <td>
+                <code><a class='link' href='#DeviceSettings'>DeviceSettings</a></code>
             </td>
         </tr></table>
 
@@ -1876,6 +1932,27 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### DeviceSettings {:#DeviceSettings}
+
+
+*Defined in [fuchsia.settings/device.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/device.fidl#18)*
+
+ Information about the device.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>build_tag</code></td>
+            <td>
+                <code>string[50]</code>
+            </td>
+            <td> The identifier representing the specific build that the device
+ is currently running. Read-only field, cannot be set by client.
+</td>
+        </tr></table>
+
 ### DisplaySettings {:#DisplaySettings}
 
 
@@ -2309,6 +2386,27 @@ Type: <code>uint32</code>
                 <code>bool</code>
             </td>
             <td> Whether the audio input is muted. Takes into consideration the hardware state.
+</td>
+        </tr></table>
+
+### DeviceSettings {:#DeviceSettings}
+
+
+*Defined in [fuchsia.settings/device.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/device.fidl#18)*
+
+ Information about the device.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>build_tag</code></td>
+            <td>
+                <code>string[50]</code>
+            </td>
+            <td> The identifier representing the specific build that the device
+ is currently running. Read-only field, cannot be set by client.
 </td>
         </tr></table>
 

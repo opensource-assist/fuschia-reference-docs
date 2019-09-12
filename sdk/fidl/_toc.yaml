@@ -259,6 +259,8 @@ toc:
   path: /reference/fidl/fuchsia.ui.views
 - title: fuchsia.update
   path: /reference/fidl/fuchsia.update
+- title: fuchsia.update.channel
+  path: /reference/fidl/fuchsia.update.channel
 - title: fuchsia.virtualaudio
   path: /reference/fidl/fuchsia.virtualaudio
 - title: fuchsia.virtualconsole

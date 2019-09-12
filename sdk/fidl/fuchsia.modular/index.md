@@ -1444,95 +1444,10 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### StartContainerInShell {:#StartContainerInShell}
-
- DEPRECATED: no longer implemented.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>container_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>parent_relation</code></td>
-            <td>
-                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
-            </td>
-        </tr><tr>
-            <td><code>layout</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerLayout'>ContainerLayout</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>relationships</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>nodes</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerNode'>ContainerNode</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### GetComponentContext {:#GetComponentContext}
-
- DEPRECATED: ComponentContext is now available in the
- namespace/environment for Modules.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#ComponentContext'>ComponentContext</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### GetStoryId {:#GetStoryId}
-
- Gets the id for this story which may be used to create a suggestion
- proposal to resume this story, especially by agents.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>story_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
 ### RequestFocus {:#RequestFocus}
 
  Requests that the current story and module gain focus. It's up to the story
  shell and session shell to honor that request.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
-### Active {:#Active}
-
- DEPRECATED in favor of using StartOngoingActivity().
 
 #### Request
 <table>
@@ -1551,33 +1466,6 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
-
-
-
-### RequestStoryVisibilityState {:#RequestStoryVisibilityState}
-
- Requests to update the visibility state of the current story within the
- session shell. The framework will decide whether to honor this request, then
- forward it to the session shell.
-
- Modules should not have any knowledge of the story's visibility state, nor
- should it ever operate with any assumption of the visibility state.
-
- Note that the framework keeps this state only in memory, which means that
- across reboots, the story visibility state will revert back to DEFAULT.
- This makes it unsafe for any component outside the framework to make
- assumptions about the story visibility state. Also, this differs from other
- UI states such as focus state, which is persisted across reboots.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>visibility_state</code></td>
-            <td>
-                <code><a class='link' href='#StoryVisibilityState'>StoryVisibilityState</a></code>
-            </td>
-        </tr></table>
 
 
 
@@ -1657,7 +1545,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## OngoingActivity {:#OngoingActivity}
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#140)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#109)*
 
  This interface defines the protocol over which a Module can communicate about
  an ongoing activity to the framework. It is provided to Modules via
@@ -5406,95 +5294,10 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### StartContainerInShell {:#StartContainerInShell}
-
- DEPRECATED: no longer implemented.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>container_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>parent_relation</code></td>
-            <td>
-                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
-            </td>
-        </tr><tr>
-            <td><code>layout</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerLayout'>ContainerLayout</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>relationships</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>nodes</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerNode'>ContainerNode</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### GetComponentContext {:#GetComponentContext}
-
- DEPRECATED: ComponentContext is now available in the
- namespace/environment for Modules.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#ComponentContext'>ComponentContext</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### GetStoryId {:#GetStoryId}
-
- Gets the id for this story which may be used to create a suggestion
- proposal to resume this story, especially by agents.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>story_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
 ### RequestFocus {:#RequestFocus}
 
  Requests that the current story and module gain focus. It's up to the story
  shell and session shell to honor that request.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
-### Active {:#Active}
-
- DEPRECATED in favor of using StartOngoingActivity().
 
 #### Request
 <table>
@@ -5513,33 +5316,6 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
-
-
-
-### RequestStoryVisibilityState {:#RequestStoryVisibilityState}
-
- Requests to update the visibility state of the current story within the
- session shell. The framework will decide whether to honor this request, then
- forward it to the session shell.
-
- Modules should not have any knowledge of the story's visibility state, nor
- should it ever operate with any assumption of the visibility state.
-
- Note that the framework keeps this state only in memory, which means that
- across reboots, the story visibility state will revert back to DEFAULT.
- This makes it unsafe for any component outside the framework to make
- assumptions about the story visibility state. Also, this differs from other
- UI states such as focus state, which is persisted across reboots.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>visibility_state</code></td>
-            <td>
-                <code><a class='link' href='#StoryVisibilityState'>StoryVisibilityState</a></code>
-            </td>
-        </tr></table>
 
 
 
@@ -5619,7 +5395,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## OngoingActivity {:#OngoingActivity}
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#140)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#109)*
 
  This interface defines the protocol over which a Module can communicate about
  an ongoing activity to the framework. It is provided to Modules via
@@ -10788,7 +10564,7 @@ Type: <code>uint32</code>
 ### StartModuleStatus {:#StartModuleStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#132)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#101)*
 
  Communicates the status of an Intent to a Module.
 
@@ -10807,7 +10583,7 @@ Type: <code>uint32</code>
 ### OngoingActivityType {:#OngoingActivityType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#143)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#112)*
 
 
 
@@ -11126,7 +10902,7 @@ Type: <code>uint32</code>
 ### StartModuleStatus {:#StartModuleStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#132)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#101)*
 
  Communicates the status of an Intent to a Module.
 
@@ -11145,7 +10921,7 @@ Type: <code>uint32</code>
 ### OngoingActivityType {:#OngoingActivityType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#143)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#112)*
 
 
 

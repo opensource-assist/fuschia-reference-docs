@@ -524,6 +524,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.update.channel/index">fuchsia.update.channel</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.virtualaudio/index">fuchsia.virtualaudio</a></td>
     <td></td>
 </tr>
