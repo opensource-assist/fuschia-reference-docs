@@ -7,47 +7,13 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Analyzer {:#Analyzer}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#13)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#12)*
 
- Analyzes crashed processes, string exceptions from managed runtimes or
- kernel panic crashlogs.
-
-### OnNativeException {:#OnNativeException}
-
- Requests that the crash analyzer handles the exception thrown by the
- given `thread` in `process`.
-
- A typical implementation might print a crash dump to the system log or
- upload a crash report to a server.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>process</code></td>
-            <td>
-                <code>handle&lt;process&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>thread</code></td>
-            <td>
-                <code>handle&lt;thread&gt;</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>result</code></td>
-            <td>
-                <code><a class='link' href='#Analyzer_OnNativeException_Result'>Analyzer_OnNativeException_Result</a></code>
-            </td>
-        </tr></table>
+ Analyzes string exceptions from managed runtimes.
 
 ### OnManagedRuntimeException {:#OnManagedRuntimeException}
 
+ Requests that the crash analyzer handles the exception thrown by the
  Requests that the crash analyzer handles the exception thrown in the
  managed runtime.
 
@@ -83,47 +49,13 @@ Book: /_book.yaml
         </tr></table>
 
 ## Analyzer {:#Analyzer}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#13)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#12)*
 
- Analyzes crashed processes, string exceptions from managed runtimes or
- kernel panic crashlogs.
-
-### OnNativeException {:#OnNativeException}
-
- Requests that the crash analyzer handles the exception thrown by the
- given `thread` in `process`.
-
- A typical implementation might print a crash dump to the system log or
- upload a crash report to a server.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>process</code></td>
-            <td>
-                <code>handle&lt;process&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>thread</code></td>
-            <td>
-                <code>handle&lt;thread&gt;</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>result</code></td>
-            <td>
-                <code><a class='link' href='#Analyzer_OnNativeException_Result'>Analyzer_OnNativeException_Result</a></code>
-            </td>
-        </tr></table>
+ Analyzes string exceptions from managed runtimes.
 
 ### OnManagedRuntimeException {:#OnManagedRuntimeException}
 
+ Requests that the crash analyzer handles the exception thrown by the
  Requests that the crash analyzer handles the exception thrown in the
  managed runtime.
 
@@ -162,17 +94,6 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
-### Analyzer_OnNativeException_Response {:#Analyzer_OnNativeException_Response}
-*generated*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
-</table>
-
 ### Analyzer_OnManagedRuntimeException_Response {:#Analyzer_OnManagedRuntimeException_Response}
 *generated*
 
@@ -185,7 +106,7 @@ Book: /_book.yaml
 </table>
 
 ### UnknownException {:#UnknownException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#49)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#40)*
 
 
 
@@ -205,7 +126,7 @@ Book: /_book.yaml
 </table>
 
 ### GenericException {:#GenericException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#56)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#47)*
 
 
 
@@ -240,17 +161,6 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### Analyzer_OnNativeException_Response {:#Analyzer_OnNativeException_Response}
-*generated*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
-</table>
-
 ### Analyzer_OnManagedRuntimeException_Response {:#Analyzer_OnManagedRuntimeException_Response}
 *generated*
 
@@ -263,7 +173,7 @@ Book: /_book.yaml
 </table>
 
 ### UnknownException {:#UnknownException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#49)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#40)*
 
 
 
@@ -283,7 +193,7 @@ Book: /_book.yaml
 </table>
 
 ### GenericException {:#GenericException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#56)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#47)*
 
 
 
@@ -326,25 +236,6 @@ Book: /_book.yaml
 
 ## **UNIONS**
 
-### Analyzer_OnNativeException_Result {:#Analyzer_OnNativeException_Result}
-*generated*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>response</code></td>
-            <td>
-                <code><a class='link' href='#Analyzer_OnNativeException_Response'>Analyzer_OnNativeException_Response</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>err</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-        </tr></table>
-
 ### Analyzer_OnManagedRuntimeException_Result {:#Analyzer_OnManagedRuntimeException_Result}
 *generated*
 
@@ -365,7 +256,7 @@ Book: /_book.yaml
         </tr></table>
 
 ### ManagedRuntimeException {:#ManagedRuntimeException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#42)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#33)*
 
  Represents a managed runtime exception.
 
@@ -388,25 +279,6 @@ Book: /_book.yaml
             <td></td>
         </tr></table>
 
-### Analyzer_OnNativeException_Result {:#Analyzer_OnNativeException_Result}
-*generated*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>response</code></td>
-            <td>
-                <code><a class='link' href='#Analyzer_OnNativeException_Response'>Analyzer_OnNativeException_Response</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>err</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-        </tr></table>
-
 ### Analyzer_OnManagedRuntimeException_Result {:#Analyzer_OnManagedRuntimeException_Result}
 *generated*
 
@@ -427,7 +299,7 @@ Book: /_book.yaml
         </tr></table>
 
 ### ManagedRuntimeException {:#ManagedRuntimeException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#42)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#33)*
 
  Represents a managed runtime exception.
 

@@ -2510,7 +2510,7 @@ Book: /_book.yaml
 
 
 ## PuppetMaster {:#PuppetMaster}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#55)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#52)*
 
 
 ### ControlStory {:#ControlStory}
@@ -2572,7 +2572,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryPuppetMaster {:#StoryPuppetMaster}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#77)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#74)*
 
 
 ### Enqueue {:#Enqueue}
@@ -2674,6 +2674,40 @@ Book: /_book.yaml
             <td><code>result</code></td>
             <td>
                 <code><a class='link' href='#StoryPuppetMaster_Annotate_Result'>StoryPuppetMaster_Annotate_Result</a></code>
+            </td>
+        </tr></table>
+
+### AnnotateModule {:#AnnotateModule}
+
+ Attach the `annotations` to the module with the given `id`.
+ The module can be annotated before being added to the story, but if the
+ story does not yet exist, AnnotationError.NOT_FOUND is returned.
+
+ Existing annotations with the same key will be overwritten.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>module_id</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>annotations</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[50]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#StoryPuppetMaster_AnnotateModule_Result'>StoryPuppetMaster_AnnotateModule_Result</a></code>
             </td>
         </tr></table>
 
@@ -3705,7 +3739,7 @@ Book: /_book.yaml
 
 
 ## StoryShellContext {:#StoryShellContext}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#188)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#193)*
 
  This interface provides the StoryShell instance with everything it needs to
  know or be able to do about the Story. Not much right now, but we expect this
@@ -3795,7 +3829,7 @@ Book: /_book.yaml
 
 
 ## StoryVisualStateWatcher {:#StoryVisualStateWatcher}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#209)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#214)*
 
  Implemented by StoryShell to get notified about visual state changes.
 
@@ -6438,7 +6472,7 @@ Book: /_book.yaml
 
 
 ## PuppetMaster {:#PuppetMaster}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#55)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#52)*
 
 
 ### ControlStory {:#ControlStory}
@@ -6500,7 +6534,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryPuppetMaster {:#StoryPuppetMaster}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#77)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#74)*
 
 
 ### Enqueue {:#Enqueue}
@@ -6602,6 +6636,40 @@ Book: /_book.yaml
             <td><code>result</code></td>
             <td>
                 <code><a class='link' href='#StoryPuppetMaster_Annotate_Result'>StoryPuppetMaster_Annotate_Result</a></code>
+            </td>
+        </tr></table>
+
+### AnnotateModule {:#AnnotateModule}
+
+ Attach the `annotations` to the module with the given `id`.
+ The module can be annotated before being added to the story, but if the
+ story does not yet exist, AnnotationError.NOT_FOUND is returned.
+
+ Existing annotations with the same key will be overwritten.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>module_id</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>annotations</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[50]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#StoryPuppetMaster_AnnotateModule_Result'>StoryPuppetMaster_AnnotateModule_Result</a></code>
             </td>
         </tr></table>
 
@@ -7633,7 +7701,7 @@ Book: /_book.yaml
 
 
 ## StoryShellContext {:#StoryShellContext}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#188)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#193)*
 
  This interface provides the StoryShell instance with everything it needs to
  know or be able to do about the Story. Not much right now, but we expect this
@@ -7723,7 +7791,7 @@ Book: /_book.yaml
 
 
 ## StoryVisualStateWatcher {:#StoryVisualStateWatcher}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#209)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#214)*
 
  Implemented by StoryShell to get notified about visual state changes.
 
@@ -8144,100 +8212,8 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### ModuleData {:#ModuleData}
-*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#8)*
-
-
-
- Information about a Module instance in a story.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>module_url</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> The URL of the Module binary.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>module_path</code></td>
-            <td>
-                <code>vector&lt;string&gt;</code>
-            </td>
-            <td> The named path leading up to this Module instance. The last name in this
- array is the name by which the Module was started by the parent Module
- instance calling StartModule().
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>parameter_map</code></td>
-            <td>
-                <code><a class='link' href='#ModuleParameterMap'>ModuleParameterMap</a></code>
-            </td>
-            <td> Contains the mapping of Mod parameter name to Link instances for this mod.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>module_source</code></td>
-            <td>
-                <code><a class='link' href='#ModuleSource'>ModuleSource</a></code>
-            </td>
-            <td> The way in which this Module instance was first started in the story,
- either by request from another Module instance (INTERNAL) or by request
- from outside the story (i.e. by suggestion from an agent - EXTERNAL).
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>surface_relation</code></td>
-            <td>
-                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a>?</code>
-            </td>
-            <td> The `surface_relation` that was used to start this Module instance with.
- The same is used when re-inflating the Module instance when the story is
- resumed. A SurfaceRelation value of null represents an embedded Module
- instance (started by EmbedModule()) that is not managed by the story shell.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>module_deleted</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> True if this module was removed from its story either through
- ModuleController.Stop() or ModuleContext.RemoveSelfFromStory().
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>intent</code></td>
-            <td>
-                <code><a class='link' href='#Intent'>Intent</a>?</code>
-            </td>
-            <td> The intent that was issued to start add this Module instance to the story.
- Some Module instances may have been added not by an Intent, for example as
- the initial module of a story. For those the field may be null.
-
- TODO(thatguy,mesch): This field should now always be set, so make it
- required once the framework is cleaned up enough to guarantee this
- statement.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>is_embedded</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> If true, this module was started by a parent module using
- ModuleContext.EmbedModule(), and its view is not managed by the
- StoryShell.
-</td>
-            <td>false</td>
-        </tr>
-</table>
-
 ### ModuleParameterMap {:#ModuleParameterMap}
-*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#61)*
+*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#66)*
 
 
 
@@ -8255,7 +8231,7 @@ Book: /_book.yaml
 </table>
 
 ### ModuleParameterMapEntry {:#ModuleParameterMapEntry}
-*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#65)*
+*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#70)*
 
 
 
@@ -8699,8 +8675,19 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
+### StoryPuppetMaster_AnnotateModule_Response {:#StoryPuppetMaster_AnnotateModule_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### ExecuteResult {:#ExecuteResult}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#40)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#37)*
 
 
 
@@ -9125,7 +9112,7 @@ Book: /_book.yaml
 </table>
 
 ### ContainerView {:#ContainerView}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#164)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#169)*
 
 
 
@@ -9154,7 +9141,7 @@ Book: /_book.yaml
 </table>
 
 ### ContainerView2 {:#ContainerView2}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#175)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#180)*
 
 
 
@@ -9626,100 +9613,8 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### ModuleData {:#ModuleData}
-*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#8)*
-
-
-
- Information about a Module instance in a story.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>module_url</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> The URL of the Module binary.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>module_path</code></td>
-            <td>
-                <code>vector&lt;string&gt;</code>
-            </td>
-            <td> The named path leading up to this Module instance. The last name in this
- array is the name by which the Module was started by the parent Module
- instance calling StartModule().
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>parameter_map</code></td>
-            <td>
-                <code><a class='link' href='#ModuleParameterMap'>ModuleParameterMap</a></code>
-            </td>
-            <td> Contains the mapping of Mod parameter name to Link instances for this mod.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>module_source</code></td>
-            <td>
-                <code><a class='link' href='#ModuleSource'>ModuleSource</a></code>
-            </td>
-            <td> The way in which this Module instance was first started in the story,
- either by request from another Module instance (INTERNAL) or by request
- from outside the story (i.e. by suggestion from an agent - EXTERNAL).
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>surface_relation</code></td>
-            <td>
-                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a>?</code>
-            </td>
-            <td> The `surface_relation` that was used to start this Module instance with.
- The same is used when re-inflating the Module instance when the story is
- resumed. A SurfaceRelation value of null represents an embedded Module
- instance (started by EmbedModule()) that is not managed by the story shell.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>module_deleted</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> True if this module was removed from its story either through
- ModuleController.Stop() or ModuleContext.RemoveSelfFromStory().
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>intent</code></td>
-            <td>
-                <code><a class='link' href='#Intent'>Intent</a>?</code>
-            </td>
-            <td> The intent that was issued to start add this Module instance to the story.
- Some Module instances may have been added not by an Intent, for example as
- the initial module of a story. For those the field may be null.
-
- TODO(thatguy,mesch): This field should now always be set, so make it
- required once the framework is cleaned up enough to guarantee this
- statement.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>is_embedded</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> If true, this module was started by a parent module using
- ModuleContext.EmbedModule(), and its view is not managed by the
- StoryShell.
-</td>
-            <td>false</td>
-        </tr>
-</table>
-
 ### ModuleParameterMap {:#ModuleParameterMap}
-*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#61)*
+*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#66)*
 
 
 
@@ -9737,7 +9632,7 @@ Book: /_book.yaml
 </table>
 
 ### ModuleParameterMapEntry {:#ModuleParameterMapEntry}
-*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#65)*
+*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#70)*
 
 
 
@@ -10181,8 +10076,19 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
+### StoryPuppetMaster_AnnotateModule_Response {:#StoryPuppetMaster_AnnotateModule_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### ExecuteResult {:#ExecuteResult}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#40)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#37)*
 
 
 
@@ -10607,7 +10513,7 @@ Book: /_book.yaml
 </table>
 
 ### ContainerView {:#ContainerView}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#164)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#169)*
 
 
 
@@ -10636,7 +10542,7 @@ Book: /_book.yaml
 </table>
 
 ### ContainerView2 {:#ContainerView2}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#175)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#180)*
 
 
 
@@ -10837,7 +10743,7 @@ Book: /_book.yaml
 ### AnnotationError {:#AnnotationError}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#54)*
+*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#59)*
 
  Error returned from calls to Annotate().
 
@@ -10850,6 +10756,10 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>TOO_MANY_ANNOTATIONS</code></td>
             <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>NOT_FOUND</code></td>
+            <td><code>3</code></td>
             <td></td>
         </tr></table>
 
@@ -10919,7 +10829,7 @@ Type: <code>uint32</code>
 ### ModuleSource {:#ModuleSource}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#50)*
+*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#55)*
 
 
 
@@ -10991,7 +10901,7 @@ Type: <code>uint32</code>
 ### ExecuteStatus {:#ExecuteStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#10)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#7)*
 
 
 
@@ -11029,7 +10939,7 @@ Type: <code>uint32</code>
 ### ConfigureStoryError {:#ConfigureStoryError}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#35)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#32)*
 
 
 
@@ -11043,7 +10953,7 @@ Type: <code>int32</code>
 ### StoryVisualState {:#StoryVisualState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#214)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#219)*
 
  Defines the visual state of the Story shell.
 
@@ -11171,7 +11081,7 @@ Type: <code>uint32</code>
 ### AnnotationError {:#AnnotationError}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#54)*
+*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#59)*
 
  Error returned from calls to Annotate().
 
@@ -11184,6 +11094,10 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>TOO_MANY_ANNOTATIONS</code></td>
             <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>NOT_FOUND</code></td>
+            <td><code>3</code></td>
             <td></td>
         </tr></table>
 
@@ -11253,7 +11167,7 @@ Type: <code>uint32</code>
 ### ModuleSource {:#ModuleSource}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#50)*
+*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#55)*
 
 
 
@@ -11325,7 +11239,7 @@ Type: <code>uint32</code>
 ### ExecuteStatus {:#ExecuteStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#10)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#7)*
 
 
 
@@ -11363,7 +11277,7 @@ Type: <code>uint32</code>
 ### ConfigureStoryError {:#ConfigureStoryError}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#35)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#32)*
 
 
 
@@ -11377,7 +11291,7 @@ Type: <code>int32</code>
 ### StoryVisualState {:#StoryVisualState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#214)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#219)*
 
  Defines the visual state of the Story shell.
 
@@ -11552,6 +11466,108 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### ModuleData {:#ModuleData}
+
+
+*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#8)*
+
+ Information about a Module instance in a story.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>module_url</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td> The URL of the Module binary.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>module_path</code></td>
+            <td>
+                <code>vector&lt;string&gt;</code>
+            </td>
+            <td> The named path leading up to this Module instance. The last name in this
+ array is the name by which the Module was started by the parent Module
+ instance calling StartModule().
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>parameter_map</code></td>
+            <td>
+                <code><a class='link' href='#ModuleParameterMap'>ModuleParameterMap</a></code>
+            </td>
+            <td> Contains the mapping of Mod parameter name to Link instances for this mod.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>module_source</code></td>
+            <td>
+                <code><a class='link' href='#ModuleSource'>ModuleSource</a></code>
+            </td>
+            <td> The way in which this Module instance was first started in the story,
+ either by request from another Module instance (INTERNAL) or by request
+ from outside the story (i.e. by suggestion from an agent - EXTERNAL).
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>surface_relation</code></td>
+            <td>
+                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
+            </td>
+            <td> The `surface_relation` that was used to start this Module instance with.
+ The same is used when re-inflating the Module instance when the story is
+ resumed. A SurfaceRelation value of null represents an embedded Module
+ instance (started by EmbedModule()) that is not managed by the story shell.
+</td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>module_deleted</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> True if this module was removed from its story either through
+ ModuleController.Stop() or ModuleContext.RemoveSelfFromStory().
+</td>
+        </tr><tr>
+            <td>7</td>
+            <td><code>intent</code></td>
+            <td>
+                <code><a class='link' href='#Intent'>Intent</a></code>
+            </td>
+            <td> The intent that was issued to start add this Module instance to the story.
+ Some Module instances may have been added not by an Intent, for example as
+ the initial module of a story. For those the field may be null.
+
+ TODO(thatguy,mesch): This field should now always be set, so make it
+ required once the framework is cleaned up enough to guarantee this
+ statement.
+</td>
+        </tr><tr>
+            <td>8</td>
+            <td><code>is_embedded</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> If true, this module was started by a parent module using
+ ModuleContext.EmbedModule(), and its view is not managed by the
+ StoryShell.
+</td>
+        </tr><tr>
+            <td>9</td>
+            <td><code>annotations</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[100]</code>
+            </td>
+            <td> Collection of user-defined key-value attributes that describe this surface (module).
+
+ The `Annotation.value` field of each `Annotation` is always set.
+</td>
+        </tr></table>
+
 ### ActionDisplay {:#ActionDisplay}
 
 
@@ -11738,6 +11754,16 @@ Type: <code>uint32</code>
             </td>
             <td> How the Surface was generated. By an action internal to the story or by
  an external action.
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>annotations</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[100]</code>
+            </td>
+            <td> Collection of user-defined key-value attributes that describe this surface (module).
+
+ The `Annotation.value` field of each `Annotation` is always set.
 </td>
         </tr></table>
 
@@ -11787,6 +11813,108 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### ModuleData {:#ModuleData}
+
+
+*Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#8)*
+
+ Information about a Module instance in a story.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>module_url</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td> The URL of the Module binary.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>module_path</code></td>
+            <td>
+                <code>vector&lt;string&gt;</code>
+            </td>
+            <td> The named path leading up to this Module instance. The last name in this
+ array is the name by which the Module was started by the parent Module
+ instance calling StartModule().
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>parameter_map</code></td>
+            <td>
+                <code><a class='link' href='#ModuleParameterMap'>ModuleParameterMap</a></code>
+            </td>
+            <td> Contains the mapping of Mod parameter name to Link instances for this mod.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>module_source</code></td>
+            <td>
+                <code><a class='link' href='#ModuleSource'>ModuleSource</a></code>
+            </td>
+            <td> The way in which this Module instance was first started in the story,
+ either by request from another Module instance (INTERNAL) or by request
+ from outside the story (i.e. by suggestion from an agent - EXTERNAL).
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>surface_relation</code></td>
+            <td>
+                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
+            </td>
+            <td> The `surface_relation` that was used to start this Module instance with.
+ The same is used when re-inflating the Module instance when the story is
+ resumed. A SurfaceRelation value of null represents an embedded Module
+ instance (started by EmbedModule()) that is not managed by the story shell.
+</td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>module_deleted</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> True if this module was removed from its story either through
+ ModuleController.Stop() or ModuleContext.RemoveSelfFromStory().
+</td>
+        </tr><tr>
+            <td>7</td>
+            <td><code>intent</code></td>
+            <td>
+                <code><a class='link' href='#Intent'>Intent</a></code>
+            </td>
+            <td> The intent that was issued to start add this Module instance to the story.
+ Some Module instances may have been added not by an Intent, for example as
+ the initial module of a story. For those the field may be null.
+
+ TODO(thatguy,mesch): This field should now always be set, so make it
+ required once the framework is cleaned up enough to guarantee this
+ statement.
+</td>
+        </tr><tr>
+            <td>8</td>
+            <td><code>is_embedded</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> If true, this module was started by a parent module using
+ ModuleContext.EmbedModule(), and its view is not managed by the
+ StoryShell.
+</td>
+        </tr><tr>
+            <td>9</td>
+            <td><code>annotations</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[100]</code>
+            </td>
+            <td> Collection of user-defined key-value attributes that describe this surface (module).
+
+ The `Annotation.value` field of each `Annotation` is always set.
+</td>
+        </tr></table>
+
 ### ActionDisplay {:#ActionDisplay}
 
 
@@ -11973,6 +12101,16 @@ Type: <code>uint32</code>
             </td>
             <td> How the Surface was generated. By an action internal to the story or by
  an external action.
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>annotations</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[100]</code>
+            </td>
+            <td> Collection of user-defined key-value attributes that describe this surface (module).
+
+ The `Annotation.value` field of each `Annotation` is always set.
 </td>
         </tr></table>
 
@@ -12121,6 +12259,25 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### StoryPuppetMaster_AnnotateModule_Result {:#StoryPuppetMaster_AnnotateModule_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StoryPuppetMaster_AnnotateModule_Response'>StoryPuppetMaster_AnnotateModule_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#AnnotationError'>AnnotationError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### StoryCommand {:#StoryCommand}
 *Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#17)*
 
@@ -12319,6 +12476,25 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### StoryPuppetMaster_AnnotateModule_Result {:#StoryPuppetMaster_AnnotateModule_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StoryPuppetMaster_AnnotateModule_Response'>StoryPuppetMaster_AnnotateModule_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#AnnotationError'>AnnotationError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### StoryCommand {:#StoryCommand}
 *Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#17)*
 
@@ -12381,7 +12557,7 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### AnnotationValue {:#AnnotationValue}
-*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#47)*
+*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#52)*
 
  The value of a <a class='link' href='#Annotation'>Annotation</a>.
 
@@ -12413,7 +12589,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### AnnotationValue {:#AnnotationValue}
-*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#47)*
+*Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#52)*
 
  The value of a <a class='link' href='#Annotation'>Annotation</a>.
 
@@ -12479,7 +12655,18 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#29">MAX_ANNOTATION_VALUE_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#30">MAX_ANNOTATE_SIZE</a></td>
+            <td>
+                    <code>50</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Maximum number of annotations that can be passed to either method
+ Annotate() AnnotateModule() in fuchsia.modular protocols that support
+ annotations.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#34">MAX_ANNOTATION_VALUE_LENGTH</a></td>
             <td>
                     <code>1024</code>
                 </td>
@@ -12489,7 +12676,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#35">MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#40">MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES</a></td>
             <td>
                     <code>102400</code>
                 </td>
@@ -12498,15 +12685,6 @@ Type: <code>uint32</code>
  bytes.
 
  Does not apply to other fields; see <a class='link' href='#MAX_ANNOTATION_VALUE_LENGTH'>MAX_ANNOTATION_VALUE_LENGTH</a>.
-</td>
-        </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#8">MAX_ANNOTATE_SIZE</a></td>
-            <td>
-                    <code>50</code>
-                </td>
-                <td><code>uint32</code></td>
-            <td> Maximum number of annotations that can be passed to StoryPuppetMaster.Annotate.
 </td>
         </tr>
     <tr>
@@ -12537,7 +12715,18 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#29">MAX_ANNOTATION_VALUE_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#30">MAX_ANNOTATE_SIZE</a></td>
+            <td>
+                    <code>50</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Maximum number of annotations that can be passed to either method
+ Annotate() AnnotateModule() in fuchsia.modular protocols that support
+ annotations.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#34">MAX_ANNOTATION_VALUE_LENGTH</a></td>
             <td>
                     <code>1024</code>
                 </td>
@@ -12547,7 +12736,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#35">MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#40">MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES</a></td>
             <td>
                     <code>102400</code>
                 </td>
@@ -12556,15 +12745,6 @@ Type: <code>uint32</code>
  bytes.
 
  Does not apply to other fields; see <a class='link' href='#MAX_ANNOTATION_VALUE_LENGTH'>MAX_ANNOTATION_VALUE_LENGTH</a>.
-</td>
-        </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#8">MAX_ANNOTATE_SIZE</a></td>
-            <td>
-                    <code>50</code>
-                </td>
-                <td><code>uint32</code></td>
-            <td> Maximum number of annotations that can be passed to StoryPuppetMaster.Annotate.
 </td>
         </tr>
     
