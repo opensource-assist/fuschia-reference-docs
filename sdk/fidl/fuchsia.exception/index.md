@@ -46,6 +46,33 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
+## ProcessLimbo {:#ProcessLimbo}
+*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#10)*
+
+ Protocol meant for clients interested in obtaining processes that are
+ suspended waiting for an exception handler (in limbo). This is the core
+ feature that enables Just In Time (JIT) debugging.
+
+### GetProcessesWaitingOnException {:#GetProcessesWaitingOnException}
+
+ Returns all the processes currently waiting on an exception.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>process_exceptions</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#ProcessException'>ProcessException</a>&gt;</code>
+            </td>
+        </tr></table>
+
 
 
 ## **STRUCTS**
@@ -91,7 +118,7 @@ Book: /_book.yaml
 ### ExceptionType {:#ExceptionType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#46)*
+*Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#61)*
 
  What type of exception was triggered.
  Maps to the types defined in `zx_excp_type_t`.
@@ -143,6 +170,49 @@ Type: <code>uint32</code>
         </tr></table>
 
 
+
+## **TABLES**
+
+### ProcessException {:#ProcessException}
+
+
+*Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#42)*
+
+ Generic wrapper over a thread exception. Mirrors closely the information
+ given by an exception channel.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>exception</code></td>
+            <td>
+                <code>handle&lt;exception&gt;</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>info</code></td>
+            <td>
+                <code><a class='link' href='#ExceptionInfo'>ExceptionInfo</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>process</code></td>
+            <td>
+                <code>handle&lt;process&gt;</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>thread</code></td>
+            <td>
+                <code>handle&lt;thread&gt;</code>
+            </td>
+            <td></td>
+        </tr></table>
 
 
 

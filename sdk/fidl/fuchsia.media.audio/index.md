@@ -131,7 +131,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## VolumeControl {:#VolumeControl}
-*Defined in [fuchsia.media.audio/volume_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#8)*
+*Defined in [fuchsia.media.audio/volume_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#14)*
 
  A protocol for controlling volume.
 
@@ -330,7 +330,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## VolumeControl {:#VolumeControl}
-*Defined in [fuchsia.media.audio/volume_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#8)*
+*Defined in [fuchsia.media.audio/volume_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#14)*
 
  A protocol for controlling volume.
 
@@ -473,6 +473,24 @@ Type: <code>uint16</code>
 </td>
         </tr>
     <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#8">MAX_VOLUME</a></td>
+            <td>
+                    <code>1</code>
+                </td>
+                <td><code>float32</code></td>
+            <td> The volume value representing the maximum loudness.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#11">MIN_VOLUME</a></td>
+            <td>
+                    <code>0</code>
+                </td>
+                <td><code>float32</code></td>
+            <td> The volume value representing silence.
+</td>
+        </tr>
+    <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#77">MUTED_GAIN_DB</a></td>
             <td>
                     <code>-160</code>
@@ -489,6 +507,24 @@ Type: <code>uint16</code>
                 </td>
                 <td><code>float32</code></td>
             <td> Maximum permitted gain value.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#8">MAX_VOLUME</a></td>
+            <td>
+                    <code>1</code>
+                </td>
+                <td><code>float32</code></td>
+            <td> The volume value representing the maximum loudness.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#11">MIN_VOLUME</a></td>
+            <td>
+                    <code>0</code>
+                </td>
+                <td><code>float32</code></td>
+            <td> The volume value representing silence.
 </td>
         </tr>
     

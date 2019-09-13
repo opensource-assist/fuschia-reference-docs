@@ -463,7 +463,7 @@ Book: /_book.yaml
 
 
 ## RepositoryIterator {:#RepositoryIterator}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#125)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#129)*
 
  The iterator over all the repositories defined in a `PackageResolver`.
 
@@ -798,6 +798,15 @@ Type: <code>uint64</code>
                 <code><a class='link' href='#RepositoryBlobKey'>RepositoryBlobKey</a></code>
             </td>
             <td> The private (or symmetric) key used to decrypt blobs fetched from this mirror. Optional.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>blob_mirror_url</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td> The URL where blobs from this mirror should be fetched.  Optional.
+ Defaults to `mirror_url + "/blobs"`.
 </td>
         </tr></table>
 

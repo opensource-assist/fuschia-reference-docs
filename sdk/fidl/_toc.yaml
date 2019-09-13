@@ -199,8 +199,6 @@ toc:
   path: /reference/fidl/fuchsia.simplecamera
 - title: fuchsia.space
   path: /reference/fidl/fuchsia.space
-- title: fuchsia.speech
-  path: /reference/fidl/fuchsia.speech
 - title: fuchsia.stash
   path: /reference/fidl/fuchsia.stash
 - title: fuchsia.storage.metrics

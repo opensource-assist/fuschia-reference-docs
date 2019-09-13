@@ -171,6 +171,33 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### WatchLightSensor {:#WatchLightSensor}
+
+ Obtains the current data from the light sensor. Returns immediately on
+ first call; subsequent calls return when the light sensor value changes
+  by a certain amount measured in lux.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>delta</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Display_WatchLightSensor_Result'>Display_WatchLightSensor_Result</a></code>
+            </td>
+        </tr></table>
+
 ### Set {:#Set}
 
  Sets display settings. Any field not explicitly set in the table performs a
@@ -632,6 +659,33 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### WatchLightSensor {:#WatchLightSensor}
+
+ Obtains the current data from the light sensor. Returns immediately on
+ first call; subsequent calls return when the light sensor value changes
+  by a certain amount measured in lux.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>delta</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Display_WatchLightSensor_Result'>Display_WatchLightSensor_Result</a></code>
+            </td>
+        </tr></table>
+
 ### Set {:#Set}
 
  Sets display settings. Any field not explicitly set in the table performs a
@@ -1008,6 +1062,24 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### Display_WatchLightSensor_Response {:#Display_WatchLightSensor_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>light_sensor_data</code></td>
+            <td>
+                <code><a class='link' href='#LightSensorData'>LightSensorData</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Display_Set_Response {:#Display_Set_Response}
 *generated*
 
@@ -1198,6 +1270,24 @@ Book: /_book.yaml
             <td><code>settings</code></td>
             <td>
                 <code><a class='link' href='#DisplaySettings'>DisplaySettings</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Display_WatchLightSensor_Response {:#Display_WatchLightSensor_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>light_sensor_data</code></td>
+            <td>
+                <code><a class='link' href='#LightSensorData'>LightSensorData</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1956,7 +2046,7 @@ Type: <code>uint32</code>
 ### DisplaySettings {:#DisplaySettings}
 
 
-*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#19)*
+*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#24)*
 
 
 
@@ -1976,6 +2066,25 @@ Type: <code>uint32</code>
                 <code>float32</code>
             </td>
             <td></td>
+        </tr></table>
+
+### LightSensorData {:#LightSensorData}
+
+
+*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#29)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>illuminance_lux</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td> Brightness from the light sensor measured in lux
+</td>
         </tr></table>
 
 ### DoNotDisturbSettings {:#DoNotDisturbSettings}
@@ -2413,7 +2522,7 @@ Type: <code>uint32</code>
 ### DisplaySettings {:#DisplaySettings}
 
 
-*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#19)*
+*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#24)*
 
 
 
@@ -2433,6 +2542,25 @@ Type: <code>uint32</code>
                 <code>float32</code>
             </td>
             <td></td>
+        </tr></table>
+
+### LightSensorData {:#LightSensorData}
+
+
+*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#29)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>illuminance_lux</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td> Brightness from the light sensor measured in lux
+</td>
         </tr></table>
 
 ### DoNotDisturbSettings {:#DoNotDisturbSettings}
@@ -2665,6 +2793,25 @@ Type: <code>uint32</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Display_Watch_Response'>Display_Watch_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Display_WatchLightSensor_Result {:#Display_WatchLightSensor_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Display_WatchLightSensor_Response'>Display_WatchLightSensor_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -2931,6 +3078,25 @@ Type: <code>uint32</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Display_Watch_Response'>Display_Watch_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Display_WatchLightSensor_Result {:#Display_WatchLightSensor_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Display_WatchLightSensor_Response'>Display_WatchLightSensor_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

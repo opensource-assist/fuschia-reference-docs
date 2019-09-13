@@ -404,10 +404,6 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.speech/index">fuchsia.speech</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.stash/index">fuchsia.stash</a></td>
     <td></td>
 </tr>

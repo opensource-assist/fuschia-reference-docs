@@ -7,12 +7,17 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Control {:#Control}
-*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#13)*
+*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#18)*
 
- The control plane for a network socket. Once a socket has been retrieved from a
- `Provider`, this interface is then used to further configure and use the socket.
- This interface is essentially POSIX. Its implementation must support Linux-specific arguments
- to {Get,Set}SockOpt.
+ The control plane for a network socket.
+
+ Once a socket has been retrieved from a `Provider`, this interface is then used to further
+ configure and use the socket. This interface is essentially POSIX. Its implementation must
+ support Linux-specific arguments to {Get,Set}SockOpt.
+
+ *Warning:* This protocol is not yet ready for direct use by clients. Instead, clients should
+ use the BSD sockets API to interact with sockets. We plan to change this protocol substantially
+ and clients that couple directly to this protocol will make those changes more difficult.
 
 ### Clone {:#Clone}
 
@@ -514,7 +519,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Provider {:#Provider}
-*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#41)*
+*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#46)*
 
  Provider implements the POSIX sockets API.
 
@@ -560,12 +565,17 @@ Book: /_book.yaml
         </tr></table>
 
 ## Control {:#Control}
-*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#13)*
+*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#18)*
 
- The control plane for a network socket. Once a socket has been retrieved from a
- `Provider`, this interface is then used to further configure and use the socket.
- This interface is essentially POSIX. Its implementation must support Linux-specific arguments
- to {Get,Set}SockOpt.
+ The control plane for a network socket.
+
+ Once a socket has been retrieved from a `Provider`, this interface is then used to further
+ configure and use the socket. This interface is essentially POSIX. Its implementation must
+ support Linux-specific arguments to {Get,Set}SockOpt.
+
+ *Warning:* This protocol is not yet ready for direct use by clients. Instead, clients should
+ use the BSD sockets API to interact with sockets. We plan to change this protocol substantially
+ and clients that couple directly to this protocol will make those changes more difficult.
 
 ### Clone {:#Clone}
 
@@ -1067,7 +1077,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Provider {:#Provider}
-*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#41)*
+*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#46)*
 
  Provider implements the POSIX sockets API.
 

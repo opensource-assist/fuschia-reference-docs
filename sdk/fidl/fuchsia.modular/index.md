@@ -656,57 +656,6 @@ Book: /_book.yaml
 
 
 
-### CreateEntityWithData {:#CreateEntityWithData}
-
- Creates a new entity from `type_to_data` such that duplicate types are
- overriden by subsequent entries.
-
- This is a useful way to represent small immutable entities without having
- to provide the entity using an Agent. The types and data together must be
- within 16KB in size.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>type_to_data</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#TypeToDataEntry'>TypeToDataEntry</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>entity_reference</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr></table>
-
-### GetPackageName {:#GetPackageName}
-
- Gets the package name of this component.
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>package_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
 ## MessageQueue {:#MessageQueue}
 *Defined in [fuchsia.modular/message_queue.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/message_queue.fidl#31)*
 
@@ -1830,7 +1779,7 @@ Book: /_book.yaml
 
 
 ## SessionShell {:#SessionShell}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#16)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#15)*
 
  This interface is implemented by a session shell and is used by the
  sessionmgr to hand to the session shell views of stories, or to notify that
@@ -1915,7 +1864,7 @@ Book: /_book.yaml
     </table>
 
 ## SessionShellContext {:#SessionShellContext}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#58)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#57)*
 
  This interface allows a `SessionShell` to request capabilities from its
  creator in a way that is more explicit about the services that are
@@ -1956,25 +1905,6 @@ Book: /_book.yaml
         </tr></table>
 
 
-
-### GetDeviceName {:#GetDeviceName}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>device_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
 
 ### GetFocusController {:#GetFocusController}
 
@@ -2036,21 +1966,6 @@ Book: /_book.yaml
 
 
 
-### GetSpeechToText {:#GetSpeechToText}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.speech/index.html'>fuchsia.speech</a>/<a class='link' href='../fuchsia.speech/index.html#SpeechToText'>SpeechToText</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### GetStoryProvider {:#GetStoryProvider}
 
 
@@ -2094,7 +2009,7 @@ Book: /_book.yaml
 
 
 ## SessionShellPresentationProvider {:#SessionShellPresentationProvider}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#85)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#82)*
 
  Session shell provides this service to the framework which may plumb it to
  different subscribers, such as story shell and intelligence provider.
@@ -3786,22 +3701,7 @@ Book: /_book.yaml
     </table>
 
 ## UserIntelligenceProvider {:#UserIntelligenceProvider}
-*Defined in [fuchsia.modular/user_intelligence_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/user_intelligence/user_intelligence_provider.fidl#10)*
-
-
-### GetSpeechToText {:#GetSpeechToText}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>speech_to_text</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.speech/index.html'>fuchsia.speech</a>/<a class='link' href='../fuchsia.speech/index.html#SpeechToText'>SpeechToText</a>&gt;</code>
-            </td>
-        </tr></table>
-
+*Defined in [fuchsia.modular/user_intelligence_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/user_intelligence/user_intelligence_provider.fidl#9)*
 
 
 ### StartAgents {:#StartAgents}
@@ -4506,57 +4406,6 @@ Book: /_book.yaml
 
 
 
-### CreateEntityWithData {:#CreateEntityWithData}
-
- Creates a new entity from `type_to_data` such that duplicate types are
- overriden by subsequent entries.
-
- This is a useful way to represent small immutable entities without having
- to provide the entity using an Agent. The types and data together must be
- within 16KB in size.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>type_to_data</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#TypeToDataEntry'>TypeToDataEntry</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>entity_reference</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr></table>
-
-### GetPackageName {:#GetPackageName}
-
- Gets the package name of this component.
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>package_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
 ## MessageQueue {:#MessageQueue}
 *Defined in [fuchsia.modular/message_queue.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/message_queue.fidl#31)*
 
@@ -5680,7 +5529,7 @@ Book: /_book.yaml
 
 
 ## SessionShell {:#SessionShell}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#16)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#15)*
 
  This interface is implemented by a session shell and is used by the
  sessionmgr to hand to the session shell views of stories, or to notify that
@@ -5765,7 +5614,7 @@ Book: /_book.yaml
     </table>
 
 ## SessionShellContext {:#SessionShellContext}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#58)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#57)*
 
  This interface allows a `SessionShell` to request capabilities from its
  creator in a way that is more explicit about the services that are
@@ -5806,25 +5655,6 @@ Book: /_book.yaml
         </tr></table>
 
 
-
-### GetDeviceName {:#GetDeviceName}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>device_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
 
 ### GetFocusController {:#GetFocusController}
 
@@ -5886,21 +5716,6 @@ Book: /_book.yaml
 
 
 
-### GetSpeechToText {:#GetSpeechToText}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.speech/index.html'>fuchsia.speech</a>/<a class='link' href='../fuchsia.speech/index.html#SpeechToText'>SpeechToText</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### GetStoryProvider {:#GetStoryProvider}
 
 
@@ -5944,7 +5759,7 @@ Book: /_book.yaml
 
 
 ## SessionShellPresentationProvider {:#SessionShellPresentationProvider}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#85)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#82)*
 
  Session shell provides this service to the framework which may plumb it to
  different subscribers, such as story shell and intelligence provider.
@@ -7636,22 +7451,7 @@ Book: /_book.yaml
     </table>
 
 ## UserIntelligenceProvider {:#UserIntelligenceProvider}
-*Defined in [fuchsia.modular/user_intelligence_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/user_intelligence/user_intelligence_provider.fidl#10)*
-
-
-### GetSpeechToText {:#GetSpeechToText}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>speech_to_text</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.speech/index.html'>fuchsia.speech</a>/<a class='link' href='../fuchsia.speech/index.html#SpeechToText'>SpeechToText</a>&gt;</code>
-            </td>
-        </tr></table>
-
+*Defined in [fuchsia.modular/user_intelligence_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/user_intelligence/user_intelligence_provider.fidl#9)*
 
 
 ### StartAgents {:#StartAgents}
@@ -7711,7 +7511,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### TaskInfo {:#TaskInfo}
-*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#40)*
+*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#42)*
 
 
 
@@ -7831,32 +7631,6 @@ Book: /_book.yaml
             <td> `account_id` is received from either AddUser() or PreviousUsers(). It
  can be NULL which means logging-in in an incognito mode.
 </td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### TypeToDataEntry {:#TypeToDataEntry}
-*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#91)*
-
-
-
- Used by ComponentContext.CreateEntityWithData().
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>type</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>data</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td></td>
             <td>No default</td>
         </tr>
 </table>
@@ -8308,7 +8082,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewIdentifier {:#ViewIdentifier}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#50)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#49)*
 
 
 
@@ -9112,7 +8886,7 @@ Book: /_book.yaml
 </table>
 
 ### TaskInfo {:#TaskInfo}
-*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#40)*
+*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#42)*
 
 
 
@@ -9232,32 +9006,6 @@ Book: /_book.yaml
             <td> `account_id` is received from either AddUser() or PreviousUsers(). It
  can be NULL which means logging-in in an incognito mode.
 </td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### TypeToDataEntry {:#TypeToDataEntry}
-*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#91)*
-
-
-
- Used by ComponentContext.CreateEntityWithData().
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>type</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>data</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td></td>
             <td>No default</td>
         </tr>
 </table>
@@ -9709,7 +9457,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewIdentifier {:#ViewIdentifier}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#50)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#49)*
 
 
 
@@ -11199,7 +10947,7 @@ Type: <code>uint32</code>
 ### AgentServiceRequest {:#AgentServiceRequest}
 
 
-*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#74)*
+*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#57)*
 
  Used by ComponentContext.ConnectToAgentService
 
@@ -11546,7 +11294,7 @@ Type: <code>uint32</code>
 ### AgentServiceRequest {:#AgentServiceRequest}
 
 
-*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#74)*
+*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#57)*
 
  Used by ComponentContext.ConnectToAgentService
 
@@ -11895,7 +11643,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### TriggerCondition {:#TriggerCondition}
-*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#54)*
+*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#56)*
 
  Describes the condition that needs to be met for a task to become scheduled.
  This is not yet complete and will be extended or changed.
@@ -12112,7 +11860,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### TriggerCondition {:#TriggerCondition}
-*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#54)*
+*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#56)*
 
  Describes the condition that needs to be met for a task to become scheduled.
  This is not yet complete and will be extended or changed.
