@@ -403,7 +403,7 @@ Book: /_book.yaml
     </table>
 
 ## WorkScheduler {:#WorkScheduler}
-*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#39)*
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#40)*
 
  Framework service: API for scheduling and canceling work. Each component instance can access
  work items that it has scheduled (but not others' scheduled work items). Work items are
@@ -472,7 +472,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Worker {:#Worker}
-*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#55)*
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#57)*
 
  Component-exposed service: Work scheduler connects to this service to invoke scheduled work item
  callbacks. The service implementation is responsible for invoking the code that corresponds to
@@ -502,6 +502,66 @@ Book: /_book.yaml
             <td><code>result</code></td>
             <td>
                 <code><a class='link' href='#Worker_DoWork_Result'>Worker_DoWork_Result</a></code>
+            </td>
+        </tr></table>
+
+## WorkSchedulerControl {:#WorkSchedulerControl}
+*Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#69)*
+
+ Framework service: Administrative API for controlling parameters of the `WorkScheduler`
+ framework service. So long as there are work items with deadlines in the next `batch_period`,
+ the `WorkScheduler` will sleep for `batch_period`, then wake up and immediately dispatch a batch
+ of work items: all those with past deadlines. It will repeat this process until no work items
+ would be scheduled in the next `batch_period`, at which point it will go to sleep until the next
+ deadline. This strategy ensures that each work item is dispatched approximately within
+ `batch_period` of its deadline.
+
+### GetBatchPeriod {:#GetBatchPeriod}
+
+ Get the current period between `WorkScheduler` attempts to dispatch a batch of work.
+ `batch_period` is a non-negative 64-bit integer in the range [0, 2^63-1], representing a
+ number of nanoseconds between dispatching batches of work.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#WorkSchedulerControl_GetBatchPeriod_Result'>WorkSchedulerControl_GetBatchPeriod_Result</a></code>
+            </td>
+        </tr></table>
+
+### SetBatchPeriod {:#SetBatchPeriod}
+
+ Set the current period between `WorkScheduler` attempts to batch and dispatch a batch of
+ work. `batch_period` is a non-negative 64-bit integer in the range [0, 2^63-1], representing
+ a number of nanoseconds between dispatching batches of work.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>batch_period</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#WorkSchedulerControl_SetBatchPeriod_Result'>WorkSchedulerControl_SetBatchPeriod_Result</a></code>
             </td>
         </tr></table>
 
@@ -756,6 +816,35 @@ Book: /_book.yaml
 </table>
 
 ### Worker_DoWork_Response {:#Worker_DoWork_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### WorkSchedulerControl_GetBatchPeriod_Response {:#WorkSchedulerControl_GetBatchPeriod_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>batch_period</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### WorkSchedulerControl_SetBatchPeriod_Response {:#WorkSchedulerControl_SetBatchPeriod_Response}
 *generated*
 
 
@@ -1916,6 +2005,44 @@ Type: <code>uint32</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Worker_DoWork_Response'>Worker_DoWork_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### WorkSchedulerControl_GetBatchPeriod_Result {:#WorkSchedulerControl_GetBatchPeriod_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#WorkSchedulerControl_GetBatchPeriod_Response'>WorkSchedulerControl_GetBatchPeriod_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### WorkSchedulerControl_SetBatchPeriod_Result {:#WorkSchedulerControl_SetBatchPeriod_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#WorkSchedulerControl_SetBatchPeriod_Response'>WorkSchedulerControl_SetBatchPeriod_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

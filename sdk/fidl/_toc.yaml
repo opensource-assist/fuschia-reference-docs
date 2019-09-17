@@ -35,6 +35,8 @@ toc:
   path: /reference/fidl/fuchsia.bluetooth.le
 - title: fuchsia.bluetooth.snoop
   path: /reference/fidl/fuchsia.bluetooth.snoop
+- title: fuchsia.bluetooth.sys
+  path: /reference/fidl/fuchsia.bluetooth.sys
 - title: fuchsia.bluetooth.test
   path: /reference/fidl/fuchsia.bluetooth.test
 - title: fuchsia.boot
@@ -89,6 +91,8 @@ toc:
   path: /reference/fidl/fuchsia.gpu.magma
 - title: fuchsia.hardware.block
   path: /reference/fidl/fuchsia.hardware.block
+- title: fuchsia.hardware.block.partition
+  path: /reference/fidl/fuchsia.hardware.block.partition
 - title: fuchsia.hardware.bluetooth
   path: /reference/fidl/fuchsia.hardware.bluetooth
 - title: fuchsia.hardware.display
@@ -105,8 +109,6 @@ toc:
   path: /reference/fidl/fuchsia.hardware.pty
 - title: fuchsia.hardware.rtc
   path: /reference/fidl/fuchsia.hardware.rtc
-- title: fuchsia.hardware.telephony.transport
-  path: /reference/fidl/fuchsia.hardware.telephony.transport
 - title: fuchsia.images
   path: /reference/fidl/fuchsia.images
 - title: fuchsia.inspect
@@ -191,6 +193,8 @@ toc:
   path: /reference/fidl/fuchsia.scheduler
 - title: fuchsia.scpi
   path: /reference/fidl/fuchsia.scpi
+- title: fuchsia.security.resource
+  path: /reference/fidl/fuchsia.security.resource
 - title: fuchsia.settings
   path: /reference/fidl/fuchsia.settings
 - title: fuchsia.setui

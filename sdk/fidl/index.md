@@ -72,6 +72,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.bluetooth.sys/index">fuchsia.bluetooth.sys</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.bluetooth.test/index">fuchsia.bluetooth.test</a></td>
     <td></td>
 </tr>
@@ -180,6 +184,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.hardware.block.partition/index">fuchsia.hardware.block.partition</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.hardware.bluetooth/index">fuchsia.hardware.bluetooth</a></td>
     <td></td>
 </tr>
@@ -212,10 +220,6 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.hardware.rtc/index">fuchsia.hardware.rtc</a></td>
-    <td></td>
-</tr>
-<tr>
-    <td><a href="fuchsia.hardware.telephony.transport/index">fuchsia.hardware.telephony.transport</a></td>
     <td></td>
 </tr>
 <tr>
@@ -386,6 +390,10 @@ Book: /_book.yaml
     <td><a href="fuchsia.scpi/index">fuchsia.scpi</a></td>
     <td> System Control Power Interface
 </td>
+</tr>
+<tr>
+    <td><a href="fuchsia.security.resource/index">fuchsia.security.resource</a></td>
+    <td></td>
 </tr>
 <tr>
     <td><a href="fuchsia.settings/index">fuchsia.settings</a></td>

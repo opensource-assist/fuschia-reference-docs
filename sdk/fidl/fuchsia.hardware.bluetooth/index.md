@@ -97,7 +97,8 @@ Book: /_book.yaml
 
  Connects to the host driver on the provided handle. The zircon channel
  is closed in the event of an error connecting to the driver. This
- channel speaks the "//sdk/fidl/fuchsia.bluetooth.host.Host" protocol.
+ channel speaks the "/src/connectivity/bluetooth/fidl/fuchsia.bluetooth.host.Host"
+ protocol.
 
 #### Request
 <table>

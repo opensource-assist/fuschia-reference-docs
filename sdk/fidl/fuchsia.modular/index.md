@@ -111,12 +111,9 @@ Book: /_book.yaml
     </table>
 
 ## AgentContext {:#AgentContext}
-*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#14)*
+*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#11)*
 
  An instance of this service is exposed to agents in their namespace.
- `AgentContext` allows an agent to schedule tasks which run in response to
- triggers. Triggers are conditions such as a message arriving on a
- MessageQueue.
 
 ### GetComponentContext {:#GetComponentContext}
 
@@ -148,65 +145,6 @@ Book: /_book.yaml
             <td><code>request</code></td>
             <td>
                 <code>request&lt;<a class='link' href='#EntityReferenceFactory'>EntityReferenceFactory</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### ScheduleTask {:#ScheduleTask}
-
- Schedules a task described in `task_info`. When this task is scheduled to
- run, Agent.RunTask() is called.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>task_info</code></td>
-            <td>
-                <code><a class='link' href='#TaskInfo'>TaskInfo</a></code>
-            </td>
-        </tr></table>
-
-
-
-### ScheduleTaskWithCompletion {:#ScheduleTaskWithCompletion}
-
- Schedules a task described in `task_info`. When this task is scheduled
- to run, Agent.RunTask() is called. Executes the callback on completion.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>task_info</code></td>
-            <td>
-                <code><a class='link' href='#TaskInfo'>TaskInfo</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>done</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-### DeleteTask {:#DeleteTask}
-
- No new runs of this task will be scheduled.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>task_id</code></td>
-            <td>
-                <code>string</code>
             </td>
         </tr></table>
 
@@ -1354,57 +1292,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### EmbedModule2 {:#EmbedModule2}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>intent</code></td>
-            <td>
-                <code><a class='link' href='#Intent'>Intent</a></code>
-            </td>
-        </tr><tr>
-            <td><code>module_controller</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#ModuleController'>ModuleController</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>view_token</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.views/index.html'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/index.html#ViewToken'>ViewToken</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code><a class='link' href='#StartModuleStatus'>StartModuleStatus</a></code>
-            </td>
-        </tr></table>
-
-### RequestFocus {:#RequestFocus}
-
- Requests that the current story and module gain focus. It's up to the story
- shell and session shell to honor that request.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
 ### RemoveSelfFromStory {:#RemoveSelfFromStory}
 
  When a module calls [RemoveSelfFromStory()] the framework will stop the
@@ -1415,38 +1302,6 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
-
-
-
-### StartOngoingActivity {:#StartOngoingActivity}
-
- Declares that activity of the given [type] is ongoing in this module.
- This information is forwarded to the session shell
- (cf. StoryProvider.WatchActivity() and StoryActivityWatcher).
-
- Modules should close [request] when the ongoing activity has stopped, and
- this will also signal to the session shell that the ongoing activity has
- stopped. For now, pausing media should count as a stopped ongoing activity,
- and when it is resumed it should be started as a new ongoing activity.
- Conversely, media playing in a continuous playlist (i.e playing the next
- video or song) should be treated as the same ongoing activity.
- Modules must request a connection per ongoing activity; a single connection
- may not be re-used for multiple ongoing activities.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>type</code></td>
-            <td>
-                <code><a class='link' href='#OngoingActivityType'>OngoingActivityType</a></code>
-            </td>
-        </tr><tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#OngoingActivity'>OngoingActivity</a>&gt;</code>
-            </td>
-        </tr></table>
 
 
 
@@ -1494,7 +1349,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## OngoingActivity {:#OngoingActivity}
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#109)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#82)*
 
  This interface defines the protocol over which a Module can communicate about
  an ongoing activity to the framework. It is provided to Modules via
@@ -1758,26 +1613,6 @@ Book: /_book.yaml
 
 
 
-## VisibleStoriesController {:#VisibleStoriesController}
-*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#75)*
-
- Implemented by sessionmgr. Given to session shell through its namespace.
-
-### Set {:#Set}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>visible_story_ids</code></td>
-            <td>
-                <code>vector&lt;string&gt;?</code>
-            </td>
-        </tr></table>
-
-
-
 ## SessionShell {:#SessionShell}
 *Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#15)*
 
@@ -1936,21 +1771,6 @@ Book: /_book.yaml
 
 
 
-### GetLink {:#GetLink}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### GetPresentation {:#GetPresentation}
 
 
@@ -1981,21 +1801,6 @@ Book: /_book.yaml
 
 
 
-### GetVisibleStoriesController {:#GetVisibleStoriesController}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#VisibleStoriesController'>VisibleStoriesController</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### Logout {:#Logout}
 
  Requests logout of the user. This causes the basemgr to tear down the
@@ -2009,7 +1814,7 @@ Book: /_book.yaml
 
 
 ## SessionShellPresentationProvider {:#SessionShellPresentationProvider}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#82)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#80)*
 
  Session shell provides this service to the framework which may plumb it to
  different subscribers, such as story shell and intelligence provider.
@@ -2956,47 +2761,6 @@ Book: /_book.yaml
 
 
 
-### PreviousStories {:#PreviousStories}
-
- Returns info of known stories.
- DEPRECATED: In favor of GetStories().
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>story_infos</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#StoryInfo'>StoryInfo</a>&gt;</code>
-            </td>
-        </tr></table>
-
-### PreviousStories2 {:#PreviousStories2}
-
- DEPRECATED: In favor of GetStories2(). For transition purposes only.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>story_infos</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#StoryInfo2'>StoryInfo2</a>&gt;</code>
-            </td>
-        </tr></table>
-
 ### Watch {:#Watch}
 
  Registers a watcher for changes in the story collection.
@@ -3033,7 +2797,7 @@ Book: /_book.yaml
 
 
 ## StoryProviderWatcher {:#StoryProviderWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#56)*
+*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#48)*
 
  Implemented by clients of StoryProvider.
 
@@ -3138,7 +2902,7 @@ Book: /_book.yaml
 
 
 ## StoryActivityWatcher {:#StoryActivityWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#112)*
+*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#104)*
 
  Implemented by clients of StoryProvider in order to inform them about ongoing
  activities in stories. `activities` is the entire list of ongoing activities
@@ -3615,24 +3379,8 @@ Book: /_book.yaml
 
 
 
-### OnSurfaceOffScreen {:#OnSurfaceOffScreen}
-
- Notification that the Surface is no longer on screen.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>surface_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
-
-
 ## StoryVisualStateWatcher {:#StoryVisualStateWatcher}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#214)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#211)*
 
  Implemented by StoryShell to get notified about visual state changes.
 
@@ -3861,12 +3609,9 @@ Book: /_book.yaml
     </table>
 
 ## AgentContext {:#AgentContext}
-*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#14)*
+*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#11)*
 
  An instance of this service is exposed to agents in their namespace.
- `AgentContext` allows an agent to schedule tasks which run in response to
- triggers. Triggers are conditions such as a message arriving on a
- MessageQueue.
 
 ### GetComponentContext {:#GetComponentContext}
 
@@ -3898,65 +3643,6 @@ Book: /_book.yaml
             <td><code>request</code></td>
             <td>
                 <code>request&lt;<a class='link' href='#EntityReferenceFactory'>EntityReferenceFactory</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### ScheduleTask {:#ScheduleTask}
-
- Schedules a task described in `task_info`. When this task is scheduled to
- run, Agent.RunTask() is called.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>task_info</code></td>
-            <td>
-                <code><a class='link' href='#TaskInfo'>TaskInfo</a></code>
-            </td>
-        </tr></table>
-
-
-
-### ScheduleTaskWithCompletion {:#ScheduleTaskWithCompletion}
-
- Schedules a task described in `task_info`. When this task is scheduled
- to run, Agent.RunTask() is called. Executes the callback on completion.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>task_info</code></td>
-            <td>
-                <code><a class='link' href='#TaskInfo'>TaskInfo</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>done</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-### DeleteTask {:#DeleteTask}
-
- No new runs of this task will be scheduled.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>task_id</code></td>
-            <td>
-                <code>string</code>
             </td>
         </tr></table>
 
@@ -5104,57 +4790,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### EmbedModule2 {:#EmbedModule2}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>intent</code></td>
-            <td>
-                <code><a class='link' href='#Intent'>Intent</a></code>
-            </td>
-        </tr><tr>
-            <td><code>module_controller</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#ModuleController'>ModuleController</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>view_token</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.views/index.html'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/index.html#ViewToken'>ViewToken</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code><a class='link' href='#StartModuleStatus'>StartModuleStatus</a></code>
-            </td>
-        </tr></table>
-
-### RequestFocus {:#RequestFocus}
-
- Requests that the current story and module gain focus. It's up to the story
- shell and session shell to honor that request.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
 ### RemoveSelfFromStory {:#RemoveSelfFromStory}
 
  When a module calls [RemoveSelfFromStory()] the framework will stop the
@@ -5165,38 +4800,6 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
-
-
-
-### StartOngoingActivity {:#StartOngoingActivity}
-
- Declares that activity of the given [type] is ongoing in this module.
- This information is forwarded to the session shell
- (cf. StoryProvider.WatchActivity() and StoryActivityWatcher).
-
- Modules should close [request] when the ongoing activity has stopped, and
- this will also signal to the session shell that the ongoing activity has
- stopped. For now, pausing media should count as a stopped ongoing activity,
- and when it is resumed it should be started as a new ongoing activity.
- Conversely, media playing in a continuous playlist (i.e playing the next
- video or song) should be treated as the same ongoing activity.
- Modules must request a connection per ongoing activity; a single connection
- may not be re-used for multiple ongoing activities.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>type</code></td>
-            <td>
-                <code><a class='link' href='#OngoingActivityType'>OngoingActivityType</a></code>
-            </td>
-        </tr><tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#OngoingActivity'>OngoingActivity</a>&gt;</code>
-            </td>
-        </tr></table>
 
 
 
@@ -5244,7 +4847,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## OngoingActivity {:#OngoingActivity}
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#109)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#82)*
 
  This interface defines the protocol over which a Module can communicate about
  an ongoing activity to the framework. It is provided to Modules via
@@ -5508,26 +5111,6 @@ Book: /_book.yaml
 
 
 
-## VisibleStoriesController {:#VisibleStoriesController}
-*Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#75)*
-
- Implemented by sessionmgr. Given to session shell through its namespace.
-
-### Set {:#Set}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>visible_story_ids</code></td>
-            <td>
-                <code>vector&lt;string&gt;?</code>
-            </td>
-        </tr></table>
-
-
-
 ## SessionShell {:#SessionShell}
 *Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#15)*
 
@@ -5686,21 +5269,6 @@ Book: /_book.yaml
 
 
 
-### GetLink {:#GetLink}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### GetPresentation {:#GetPresentation}
 
 
@@ -5731,21 +5299,6 @@ Book: /_book.yaml
 
 
 
-### GetVisibleStoriesController {:#GetVisibleStoriesController}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#VisibleStoriesController'>VisibleStoriesController</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### Logout {:#Logout}
 
  Requests logout of the user. This causes the basemgr to tear down the
@@ -5759,7 +5312,7 @@ Book: /_book.yaml
 
 
 ## SessionShellPresentationProvider {:#SessionShellPresentationProvider}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#82)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#80)*
 
  Session shell provides this service to the framework which may plumb it to
  different subscribers, such as story shell and intelligence provider.
@@ -6706,47 +6259,6 @@ Book: /_book.yaml
 
 
 
-### PreviousStories {:#PreviousStories}
-
- Returns info of known stories.
- DEPRECATED: In favor of GetStories().
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>story_infos</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#StoryInfo'>StoryInfo</a>&gt;</code>
-            </td>
-        </tr></table>
-
-### PreviousStories2 {:#PreviousStories2}
-
- DEPRECATED: In favor of GetStories2(). For transition purposes only.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>story_infos</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#StoryInfo2'>StoryInfo2</a>&gt;</code>
-            </td>
-        </tr></table>
-
 ### Watch {:#Watch}
 
  Registers a watcher for changes in the story collection.
@@ -6783,7 +6295,7 @@ Book: /_book.yaml
 
 
 ## StoryProviderWatcher {:#StoryProviderWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#56)*
+*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#48)*
 
  Implemented by clients of StoryProvider.
 
@@ -6888,7 +6400,7 @@ Book: /_book.yaml
 
 
 ## StoryActivityWatcher {:#StoryActivityWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#112)*
+*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#104)*
 
  Implemented by clients of StoryProvider in order to inform them about ongoing
  activities in stories. `activities` is the entire list of ongoing activities
@@ -7365,24 +6877,8 @@ Book: /_book.yaml
 
 
 
-### OnSurfaceOffScreen {:#OnSurfaceOffScreen}
-
- Notification that the Surface is no longer on screen.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>surface_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
-
-
 ## StoryVisualStateWatcher {:#StoryVisualStateWatcher}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#214)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#211)*
 
  Implemented by StoryShell to get notified about visual state changes.
 
@@ -7509,43 +7005,6 @@ Book: /_book.yaml
 
 
 ## **STRUCTS**
-
-### TaskInfo {:#TaskInfo}
-*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#42)*
-
-
-
- Used to describe a task to the framework.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>task_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> An agent provided task id that can be used later to refer to this task.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>trigger_condition</code></td>
-            <td>
-                <code><a class='link' href='#TriggerCondition'>TriggerCondition</a></code>
-            </td>
-            <td> The condition that would cause this task to get scheduled.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>persistent</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> If set to true, the trigger condition will be persisted on the user's
- ledger and will be available across reboots and devices.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
 
 ### Annotation {:#Annotation}
 *Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#10)*
@@ -8882,43 +8341,6 @@ Book: /_book.yaml
  Influences relative areas of surfaces on screen.
 </td>
             <td>1</td>
-        </tr>
-</table>
-
-### TaskInfo {:#TaskInfo}
-*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#42)*
-
-
-
- Used to describe a task to the framework.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>task_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> An agent provided task id that can be used later to refer to this task.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>trigger_condition</code></td>
-            <td>
-                <code><a class='link' href='#TriggerCondition'>TriggerCondition</a></code>
-            </td>
-            <td> The condition that would cause this task to get scheduled.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>persistent</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> If set to true, the trigger condition will be persisted on the user's
- ledger and will be available across reboots and devices.
-</td>
-            <td>No default</td>
         </tr>
 </table>
 
@@ -10312,7 +9734,7 @@ Type: <code>uint32</code>
 ### StartModuleStatus {:#StartModuleStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#101)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#74)*
 
  Communicates the status of an Intent to a Module.
 
@@ -10331,7 +9753,7 @@ Type: <code>uint32</code>
 ### OngoingActivityType {:#OngoingActivityType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#112)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#85)*
 
 
 
@@ -10477,7 +9899,7 @@ Type: <code>int32</code>
 ### StoryVisualState {:#StoryVisualState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#219)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#216)*
 
  Defines the visual state of the Story shell.
 
@@ -10650,7 +10072,7 @@ Type: <code>uint32</code>
 ### StartModuleStatus {:#StartModuleStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#101)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#74)*
 
  Communicates the status of an Intent to a Module.
 
@@ -10669,7 +10091,7 @@ Type: <code>uint32</code>
 ### OngoingActivityType {:#OngoingActivityType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#112)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#85)*
 
 
 
@@ -10815,7 +10237,7 @@ Type: <code>int32</code>
 ### StoryVisualState {:#StoryVisualState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#219)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#216)*
 
  Defines the visual state of the Story shell.
 
@@ -11642,46 +11064,6 @@ Type: <code>uint32</code>
 
 ## **UNIONS**
 
-### TriggerCondition {:#TriggerCondition}
-*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#56)*
-
- Describes the condition that needs to be met for a task to become scheduled.
- This is not yet complete and will be extended or changed.
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>message_on_queue</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Triggers when there is a new message on a message queue.
-
- `message_on_queue` is the name of the message queue to be watched. This
- means that only the component that originally obtained the message queue
- will be able to observe new message events.
-</td>
-        </tr><tr>
-            <td><code>queue_deleted</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Triggers when a message queue is deleted.
-
- `queue_deleted` is the token for the message queue that is to be watched.
- This allows both message queue readers and writers to watch for queue
- deletions.
-</td>
-        </tr><tr>
-            <td><code>alarm_in_seconds</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-            <td> Fires an inexact repeating alarm every `alarm_in_seconds` seconds that'll
- satisfy this trigger condition. The first alarm fires in
- `alarm_in_seconds` seconds.
-</td>
-        </tr></table>
-
 ### IntentParameterData {:#IntentParameterData}
 *Defined in [fuchsia.modular/intent.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/intent/intent.fidl#37)*
 
@@ -11856,46 +11238,6 @@ Type: <code>uint32</code>
                 <code><a class='link' href='#SetKindOfProtoStoryOption'>SetKindOfProtoStoryOption</a></code>
             </td>
             <td> Updates the kind_of_proto_story option in a story.
-</td>
-        </tr></table>
-
-### TriggerCondition {:#TriggerCondition}
-*Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#56)*
-
- Describes the condition that needs to be met for a task to become scheduled.
- This is not yet complete and will be extended or changed.
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>message_on_queue</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Triggers when there is a new message on a message queue.
-
- `message_on_queue` is the name of the message queue to be watched. This
- means that only the component that originally obtained the message queue
- will be able to observe new message events.
-</td>
-        </tr><tr>
-            <td><code>queue_deleted</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Triggers when a message queue is deleted.
-
- `queue_deleted` is the token for the message queue that is to be watched.
- This allows both message queue readers and writers to watch for queue
- deletions.
-</td>
-        </tr><tr>
-            <td><code>alarm_in_seconds</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-            <td> Fires an inexact repeating alarm every `alarm_in_seconds` seconds that'll
- satisfy this trigger condition. The first alarm fires in
- `alarm_in_seconds` seconds.
 </td>
         </tr></table>
 

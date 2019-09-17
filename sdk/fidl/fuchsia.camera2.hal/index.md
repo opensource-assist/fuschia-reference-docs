@@ -42,7 +42,7 @@ Book: /_book.yaml
 
  Set a particular configuration and create the requested stream.
  |config_index| : Configuration index from the vector which needs to be applied.
- |stream_type| : Stream types (one of more of |CameraStreamTypes|)
+ |stream_index| : Stream index from the vector of streams provided within a config.
  |buffer_collection| : Buffer collections for the stream.
  |stream| : Stream channel for the stream requested
  |image_format_index| : Image format index which needs to be set up upon creation.
@@ -61,7 +61,7 @@ Book: /_book.yaml
                 <code>uint32</code>
             </td>
         </tr><tr>
-            <td><code>stream_type</code></td>
+            <td><code>stream_index</code></td>
             <td>
                 <code>uint32</code>
             </td>
@@ -73,7 +73,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>buffer_collection</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.sysmem/index.html'>fuchsia.sysmem</a>/<a class='link' href='../fuchsia.sysmem/index.html#BufferCollectionInfo'>BufferCollectionInfo</a></code>
+                <code><a class='link' href='../fuchsia.sysmem/index.html'>fuchsia.sysmem</a>/<a class='link' href='../fuchsia.sysmem/index.html#BufferCollectionInfo_2'>BufferCollectionInfo_2</a></code>
             </td>
         </tr><tr>
             <td><code>stream</code></td>
@@ -187,7 +187,7 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>stream_config</code></td>
+            <td><code>stream_configs</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#StreamConfig'>StreamConfig</a>&gt;[64]</code>
             </td>
