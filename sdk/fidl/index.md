@@ -379,6 +379,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.scenic.scheduling/index">fuchsia.scenic.scheduling</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.scenic.snapshot/index">fuchsia.scenic.snapshot</a></td>
     <td></td>
 </tr>

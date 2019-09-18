@@ -187,6 +187,8 @@ toc:
   path: /reference/fidl/fuchsia.process
 - title: fuchsia.recovery
   path: /reference/fidl/fuchsia.recovery
+- title: fuchsia.scenic.scheduling
+  path: /reference/fidl/fuchsia.scenic.scheduling
 - title: fuchsia.scenic.snapshot
   path: /reference/fidl/fuchsia.scenic.snapshot
 - title: fuchsia.scheduler

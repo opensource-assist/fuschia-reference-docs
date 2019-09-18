@@ -99,7 +99,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Session {:#Session}
-*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#11)*
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#12)*
 
  Client use Sessions to interact with a Scenic instance by enqueuing commands
  that create or modify resources.
@@ -250,9 +250,43 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### RequestPresentationTimes {:#RequestPresentationTimes}
+
+ Returns information about future presentation times, and their
+ respective latch points. Clients can use the returned information to
+ make informed scheduling decisions: if a client wants their frame to be
+ displayed at a given presentation time, they should aim to have all of
+ their work finished before that presentation time's associated latch point.
+
+ Scenic will attempt to return predictions that span a duration equal to
+ |requested_prediction_span|, up to a limit.
+
+ A value of 0 is guaranteed to give at least one future presentation info.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requested_prediction_span</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>request_presentation_times_info</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.scenic.scheduling/index.html'>fuchsia.scenic.scheduling</a>/<a class='link' href='../fuchsia.scenic.scheduling/index.html#FuturePresentationTimes'>FuturePresentationTimes</a></code>
+            </td>
+        </tr></table>
+
 ### SetDebugName {:#SetDebugName}
 
- Set an optional debug name for the session.  The debug name will be
+ Set an optional debug name for the session. The debug name will be
  output in things such as logging and trace events.
 
 #### Request
@@ -268,7 +302,7 @@ Book: /_book.yaml
 
 
 ## SessionListener {:#SessionListener}
-*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#133)*
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#147)*
 
  Listens for events which occur within the session.
 
@@ -403,7 +437,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Session {:#Session}
-*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#11)*
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#12)*
 
  Client use Sessions to interact with a Scenic instance by enqueuing commands
  that create or modify resources.
@@ -554,9 +588,43 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### RequestPresentationTimes {:#RequestPresentationTimes}
+
+ Returns information about future presentation times, and their
+ respective latch points. Clients can use the returned information to
+ make informed scheduling decisions: if a client wants their frame to be
+ displayed at a given presentation time, they should aim to have all of
+ their work finished before that presentation time's associated latch point.
+
+ Scenic will attempt to return predictions that span a duration equal to
+ |requested_prediction_span|, up to a limit.
+
+ A value of 0 is guaranteed to give at least one future presentation info.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requested_prediction_span</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>request_presentation_times_info</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.scenic.scheduling/index.html'>fuchsia.scenic.scheduling</a>/<a class='link' href='../fuchsia.scenic.scheduling/index.html#FuturePresentationTimes'>FuturePresentationTimes</a></code>
+            </td>
+        </tr></table>
+
 ### SetDebugName {:#SetDebugName}
 
- Set an optional debug name for the session.  The debug name will be
+ Set an optional debug name for the session. The debug name will be
  output in things such as logging and trace events.
 
 #### Request
@@ -572,7 +640,7 @@ Book: /_book.yaml
 
 
 ## SessionListener {:#SessionListener}
-*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#133)*
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#147)*
 
  Listens for events which occur within the session.
 

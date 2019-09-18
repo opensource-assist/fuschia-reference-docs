@@ -2778,26 +2778,8 @@ Book: /_book.yaml
 
 
 
-### WatchActivity {:#WatchActivity}
-
- Registers a watcher for ongoing story activity. Upon registration,
- StoryActivityWatcher.OnStoryActivity() will be called to update clients
- with the initial data. See StoryActivityWatcher for motivations.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>watcher</code></td>
-            <td>
-                <code><a class='link' href='#StoryActivityWatcher'>StoryActivityWatcher</a></code>
-            </td>
-        </tr></table>
-
-
-
 ## StoryProviderWatcher {:#StoryProviderWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#48)*
+*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#43)*
 
  Implemented by clients of StoryProvider.
 
@@ -2896,40 +2878,6 @@ Book: /_book.yaml
             <td><code>story_id</code></td>
             <td>
                 <code>string</code>
-            </td>
-        </tr></table>
-
-
-
-## StoryActivityWatcher {:#StoryActivityWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#104)*
-
- Implemented by clients of StoryProvider in order to inform them about ongoing
- activities in stories. `activities` is the entire list of ongoing activities
- (represented by its type) within the story by the given `story_id`. If
- `activities` is empty, it means that there is no ongoing activity within the
- story.
-
- Clients can expect this event whenever there is a newly started/stopped
- ongoing activity, as well as when the client first registers for updates
- via StoryProvider.WatchActivity(). `activities` can contain duplicate
- OngoingActivityType's, ex. if a story is playing 2 videos at once.
-
-### OnStoryActivityChange {:#OnStoryActivityChange}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>story_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>activities</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#OngoingActivityType'>OngoingActivityType</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -6276,26 +6224,8 @@ Book: /_book.yaml
 
 
 
-### WatchActivity {:#WatchActivity}
-
- Registers a watcher for ongoing story activity. Upon registration,
- StoryActivityWatcher.OnStoryActivity() will be called to update clients
- with the initial data. See StoryActivityWatcher for motivations.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>watcher</code></td>
-            <td>
-                <code><a class='link' href='#StoryActivityWatcher'>StoryActivityWatcher</a></code>
-            </td>
-        </tr></table>
-
-
-
 ## StoryProviderWatcher {:#StoryProviderWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#48)*
+*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#43)*
 
  Implemented by clients of StoryProvider.
 
@@ -6394,40 +6324,6 @@ Book: /_book.yaml
             <td><code>story_id</code></td>
             <td>
                 <code>string</code>
-            </td>
-        </tr></table>
-
-
-
-## StoryActivityWatcher {:#StoryActivityWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#104)*
-
- Implemented by clients of StoryProvider in order to inform them about ongoing
- activities in stories. `activities` is the entire list of ongoing activities
- (represented by its type) within the story by the given `story_id`. If
- `activities` is empty, it means that there is no ongoing activity within the
- story.
-
- Clients can expect this event whenever there is a newly started/stopped
- ongoing activity, as well as when the client first registers for updates
- via StoryProvider.WatchActivity(). `activities` can contain duplicate
- OngoingActivityType's, ex. if a story is playing 2 videos at once.
-
-### OnStoryActivityChange {:#OnStoryActivityChange}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>story_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>activities</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#OngoingActivityType'>OngoingActivityType</a>&gt;</code>
             </td>
         </tr></table>
 
