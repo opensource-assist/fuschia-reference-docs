@@ -13,7 +13,6 @@ Book: /_book.yaml
 
 ### OnManagedRuntimeException {:#OnManagedRuntimeException}
 
- Requests that the crash analyzer handles the exception thrown by the
  Requests that the crash analyzer handles the exception thrown in the
  managed runtime.
 
@@ -55,7 +54,6 @@ Book: /_book.yaml
 
 ### OnManagedRuntimeException {:#OnManagedRuntimeException}
 
- Requests that the crash analyzer handles the exception thrown by the
  Requests that the crash analyzer handles the exception thrown in the
  managed runtime.
 
@@ -105,28 +103,8 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
-### UnknownException {:#UnknownException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#40)*
-
-
-
- Represents a language-agnostic exception.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>data</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
-            </td>
-            <td> A general buffer to hold some exception data.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### GenericException {:#GenericException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#47)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#36)*
 
 
 
@@ -172,28 +150,8 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
-### UnknownException {:#UnknownException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#40)*
-
-
-
- Represents a language-agnostic exception.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>data</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
-            </td>
-            <td> A general buffer to hold some exception data.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### GenericException {:#GenericException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#47)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#36)*
 
 
 
@@ -256,22 +214,14 @@ Book: /_book.yaml
         </tr></table>
 
 ### ManagedRuntimeException {:#ManagedRuntimeException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#33)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#30)*
 
  Represents a managed runtime exception.
 
- unknown is intended to capture any language, meaning the handling will be
- language-agnostic. Choose a more specific member if available for handling
- that language more specifically.
+ Only Dart is supported for this legacy protocol.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>unknown</code></td>
-            <td>
-                <code><a class='link' href='#UnknownException'>UnknownException</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
             <td><code>dart</code></td>
             <td>
                 <code><a class='link' href='#GenericException'>GenericException</a></code>
@@ -299,22 +249,14 @@ Book: /_book.yaml
         </tr></table>
 
 ### ManagedRuntimeException {:#ManagedRuntimeException}
-*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#33)*
+*Defined in [fuchsia.crash/analyzer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-crash/analyzer.fidl#30)*
 
  Represents a managed runtime exception.
 
- unknown is intended to capture any language, meaning the handling will be
- language-agnostic. Choose a more specific member if available for handling
- that language more specifically.
+ Only Dart is supported for this legacy protocol.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>unknown</code></td>
-            <td>
-                <code><a class='link' href='#UnknownException'>UnknownException</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
             <td><code>dart</code></td>
             <td>
                 <code><a class='link' href='#GenericException'>GenericException</a></code>

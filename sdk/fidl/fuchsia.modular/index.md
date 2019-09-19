@@ -515,68 +515,6 @@ Book: /_book.yaml
 
 
 
-### ObtainMessageQueue {:#ObtainMessageQueue}
-
- Used to create or delete a message queue or retrieve an existing queue
- identified by `name`. `name` is local to the calling component instance.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>queue</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#MessageQueue'>MessageQueue</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### DeleteMessageQueue {:#DeleteMessageQueue}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
-
-
-### GetMessageSender {:#GetMessageSender}
-
- Gets a MessageSender service that can be used to send a message to a queue
- identified by `queue_token`. Token for a MessageQueue is obtained from its
- GetToken() method. The token is unique within the scope of the user, i.e.
- it can be used by other component instances than the one that created the
- message queue.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>queue_token</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>sender</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#MessageSender'>MessageSender</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### GetEntityResolver {:#GetEntityResolver}
 
  Gets the EntityResolver service, which can be used to resolve an entity
@@ -593,129 +531,6 @@ Book: /_book.yaml
         </tr></table>
 
 
-
-## MessageQueue {:#MessageQueue}
-*Defined in [fuchsia.modular/message_queue.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/message_queue.fidl#31)*
-
- A message queue is a named, locally persistent FIFO data structure. Message
- queues are created, read from, and deleted by component instances through
- their ComponentContext service.
-
- A message queue is created by a component instance from its component context
- in order to receive messages in it.
-
- A sender token that identifies the queue can be obtained from the message
- queue connection and passed to other components. This enables the other
- component to send messages to the queue. A sender token does not allow a
- component to read messages from a queue.
-
- The name of a queue is local to the component instance, i.e. it can only be
- used by the component instance that created the queue to access it. The name
- can specifically be used to obtain a MessageReader connection for the message
- queue.
-
- The existence of message queues and their tokens is synchronized across
- devices, allowing components with instances on multiple devices to route
- messages within each device. For example, modules can use sender tokens on
- different devices and see those messages delivered to the agent instance on
- the same device. However, individual messages are local to a device.
-
-### GetToken {:#GetToken}
-
- Gets a sender token associated with this queue. It can be used by other
- components to send messages to this queue.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>queue_token</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
-### RegisterReceiver {:#RegisterReceiver}
-
- Registers a receiver for this MessageQueue. MessageReader.OnReceive() is
- called when there is an unread message. There can be at most one receiver
- registered for a message queue at any time. Registering a new receiver
- replaces the previous one.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>receiver</code></td>
-            <td>
-                <code><a class='link' href='#MessageReader'>MessageReader</a></code>
-            </td>
-        </tr></table>
-
-
-
-## MessageSender {:#MessageSender}
-*Defined in [fuchsia.modular/message_queue.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/message_queue.fidl#48)*
-
- Used to send a message to a message queue. The MessageSender connection is
- obtained from ComponentContext.GetMessageSender() using a queue token of the
- MessageQueue. The queue token is obtained by the component that created the
- message queue and is then passed to the other component through services
- specific to either component.
-
-### Send {:#Send}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>message</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
-            </td>
-        </tr></table>
-
-
-
-## MessageReader {:#MessageReader}
-*Defined in [fuchsia.modular/message_queue.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/message_queue.fidl#57)*
-
- A component instance may implement and register a MessageReader interface
- using MessageQueue.RegisterReceiver(). When there are new unread messages,
- they are sent to MessageReader.OnReceive(). TODO(vardhan): There is a
- conflict with C++ fidl bindings for 'MessageReceiver'. After that is fixed,
- rename this interface to MessageReceiver.
-
-### OnReceive {:#OnReceive}
-
- Called when there is a new message to be received. Once an OnReceive()
- responds back, the message is acknowledged as having been received and the
- next one is sent when available. If a client's OnReceive() does not respond
- before the MessageReader interface is closed, then a future MessageReader
- for this message queue will receive the unacknowledged message again.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>message</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
 
 ## Entity {:#Entity}
 *Defined in [fuchsia.modular/entity.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/entity/entity.fidl#10)*
@@ -2535,8 +2350,35 @@ Book: /_book.yaml
 
 
 
+### Annotate {:#Annotate}
+
+ Attach the `annotations` to the story.
+
+ Existing annotations with the same key will be overwritten.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>annotations</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[50]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#StoryController_Annotate_Result'>StoryController_Annotate_Result</a></code>
+            </td>
+        </tr></table>
+
 ## StoryWatcher {:#StoryWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#61)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#67)*
 
  Implemented by the client calling StoryController.Watch().
 
@@ -2590,7 +2432,7 @@ Book: /_book.yaml
 
 
 ## StoryLinksWatcher {:#StoryLinksWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#77)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#83)*
 
  Implemented by the client calling StoryController.GetActiveLinks().
 
@@ -3293,22 +3135,6 @@ Book: /_book.yaml
 
 
 
-### GetLink {:#GetLink}
-
- Gets a Link instance that the story shell can use for persisting metadata.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### RequestView {:#RequestView}
 
  Requests a view for a Surface.
@@ -3328,7 +3154,7 @@ Book: /_book.yaml
 
 
 ## StoryVisualStateWatcher {:#StoryVisualStateWatcher}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#211)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#208)*
 
  Implemented by StoryShell to get notified about visual state changes.
 
@@ -3961,68 +3787,6 @@ Book: /_book.yaml
 
 
 
-### ObtainMessageQueue {:#ObtainMessageQueue}
-
- Used to create or delete a message queue or retrieve an existing queue
- identified by `name`. `name` is local to the calling component instance.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>queue</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#MessageQueue'>MessageQueue</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### DeleteMessageQueue {:#DeleteMessageQueue}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
-
-
-### GetMessageSender {:#GetMessageSender}
-
- Gets a MessageSender service that can be used to send a message to a queue
- identified by `queue_token`. Token for a MessageQueue is obtained from its
- GetToken() method. The token is unique within the scope of the user, i.e.
- it can be used by other component instances than the one that created the
- message queue.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>queue_token</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>sender</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#MessageSender'>MessageSender</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### GetEntityResolver {:#GetEntityResolver}
 
  Gets the EntityResolver service, which can be used to resolve an entity
@@ -4039,129 +3803,6 @@ Book: /_book.yaml
         </tr></table>
 
 
-
-## MessageQueue {:#MessageQueue}
-*Defined in [fuchsia.modular/message_queue.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/message_queue.fidl#31)*
-
- A message queue is a named, locally persistent FIFO data structure. Message
- queues are created, read from, and deleted by component instances through
- their ComponentContext service.
-
- A message queue is created by a component instance from its component context
- in order to receive messages in it.
-
- A sender token that identifies the queue can be obtained from the message
- queue connection and passed to other components. This enables the other
- component to send messages to the queue. A sender token does not allow a
- component to read messages from a queue.
-
- The name of a queue is local to the component instance, i.e. it can only be
- used by the component instance that created the queue to access it. The name
- can specifically be used to obtain a MessageReader connection for the message
- queue.
-
- The existence of message queues and their tokens is synchronized across
- devices, allowing components with instances on multiple devices to route
- messages within each device. For example, modules can use sender tokens on
- different devices and see those messages delivered to the agent instance on
- the same device. However, individual messages are local to a device.
-
-### GetToken {:#GetToken}
-
- Gets a sender token associated with this queue. It can be used by other
- components to send messages to this queue.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>queue_token</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
-### RegisterReceiver {:#RegisterReceiver}
-
- Registers a receiver for this MessageQueue. MessageReader.OnReceive() is
- called when there is an unread message. There can be at most one receiver
- registered for a message queue at any time. Registering a new receiver
- replaces the previous one.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>receiver</code></td>
-            <td>
-                <code><a class='link' href='#MessageReader'>MessageReader</a></code>
-            </td>
-        </tr></table>
-
-
-
-## MessageSender {:#MessageSender}
-*Defined in [fuchsia.modular/message_queue.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/message_queue.fidl#48)*
-
- Used to send a message to a message queue. The MessageSender connection is
- obtained from ComponentContext.GetMessageSender() using a queue token of the
- MessageQueue. The queue token is obtained by the component that created the
- message queue and is then passed to the other component through services
- specific to either component.
-
-### Send {:#Send}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>message</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
-            </td>
-        </tr></table>
-
-
-
-## MessageReader {:#MessageReader}
-*Defined in [fuchsia.modular/message_queue.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/message_queue.fidl#57)*
-
- A component instance may implement and register a MessageReader interface
- using MessageQueue.RegisterReceiver(). When there are new unread messages,
- they are sent to MessageReader.OnReceive(). TODO(vardhan): There is a
- conflict with C++ fidl bindings for 'MessageReceiver'. After that is fixed,
- rename this interface to MessageReceiver.
-
-### OnReceive {:#OnReceive}
-
- Called when there is a new message to be received. Once an OnReceive()
- responds back, the message is acknowledged as having been received and the
- next one is sent when available. If a client's OnReceive() does not respond
- before the MessageReader interface is closed, then a future MessageReader
- for this message queue will receive the unacknowledged message again.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>message</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
 
 ## Entity {:#Entity}
 *Defined in [fuchsia.modular/entity.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/entity/entity.fidl#10)*
@@ -5981,8 +5622,35 @@ Book: /_book.yaml
 
 
 
+### Annotate {:#Annotate}
+
+ Attach the `annotations` to the story.
+
+ Existing annotations with the same key will be overwritten.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>annotations</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[50]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#StoryController_Annotate_Result'>StoryController_Annotate_Result</a></code>
+            </td>
+        </tr></table>
+
 ## StoryWatcher {:#StoryWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#61)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#67)*
 
  Implemented by the client calling StoryController.Watch().
 
@@ -6036,7 +5704,7 @@ Book: /_book.yaml
 
 
 ## StoryLinksWatcher {:#StoryLinksWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#77)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#83)*
 
  Implemented by the client calling StoryController.GetActiveLinks().
 
@@ -6739,22 +6407,6 @@ Book: /_book.yaml
 
 
 
-### GetLink {:#GetLink}
-
- Gets a Link instance that the story shell can use for persisting metadata.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### RequestView {:#RequestView}
 
  Requests a view for a Surface.
@@ -6774,7 +6426,7 @@ Book: /_book.yaml
 
 
 ## StoryVisualStateWatcher {:#StoryVisualStateWatcher}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#211)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#208)*
 
  Implemented by StoryShell to get notified about visual state changes.
 
@@ -7820,6 +7472,17 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### StoryController_Annotate_Response {:#StoryController_Annotate_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### StoryInfo {:#StoryInfo}
 *Defined in [fuchsia.modular/story_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_info.fidl#8)*
 
@@ -9158,6 +8821,17 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### StoryController_Annotate_Response {:#StoryController_Annotate_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### StoryInfo {:#StoryInfo}
 *Defined in [fuchsia.modular/story_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_info.fidl#8)*
 
@@ -9795,7 +9469,7 @@ Type: <code>int32</code>
 ### StoryVisualState {:#StoryVisualState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#216)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#213)*
 
  Defines the visual state of the Story shell.
 
@@ -10133,7 +9807,7 @@ Type: <code>int32</code>
 ### StoryVisualState {:#StoryVisualState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#216)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#213)*
 
  Defines the visual state of the Story shell.
 
@@ -10265,7 +9939,7 @@ Type: <code>uint32</code>
 ### AgentServiceRequest {:#AgentServiceRequest}
 
 
-*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#57)*
+*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#45)*
 
  Used by ComponentContext.ConnectToAgentService
 
@@ -10612,7 +10286,7 @@ Type: <code>uint32</code>
 ### AgentServiceRequest {:#AgentServiceRequest}
 
 
-*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#57)*
+*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#45)*
 
  Used by ComponentContext.ConnectToAgentService
 
@@ -11137,6 +10811,25 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### StoryController_Annotate_Result {:#StoryController_Annotate_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StoryController_Annotate_Response'>StoryController_Annotate_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#AnnotationError'>AnnotationError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### IntentParameterData {:#IntentParameterData}
 *Defined in [fuchsia.modular/intent.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/intent/intent.fidl#37)*
 
@@ -11314,6 +11007,25 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### StoryController_Annotate_Result {:#StoryController_Annotate_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StoryController_Annotate_Response'>StoryController_Annotate_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#AnnotationError'>AnnotationError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 
 
 ## **XUNIONS**
@@ -11408,16 +11120,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#25">MAX_ANNOTATION_KEY_LENGTH</a></td>
-            <td>
-                    <code>256</code>
-                </td>
-                <td><code>uint32</code></td>
-            <td> Maximum length of <a class='link' href='#AnnotationKey'>AnnotationKey</a>.
-</td>
-        </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#30">MAX_ANNOTATE_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#27">MAX_ANNOTATIONS_PER_UPDATE</a></td>
             <td>
                     <code>50</code>
                 </td>
@@ -11425,6 +11128,15 @@ Type: <code>uint32</code>
             <td> Maximum number of annotations that can be passed to either method
  Annotate() AnnotateModule() in fuchsia.modular protocols that support
  annotations.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#30">MAX_ANNOTATION_KEY_LENGTH</a></td>
+            <td>
+                    <code>256</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Maximum length of <a class='link' href='#AnnotationKey'>AnnotationKey</a>.
 </td>
         </tr>
     <tr>
@@ -11468,16 +11180,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#25">MAX_ANNOTATION_KEY_LENGTH</a></td>
-            <td>
-                    <code>256</code>
-                </td>
-                <td><code>uint32</code></td>
-            <td> Maximum length of <a class='link' href='#AnnotationKey'>AnnotationKey</a>.
-</td>
-        </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#30">MAX_ANNOTATE_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#27">MAX_ANNOTATIONS_PER_UPDATE</a></td>
             <td>
                     <code>50</code>
                 </td>
@@ -11485,6 +11188,15 @@ Type: <code>uint32</code>
             <td> Maximum number of annotations that can be passed to either method
  Annotate() AnnotateModule() in fuchsia.modular protocols that support
  annotations.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#30">MAX_ANNOTATION_KEY_LENGTH</a></td>
+            <td>
+                    <code>256</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Maximum length of <a class='link' href='#AnnotationKey'>AnnotationKey</a>.
 </td>
         </tr>
     <tr>

@@ -105,6 +105,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.goldfish.control
 - title: fuchsia.hardware.goldfish.pipe
   path: /reference/fidl/fuchsia.hardware.goldfish.pipe
+- title: fuchsia.hardware.input
+  path: /reference/fidl/fuchsia.hardware.input
 - title: fuchsia.hardware.pty
   path: /reference/fidl/fuchsia.hardware.pty
 - title: fuchsia.hardware.rtc
