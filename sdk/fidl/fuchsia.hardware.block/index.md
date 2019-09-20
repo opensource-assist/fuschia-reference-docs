@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Block {:#Block}
-*Defined in [fuchsia.hardware.block/block.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#77)*
+*Defined in [fuchsia.hardware.block/block.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#80)*
 
 
 ### GetInfo {:#GetInfo}
@@ -182,7 +182,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### BlockInfo {:#BlockInfo}
-*Defined in [fuchsia.hardware.block/block.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#23)*
+*Defined in [fuchsia.hardware.block/block.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#26)*
 
 
 
@@ -228,7 +228,7 @@ Book: /_book.yaml
 </table>
 
 ### BlockStats {:#BlockStats}
-*Defined in [fuchsia.hardware.block/block.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#43)*
+*Defined in [fuchsia.hardware.block/block.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#46)*
 
 
 
@@ -281,7 +281,7 @@ Book: /_book.yaml
 </table>
 
 ### VmoID {:#VmoID}
-*Defined in [fuchsia.hardware.block/block.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#66)*
+*Defined in [fuchsia.hardware.block/block.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#69)*
 
 
 
@@ -338,7 +338,15 @@ Book: /_book.yaml
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#20">MAX_TRANSFER_UNBOUNDED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#19">FLAG_TRIM_SUPPORT</a></td>
+            <td>
+                    <code>8</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#23">MAX_TRANSFER_UNBOUNDED</a></td>
             <td>
                     <code>4294967295</code>
                 </td>
@@ -346,7 +354,7 @@ Book: /_book.yaml
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#72">VMOID_INVALID</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#75">VMOID_INVALID</a></td>
             <td>
                     <code>0</code>
                 </td>

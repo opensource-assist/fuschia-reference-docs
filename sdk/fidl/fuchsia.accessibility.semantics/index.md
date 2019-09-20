@@ -17,31 +17,6 @@ Book: /_book.yaml
  semantic tree for that view. If the semantic manager encounters an error, it will close the
  channel, delete any associated data and rely on the client to re-register.
 
-### RegisterView {:#RegisterView}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>view_ref</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.views/index.html'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/index.html#ViewRef'>ViewRef</a></code>
-            </td>
-        </tr><tr>
-            <td><code>listener</code></td>
-            <td>
-                <code><a class='link' href='#SemanticActionListener'>SemanticActionListener</a></code>
-            </td>
-        </tr><tr>
-            <td><code>semantic_tree_request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#SemanticTree'>SemanticTree</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### RegisterViewForSemantics {:#RegisterViewForSemantics}
 
 
@@ -68,7 +43,7 @@ Book: /_book.yaml
 
 
 ## SemanticTree {:#SemanticTree}
-*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#58)*
+*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#51)*
 
  Interface to update the semantic tree for a particular view. Nodes can be added, updated or
  deleted. Because the size of an update may exceed FIDL transfer limits, clients are responsible
@@ -118,19 +93,6 @@ Book: /_book.yaml
 
 
 
-### Commit {:#Commit}
-
- Commits pending changes to node tree associated with the view using UpdateSemanticNodes and
- DeleteSemanticNodes. Commits are processed in the order in which they are sent.
- TODO(MI4-2636): This should be removed after clients move to CommitUpdates().
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
 ### CommitUpdates {:#CommitUpdates}
 
  Commits pending changes to node tree associated with the view using UpdateSemanticNodes and
@@ -149,70 +111,8 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
-## SemanticActionListener {:#SemanticActionListener}
-*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#95)*
-
- A semantic provider is the client-side interface that the manager can use to
- ask clients to perform accessibility actions.
-
-### OnAccessibilityActionRequested {:#OnAccessibilityActionRequested}
-
- Asks the semantics provider to perform an accessibility action on the
- node with node id in the front-end.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>node_id</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>action</code></td>
-            <td>
-                <code><a class='link' href='#Action'>Action</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>handled</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-### HitTest {:#HitTest}
-
- Asks the semantics provider to perform hit testing and return the result.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>local_point</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.math/index.html'>fuchsia.math</a>/<a class='link' href='../fuchsia.math/index.html#PointF'>PointF</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>result</code></td>
-            <td>
-                <code><a class='link' href='#Hit'>Hit</a></code>
-            </td>
-        </tr></table>
-
 ## SemanticListener {:#SemanticListener}
-*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#108)*
+*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#80)*
 
  A semantic provider is the client-side interface that the manager can use to enable or disable
  semantic updates, and to ask clients to perform accessibility actions.
@@ -471,7 +371,7 @@ Type: <code>uint32</code>
 ### Hit {:#Hit}
 
 
-*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#82)*
+*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#68)*
 
  Results of hit testing on a view's semantic tree which is implemented by
  Runtimes(like Flutter/Chrome) and sent to Accessibility.

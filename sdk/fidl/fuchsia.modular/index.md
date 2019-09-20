@@ -980,37 +980,6 @@ Book: /_book.yaml
  This interface is exposed to all Module instances in a story. It allows to
  create Link instances and run more Module instances.
 
-### GetLink {:#GetLink}
-
- Gets a Link instance with the given name.
-
- The Link instance has a name so that it can be recognized when the story
- is resumed. The name is unique in the scope of the Module instance. If
- the method is called again with the same argument by the same Module
- instance, a new connection to the same Link instance is obtained. It's
- up to the Module instance to ensure the name is unique within the scope
- of itself.
-
- TODO(thatguy): When no modules use null link names any more, make name
- required.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>name</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr><tr>
-            <td><code>link</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### AddModuleToStory {:#AddModuleToStory}
 
  Starts a new Module instance and adds it to the story. The Module to
@@ -1164,7 +1133,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## OngoingActivity {:#OngoingActivity}
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#82)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#70)*
 
  This interface defines the protocol over which a Module can communicate about
  an ongoing activity to the framework. It is provided to Modules via
@@ -2329,27 +2298,6 @@ Book: /_book.yaml
 
 
 
-### GetLink {:#GetLink}
-
- DEPRECATED
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>link_path</code></td>
-            <td>
-                <code><a class='link' href='#LinkPath'>LinkPath</a></code>
-            </td>
-        </tr><tr>
-            <td><code>link</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### Annotate {:#Annotate}
 
  Attach the `annotations` to the story.
@@ -2378,7 +2326,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryWatcher {:#StoryWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#67)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#64)*
 
  Implemented by the client calling StoryController.Watch().
 
@@ -2432,7 +2380,7 @@ Book: /_book.yaml
 
 
 ## StoryLinksWatcher {:#StoryLinksWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#83)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#80)*
 
  Implemented by the client calling StoryController.GetActiveLinks().
 
@@ -4252,37 +4200,6 @@ Book: /_book.yaml
  This interface is exposed to all Module instances in a story. It allows to
  create Link instances and run more Module instances.
 
-### GetLink {:#GetLink}
-
- Gets a Link instance with the given name.
-
- The Link instance has a name so that it can be recognized when the story
- is resumed. The name is unique in the scope of the Module instance. If
- the method is called again with the same argument by the same Module
- instance, a new connection to the same Link instance is obtained. It's
- up to the Module instance to ensure the name is unique within the scope
- of itself.
-
- TODO(thatguy): When no modules use null link names any more, make name
- required.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>name</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr><tr>
-            <td><code>link</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### AddModuleToStory {:#AddModuleToStory}
 
  Starts a new Module instance and adds it to the story. The Module to
@@ -4436,7 +4353,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## OngoingActivity {:#OngoingActivity}
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#82)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#70)*
 
  This interface defines the protocol over which a Module can communicate about
  an ongoing activity to the framework. It is provided to Modules via
@@ -5601,27 +5518,6 @@ Book: /_book.yaml
 
 
 
-### GetLink {:#GetLink}
-
- DEPRECATED
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>link_path</code></td>
-            <td>
-                <code><a class='link' href='#LinkPath'>LinkPath</a></code>
-            </td>
-        </tr><tr>
-            <td><code>link</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#Link'>Link</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### Annotate {:#Annotate}
 
  Attach the `annotations` to the story.
@@ -5650,7 +5546,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryWatcher {:#StoryWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#67)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#64)*
 
  Implemented by the client calling StoryController.Watch().
 
@@ -5704,7 +5600,7 @@ Book: /_book.yaml
 
 
 ## StoryLinksWatcher {:#StoryLinksWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#83)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#80)*
 
  Implemented by the client calling StoryController.GetActiveLinks().
 
@@ -9304,7 +9200,7 @@ Type: <code>uint32</code>
 ### StartModuleStatus {:#StartModuleStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#74)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#62)*
 
  Communicates the status of an Intent to a Module.
 
@@ -9323,7 +9219,7 @@ Type: <code>uint32</code>
 ### OngoingActivityType {:#OngoingActivityType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#85)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#73)*
 
 
 
@@ -9642,7 +9538,7 @@ Type: <code>uint32</code>
 ### StartModuleStatus {:#StartModuleStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#74)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#62)*
 
  Communicates the status of an Intent to a Module.
 
@@ -9661,7 +9557,7 @@ Type: <code>uint32</code>
 ### OngoingActivityType {:#OngoingActivityType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#85)*
+*Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#73)*
 
 
 
