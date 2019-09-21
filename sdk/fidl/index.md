@@ -227,6 +227,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.hwinfo/index">fuchsia.hwinfo</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.images/index">fuchsia.images</a></td>
     <td></td>
 </tr>
@@ -344,6 +348,10 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.net.policy/index">fuchsia.net.policy</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.net.ppp/index">fuchsia.net.ppp</a></td>
     <td></td>
 </tr>
 <tr>

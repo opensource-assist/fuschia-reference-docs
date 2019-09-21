@@ -111,6 +111,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.pty
 - title: fuchsia.hardware.rtc
   path: /reference/fidl/fuchsia.hardware.rtc
+- title: fuchsia.hwinfo
+  path: /reference/fidl/fuchsia.hwinfo
 - title: fuchsia.images
   path: /reference/fidl/fuchsia.images
 - title: fuchsia.inspect
@@ -171,6 +173,8 @@ toc:
   path: /reference/fidl/fuchsia.net.oldhttp
 - title: fuchsia.net.policy
   path: /reference/fidl/fuchsia.net.policy
+- title: fuchsia.net.ppp
+  path: /reference/fidl/fuchsia.net.ppp
 - title: fuchsia.net.stack
   path: /reference/fidl/fuchsia.net.stack
 - title: fuchsia.netstack

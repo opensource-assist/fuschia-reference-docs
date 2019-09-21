@@ -87,8 +87,29 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### GetTargetList {:#GetTargetList}
+
+ Get the list of well-known target channels that can be passed to SetTarget().
+ There may be other, unlisted channels.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>channels</code></td>
+            <td>
+                <code>vector&lt;string&gt;[100]</code>
+            </td>
+        </tr></table>
+
 ## Manager {:#Manager}
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#36)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#40)*
 
 
 ### CheckNow {:#CheckNow}
@@ -167,7 +188,7 @@ Book: /_book.yaml
 
 
 ## Monitor {:#Monitor}
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#59)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#63)*
 
  Receiver of updates for either an individual update check, or to continuously
  receive updates for all checks.
@@ -197,7 +218,7 @@ Book: /_book.yaml
 ### Initiator {:#Initiator}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#74)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#78)*
 
  Who or what initiated the update check.
 
@@ -216,7 +237,7 @@ Type: <code>uint32</code>
 ### ManagerState {:#ManagerState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#110)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#114)*
 
  ```
  The various states that the manager can be in.
@@ -281,7 +302,7 @@ Type: <code>uint32</code>
 ### CheckStartedResult {:#CheckStartedResult}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#156)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#160)*
 
 
 
@@ -307,7 +328,7 @@ Type: <code>uint32</code>
 ### Options {:#Options}
 
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#68)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#72)*
 
  Configuration options for an update attempt (this is common with the Fuchsia
   OTA Interface v2)
@@ -328,7 +349,7 @@ Type: <code>uint32</code>
 ### State {:#State}
 
 
-*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#167)*
+*Defined in [fuchsia.update/update.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update/update.fidl#171)*
 
 
 
