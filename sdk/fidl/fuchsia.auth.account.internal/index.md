@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## AccountHandlerControl {:#AccountHandlerControl}
-*Defined in [fuchsia.auth.account.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#22)*
+*Defined in [fuchsia.auth.account.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#23)*
 
  The control channel for an AccountHandler component.
 
@@ -29,9 +29,6 @@ Book: /_book.yaml
            authentication services and contextual state.
  `id` The new account's local identifier.
 
- Returns: `status` A `Status` indicating whether the operation was
-                   successful
-
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
@@ -52,9 +49,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html'>fuchsia.auth.account</a>/<a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#AccountHandlerControl_CreateAccount_Result'>AccountHandlerControl_CreateAccount_Result</a></code>
             </td>
         </tr></table>
 
@@ -67,9 +64,6 @@ Book: /_book.yaml
            authentication services and contextual state.
  `id` The account's local identifier.
 
- Returns: `status` A `Status` indicating whether the operation was
-                   successful
-
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
@@ -90,9 +84,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html'>fuchsia.auth.account</a>/<a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#AccountHandlerControl_LoadAccount_Result'>AccountHandlerControl_LoadAccount_Result</a></code>
             </td>
         </tr></table>
 
@@ -110,9 +104,6 @@ Book: /_book.yaml
          in an error and the account will remain. In this case, a subset
          of the credentials may have been deleted.
 
- Returns: `status` A `Status` indicating whether the operation was
-                   successful
-
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
@@ -128,9 +119,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html'>fuchsia.auth.account</a>/<a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#AccountHandlerControl_RemoveAccount_Result'>AccountHandlerControl_RemoveAccount_Result</a></code>
             </td>
         </tr></table>
 
@@ -145,9 +136,6 @@ Book: /_book.yaml
                     supplying UI contexts used for interactive
                     authentication on this account
  `account` The server end of an `Account` channel
-
- Returns: `status` A `Status` indicating whether the operation was
-                   successful
 
 #### Request
 <table>
@@ -169,9 +157,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html'>fuchsia.auth.account</a>/<a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#AccountHandlerControl_GetAccount_Result'>AccountHandlerControl_GetAccount_Result</a></code>
             </td>
         </tr></table>
 
@@ -189,7 +177,7 @@ Book: /_book.yaml
 
 
 ## AccountHandlerContext {:#AccountHandlerContext}
-*Defined in [fuchsia.auth.account.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#99)*
+*Defined in [fuchsia.auth.account.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#88)*
 
  An interface that supplies the account and authentication services that
  an AccountHandler needs to perform its role in the system.
@@ -207,9 +195,6 @@ Book: /_book.yaml
  `auth_provider_type` An OAuth identity provider matching a configuration
                       set in an AuthProviderConfig.auth_provider_type
  `auth_provider` The server end of an `AuthProvider` channel
-
- Returns: `status` A `Status` indicating whether the operation was
-                   successful
 
 #### Request
 <table>
@@ -231,19 +216,173 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html'>fuchsia.auth.account</a>/<a class='link' href='../fuchsia.auth.account/index.html#Status'>Status</a></code>
+                <code><a class='link' href='#AccountHandlerContext_GetAuthProvider_Result'>AccountHandlerContext_GetAuthProvider_Result</a></code>
             </td>
         </tr></table>
 
 
 
+## **STRUCTS**
+
+### AccountHandlerControl_CreateAccount_Response {:#AccountHandlerControl_CreateAccount_Response}
+*generated*
 
 
 
 
 
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### AccountHandlerControl_LoadAccount_Response {:#AccountHandlerControl_LoadAccount_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### AccountHandlerControl_RemoveAccount_Response {:#AccountHandlerControl_RemoveAccount_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### AccountHandlerControl_GetAccount_Response {:#AccountHandlerControl_GetAccount_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### AccountHandlerContext_GetAuthProvider_Response {:#AccountHandlerContext_GetAuthProvider_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+
+
+
+
+
+
+## **UNIONS**
+
+### AccountHandlerControl_CreateAccount_Result {:#AccountHandlerControl_CreateAccount_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerControl_CreateAccount_Response'>AccountHandlerControl_CreateAccount_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.identity.account/index.html'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/index.html#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### AccountHandlerControl_LoadAccount_Result {:#AccountHandlerControl_LoadAccount_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerControl_LoadAccount_Response'>AccountHandlerControl_LoadAccount_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.identity.account/index.html'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/index.html#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### AccountHandlerControl_RemoveAccount_Result {:#AccountHandlerControl_RemoveAccount_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerControl_RemoveAccount_Response'>AccountHandlerControl_RemoveAccount_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.identity.account/index.html'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/index.html#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### AccountHandlerControl_GetAccount_Result {:#AccountHandlerControl_GetAccount_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerControl_GetAccount_Response'>AccountHandlerControl_GetAccount_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.identity.account/index.html'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/index.html#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### AccountHandlerContext_GetAuthProvider_Result {:#AccountHandlerContext_GetAuthProvider_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerContext_GetAuthProvider_Response'>AccountHandlerContext_GetAuthProvider_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.identity.account/index.html'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/index.html#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
 
 
 

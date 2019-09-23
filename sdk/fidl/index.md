@@ -231,6 +231,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.identity.account/index">fuchsia.identity.account</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.images/index">fuchsia.images</a></td>
     <td></td>
 </tr>

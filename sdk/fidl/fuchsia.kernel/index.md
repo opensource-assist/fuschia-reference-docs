@@ -142,7 +142,7 @@ Book: /_book.yaml
 
 
 
-## KernelStats {:#KernelStats}
+## Stats {:#Stats}
 *Defined in [fuchsia.kernel/kernel-stats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-kernel/kernel-stats.fidl#57)*
 
  Protocol for providing kernel stats. This is roughly a wrapper around zx_object_get_info for

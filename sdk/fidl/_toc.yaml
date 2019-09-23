@@ -113,6 +113,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.rtc
 - title: fuchsia.hwinfo
   path: /reference/fidl/fuchsia.hwinfo
+- title: fuchsia.identity.account
+  path: /reference/fidl/fuchsia.identity.account
 - title: fuchsia.images
   path: /reference/fidl/fuchsia.images
 - title: fuchsia.inspect
