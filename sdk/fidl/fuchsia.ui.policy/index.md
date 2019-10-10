@@ -794,23 +794,28 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>kHandheld</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Display is held in one or both hands.
+</td>
         </tr><tr>
             <td><code>kClose</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Display is used well within arm's reach.
+</td>
         </tr><tr>
             <td><code>kNear</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Display is used at arm's reach.
+</td>
         </tr><tr>
             <td><code>kMidrange</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> Display is used beyond arm's reach.
+</td>
         </tr><tr>
             <td><code>kFar</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> Display is used well beyond arm's reach.
+</td>
         </tr></table>
 
 ### PresentationMode {:#PresentationMode}
@@ -858,23 +863,28 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>kHandheld</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Display is held in one or both hands.
+</td>
         </tr><tr>
             <td><code>kClose</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Display is used well within arm's reach.
+</td>
         </tr><tr>
             <td><code>kNear</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Display is used at arm's reach.
+</td>
         </tr><tr>
             <td><code>kMidrange</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> Display is used beyond arm's reach.
+</td>
         </tr><tr>
             <td><code>kFar</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> Display is used well beyond arm's reach.
+</td>
         </tr></table>
 
 ### PresentationMode {:#PresentationMode}

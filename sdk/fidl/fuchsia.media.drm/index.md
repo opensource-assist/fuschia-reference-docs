@@ -923,27 +923,41 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>TYPE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> An error that occurs when the client provides invalid parameter data to
+ the server, such as an invalid license response message.
+</td>
         </tr><tr>
             <td><code>NOT_SUPPORTED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> An error that occurs when a requested operation is not supported by the
+ CDM, such as a license generation request with an unknown initialization
+ data type.
+</td>
         </tr><tr>
             <td><code>INVALID_STATE</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> An error that occurs when the CDM is not in a proper state to perform
+ the requested operation, such as calling
+ <a class='link' href='#LicenseSession.GenerateLicenseRequest'>LicenseSession.GenerateLicenseRequest</a> when the <a class='link' href='#LicenseSession'>LicenseSession</a>
+ has already started the license release process.
+</td>
         </tr><tr>
             <td><code>QUOTA_EXCEEDED</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> An error that occurs when a requested action would exceed allowable
+ limits, such as attempting to load an already opened session. 
+</td>
         </tr><tr>
             <td><code>INTERNAL</code></td>
             <td><code>100</code></td>
-            <td></td>
+            <td> An internal, unexpected error that is not actionable by the client.
+</td>
         </tr><tr>
             <td><code>NOT_PROVISIONED</code></td>
             <td><code>101</code></td>
-            <td></td>
+            <td> An error that occurs when the CDM is not usable because it requires
+ additional provisioning.
+</td>
         </tr></table>
 
 ### LicenseSessionType {:#LicenseSessionType}
@@ -957,15 +971,22 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>TEMPORARY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> A session for which the license, keys, and record of the session are not
+ persisted.
+</td>
         </tr><tr>
             <td><code>PERSISTENT_LICENSE</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> A session for which the license, keys, and record of the session will be
+ persisted for offline use and can subsequently be loaded using
+ LoadSession().
+</td>
         </tr><tr>
             <td><code>PERSISTENT_USAGE_RECORD</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> A session for which the the record of the session will be persisted, but
+ the keys and license will not be.
+</td>
         </tr></table>
 
 ### LicenseMessageType {:#LicenseMessageType}

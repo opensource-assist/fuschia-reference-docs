@@ -70,11 +70,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ERR_NO_SYSTEM_INFO</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Error when there is no system info available.
+</td>
         </tr><tr>
             <td><code>ERR_INTERNAL</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Generic error.
+</td>
         </tr></table>
 
 

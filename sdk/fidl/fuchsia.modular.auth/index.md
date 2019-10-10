@@ -174,11 +174,17 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEV</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> An identity provider that's used for development and testing. If this
+ identity provider is chosen, the Framework will continue as if it has
+ identified the user. Note that the users that use this id provider would
+ not get cloud ledger access (unless done via a side channel).
+</td>
         </tr><tr>
             <td><code>GOOGLE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Uses Google as the identity provider. Doing this requires a working network
+ connection and a web view.
+</td>
         </tr></table>
 
 ### IdentityProvider {:#IdentityProvider}
@@ -195,11 +201,17 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEV</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> An identity provider that's used for development and testing. If this
+ identity provider is chosen, the Framework will continue as if it has
+ identified the user. Note that the users that use this id provider would
+ not get cloud ledger access (unless done via a side channel).
+</td>
         </tr><tr>
             <td><code>GOOGLE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Uses Google as the identity provider. Doing this requires a working network
+ connection and a web view.
+</td>
         </tr></table>
 
 

@@ -730,15 +730,18 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>FILE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The file DHCP field.
+</td>
         </tr><tr>
             <td><code>SNAME</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The sname DHCP field.
+</td>
         </tr><tr>
             <td><code>BOTH</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Both file and sname DHCP fields.
+</td>
         </tr></table>
 
 ### MessageType {:#MessageType}
@@ -755,35 +758,43 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DHCPDISCOVER</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> A DHCP Discover message.
+</td>
         </tr><tr>
             <td><code>DHCPOFFER</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> A DHCP Offer message.
+</td>
         </tr><tr>
             <td><code>DHCPREQUEST</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> A DHCP Request message.
+</td>
         </tr><tr>
             <td><code>DHCPDECLINE</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> A DHCP Decline message.
+</td>
         </tr><tr>
             <td><code>DHCPACK</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> A DHCP Ack message.
+</td>
         </tr><tr>
             <td><code>DHCPNAK</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> A DHCP Nak message;
+</td>
         </tr><tr>
             <td><code>DHCPRELEASE</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> A DHCP Release message;
+</td>
         </tr><tr>
             <td><code>DHCPINFORM</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> A DHCP Inform message.
+</td>
         </tr></table>
 
 ### OptionCode {:#OptionCode}
@@ -1110,15 +1121,18 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>FILE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The file DHCP field.
+</td>
         </tr><tr>
             <td><code>SNAME</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The sname DHCP field.
+</td>
         </tr><tr>
             <td><code>BOTH</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Both file and sname DHCP fields.
+</td>
         </tr></table>
 
 ### MessageType {:#MessageType}
@@ -1135,35 +1149,43 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DHCPDISCOVER</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> A DHCP Discover message.
+</td>
         </tr><tr>
             <td><code>DHCPOFFER</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> A DHCP Offer message.
+</td>
         </tr><tr>
             <td><code>DHCPREQUEST</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> A DHCP Request message.
+</td>
         </tr><tr>
             <td><code>DHCPDECLINE</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> A DHCP Decline message.
+</td>
         </tr><tr>
             <td><code>DHCPACK</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> A DHCP Ack message.
+</td>
         </tr><tr>
             <td><code>DHCPNAK</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> A DHCP Nak message;
+</td>
         </tr><tr>
             <td><code>DHCPRELEASE</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> A DHCP Release message;
+</td>
         </tr><tr>
             <td><code>DHCPINFORM</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> A DHCP Inform message.
+</td>
         </tr></table>
 
 ### OptionCode {:#OptionCode}

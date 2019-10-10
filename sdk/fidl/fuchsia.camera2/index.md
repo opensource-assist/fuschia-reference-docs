@@ -902,11 +902,15 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ERROR_FRAME</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> An error occurred during the production of a frame.
+ No data will be available in the data buffer corresponding to this
+ notification.
+</td>
         </tr><tr>
             <td><code>ERROR_BUFFER_FULL</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> No space was available in the data buffer, resulting in a dropped frame.
+</td>
         </tr></table>
 
 ### DeviceType {:#DeviceType}
@@ -943,11 +947,15 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ERROR_FRAME</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> An error occurred during the production of a frame.
+ No data will be available in the data buffer corresponding to this
+ notification.
+</td>
         </tr><tr>
             <td><code>ERROR_BUFFER_FULL</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> No space was available in the data buffer, resulting in a dropped frame.
+</td>
         </tr></table>
 
 

@@ -1559,27 +1559,34 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NOT_SUPPORTED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The operation or parameters requested are not supported on the current hardware.
+</td>
         </tr><tr>
             <td><code>ADVERTISING_DATA_TOO_LONG</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The provided advertising data exceeds the maximum allowed length when encoded.
+</td>
         </tr><tr>
             <td><code>SCAN_RESPONSE_DATA_TOO_LONG</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The provided scan response data exceeds the maximum allowed length when encoded.
+</td>
         </tr><tr>
             <td><code>INVALID_PARAMETERS</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The requested parameters are invalid.
+</td>
         </tr><tr>
             <td><code>ABORTED</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> The request to start advertising was aborted, for example by issuing a new request with new
+ parameters.
+</td>
         </tr><tr>
             <td><code>FAILED</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> Advertising could not be initiated due to a hardware or system error.
+</td>
         </tr></table>
 
 ### AdvertisingModeHint {:#AdvertisingModeHint}
@@ -1600,15 +1607,22 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>VERY_FAST</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Advertise with a very short interval and window for fast discovery at the cost of higher
+ power consumption. This corresponds to a 30-60ms interval on the 1M PHYs and 90-180ms on the
+ coded PHY.
+</td>
         </tr><tr>
             <td><code>FAST</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Advertise with a short interval and window that uses less power than `VERY_FAST`.
+ This corresponds to a 100-150ms interval on the 1M PHYs and 300-450ms on the coded PHY.
+</td>
         </tr><tr>
             <td><code>SLOW</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Advertise with a moderate interval and window. This corresponds to 1-1.2s on the 1M PHYs and 3s
+ on the coded PHY.
+</td>
         </tr></table>
 
 ### PeripheralError {:#PeripheralError}
@@ -1622,27 +1636,34 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NOT_SUPPORTED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The operation or parameters requested are not supported on the current hardware.
+</td>
         </tr><tr>
             <td><code>ADVERTISING_DATA_TOO_LONG</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The provided advertising data exceeds the maximum allowed length when encoded.
+</td>
         </tr><tr>
             <td><code>SCAN_RESPONSE_DATA_TOO_LONG</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The provided scan response data exceeds the maximum allowed length when encoded.
+</td>
         </tr><tr>
             <td><code>INVALID_PARAMETERS</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The requested parameters are invalid.
+</td>
         </tr><tr>
             <td><code>ABORTED</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> The request to start advertising was aborted, for example by issuing a new request with new
+ parameters.
+</td>
         </tr><tr>
             <td><code>FAILED</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> Advertising could not be initiated due to a hardware or system error.
+</td>
         </tr></table>
 
 ### AdvertisingModeHint {:#AdvertisingModeHint}
@@ -1663,15 +1684,22 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>VERY_FAST</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Advertise with a very short interval and window for fast discovery at the cost of higher
+ power consumption. This corresponds to a 30-60ms interval on the 1M PHYs and 90-180ms on the
+ coded PHY.
+</td>
         </tr><tr>
             <td><code>FAST</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Advertise with a short interval and window that uses less power than `VERY_FAST`.
+ This corresponds to a 100-150ms interval on the 1M PHYs and 300-450ms on the coded PHY.
+</td>
         </tr><tr>
             <td><code>SLOW</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Advertise with a moderate interval and window. This corresponds to 1-1.2s on the 1M PHYs and 3s
+ on the coded PHY.
+</td>
         </tr></table>
 
 

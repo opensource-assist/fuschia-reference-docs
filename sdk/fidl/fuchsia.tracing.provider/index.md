@@ -528,15 +528,28 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ONESHOT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> In oneshot mode there is only one buffer that is not reused. When the
+ buffer fills the provider just keeps dropping records, keeping a count,
+ and then when tracing stops the header is updated to record final
+ state.
+</td>
         </tr><tr>
             <td><code>CIRCULAR</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> In circular mode, the buffer is continually written to until tracing
+ stops. When the buffer fills older records are discarded as needed.
+</td>
         </tr><tr>
             <td><code>STREAMING</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> In streaming mode, the buffer is effectively split into two pieces.
+ When one half of the buffer fills the provider notifies the trace
+ manager via the provided fifo, and then starts filling the other half
+ of the buffer. When the buffer is saved, the manager responds via the
+ provided fifo. If trace manager hasn't saved the buffer in time, and
+ the other buffer fills, then the provider is required to drop records
+ until space becomes available.
+</td>
         </tr></table>
 
 ### BufferDisposition {:#BufferDisposition}
@@ -558,15 +571,32 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>CLEAR_ENTIRE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Clear the entire buffer, including durable buffer contents.
+ N.B. If this is done mid-session, then string and thread references
+ from prior to this point will become invalid - the underlying data
+ will be gone. To prevent this save buffer contents before clearing.
+
+ This is typically used when buffer contents were saved after the
+ preceding Stop.
+</td>
         </tr><tr>
             <td><code>CLEAR_NONDURABLE</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Clear the non-durable portion of the buffer, retaining the durable
+ portion.
+
+ This is typically used when buffer contents were not saved after the
+ preceding Stop and the current contents are to be discarded.
+</td>
         </tr><tr>
             <td><code>RETAIN</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Retain buffer contents. New trace data is added where the previous
+ trace run left off.
+
+ This is typically used when buffer contents were not saved after the
+ preceding Stop and the current contents are to be retained.
+</td>
         </tr></table>
 
 ### BufferingMode {:#BufferingMode}
@@ -581,15 +611,28 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ONESHOT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> In oneshot mode there is only one buffer that is not reused. When the
+ buffer fills the provider just keeps dropping records, keeping a count,
+ and then when tracing stops the header is updated to record final
+ state.
+</td>
         </tr><tr>
             <td><code>CIRCULAR</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> In circular mode, the buffer is continually written to until tracing
+ stops. When the buffer fills older records are discarded as needed.
+</td>
         </tr><tr>
             <td><code>STREAMING</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> In streaming mode, the buffer is effectively split into two pieces.
+ When one half of the buffer fills the provider notifies the trace
+ manager via the provided fifo, and then starts filling the other half
+ of the buffer. When the buffer is saved, the manager responds via the
+ provided fifo. If trace manager hasn't saved the buffer in time, and
+ the other buffer fills, then the provider is required to drop records
+ until space becomes available.
+</td>
         </tr></table>
 
 ### BufferDisposition {:#BufferDisposition}
@@ -611,15 +654,32 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>CLEAR_ENTIRE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Clear the entire buffer, including durable buffer contents.
+ N.B. If this is done mid-session, then string and thread references
+ from prior to this point will become invalid - the underlying data
+ will be gone. To prevent this save buffer contents before clearing.
+
+ This is typically used when buffer contents were saved after the
+ preceding Stop.
+</td>
         </tr><tr>
             <td><code>CLEAR_NONDURABLE</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Clear the non-durable portion of the buffer, retaining the durable
+ portion.
+
+ This is typically used when buffer contents were not saved after the
+ preceding Stop and the current contents are to be discarded.
+</td>
         </tr><tr>
             <td><code>RETAIN</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Retain buffer contents. New trace data is added where the previous
+ trace run left off.
+
+ This is typically used when buffer contents were not saved after the
+ preceding Stop and the current contents are to be retained.
+</td>
         </tr></table>
 
 

@@ -4666,15 +4666,18 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>START</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Seek from the start of the file.
+</td>
         </tr><tr>
             <td><code>CURRENT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Seek from the current position in the file.
+</td>
         </tr><tr>
             <td><code>END</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Seek from the end of the file.
+</td>
         </tr></table>
 
 ### SeekOrigin {:#SeekOrigin}
@@ -4689,15 +4692,18 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>START</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Seek from the start of the file.
+</td>
         </tr><tr>
             <td><code>CURRENT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Seek from the current position in the file.
+</td>
         </tr><tr>
             <td><code>END</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Seek from the end of the file.
+</td>
         </tr></table>
 
 

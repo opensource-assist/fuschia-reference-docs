@@ -2708,15 +2708,20 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>OK</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The command completed successfully
+</td>
         </tr><tr>
             <td><code>INVALID_ARGUMENT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The command referred to a missing, or an invalid argument.
+</td>
         </tr><tr>
             <td><code>SIGNING_ERROR</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> There was an error in generating crypto signatures for the given
+ plaintext. This usually indicates errors for misconfigured keys or
+ signature algorithms from the underlying crypto library.
+</td>
         </tr></table>
 
 ### AuthProviderStatus {:#AuthProviderStatus}
@@ -2805,15 +2810,22 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No information (either affirming or dissenting) is available about the
+ current presence or engagement of the account owner.
+</td>
         </tr><tr>
             <td><code>TEST_PRESENT</code></td>
             <td><code>10000</code></td>
-            <td></td>
+            <td> The account owner has been marked as present by some test or experimental
+ authentication mechanism. This state should not be used to grant access
+ to any sensitive user information.
+</td>
         </tr><tr>
             <td><code>TEST_ABSENT</code></td>
             <td><code>10001</code></td>
-            <td></td>
+            <td> The account owner has been marked as not-present by some test or
+ experimental authentication mechanism.
+</td>
         </tr></table>
 
 ### Status {:#Status}
@@ -2828,51 +2840,74 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>OK</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The command completed successfully
+</td>
         </tr><tr>
             <td><code>AUTH_PROVIDER_SERVICE_UNAVAILABLE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The command referred to a missing, misconfigured, or failed auth provider.
+ Retrying is not recommended.
+</td>
         </tr><tr>
             <td><code>AUTH_PROVIDER_SERVER_ERROR</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The auth server was reachable but responded with an error. These errors
+ are typically caused by a configuration problem or a revoked token and so
+ should not be retried.
+</td>
         </tr><tr>
             <td><code>INTERNAL_ERROR</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> An internal error occurred. This usually indicates a bug within the Token
+ Manager itself. Retry is optional.
+</td>
         </tr><tr>
             <td><code>INVALID_AUTH_CONTEXT</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> An invalid or non-functional AuthContextProvider was provided. Retrying is
+ unlikely to correct this error.
+</td>
         </tr><tr>
             <td><code>INVALID_REQUEST</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> The request was malformed in some way, such as using an empty string for
+ the user_profile_id. The request should not be retried.
+</td>
         </tr><tr>
             <td><code>USER_NOT_FOUND</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> The requested user profile could not be found in the database. The request
+ should not be retried.
+</td>
         </tr><tr>
             <td><code>IO_ERROR</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> A local error occurred such as disk I/O or memory allocation. Retry, after
+ a delay, is recommended.
+</td>
         </tr><tr>
             <td><code>UNKNOWN_ERROR</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> Some other problem occurred that cannot be classified using one of the more
+ specific statuses. Retry is optional.
+</td>
         </tr><tr>
             <td><code>REAUTH_REQUIRED</code></td>
             <td><code>9</code></td>
-            <td></td>
+            <td> The auth server requires that the user reauthenticate. The client should
+ call the Authorize method.
+</td>
         </tr><tr>
             <td><code>USER_CANCELLED</code></td>
             <td><code>10</code></td>
-            <td></td>
+            <td> The user cancelled the flow. User consent is required before any retry.
+</td>
         </tr><tr>
             <td><code>NETWORK_ERROR</code></td>
             <td><code>11</code></td>
-            <td></td>
+            <td> A network error occurred while communicating with the auth server. Retry,
+ after a delay, is recommended.
+</td>
         </tr></table>
 
 ### AttestationSignerStatus {:#AttestationSignerStatus}
@@ -2891,15 +2926,20 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>OK</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The command completed successfully
+</td>
         </tr><tr>
             <td><code>INVALID_ARGUMENT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The command referred to a missing, or an invalid argument.
+</td>
         </tr><tr>
             <td><code>SIGNING_ERROR</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> There was an error in generating crypto signatures for the given
+ plaintext. This usually indicates errors for misconfigured keys or
+ signature algorithms from the underlying crypto library.
+</td>
         </tr></table>
 
 ### AuthProviderStatus {:#AuthProviderStatus}
@@ -2988,15 +3028,22 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No information (either affirming or dissenting) is available about the
+ current presence or engagement of the account owner.
+</td>
         </tr><tr>
             <td><code>TEST_PRESENT</code></td>
             <td><code>10000</code></td>
-            <td></td>
+            <td> The account owner has been marked as present by some test or experimental
+ authentication mechanism. This state should not be used to grant access
+ to any sensitive user information.
+</td>
         </tr><tr>
             <td><code>TEST_ABSENT</code></td>
             <td><code>10001</code></td>
-            <td></td>
+            <td> The account owner has been marked as not-present by some test or
+ experimental authentication mechanism.
+</td>
         </tr></table>
 
 ### Status {:#Status}
@@ -3011,51 +3058,74 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>OK</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The command completed successfully
+</td>
         </tr><tr>
             <td><code>AUTH_PROVIDER_SERVICE_UNAVAILABLE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The command referred to a missing, misconfigured, or failed auth provider.
+ Retrying is not recommended.
+</td>
         </tr><tr>
             <td><code>AUTH_PROVIDER_SERVER_ERROR</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The auth server was reachable but responded with an error. These errors
+ are typically caused by a configuration problem or a revoked token and so
+ should not be retried.
+</td>
         </tr><tr>
             <td><code>INTERNAL_ERROR</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> An internal error occurred. This usually indicates a bug within the Token
+ Manager itself. Retry is optional.
+</td>
         </tr><tr>
             <td><code>INVALID_AUTH_CONTEXT</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> An invalid or non-functional AuthContextProvider was provided. Retrying is
+ unlikely to correct this error.
+</td>
         </tr><tr>
             <td><code>INVALID_REQUEST</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> The request was malformed in some way, such as using an empty string for
+ the user_profile_id. The request should not be retried.
+</td>
         </tr><tr>
             <td><code>USER_NOT_FOUND</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> The requested user profile could not be found in the database. The request
+ should not be retried.
+</td>
         </tr><tr>
             <td><code>IO_ERROR</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> A local error occurred such as disk I/O or memory allocation. Retry, after
+ a delay, is recommended.
+</td>
         </tr><tr>
             <td><code>UNKNOWN_ERROR</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> Some other problem occurred that cannot be classified using one of the more
+ specific statuses. Retry is optional.
+</td>
         </tr><tr>
             <td><code>REAUTH_REQUIRED</code></td>
             <td><code>9</code></td>
-            <td></td>
+            <td> The auth server requires that the user reauthenticate. The client should
+ call the Authorize method.
+</td>
         </tr><tr>
             <td><code>USER_CANCELLED</code></td>
             <td><code>10</code></td>
-            <td></td>
+            <td> The user cancelled the flow. User consent is required before any retry.
+</td>
         </tr><tr>
             <td><code>NETWORK_ERROR</code></td>
             <td><code>11</code></td>
-            <td></td>
+            <td> A network error occurred while communicating with the auth server. Retry,
+ after a delay, is recommended.
+</td>
         </tr></table>
 
 

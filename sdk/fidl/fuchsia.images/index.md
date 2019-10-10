@@ -1242,19 +1242,74 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BGRA_8</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> BGRA_8
+
+ A 32-bit four-component unsigned integer format.
+ Byte order: B, G, R, A (little-endian ARGB packed 32-bit word).
+ Equivalent to Skia `kBGRA_8888_SkColorType` color type.
+ Equivalent to Zircon `ARGB_8888` pixel format on little-endian arch.
+</td>
         </tr><tr>
             <td><code>YUY2</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> YUY2
+
+ 4:2:2 (2x down-sampled UV horizontally; full res UV vertically)
+
+ A 32-bit component that contains information for 2 pixels:
+ Byte order: Y1, U, Y2, V
+ Unpacks to 2 RGB pixels, where RGB1 = func(Y1, U, V)
+ and RGB2 = func(Y2, U, V)
+ Equivalent to YUV422
+</td>
         </tr><tr>
             <td><code>NV12</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> NV12
+
+ 4:2:0 (2x down-sampled UV in both directions)
+
+ Offset 0:
+ 8 bit per pixel Y plane with bytes YYY.
+ Offset height * stride:
+ 8 bit UV data interleaved bytes as UVUVUV.
+
+ Y plane has line stride >= width.
+
+ In this context, both width and height are required to be even.
+
+ The UV data is separated into "lines", with each "line" having same byte
+ width as a line of Y data, and same "line" stride as Y data's line stride.
+ The UV data has height / 2 "lines".
+
+ In converting to RGB, the UV data gets up-scaled by 2x in both directions
+ overall.  This comment is intentionally silent on exactly how UV up-scaling
+ phase/filtering/signal processing works, as it's a complicated topic that
+ can vary by implementation, typically trading off speed and quality of the
+ up-scaling.  See comments in relevant conversion code for approach taken
+ by any given convert path.  The precise relative phase of the UV data is
+ not presently conveyed.
+</td>
         </tr><tr>
             <td><code>YV12</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> YV12
+
+ Like I420, except with V and U swapped.
+
+ 4:2:0 (2x down-sampled UV in both directions)
+
+ Offset 0:
+ 8 bit per pixel Y plane with bytes YYY.
+ Offset height * stride:
+ 8 bit V data with uv_stride = stride / 2
+ Offset height * stride + uv_stride * height / 2:
+ 8 bit U data with uv_stride = stride / 2
+
+ Y plane has line stride >= width.
+
+ Both width and height are required to be even.
+</td>
         </tr></table>
 
 ### ColorSpace {:#ColorSpace}
@@ -1284,11 +1339,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LINEAR</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Pixels are packed linearly.
+ Equivalent to `VK_IMAGE_TILING_LINEAR`.
+</td>
         </tr><tr>
             <td><code>GPU_OPTIMAL</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Pixels are packed in a GPU-dependent optimal format.
+ Equivalent to `VK_IMAGE_TILING_OPTIMAL`.
+</td>
         </tr></table>
 
 ### AlphaFormat {:#AlphaFormat}
@@ -1303,15 +1362,21 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>OPAQUE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Image is considered to be opaque.  Alpha channel is ignored.
+ Blend function is: src.RGB
+</td>
         </tr><tr>
             <td><code>PREMULTIPLIED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Color channels have been premultiplied by alpha.
+ Blend function is: src.RGB + (dest.RGB * (1 - src.A))
+</td>
         </tr><tr>
             <td><code>NON_PREMULTIPLIED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Color channels have not been premultiplied by alpha.
+ Blend function is: (src.RGB * src.A) + (dest.RGB * (1 - src.A))
+</td>
         </tr></table>
 
 ### Transform {:#Transform}
@@ -1325,19 +1390,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NORMAL</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Pixels are displayed normally.
+</td>
         </tr><tr>
             <td><code>FLIP_HORIZONTAL</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Pixels are mirrored left-right.
+</td>
         </tr><tr>
             <td><code>FLIP_VERTICAL</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Pixels are flipped vertically.
+</td>
         </tr><tr>
             <td><code>FLIP_VERTICAL_AND_HORIZONTAL</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Pixels are flipped vertically and mirrored left-right.
+</td>
         </tr></table>
 
 ### MemoryType {:#MemoryType}
@@ -1352,11 +1421,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>HOST_MEMORY</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> VMO is regular host CPU memory.
+</td>
         </tr><tr>
             <td><code>VK_DEVICE_MEMORY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> VMO can be imported as a VkDeviceMemory by calling VkAllocateMemory with a
+ VkImportMemoryFuchsiaHandleInfoKHR wrapped in a VkMemoryAllocateInfo.
+</td>
         </tr></table>
 
 ### PixelFormat {:#PixelFormat}
@@ -1371,19 +1443,74 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BGRA_8</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> BGRA_8
+
+ A 32-bit four-component unsigned integer format.
+ Byte order: B, G, R, A (little-endian ARGB packed 32-bit word).
+ Equivalent to Skia `kBGRA_8888_SkColorType` color type.
+ Equivalent to Zircon `ARGB_8888` pixel format on little-endian arch.
+</td>
         </tr><tr>
             <td><code>YUY2</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> YUY2
+
+ 4:2:2 (2x down-sampled UV horizontally; full res UV vertically)
+
+ A 32-bit component that contains information for 2 pixels:
+ Byte order: Y1, U, Y2, V
+ Unpacks to 2 RGB pixels, where RGB1 = func(Y1, U, V)
+ and RGB2 = func(Y2, U, V)
+ Equivalent to YUV422
+</td>
         </tr><tr>
             <td><code>NV12</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> NV12
+
+ 4:2:0 (2x down-sampled UV in both directions)
+
+ Offset 0:
+ 8 bit per pixel Y plane with bytes YYY.
+ Offset height * stride:
+ 8 bit UV data interleaved bytes as UVUVUV.
+
+ Y plane has line stride >= width.
+
+ In this context, both width and height are required to be even.
+
+ The UV data is separated into "lines", with each "line" having same byte
+ width as a line of Y data, and same "line" stride as Y data's line stride.
+ The UV data has height / 2 "lines".
+
+ In converting to RGB, the UV data gets up-scaled by 2x in both directions
+ overall.  This comment is intentionally silent on exactly how UV up-scaling
+ phase/filtering/signal processing works, as it's a complicated topic that
+ can vary by implementation, typically trading off speed and quality of the
+ up-scaling.  See comments in relevant conversion code for approach taken
+ by any given convert path.  The precise relative phase of the UV data is
+ not presently conveyed.
+</td>
         </tr><tr>
             <td><code>YV12</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> YV12
+
+ Like I420, except with V and U swapped.
+
+ 4:2:0 (2x down-sampled UV in both directions)
+
+ Offset 0:
+ 8 bit per pixel Y plane with bytes YYY.
+ Offset height * stride:
+ 8 bit V data with uv_stride = stride / 2
+ Offset height * stride + uv_stride * height / 2:
+ 8 bit U data with uv_stride = stride / 2
+
+ Y plane has line stride >= width.
+
+ Both width and height are required to be even.
+</td>
         </tr></table>
 
 ### ColorSpace {:#ColorSpace}
@@ -1413,11 +1540,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LINEAR</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Pixels are packed linearly.
+ Equivalent to `VK_IMAGE_TILING_LINEAR`.
+</td>
         </tr><tr>
             <td><code>GPU_OPTIMAL</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Pixels are packed in a GPU-dependent optimal format.
+ Equivalent to `VK_IMAGE_TILING_OPTIMAL`.
+</td>
         </tr></table>
 
 ### AlphaFormat {:#AlphaFormat}
@@ -1432,15 +1563,21 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>OPAQUE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Image is considered to be opaque.  Alpha channel is ignored.
+ Blend function is: src.RGB
+</td>
         </tr><tr>
             <td><code>PREMULTIPLIED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Color channels have been premultiplied by alpha.
+ Blend function is: src.RGB + (dest.RGB * (1 - src.A))
+</td>
         </tr><tr>
             <td><code>NON_PREMULTIPLIED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Color channels have not been premultiplied by alpha.
+ Blend function is: (src.RGB * src.A) + (dest.RGB * (1 - src.A))
+</td>
         </tr></table>
 
 ### Transform {:#Transform}
@@ -1454,19 +1591,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NORMAL</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Pixels are displayed normally.
+</td>
         </tr><tr>
             <td><code>FLIP_HORIZONTAL</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Pixels are mirrored left-right.
+</td>
         </tr><tr>
             <td><code>FLIP_VERTICAL</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Pixels are flipped vertically.
+</td>
         </tr><tr>
             <td><code>FLIP_VERTICAL_AND_HORIZONTAL</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Pixels are flipped vertically and mirrored left-right.
+</td>
         </tr></table>
 
 ### MemoryType {:#MemoryType}
@@ -1481,11 +1622,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>HOST_MEMORY</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> VMO is regular host CPU memory.
+</td>
         </tr><tr>
             <td><code>VK_DEVICE_MEMORY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> VMO can be imported as a VkDeviceMemory by calling VkAllocateMemory with a
+ VkImportMemoryFuchsiaHandleInfoKHR wrapped in a VkMemoryAllocateInfo.
+</td>
         </tr></table>
 
 

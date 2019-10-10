@@ -611,11 +611,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>KERNEL</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Zircon Boot Image (ZBI) containing the kernel image as well as bootfs.
+</td>
         </tr><tr>
             <td><code>VERIFIED_BOOT_METADATA</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Metadata used for verified boot purposes.
+</td>
         </tr></table>
 
 ### ConfigurationStatus {:#ConfigurationStatus}
@@ -630,15 +632,18 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>HEALTHY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Bootable and health checked.
+</td>
         </tr><tr>
             <td><code>PENDING</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Bootable but not yet marked healthy.
+</td>
         </tr><tr>
             <td><code>UNBOOTABLE</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Unbootable.
+</td>
         </tr></table>
 
 

@@ -577,19 +577,25 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NOT_FOUND</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> No result was found for this query.
+</td>
         </tr><tr>
             <td><code>TRANSIENT</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The lookup failed, but may succeed at a later time. For instance, the
+ network or DNS server may be unreachable.
+</td>
         </tr><tr>
             <td><code>INVALID_ARGS</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The lookup failed due to an invalid argument (for instance, the hostname was not encoded
+ correctly, or was too long).
+</td>
         </tr><tr>
             <td><code>INTERNAL_ERROR</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The lookup failed due to an internal error.
+</td>
         </tr></table>
 
 ### LookupError {:#LookupError}
@@ -603,19 +609,25 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NOT_FOUND</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> No result was found for this query.
+</td>
         </tr><tr>
             <td><code>TRANSIENT</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The lookup failed, but may succeed at a later time. For instance, the
+ network or DNS server may be unreachable.
+</td>
         </tr><tr>
             <td><code>INVALID_ARGS</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The lookup failed due to an invalid argument (for instance, the hostname was not encoded
+ correctly, or was too long).
+</td>
         </tr><tr>
             <td><code>INTERNAL_ERROR</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The lookup failed due to an internal error.
+</td>
         </tr></table>
 
 

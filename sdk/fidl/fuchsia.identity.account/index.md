@@ -1150,11 +1150,14 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>EPHEMERAL</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The account lives at the longest to the end of the power cycle it
+ was created in.
+</td>
         </tr><tr>
             <td><code>PERSISTENT</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The account lives on the device until it is removed.
+</td>
         </tr></table>
 
 ### Error {:#Error}
@@ -1169,39 +1172,60 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Some other problem occurred that cannot be classified using one of the
+ more specific statuses. Retry is optional.
+</td>
         </tr><tr>
             <td><code>INTERNAL</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> An internal error occurred. This usually indicates a bug within the
+ account system itself. Retry is optional.
+</td>
         </tr><tr>
             <td><code>UNSUPPORTED_OPERATION</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The requested operation is not supported. This generally indicates that
+ implementation of a new feature is not yet complete. The request should
+ not be retried.
+</td>
         </tr><tr>
             <td><code>INVALID_REQUEST</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The request was malformed in some way, such as using an empty string for
+ auth_provider_type. The request should not be retried.
+</td>
         </tr><tr>
             <td><code>RESOURCE</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> A local resource error occurred such as I/O, FIDL, or memory allocation
+ failure. Retry, after a delay, is recommended.
+</td>
         </tr><tr>
             <td><code>NETWORK</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> A network error occurred while communicating with an auth server.
+ Retry, after a delay, is recommended.
+</td>
         </tr><tr>
             <td><code>NOT_FOUND</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> The requested account or persona is not present on the current device.
+ The request should not be retried.
+</td>
         </tr><tr>
             <td><code>REMOVAL_IN_PROGRESS</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> The request cannot be processed due to an ongoing account or persona
+ removal. The removal is not guaranteed to suceed and so retry, after
+ a delay, is recommended.
+</td>
         </tr><tr>
             <td><code>FAILED_PRECONDITION</code></td>
             <td><code>9</code></td>
-            <td></td>
+            <td> The server is not in the state required to perform the requested
+ operation. The request should not be retried unless the server state
+ has been corrected before the retry.
+</td>
         </tr></table>
 
 

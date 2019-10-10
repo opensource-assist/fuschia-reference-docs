@@ -457,11 +457,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>PUBLIC</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> LE public device address or `BR/EDR` `BD_ADDR`.
+</td>
         </tr><tr>
             <td><code>RANDOM</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> LE private or static random device address.
+</td>
         </tr></table>
 
 ### Appearance {:#Appearance}
@@ -704,11 +706,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LEADER</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The role of the device that defines the piconet physical channel in BR/EDR or the
+ "initiating" device in LE.
+</td>
         </tr><tr>
             <td><code>FOLLOWER</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The role of a device that synchronizes to the piconet physical channel in BR/EDR or the
+ "advertising" device in LE.
+</td>
         </tr></table>
 
 ### ErrorCode {:#ErrorCode}
@@ -782,11 +788,13 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>PUBLIC</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> LE public device address or `BR/EDR` `BD_ADDR`.
+</td>
         </tr><tr>
             <td><code>RANDOM</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> LE private or static random device address.
+</td>
         </tr></table>
 
 ### Appearance {:#Appearance}
@@ -1029,11 +1037,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LEADER</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The role of the device that defines the piconet physical channel in BR/EDR or the
+ "initiating" device in LE.
+</td>
         </tr><tr>
             <td><code>FOLLOWER</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The role of a device that synchronizes to the piconet physical channel in BR/EDR or the
+ "advertising" device in LE.
+</td>
         </tr></table>
 
 ### ErrorCode {:#ErrorCode}

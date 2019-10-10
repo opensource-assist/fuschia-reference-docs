@@ -1613,39 +1613,48 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The channel closed without giving a termination reason.
+</td>
         </tr><tr>
             <td><code>EXITED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Component ran and exited with a given return_code.
+</td>
         </tr><tr>
             <td><code>URL_INVALID</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The given URL given to launch was invalid.
+</td>
         </tr><tr>
             <td><code>PACKAGE_NOT_FOUND</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The requested package could not be found.
+</td>
         </tr><tr>
             <td><code>INTERNAL_ERROR</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> An internal error happened during the launch process.
+</td>
         </tr><tr>
             <td><code>PROCESS_CREATION_ERROR</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> Process creation failed.
+</td>
         </tr><tr>
             <td><code>RUNNER_FAILED</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> A Runner failed to start.
+</td>
         </tr><tr>
             <td><code>RUNNER_TERMINATED</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> A Runner terminated while attempting to run a component.
+</td>
         </tr><tr>
             <td><code>UNSUPPORTED</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> Attempted to use an unsupported feature.
+</td>
         </tr></table>
 
 ### TerminationReason {:#TerminationReason}
@@ -1659,39 +1668,48 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The channel closed without giving a termination reason.
+</td>
         </tr><tr>
             <td><code>EXITED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Component ran and exited with a given return_code.
+</td>
         </tr><tr>
             <td><code>URL_INVALID</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The given URL given to launch was invalid.
+</td>
         </tr><tr>
             <td><code>PACKAGE_NOT_FOUND</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The requested package could not be found.
+</td>
         </tr><tr>
             <td><code>INTERNAL_ERROR</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> An internal error happened during the launch process.
+</td>
         </tr><tr>
             <td><code>PROCESS_CREATION_ERROR</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> Process creation failed.
+</td>
         </tr><tr>
             <td><code>RUNNER_FAILED</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> A Runner failed to start.
+</td>
         </tr><tr>
             <td><code>RUNNER_TERMINATED</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> A Runner terminated while attempting to run a component.
+</td>
         </tr><tr>
             <td><code>UNSUPPORTED</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> Attempted to use an unsupported feature.
+</td>
         </tr></table>
 
 

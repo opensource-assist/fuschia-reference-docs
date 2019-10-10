@@ -3003,11 +3003,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NO_CONFLICTS</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No conflict was observed when the callback was registered.
+</td>
         </tr><tr>
             <td><code>CONFLICTS_RESOLVED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Some conflicts were observed when the callback was registered, and all
+ have been resolved.
+</td>
         </tr></table>
 
 ### Priority {:#Priority}
@@ -3022,11 +3025,16 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>EAGER</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> EAGER values will be downloaded with the commit and have the same
+ availability.
+</td>
         </tr><tr>
             <td><code>LAZY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> LAZY values will not be downloaded with their commit, but only on demand.
+ A LAZY value thus may not be available when requested, for example if the
+ device has no internet connection at request time.
+</td>
         </tr></table>
 
 ### Error {:#Error}
@@ -3090,15 +3098,27 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LAST_ONE_WINS</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Last one wins. When 2 commits are merged, the resulting commit contains:
+  - all keys/values that do not conflict
+  - all keys/values of the commit with the biggest timestamp (or biggest
+    id, if the timestamps are the same)
+</td>
         </tr><tr>
             <td><code>AUTOMATIC_WITH_FALLBACK</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Commits are automatically merged when no key has been modified on both
+ sides. When a key has been modified by both commits, conflict resolution is
+ delegated to a user-provided `ConflictResolver` that is created by calling
+ `ConflictResolverFactory.NewConflictResolver`. A single `ConflictResolver`
+ is created for each page. When the `ConflictResolver` is disconnected, a
+ new one is requested.
+</td>
         </tr><tr>
             <td><code>CUSTOM</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> All merges are resolved by a user-provided `ConflictResolver` as described
+ above, even when commits to be merged change a disjoined set of keys.
+</td>
         </tr></table>
 
 ### ValueSource {:#ValueSource}
@@ -3141,19 +3161,29 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>IDLE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> There are no pending operations.
+</td>
         </tr><tr>
             <td><code>PENDING</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> There are pending operations, but there is no syncing in progress. This
+ could be because of (possibly a combination of):
+  - waiting for better connectivity
+  - waiting due to internal policies (e.g. batching network requests,
+      waiting for a merge to happen before uploading)
+  - waiting to determine if synchronization is needed (e.g. during initial
+      setup)
+</td>
         </tr><tr>
             <td><code>IN_PROGRESS</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Synchronization is in progress.
+</td>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> An internal error occurred while trying to sync.
+</td>
         </tr></table>
 
 ### ConflictResolutionWaitStatus {:#ConflictResolutionWaitStatus}
@@ -3169,11 +3199,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NO_CONFLICTS</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No conflict was observed when the callback was registered.
+</td>
         </tr><tr>
             <td><code>CONFLICTS_RESOLVED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Some conflicts were observed when the callback was registered, and all
+ have been resolved.
+</td>
         </tr></table>
 
 ### Priority {:#Priority}
@@ -3188,11 +3221,16 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>EAGER</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> EAGER values will be downloaded with the commit and have the same
+ availability.
+</td>
         </tr><tr>
             <td><code>LAZY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> LAZY values will not be downloaded with their commit, but only on demand.
+ A LAZY value thus may not be available when requested, for example if the
+ device has no internet connection at request time.
+</td>
         </tr></table>
 
 ### Error {:#Error}
@@ -3256,15 +3294,27 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LAST_ONE_WINS</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Last one wins. When 2 commits are merged, the resulting commit contains:
+  - all keys/values that do not conflict
+  - all keys/values of the commit with the biggest timestamp (or biggest
+    id, if the timestamps are the same)
+</td>
         </tr><tr>
             <td><code>AUTOMATIC_WITH_FALLBACK</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Commits are automatically merged when no key has been modified on both
+ sides. When a key has been modified by both commits, conflict resolution is
+ delegated to a user-provided `ConflictResolver` that is created by calling
+ `ConflictResolverFactory.NewConflictResolver`. A single `ConflictResolver`
+ is created for each page. When the `ConflictResolver` is disconnected, a
+ new one is requested.
+</td>
         </tr><tr>
             <td><code>CUSTOM</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> All merges are resolved by a user-provided `ConflictResolver` as described
+ above, even when commits to be merged change a disjoined set of keys.
+</td>
         </tr></table>
 
 ### ValueSource {:#ValueSource}
@@ -3307,19 +3357,29 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>IDLE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> There are no pending operations.
+</td>
         </tr><tr>
             <td><code>PENDING</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> There are pending operations, but there is no syncing in progress. This
+ could be because of (possibly a combination of):
+  - waiting for better connectivity
+  - waiting due to internal policies (e.g. batching network requests,
+      waiting for a merge to happen before uploading)
+  - waiting to determine if synchronization is needed (e.g. during initial
+      setup)
+</td>
         </tr><tr>
             <td><code>IN_PROGRESS</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Synchronization is in progress.
+</td>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> An internal error occurred while trying to sync.
+</td>
         </tr></table>
 
 

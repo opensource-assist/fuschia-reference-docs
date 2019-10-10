@@ -103,11 +103,16 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>CONSUMED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The listener consumes all the pointer events for (device_id, pointer_id)
+ until the next UP event.
+</td>
         </tr><tr>
             <td><code>REJECTED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The listener rejects the remaining pointer events for (device_id,
+ pointer_id), and observed (past) and expected (future) pointer events
+ until the next UP event are to be sent for regular input dispatch.
+</td>
         </tr></table>
 
 

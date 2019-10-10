@@ -728,15 +728,22 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEFAULT</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Default behavior.
+</td>
         </tr><tr>
             <td><code>BYPASS_CACHE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The HTTP request will bypass the local cache and will have a
+ 'Cache-Control: nocache' header added in that causes any proxy servers
+ to also not satisfy the request from their cache.  This has the effect
+ of forcing a full end-to-end fetch.
+</td>
         </tr><tr>
             <td><code>ONLY_FROM_CACHE</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The HTTP request will fail if it cannot serve the requested resource
+ from the cache (or some equivalent local store).
+</td>
         </tr></table>
 
 ### ResponseBodyMode {:#ResponseBodyMode}
@@ -751,15 +758,20 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BUFFER</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The complete response body should be returned in the `buffer` field of
+ the response body.
+</td>
         </tr><tr>
             <td><code>STREAM</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The response body should be streamed through the `stream` field of the
+ response body.
+</td>
         </tr><tr>
             <td><code>BUFFER_OR_STREAM</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The response body may be returned as a buffer or stream.
+</td>
         </tr></table>
 
 ### CacheMode {:#CacheMode}
@@ -774,15 +786,22 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEFAULT</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Default behavior.
+</td>
         </tr><tr>
             <td><code>BYPASS_CACHE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The HTTP request will bypass the local cache and will have a
+ 'Cache-Control: nocache' header added in that causes any proxy servers
+ to also not satisfy the request from their cache.  This has the effect
+ of forcing a full end-to-end fetch.
+</td>
         </tr><tr>
             <td><code>ONLY_FROM_CACHE</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The HTTP request will fail if it cannot serve the requested resource
+ from the cache (or some equivalent local store).
+</td>
         </tr></table>
 
 ### ResponseBodyMode {:#ResponseBodyMode}
@@ -797,15 +816,20 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BUFFER</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The complete response body should be returned in the `buffer` field of
+ the response body.
+</td>
         </tr><tr>
             <td><code>STREAM</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The response body should be streamed through the `stream` field of the
+ response body.
+</td>
         </tr><tr>
             <td><code>BUFFER_OR_STREAM</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The response body may be returned as a buffer or stream.
+</td>
         </tr></table>
 
 

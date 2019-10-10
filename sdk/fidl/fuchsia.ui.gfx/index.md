@@ -8018,23 +8018,28 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNSHADOWED</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No shadows.
+</td>
         </tr><tr>
             <td><code>SCREEN_SPACE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Default.  Screen-space, depth-buffer based shadows; SSDO-ish.
+</td>
         </tr><tr>
             <td><code>SHADOW_MAP</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Basic shadow map.
+</td>
         </tr><tr>
             <td><code>MOMENT_SHADOW_MAP</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Moment shadow map (see http:///momentsingraphics.de).
+</td>
         </tr><tr>
             <td><code>STENCIL_SHADOW_VOLUME</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> Stencil shadow volume.
+</td>
         </tr></table>
 
 ### RenderFrequency {:#RenderFrequency}
@@ -8048,11 +8053,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>WHEN_REQUESTED</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Render only on when requested (i.e. when something triggers it).
+ Default behavior.
+</td>
         </tr><tr>
             <td><code>CONTINUOUSLY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Render one frame after another regardless of it it's needed.
+</td>
         </tr></table>
 
 ### ImportSpec {:#ImportSpec}
@@ -8136,11 +8144,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>kDefault</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Apply hit testing to the node's content, its parts, and its children.
+</td>
         </tr><tr>
             <td><code>kSuppress</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Suppress hit testing of the node and everything it contains.
+</td>
         </tr></table>
 
 ### MeshIndexFormat {:#MeshIndexFormat}
@@ -8195,23 +8205,28 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNSHADOWED</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No shadows.
+</td>
         </tr><tr>
             <td><code>SCREEN_SPACE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Default.  Screen-space, depth-buffer based shadows; SSDO-ish.
+</td>
         </tr><tr>
             <td><code>SHADOW_MAP</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Basic shadow map.
+</td>
         </tr><tr>
             <td><code>MOMENT_SHADOW_MAP</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Moment shadow map (see http:///momentsingraphics.de).
+</td>
         </tr><tr>
             <td><code>STENCIL_SHADOW_VOLUME</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> Stencil shadow volume.
+</td>
         </tr></table>
 
 ### RenderFrequency {:#RenderFrequency}
@@ -8225,11 +8240,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>WHEN_REQUESTED</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Render only on when requested (i.e. when something triggers it).
+ Default behavior.
+</td>
         </tr><tr>
             <td><code>CONTINUOUSLY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Render one frame after another regardless of it it's needed.
+</td>
         </tr></table>
 
 ### ImportSpec {:#ImportSpec}
@@ -8313,11 +8331,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>kDefault</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Apply hit testing to the node's content, its parts, and its children.
+</td>
         </tr><tr>
             <td><code>kSuppress</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Suppress hit testing of the node and everything it contains.
+</td>
         </tr></table>
 
 

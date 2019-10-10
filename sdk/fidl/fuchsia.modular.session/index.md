@@ -21,11 +21,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LET_LEDGER_DECIDE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Use a cloud provider configured by Ledger.
+</td>
         </tr><tr>
             <td><code>FROM_ENVIRONMENT</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Use a cloud provider available in the incoming namespace, rather than
+ initializing and instance within sessionmgr. This can be used by Voila to
+ inject a custom cloud provider.
+</td>
         </tr><tr>
             <td><code>NONE</code></td>
             <td><code>3</code></td>
@@ -43,11 +47,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LET_LEDGER_DECIDE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Use a cloud provider configured by Ledger.
+</td>
         </tr><tr>
             <td><code>FROM_ENVIRONMENT</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Use a cloud provider available in the incoming namespace, rather than
+ initializing and instance within sessionmgr. This can be used by Voila to
+ inject a custom cloud provider.
+</td>
         </tr><tr>
             <td><code>NONE</code></td>
             <td><code>3</code></td>
