@@ -1,13 +1,13 @@
 Project: /_project.yaml
 Book: /_book.yaml
 
-# fuchsia.auth.account.internal
+# fuchsia.identity.internal
 
 
 ## **PROTOCOLS**
 
 ## AccountHandlerControl {:#AccountHandlerControl}
-*Defined in [fuchsia.auth.account.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#23)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#22)*
 
  The control channel for an AccountHandler component.
 
@@ -40,7 +40,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html'>fuchsia.auth.account</a>/<a class='link' href='../fuchsia.auth.account/index.html#LocalAccountId'>LocalAccountId</a></code>
+                <code>uint64</code>
             </td>
         </tr></table>
 
@@ -75,7 +75,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.auth.account/index.html'>fuchsia.auth.account</a>/<a class='link' href='../fuchsia.auth.account/index.html#LocalAccountId'>LocalAccountId</a></code>
+                <code>uint64</code>
             </td>
         </tr></table>
 
@@ -130,7 +130,7 @@ Book: /_book.yaml
  Connects an interface to read properties of and perform operations on
  the account handled by this handler. The account must have previously
  been initialized using CreateAccount or LoadAccount, otherwise the call
- will fail with a status of NOT_FOUND.
+ will fail with an error of NOT_FOUND.
 
  `context_provider` An `AuthenticationContextProvider` capable of
                     supplying UI contexts used for interactive
@@ -148,7 +148,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>account</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.auth.account/index.html'>fuchsia.auth.account</a>/<a class='link' href='../fuchsia.auth.account/index.html#Account'>Account</a>&gt;</code>
+                <code>request&lt;<a class='link' href='../fuchsia.identity.account/index.html'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/index.html#Account'>Account</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -177,7 +177,7 @@ Book: /_book.yaml
 
 
 ## AccountHandlerContext {:#AccountHandlerContext}
-*Defined in [fuchsia.auth.account.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#88)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#87)*
 
  An interface that supplies the account and authentication services that
  an AccountHandler needs to perform its role in the system.

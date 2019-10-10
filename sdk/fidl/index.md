@@ -20,23 +20,15 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.auth.account/index">fuchsia.auth.account</a></td>
-    <td></td>
-</tr>
-<tr>
-    <td><a href="fuchsia.auth.account.internal/index">fuchsia.auth.account.internal</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.auth.oldtokens/index">fuchsia.auth.oldtokens</a></td>
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.auth.testing/index">fuchsia.auth.testing</a></td>
+    <td><a href="fuchsia.bluetooth/index">fuchsia.bluetooth</a></td>
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.bluetooth/index">fuchsia.bluetooth</a></td>
+    <td><a href="fuchsia.bluetooth.avdtp/index">fuchsia.bluetooth.avdtp</a></td>
     <td></td>
 </tr>
 <tr>
@@ -104,6 +96,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.castconfig/index">fuchsia.castconfig</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.castsetup/index">fuchsia.castsetup</a></td>
     <td></td>
 </tr>
@@ -113,10 +109,6 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.cobalt/index">fuchsia.cobalt</a></td>
-    <td></td>
-</tr>
-<tr>
-    <td><a href="fuchsia.crash/index">fuchsia.crash</a></td>
     <td></td>
 </tr>
 <tr>
@@ -180,6 +172,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.hardware.audio/index">fuchsia.hardware.audio</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.hardware.block/index">fuchsia.hardware.block</a></td>
     <td></td>
 </tr>
@@ -227,6 +223,14 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.hardware.telephony.transport/index">fuchsia.hardware.telephony.transport</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.hardware.virtioconsole/index">fuchsia.hardware.virtioconsole</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.hwinfo/index">fuchsia.hwinfo</a></td>
     <td></td>
 </tr>
@@ -235,11 +239,15 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.identity.internal/index">fuchsia.identity.internal</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.images/index">fuchsia.images</a></td>
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.inspect/index">fuchsia.inspect</a></td>
+    <td><a href="fuchsia.inspect.deprecated/index">fuchsia.inspect.deprecated</a></td>
     <td></td>
 </tr>
 <tr>
@@ -392,6 +400,10 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.recovery/index">fuchsia.recovery</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.recovery.ui/index">fuchsia.recovery.ui</a></td>
     <td></td>
 </tr>
 <tr>
@@ -549,6 +561,10 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.update.channel/index">fuchsia.update.channel</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.update.channelcontrol/index">fuchsia.update.channelcontrol</a></td>
     <td></td>
 </tr>
 <tr>

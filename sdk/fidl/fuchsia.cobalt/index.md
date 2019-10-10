@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## LoggerFactory {:#LoggerFactory}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#91)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#116)*
 
 
 ### CreateLogger {:#CreateLogger}
@@ -137,7 +137,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## LoggerBase {:#LoggerBase}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#182)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#207)*
 
  LoggerBase Interface
 
@@ -444,7 +444,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Logger {:#Logger}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#517)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#542)*
 
 
 ### LogEvent {:#LogEvent}
@@ -773,7 +773,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>histogram</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#HistogramBucket'>HistogramBucket</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#HistogramBucket'>HistogramBucket</a>&gt;[100]</code>
             </td>
         </tr></table>
 
@@ -850,7 +850,7 @@ Book: /_book.yaml
     <tr>
             <td><code>events</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#CobaltEvent'>CobaltEvent</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CobaltEvent'>CobaltEvent</a>&gt;[64]</code>
             </td>
         </tr></table>
 
@@ -866,7 +866,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## LoggerSimple {:#LoggerSimple}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#587)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#612)*
 
  LoggerSimple Interface
 
@@ -1217,7 +1217,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## SystemDataUpdater {:#SystemDataUpdater}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#622)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#647)*
 
 
 ### SetExperimentState {:#SetExperimentState}
@@ -1253,7 +1253,7 @@ Book: /_book.yaml
     <tr>
             <td><code>current_channel</code></td>
             <td>
-                <code>string</code>
+                <code>string[256]</code>
             </td>
         </tr></table>
 
@@ -1397,7 +1397,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## LoggerFactory {:#LoggerFactory}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#91)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#116)*
 
 
 ### CreateLogger {:#CreateLogger}
@@ -1527,7 +1527,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## LoggerBase {:#LoggerBase}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#182)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#207)*
 
  LoggerBase Interface
 
@@ -1834,7 +1834,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Logger {:#Logger}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#517)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#542)*
 
 
 ### LogEvent {:#LogEvent}
@@ -2163,7 +2163,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>histogram</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#HistogramBucket'>HistogramBucket</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#HistogramBucket'>HistogramBucket</a>&gt;[100]</code>
             </td>
         </tr></table>
 
@@ -2240,7 +2240,7 @@ Book: /_book.yaml
     <tr>
             <td><code>events</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#CobaltEvent'>CobaltEvent</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#CobaltEvent'>CobaltEvent</a>&gt;[64]</code>
             </td>
         </tr></table>
 
@@ -2256,7 +2256,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## LoggerSimple {:#LoggerSimple}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#587)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#612)*
 
  LoggerSimple Interface
 
@@ -2607,7 +2607,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## SystemDataUpdater {:#SystemDataUpdater}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#622)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#647)*
 
 
 ### SetExperimentState {:#SetExperimentState}
@@ -2643,7 +2643,7 @@ Book: /_book.yaml
     <tr>
             <td><code>current_channel</code></td>
             <td>
-                <code>string</code>
+                <code>string[256]</code>
             </td>
         </tr></table>
 
@@ -2791,7 +2791,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### ProjectProfile {:#ProjectProfile}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#79)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#104)*
 
 
 
@@ -2816,7 +2816,7 @@ Book: /_book.yaml
 </table>
 
 ### CustomEventValue {:#CustomEventValue}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#423)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#448)*
 
 
 
@@ -2842,7 +2842,7 @@ Book: /_book.yaml
 </table>
 
 ### HistogramBucket {:#HistogramBucket}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#440)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#465)*
 
 
 
@@ -2867,7 +2867,7 @@ Book: /_book.yaml
 </table>
 
 ### CountEvent {:#CountEvent}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#451)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#476)*
 
 
 
@@ -2892,7 +2892,7 @@ Book: /_book.yaml
 </table>
 
 ### Event {:#Event}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#461)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#486)*
 
 
 
@@ -2903,7 +2903,7 @@ Book: /_book.yaml
 </table>
 
 ### CobaltEvent {:#CobaltEvent}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#493)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#518)*
 
 
 
@@ -2942,7 +2942,7 @@ Book: /_book.yaml
 </table>
 
 ### Experiment {:#Experiment}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#611)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#636)*
 
 
 
@@ -2968,7 +2968,7 @@ Book: /_book.yaml
 </table>
 
 ### ProjectProfile {:#ProjectProfile}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#79)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#104)*
 
 
 
@@ -2993,7 +2993,7 @@ Book: /_book.yaml
 </table>
 
 ### CustomEventValue {:#CustomEventValue}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#423)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#448)*
 
 
 
@@ -3019,7 +3019,7 @@ Book: /_book.yaml
 </table>
 
 ### HistogramBucket {:#HistogramBucket}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#440)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#465)*
 
 
 
@@ -3044,7 +3044,7 @@ Book: /_book.yaml
 </table>
 
 ### CountEvent {:#CountEvent}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#451)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#476)*
 
 
 
@@ -3069,7 +3069,7 @@ Book: /_book.yaml
 </table>
 
 ### Event {:#Event}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#461)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#486)*
 
 
 
@@ -3080,7 +3080,7 @@ Book: /_book.yaml
 </table>
 
 ### CobaltEvent {:#CobaltEvent}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#493)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#518)*
 
 
 
@@ -3119,7 +3119,7 @@ Book: /_book.yaml
 </table>
 
 ### Experiment {:#Experiment}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#611)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#636)*
 
 
 
@@ -3151,7 +3151,7 @@ Book: /_book.yaml
 ### Status {:#Status}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#44)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#69)*
 
 
 
@@ -3181,7 +3181,7 @@ Type: <code>int32</code>
 ### ReleaseStage {:#ReleaseStage}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#64)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#89)*
 
 
 
@@ -3207,7 +3207,7 @@ Type: <code>int32</code>
 ### Status {:#Status}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#44)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#69)*
 
 
 
@@ -3237,7 +3237,7 @@ Type: <code>int32</code>
 ### ReleaseStage {:#ReleaseStage}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#64)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#89)*
 
 
 
@@ -3267,7 +3267,7 @@ Type: <code>int32</code>
 ## **UNIONS**
 
 ### Value {:#Value}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#432)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#457)*
 
 
 <table>
@@ -3298,7 +3298,7 @@ Type: <code>int32</code>
         </tr></table>
 
 ### EventPayload {:#EventPayload}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#465)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#490)*
 
 
 <table>
@@ -3341,13 +3341,13 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>int_histogram</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#HistogramBucket'>HistogramBucket</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#HistogramBucket'>HistogramBucket</a>&gt;[100]</code>
             </td>
             <td></td>
         </tr></table>
 
 ### Value {:#Value}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#432)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#457)*
 
 
 <table>
@@ -3378,7 +3378,7 @@ Type: <code>int32</code>
         </tr></table>
 
 ### EventPayload {:#EventPayload}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#465)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#490)*
 
 
 <table>
@@ -3421,7 +3421,7 @@ Type: <code>int32</code>
         </tr><tr>
             <td><code>int_histogram</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#HistogramBucket'>HistogramBucket</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#HistogramBucket'>HistogramBucket</a>&gt;[100]</code>
             </td>
             <td></td>
         </tr></table>
@@ -3444,11 +3444,139 @@ Type: <code>int32</code>
             <td></td>
         </tr>
     <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#44">MAX_HISTOGRAM_BUCKETS</a></td>
+            <td>
+                    <code>100</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#48">MAX_BATCHED_EVENTS</a></td>
+            <td>
+                    <code>64</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#51">MAX_COMPONENT_LENGTH</a></td>
+            <td>
+                    <code>64</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#54">MAX_PROJECT_NAME_LENGTH</a></td>
+            <td>
+                    <code>64</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#57">MAX_TIMER_ID_LENGTH</a></td>
+            <td>
+                    <code>64</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#60">MAX_STRING_EVENT_SIZE</a></td>
+            <td>
+                    <code>256</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#63">MAX_EVENT_CODE_COUNT</a></td>
+            <td>
+                    <code>5</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#66">MAX_CHANNEL_NAME_LENGTH</a></td>
+            <td>
+                    <code>256</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#41">MAX_BYTES_PER_EVENT</a></td>
             <td>
                     <code>102400</code>
                 </td>
                 <td><code>int64</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#44">MAX_HISTOGRAM_BUCKETS</a></td>
+            <td>
+                    <code>100</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#48">MAX_BATCHED_EVENTS</a></td>
+            <td>
+                    <code>64</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#51">MAX_COMPONENT_LENGTH</a></td>
+            <td>
+                    <code>64</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#54">MAX_PROJECT_NAME_LENGTH</a></td>
+            <td>
+                    <code>64</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#57">MAX_TIMER_ID_LENGTH</a></td>
+            <td>
+                    <code>64</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#60">MAX_STRING_EVENT_SIZE</a></td>
+            <td>
+                    <code>256</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#63">MAX_EVENT_CODE_COUNT</a></td>
+            <td>
+                    <code>5</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#66">MAX_CHANNEL_NAME_LENGTH</a></td>
+            <td>
+                    <code>256</code>
+                </td>
+                <td><code>uint32</code></td>
             <td></td>
         </tr>
     

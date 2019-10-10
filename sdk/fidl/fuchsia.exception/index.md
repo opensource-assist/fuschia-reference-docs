@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Handler {:#Handler}
-*Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#11)*
+*Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#12)*
 
  Protocol meant for clients interested in handling exceptions for a
  particular service.
@@ -47,15 +47,21 @@ Book: /_book.yaml
     </table>
 
 ## ProcessLimbo {:#ProcessLimbo}
-*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#10)*
+*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#17)*
 
  Protocol meant for clients interested in obtaining processes that are
  suspended waiting for an exception handler (in limbo). This is the core
  feature that enables Just In Time (JIT) debugging.
 
-### GetProcessesWaitingOnException {:#GetProcessesWaitingOnException}
+### ListProcessesWaitingOnException {:#ListProcessesWaitingOnException}
 
- Returns all the processes currently waiting on an exception.
+ Returns information on all the processes currently waiting on an exception.
+ The information provided is intended to correctly identify an exception
+ and determine whether the caller wants to actually handle it.
+ To retrieve an exception, use the |GetException| call.
+
+ NOTE: The |process| and |thread| handle will only have the ZX_RIGHT_READ
+       right, so no modification will be able to be done on them.
 
 #### Request
 <table>
@@ -67,9 +73,40 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>process_exceptions</code></td>
+            <td><code>exception_list</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#ProcessException'>ProcessException</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#ProcessExceptionMetadata'>ProcessExceptionMetadata</a>&gt;[32]</code>
+            </td>
+        </tr></table>
+
+### RetrieveException {:#RetrieveException}
+
+ Removes the process from limbo and retrieves the exception handle and
+ associated metadata from an exception.
+
+ Use |ListProcessesWaitingOnException| to choose a |process_koid| from the
+ list of available exceptions.
+
+ Returns ZX_ERR_NOT_FOUND if the process is not waiting on an exception.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>process_koid</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#ProcessLimbo_RetrieveException_Result'>ProcessLimbo_RetrieveException_Result</a></code>
             </td>
         </tr></table>
 
@@ -78,7 +115,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### ExceptionInfo {:#ExceptionInfo}
-*Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#30)*
+*Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#31)*
 
 
 
@@ -111,6 +148,24 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### ProcessLimbo_RetrieveException_Response {:#ProcessLimbo_RetrieveException_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>process_exception</code></td>
+            <td>
+                <code><a class='link' href='#ProcessException'>ProcessException</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 
 
 ## **ENUMS**
@@ -118,7 +173,7 @@ Book: /_book.yaml
 ### ExceptionType {:#ExceptionType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#61)*
+*Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#62)*
 
  What type of exception was triggered.
  Maps to the types defined in `zx_excp_type_t`.
@@ -176,7 +231,7 @@ Type: <code>uint32</code>
 ### ProcessException {:#ProcessException}
 
 
-*Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#42)*
+*Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#43)*
 
  Generic wrapper over a thread exception. Mirrors closely the information
  given by an exception channel.
@@ -214,6 +269,69 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### ProcessExceptionMetadata {:#ProcessExceptionMetadata}
+
+
+*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#42)*
+
+ Intended to be read only metadada associated with an exception waiting in
+ limbo. The handles provided will only have read-only access to the resource,
+ so no modification can be done to them.
+
+ NOTE: Both |process| and |thread| will be valid if present.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>info</code></td>
+            <td>
+                <code><a class='link' href='#ExceptionInfo'>ExceptionInfo</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>process</code></td>
+            <td>
+                <code>handle&lt;process&gt;</code>
+            </td>
+            <td> Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>thread</code></td>
+            <td>
+                <code>handle&lt;thread&gt;</code>
+            </td>
+            <td> The thread that generated the exception.
+ The process may have other threads that are not reflected here.
+ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.
+</td>
+        </tr></table>
+
+
+
+## **UNIONS**
+
+### ProcessLimbo_RetrieveException_Result {:#ProcessLimbo_RetrieveException_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#ProcessLimbo_RetrieveException_Response'>ProcessLimbo_RetrieveException_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
 
 
 
@@ -221,4 +339,19 @@ Type: <code>uint32</code>
 
 
 
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#11">MAX_EXCEPTIONS_PER_CALL</a></td>
+            <td>
+                    <code>32</code>
+                </td>
+                <td><code>uint64</code></td>
+            <td> The maximum amount of exceptions that will be listed at any given time by a
+ call to |ListProcessesWaitingOnException|.
+</td>
+        </tr>
+    
+</table>
 

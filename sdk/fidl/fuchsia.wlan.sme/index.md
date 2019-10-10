@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## ScanTransaction {:#ScanTransaction}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#33)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#47)*
 
 
 ### OnResult {:#OnResult}
@@ -51,7 +51,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## ConnectTransaction {:#ConnectTransaction}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#57)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#71)*
 
 
 ### OnFinished {:#OnFinished}
@@ -70,7 +70,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## ClientSme {:#ClientSme}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#100)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#115)*
 
 
 ### Scan {:#Scan}
@@ -147,7 +147,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## ApSme {:#ApSme}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#125)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#140)*
 
 
 ### Start {:#Start}
@@ -189,7 +189,7 @@ Book: /_book.yaml
     </table>
 
 ## MeshSme {:#MeshSme}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#153)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#168)*
 
 
 ### Join {:#Join}
@@ -264,7 +264,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### BssInfo {:#BssInfo}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#10)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#24)*
 
 
 
@@ -300,9 +300,9 @@ Book: /_book.yaml
             <td></td>
             <td>No default</td>
         </tr><tr>
-            <td><code>protected</code></td>
+            <td><code>protection</code></td>
             <td>
-                <code>bool</code>
+                <code><a class='link' href='#Protection'>Protection</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -317,7 +317,7 @@ Book: /_book.yaml
 </table>
 
 ### EssInfo {:#EssInfo}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#19)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#33)*
 
 
 
@@ -335,7 +335,7 @@ Book: /_book.yaml
 </table>
 
 ### ScanError {:#ScanError}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#28)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#42)*
 
 
 
@@ -360,7 +360,7 @@ Book: /_book.yaml
 </table>
 
 ### ScanRequest {:#ScanRequest}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#40)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#54)*
 
 
 
@@ -385,7 +385,7 @@ Book: /_book.yaml
 </table>
 
 ### RadioConfig {:#RadioConfig}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#62)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#76)*
 
 
 
@@ -438,7 +438,7 @@ Book: /_book.yaml
 </table>
 
 ### Empty {:#Empty}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#72)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#86)*
 
 
 
@@ -450,7 +450,7 @@ Book: /_book.yaml
 </table>
 
 ### ConnectRequest {:#ConnectRequest}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#86)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#101)*
 
 
 
@@ -489,7 +489,7 @@ Book: /_book.yaml
 </table>
 
 ### ClientStatusResponse {:#ClientStatusResponse}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#94)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#109)*
 
 
 
@@ -514,7 +514,7 @@ Book: /_book.yaml
 </table>
 
 ### ApConfig {:#ApConfig}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#107)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#122)*
 
 
 
@@ -546,7 +546,7 @@ Book: /_book.yaml
 </table>
 
 ### MeshConfig {:#MeshConfig}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#130)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#145)*
 
 
 
@@ -574,10 +574,61 @@ Book: /_book.yaml
 
 ## **ENUMS**
 
+### Protection {:#Protection}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#11)*
+
+ Security protection which should mirror the Protection enum defined in wlan lib common
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>UNKNOWN</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>OPEN</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>WEP</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>WPA1</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>WPA1_WPA2_PERSONAL</code></td>
+            <td><code>4</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>WPA2_PERSONAL</code></td>
+            <td><code>5</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>WPA2_WPA3_PERSONAL</code></td>
+            <td><code>6</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>WPA3_PERSONAL</code></td>
+            <td><code>7</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>WPA2_ENTERPRISE</code></td>
+            <td><code>8</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>WPA3_ENTERPRISE</code></td>
+            <td><code>9</code></td>
+            <td></td>
+        </tr></table>
+
 ### ScanErrorCode {:#ScanErrorCode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#23)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#37)*
 
 
 
@@ -595,7 +646,7 @@ Type: <code>uint32</code>
 ### ConnectResultCode {:#ConnectResultCode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#45)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#59)*
 
 
 
@@ -621,7 +672,7 @@ Type: <code>uint32</code>
 ### StartApResultCode {:#StartApResultCode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#113)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#128)*
 
 
 
@@ -663,7 +714,7 @@ Type: <code>uint32</code>
 ### JoinMeshResultCode {:#JoinMeshResultCode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#135)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#150)*
 
 
 
@@ -693,7 +744,7 @@ Type: <code>uint32</code>
 ### LeaveMeshResultCode {:#LeaveMeshResultCode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#143)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#158)*
 
 
 
@@ -711,7 +762,7 @@ Type: <code>uint32</code>
 ### GetMeshPathTableResultCode {:#GetMeshPathTableResultCode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#148)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#163)*
 
 
 
@@ -735,7 +786,7 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### Credential {:#Credential}
-*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#75)*
+*Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#90)*
 
  Information required to connect to a protected network.
 

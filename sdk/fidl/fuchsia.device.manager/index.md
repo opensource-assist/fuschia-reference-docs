@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Administrator {:#Administrator}
-*Defined in [fuchsia.device.manager/administrator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#32)*
+*Defined in [fuchsia.device.manager/administrator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#33)*
 
  Provides administration services for the device manager service and the device tree it controls.
 
@@ -123,18 +123,6 @@ Book: /_book.yaml
 
 
 
-### RemoveDevice {:#RemoveDevice}
-
- Ask the devhost to remove this device.  On success, the remote end of
- this interface channel will close instead of returning a result.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
 ### Suspend {:#Suspend}
 
  Ask devhost to suspend this device, using the target state indicated by `flags`.
@@ -144,6 +132,32 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
             <td><code>flags</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+### Resume {:#Resume}
+
+ Ask devhost to resume this device, using the target system state indicated by
+ 'target_system_state'.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>target_system_state</code></td>
             <td>
                 <code>uint32</code>
             </td>
@@ -286,7 +300,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>components</code></td>
             <td>
-                <code>vector&lt;uint64&gt;[8]</code>
+                <code>vector&lt;uint64&gt;[16]</code>
             </td>
         </tr><tr>
             <td><code>name</code></td>
@@ -478,21 +492,19 @@ Book: /_book.yaml
     </table>
 
 
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_UnbindDone_Result'>Coordinator_UnbindDone_Result</a></code>
+            </td>
+        </tr></table>
 
 ### RemoveDone {:#RemoveDone}
 
  Sent as the response to |CompleteRemoval|.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
-### RemoveDevice {:#RemoveDevice}
-
- Record the removal of this device.
 
 #### Request
 <table>
@@ -506,7 +518,7 @@ Book: /_book.yaml
     <tr>
             <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Coordinator_RemoveDevice_Result'>Coordinator_RemoveDevice_Result</a></code>
+                <code><a class='link' href='#Coordinator_RemoveDone_Result'>Coordinator_RemoveDone_Result</a></code>
             </td>
         </tr></table>
 
@@ -534,8 +546,6 @@ Book: /_book.yaml
 
  Attempt to bind a driver against this device.  If `driver_path` is null,
  this will initiate the driver matching algorithm.
- TODO(teisenbe): Specify the behavior of invoking this multiple times.  I believe
- the current behavior is a bug.
 
 #### Request
 <table>
@@ -656,9 +666,6 @@ Book: /_book.yaml
 ### AddMetadata {:#AddMetadata}
 
  Add metadata blob associated with this device and the given key.
- TODO(teisenbe): Document the behavior of calling this twice with the same
- key.  I believe the current behavior results in inaccessible data that is
- kept around for the lifetime of the device.
 
 #### Request
 <table>
@@ -747,7 +754,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>components</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#DeviceComponent'>DeviceComponent</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#DeviceComponent'>DeviceComponent</a>&gt;[16]</code>
             </td>
         </tr><tr>
             <td><code>coresident_device_index</code></td>
@@ -988,7 +995,18 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### Coordinator_RemoveDevice_Response {:#Coordinator_RemoveDevice_Response}
+### Coordinator_UnbindDone_Response {:#Coordinator_UnbindDone_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Coordinator_RemoveDone_Response {:#Coordinator_RemoveDone_Response}
 *generated*
 
 
@@ -1243,35 +1261,36 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.device.manager/administrator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#20)*
 
- TODO(ravoorir): When the system power states are properly defined,
- remove the suspend flags. For now, treat each suspend flag as a system
- power state.
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>SYSTEM_POWER_STATE_REBOOT</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>SYSTEM_POWER_STATE_REBOOT_BOOTLOADER</code></td>
+            <td><code>SYSTEM_POWER_STATE_FULLY_ON</code></td>
             <td><code>1</code></td>
             <td></td>
         </tr><tr>
-            <td><code>SYSTEM_POWER_STATE_REBOOT_RECOVERY</code></td>
+            <td><code>SYSTEM_POWER_STATE_REBOOT</code></td>
             <td><code>2</code></td>
             <td></td>
         </tr><tr>
-            <td><code>SYSTEM_POWER_STATE_POWEROFF</code></td>
+            <td><code>SYSTEM_POWER_STATE_REBOOT_BOOTLOADER</code></td>
             <td><code>3</code></td>
             <td></td>
         </tr><tr>
-            <td><code>SYSTEM_POWER_STATE_MEXEC</code></td>
+            <td><code>SYSTEM_POWER_STATE_REBOOT_RECOVERY</code></td>
             <td><code>4</code></td>
             <td></td>
         </tr><tr>
-            <td><code>SYSTEM_POWER_STATE_SUSPEND_RAM</code></td>
+            <td><code>SYSTEM_POWER_STATE_POWEROFF</code></td>
             <td><code>5</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SYSTEM_POWER_STATE_MEXEC</code></td>
+            <td><code>6</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SYSTEM_POWER_STATE_SUSPEND_RAM</code></td>
+            <td><code>7</code></td>
             <td></td>
         </tr></table>
 
@@ -1358,7 +1377,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### Coordinator_RemoveDevice_Result {:#Coordinator_RemoveDevice_Result}
+### Coordinator_UnbindDone_Result {:#Coordinator_UnbindDone_Result}
 *generated*
 
 
@@ -1366,7 +1385,26 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>response</code></td>
             <td>
-                <code><a class='link' href='#Coordinator_RemoveDevice_Response'>Coordinator_RemoveDevice_Response</a></code>
+                <code><a class='link' href='#Coordinator_UnbindDone_Response'>Coordinator_UnbindDone_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Coordinator_RemoveDone_Result {:#Coordinator_RemoveDone_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Coordinator_RemoveDone_Response'>Coordinator_RemoveDone_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1659,9 +1697,9 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#28">MAX_SYSTEM_POWER_STATES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#29">MAX_SYSTEM_POWER_STATES</a></td>
             <td>
-                    <code>6</code>
+                    <code>7</code>
                 </td>
                 <td><code>uint32</code></td>
             <td></td>
@@ -1714,7 +1752,7 @@ Type: <code>uint32</code>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#47">COMPONENTS_MAX</a></td>
             <td>
-                    <code>8</code>
+                    <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
             <td> Maximum number of components that a composite device can have

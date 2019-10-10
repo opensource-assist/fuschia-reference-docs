@@ -16,6 +16,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -28,7 +29,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -199,58 +201,8 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ## File {:#File}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#304)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#299)*
 
  File defines the interface of a node which contains a flat layout of data.
 
@@ -259,6 +211,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -271,7 +224,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -442,59 +396,9 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ### Read {:#Read}
 
- Reads 'count' bytes at the seek offset.
+ Reads `count` bytes at the seek offset.
  The seek offset is moved forward by the number of bytes read.
 
  This method requires following rights: `OPEN_RIGHT_READABLE`.
@@ -527,7 +431,7 @@ Book: /_book.yaml
 
 ### ReadAt {:#ReadAt}
 
- Reads 'count' bytes at the provided offset.
+ Reads `count` bytes at the provided offset.
  Does not affect the seek offset.
 
  This method requires following rights: `OPEN_RIGHT_READABLE`.
@@ -701,7 +605,7 @@ Book: /_book.yaml
 
 ### GetFlags {:#GetFlags}
 
- Acquires the Directory::Open rights and flags used to access this file.
+ Acquires the `Directory.Open` rights and flags used to access this file.
 
  This method does not require any rights.
 
@@ -728,7 +632,7 @@ Book: /_book.yaml
 
 ### SetFlags {:#SetFlags}
 
- Changes the Directory::Open flags used to access the file.
+ Changes the `Directory.Open` flags used to access the file.
  Supported flags which can be turned on / off:
  - `OPEN_FLAG_APPEND`
 
@@ -763,6 +667,7 @@ Book: /_book.yaml
  `flags` may be any of `VMO_FLAG_*`.
 
  This method requires following rights:
+
  - `OPEN_RIGHT_WRITABLE` if `flags` includes `VMO_FLAG_WRITE`.
  - `OPEN_RIGHT_READABLE` if `flags` includes `VMO_FLAG_READ` or `VMO_FLAG_EXEC`.
 
@@ -793,11 +698,11 @@ Book: /_book.yaml
         </tr></table>
 
 ## DirectoryWatcher {:#DirectoryWatcher}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#423)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#419)*
 
  DirectoryWatcher transmits messages from a filesystem server
  about events happening in the filesystem. Clients can register
- new watchers using the Directory "Watch" method, where they can
+ new watchers using the `Directory.Watch` method, where they can
  filter which events they want to receive notifications for.
 
 ### OnEvent {:#OnEvent}
@@ -816,7 +721,7 @@ Book: /_book.yaml
 
 
 ## Directory {:#Directory}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#430)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#426)*
 
  Directory defines a node which is capable of containing other Objects.
 
@@ -825,6 +730,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -837,7 +743,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -1008,62 +915,12 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ### Open {:#Open}
 
  Opens a new object relative to this directory object.
 
  `path` may contain multiple segments, separated by "/" characters,
- and should never be empty i.e. "" is an invalid path.
+ and should never be empty; i.e., "" is an invalid path.
 
  `flags` may be any of the `OPEN_FLAG_*` and `OPEN_RIGHT_*` values, bitwise ORed together.
  The `OPEN_FLAG_DESCRIBE` flag may cause an `OnOpen` event to be transmitted
@@ -1072,8 +929,8 @@ Book: /_book.yaml
  If an unknown value is sent for either flags or mode, the connection should
  be closed.
 
- `OPEN_RIGHTS_*` flags provided in `flags` will restrict access rights on the `object` channel
- which will be connected to the opened entity.
+ `OPEN_RIGHT_*` flags provided in `flags` will restrict access rights on
+ the `object` channel which will be connected to the opened entity.
 
  Rights are never increased. When you open a nested entity within a directory, you may only
  request the same rights as what the directory connection already has, or a subset of those.
@@ -1169,17 +1026,19 @@ Book: /_book.yaml
  offset which is updated on subsequent calls to ReadDirents.
 
  These dirents are of the form:
+ ```
  struct dirent {
    // Describes the inode of the entry.
    uint64 ino;
-   // Describes the length of the dirent name.
+   // Describes the length of the dirent name in bytes.
    uint8 size;
    // Describes the type of the entry. Aligned with the
-   /// POSIX d_type values. Use `DIRENT_TYPE_*` constants.
+   // POSIX d_type values. Use `DIRENT_TYPE_*` constants.
    uint8 type;
    // Unterminated name of entry.
    char name[0];
  }
+ ```
 
  This method does not require any rights, since one could always probe for
  directory contents by triggering name conflicts during file creation.
@@ -1351,15 +1210,17 @@ Book: /_book.yaml
  Watches a directory, receiving events of added messages on the
  watcher request channel.
 
- The "watcher" handle will send messages of the form:
+ The `watcher` handle will send messages of the form:
+ ```
  struct {
    uint8 event;
    uint8 len;
    char name[];
  };
+ ```
  Where names are NOT null-terminated.
 
- This API is unstable"; in the future, watcher will be a "DirectoryWatcher" client.
+ This API is unstable; in the future, watcher will be a `DirectoryWatcher` client.
 
  Mask specifies a bitmask of events to observe.
  Options must be zero; it is reserved.
@@ -1408,6 +1269,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -1420,7 +1282,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -1591,62 +1454,12 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ### Open {:#Open}
 
  Opens a new object relative to this directory object.
 
  `path` may contain multiple segments, separated by "/" characters,
- and should never be empty i.e. "" is an invalid path.
+ and should never be empty; i.e., "" is an invalid path.
 
  `flags` may be any of the `OPEN_FLAG_*` and `OPEN_RIGHT_*` values, bitwise ORed together.
  The `OPEN_FLAG_DESCRIBE` flag may cause an `OnOpen` event to be transmitted
@@ -1655,8 +1468,8 @@ Book: /_book.yaml
  If an unknown value is sent for either flags or mode, the connection should
  be closed.
 
- `OPEN_RIGHTS_*` flags provided in `flags` will restrict access rights on the `object` channel
- which will be connected to the opened entity.
+ `OPEN_RIGHT_*` flags provided in `flags` will restrict access rights on
+ the `object` channel which will be connected to the opened entity.
 
  Rights are never increased. When you open a nested entity within a directory, you may only
  request the same rights as what the directory connection already has, or a subset of those.
@@ -1752,17 +1565,19 @@ Book: /_book.yaml
  offset which is updated on subsequent calls to ReadDirents.
 
  These dirents are of the form:
+ ```
  struct dirent {
    // Describes the inode of the entry.
    uint64 ino;
-   // Describes the length of the dirent name.
+   // Describes the length of the dirent name in bytes.
    uint8 size;
    // Describes the type of the entry. Aligned with the
-   /// POSIX d_type values. Use `DIRENT_TYPE_*` constants.
+   // POSIX d_type values. Use `DIRENT_TYPE_*` constants.
    uint8 type;
    // Unterminated name of entry.
    char name[0];
  }
+ ```
 
  This method does not require any rights, since one could always probe for
  directory contents by triggering name conflicts during file creation.
@@ -1934,15 +1749,17 @@ Book: /_book.yaml
  Watches a directory, receiving events of added messages on the
  watcher request channel.
 
- The "watcher" handle will send messages of the form:
+ The `watcher` handle will send messages of the form:
+ ```
  struct {
    uint8 event;
    uint8 len;
    char name[];
  };
+ ```
  Where names are NOT null-terminated.
 
- This API is unstable"; in the future, watcher will be a "DirectoryWatcher" client.
+ This API is unstable; in the future, watcher will be a `DirectoryWatcher` client.
 
  Mask specifies a bitmask of events to observe.
  Options must be zero; it is reserved.
@@ -2151,6 +1968,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -2163,7 +1981,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -2334,58 +2153,8 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ## File {:#File}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#304)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#299)*
 
  File defines the interface of a node which contains a flat layout of data.
 
@@ -2394,6 +2163,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -2406,7 +2176,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -2577,59 +2348,9 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ### Read {:#Read}
 
- Reads 'count' bytes at the seek offset.
+ Reads `count` bytes at the seek offset.
  The seek offset is moved forward by the number of bytes read.
 
  This method requires following rights: `OPEN_RIGHT_READABLE`.
@@ -2662,7 +2383,7 @@ Book: /_book.yaml
 
 ### ReadAt {:#ReadAt}
 
- Reads 'count' bytes at the provided offset.
+ Reads `count` bytes at the provided offset.
  Does not affect the seek offset.
 
  This method requires following rights: `OPEN_RIGHT_READABLE`.
@@ -2836,7 +2557,7 @@ Book: /_book.yaml
 
 ### GetFlags {:#GetFlags}
 
- Acquires the Directory::Open rights and flags used to access this file.
+ Acquires the `Directory.Open` rights and flags used to access this file.
 
  This method does not require any rights.
 
@@ -2863,7 +2584,7 @@ Book: /_book.yaml
 
 ### SetFlags {:#SetFlags}
 
- Changes the Directory::Open flags used to access the file.
+ Changes the `Directory.Open` flags used to access the file.
  Supported flags which can be turned on / off:
  - `OPEN_FLAG_APPEND`
 
@@ -2898,6 +2619,7 @@ Book: /_book.yaml
  `flags` may be any of `VMO_FLAG_*`.
 
  This method requires following rights:
+
  - `OPEN_RIGHT_WRITABLE` if `flags` includes `VMO_FLAG_WRITE`.
  - `OPEN_RIGHT_READABLE` if `flags` includes `VMO_FLAG_READ` or `VMO_FLAG_EXEC`.
 
@@ -2928,11 +2650,11 @@ Book: /_book.yaml
         </tr></table>
 
 ## DirectoryWatcher {:#DirectoryWatcher}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#423)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#419)*
 
  DirectoryWatcher transmits messages from a filesystem server
  about events happening in the filesystem. Clients can register
- new watchers using the Directory "Watch" method, where they can
+ new watchers using the `Directory.Watch` method, where they can
  filter which events they want to receive notifications for.
 
 ### OnEvent {:#OnEvent}
@@ -2951,7 +2673,7 @@ Book: /_book.yaml
 
 
 ## Directory {:#Directory}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#430)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#426)*
 
  Directory defines a node which is capable of containing other Objects.
 
@@ -2960,6 +2682,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -2972,7 +2695,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -3143,62 +2867,12 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ### Open {:#Open}
 
  Opens a new object relative to this directory object.
 
  `path` may contain multiple segments, separated by "/" characters,
- and should never be empty i.e. "" is an invalid path.
+ and should never be empty; i.e., "" is an invalid path.
 
  `flags` may be any of the `OPEN_FLAG_*` and `OPEN_RIGHT_*` values, bitwise ORed together.
  The `OPEN_FLAG_DESCRIBE` flag may cause an `OnOpen` event to be transmitted
@@ -3207,8 +2881,8 @@ Book: /_book.yaml
  If an unknown value is sent for either flags or mode, the connection should
  be closed.
 
- `OPEN_RIGHTS_*` flags provided in `flags` will restrict access rights on the `object` channel
- which will be connected to the opened entity.
+ `OPEN_RIGHT_*` flags provided in `flags` will restrict access rights on
+ the `object` channel which will be connected to the opened entity.
 
  Rights are never increased. When you open a nested entity within a directory, you may only
  request the same rights as what the directory connection already has, or a subset of those.
@@ -3304,17 +2978,19 @@ Book: /_book.yaml
  offset which is updated on subsequent calls to ReadDirents.
 
  These dirents are of the form:
+ ```
  struct dirent {
    // Describes the inode of the entry.
    uint64 ino;
-   // Describes the length of the dirent name.
+   // Describes the length of the dirent name in bytes.
    uint8 size;
    // Describes the type of the entry. Aligned with the
-   /// POSIX d_type values. Use `DIRENT_TYPE_*` constants.
+   // POSIX d_type values. Use `DIRENT_TYPE_*` constants.
    uint8 type;
    // Unterminated name of entry.
    char name[0];
  }
+ ```
 
  This method does not require any rights, since one could always probe for
  directory contents by triggering name conflicts during file creation.
@@ -3486,15 +3162,17 @@ Book: /_book.yaml
  Watches a directory, receiving events of added messages on the
  watcher request channel.
 
- The "watcher" handle will send messages of the form:
+ The `watcher` handle will send messages of the form:
+ ```
  struct {
    uint8 event;
    uint8 len;
    char name[];
  };
+ ```
  Where names are NOT null-terminated.
 
- This API is unstable"; in the future, watcher will be a "DirectoryWatcher" client.
+ This API is unstable; in the future, watcher will be a `DirectoryWatcher` client.
 
  Mask specifies a bitmask of events to observe.
  Options must be zero; it is reserved.
@@ -3543,6 +3221,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -3555,7 +3234,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -3726,62 +3406,12 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ### Open {:#Open}
 
  Opens a new object relative to this directory object.
 
  `path` may contain multiple segments, separated by "/" characters,
- and should never be empty i.e. "" is an invalid path.
+ and should never be empty; i.e., "" is an invalid path.
 
  `flags` may be any of the `OPEN_FLAG_*` and `OPEN_RIGHT_*` values, bitwise ORed together.
  The `OPEN_FLAG_DESCRIBE` flag may cause an `OnOpen` event to be transmitted
@@ -3790,8 +3420,8 @@ Book: /_book.yaml
  If an unknown value is sent for either flags or mode, the connection should
  be closed.
 
- `OPEN_RIGHTS_*` flags provided in `flags` will restrict access rights on the `object` channel
- which will be connected to the opened entity.
+ `OPEN_RIGHT_*` flags provided in `flags` will restrict access rights on
+ the `object` channel which will be connected to the opened entity.
 
  Rights are never increased. When you open a nested entity within a directory, you may only
  request the same rights as what the directory connection already has, or a subset of those.
@@ -3887,17 +3517,19 @@ Book: /_book.yaml
  offset which is updated on subsequent calls to ReadDirents.
 
  These dirents are of the form:
+ ```
  struct dirent {
    // Describes the inode of the entry.
    uint64 ino;
-   // Describes the length of the dirent name.
+   // Describes the length of the dirent name in bytes.
    uint8 size;
    // Describes the type of the entry. Aligned with the
-   /// POSIX d_type values. Use `DIRENT_TYPE_*` constants.
+   // POSIX d_type values. Use `DIRENT_TYPE_*` constants.
    uint8 type;
    // Unterminated name of entry.
    char name[0];
  }
+ ```
 
  This method does not require any rights, since one could always probe for
  directory contents by triggering name conflicts during file creation.
@@ -4069,15 +3701,17 @@ Book: /_book.yaml
  Watches a directory, receiving events of added messages on the
  watcher request channel.
 
- The "watcher" handle will send messages of the form:
+ The `watcher` handle will send messages of the form:
+ ```
  struct {
    uint8 event;
    uint8 len;
    char name[];
  };
+ ```
  Where names are NOT null-terminated.
 
- This API is unstable"; in the future, watcher will be a "DirectoryWatcher" client.
+ This API is unstable; in the future, watcher will be a `DirectoryWatcher` client.
 
  Mask specifies a bitmask of events to observe.
  Options must be zero; it is reserved.
@@ -4449,7 +4083,7 @@ Book: /_book.yaml
 </table>
 
 ### NodeAttributes {:#NodeAttributes}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#239)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#236)*
 
 
 
@@ -4517,7 +4151,7 @@ Book: /_book.yaml
 </table>
 
 ### WatchedEvent {:#WatchedEvent}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#411)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#407)*
 
 
 
@@ -4817,7 +4451,7 @@ Book: /_book.yaml
 </table>
 
 ### NodeAttributes {:#NodeAttributes}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#239)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#236)*
 
 
 
@@ -4885,7 +4519,7 @@ Book: /_book.yaml
 </table>
 
 ### WatchedEvent {:#WatchedEvent}
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#411)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#407)*
 
 
 
@@ -5023,7 +4657,7 @@ Book: /_book.yaml
 ### SeekOrigin {:#SeekOrigin}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#274)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#269)*
 
  Update the Seek offset.
 
@@ -5046,7 +4680,7 @@ Type: <code>uint32</code>
 ### SeekOrigin {:#SeekOrigin}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#274)*
+*Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#269)*
 
  Update the Seek offset.
 
@@ -5078,7 +4712,7 @@ Type: <code>uint32</code>
  Describes how the connection to an should be handled, as well as
  how to interpret the optional handle.
 
- Refer to `Node::Describe()` and `Node::OnOpen()` for usage.
+ Refer to `Node.Describe()` and `Node.OnOpen()` for usage.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -5137,7 +4771,7 @@ Type: <code>uint32</code>
  Describes how the connection to an should be handled, as well as
  how to interpret the optional handle.
 
- Refer to `Node::Describe()` and `Node::OnOpen()` for usage.
+ Refer to `Node.Describe()` and `Node.OnOpen()` for usage.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -5438,7 +5072,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#227">MODE_PROTECTION_MASK</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#224">MODE_PROTECTION_MASK</a></td>
             <td>
                     <code>4095</code>
                 </td>
@@ -5450,7 +5084,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#231">MODE_TYPE_MASK</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#228">MODE_TYPE_MASK</a></td>
             <td>
                     <code>1044480</code>
                 </td>
@@ -5461,7 +5095,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#232">MODE_TYPE_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#229">MODE_TYPE_DIRECTORY</a></td>
             <td>
                     <code>16384</code>
                 </td>
@@ -5469,7 +5103,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#233">MODE_TYPE_BLOCK_DEVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#230">MODE_TYPE_BLOCK_DEVICE</a></td>
             <td>
                     <code>24576</code>
                 </td>
@@ -5477,7 +5111,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#234">MODE_TYPE_FILE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#231">MODE_TYPE_FILE</a></td>
             <td>
                     <code>32768</code>
                 </td>
@@ -5485,7 +5119,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#235">MODE_TYPE_SOCKET</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#232">MODE_TYPE_SOCKET</a></td>
             <td>
                     <code>49152</code>
                 </td>
@@ -5493,7 +5127,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#236">MODE_TYPE_SERVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#233">MODE_TYPE_SERVICE</a></td>
             <td>
                     <code>65536</code>
                 </td>
@@ -5501,15 +5135,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#256">MAX_IOCTL_HANDLES</a></td>
-            <td>
-                    <code>2</code>
-                </td>
-                <td><code>uint64</code></td>
-            <td></td>
-        </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#260">MAX_BUF</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#255">MAX_BUF</a></td>
             <td>
                     <code>8192</code>
                 </td>
@@ -5519,7 +5145,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#264">MAX_PATH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#259">MAX_PATH</a></td>
             <td>
                     <code>4096</code>
                 </td>
@@ -5528,7 +5154,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#266">MAX_FILENAME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#261">MAX_FILENAME</a></td>
             <td>
                     <code>255</code>
                 </td>
@@ -5537,7 +5163,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#270">NODE_ATTRIBUTE_FLAG_CREATION_TIME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#265">NODE_ATTRIBUTE_FLAG_CREATION_TIME</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -5547,7 +5173,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#271">NODE_ATTRIBUTE_FLAG_MODIFICATION_TIME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#266">NODE_ATTRIBUTE_FLAG_MODIFICATION_TIME</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -5555,7 +5181,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#284">VMO_FLAG_READ</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#279">VMO_FLAG_READ</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -5564,7 +5190,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#287">VMO_FLAG_WRITE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#282">VMO_FLAG_WRITE</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -5573,7 +5199,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#290">VMO_FLAG_EXEC</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#285">VMO_FLAG_EXEC</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -5582,7 +5208,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#295">VMO_FLAG_PRIVATE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#290">VMO_FLAG_PRIVATE</a></td>
             <td>
                     <code>65536</code>
                 </td>
@@ -5593,7 +5219,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#300">VMO_FLAG_EXACT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#295">VMO_FLAG_EXACT</a></td>
             <td>
                     <code>131072</code>
                 </td>
@@ -5604,7 +5230,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#369">DIRENT_TYPE_UNKNOWN</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#365">DIRENT_TYPE_UNKNOWN</a></td>
             <td>
                     <code>0</code>
                 </td>
@@ -5613,7 +5239,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#371">DIRENT_TYPE_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#367">DIRENT_TYPE_DIRECTORY</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -5622,7 +5248,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#373">DIRENT_TYPE_BLOCK_DEVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#369">DIRENT_TYPE_BLOCK_DEVICE</a></td>
             <td>
                     <code>6</code>
                 </td>
@@ -5631,7 +5257,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#375">DIRENT_TYPE_FILE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#371">DIRENT_TYPE_FILE</a></td>
             <td>
                     <code>8</code>
                 </td>
@@ -5640,7 +5266,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#377">DIRENT_TYPE_SOCKET</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#373">DIRENT_TYPE_SOCKET</a></td>
             <td>
                     <code>12</code>
                 </td>
@@ -5649,7 +5275,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#379">DIRENT_TYPE_SERVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#375">DIRENT_TYPE_SERVICE</a></td>
             <td>
                     <code>16</code>
                 </td>
@@ -5658,7 +5284,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#383">INO_UNKNOWN</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#379">INO_UNKNOWN</a></td>
             <td>
                     <code>18446744073709551615</code>
                 </td>
@@ -5668,7 +5294,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#386">WATCH_EVENT_DELETED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#382">WATCH_EVENT_DELETED</a></td>
             <td>
                     <code>0</code>
                 </td>
@@ -5677,7 +5303,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#388">WATCH_EVENT_ADDED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#384">WATCH_EVENT_ADDED</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -5686,7 +5312,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#390">WATCH_EVENT_REMOVED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#386">WATCH_EVENT_REMOVED</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -5695,7 +5321,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#392">WATCH_EVENT_EXISTING</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#388">WATCH_EVENT_EXISTING</a></td>
             <td>
                     <code>3</code>
                 </td>
@@ -5704,7 +5330,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#394">WATCH_EVENT_IDLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#390">WATCH_EVENT_IDLE</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -5713,57 +5339,57 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#397">WATCH_MASK_DELETED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#393">WATCH_MASK_DELETED</a></td>
             <td>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_DELETED`.
+            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_DELETED`.
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#399">WATCH_MASK_ADDED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#395">WATCH_MASK_ADDED</a></td>
             <td>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_ADDED`.
+            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_ADDED`.
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#401">WATCH_MASK_REMOVED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#397">WATCH_MASK_REMOVED</a></td>
             <td>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_REMOVED`.
+            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_REMOVED`.
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#403">WATCH_MASK_EXISTING</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#399">WATCH_MASK_EXISTING</a></td>
             <td>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_EXISTING`.
+            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_EXISTING`.
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#405">WATCH_MASK_IDLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#401">WATCH_MASK_IDLE</a></td>
             <td>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_IDLE`.
+            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_IDLE`.
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#407">WATCH_MASK_ALL</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#403">WATCH_MASK_ALL</a></td>
             <td>
                     <code>31</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of all watcher events.
+            <td> Used by `Directory.Watch`. Requests transmission of all watcher events.
 </td>
         </tr>
     <tr>
@@ -6021,7 +5647,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#227">MODE_PROTECTION_MASK</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#224">MODE_PROTECTION_MASK</a></td>
             <td>
                     <code>4095</code>
                 </td>
@@ -6033,7 +5659,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#231">MODE_TYPE_MASK</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#228">MODE_TYPE_MASK</a></td>
             <td>
                     <code>1044480</code>
                 </td>
@@ -6044,7 +5670,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#232">MODE_TYPE_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#229">MODE_TYPE_DIRECTORY</a></td>
             <td>
                     <code>16384</code>
                 </td>
@@ -6052,7 +5678,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#233">MODE_TYPE_BLOCK_DEVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#230">MODE_TYPE_BLOCK_DEVICE</a></td>
             <td>
                     <code>24576</code>
                 </td>
@@ -6060,7 +5686,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#234">MODE_TYPE_FILE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#231">MODE_TYPE_FILE</a></td>
             <td>
                     <code>32768</code>
                 </td>
@@ -6068,7 +5694,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#235">MODE_TYPE_SOCKET</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#232">MODE_TYPE_SOCKET</a></td>
             <td>
                     <code>49152</code>
                 </td>
@@ -6076,7 +5702,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#236">MODE_TYPE_SERVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#233">MODE_TYPE_SERVICE</a></td>
             <td>
                     <code>65536</code>
                 </td>
@@ -6084,15 +5710,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#256">MAX_IOCTL_HANDLES</a></td>
-            <td>
-                    <code>2</code>
-                </td>
-                <td><code>uint64</code></td>
-            <td></td>
-        </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#260">MAX_BUF</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#255">MAX_BUF</a></td>
             <td>
                     <code>8192</code>
                 </td>
@@ -6102,7 +5720,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#264">MAX_PATH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#259">MAX_PATH</a></td>
             <td>
                     <code>4096</code>
                 </td>
@@ -6111,7 +5729,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#266">MAX_FILENAME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#261">MAX_FILENAME</a></td>
             <td>
                     <code>255</code>
                 </td>
@@ -6120,7 +5738,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#270">NODE_ATTRIBUTE_FLAG_CREATION_TIME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#265">NODE_ATTRIBUTE_FLAG_CREATION_TIME</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -6130,7 +5748,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#271">NODE_ATTRIBUTE_FLAG_MODIFICATION_TIME</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#266">NODE_ATTRIBUTE_FLAG_MODIFICATION_TIME</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -6138,7 +5756,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#284">VMO_FLAG_READ</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#279">VMO_FLAG_READ</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -6147,7 +5765,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#287">VMO_FLAG_WRITE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#282">VMO_FLAG_WRITE</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -6156,7 +5774,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#290">VMO_FLAG_EXEC</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#285">VMO_FLAG_EXEC</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -6165,7 +5783,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#295">VMO_FLAG_PRIVATE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#290">VMO_FLAG_PRIVATE</a></td>
             <td>
                     <code>65536</code>
                 </td>
@@ -6176,7 +5794,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#300">VMO_FLAG_EXACT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#295">VMO_FLAG_EXACT</a></td>
             <td>
                     <code>131072</code>
                 </td>
@@ -6187,7 +5805,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#369">DIRENT_TYPE_UNKNOWN</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#365">DIRENT_TYPE_UNKNOWN</a></td>
             <td>
                     <code>0</code>
                 </td>
@@ -6196,7 +5814,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#371">DIRENT_TYPE_DIRECTORY</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#367">DIRENT_TYPE_DIRECTORY</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -6205,7 +5823,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#373">DIRENT_TYPE_BLOCK_DEVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#369">DIRENT_TYPE_BLOCK_DEVICE</a></td>
             <td>
                     <code>6</code>
                 </td>
@@ -6214,7 +5832,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#375">DIRENT_TYPE_FILE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#371">DIRENT_TYPE_FILE</a></td>
             <td>
                     <code>8</code>
                 </td>
@@ -6223,7 +5841,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#377">DIRENT_TYPE_SOCKET</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#373">DIRENT_TYPE_SOCKET</a></td>
             <td>
                     <code>12</code>
                 </td>
@@ -6232,7 +5850,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#379">DIRENT_TYPE_SERVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#375">DIRENT_TYPE_SERVICE</a></td>
             <td>
                     <code>16</code>
                 </td>
@@ -6241,7 +5859,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#383">INO_UNKNOWN</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#379">INO_UNKNOWN</a></td>
             <td>
                     <code>18446744073709551615</code>
                 </td>
@@ -6251,7 +5869,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#386">WATCH_EVENT_DELETED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#382">WATCH_EVENT_DELETED</a></td>
             <td>
                     <code>0</code>
                 </td>
@@ -6260,7 +5878,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#388">WATCH_EVENT_ADDED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#384">WATCH_EVENT_ADDED</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -6269,7 +5887,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#390">WATCH_EVENT_REMOVED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#386">WATCH_EVENT_REMOVED</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -6278,7 +5896,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#392">WATCH_EVENT_EXISTING</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#388">WATCH_EVENT_EXISTING</a></td>
             <td>
                     <code>3</code>
                 </td>
@@ -6287,7 +5905,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#394">WATCH_EVENT_IDLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#390">WATCH_EVENT_IDLE</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -6296,57 +5914,57 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#397">WATCH_MASK_DELETED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#393">WATCH_MASK_DELETED</a></td>
             <td>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_DELETED`.
+            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_DELETED`.
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#399">WATCH_MASK_ADDED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#395">WATCH_MASK_ADDED</a></td>
             <td>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_ADDED`.
+            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_ADDED`.
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#401">WATCH_MASK_REMOVED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#397">WATCH_MASK_REMOVED</a></td>
             <td>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_REMOVED`.
+            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_REMOVED`.
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#403">WATCH_MASK_EXISTING</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#399">WATCH_MASK_EXISTING</a></td>
             <td>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_EXISTING`.
+            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_EXISTING`.
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#405">WATCH_MASK_IDLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#401">WATCH_MASK_IDLE</a></td>
             <td>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of `WATCH_EVENT_IDLE`.
+            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_IDLE`.
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#407">WATCH_MASK_ALL</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#403">WATCH_MASK_ALL</a></td>
             <td>
                     <code>31</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by Directory::Watch. Requests transmission of all watcher events.
+            <td> Used by `Directory.Watch`. Requests transmission of all watcher events.
 </td>
         </tr>
     <tr>

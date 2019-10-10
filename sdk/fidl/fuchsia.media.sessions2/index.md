@@ -171,8 +171,24 @@ Book: /_book.yaml
 
 
 
+### BindVolumeControl {:#BindVolumeControl}
+
+ Binds to the session's volume control for control and notifications.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>volume_control_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.media.audio/index.html'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/index.html#VolumeControl'>VolumeControl</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
 ## SessionsWatcher {:#SessionsWatcher}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#76)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#80)*
 
  `SessionsWatcher` watches the collection of published sessions.
 
@@ -231,7 +247,7 @@ Book: /_book.yaml
     </table>
 
 ## Discovery {:#Discovery}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#96)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#100)*
 
  `Discovery` observes the collection of published media sessions
  and connects clients to them.
@@ -444,8 +460,24 @@ Book: /_book.yaml
 
 
 
+### BindVolumeControl {:#BindVolumeControl}
+
+ Binds to the session's volume control for control and notifications.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>volume_control_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.media.audio/index.html'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/index.html#VolumeControl'>VolumeControl</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
 ## Player {:#Player}
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#155)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#160)*
 
  `Player` is a handle for a media player. Unsupported commands are
  no-ops.  Consult `PlaybackCapabilities`, sent by to learn which
@@ -606,6 +638,22 @@ Book: /_book.yaml
             <td><code>gain_control_request</code></td>
             <td>
                 <code>request&lt;<a class='link' href='../fuchsia.media.audio/index.html'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/index.html#GainControl'>GainControl</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+### BindVolumeControl {:#BindVolumeControl}
+
+ Binds to the session's volume control for control and notifications.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>volume_control_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.media.audio/index.html'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/index.html#VolumeControl'>VolumeControl</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -823,8 +871,24 @@ Book: /_book.yaml
 
 
 
+### BindVolumeControl {:#BindVolumeControl}
+
+ Binds to the session's volume control for control and notifications.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>volume_control_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.media.audio/index.html'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/index.html#VolumeControl'>VolumeControl</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
 ## SessionsWatcher {:#SessionsWatcher}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#76)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#80)*
 
  `SessionsWatcher` watches the collection of published sessions.
 
@@ -883,7 +947,7 @@ Book: /_book.yaml
     </table>
 
 ## Discovery {:#Discovery}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#96)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#100)*
 
  `Discovery` observes the collection of published media sessions
  and connects clients to them.
@@ -1096,8 +1160,24 @@ Book: /_book.yaml
 
 
 
+### BindVolumeControl {:#BindVolumeControl}
+
+ Binds to the session's volume control for control and notifications.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>volume_control_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.media.audio/index.html'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/index.html#VolumeControl'>VolumeControl</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
 ## Player {:#Player}
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#155)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#160)*
 
  `Player` is a handle for a media player. Unsupported commands are
  no-ops.  Consult `PlaybackCapabilities`, sent by to learn which
@@ -1263,6 +1343,22 @@ Book: /_book.yaml
 
 
 
+### BindVolumeControl {:#BindVolumeControl}
+
+ Binds to the session's volume control for control and notifications.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>volume_control_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.media.audio/index.html'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/index.html#VolumeControl'>VolumeControl</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
 ### WatchInfoChange {:#WatchInfoChange}
 
  Leave hanging to receive a response when the player's
@@ -1405,7 +1501,7 @@ Type: <code>uint32</code>
 ### ContentType {:#ContentType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#55)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#60)*
 
  The type of content playing back, which should be set to the largest
  applicable value.
@@ -1441,7 +1537,7 @@ Type: <code>uint32</code>
 ### PlayerState {:#PlayerState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#81)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#86)*
 
  State of a media player.
 
@@ -1472,7 +1568,7 @@ Type: <code>uint32</code>
 ### Error {:#Error}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#93)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#98)*
 
 
 
@@ -1486,7 +1582,7 @@ Type: <code>uint32</code>
 ### RepeatMode {:#RepeatMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#98)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#103)*
 
  Modes of repeating playback of the current media.
 
@@ -1527,7 +1623,7 @@ Type: <code>uint32</code>
 ### ContentType {:#ContentType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#55)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#60)*
 
  The type of content playing back, which should be set to the largest
  applicable value.
@@ -1563,7 +1659,7 @@ Type: <code>uint32</code>
 ### PlayerState {:#PlayerState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#81)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#86)*
 
  State of a media player.
 
@@ -1594,7 +1690,7 @@ Type: <code>uint32</code>
 ### Error {:#Error}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#93)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#98)*
 
 
 
@@ -1608,7 +1704,7 @@ Type: <code>uint32</code>
 ### RepeatMode {:#RepeatMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#98)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#103)*
 
  Modes of repeating playback of the current media.
 
@@ -1710,7 +1806,7 @@ Type: <code>uint32</code>
 ### WatchOptions {:#WatchOptions}
 
 
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#70)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#74)*
 
 
 
@@ -1756,7 +1852,7 @@ Type: <code>uint32</code>
 ### PlayerStatus {:#PlayerStatus}
 
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#65)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#70)*
 
  Status of a media player.
 
@@ -1822,7 +1918,7 @@ Type: <code>uint32</code>
 ### PlayerCapabilities {:#PlayerCapabilities}
 
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#134)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#139)*
 
  `PlaybackCapabilities` enumerates the capabilities of a media player, and
  corresponds to the control commands it can execute.
@@ -1842,7 +1938,7 @@ Type: <code>uint32</code>
 ### PlayerInfoDelta {:#PlayerInfoDelta}
 
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#140)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#145)*
 
  When emitted, fields that have changed should be set.
  The first emission to a new client should be a snapshot.
@@ -1992,7 +2088,7 @@ Type: <code>uint32</code>
 ### WatchOptions {:#WatchOptions}
 
 
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#70)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#74)*
 
 
 
@@ -2038,7 +2134,7 @@ Type: <code>uint32</code>
 ### PlayerStatus {:#PlayerStatus}
 
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#65)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#70)*
 
  Status of a media player.
 
@@ -2104,7 +2200,7 @@ Type: <code>uint32</code>
 ### PlayerCapabilities {:#PlayerCapabilities}
 
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#134)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#139)*
 
  `PlaybackCapabilities` enumerates the capabilities of a media player, and
  corresponds to the control commands it can execute.
@@ -2124,7 +2220,7 @@ Type: <code>uint32</code>
 ### PlayerInfoDelta {:#PlayerInfoDelta}
 
 
-*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#140)*
+*Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#145)*
 
  When emitted, fields that have changed should be set.
  The first emission to a new client should be a snapshot.

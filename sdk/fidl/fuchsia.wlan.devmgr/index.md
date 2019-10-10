@@ -20,6 +20,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -32,7 +33,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -203,62 +205,12 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ### Open {:#Open}
 
  Opens a new object relative to this directory object.
 
  `path` may contain multiple segments, separated by "/" characters,
- and should never be empty i.e. "" is an invalid path.
+ and should never be empty; i.e., "" is an invalid path.
 
  `flags` may be any of the `OPEN_FLAG_*` and `OPEN_RIGHT_*` values, bitwise ORed together.
  The `OPEN_FLAG_DESCRIBE` flag may cause an `OnOpen` event to be transmitted
@@ -267,8 +219,8 @@ Book: /_book.yaml
  If an unknown value is sent for either flags or mode, the connection should
  be closed.
 
- `OPEN_RIGHTS_*` flags provided in `flags` will restrict access rights on the `object` channel
- which will be connected to the opened entity.
+ `OPEN_RIGHT_*` flags provided in `flags` will restrict access rights on
+ the `object` channel which will be connected to the opened entity.
 
  Rights are never increased. When you open a nested entity within a directory, you may only
  request the same rights as what the directory connection already has, or a subset of those.
@@ -364,17 +316,19 @@ Book: /_book.yaml
  offset which is updated on subsequent calls to ReadDirents.
 
  These dirents are of the form:
+ ```
  struct dirent {
    // Describes the inode of the entry.
    uint64 ino;
-   // Describes the length of the dirent name.
+   // Describes the length of the dirent name in bytes.
    uint8 size;
    // Describes the type of the entry. Aligned with the
-   /// POSIX d_type values. Use `DIRENT_TYPE_*` constants.
+   // POSIX d_type values. Use `DIRENT_TYPE_*` constants.
    uint8 type;
    // Unterminated name of entry.
    char name[0];
  }
+ ```
 
  This method does not require any rights, since one could always probe for
  directory contents by triggering name conflicts during file creation.
@@ -546,15 +500,17 @@ Book: /_book.yaml
  Watches a directory, receiving events of added messages on the
  watcher request channel.
 
- The "watcher" handle will send messages of the form:
+ The `watcher` handle will send messages of the form:
+ ```
  struct {
    uint8 event;
    uint8 len;
    char name[];
  };
+ ```
  Where names are NOT null-terminated.
 
- This API is unstable"; in the future, watcher will be a "DirectoryWatcher" client.
+ This API is unstable; in the future, watcher will be a `DirectoryWatcher` client.
 
  Mask specifies a bitmask of events to observe.
  Options must be zero; it is reserved.

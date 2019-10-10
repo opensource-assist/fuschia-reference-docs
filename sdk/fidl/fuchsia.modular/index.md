@@ -1652,255 +1652,6 @@ Book: /_book.yaml
 
 
 
-## Link {:#Link}
-*Defined in [fuchsia.modular/link.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/link.fidl#49)*
-
- This interface is implemented by the story runner. The ModuleContext service
- acts as a factory for it.
-
- An instance of Link holds one of two types of values:
-
- (1) A JSON string that can be modified incrementally or completely
-     overwritten, depending on the use of Set() and Update(). The JSON string
-     is set to "null" when the Link is created.
-
- (2) An entity reference that can be set or retrieved with SetEntity() and
-     GetEntity().
-
- Each Module instance receives one Link instance for each parameter of its
- action template in its ModuleContext. It receives its ModuleContext in
- Module.Initialize() or in its service namespace. The Module can access its
- Links by calling ModuleContext.GetLink() with the intent parameter name as
- the link name. These instances are shared with the parent Module if there is
- any, or with the StoryController client if the Module is a top level Module
- of a Story. A Module can create additional Link instances by calling
- ModuleContext.GetLink() with any other link name. Why would it do that? To
- share the new Link instance with Modules it requests to start in turn, or to
- record its own state in the story record, so that it is transferred to other
- devices that run the same story, or to persist it for later resumption of the
- story.
-
- A client may obtain another handle to the same Link instance by calling
- GetLink() with the same name again.
-
- A client of Link can set the JSON string stored in the instance and register
- a handler (an implementation of the LinkWatcher interface) to be notified of
- changes to the JSON string in the Link. A client may or may not be notified
- of changes it itself makes to the Link value, depending on whether it
- registers with WatchAll() or Watch(), respectively. If the client registers
- with Watch(), then it will not be notified of changes made through the same
- Link connection.
-
- No service name: returned from ModuleContext.GetLink().
-
-### Get {:#Get}
-
- Gets the value at the given `path`, which is represented using the JSON
- Pointer specification (https://tools.ietf.org/html/rfc6901).
-
- `json_data` is a UTF8 encoded string representing valid JSON.
-
- Returns null if `path` does not exist. Returns the entire JSON object
- if `path` is either null or an empty array. Returns the string "null" if
- the link is empty.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>path</code></td>
-            <td>
-                <code>vector&lt;string&gt;?</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>json_data</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a>?</code>
-            </td>
-        </tr></table>
-
-### Set {:#Set}
-
- Set() overwrites the value/object/array at the given `path`. Set also
- overwrites any values or arrays as necessary to ensure that `path` exists.
- The `json_data` parameter must be a UTF8 encoded JSON string.
- Either pass "null" to set the value to null, or use Erase to
- completely remove a member of an object. To replace the root, pass null for
- `path`.
-
- This call notifies Watchers, although this may be skipped if nothing
- changed.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>path</code></td>
-            <td>
-                <code>vector&lt;string&gt;?</code>
-            </td>
-        </tr><tr>
-            <td><code>json_data</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
-            </td>
-        </tr></table>
-
-
-
-### Erase {:#Erase}
-
- Erases the object member at the given `path`. If the path is not found or
- does not match the current structure of the JSON, the path will not be
- created and the call is ignored. The `path` parameter cannot be null or
- zero length because the root is a value, not a key. This call notifies
- Watchers, although this may be skipped if nothing changed.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>path</code></td>
-            <td>
-                <code>vector&lt;string&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### GetEntity {:#GetEntity}
-
- Returns the entity reference in this link. If no entity reference is
- present, returns a null fidl string.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>entity_reference</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr></table>
-
-### SetEntity {:#SetEntity}
-
- Sets this to be an Entity Link with the given `entity_reference`. The
- existing value of the link is overwritten. If `entity_reference` is null,
- then any existing value in the link is overwritten with the JSON string
- "null".
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>entity_reference</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr></table>
-
-
-
-### Watch {:#Watch}
-
- Registers a watcher, which is notified whenever the document changes. This
- watcher will not be invoked for changes caused by calls made on this
- handle. The Notify() callback method will be immediately invoked with the
- value in the Link, even if it's empty.
-
- The LinkWatcher connection will be closed if the owning Link handle closed.
-
- All connections to a Link and LinkWatcher are closed once the story the
- link belongs to is stopped.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>watcher</code></td>
-            <td>
-                <code><a class='link' href='#LinkWatcher'>LinkWatcher</a></code>
-            </td>
-        </tr></table>
-
-
-
-### WatchAll {:#WatchAll}
-
- Like Watch(), but the watcher is notified also of changes made through the
- same handle as the watcher is registered on.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>watcher</code></td>
-            <td>
-                <code><a class='link' href='#LinkWatcher'>LinkWatcher</a></code>
-            </td>
-        </tr></table>
-
-
-
-### Sync {:#Sync}
-
- Waits for the completion of methods previously invoked on the same
- connection. Allows to create sequentiality across service instances without
- giving every method an empty return value. Nb. this makes no guarantees
- about sequentiality with methods invoked on different connections, even to
- the same Link instance.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-## LinkWatcher {:#LinkWatcher}
-*Defined in [fuchsia.modular/link.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/link.fidl#119)*
-
- This interface is implemented by a client of Link.
-
- The Notify() method is invoked whenever the Link changes. The entire JSON
- string in the Link will be sent. In other words, this isn't an incremental
- notification. `json` cannot be null because an empty Link is the valid JSON
- document "null".
-
- No service name: created by Module.
-
-### Notify {:#Notify}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>json</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
-            </td>
-        </tr></table>
-
-
-
 ## PuppetMaster {:#PuppetMaster}
 *Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#52)*
 
@@ -2001,21 +1752,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### SetCreateOptions {:#SetCreateOptions}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>story_options</code></td>
-            <td>
-                <code><a class='link' href='#StoryOptions'>StoryOptions</a></code>
-            </td>
-        </tr></table>
-
-
-
 ### SetStoryInfoExtra {:#SetStoryInfoExtra}
 
 
@@ -2104,7 +1840,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryController {:#StoryController}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#14)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#12)*
 
  Used by the clients of StoryProvider (SessionShell) to interact with a single
  story. Created by StoryProvider.
@@ -2193,30 +1929,6 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
-### TakeAndLoadSnapshot {:#TakeAndLoadSnapshot}
-
- Creates a new view with the given `view_owner` request to display
- snapshots. Takes a snapshot for the story controlled by this
- `StoryController` and then loads the snapshot to the created view such that
- it is rendered. The callback will be invoked once the view has been created
- and the snapshot has been loaded.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>view_token</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.views/index.html'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/index.html#ViewToken'>ViewToken</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
 ### Watch {:#Watch}
 
  Registers a watcher for changes of the story state.
@@ -2235,46 +1947,6 @@ Book: /_book.yaml
         </tr></table>
 
 
-
-### GetActiveModules {:#GetActiveModules}
-
- DEPRECATED
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>module_data</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ModuleData'>ModuleData</a>&gt;</code>
-            </td>
-        </tr></table>
-
-### GetModules {:#GetModules}
-
- DEPRECATED
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>module_data</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ModuleData'>ModuleData</a>&gt;</code>
-            </td>
-        </tr></table>
 
 ### GetModuleController {:#GetModuleController}
 
@@ -2326,7 +1998,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryWatcher {:#StoryWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#64)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#49)*
 
  Implemented by the client calling StoryController.Watch().
 
@@ -2374,42 +2046,6 @@ Book: /_book.yaml
             <td><code>module_path</code></td>
             <td>
                 <code>vector&lt;string&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-## StoryLinksWatcher {:#StoryLinksWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#80)*
-
- Implemented by the client calling StoryController.GetActiveLinks().
-
- DEPRECATED: StoryController is only to be used for Story concepts
- (metadata about, and requesting changes to runtime state).
-
-### OnNewLink {:#OnNewLink}
-
- Called when a link becomes active in the story, i.e. when it is loaded into
- memory and connected with modules and watchers. After this notification,
- the Link can be obtained with GetLink() and further notifications can be
- obtained from watchers on the Link and connection error handlers on the
- LinkWatcher.
-
- Note that the Link remains active until there are no connections to it
- left. Hence in order to obtain a notification when the Link becomes
- inactive, a client must give up the Link connection after registering a
- LinkWatcher, and listen for the LinkWatcher connection to go down.
-
- This is EXPERIMENTAL. We certainly can make this simpler once we know it is
- what we need.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>link_path</code></td>
-            <td>
-                <code><a class='link' href='#LinkPath'>LinkPath</a></code>
             </td>
         </tr></table>
 
@@ -2806,91 +2442,6 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
-### AddContainer {:#AddContainer}
-
- Adds a container, with corresponding container layouts to the story.
- Optionally provide a parent_id to connect to, if omitted adds the
- Container node as the root of a new tree in the Story
- DEPRECATED
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>containerName</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>parentId</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr><tr>
-            <td><code>relation</code></td>
-            <td>
-                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
-            </td>
-        </tr><tr>
-            <td><code>layout</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerLayout'>ContainerLayout</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>relationships</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>views</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerView'>ContainerView</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### AddContainer2 {:#AddContainer2}
-
- DEPRECATED.  For transition purposes only.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>containerName</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>parentId</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr><tr>
-            <td><code>relation</code></td>
-            <td>
-                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
-            </td>
-        </tr><tr>
-            <td><code>layout</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerLayout'>ContainerLayout</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>relationships</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>views</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerView2'>ContainerView2</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### OnSurfaceFocused {:#OnSurfaceFocused}
 
  Notify when a Surface is focused in the story. The focus could be from
@@ -2924,50 +2475,6 @@ Book: /_book.yaml
             <td><code>surface_id</code></td>
             <td>
                 <code>string</code>
-            </td>
-        </tr></table>
-
-
-
-### ReconnectView {:#ReconnectView}
-
- Reconnect the view in viewConnection.
-
- Called to reconnect views that have previously been added to the story
- shell via addSurface, and then disconnected. A ViewTokenPair is created
- and the View token is given to the child view.  The ViewHolder token
- is notified if the View is destroyed before it is connected.  Once the
- ViewHolder has been created using a Scenic `Session`, the Session will be
- notified when the view is available, if it becomes unavailable, or if
- it is disconnected.
- If a surface with a disconnected view is to be shown again, ReconnectView
- is called.
-
- E.g. called in response to StoryShell calling RequestView().
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>view_connection</code></td>
-            <td>
-                <code><a class='link' href='#ViewConnection'>ViewConnection</a></code>
-            </td>
-        </tr></table>
-
-
-
-### ReconnectView2 {:#ReconnectView2}
-
- DEPRECATED.  For transition purposes only.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>view_connection</code></td>
-            <td>
-                <code><a class='link' href='#ViewConnection2'>ViewConnection2</a></code>
             </td>
         </tr></table>
 
@@ -3044,7 +2551,7 @@ Book: /_book.yaml
 
 
 ## StoryShellContext {:#StoryShellContext}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#193)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#135)*
 
  This interface provides the StoryShell instance with everything it needs to
  know or be able to do about the Story. Not much right now, but we expect this
@@ -3102,7 +2609,7 @@ Book: /_book.yaml
 
 
 ## StoryVisualStateWatcher {:#StoryVisualStateWatcher}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#208)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#150)*
 
  Implemented by StoryShell to get notified about visual state changes.
 
@@ -4872,255 +4379,6 @@ Book: /_book.yaml
 
 
 
-## Link {:#Link}
-*Defined in [fuchsia.modular/link.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/link.fidl#49)*
-
- This interface is implemented by the story runner. The ModuleContext service
- acts as a factory for it.
-
- An instance of Link holds one of two types of values:
-
- (1) A JSON string that can be modified incrementally or completely
-     overwritten, depending on the use of Set() and Update(). The JSON string
-     is set to "null" when the Link is created.
-
- (2) An entity reference that can be set or retrieved with SetEntity() and
-     GetEntity().
-
- Each Module instance receives one Link instance for each parameter of its
- action template in its ModuleContext. It receives its ModuleContext in
- Module.Initialize() or in its service namespace. The Module can access its
- Links by calling ModuleContext.GetLink() with the intent parameter name as
- the link name. These instances are shared with the parent Module if there is
- any, or with the StoryController client if the Module is a top level Module
- of a Story. A Module can create additional Link instances by calling
- ModuleContext.GetLink() with any other link name. Why would it do that? To
- share the new Link instance with Modules it requests to start in turn, or to
- record its own state in the story record, so that it is transferred to other
- devices that run the same story, or to persist it for later resumption of the
- story.
-
- A client may obtain another handle to the same Link instance by calling
- GetLink() with the same name again.
-
- A client of Link can set the JSON string stored in the instance and register
- a handler (an implementation of the LinkWatcher interface) to be notified of
- changes to the JSON string in the Link. A client may or may not be notified
- of changes it itself makes to the Link value, depending on whether it
- registers with WatchAll() or Watch(), respectively. If the client registers
- with Watch(), then it will not be notified of changes made through the same
- Link connection.
-
- No service name: returned from ModuleContext.GetLink().
-
-### Get {:#Get}
-
- Gets the value at the given `path`, which is represented using the JSON
- Pointer specification (https://tools.ietf.org/html/rfc6901).
-
- `json_data` is a UTF8 encoded string representing valid JSON.
-
- Returns null if `path` does not exist. Returns the entire JSON object
- if `path` is either null or an empty array. Returns the string "null" if
- the link is empty.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>path</code></td>
-            <td>
-                <code>vector&lt;string&gt;?</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>json_data</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a>?</code>
-            </td>
-        </tr></table>
-
-### Set {:#Set}
-
- Set() overwrites the value/object/array at the given `path`. Set also
- overwrites any values or arrays as necessary to ensure that `path` exists.
- The `json_data` parameter must be a UTF8 encoded JSON string.
- Either pass "null" to set the value to null, or use Erase to
- completely remove a member of an object. To replace the root, pass null for
- `path`.
-
- This call notifies Watchers, although this may be skipped if nothing
- changed.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>path</code></td>
-            <td>
-                <code>vector&lt;string&gt;?</code>
-            </td>
-        </tr><tr>
-            <td><code>json_data</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
-            </td>
-        </tr></table>
-
-
-
-### Erase {:#Erase}
-
- Erases the object member at the given `path`. If the path is not found or
- does not match the current structure of the JSON, the path will not be
- created and the call is ignored. The `path` parameter cannot be null or
- zero length because the root is a value, not a key. This call notifies
- Watchers, although this may be skipped if nothing changed.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>path</code></td>
-            <td>
-                <code>vector&lt;string&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### GetEntity {:#GetEntity}
-
- Returns the entity reference in this link. If no entity reference is
- present, returns a null fidl string.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>entity_reference</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr></table>
-
-### SetEntity {:#SetEntity}
-
- Sets this to be an Entity Link with the given `entity_reference`. The
- existing value of the link is overwritten. If `entity_reference` is null,
- then any existing value in the link is overwritten with the JSON string
- "null".
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>entity_reference</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr></table>
-
-
-
-### Watch {:#Watch}
-
- Registers a watcher, which is notified whenever the document changes. This
- watcher will not be invoked for changes caused by calls made on this
- handle. The Notify() callback method will be immediately invoked with the
- value in the Link, even if it's empty.
-
- The LinkWatcher connection will be closed if the owning Link handle closed.
-
- All connections to a Link and LinkWatcher are closed once the story the
- link belongs to is stopped.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>watcher</code></td>
-            <td>
-                <code><a class='link' href='#LinkWatcher'>LinkWatcher</a></code>
-            </td>
-        </tr></table>
-
-
-
-### WatchAll {:#WatchAll}
-
- Like Watch(), but the watcher is notified also of changes made through the
- same handle as the watcher is registered on.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>watcher</code></td>
-            <td>
-                <code><a class='link' href='#LinkWatcher'>LinkWatcher</a></code>
-            </td>
-        </tr></table>
-
-
-
-### Sync {:#Sync}
-
- Waits for the completion of methods previously invoked on the same
- connection. Allows to create sequentiality across service instances without
- giving every method an empty return value. Nb. this makes no guarantees
- about sequentiality with methods invoked on different connections, even to
- the same Link instance.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-## LinkWatcher {:#LinkWatcher}
-*Defined in [fuchsia.modular/link.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/link.fidl#119)*
-
- This interface is implemented by a client of Link.
-
- The Notify() method is invoked whenever the Link changes. The entire JSON
- string in the Link will be sent. In other words, this isn't an incremental
- notification. `json` cannot be null because an empty Link is the valid JSON
- document "null".
-
- No service name: created by Module.
-
-### Notify {:#Notify}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>json</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
-            </td>
-        </tr></table>
-
-
-
 ## PuppetMaster {:#PuppetMaster}
 *Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#52)*
 
@@ -5221,21 +4479,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### SetCreateOptions {:#SetCreateOptions}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>story_options</code></td>
-            <td>
-                <code><a class='link' href='#StoryOptions'>StoryOptions</a></code>
-            </td>
-        </tr></table>
-
-
-
 ### SetStoryInfoExtra {:#SetStoryInfoExtra}
 
 
@@ -5324,7 +4567,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryController {:#StoryController}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#14)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#12)*
 
  Used by the clients of StoryProvider (SessionShell) to interact with a single
  story. Created by StoryProvider.
@@ -5413,30 +4656,6 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
-### TakeAndLoadSnapshot {:#TakeAndLoadSnapshot}
-
- Creates a new view with the given `view_owner` request to display
- snapshots. Takes a snapshot for the story controlled by this
- `StoryController` and then loads the snapshot to the created view such that
- it is rendered. The callback will be invoked once the view has been created
- and the snapshot has been loaded.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>view_token</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.views/index.html'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/index.html#ViewToken'>ViewToken</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
 ### Watch {:#Watch}
 
  Registers a watcher for changes of the story state.
@@ -5455,46 +4674,6 @@ Book: /_book.yaml
         </tr></table>
 
 
-
-### GetActiveModules {:#GetActiveModules}
-
- DEPRECATED
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>module_data</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ModuleData'>ModuleData</a>&gt;</code>
-            </td>
-        </tr></table>
-
-### GetModules {:#GetModules}
-
- DEPRECATED
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>module_data</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ModuleData'>ModuleData</a>&gt;</code>
-            </td>
-        </tr></table>
 
 ### GetModuleController {:#GetModuleController}
 
@@ -5546,7 +4725,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## StoryWatcher {:#StoryWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#64)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#49)*
 
  Implemented by the client calling StoryController.Watch().
 
@@ -5594,42 +4773,6 @@ Book: /_book.yaml
             <td><code>module_path</code></td>
             <td>
                 <code>vector&lt;string&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-## StoryLinksWatcher {:#StoryLinksWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#80)*
-
- Implemented by the client calling StoryController.GetActiveLinks().
-
- DEPRECATED: StoryController is only to be used for Story concepts
- (metadata about, and requesting changes to runtime state).
-
-### OnNewLink {:#OnNewLink}
-
- Called when a link becomes active in the story, i.e. when it is loaded into
- memory and connected with modules and watchers. After this notification,
- the Link can be obtained with GetLink() and further notifications can be
- obtained from watchers on the Link and connection error handlers on the
- LinkWatcher.
-
- Note that the Link remains active until there are no connections to it
- left. Hence in order to obtain a notification when the Link becomes
- inactive, a client must give up the Link connection after registering a
- LinkWatcher, and listen for the LinkWatcher connection to go down.
-
- This is EXPERIMENTAL. We certainly can make this simpler once we know it is
- what we need.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>link_path</code></td>
-            <td>
-                <code><a class='link' href='#LinkPath'>LinkPath</a></code>
             </td>
         </tr></table>
 
@@ -6026,91 +5169,6 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
-### AddContainer {:#AddContainer}
-
- Adds a container, with corresponding container layouts to the story.
- Optionally provide a parent_id to connect to, if omitted adds the
- Container node as the root of a new tree in the Story
- DEPRECATED
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>containerName</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>parentId</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr><tr>
-            <td><code>relation</code></td>
-            <td>
-                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
-            </td>
-        </tr><tr>
-            <td><code>layout</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerLayout'>ContainerLayout</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>relationships</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>views</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerView'>ContainerView</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### AddContainer2 {:#AddContainer2}
-
- DEPRECATED.  For transition purposes only.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>containerName</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>parentId</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr><tr>
-            <td><code>relation</code></td>
-            <td>
-                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
-            </td>
-        </tr><tr>
-            <td><code>layout</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerLayout'>ContainerLayout</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>relationships</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerRelationEntry'>ContainerRelationEntry</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>views</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#ContainerView2'>ContainerView2</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### OnSurfaceFocused {:#OnSurfaceFocused}
 
  Notify when a Surface is focused in the story. The focus could be from
@@ -6144,50 +5202,6 @@ Book: /_book.yaml
             <td><code>surface_id</code></td>
             <td>
                 <code>string</code>
-            </td>
-        </tr></table>
-
-
-
-### ReconnectView {:#ReconnectView}
-
- Reconnect the view in viewConnection.
-
- Called to reconnect views that have previously been added to the story
- shell via addSurface, and then disconnected. A ViewTokenPair is created
- and the View token is given to the child view.  The ViewHolder token
- is notified if the View is destroyed before it is connected.  Once the
- ViewHolder has been created using a Scenic `Session`, the Session will be
- notified when the view is available, if it becomes unavailable, or if
- it is disconnected.
- If a surface with a disconnected view is to be shown again, ReconnectView
- is called.
-
- E.g. called in response to StoryShell calling RequestView().
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>view_connection</code></td>
-            <td>
-                <code><a class='link' href='#ViewConnection'>ViewConnection</a></code>
-            </td>
-        </tr></table>
-
-
-
-### ReconnectView2 {:#ReconnectView2}
-
- DEPRECATED.  For transition purposes only.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>view_connection</code></td>
-            <td>
-                <code><a class='link' href='#ViewConnection2'>ViewConnection2</a></code>
             </td>
         </tr></table>
 
@@ -6264,7 +5278,7 @@ Book: /_book.yaml
 
 
 ## StoryShellContext {:#StoryShellContext}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#193)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#135)*
 
  This interface provides the StoryShell instance with everything it needs to
  know or be able to do about the Story. Not much right now, but we expect this
@@ -6322,7 +5336,7 @@ Book: /_book.yaml
 
 
 ## StoryVisualStateWatcher {:#StoryVisualStateWatcher}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#208)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#150)*
 
  Implemented by StoryShell to get notified about visual state changes.
 
@@ -7172,7 +6186,7 @@ Book: /_book.yaml
 </table>
 
 ### SetFocusState {:#SetFocusState}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#37)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#39)*
 
 
 
@@ -7190,7 +6204,7 @@ Book: /_book.yaml
 </table>
 
 ### AddMod {:#AddMod}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#43)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#45)*
 
 
 
@@ -7254,7 +6268,7 @@ Book: /_book.yaml
 </table>
 
 ### RemoveMod {:#RemoveMod}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#73)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#75)*
 
 
 
@@ -7289,7 +6303,7 @@ Book: /_book.yaml
 </table>
 
 ### SetLinkValue {:#SetLinkValue}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#91)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#93)*
 
 
 
@@ -7315,7 +6329,7 @@ Book: /_book.yaml
 </table>
 
 ### FocusMod {:#FocusMod}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#97)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#99)*
 
 
 
@@ -7350,7 +6364,7 @@ Book: /_book.yaml
 </table>
 
 ### SetKindOfProtoStoryOption {:#SetKindOfProtoStoryOption}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#115)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#117)*
 
 
 
@@ -7474,7 +6488,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewConnection {:#ViewConnection}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#113)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#76)*
 
 
 
@@ -7502,7 +6516,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewConnection2 {:#ViewConnection2}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#122)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#85)*
 
 
 
@@ -7530,7 +6544,7 @@ Book: /_book.yaml
 </table>
 
 ### SurfaceInfo {:#SurfaceInfo}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#131)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#94)*
 
 
 
@@ -7570,192 +6584,6 @@ Book: /_book.yaml
             </td>
             <td> How the Surface was generated. By an action internal to the story or by
  an external action.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### ContainerView {:#ContainerView}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#169)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Name by which this container node is referenced in container layout and
- surface relationship specifications (cf. container.fidl)
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>view_holder_token</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.views/index.html'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/index.html#ViewHolderToken'>ViewHolderToken</a></code>
-            </td>
-            <td> Token for embedding the new view.  The view is resolved from the intent
- corresponding to `node_name`.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### ContainerView2 {:#ContainerView2}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#180)*
-
-
-
- DEPRECATED, for transition purposes only.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Name by which this container node is referenced in container layout and
- surface relationship specifications (cf. container.fidl)
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>view_holder_token</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.views/index.html'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/index.html#ViewHolderToken'>ViewHolderToken</a></code>
-            </td>
-            <td> Token for embedding the new view.  The view is resolved from the intent
- corresponding to `node_name`.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### ContainerLayout {:#ContainerLayout}
-*Defined in [fuchsia.modular/container.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/surface/container.fidl#11)*
-
-
-
- Specification of the layout of multiple surfaces in a module container. The
- surfaces are referenced by name in ContainerRelationEntry.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>surfaces</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#LayoutEntry'>LayoutEntry</a>&gt;</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### LayoutEntry {:#LayoutEntry}
-*Defined in [fuchsia.modular/container.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/surface/container.fidl#17)*
-
-
-
- Specification of the postion of one surface within a container layout,
- specified by a rectangle.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Surface name, referenced by container relation entry.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rectangle</code></td>
-            <td>
-                <code>float32[4]</code>
-            </td>
-            <td> Layout, as rectangle in Dart conventions(left, top, width, height), as a
- proportion of the size of the container
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### ContainerRelationEntry {:#ContainerRelationEntry}
-*Defined in [fuchsia.modular/container.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/surface/container.fidl#32)*
-
-
-
- Specifies the surface relationship between modules started together in module
- container.
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Surface name, referenced by layout.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>parent_node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Surface name of the layout parent. This could be the container itself,
- rather than a module in it.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>relationship</code></td>
-            <td>
-                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
-            </td>
-            <td> This surface relation between the surface identified by node_name and by
- parent_node_name.
-
- It is possible to specify a surface relationship of a module in a container
- to the container itself, as opposed to another module in the container.
- This expresses for example that a module can be dismissed individually, as
- opposed to dismissing the module dismisses the container as a whole.
-
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### ContainerNode {:#ContainerNode}
-*Defined in [fuchsia.modular/container.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/surface/container.fidl#59)*
-
-
-
- Specifies one module to start inside a container. The module is specified by
- a intent as usual. The node_name of the surface is referenced by container
- layout and by container relation entry.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Name by which this module is references in layout and surface relationship
- specifications (cf. above).
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>intent</code></td>
-            <td>
-                <code><a class='link' href='#Intent'>Intent</a></code>
-            </td>
-            <td> The intent to resolve to a module.
 </td>
             <td>No default</td>
         </tr>
@@ -8521,7 +7349,7 @@ Book: /_book.yaml
 </table>
 
 ### SetFocusState {:#SetFocusState}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#37)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#39)*
 
 
 
@@ -8539,7 +7367,7 @@ Book: /_book.yaml
 </table>
 
 ### AddMod {:#AddMod}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#43)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#45)*
 
 
 
@@ -8603,7 +7431,7 @@ Book: /_book.yaml
 </table>
 
 ### RemoveMod {:#RemoveMod}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#73)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#75)*
 
 
 
@@ -8638,7 +7466,7 @@ Book: /_book.yaml
 </table>
 
 ### SetLinkValue {:#SetLinkValue}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#91)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#93)*
 
 
 
@@ -8664,7 +7492,7 @@ Book: /_book.yaml
 </table>
 
 ### FocusMod {:#FocusMod}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#97)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#99)*
 
 
 
@@ -8699,7 +7527,7 @@ Book: /_book.yaml
 </table>
 
 ### SetKindOfProtoStoryOption {:#SetKindOfProtoStoryOption}
-*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#115)*
+*Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#117)*
 
 
 
@@ -8823,7 +7651,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewConnection {:#ViewConnection}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#113)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#76)*
 
 
 
@@ -8851,7 +7679,7 @@ Book: /_book.yaml
 </table>
 
 ### ViewConnection2 {:#ViewConnection2}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#122)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#85)*
 
 
 
@@ -8879,7 +7707,7 @@ Book: /_book.yaml
 </table>
 
 ### SurfaceInfo {:#SurfaceInfo}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#131)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#94)*
 
 
 
@@ -8919,192 +7747,6 @@ Book: /_book.yaml
             </td>
             <td> How the Surface was generated. By an action internal to the story or by
  an external action.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### ContainerView {:#ContainerView}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#169)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Name by which this container node is referenced in container layout and
- surface relationship specifications (cf. container.fidl)
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>view_holder_token</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.views/index.html'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/index.html#ViewHolderToken'>ViewHolderToken</a></code>
-            </td>
-            <td> Token for embedding the new view.  The view is resolved from the intent
- corresponding to `node_name`.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### ContainerView2 {:#ContainerView2}
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#180)*
-
-
-
- DEPRECATED, for transition purposes only.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Name by which this container node is referenced in container layout and
- surface relationship specifications (cf. container.fidl)
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>view_holder_token</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.views/index.html'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/index.html#ViewHolderToken'>ViewHolderToken</a></code>
-            </td>
-            <td> Token for embedding the new view.  The view is resolved from the intent
- corresponding to `node_name`.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### ContainerLayout {:#ContainerLayout}
-*Defined in [fuchsia.modular/container.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/surface/container.fidl#11)*
-
-
-
- Specification of the layout of multiple surfaces in a module container. The
- surfaces are referenced by name in ContainerRelationEntry.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>surfaces</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#LayoutEntry'>LayoutEntry</a>&gt;</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### LayoutEntry {:#LayoutEntry}
-*Defined in [fuchsia.modular/container.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/surface/container.fidl#17)*
-
-
-
- Specification of the postion of one surface within a container layout,
- specified by a rectangle.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Surface name, referenced by container relation entry.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rectangle</code></td>
-            <td>
-                <code>float32[4]</code>
-            </td>
-            <td> Layout, as rectangle in Dart conventions(left, top, width, height), as a
- proportion of the size of the container
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### ContainerRelationEntry {:#ContainerRelationEntry}
-*Defined in [fuchsia.modular/container.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/surface/container.fidl#32)*
-
-
-
- Specifies the surface relationship between modules started together in module
- container.
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Surface name, referenced by layout.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>parent_node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Surface name of the layout parent. This could be the container itself,
- rather than a module in it.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>relationship</code></td>
-            <td>
-                <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
-            </td>
-            <td> This surface relation between the surface identified by node_name and by
- parent_node_name.
-
- It is possible to specify a surface relationship of a module in a container
- to the container itself, as opposed to another module in the container.
- This expresses for example that a module can be dismissed individually, as
- opposed to dismissing the module dismisses the container as a whole.
-
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### ContainerNode {:#ContainerNode}
-*Defined in [fuchsia.modular/container.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/surface/container.fidl#59)*
-
-
-
- Specifies one module to start inside a container. The module is specified by
- a intent as usual. The node_name of the surface is referenced by container
- layout and by container relation entry.
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>node_name</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td> Name by which this module is references in layout and surface relationship
- specifications (cf. above).
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>intent</code></td>
-            <td>
-                <code><a class='link' href='#Intent'>Intent</a></code>
-            </td>
-            <td> The intent to resolve to a module.
 </td>
             <td>No default</td>
         </tr>
@@ -9365,7 +8007,7 @@ Type: <code>int32</code>
 ### StoryVisualState {:#StoryVisualState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#213)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#155)*
 
  Defines the visual state of the Story shell.
 
@@ -9703,7 +8345,7 @@ Type: <code>int32</code>
 ### StoryVisualState {:#StoryVisualState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#213)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#155)*
 
  Defines the visual state of the Story shell.
 
@@ -10126,7 +8768,7 @@ Type: <code>uint32</code>
 ### SurfaceInfo2 {:#SurfaceInfo2}
 
 
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#148)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#111)*
 
  Contains metadata for a Surface.
 
@@ -10473,7 +9115,7 @@ Type: <code>uint32</code>
 ### SurfaceInfo2 {:#SurfaceInfo2}
 
 
-*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#148)*
+*Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#111)*
 
  Contains metadata for a Surface.
 
@@ -10690,6 +9332,7 @@ Type: <code>uint32</code>
                 <code><a class='link' href='#SetLinkValue'>SetLinkValue</a></code>
             </td>
             <td> Sets the value of a Link.
+ DEPRECATED. This command is a no-op.
 </td>
         </tr><tr>
             <td><code>focus_mod</code></td>
@@ -10704,6 +9347,7 @@ Type: <code>uint32</code>
                 <code><a class='link' href='#SetKindOfProtoStoryOption'>SetKindOfProtoStoryOption</a></code>
             </td>
             <td> Updates the kind_of_proto_story option in a story.
+ DEPRECATED. This command is a no-op.
 </td>
         </tr></table>
 
@@ -10886,6 +9530,7 @@ Type: <code>uint32</code>
                 <code><a class='link' href='#SetLinkValue'>SetLinkValue</a></code>
             </td>
             <td> Sets the value of a Link.
+ DEPRECATED. This command is a no-op.
 </td>
         </tr><tr>
             <td><code>focus_mod</code></td>
@@ -10900,6 +9545,7 @@ Type: <code>uint32</code>
                 <code><a class='link' href='#SetKindOfProtoStoryOption'>SetKindOfProtoStoryOption</a></code>
             </td>
             <td> Updates the kind_of_proto_story option in a story.
+ DEPRECATED. This command is a no-op.
 </td>
         </tr></table>
 

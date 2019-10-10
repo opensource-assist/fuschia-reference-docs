@@ -11,7 +11,7 @@ Book: /_book.yaml
 
  Protocol for retrieving kcounter information.
 
-### GetInspectVMO {:#GetInspectVMO}
+### GetInspectVmo {:#GetInspectVmo}
 
  Retrives a VMO containining summarized kcounter data. The vmo returned
  in |buffer| is in "inspect-vmo" format, documented elsewhere.
@@ -37,7 +37,7 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### UpdateInspectVMO {:#UpdateInspectVMO}
+### UpdateInspectVmo {:#UpdateInspectVmo}
 
  Request that the previously-returned VMO buffer's data be updated. The
  data may not be updated if it was already recently updated (updates are
@@ -211,7 +211,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>per_cpu_stats</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#PerCpuStats'>PerCpuStats</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#PerCpuStats'>PerCpuStats</a>&gt;[512]?</code>
             </td>
             <td></td>
             <td>No default</td>

@@ -570,17 +570,16 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>name</code></td>
             <td>
-                <code>string</code>
+                <code>string[32]</code>
             </td>
             <td> The name to assign to the created process.
-
 </td>
             <td>No default</td>
         </tr>
 </table>
 
 ### ProcessStartData {:#ProcessStartData}
-*Defined in [fuchsia.process/launcher.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/launcher.fidl#64)*
+*Defined in [fuchsia.process/launcher.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/launcher.fidl#61)*
 
 
 
@@ -773,17 +772,16 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>name</code></td>
             <td>
-                <code>string</code>
+                <code>string[32]</code>
             </td>
             <td> The name to assign to the created process.
-
 </td>
             <td>No default</td>
         </tr>
 </table>
 
 ### ProcessStartData {:#ProcessStartData}
-*Defined in [fuchsia.process/launcher.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/launcher.fidl#64)*
+*Defined in [fuchsia.process/launcher.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/launcher.fidl#61)*
 
 
 
@@ -890,6 +888,14 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/launcher.fidl#102">MAX</a></td>
+            <td>
+                    <code>4294967295</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/resolver.fidl#11">MAX_RESOLVE_NAME_SIZE</a></td>
             <td>
                     <code>2048</code>
@@ -897,6 +903,14 @@ Book: /_book.yaml
                 <td><code>uint32</code></td>
             <td> The maximum size for a name used by `Resolver`.
 </td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/launcher.fidl#102">MAX</a></td>
+            <td>
+                    <code>4294967295</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/resolver.fidl#11">MAX_RESOLVE_NAME_SIZE</a></td>

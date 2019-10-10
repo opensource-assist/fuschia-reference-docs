@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Syncable {:#Syncable}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#37)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#34)*
 
  Base interface for all services offered by the Ledger.
 
@@ -34,7 +34,7 @@ Book: /_book.yaml
     </table>
 
 ## Ledger {:#Ledger}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#42)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#39)*
 
 
 ### Sync {:#Sync}
@@ -121,7 +121,7 @@ Book: /_book.yaml
 
 
 ## Page {:#Page}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#92)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#89)*
 
  A page is the smallest unit of syncable data.
 
@@ -472,7 +472,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## PageSnapshot {:#PageSnapshot}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#255)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#252)*
 
  The content of a page at a given time. Closing the connection to a `Page`
  interface closes all `PageSnapshot` interfaces it created. The contents
@@ -529,7 +529,7 @@ Book: /_book.yaml
     <tr>
             <td><code>entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Entry'>Entry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#Entry'>Entry</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
@@ -565,7 +565,7 @@ Book: /_book.yaml
     <tr>
             <td><code>entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#InlinedEntry'>InlinedEntry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#InlinedEntry'>InlinedEntry</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
@@ -608,7 +608,7 @@ Book: /_book.yaml
     <tr>
             <td><code>keys</code></td>
             <td>
-                <code>vector&lt;vector&gt;[65536]</code>
+                <code>vector&lt;vector&gt;</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
@@ -741,7 +741,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## PageWatcher {:#PageWatcher}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#341)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#338)*
 
  Interface to watch changes to a page. The client will receive changes made by
  itself, as well as other clients or synced from other devices. The contents
@@ -794,7 +794,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## ConflictResolverFactory {:#ConflictResolverFactory}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#365)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#362)*
 
  This interface lets clients control the conflict resolution policy of the
  ledger. It allows them to either use pre-defined policies, or provide their
@@ -849,7 +849,7 @@ Book: /_book.yaml
 
 
 ## MergeResultProvider {:#MergeResultProvider}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#448)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#445)*
 
  A merge result provider, obtained from `ConflictResolver.Resolve()`. Can be
  used to retrieve data about the conflict, and provide the merge result. When
@@ -905,7 +905,7 @@ Book: /_book.yaml
     <tr>
             <td><code>changes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#DiffEntry'>DiffEntry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#DiffEntry'>DiffEntry</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
@@ -939,7 +939,7 @@ Book: /_book.yaml
     <tr>
             <td><code>changes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#DiffEntry'>DiffEntry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#DiffEntry'>DiffEntry</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
@@ -970,7 +970,7 @@ Book: /_book.yaml
     <tr>
             <td><code>merge_changes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#MergedValue'>MergedValue</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#MergedValue'>MergedValue</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1004,7 +1004,7 @@ Book: /_book.yaml
 
 
 ## ConflictResolver {:#ConflictResolver}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#513)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#510)*
 
  Custom conflict resolver. If a `ConflictResolverFactory` is registered, and
  `ConflictResolverFactory.GetPolicy()` returns `AUTOMATIC_WITH_FALLBACK` or
@@ -1054,7 +1054,7 @@ Book: /_book.yaml
 
 
 ## SyncWatcher {:#SyncWatcher}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#547)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#544)*
 
  Watcher interface to be implemented by clients who wish to follow the
  synchronization status of their ledger. SyncStateChanged callback must be
@@ -1085,7 +1085,7 @@ Book: /_book.yaml
     </table>
 
 ## Syncable {:#Syncable}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#37)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#34)*
 
  Base interface for all services offered by the Ledger.
 
@@ -1112,7 +1112,7 @@ Book: /_book.yaml
     </table>
 
 ## Ledger {:#Ledger}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#42)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#39)*
 
 
 ### Sync {:#Sync}
@@ -1199,7 +1199,7 @@ Book: /_book.yaml
 
 
 ## Page {:#Page}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#92)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#89)*
 
  A page is the smallest unit of syncable data.
 
@@ -1550,7 +1550,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## PageSnapshot {:#PageSnapshot}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#255)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#252)*
 
  The content of a page at a given time. Closing the connection to a `Page`
  interface closes all `PageSnapshot` interfaces it created. The contents
@@ -1607,7 +1607,7 @@ Book: /_book.yaml
     <tr>
             <td><code>entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Entry'>Entry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#Entry'>Entry</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
@@ -1643,7 +1643,7 @@ Book: /_book.yaml
     <tr>
             <td><code>entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#InlinedEntry'>InlinedEntry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#InlinedEntry'>InlinedEntry</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
@@ -1686,7 +1686,7 @@ Book: /_book.yaml
     <tr>
             <td><code>keys</code></td>
             <td>
-                <code>vector&lt;vector&gt;[65536]</code>
+                <code>vector&lt;vector&gt;</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
@@ -1819,7 +1819,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## PageWatcher {:#PageWatcher}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#341)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#338)*
 
  Interface to watch changes to a page. The client will receive changes made by
  itself, as well as other clients or synced from other devices. The contents
@@ -1872,7 +1872,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## ConflictResolverFactory {:#ConflictResolverFactory}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#365)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#362)*
 
  This interface lets clients control the conflict resolution policy of the
  ledger. It allows them to either use pre-defined policies, or provide their
@@ -1927,7 +1927,7 @@ Book: /_book.yaml
 
 
 ## MergeResultProvider {:#MergeResultProvider}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#448)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#445)*
 
  A merge result provider, obtained from `ConflictResolver.Resolve()`. Can be
  used to retrieve data about the conflict, and provide the merge result. When
@@ -1983,7 +1983,7 @@ Book: /_book.yaml
     <tr>
             <td><code>changes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#DiffEntry'>DiffEntry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#DiffEntry'>DiffEntry</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
@@ -2017,7 +2017,7 @@ Book: /_book.yaml
     <tr>
             <td><code>changes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#DiffEntry'>DiffEntry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#DiffEntry'>DiffEntry</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>next_token</code></td>
@@ -2048,7 +2048,7 @@ Book: /_book.yaml
     <tr>
             <td><code>merge_changes</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#MergedValue'>MergedValue</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#MergedValue'>MergedValue</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2082,7 +2082,7 @@ Book: /_book.yaml
 
 
 ## ConflictResolver {:#ConflictResolver}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#513)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#510)*
 
  Custom conflict resolver. If a `ConflictResolverFactory` is registered, and
  `ConflictResolverFactory.GetPolicy()` returns `AUTOMATIC_WITH_FALLBACK` or
@@ -2132,7 +2132,7 @@ Book: /_book.yaml
 
 
 ## SyncWatcher {:#SyncWatcher}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#547)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#544)*
 
  Watcher interface to be implemented by clients who wish to follow the
  synchronization status of their ledger. SyncStateChanged callback must be
@@ -2275,7 +2275,7 @@ Book: /_book.yaml
 </table>
 
 ### PageId {:#PageId}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#23)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#20)*
 
 
 
@@ -2294,7 +2294,7 @@ Book: /_book.yaml
 </table>
 
 ### Reference {:#Reference}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#72)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#69)*
 
 
 
@@ -2313,7 +2313,7 @@ Book: /_book.yaml
 </table>
 
 ### Token {:#Token}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#77)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#74)*
 
 
 
@@ -2332,7 +2332,7 @@ Book: /_book.yaml
 </table>
 
 ### Entry {:#Entry}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#220)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#217)*
 
 
 
@@ -2368,7 +2368,7 @@ Book: /_book.yaml
 </table>
 
 ### InlinedValue {:#InlinedValue}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#230)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#227)*
 
 
 
@@ -2387,7 +2387,7 @@ Book: /_book.yaml
 </table>
 
 ### InlinedEntry {:#InlinedEntry}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#235)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#232)*
 
 
 
@@ -2423,7 +2423,7 @@ Book: /_book.yaml
 </table>
 
 ### PageChange {:#PageChange}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#324)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#321)*
 
 
 
@@ -2445,7 +2445,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>changed_entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Entry'>Entry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#Entry'>Entry</a>&gt;</code>
             </td>
             <td> List of new and modified entries. `changed_entries` are sorted by `key`.
 </td>
@@ -2453,7 +2453,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>deleted_keys</code></td>
             <td>
-                <code>vector&lt;vector&gt;[65536]</code>
+                <code>vector&lt;vector&gt;</code>
             </td>
             <td> List of deleted keys, in sorted order.
 </td>
@@ -2462,7 +2462,7 @@ Book: /_book.yaml
 </table>
 
 ### MergedValue {:#MergedValue}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#415)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#412)*
 
 
 
@@ -2504,7 +2504,7 @@ Book: /_book.yaml
 </table>
 
 ### DiffEntry {:#DiffEntry}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#427)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#424)*
 
 
 
@@ -2548,7 +2548,7 @@ Book: /_book.yaml
 </table>
 
 ### Value {:#Value}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#439)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#436)*
 
 
 
@@ -2685,7 +2685,7 @@ Book: /_book.yaml
 </table>
 
 ### PageId {:#PageId}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#23)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#20)*
 
 
 
@@ -2704,7 +2704,7 @@ Book: /_book.yaml
 </table>
 
 ### Reference {:#Reference}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#72)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#69)*
 
 
 
@@ -2723,7 +2723,7 @@ Book: /_book.yaml
 </table>
 
 ### Token {:#Token}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#77)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#74)*
 
 
 
@@ -2742,7 +2742,7 @@ Book: /_book.yaml
 </table>
 
 ### Entry {:#Entry}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#220)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#217)*
 
 
 
@@ -2778,7 +2778,7 @@ Book: /_book.yaml
 </table>
 
 ### InlinedValue {:#InlinedValue}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#230)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#227)*
 
 
 
@@ -2797,7 +2797,7 @@ Book: /_book.yaml
 </table>
 
 ### InlinedEntry {:#InlinedEntry}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#235)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#232)*
 
 
 
@@ -2833,7 +2833,7 @@ Book: /_book.yaml
 </table>
 
 ### PageChange {:#PageChange}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#324)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#321)*
 
 
 
@@ -2855,7 +2855,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>changed_entries</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Entry'>Entry</a>&gt;[65536]</code>
+                <code>vector&lt;<a class='link' href='#Entry'>Entry</a>&gt;</code>
             </td>
             <td> List of new and modified entries. `changed_entries` are sorted by `key`.
 </td>
@@ -2863,7 +2863,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>deleted_keys</code></td>
             <td>
-                <code>vector&lt;vector&gt;[65536]</code>
+                <code>vector&lt;vector&gt;</code>
             </td>
             <td> List of deleted keys, in sorted order.
 </td>
@@ -2872,7 +2872,7 @@ Book: /_book.yaml
 </table>
 
 ### MergedValue {:#MergedValue}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#415)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#412)*
 
 
 
@@ -2914,7 +2914,7 @@ Book: /_book.yaml
 </table>
 
 ### DiffEntry {:#DiffEntry}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#427)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#424)*
 
 
 
@@ -2958,7 +2958,7 @@ Book: /_book.yaml
 </table>
 
 ### Value {:#Value}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#439)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#436)*
 
 
 
@@ -2993,7 +2993,7 @@ Book: /_book.yaml
 ### ConflictResolutionWaitStatus {:#ConflictResolutionWaitStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#83)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#80)*
 
  The result of a wait for conflict resolution. See
  `Page.WaitForConflictResolution` for details.
@@ -3013,7 +3013,7 @@ Type: <code>uint32</code>
 ### Priority {:#Priority}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#209)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#206)*
 
  The synchronization priority of a reference.
 
@@ -3032,7 +3032,7 @@ Type: <code>uint32</code>
 ### Error {:#Error}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#245)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#242)*
 
  Error returned by the different PageSnapshot methods.
 
@@ -3055,7 +3055,7 @@ Type: <code>uint32</code>
 ### ResultState {:#ResultState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#317)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#314)*
 
 
 
@@ -3081,7 +3081,7 @@ Type: <code>uint32</code>
 ### MergePolicy {:#MergePolicy}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#375)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#372)*
 
  Strategy to be used when resolving conflicts.
 
@@ -3104,7 +3104,7 @@ Type: <code>uint32</code>
 ### ValueSource {:#ValueSource}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#406)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#403)*
 
  Source of the value used to resolve a conflict.
 
@@ -3132,7 +3132,7 @@ Type: <code>uint32</code>
 ### SyncState {:#SyncState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#527)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#524)*
 
  Synchronization state.
 
@@ -3159,7 +3159,7 @@ Type: <code>uint32</code>
 ### ConflictResolutionWaitStatus {:#ConflictResolutionWaitStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#83)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#80)*
 
  The result of a wait for conflict resolution. See
  `Page.WaitForConflictResolution` for details.
@@ -3179,7 +3179,7 @@ Type: <code>uint32</code>
 ### Priority {:#Priority}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#209)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#206)*
 
  The synchronization priority of a reference.
 
@@ -3198,7 +3198,7 @@ Type: <code>uint32</code>
 ### Error {:#Error}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#245)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#242)*
 
  Error returned by the different PageSnapshot methods.
 
@@ -3221,7 +3221,7 @@ Type: <code>uint32</code>
 ### ResultState {:#ResultState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#317)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#314)*
 
 
 
@@ -3247,7 +3247,7 @@ Type: <code>uint32</code>
 ### MergePolicy {:#MergePolicy}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#375)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#372)*
 
  Strategy to be used when resolving conflicts.
 
@@ -3270,7 +3270,7 @@ Type: <code>uint32</code>
 ### ValueSource {:#ValueSource}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#406)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#403)*
 
  Source of the value used to resolve a conflict.
 
@@ -3298,7 +3298,7 @@ Type: <code>uint32</code>
 ### SyncState {:#SyncState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#527)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#524)*
 
  Synchronization state.
 
@@ -3443,7 +3443,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### BytesOrReference {:#BytesOrReference}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#395)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#392)*
 
  A value that is either small enough to be directly embedded in `bytes` or
  that is referenced by `reference`.
@@ -3578,7 +3578,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### BytesOrReference {:#BytesOrReference}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#395)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#392)*
 
  A value that is either small enough to be directly embedded in `bytes` or
  that is referenced by `reference`.
@@ -3608,15 +3608,7 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#14">NO_LINT</a></td>
-            <td>
-                    <code>65536</code>
-                </td>
-                <td><code>uint32</code></td>
-            <td></td>
-        </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#20">PAGE_ID_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#17">PAGE_ID_SIZE</a></td>
             <td>
                     <code>16</code>
                 </td>
@@ -3625,15 +3617,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#14">NO_LINT</a></td>
-            <td>
-                    <code>65536</code>
-                </td>
-                <td><code>uint32</code></td>
-            <td></td>
-        </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#20">PAGE_ID_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#17">PAGE_ID_SIZE</a></td>
             <td>
                     <code>16</code>
                 </td>

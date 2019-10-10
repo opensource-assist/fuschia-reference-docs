@@ -696,7 +696,7 @@ Type: <code>uint32</code>
 *Defined in [fuchsia.bluetooth/connection_role.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/connection_role.fidl#10)*
 
  Refers to the role of a Bluetooth device (local or peer) in a physical channel piconet. See
- [Bluetooth Vocabulary Guide](//src/connectivity/bluetooth/docs/vocabulary.md) for more
+ [Bluetooth Vocabulary Guide](/src/connectivity/bluetooth/docs/vocabulary.md) for more
  information.
 
 
@@ -1021,7 +1021,7 @@ Type: <code>uint32</code>
 *Defined in [fuchsia.bluetooth/connection_role.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/connection_role.fidl#10)*
 
  Refers to the role of a Bluetooth device (local or peer) in a physical channel piconet. See
- [Bluetooth Vocabulary Guide](//src/connectivity/bluetooth/docs/vocabulary.md) for more
+ [Bluetooth Vocabulary Guide](/src/connectivity/bluetooth/docs/vocabulary.md) for more
  information.
 
 

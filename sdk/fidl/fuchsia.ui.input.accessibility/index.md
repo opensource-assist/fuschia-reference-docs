@@ -31,17 +31,22 @@ Book: /_book.yaml
 
 
 ## PointerEventListener {:#PointerEventListener}
-*Defined in [fuchsia.ui.input.accessibility/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input.accessibility/accessibility.fidl#58)*
+*Defined in [fuchsia.ui.input.accessibility/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input.accessibility/accessibility.fidl#59)*
 
  A PointerEventListener receives pointer events and decides to consume them
  or not.
+ TODO(fxb/36429): Investigate flow control mechanisms for a11y input events.
 
 ### OnEvent {:#OnEvent}
 
- Sends a PointerEvent to an accessibility service. A callback is return
- to indicate whether the pointer event was consumed / rejected for a
- particular stream of pointer events related to a `device_id` and a
- `pointer_id`.
+ Sends a PointerEvent to an accessibility service. An event is returned
+ at any time to indicate whether the pointer event stream was consumed /
+ rejected for a particular stream of pointer events related to a
+ `device_id` and a `pointer_id`. A stream is a sequence of pointer events
+ starting with an event with phase DOWN, followed by any number of MOVE,
+ ending in an UP phase event. The event can arrive while the stream is in
+ progress or when it has already finished. The resulting
+ behavior depends on how it was handled, please see EventHandling above.
 
 #### Request
 <table>
@@ -52,6 +57,12 @@ Book: /_book.yaml
                 <code><a class='link' href='#PointerEvent'>PointerEvent</a></code>
             </td>
         </tr></table>
+
+
+
+### OnStreamHandled {:#OnStreamHandled}
+
+
 
 
 #### Response

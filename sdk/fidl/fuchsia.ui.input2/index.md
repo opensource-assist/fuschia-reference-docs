@@ -214,6 +214,34 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### SemanticKeyMapEntry {:#SemanticKeyMapEntry}
+*Defined in [fuchsia.ui.input2/layout.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#97)*
+
+
+
+ A mapping of a key to the semantic meaning.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>key</code></td>
+            <td>
+                <code><a class='link' href='#Key'>Key</a></code>
+            </td>
+            <td> Key that's being mapped.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>semantic_key</code></td>
+            <td>
+                <code><a class='link' href='#SemanticKey'>SemanticKey</a></code>
+            </td>
+            <td> Semantic key corresponding to the key.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### PhysicalKeyMapEntry {:#PhysicalKeyMapEntry}
 *Defined in [fuchsia.ui.input2/layout.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#42)*
 
@@ -237,6 +265,34 @@ Book: /_book.yaml
                 <code><a class='link' href='#Key'>Key</a></code>
             </td>
             <td> A key to which the physical key is mapped to.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### SemanticKeyMapEntry {:#SemanticKeyMapEntry}
+*Defined in [fuchsia.ui.input2/layout.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#97)*
+
+
+
+ A mapping of a key to the semantic meaning.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>key</code></td>
+            <td>
+                <code><a class='link' href='#Key'>Key</a></code>
+            </td>
+            <td> Key that's being mapped.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>semantic_key</code></td>
+            <td>
+                <code><a class='link' href='#SemanticKey'>SemanticKey</a></code>
+            </td>
+            <td> Semantic key corresponding to the key.
 </td>
             <td>No default</td>
         </tr>
@@ -737,6 +793,168 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### SemanticKeyAction {:#SemanticKeyAction}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.ui.input2/semantic_keys.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/semantic_keys.fidl#11)*
+
+ Semantic Key represents the meaning of a non-symbolic key on a keyboard.
+
+ Definition of each key is derived from W3C named values of a key attribute:
+ https://www.w3.org/TR/uievents-key/#named-key-attribute-values
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>ALT</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ALT_GRAPH</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>CAPS_LOCK</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>CONTROL</code></td>
+            <td><code>4</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>META</code></td>
+            <td><code>5</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>NUM_LOCK</code></td>
+            <td><code>6</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SCROLL_LOCK</code></td>
+            <td><code>7</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SHIFT</code></td>
+            <td><code>8</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ARROW_DOWN</code></td>
+            <td><code>33</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ARROW_LEFT</code></td>
+            <td><code>34</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ARROW_RIGHT</code></td>
+            <td><code>35</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ARROW_UP</code></td>
+            <td><code>36</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>END</code></td>
+            <td><code>37</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>HOME</code></td>
+            <td><code>38</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>PAGE_DOWN</code></td>
+            <td><code>39</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>PAGE_UP</code></td>
+            <td><code>40</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ENTER</code></td>
+            <td><code>49</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>TAB</code></td>
+            <td><code>50</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>BACKSPACE</code></td>
+            <td><code>65</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DELETE</code></td>
+            <td><code>66</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>INSERT</code></td>
+            <td><code>67</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F1</code></td>
+            <td><code>97</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F2</code></td>
+            <td><code>98</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F3</code></td>
+            <td><code>99</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F4</code></td>
+            <td><code>100</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F5</code></td>
+            <td><code>101</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F6</code></td>
+            <td><code>102</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F7</code></td>
+            <td><code>103</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F8</code></td>
+            <td><code>104</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F9</code></td>
+            <td><code>105</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F10</code></td>
+            <td><code>106</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F11</code></td>
+            <td><code>107</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F12</code></td>
+            <td><code>108</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>CONTEXT_MENU</code></td>
+            <td><code>129</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ESCAPE</code></td>
+            <td><code>130</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>GO_BACK</code></td>
+            <td><code>177</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>GO_HOME</code></td>
+            <td><code>178</code></td>
+            <td></td>
+        </tr></table>
+
 ### KeyEventPhase {:#KeyEventPhase}
 Type: <code>uint32</code>
 
@@ -1228,6 +1446,168 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### SemanticKeyAction {:#SemanticKeyAction}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.ui.input2/semantic_keys.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/semantic_keys.fidl#11)*
+
+ Semantic Key represents the meaning of a non-symbolic key on a keyboard.
+
+ Definition of each key is derived from W3C named values of a key attribute:
+ https://www.w3.org/TR/uievents-key/#named-key-attribute-values
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>ALT</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ALT_GRAPH</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>CAPS_LOCK</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>CONTROL</code></td>
+            <td><code>4</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>META</code></td>
+            <td><code>5</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>NUM_LOCK</code></td>
+            <td><code>6</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SCROLL_LOCK</code></td>
+            <td><code>7</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SHIFT</code></td>
+            <td><code>8</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ARROW_DOWN</code></td>
+            <td><code>33</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ARROW_LEFT</code></td>
+            <td><code>34</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ARROW_RIGHT</code></td>
+            <td><code>35</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ARROW_UP</code></td>
+            <td><code>36</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>END</code></td>
+            <td><code>37</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>HOME</code></td>
+            <td><code>38</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>PAGE_DOWN</code></td>
+            <td><code>39</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>PAGE_UP</code></td>
+            <td><code>40</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ENTER</code></td>
+            <td><code>49</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>TAB</code></td>
+            <td><code>50</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>BACKSPACE</code></td>
+            <td><code>65</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>DELETE</code></td>
+            <td><code>66</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>INSERT</code></td>
+            <td><code>67</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F1</code></td>
+            <td><code>97</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F2</code></td>
+            <td><code>98</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F3</code></td>
+            <td><code>99</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F4</code></td>
+            <td><code>100</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F5</code></td>
+            <td><code>101</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F6</code></td>
+            <td><code>102</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F7</code></td>
+            <td><code>103</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F8</code></td>
+            <td><code>104</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F9</code></td>
+            <td><code>105</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F10</code></td>
+            <td><code>106</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F11</code></td>
+            <td><code>107</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>F12</code></td>
+            <td><code>108</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>CONTEXT_MENU</code></td>
+            <td><code>129</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ESCAPE</code></td>
+            <td><code>130</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>GO_BACK</code></td>
+            <td><code>177</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>GO_HOME</code></td>
+            <td><code>178</code></td>
+            <td></td>
+        </tr></table>
+
 
 
 ## **TABLES**
@@ -1235,7 +1615,7 @@ Type: <code>uint32</code>
 ### KeyEvent {:#KeyEvent}
 
 
-*Defined in [fuchsia.ui.input2/events.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/events.fidl#23)*
+*Defined in [fuchsia.ui.input2/events.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/events.fidl#44)*
 
  Keyboard event is generated to reflect key input.
 
@@ -1275,6 +1655,40 @@ Type: <code>uint32</code>
             </td>
             <td> Modifier keys being held.
 </td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>semantic_key</code></td>
+            <td>
+                <code><a class='link' href='#SemanticKey'>SemanticKey</a></code>
+            </td>
+            <td> The semantic meaning of the key that was pressed or released, taking the keyboard
+ layout and modifiers into account.
+
+ Use this value for the following purposes:
+ - typing text when implementing an input method editor (IME) or when IME services
+   are not available (this won’t work for languages that require composition)
+
+ The input system derives this value from the combination of `physical_key` and
+ `modifiers` by consulting the key symbol map of `KeyboardLayout` that was active
+ for the keyboard when the key was pressed. Note that the same value will be reported
+ when the key is released even if the keyboard layout or modifiers change in the
+ interim between press and release.
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>physical_key</code></td>
+            <td>
+                <code><a class='link' href='#Key'>Key</a></code>
+            </td>
+            <td> Identifies the physical key, ignoring modifiers and layout.
+
+ Use this value for the following purposes:
+ - applying keyboard layout translations
+ - synthesizing input events into virtual machines, since VMs will do own layout mapping
+
+ The input system derives this value from the data reported by the keyboard itself
+ without taking into account the keyboard’s current `KeyboardLayout` or modifiers.
+</td>
         </tr></table>
 
 ### KeyboardLayout {:#KeyboardLayout}
@@ -1304,9 +1718,9 @@ Type: <code>uint32</code>
             <td></td>
         </tr><tr>
             <td>2</td>
-            <td><code>symbol_map</code></td>
+            <td><code>semantic_key_map</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#KeySymbolMap'>KeySymbolMap</a>&gt;[64]</code>
+                <code>vector&lt;<a class='link' href='#SemanticKeyMap'>SemanticKeyMap</a>&gt;[64]</code>
             </td>
             <td></td>
         </tr></table>
@@ -1332,7 +1746,7 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
-### KeySymbolMap {:#KeySymbolMap}
+### SemanticKeyMap {:#SemanticKeyMap}
 
 
 *Defined in [fuchsia.ui.input2/layout.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#79)*
@@ -1391,13 +1805,21 @@ Type: <code>uint32</code>
  E.g. if CAPS_LOCK bit is set for this map, the map will be
  applied if Caps Lock state is ON.
  Also it may be applied if Caps Lock is off.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>entries</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#SemanticKeyMapEntry'>SemanticKeyMapEntry</a>&gt;[1024]</code>
+            </td>
+            <td> Collection of key to semantic meaning mappings.
 </td>
         </tr></table>
 
 ### KeyEvent {:#KeyEvent}
 
 
-*Defined in [fuchsia.ui.input2/events.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/events.fidl#23)*
+*Defined in [fuchsia.ui.input2/events.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/events.fidl#44)*
 
  Keyboard event is generated to reflect key input.
 
@@ -1437,6 +1859,40 @@ Type: <code>uint32</code>
             </td>
             <td> Modifier keys being held.
 </td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>semantic_key</code></td>
+            <td>
+                <code><a class='link' href='#SemanticKey'>SemanticKey</a></code>
+            </td>
+            <td> The semantic meaning of the key that was pressed or released, taking the keyboard
+ layout and modifiers into account.
+
+ Use this value for the following purposes:
+ - typing text when implementing an input method editor (IME) or when IME services
+   are not available (this won’t work for languages that require composition)
+
+ The input system derives this value from the combination of `physical_key` and
+ `modifiers` by consulting the key symbol map of `KeyboardLayout` that was active
+ for the keyboard when the key was pressed. Note that the same value will be reported
+ when the key is released even if the keyboard layout or modifiers change in the
+ interim between press and release.
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>physical_key</code></td>
+            <td>
+                <code><a class='link' href='#Key'>Key</a></code>
+            </td>
+            <td> Identifies the physical key, ignoring modifiers and layout.
+
+ Use this value for the following purposes:
+ - applying keyboard layout translations
+ - synthesizing input events into virtual machines, since VMs will do own layout mapping
+
+ The input system derives this value from the data reported by the keyboard itself
+ without taking into account the keyboard’s current `KeyboardLayout` or modifiers.
+</td>
         </tr></table>
 
 ### KeyboardLayout {:#KeyboardLayout}
@@ -1466,9 +1922,9 @@ Type: <code>uint32</code>
             <td></td>
         </tr><tr>
             <td>2</td>
-            <td><code>symbol_map</code></td>
+            <td><code>semantic_key_map</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#KeySymbolMap'>KeySymbolMap</a>&gt;[64]</code>
+                <code>vector&lt;<a class='link' href='#SemanticKeyMap'>SemanticKeyMap</a>&gt;[64]</code>
             </td>
             <td></td>
         </tr></table>
@@ -1494,7 +1950,7 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
-### KeySymbolMap {:#KeySymbolMap}
+### SemanticKeyMap {:#SemanticKeyMap}
 
 
 *Defined in [fuchsia.ui.input2/layout.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#79)*
@@ -1554,11 +2010,89 @@ Type: <code>uint32</code>
  applied if Caps Lock state is ON.
  Also it may be applied if Caps Lock is off.
 </td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>entries</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#SemanticKeyMapEntry'>SemanticKeyMapEntry</a>&gt;[1024]</code>
+            </td>
+            <td> Collection of key to semantic meaning mappings.
+</td>
         </tr></table>
 
 
 
 
+
+## **XUNIONS**
+
+### SemanticKey {:#SemanticKey}
+*Defined in [fuchsia.ui.input2/events.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/events.fidl#29)*
+
+ Semantic for a physical key typed by the user.
+ For letter or symbolic keys, is a string representation of the key typed.
+ For non-symbolic keys, is a SemanticKeyAction value corresponding to the key pressed.
+
+ Examples:
+   Key.A:
+     "a" or "A" in US key layout, depending on CapsLock and Shift
+   Key.SPACE:
+     " "
+   Key.TAB:
+     SemanticKeyAction.TAB
+   Key.GRAVE_ACCENT:
+     "`" or "]" or "<", depending on key layout
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>symbol</code></td>
+            <td>
+                <code>string[16]</code>
+            </td>
+            <td> For symbolic keys: string representing character typed.
+</td>
+        </tr><tr>
+            <td><code>action</code></td>
+            <td>
+                <code><a class='link' href='#SemanticKeyAction'>SemanticKeyAction</a></code>
+            </td>
+            <td> For non-symbolic keys: meaning of the key pressed.
+</td>
+        </tr></table>
+
+### SemanticKey {:#SemanticKey}
+*Defined in [fuchsia.ui.input2/events.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/events.fidl#29)*
+
+ Semantic for a physical key typed by the user.
+ For letter or symbolic keys, is a string representation of the key typed.
+ For non-symbolic keys, is a SemanticKeyAction value corresponding to the key pressed.
+
+ Examples:
+   Key.A:
+     "a" or "A" in US key layout, depending on CapsLock and Shift
+   Key.SPACE:
+     " "
+   Key.TAB:
+     SemanticKeyAction.TAB
+   Key.GRAVE_ACCENT:
+     "`" or "]" or "<", depending on key layout
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>symbol</code></td>
+            <td>
+                <code>string[16]</code>
+            </td>
+            <td> For symbolic keys: string representing character typed.
+</td>
+        </tr><tr>
+            <td><code>action</code></td>
+            <td>
+                <code><a class='link' href='#SemanticKeyAction'>SemanticKeyAction</a></code>
+            </td>
+            <td> For non-symbolic keys: meaning of the key pressed.
+</td>
+        </tr></table>
 
 
 

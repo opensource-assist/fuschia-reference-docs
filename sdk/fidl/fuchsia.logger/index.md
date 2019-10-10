@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Log {:#Log}
-*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#65)*
+*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#70)*
 
 
 ### Listen {:#Listen}
@@ -51,7 +51,7 @@ Book: /_book.yaml
 
 
 ## LogSink {:#LogSink}
-*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#78)*
+*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#83)*
 
 
 ### Connect {:#Connect}
@@ -70,7 +70,7 @@ Book: /_book.yaml
 
 
 ## LogListener {:#LogListener}
-*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#85)*
+*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#91)*
 
 
 ### Log {:#Log}
@@ -114,7 +114,7 @@ Book: /_book.yaml
 
 
 ## Log {:#Log}
-*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#65)*
+*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#70)*
 
 
 ### Listen {:#Listen}
@@ -158,7 +158,7 @@ Book: /_book.yaml
 
 
 ## LogSink {:#LogSink}
-*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#78)*
+*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#83)*
 
 
 ### Connect {:#Connect}
@@ -177,7 +177,7 @@ Book: /_book.yaml
 
 
 ## LogListener {:#LogListener}
-*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#85)*
+*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#91)*
 
 
 ### Log {:#Log}
@@ -285,7 +285,7 @@ Book: /_book.yaml
 </table>
 
 ### LogMessage {:#LogMessage}
-*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#47)*
+*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#52)*
 
 
 
@@ -337,7 +337,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>msg</code></td>
             <td>
-                <code>string</code>
+                <code>string[2032]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -405,7 +405,7 @@ Book: /_book.yaml
 </table>
 
 ### LogMessage {:#LogMessage}
-*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#47)*
+*Defined in [fuchsia.logger/logger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#52)*
 
 
 
@@ -457,7 +457,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>msg</code></td>
             <td>
-                <code>string</code>
+                <code>string[2032]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -566,12 +566,21 @@ Type: <code>int8</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#83">MAX_LOG_MANY_SIZE_BYTES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#50">MAX_DATAGRAM_LEN_BYTES</a></td>
+            <td>
+                    <code>2032</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#89">MAX_LOG_MANY_SIZE_BYTES</a></td>
             <td>
                     <code>16384</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td></td>
+            <td> Max log bytes per call to a listener
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#18">MAX_TAGS</a></td>
@@ -598,12 +607,21 @@ Type: <code>int8</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#83">MAX_LOG_MANY_SIZE_BYTES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#50">MAX_DATAGRAM_LEN_BYTES</a></td>
+            <td>
+                    <code>2032</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#89">MAX_LOG_MANY_SIZE_BYTES</a></td>
             <td>
                     <code>16384</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td></td>
+            <td> Max log bytes per call to a listener
+</td>
         </tr>
     
 </table>

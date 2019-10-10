@@ -36,6 +36,26 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### HasPrimaryConnected {:#HasPrimaryConnected}
+
+ Returns true if virtcon currently has a display that it can display something on.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>connected</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
 
 
 

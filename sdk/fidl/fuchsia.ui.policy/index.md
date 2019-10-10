@@ -6,6 +6,28 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
+## DeviceListenerRegistry {:#DeviceListenerRegistry}
+*Defined in [fuchsia.ui.policy/device_listener.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/device_listener.fidl#9)*
+
+ Service for exposing state and events of devices, such as media buttons.
+
+### RegisterMediaButtonsListener {:#RegisterMediaButtonsListener}
+
+ Registers a listener to receive media button related events, such as
+ changes from volume buttons and mute switches.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>listener</code></td>
+            <td>
+                <code><a class='link' href='#MediaButtonsListener'>MediaButtonsListener</a></code>
+            </td>
+        </tr></table>
+
+
+
 ## KeyboardCaptureListenerHACK {:#KeyboardCaptureListenerHACK}
 *Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#12)*
 
@@ -362,6 +384,28 @@ Book: /_book.yaml
             <td><code>params</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='../fuchsia.ui.gfx/index.html'>fuchsia.ui.gfx</a>/<a class='link' href='../fuchsia.ui.gfx/index.html#RendererParam'>RendererParam</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+## DeviceListenerRegistry {:#DeviceListenerRegistry}
+*Defined in [fuchsia.ui.policy/device_listener.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/device_listener.fidl#9)*
+
+ Service for exposing state and events of devices, such as media buttons.
+
+### RegisterMediaButtonsListener {:#RegisterMediaButtonsListener}
+
+ Registers a listener to receive media button related events, such as
+ changes from volume buttons and mute switches.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>listener</code></td>
+            <td>
+                <code><a class='link' href='#MediaButtonsListener'>MediaButtonsListener</a></code>
             </td>
         </tr></table>
 

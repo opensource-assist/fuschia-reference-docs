@@ -294,7 +294,7 @@ Book: /_book.yaml
 
 
 ## Frame {:#Frame}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#46)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#44)*
 
 
 ### CreateView {:#CreateView}
@@ -647,40 +647,8 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
-## AdditionalHeadersProvider {:#AdditionalHeadersProvider}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#180)*
-
-
-### GetHeaders {:#GetHeaders}
-
- Returns a set of `headers` to include in network requests. The returned
- `headers` may be cached and applied to further network requests until
- `expiry`. If `expiry` is in the past then `headers` should be used once
- but not cached.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>headers</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.http/index.html'>fuchsia.net.http</a>/<a class='link' href='../fuchsia.net.http/index.html#Header'>Header</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>expiry</code></td>
-            <td>
-                <code>int64</code>
-            </td>
-        </tr></table>
-
 ## MessagePort {:#MessagePort}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#212)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#199)*
 
  Represents one end of an HTML5 MessageChannel. Can be used to send and exchange Messages with
  the peered MessagePort in the Frame's script context. The port is destroyed when either end of
@@ -740,7 +708,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## PopupFrameCreationListener {:#PopupFrameCreationListener}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#238)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#225)*
 
 
 ### OnPopupFrameCreated {:#OnPopupFrameCreated}
@@ -1204,7 +1172,7 @@ Book: /_book.yaml
 
 
 ## Frame {:#Frame}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#46)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#44)*
 
 
 ### CreateView {:#CreateView}
@@ -1557,40 +1525,8 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
-## AdditionalHeadersProvider {:#AdditionalHeadersProvider}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#180)*
-
-
-### GetHeaders {:#GetHeaders}
-
- Returns a set of `headers` to include in network requests. The returned
- `headers` may be cached and applied to further network requests until
- `expiry`. If `expiry` is in the past then `headers` should be used once
- but not cached.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>headers</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.http/index.html'>fuchsia.net.http</a>/<a class='link' href='../fuchsia.net.http/index.html#Header'>Header</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>expiry</code></td>
-            <td>
-                <code>int64</code>
-            </td>
-        </tr></table>
-
 ## MessagePort {:#MessagePort}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#212)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#199)*
 
  Represents one end of an HTML5 MessageChannel. Can be used to send and exchange Messages with
  the peered MessagePort in the Frame's script context. The port is destroyed when either end of
@@ -1650,7 +1586,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## PopupFrameCreationListener {:#PopupFrameCreationListener}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#238)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#225)*
 
 
 ### OnPopupFrameCreated {:#OnPopupFrameCreated}
@@ -2033,7 +1969,7 @@ Type: <code>int32</code>
 ### ConsoleLogLevel {:#ConsoleLogLevel}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#14)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#12)*
 
 
 
@@ -2063,7 +1999,7 @@ Type: <code>int32</code>
 ### FrameError {:#FrameError}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#32)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#30)*
 
  Represents the return status of a <a class='link' href='#fuchsia.web.Frame'>fuchsia.web.Frame</a> method.
 
@@ -2180,7 +2116,7 @@ Type: <code>int32</code>
 ### ConsoleLogLevel {:#ConsoleLogLevel}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#14)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#12)*
 
 
 
@@ -2210,7 +2146,7 @@ Type: <code>int32</code>
 ### FrameError {:#FrameError}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#32)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#30)*
 
  Represents the return status of a <a class='link' href='#fuchsia.web.Frame'>fuchsia.web.Frame</a> method.
 
@@ -2546,7 +2482,7 @@ Type: <code>uint32</code>
 ### WebMessage {:#WebMessage}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#188)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#175)*
 
 
 
@@ -2583,7 +2519,7 @@ Type: <code>uint32</code>
 ### PopupFrameCreationInfo {:#PopupFrameCreationInfo}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#229)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#216)*
 
  Specifies additional information about a newly created popup frame.
 
@@ -3098,7 +3034,7 @@ Type: <code>uint32</code>
 ### WebMessage {:#WebMessage}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#188)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#175)*
 
 
 
@@ -3135,7 +3071,7 @@ Type: <code>uint32</code>
 ### PopupFrameCreationInfo {:#PopupFrameCreationInfo}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#229)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#216)*
 
  Specifies additional information about a newly created popup frame.
 
@@ -3693,7 +3629,7 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### OutgoingTransferable {:#OutgoingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#201)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#188)*
 
 
 <table>
@@ -3706,7 +3642,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### IncomingTransferable {:#IncomingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#205)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#192)*
 
 
 <table>
@@ -3754,7 +3690,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### OutgoingTransferable {:#OutgoingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#201)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#188)*
 
 
 <table>
@@ -3767,7 +3703,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### IncomingTransferable {:#IncomingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#205)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#192)*
 
 
 <table>

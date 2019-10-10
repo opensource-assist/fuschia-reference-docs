@@ -196,6 +196,32 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+## RootJobForInspect {:#RootJobForInspect}
+*Defined in [fuchsia.boot/root-job.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-boot/root-job.fidl#19)*
+
+ Protocol for providing the root job with restricted rights, specifically:
+ INSPECT | ENUMERATE | DUPLICATE | TRANSFER
+
+### Get {:#Get}
+
+ Get the root `job`.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>job</code></td>
+            <td>
+                <code>handle&lt;job&gt;</code>
+            </td>
+        </tr></table>
+
 ## RootResource {:#RootResource}
 *Defined in [fuchsia.boot/root-resource.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-boot/root-resource.fidl#9)*
 

@@ -15,6 +15,7 @@ Book: /_book.yaml
  Create shared color buffer. Color buffer is automatically freed when
  all references to `vmo` have been closed. Fails if VMO is not
  associated with goldfish heap memory.
+ Returns ZX_ERR_ALREADY_EXISTS if color buffer has already been created.
 
 #### Request
 <table>

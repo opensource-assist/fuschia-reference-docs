@@ -676,7 +676,7 @@ Book: /_book.yaml
 
 
 ## DriverConnector {:#DriverConnector}
-*Defined in [fuchsia.sysmem/driver_connector.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/driver_connector.fidl#28)*
+*Defined in [fuchsia.sysmem/driver_connector.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/driver_connector.fidl#26)*
 
  Once a channel with this interface is established to a driver (typically in
  advance), this interface allows asynchronously sending the server end of an
@@ -713,36 +713,6 @@ Book: /_book.yaml
         </tr></table>
 
 
-
-### GetProtectedMemoryInfo {:#GetProtectedMemoryInfo}
-
- Get information about the physical layout of protected memory, for use by sysmem-assistant.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>base_address</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>size</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr></table>
 
 ## Heap {:#Heap}
 *Defined in [fuchsia.sysmem/heap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/heap.fidl#13)*
@@ -862,6 +832,127 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
+
+## SecureMem {:#SecureMem}
+*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#31)*
+
+ SecureMem
+
+ The client is sysmem.  The server is securemem driver.
+
+ TEE - Trusted Execution Environment.
+
+ REE - Rich Execution Environment.
+
+ Enables sysmem to call the securemem driver to get any secure heaps
+ configured via the TEE (or via the securemem driver), and set any physical
+ secure heaps configured via sysmem.
+
+ Presently, dynamically-allocated secure heaps are configured via sysmem, as
+ it starts quite early during boot and can successfully reserve contiguous
+ physical memory.  Presently, fixed-location secure heaps are configured via
+ TEE, as the plumbing goes from the bootloader to the TEE.  However, this
+ protocol intentionally doesn't care which heaps are dynamically-allocated
+ and which are fixed-location.
+
+
+### GetPhysicalSecureHeaps {:#GetPhysicalSecureHeaps}
+
+ Gets the physical address and length of any secure heap whose physical
+ range is configured via the TEE.
+
+ Presently, these will be fixed physical addresses and lengths, with the
+ location plumbed via the TEE.
+
+ This is preferred over RegisterHeap() when there isn't any special
+ heap-specific per-VMO setup or teardown required.
+
+ The physical range must be secured/protected by the TEE before the
+ securemem driver responds to this request with success.
+
+ Sysmem should only call this once.  Returning zero heaps is not a
+ failure.
+
+ Errors:
+  * ZX_ERR_BAD_STATE - called more than once.
+  * ZX_ERR_INTERNAL - generic internal error (such as in communication
+    with TEE which doesn't generate zx_status_t errors).
+  * other errors are possible, such as from communication failures or
+    server propagation of zx_status_t failures
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#SecureMem_GetPhysicalSecureHeaps_Result'>SecureMem_GetPhysicalSecureHeaps_Result</a></code>
+            </td>
+        </tr></table>
+
+### SetPhysicalSecureHeaps {:#SetPhysicalSecureHeaps}
+
+ This request from sysmem to the securemem driver lets the TEE know the
+ physical memory address and length of any secure heap whose location is
+ configured/established via sysmem.
+
+ Only sysmem can call this because only sysmem is handed the client end
+ of a FIDL channel serving this protocol, via RegisterSecureMem().  The
+ securemem driver is the server end of this protocol.
+
+ Presently, these physical ranges will be dynamically-allocated by sysmem
+ early during boot.
+
+ The heap ID is included in case that's relevant to the securemem driver,
+ for more informative log messages, and for consistency with
+ GetPhysicalSecureHeaps().
+
+ The securemem driver must configure all the provided ranges as secure
+ with the TEE before responding to this message with success.
+
+ For heaps configured via sysmem, both the HeapType and heap location are
+ configured via sysmem, and ZX_ERR_INVALID_ARGS will be the result if the
+ securemem driver determines that the number of heaps or HeapType(s) are
+ not what's supported by the securemem driver.  Typically these aspects
+ are essentially fixed for a given device, so this error would typically
+ imply a configuration or plumbing problem.
+
+ Sysmem should only call this once.
+
+ Errors:
+  * ZX_ERR_BAD_STATE - called more than once
+  * ZX_ERR_INVALID_ARGS - unexpected heap count or unexpected heap
+  * ZX_ERR_INTERNAL - generic internal error (such as in communication
+    with TEE which doesn't generate zx_status_t errors).
+  * other errors are possible, such as from communication failures or
+    server propagation of zx_status_t failures
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>heaps</code></td>
+            <td>
+                <code><a class='link' href='#PhysicalSecureHeaps'>PhysicalSecureHeaps</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#SecureMem_SetPhysicalSecureHeaps_Result'>SecureMem_SetPhysicalSecureHeaps_Result</a></code>
+            </td>
+        </tr></table>
 
 ## Allocator {:#Allocator}
 *Defined in [fuchsia.sysmem/allocator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/allocator.fidl#11)*
@@ -1533,7 +1624,7 @@ Book: /_book.yaml
 
 
 ## DriverConnector {:#DriverConnector}
-*Defined in [fuchsia.sysmem/driver_connector.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/driver_connector.fidl#28)*
+*Defined in [fuchsia.sysmem/driver_connector.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/driver_connector.fidl#26)*
 
  Once a channel with this interface is established to a driver (typically in
  advance), this interface allows asynchronously sending the server end of an
@@ -1570,36 +1661,6 @@ Book: /_book.yaml
         </tr></table>
 
 
-
-### GetProtectedMemoryInfo {:#GetProtectedMemoryInfo}
-
- Get information about the physical layout of protected memory, for use by sysmem-assistant.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>base_address</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>size</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr></table>
 
 ## Heap {:#Heap}
 *Defined in [fuchsia.sysmem/heap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/heap.fidl#13)*
@@ -1719,6 +1780,127 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
+
+## SecureMem {:#SecureMem}
+*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#31)*
+
+ SecureMem
+
+ The client is sysmem.  The server is securemem driver.
+
+ TEE - Trusted Execution Environment.
+
+ REE - Rich Execution Environment.
+
+ Enables sysmem to call the securemem driver to get any secure heaps
+ configured via the TEE (or via the securemem driver), and set any physical
+ secure heaps configured via sysmem.
+
+ Presently, dynamically-allocated secure heaps are configured via sysmem, as
+ it starts quite early during boot and can successfully reserve contiguous
+ physical memory.  Presently, fixed-location secure heaps are configured via
+ TEE, as the plumbing goes from the bootloader to the TEE.  However, this
+ protocol intentionally doesn't care which heaps are dynamically-allocated
+ and which are fixed-location.
+
+
+### GetPhysicalSecureHeaps {:#GetPhysicalSecureHeaps}
+
+ Gets the physical address and length of any secure heap whose physical
+ range is configured via the TEE.
+
+ Presently, these will be fixed physical addresses and lengths, with the
+ location plumbed via the TEE.
+
+ This is preferred over RegisterHeap() when there isn't any special
+ heap-specific per-VMO setup or teardown required.
+
+ The physical range must be secured/protected by the TEE before the
+ securemem driver responds to this request with success.
+
+ Sysmem should only call this once.  Returning zero heaps is not a
+ failure.
+
+ Errors:
+  * ZX_ERR_BAD_STATE - called more than once.
+  * ZX_ERR_INTERNAL - generic internal error (such as in communication
+    with TEE which doesn't generate zx_status_t errors).
+  * other errors are possible, such as from communication failures or
+    server propagation of zx_status_t failures
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#SecureMem_GetPhysicalSecureHeaps_Result'>SecureMem_GetPhysicalSecureHeaps_Result</a></code>
+            </td>
+        </tr></table>
+
+### SetPhysicalSecureHeaps {:#SetPhysicalSecureHeaps}
+
+ This request from sysmem to the securemem driver lets the TEE know the
+ physical memory address and length of any secure heap whose location is
+ configured/established via sysmem.
+
+ Only sysmem can call this because only sysmem is handed the client end
+ of a FIDL channel serving this protocol, via RegisterSecureMem().  The
+ securemem driver is the server end of this protocol.
+
+ Presently, these physical ranges will be dynamically-allocated by sysmem
+ early during boot.
+
+ The heap ID is included in case that's relevant to the securemem driver,
+ for more informative log messages, and for consistency with
+ GetPhysicalSecureHeaps().
+
+ The securemem driver must configure all the provided ranges as secure
+ with the TEE before responding to this message with success.
+
+ For heaps configured via sysmem, both the HeapType and heap location are
+ configured via sysmem, and ZX_ERR_INVALID_ARGS will be the result if the
+ securemem driver determines that the number of heaps or HeapType(s) are
+ not what's supported by the securemem driver.  Typically these aspects
+ are essentially fixed for a given device, so this error would typically
+ imply a configuration or plumbing problem.
+
+ Sysmem should only call this once.
+
+ Errors:
+  * ZX_ERR_BAD_STATE - called more than once
+  * ZX_ERR_INVALID_ARGS - unexpected heap count or unexpected heap
+  * ZX_ERR_INTERNAL - generic internal error (such as in communication
+    with TEE which doesn't generate zx_status_t errors).
+  * other errors are possible, such as from communication failures or
+    server propagation of zx_status_t failures
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>heaps</code></td>
+            <td>
+                <code><a class='link' href='#PhysicalSecureHeaps'>PhysicalSecureHeaps</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#SecureMem_SetPhysicalSecureHeaps_Result'>SecureMem_SetPhysicalSecureHeaps_Result</a></code>
+            </td>
+        </tr></table>
 
 
 
@@ -2090,7 +2272,7 @@ Book: /_book.yaml
 </table>
 
 ### BufferMemoryConstraints {:#BufferMemoryConstraints}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#188)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#191)*
 
 
 
@@ -2176,7 +2358,7 @@ Book: /_book.yaml
 </table>
 
 ### BufferMemorySettings {:#BufferMemorySettings}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#229)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#232)*
 
 
 
@@ -2224,7 +2406,7 @@ Book: /_book.yaml
 </table>
 
 ### ImageFormatConstraints {:#ImageFormatConstraints}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#241)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#244)*
 
 
 
@@ -2470,7 +2652,7 @@ Book: /_book.yaml
 </table>
 
 ### ImageFormat_2 {:#ImageFormat_2}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#355)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#358)*
 
 
 
@@ -2644,7 +2826,7 @@ Book: /_book.yaml
 </table>
 
 ### ColorSpace {:#ColorSpace}
-*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#65)*
+*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#77)*
 
 
 
@@ -2800,6 +2982,97 @@ Book: /_book.yaml
                 <code><a class='link' href='#ColorSpace'>ColorSpace</a></code>
             </td>
             <td> Color space.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### SecureMem_GetPhysicalSecureHeaps_Response {:#SecureMem_GetPhysicalSecureHeaps_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>heaps</code></td>
+            <td>
+                <code><a class='link' href='#PhysicalSecureHeaps'>PhysicalSecureHeaps</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### SecureMem_SetPhysicalSecureHeaps_Response {:#SecureMem_SetPhysicalSecureHeaps_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### PhysicalSecureHeap {:#PhysicalSecureHeap}
+*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#92)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>heap</code></td>
+            <td>
+                <code><a class='link' href='#HeapType'>HeapType</a></code>
+            </td>
+            <td> This must be a HeapType that is secure/protected.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>physical_address</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Must be at least PAGE_SIZE aligned.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>size_bytes</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Must be at least PAGE_SIZE aligned.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### PhysicalSecureHeaps {:#PhysicalSecureHeaps}
+*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#108)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>heaps_count</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> Must be <= MAX_HEAPS_COUNT.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>heaps</code></td>
+            <td>
+                <code>[32]</code>
+            </td>
+            <td> Only the first heaps_count are meaningful.  The rest are ignored.
 </td>
             <td>No default</td>
         </tr>
@@ -3217,7 +3490,7 @@ Book: /_book.yaml
 </table>
 
 ### BufferMemoryConstraints {:#BufferMemoryConstraints}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#188)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#191)*
 
 
 
@@ -3303,7 +3576,7 @@ Book: /_book.yaml
 </table>
 
 ### BufferMemorySettings {:#BufferMemorySettings}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#229)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#232)*
 
 
 
@@ -3351,7 +3624,7 @@ Book: /_book.yaml
 </table>
 
 ### ImageFormatConstraints {:#ImageFormatConstraints}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#241)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#244)*
 
 
 
@@ -3597,7 +3870,7 @@ Book: /_book.yaml
 </table>
 
 ### ImageFormat_2 {:#ImageFormat_2}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#355)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#358)*
 
 
 
@@ -3771,7 +4044,7 @@ Book: /_book.yaml
 </table>
 
 ### ColorSpace {:#ColorSpace}
-*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#65)*
+*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#77)*
 
 
 
@@ -3932,6 +4205,97 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### SecureMem_GetPhysicalSecureHeaps_Response {:#SecureMem_GetPhysicalSecureHeaps_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>heaps</code></td>
+            <td>
+                <code><a class='link' href='#PhysicalSecureHeaps'>PhysicalSecureHeaps</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### SecureMem_SetPhysicalSecureHeaps_Response {:#SecureMem_SetPhysicalSecureHeaps_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### PhysicalSecureHeap {:#PhysicalSecureHeap}
+*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#92)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>heap</code></td>
+            <td>
+                <code><a class='link' href='#HeapType'>HeapType</a></code>
+            </td>
+            <td> This must be a HeapType that is secure/protected.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>physical_address</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Must be at least PAGE_SIZE aligned.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>size_bytes</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Must be at least PAGE_SIZE aligned.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### PhysicalSecureHeaps {:#PhysicalSecureHeaps}
+*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#108)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>heaps_count</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> Must be <= MAX_HEAPS_COUNT.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>heaps</code></td>
+            <td>
+                <code>[32]</code>
+            </td>
+            <td> Only the first heaps_count are meaningful.  The rest are ignored.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### BufferUsage {:#BufferUsage}
 *Defined in [fuchsia.sysmem/usages.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#9)*
 
@@ -4002,6 +4366,10 @@ Type: <code>uint64</code>
             <td><code>1152921504606912512</code></td>
             <td></td>
         </tr><tr>
+            <td><code>AMLOGIC_SECURE_VDEC</code></td>
+            <td><code>1152921504606912513</code></td>
+            <td></td>
+        </tr><tr>
             <td><code>GOLDFISH_DEVICE_LOCAL</code></td>
             <td><code>1152921504606978048</code></td>
             <td></td>
@@ -4010,7 +4378,7 @@ Type: <code>uint64</code>
 ### CoherencyDomain {:#CoherencyDomain}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#223)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#226)*
 
  Inaccessible is only for cases where there is no CPU-based access to the
  buffers.  A secure_required buffer can still have CoherencyDomain Cpu or
@@ -4089,12 +4457,28 @@ Type: <code>uint32</code>
             <td><code>BGR24</code></td>
             <td><code>108</code></td>
             <td></td>
+        </tr><tr>
+            <td><code>RGB565</code></td>
+            <td><code>109</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>RGB332</code></td>
+            <td><code>110</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>RGB2220</code></td>
+            <td><code>111</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>L8</code></td>
+            <td><code>112</code></td>
+            <td></td>
         </tr></table>
 
 ### ColorSpaceType {:#ColorSpaceType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#95)*
+*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#107)*
 
  This list has a separate entry for each variant of a color space standard.
 
@@ -4183,6 +4567,10 @@ Type: <code>uint64</code>
             <td><code>1152921504606912512</code></td>
             <td></td>
         </tr><tr>
+            <td><code>AMLOGIC_SECURE_VDEC</code></td>
+            <td><code>1152921504606912513</code></td>
+            <td></td>
+        </tr><tr>
             <td><code>GOLDFISH_DEVICE_LOCAL</code></td>
             <td><code>1152921504606978048</code></td>
             <td></td>
@@ -4191,7 +4579,7 @@ Type: <code>uint64</code>
 ### CoherencyDomain {:#CoherencyDomain}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#223)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#226)*
 
  Inaccessible is only for cases where there is no CPU-based access to the
  buffers.  A secure_required buffer can still have CoherencyDomain Cpu or
@@ -4270,12 +4658,28 @@ Type: <code>uint32</code>
             <td><code>BGR24</code></td>
             <td><code>108</code></td>
             <td></td>
+        </tr><tr>
+            <td><code>RGB565</code></td>
+            <td><code>109</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>RGB332</code></td>
+            <td><code>110</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>RGB2220</code></td>
+            <td><code>111</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>L8</code></td>
+            <td><code>112</code></td>
+            <td></td>
         </tr></table>
 
 ### ColorSpaceType {:#ColorSpaceType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#95)*
+*Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#107)*
 
  This list has a separate entry for each variant of a color space standard.
 
@@ -4380,6 +4784,44 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### SecureMem_GetPhysicalSecureHeaps_Result {:#SecureMem_GetPhysicalSecureHeaps_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#SecureMem_GetPhysicalSecureHeaps_Response'>SecureMem_GetPhysicalSecureHeaps_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### SecureMem_SetPhysicalSecureHeaps_Result {:#SecureMem_SetPhysicalSecureHeaps_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#SecureMem_SetPhysicalSecureHeaps_Response'>SecureMem_SetPhysicalSecureHeaps_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### BufferFormat {:#BufferFormat}
 *Defined in [fuchsia.sysmem/formats_deprecated.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/formats_deprecated.fidl#9)*
 
@@ -4406,6 +4848,44 @@ Type: <code>uint32</code>
             <td><code>image</code></td>
             <td>
                 <code><a class='link' href='#ImageSpec'>ImageSpec</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### SecureMem_GetPhysicalSecureHeaps_Result {:#SecureMem_GetPhysicalSecureHeaps_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#SecureMem_GetPhysicalSecureHeaps_Response'>SecureMem_GetPhysicalSecureHeaps_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### SecureMem_SetPhysicalSecureHeaps_Result {:#SecureMem_SetPhysicalSecureHeaps_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#SecureMem_SetPhysicalSecureHeaps_Response'>SecureMem_SetPhysicalSecureHeaps_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
             </td>
             <td></td>
         </tr></table>
@@ -4564,6 +5044,14 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#105">MAX_HEAPS_COUNT</a></td>
+            <td>
+                    <code>32</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#21">noneUsage</a></td>
             <td>
                     <code>1</code>
@@ -4711,6 +5199,14 @@ Type: <code>uint32</code>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#52">videoUsageCapture</a></td>
             <td>
                     <code>8</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#65">videoUsageDecryptorOutput</a></td>
+            <td>
+                    <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
             <td></td>
@@ -4860,6 +5356,14 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#105">MAX_HEAPS_COUNT</a></td>
+            <td>
+                    <code>32</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#21">noneUsage</a></td>
             <td>
                     <code>1</code>
@@ -5007,6 +5511,14 @@ Type: <code>uint32</code>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#52">videoUsageCapture</a></td>
             <td>
                     <code>8</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#65">videoUsageDecryptorOutput</a></td>
+            <td>
+                    <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
             <td></td>

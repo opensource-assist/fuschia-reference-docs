@@ -7,11 +7,12 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Device {:#Device}
-*Defined in [fuchsia.hardware.input/input.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#29)*
+*Defined in [fuchsia.hardware.input/input.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#40)*
 
 
 ### GetBootProtocol {:#GetBootProtocol}
 
+ Get the HID boot interface protocol this device supports
 
 #### Request
 <table>
@@ -29,8 +30,30 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### GetDeviceIds {:#GetDeviceIds}
+
+ Get the Device's IDs. If this is a real HID device, the IDs will come from the device.
+ If it is a mock HID decice, the IDs will either be 0's or user defined.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>ids</code></td>
+            <td>
+                <code><a class='link' href='#DeviceIds'>DeviceIds</a></code>
+            </td>
+        </tr></table>
+
 ### GetReportDescSize {:#GetReportDescSize}
 
+ Get the size of the report descriptor
 
 #### Request
 <table>
@@ -50,6 +73,7 @@ Book: /_book.yaml
 
 ### GetReportDesc {:#GetReportDesc}
 
+ Get the report descriptor
 
 #### Request
 <table>
@@ -69,6 +93,7 @@ Book: /_book.yaml
 
 ### GetNumReports {:#GetNumReports}
 
+ Get the number of reports in the report descriptor
 
 #### Request
 <table>
@@ -88,6 +113,7 @@ Book: /_book.yaml
 
 ### GetReportIds {:#GetReportIds}
 
+ Get the report ids that are used in the report descriptor
 
 #### Request
 <table>
@@ -107,6 +133,7 @@ Book: /_book.yaml
 
 ### GetReportSize {:#GetReportSize}
 
+ Get the size of a single report for the given (type, id) pair.
 
 #### Request
 <table>
@@ -141,6 +168,7 @@ Book: /_book.yaml
 
 ### GetMaxInputReportSize {:#GetMaxInputReportSize}
 
+ Get the maximum size of a single input report.
 
 #### Request
 <table>
@@ -160,6 +188,13 @@ Book: /_book.yaml
 
 ### GetReports {:#GetReports}
 
+ Receive up to MAX_REPORT_DATA bytes of reports that have been sent from a device.
+ This is the interface that is supposed to be used for continuous polling.
+ Multiple reports can be returned from this API at a time, it is up to the client
+ to do the parsing of the reports with the correct sizes and offset.
+ It is guaranteed that only whole reports will be sent.
+ If there are no reports, this will return ZX_ERR_SHOULD_WAIT, and the client can
+ wait on the event from |GetReportsEvent|.
 
 #### Request
 <table>
@@ -184,6 +219,8 @@ Book: /_book.yaml
 
 ### GetReportsEvent {:#GetReportsEvent}
 
+ Receive an event that will be signalled when there are reports in the
+ Device's report FIFO.
 
 #### Request
 <table>
@@ -208,6 +245,8 @@ Book: /_book.yaml
 
 ### GetReport {:#GetReport}
 
+ Get a single report of the given (type, id) pair.  This interface is not intended
+ to be used for continuous polling of the reports.
 
 #### Request
 <table>
@@ -242,6 +281,7 @@ Book: /_book.yaml
 
 ### SetReport {:#SetReport}
 
+ Set a single report of the given (type, id) pair.
 
 #### Request
 <table>
@@ -276,6 +316,7 @@ Book: /_book.yaml
 
 ### SetTraceId {:#SetTraceId}
 
+ Set the trace ID that is used for HID report flow events.
 
 #### Request
 <table>
@@ -290,6 +331,45 @@ Book: /_book.yaml
 
 
 
+
+## **STRUCTS**
+
+### DeviceIds {:#DeviceIds}
+*Defined in [fuchsia.hardware.input/input.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#33)*
+
+
+
+ DeviceIds lets a clients determine the vendor and product id for a device.
+ If the device is real HID device, then the id information
+ will come from the device itself. Mock HID devices may assign the
+ ids in the driver. If the mock HID driver does not assign ids, zeros
+ will be used instead.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>vendor_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>product_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>version</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
 
 
 

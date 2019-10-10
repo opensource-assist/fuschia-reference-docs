@@ -710,8 +710,23 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### OnChannelSwitched {:#OnChannelSwitched}
+
+
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>info</code></td>
+            <td>
+                <code><a class='link' href='#ChannelSwitchInfo'>ChannelSwitchInfo</a></code>
+            </td>
+        </tr></table>
+
 ## Connector {:#Connector}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#974)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#976)*
 
  This protocol is used to connect to the interface's underlying MLME.
 
@@ -3384,6 +3399,24 @@ Book: /_book.yaml
             <td><code>frame</code></td>
             <td>
                 <code>vector&lt;uint8&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### ChannelSwitchInfo {:#ChannelSwitchInfo}
+*Defined in [fuchsia.wlan.mlme/wlan_mlme_ext.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme_ext.fidl#125)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>new_channel</code></td>
+            <td>
+                <code>uint8</code>
             </td>
             <td></td>
             <td>No default</td>

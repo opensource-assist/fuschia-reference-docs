@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Control {:#Control}
-*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#18)*
+*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#26)*
 
  The control plane for a network socket.
 
@@ -24,6 +24,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -36,7 +37,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -207,56 +209,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ### Bind {:#Bind}
 
  Sets the local address used for the socket.
@@ -267,7 +219,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
         </tr></table>
 
@@ -284,7 +236,7 @@ Book: /_book.yaml
 
 ### Connect {:#Connect}
 
- Initiates a connection to a network endpoint.
+ Initiates a connection to a remote address.
 
 #### Request
 <table>
@@ -292,7 +244,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
         </tr></table>
 
@@ -309,8 +261,8 @@ Book: /_book.yaml
 
 ### Listen {:#Listen}
 
- Begin listening for new connections from network endpoints. At most `backlog` connections
- will be buffered.
+ Begins listening for new incoming connections. At most `backlog` connections will be
+ buffered.
 
 #### Request
 <table>
@@ -335,7 +287,7 @@ Book: /_book.yaml
 
 ### Accept {:#Accept}
 
- Accepts an incoming connection from a network endpoint.
+ Accepts a buffered incoming connection.
 
 #### Request
 <table>
@@ -384,7 +336,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
         </tr></table>
 
@@ -409,13 +361,13 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
         </tr></table>
 
 ### SetSockOpt {:#SetSockOpt}
 
- Sets a socket option. TODO(NET-1699): link to description of supported socket options.
+ Sets the value of a socket option.
 
 #### Request
 <table>
@@ -433,7 +385,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>optval</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[900]</code>
             </td>
         </tr></table>
 
@@ -450,7 +402,7 @@ Book: /_book.yaml
 
 ### GetSockOpt {:#GetSockOpt}
 
- Retrieves the current value of a socket option.
+ Retrieves the value of a socket option.
 
 #### Request
 <table>
@@ -479,54 +431,18 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>optval</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
-            </td>
-        </tr></table>
-
-### IoctlPOSIX {:#IoctlPOSIX}
-
- Runs operations (e.g., get the receive timestamp of the last packet) on the socket.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>req</code></td>
-            <td>
-                <code>int16</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>code</code></td>
-            <td>
-                <code>int16</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[900]</code>
             </td>
         </tr></table>
 
 ## Provider {:#Provider}
-*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#46)*
+*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#50)*
 
  Provider implements the POSIX sockets API.
 
 ### Socket {:#Socket}
 
- Requests a socket with the specified parameters. Values for `code` are defined in
- errno.h.
+ Requests a socket with the specified parameters. Values for `code` are defined in errno.h.
 
 #### Request
 <table>
@@ -565,7 +481,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Control {:#Control}
-*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#18)*
+*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#26)*
 
  The control plane for a network socket.
 
@@ -582,6 +498,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -594,7 +511,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -765,56 +683,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ### Bind {:#Bind}
 
  Sets the local address used for the socket.
@@ -825,7 +693,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
         </tr></table>
 
@@ -842,7 +710,7 @@ Book: /_book.yaml
 
 ### Connect {:#Connect}
 
- Initiates a connection to a network endpoint.
+ Initiates a connection to a remote address.
 
 #### Request
 <table>
@@ -850,7 +718,7 @@ Book: /_book.yaml
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
         </tr></table>
 
@@ -867,8 +735,8 @@ Book: /_book.yaml
 
 ### Listen {:#Listen}
 
- Begin listening for new connections from network endpoints. At most `backlog` connections
- will be buffered.
+ Begins listening for new incoming connections. At most `backlog` connections will be
+ buffered.
 
 #### Request
 <table>
@@ -893,7 +761,7 @@ Book: /_book.yaml
 
 ### Accept {:#Accept}
 
- Accepts an incoming connection from a network endpoint.
+ Accepts a buffered incoming connection.
 
 #### Request
 <table>
@@ -942,7 +810,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
         </tr></table>
 
@@ -967,13 +835,13 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[128]</code>
             </td>
         </tr></table>
 
 ### SetSockOpt {:#SetSockOpt}
 
- Sets a socket option. TODO(NET-1699): link to description of supported socket options.
+ Sets the value of a socket option.
 
 #### Request
 <table>
@@ -991,7 +859,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>optval</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[900]</code>
             </td>
         </tr></table>
 
@@ -1008,7 +876,7 @@ Book: /_book.yaml
 
 ### GetSockOpt {:#GetSockOpt}
 
- Retrieves the current value of a socket option.
+ Retrieves the value of a socket option.
 
 #### Request
 <table>
@@ -1037,54 +905,18 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>optval</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
-            </td>
-        </tr></table>
-
-### IoctlPOSIX {:#IoctlPOSIX}
-
- Runs operations (e.g., get the receive timestamp of the last packet) on the socket.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>req</code></td>
-            <td>
-                <code>int16</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>code</code></td>
-            <td>
-                <code>int16</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[900]</code>
             </td>
         </tr></table>
 
 ## Provider {:#Provider}
-*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#46)*
+*Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#50)*
 
  Provider implements the POSIX sockets API.
 
 ### Socket {:#Socket}
 
- Requests a socket with the specified parameters. Values for `code` are defined in
- errno.h.
+ Requests a socket with the specified parameters. Values for `code` are defined in errno.h.
 
 #### Request
 <table>

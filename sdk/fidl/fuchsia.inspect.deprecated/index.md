@@ -1,13 +1,13 @@
 Project: /_project.yaml
 Book: /_book.yaml
 
-# fuchsia.inspect
+# fuchsia.inspect.deprecated
 
 
 ## **PROTOCOLS**
 
 ## Inspect {:#Inspect}
-*Defined in [fuchsia.inspect/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/inspect.fidl#41)*
+*Defined in [fuchsia.inspect.deprecated/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#49)*
 
 
 ### ReadData {:#ReadData}
@@ -44,7 +44,7 @@ Book: /_book.yaml
     <tr>
             <td><code>children_names</code></td>
             <td>
-                <code>vector&lt;string&gt;?</code>
+                <code>vector&lt;string&gt;[256]</code>
             </td>
         </tr></table>
 
@@ -57,7 +57,7 @@ Book: /_book.yaml
     <tr>
             <td><code>child_name</code></td>
             <td>
-                <code>string</code>
+                <code>string[1024]</code>
             </td>
         </tr><tr>
             <td><code>child_channel</code></td>
@@ -82,7 +82,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Property {:#Property}
-*Defined in [fuchsia.inspect/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/inspect.fidl#13)*
+*Defined in [fuchsia.inspect.deprecated/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#21)*
 
 
 
@@ -92,7 +92,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>key</code></td>
             <td>
-                <code>string</code>
+                <code>string[1024]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -107,7 +107,7 @@ Book: /_book.yaml
 </table>
 
 ### Metric {:#Metric}
-*Defined in [fuchsia.inspect/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/inspect.fidl#26)*
+*Defined in [fuchsia.inspect.deprecated/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#34)*
 
 
 
@@ -117,7 +117,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>key</code></td>
             <td>
-                <code>string</code>
+                <code>string[1024]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -132,7 +132,7 @@ Book: /_book.yaml
 </table>
 
 ### Object {:#Object}
-*Defined in [fuchsia.inspect/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/inspect.fidl#32)*
+*Defined in [fuchsia.inspect.deprecated/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#40)*
 
 
 
@@ -142,21 +142,21 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>name</code></td>
             <td>
-                <code>string</code>
+                <code>string[1024]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>properties</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Property'>Property</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Property'>Property</a>&gt;[256]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>metrics</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Metric'>Metric</a>&gt;?</code>
+                <code>vector&lt;<a class='link' href='#Metric'>Metric</a>&gt;[256]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -172,26 +172,26 @@ Book: /_book.yaml
 ## **UNIONS**
 
 ### PropertyValue {:#PropertyValue}
-*Defined in [fuchsia.inspect/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/inspect.fidl#7)*
+*Defined in [fuchsia.inspect.deprecated/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#15)*
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>str</code></td>
             <td>
-                <code>string</code>
+                <code>string[16384]</code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>bytes</code></td>
             <td>
-                <code>vector&lt;uint8&gt;</code>
+                <code>vector&lt;uint8&gt;[16384]</code>
             </td>
             <td></td>
         </tr></table>
 
 ### MetricValue {:#MetricValue}
-*Defined in [fuchsia.inspect/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/inspect.fidl#19)*
+*Defined in [fuchsia.inspect.deprecated/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#27)*
 
 
 <table>
@@ -220,4 +220,42 @@ Book: /_book.yaml
 
 
 
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#10">MAX_KEY_LENGTH</a></td>
+            <td>
+                    <code>1024</code>
+                </td>
+                <td><code>uint16</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#11">MAX_VALUE_LENGTH</a></td>
+            <td>
+                    <code>16384</code>
+                </td>
+                <td><code>uint16</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#12">MAX_VALUE_COUNT</a></td>
+            <td>
+                    <code>256</code>
+                </td>
+                <td><code>uint16</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#13">MAX_CHILDREN_COUNT</a></td>
+            <td>
+                    <code>256</code>
+                </td>
+                <td><code>uint16</code></td>
+            <td></td>
+        </tr>
+    
+</table>
 

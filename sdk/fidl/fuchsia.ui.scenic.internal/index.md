@@ -6,27 +6,102 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
-## Flatland {:#Flatland}
-*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#13)*
+## GraphLink {:#GraphLink}
+*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#34)*
 
- All functions in this protocol are feed-forward.
- They are not executed until Present() is called.
+ A protocol that provides information about a particular Link to the child client. Each Flatland
+ instance may only specify a single root transform, so other objects in the graph can only be 
+ children of a single GraphLink. However, more than one GraphLink protocol may be active at a
+ time for a particular Flatland instance. Specifically, when a Flatland instance is transitioning
+ from using one Link to another, each Link will have a separate protocol instance, and more than
+ one protocol may receive certain updates.
+
+### GetLayout {:#GetLayout}
+
+ A hanging get for receiving layout information. Clients may receive layout information
+ before the GraphLink operation has been presented. This allows children to layout their
+ content before their first call to Present(). In transition cases where two GraphLink
+ channels exist at the same time, both protocol instances will be receiving different layout
+ information.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>info</code></td>
+            <td>
+                <code><a class='link' href='#LayoutInfo'>LayoutInfo</a></code>
+            </td>
+        </tr></table>
+
+## ContentLink {:#ContentLink}
+*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#52)*
+
+ A protocol that provides information about a particular Link to the parent client. Flatland
+ instances may contain any number of ContentLinks, each of which may or may not be attached to
+ the Root Transform. Each ContentLink has its own protocol instance.
+
+### GetStatus {:#GetStatus}
+
+ A hanging get for receiving the status of a Link. This provides information to the parent,
+ such as whether or not the child has successfully presented content through this Link.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code><a class='link' href='#ContentLinkStatus'>ContentLinkStatus</a></code>
+            </td>
+        </tr></table>
+
+## Flatland {:#Flatland}
+*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#94)*
+
+ Each Flatland instance contains a Graph, which consists of a set of objects, and the
+ relationships between those objects. The client can specify a subset of those objects
+ (specifically, the directed acyclic graph starting at the root transform) to be presented as
+ content to some kind of output -- usually, a display.
+
+ Flatland Graphs are both hierarchical, and distributed. Graphs from different Flatland instances
+ may be linked together, allowing multiple processes to be involved in authoring content for a
+ particular output.
+
+ All functions in this protocol are feed-forward. The operations they represent are not fully
+ executed until Present() is called.
 
 ### Present {:#Present}
 
- Execute all feed-forward operations.
+ Complete execution of all feed-forward operations.
 
- If executing a command produces an error (e.g., CreateTransform(0)), Present() will return
- an error. Commands that produce errors are ignored. Future commands are still executed.
+ If executing an operation produces an error (e.g., CreateTransform(0)), Present() will
+ return an error. Operations that produce errors are ignored. Future operations are still
+ executed.
 
- TODO(36166): Present should stop execution, and kill the channel, when some errors are
- detected.
+ TODO(36166): Present should stop execution, and kill the channel, when irrecoverable errors
+ are detected.
 
- The client may only Present() a fixed number of times before it must wait for this function
- to return. This number or presents remaining is the return value of this method. The number of /// presents remaining will never drop without a corresponding call to Present() by the client,
- however, it may stay the same, or even increase, with each call to Present().
+ The client may only call Present() a certain number of times before it must wait for this
+ function to return. This number or presents remaining is the return value of this function.
+ The number of presents remaining will never drop without a corresponding call to Present()
+ by the client. However, it may stay the same, or even increase, with each return from
+ Present().
 
- num_presents_remaining will always be >= 1
+ num_presents_remaining will always be >= 1. Present() will not return until the client is
+ allowed to call Present() again.
 
 #### Request
 <table>
@@ -43,6 +118,44 @@ Book: /_book.yaml
                 <code><a class='link' href='#Flatland_Present_Result'>Flatland_Present_Result</a></code>
             </td>
         </tr></table>
+
+### LinkToParent {:#LinkToParent}
+
+ A Link is a connection between the objects authored in this Graph, and the objects in
+ the Graph of another process. The parent process has control over how the linked content is
+ integrated into their Graph.
+
+ A link is formed by creating an event pair, passing one end to the parent (which calls
+ CreateLink()) and the other end to the child (which calls LinkToParent()).
+
+ Only nodes connected to the Root Transform in this Flatland instance will be rendered as
+ part of the parent's Graph.
+
+ Calling LinkToParent() a second time will disconnect the Root Transform from the existing
+ parent's Graph, and attach it to a new parent's Graph.
+
+ This function is feed-forward, meaning that the Root Transform will not be attached to the
+ parent Graph until Present() is called. However, Clients will receive information through
+ their GraphLinkListener (e.g., LayoutInfo) immediately after calling this function, even if
+ they have not called Present() or SetRoot(). This allows clients to wait for layout
+ information from their parent before calling Present(), if they wish.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>token</code></td>
+            <td>
+                <code><a class='link' href='#GraphLinkToken'>GraphLinkToken</a></code>
+            </td>
+        </tr><tr>
+            <td><code>graph_link</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#GraphLink'>GraphLink</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
 
 ### ClearGraph {:#ClearGraph}
 
@@ -138,7 +251,7 @@ Book: /_book.yaml
  Sets the Root Transform for the graph.
 
  The sub-graph defined by the Root Transform and its children will be rendered as Content
- in the linked parent Graph (see LinkGraph()). Any parents of the Root Transform in this
+ in the linked parent Graph (see LinkToParent()). Any parents of the Root Transform in this
  Graph will be ignored.
 
  The Root Transform, and all children of the Root Transform, are kept alive if they are
@@ -155,6 +268,62 @@ Book: /_book.yaml
             <td><code>transform_id</code></td>
             <td>
                 <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+
+### CreateLink {:#CreateLink}
+
+ A Link is a connection between the objects authored in this Graph, and the objects in
+ another process. The parent process has control over how the linked content is integrated
+ into their Graph through this Link object, and the object's associated Link properties.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>link_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>token</code></td>
+            <td>
+                <code><a class='link' href='#ContentLinkToken'>ContentLinkToken</a></code>
+            </td>
+        </tr><tr>
+            <td><code>properties</code></td>
+            <td>
+                <code><a class='link' href='#LinkProperties'>LinkProperties</a></code>
+            </td>
+        </tr><tr>
+            <td><code>content_link</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#ContentLink'>ContentLink</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+### SetLinkProperties {:#SetLinkProperties}
+
+ Transforms are usually sufficient to change how content is presented. Links, however, have
+ special properties that are not part of the Transform hierarchy. Those properties can be set
+ using this function.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>link_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>properties</code></td>
+            <td>
+                <code><a class='link' href='#LinkProperties'>LinkProperties</a></code>
             </td>
         </tr></table>
 
@@ -234,6 +403,69 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### Vec2 {:#Vec2}
+*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#13)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>x</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>y</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### GraphLinkToken {:#GraphLinkToken}
+*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#59)*
+
+
+
+ A typed wrapper for an eventpair, representing the child endpoint of a Link.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code>handle&lt;eventpair&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### ContentLinkToken {:#ContentLinkToken}
+*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#64)*
+
+
+
+ A typed wrapper for an eventpair, representing the parent endpoint of a Link.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code>handle&lt;eventpair&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### SnapshotResult {:#SnapshotResult}
 *Defined in [fuchsia.ui.scenic.internal/snapshot.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/snapshot.fidl#12)*
 
@@ -266,7 +498,7 @@ Book: /_book.yaml
 ### Error {:#Error}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#7)*
+*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#8)*
 
 
 
@@ -277,7 +509,69 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### ContentLinkStatus {:#ContentLinkStatus}
+Type: <code>uint32</code>
 
+*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#43)*
+
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>CONTENT_HAS_PRESENTED</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr></table>
+
+
+
+## **TABLES**
+
+### LayoutInfo {:#LayoutInfo}
+
+
+*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#22)*
+
+ The return type of GraphLink::GetLayout(). This table contains most of the information necessary
+ for a client to decide how to layout their content in a Flatland instance. This data may be
+ provided to the client before the command that creates the Link is presented, so that the client
+ may lay out content properly before their first call to Present().
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>logical_size</code></td>
+            <td>
+                <code><a class='link' href='#Vec2'>Vec2</a></code>
+            </td>
+            <td> The layout size of a Graph in logical pixels, defined by the parent’s call to
+ SetLinkProperties(). Clients should re-layout their content when this value changes.
+</td>
+        </tr></table>
+
+### LinkProperties {:#LinkProperties}
+
+
+*Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#70)*
+
+ The properties of a Link as defined by the parent. This data, along with the set of attached
+ Transforms, will be used to compute the LayoutInfo for the child of the Link.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>logical_size</code></td>
+            <td>
+                <code><a class='link' href='#Vec2'>Vec2</a></code>
+            </td>
+            <td> The size of the Link in logical pixels. This maps directly to the logical_size field in
+ LayoutInfo.
+</td>
+        </tr></table>
 
 
 

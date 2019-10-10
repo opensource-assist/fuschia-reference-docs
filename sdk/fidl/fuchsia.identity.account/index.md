@@ -1198,6 +1198,10 @@ Type: <code>uint32</code>
             <td><code>REMOVAL_IN_PROGRESS</code></td>
             <td><code>8</code></td>
             <td></td>
+        </tr><tr>
+            <td><code>FAILED_PRECONDITION</code></td>
+            <td><code>9</code></td>
+            <td></td>
         </tr></table>
 
 

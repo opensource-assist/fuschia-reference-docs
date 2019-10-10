@@ -9,16 +9,12 @@ toc:
   path: /reference/fidl/fuchsia.amber
 - title: fuchsia.auth
   path: /reference/fidl/fuchsia.auth
-- title: fuchsia.auth.account
-  path: /reference/fidl/fuchsia.auth.account
-- title: fuchsia.auth.account.internal
-  path: /reference/fidl/fuchsia.auth.account.internal
 - title: fuchsia.auth.oldtokens
   path: /reference/fidl/fuchsia.auth.oldtokens
-- title: fuchsia.auth.testing
-  path: /reference/fidl/fuchsia.auth.testing
 - title: fuchsia.bluetooth
   path: /reference/fidl/fuchsia.bluetooth
+- title: fuchsia.bluetooth.avdtp
+  path: /reference/fidl/fuchsia.bluetooth.avdtp
 - title: fuchsia.bluetooth.avrcp
   path: /reference/fidl/fuchsia.bluetooth.avrcp
 - title: fuchsia.bluetooth.avrcp.test
@@ -51,14 +47,14 @@ toc:
   path: /reference/fidl/fuchsia.camera2.hal
 - title: fuchsia.castauth
   path: /reference/fidl/fuchsia.castauth
+- title: fuchsia.castconfig
+  path: /reference/fidl/fuchsia.castconfig
 - title: fuchsia.castsetup
   path: /reference/fidl/fuchsia.castsetup
 - title: fuchsia.castsysteminfo
   path: /reference/fidl/fuchsia.castsysteminfo
 - title: fuchsia.cobalt
   path: /reference/fidl/fuchsia.cobalt
-- title: fuchsia.crash
-  path: /reference/fidl/fuchsia.crash
 - title: fuchsia.data
   path: /reference/fidl/fuchsia.data
 - title: fuchsia.debugdata
@@ -89,6 +85,8 @@ toc:
   path: /reference/fidl/fuchsia.fonts
 - title: fuchsia.gpu.magma
   path: /reference/fidl/fuchsia.gpu.magma
+- title: fuchsia.hardware.audio
+  path: /reference/fidl/fuchsia.hardware.audio
 - title: fuchsia.hardware.block
   path: /reference/fidl/fuchsia.hardware.block
 - title: fuchsia.hardware.block.partition
@@ -111,14 +109,20 @@ toc:
   path: /reference/fidl/fuchsia.hardware.pty
 - title: fuchsia.hardware.rtc
   path: /reference/fidl/fuchsia.hardware.rtc
+- title: fuchsia.hardware.telephony.transport
+  path: /reference/fidl/fuchsia.hardware.telephony.transport
+- title: fuchsia.hardware.virtioconsole
+  path: /reference/fidl/fuchsia.hardware.virtioconsole
 - title: fuchsia.hwinfo
   path: /reference/fidl/fuchsia.hwinfo
 - title: fuchsia.identity.account
   path: /reference/fidl/fuchsia.identity.account
+- title: fuchsia.identity.internal
+  path: /reference/fidl/fuchsia.identity.internal
 - title: fuchsia.images
   path: /reference/fidl/fuchsia.images
-- title: fuchsia.inspect
-  path: /reference/fidl/fuchsia.inspect
+- title: fuchsia.inspect.deprecated
+  path: /reference/fidl/fuchsia.inspect.deprecated
 - title: fuchsia.intl
   path: /reference/fidl/fuchsia.intl
 - title: fuchsia.io
@@ -195,6 +199,8 @@ toc:
   path: /reference/fidl/fuchsia.process
 - title: fuchsia.recovery
   path: /reference/fidl/fuchsia.recovery
+- title: fuchsia.recovery.ui
+  path: /reference/fidl/fuchsia.recovery.ui
 - title: fuchsia.scenic.scheduling
   path: /reference/fidl/fuchsia.scenic.scheduling
 - title: fuchsia.scenic.snapshot
@@ -273,6 +279,8 @@ toc:
   path: /reference/fidl/fuchsia.update
 - title: fuchsia.update.channel
   path: /reference/fidl/fuchsia.update.channel
+- title: fuchsia.update.channelcontrol
+  path: /reference/fidl/fuchsia.update.channelcontrol
 - title: fuchsia.virtualaudio
   path: /reference/fidl/fuchsia.virtualaudio
 - title: fuchsia.virtualconsole

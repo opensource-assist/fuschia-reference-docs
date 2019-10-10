@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Publisher {:#Publisher}
-*Defined in [fuchsia.telephony.snoop/tel-snoop.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-telephony-snoop/tel-snoop.fidl#28)*
+*Defined in [fuchsia.telephony.snoop/tel-snoop.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-telephony-snoop/tel-snoop.fidl#27)*
 
  Protocol for forwarding QMI messages from driver to Snoop CLI
 

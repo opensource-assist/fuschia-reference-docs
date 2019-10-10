@@ -605,7 +605,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## AudioCore {:#AudioCore}
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#80)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#82)*
 
 
 ### CreateAudioRenderer {:#CreateAudioRenderer}
@@ -787,6 +787,27 @@ Book: /_book.yaml
             <td><code>gain_db</code></td>
             <td>
                 <code>float32</code>
+            </td>
+        </tr></table>
+
+
+
+### BindUsageVolumeControl {:#BindUsageVolumeControl}
+
+ Binds to a volume control protocol for the given usage.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>usage</code></td>
+            <td>
+                <code><a class='link' href='#Usage'>Usage</a></code>
+            </td>
+        </tr><tr>
+            <td><code>volume_control</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.media.audio/index.html'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/index.html#VolumeControl'>VolumeControl</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -2037,7 +2058,7 @@ Book: /_book.yaml
 
 
 ## StreamProcessor {:#StreamProcessor}
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#1025)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#1019)*
 
 
 ### EnableOnStreamFailed {:#EnableOnStreamFailed}
@@ -2394,6 +2415,69 @@ Book: /_book.yaml
             <td><code>stream_lifetime_ordinal</code></td>
             <td>
                 <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+
+## UsageWatcher {:#UsageWatcher}
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#34)*
+
+ A protocol for listening to changes to the policy state of an audio usage.
+
+ User actions, such as lowering the volume or muting a stream, are not reflected in this
+ API.
+
+### OnStateChanged {:#OnStateChanged}
+
+ Called on first connection and whenever the watched usage changes. The provided
+ usage will always be the bound usage; it is provided so that an implementation of
+ this protocol may be bound to more than one usage.
+
+ Clients must respond to acknowledge the event. Clients that do not acknowledge their
+ events will eventually be disconnected.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>usage</code></td>
+            <td>
+                <code><a class='link' href='#Usage'>Usage</a></code>
+            </td>
+        </tr><tr>
+            <td><code>state</code></td>
+            <td>
+                <code><a class='link' href='#UsageState'>UsageState</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+## UsageReporter {:#UsageReporter}
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#46)*
+
+ A protocol for setting up watchers of audio usages.
+
+### Watch {:#Watch}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>usage</code></td>
+            <td>
+                <code><a class='link' href='#Usage'>Usage</a></code>
+            </td>
+        </tr><tr>
+            <td><code>usage_watcher</code></td>
+            <td>
+                <code><a class='link' href='#UsageWatcher'>UsageWatcher</a></code>
             </td>
         </tr></table>
 
@@ -2998,7 +3082,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## AudioCore {:#AudioCore}
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#80)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#82)*
 
 
 ### CreateAudioRenderer {:#CreateAudioRenderer}
@@ -3180,6 +3264,27 @@ Book: /_book.yaml
             <td><code>gain_db</code></td>
             <td>
                 <code>float32</code>
+            </td>
+        </tr></table>
+
+
+
+### BindUsageVolumeControl {:#BindUsageVolumeControl}
+
+ Binds to a volume control protocol for the given usage.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>usage</code></td>
+            <td>
+                <code><a class='link' href='#Usage'>Usage</a></code>
+            </td>
+        </tr><tr>
+            <td><code>volume_control</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.media.audio/index.html'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/index.html#VolumeControl'>VolumeControl</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -4430,7 +4535,7 @@ Book: /_book.yaml
 
 
 ## StreamProcessor {:#StreamProcessor}
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#1025)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#1019)*
 
 
 ### EnableOnStreamFailed {:#EnableOnStreamFailed}
@@ -4787,6 +4892,69 @@ Book: /_book.yaml
             <td><code>stream_lifetime_ordinal</code></td>
             <td>
                 <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+
+## UsageWatcher {:#UsageWatcher}
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#34)*
+
+ A protocol for listening to changes to the policy state of an audio usage.
+
+ User actions, such as lowering the volume or muting a stream, are not reflected in this
+ API.
+
+### OnStateChanged {:#OnStateChanged}
+
+ Called on first connection and whenever the watched usage changes. The provided
+ usage will always be the bound usage; it is provided so that an implementation of
+ this protocol may be bound to more than one usage.
+
+ Clients must respond to acknowledge the event. Clients that do not acknowledge their
+ events will eventually be disconnected.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>usage</code></td>
+            <td>
+                <code><a class='link' href='#Usage'>Usage</a></code>
+            </td>
+        </tr><tr>
+            <td><code>state</code></td>
+            <td>
+                <code><a class='link' href='#UsageState'>UsageState</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+## UsageReporter {:#UsageReporter}
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#46)*
+
+ A protocol for setting up watchers of audio usages.
+
+### Watch {:#Watch}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>usage</code></td>
+            <td>
+                <code><a class='link' href='#Usage'>Usage</a></code>
+            </td>
+        </tr><tr>
+            <td><code>usage_watcher</code></td>
+            <td>
+                <code><a class='link' href='#UsageWatcher'>UsageWatcher</a></code>
             </td>
         </tr></table>
 
@@ -6673,7 +6841,7 @@ Book: /_book.yaml
 ### AudioRenderUsage {:#AudioRenderUsage}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#11)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#13)*
 
  Usage annotating the purpose of the stream being used to render audio.
  An AudioRenderer's usage cannot be changed after creation.  The
@@ -6707,7 +6875,7 @@ Type: <code>uint32</code>
 ### AudioCaptureUsage {:#AudioCaptureUsage}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#38)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#40)*
 
  Usages annotating the purpose of the stream being used to capture audio. The
  AudioCaptureUsage is used by audio policy to dictate how audio streams
@@ -6736,7 +6904,7 @@ Type: <code>uint32</code>
 ### Behavior {:#Behavior}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#63)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#65)*
 
  The behaviors applied to streams when multiple are active.
 
@@ -6759,7 +6927,7 @@ Type: <code>uint32</code>
 ### AudioOutputRoutingPolicy {:#AudioOutputRoutingPolicy}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#165)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#170)*
 
 
 
@@ -7159,7 +7327,7 @@ Type: <code>uint32</code>
 ### AudioRenderUsage {:#AudioRenderUsage}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#11)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#13)*
 
  Usage annotating the purpose of the stream being used to render audio.
  An AudioRenderer's usage cannot be changed after creation.  The
@@ -7193,7 +7361,7 @@ Type: <code>uint32</code>
 ### AudioCaptureUsage {:#AudioCaptureUsage}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#38)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#40)*
 
  Usages annotating the purpose of the stream being used to capture audio. The
  AudioCaptureUsage is used by audio policy to dictate how audio streams
@@ -7222,7 +7390,7 @@ Type: <code>uint32</code>
 ### Behavior {:#Behavior}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#63)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#65)*
 
  The behaviors applied to streams when multiple are active.
 
@@ -7245,7 +7413,7 @@ Type: <code>uint32</code>
 ### AudioOutputRoutingPolicy {:#AudioOutputRoutingPolicy}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#165)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#170)*
 
 
 
@@ -8093,7 +8261,7 @@ Type: <code>uint32</code>
 ### StreamBufferPartialSettings {:#StreamBufferPartialSettings}
 
 
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#599)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#598)*
 
 
 
@@ -8165,7 +8333,7 @@ Type: <code>uint32</code>
 ### StreamBuffer {:#StreamBuffer}
 
 
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#703)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#701)*
 
 
 
@@ -8197,7 +8365,7 @@ Type: <code>uint32</code>
 ### StreamBufferDataVmo {:#StreamBufferDataVmo}
 
 
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#755)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#751)*
 
  StreamBufferDataVmo
 
@@ -8232,7 +8400,7 @@ Type: <code>uint32</code>
 ### PacketHeader {:#PacketHeader}
 
 
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#779)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#775)*
 
  PacketHeader
 
@@ -8264,7 +8432,7 @@ Type: <code>uint32</code>
 ### Packet {:#Packet}
 
 
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#837)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#831)*
 
 
 
@@ -8340,6 +8508,44 @@ Type: <code>uint32</code>
             </td>
             <td></td>
         </tr></table>
+
+### UsageStateUnadjusted {:#UsageStateUnadjusted}
+
+
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#10)*
+
+ A state of audio usages in which no policy actions are taken on any streams with the usage.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
+
+### UsageStateDucked {:#UsageStateDucked}
+
+
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#15)*
+
+ A state of audio usages in which a policy decision has been made to temporarily
+ lower the volume of all streams with this usage.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
+
+### UsageStateMuted {:#UsageStateMuted}
+
+
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#20)*
+
+ A state of audio usages in which a policy decision has been made to temporarily
+ mute the volume of all streams with this usage.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
 
 ### EncryptedFormat {:#EncryptedFormat}
 
@@ -8788,7 +8994,7 @@ Type: <code>uint32</code>
 ### StreamBufferPartialSettings {:#StreamBufferPartialSettings}
 
 
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#599)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#598)*
 
 
 
@@ -8860,7 +9066,7 @@ Type: <code>uint32</code>
 ### StreamBuffer {:#StreamBuffer}
 
 
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#703)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#701)*
 
 
 
@@ -8892,7 +9098,7 @@ Type: <code>uint32</code>
 ### StreamBufferDataVmo {:#StreamBufferDataVmo}
 
 
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#755)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#751)*
 
  StreamBufferDataVmo
 
@@ -8927,7 +9133,7 @@ Type: <code>uint32</code>
 ### PacketHeader {:#PacketHeader}
 
 
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#779)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#775)*
 
  PacketHeader
 
@@ -8959,7 +9165,7 @@ Type: <code>uint32</code>
 ### Packet {:#Packet}
 
 
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#837)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#831)*
 
 
 
@@ -9036,12 +9242,50 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### UsageStateUnadjusted {:#UsageStateUnadjusted}
+
+
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#10)*
+
+ A state of audio usages in which no policy actions are taken on any streams with the usage.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
+
+### UsageStateDucked {:#UsageStateDucked}
+
+
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#15)*
+
+ A state of audio usages in which a policy decision has been made to temporarily
+ lower the volume of all streams with this usage.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
+
+### UsageStateMuted {:#UsageStateMuted}
+
+
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#20)*
+
+ A state of audio usages in which a policy decision has been made to temporarily
+ mute the volume of all streams with this usage.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
+
 
 
 ## **UNIONS**
 
 ### Usage {:#Usage}
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#74)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#76)*
 
 
 <table>
@@ -9223,7 +9467,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### StreamBufferData {:#StreamBufferData}
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#746)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#742)*
 
  StreamBufferData
 
@@ -9276,7 +9520,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Usage {:#Usage}
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#74)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#76)*
 
 
 <table>
@@ -9458,7 +9702,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### StreamBufferData {:#StreamBufferData}
-*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#746)*
+*Defined in [fuchsia.media/stream_processor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#742)*
 
  StreamBufferData
 
@@ -9589,6 +9833,32 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### UsageState {:#UsageState}
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#24)*
+
+ The state of audio policy enforcement on a stream or set of streams.
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>unadjusted</code></td>
+            <td>
+                <code><a class='link' href='#UsageStateUnadjusted'>UsageStateUnadjusted</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>ducked</code></td>
+            <td>
+                <code><a class='link' href='#UsageStateDucked'>UsageStateDucked</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>muted</code></td>
+            <td>
+                <code><a class='link' href='#UsageStateMuted'>UsageStateMuted</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### AudioCompressedFormat {:#AudioCompressedFormat}
 *Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#74)*
 
@@ -9664,6 +9934,32 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### UsageState {:#UsageState}
+*Defined in [fuchsia.media/usage_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/usage_reporter.fidl#24)*
+
+ The state of audio policy enforcement on a stream or set of streams.
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>unadjusted</code></td>
+            <td>
+                <code><a class='link' href='#UsageStateUnadjusted'>UsageStateUnadjusted</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>ducked</code></td>
+            <td>
+                <code><a class='link' href='#UsageStateDucked'>UsageStateDucked</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>muted</code></td>
+            <td>
+                <code><a class='link' href='#UsageStateMuted'>UsageStateMuted</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 
 
 
@@ -9705,7 +10001,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#33">RENDER_USAGE_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#35">RENDER_USAGE_COUNT</a></td>
             <td>
                     <code>5</code>
                 </td>
@@ -9713,7 +10009,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#60">CAPTURE_USAGE_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#62">CAPTURE_USAGE_COUNT</a></td>
             <td>
                     <code>4</code>
                 </td>
@@ -10105,7 +10401,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#33">RENDER_USAGE_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#35">RENDER_USAGE_COUNT</a></td>
             <td>
                     <code>5</code>
                 </td>
@@ -10113,7 +10409,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#60">CAPTURE_USAGE_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#62">CAPTURE_USAGE_COUNT</a></td>
             <td>
                     <code>4</code>
                 </td>

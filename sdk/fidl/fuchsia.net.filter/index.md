@@ -266,7 +266,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### PortRange {:#PortRange}
-*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#29)*
+*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#30)*
 
 
 
@@ -292,7 +292,7 @@ Book: /_book.yaml
 </table>
 
 ### Rule {:#Rule}
-*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#35)*
+*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#36)*
 
 
 
@@ -398,7 +398,7 @@ Book: /_book.yaml
 </table>
 
 ### Nat {:#Nat}
-*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#56)*
+*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#57)*
 
 
 
@@ -439,7 +439,7 @@ Book: /_book.yaml
 </table>
 
 ### Rdr {:#Rdr}
-*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#65)*
+*Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#66)*
 
 
 
@@ -574,20 +574,24 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>ANY</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr><tr>
             <td><code>ICMP</code></td>
             <td><code>1</code></td>
             <td></td>
         </tr><tr>
             <td><code>TCP</code></td>
-            <td><code>6</code></td>
+            <td><code>2</code></td>
             <td></td>
         </tr><tr>
             <td><code>UDP</code></td>
-            <td><code>17</code></td>
+            <td><code>3</code></td>
             <td></td>
         </tr><tr>
             <td><code>ICMPV6</code></td>
-            <td><code>58</code></td>
+            <td><code>4</code></td>
             <td></td>
         </tr></table>
 

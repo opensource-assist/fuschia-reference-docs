@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Controller {:#Controller}
-*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#114)*
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#112)*
 
  Interface for manipulating a device in a devhost
 
@@ -309,7 +309,7 @@ Book: /_book.yaml
     <tr>
             <td><code>mapping</code></td>
             <td>
-                <code>[6]</code>
+                <code>[7]</code>
             </td>
         </tr></table>
 
@@ -348,13 +348,7 @@ Book: /_book.yaml
 ### Suspend {:#Suspend}
 
  Transition this device from a working to a sleep state or from a sleep state to a deeper sleep
- state. TODO(ravoorir): At the moment, this will call the suspend hook only on this device.
- In a future change, this api will result in suspend hook being called on all the children and
- descendants before transitioning this device.
- On success, the out_state is same as requested_state.
- On failure, the out_state is the state the device can go into at this point, depending
- on the configuration of its children. For example, a device cannot go into the
- requested_state, if the requested_state does not support a descendant's wake configuration.
+ state.
 
 #### Request
 <table>
@@ -385,12 +379,6 @@ Book: /_book.yaml
 ### Resume {:#Resume}
 
  Transition this device from a sleep state to a working state.
- TODO(ravoorir): At the moment, this will call the resume hook only on this device.
- In a future change, this api will result in resume hook being called on all the children
- after the current device is transitioned.
- On success, the out_state has the actual state of the device. The out_state could be
- different from the requested_state, if the device could not resume to the requested
- performant state, but the device could resume to a working state.
 
 #### Request
 <table>
@@ -414,7 +402,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## NameProvider {:#NameProvider}
-*Defined in [fuchsia.device/name-provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/name-provider.fidl#13)*
+*Defined in [fuchsia.device/name-provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/name-provider.fidl#17)*
 
  Interface for getting device names.
 
@@ -482,7 +470,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>mapping</code></td>
             <td>
-                <code>[6]</code>
+                <code>[7]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -508,7 +496,7 @@ Book: /_book.yaml
 </table>
 
 ### DevicePowerStateInfo {:#DevicePowerStateInfo}
-*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#87)*
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#85)*
 
 
 
@@ -558,7 +546,7 @@ Book: /_book.yaml
 </table>
 
 ### SystemPowerStateInfo {:#SystemPowerStateInfo}
-*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#103)*
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#101)*
 
 
 
@@ -602,7 +590,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>name</code></td>
             <td>
-                <code>string</code>
+                <code>string[255]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -616,7 +604,7 @@ Book: /_book.yaml
 ### DevicePowerState {:#DevicePowerState}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#41)*
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#40)*
 
 
 
@@ -863,6 +851,16 @@ Type: <code>uint8</code>
             <td><code>fuchsia</code></td>
                     <td><code>String</code></td>
             <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/name-provider.fidl#13">DEVICE_NAME_MAX</a></td>
+            <td>
+                    <code>255</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Maximum length of a device name (without a null byte), based on
+ HOST_NAME_MAX as defined by <limits.h>.
+</td>
         </tr>
     
 </table>

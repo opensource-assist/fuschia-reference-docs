@@ -64,7 +64,7 @@ Book: /_book.yaml
 ### WatchConnectionStates {:#WatchConnectionStates}
 
  Watch connection state changes using the
- [hanging get pattern](//docs/development/api/fidl.md#delay-responses-using-hanging-gets).
+ [hanging get pattern](/docs/development/api/fidl.md#delay-responses-using-hanging-gets).
  Notifies the most recent controller connection state if there has been a change since the
  last time this method was called.
 

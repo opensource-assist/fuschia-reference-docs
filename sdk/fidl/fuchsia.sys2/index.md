@@ -1150,6 +1150,15 @@ Type: <code>uint32</code>
             <td> List of storage capabilities created by this component.
  Storage capabilities can be offered to children.
 </td>
+        </tr><tr>
+            <td>9</td>
+            <td><code>runners</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#RunnerDecl'>RunnerDecl</a>&gt;</code>
+            </td>
+            <td> List of runner capabilities created by this component.
+ Runner capabilities can be exposed to the parent's realm or offered to children.
+</td>
         </tr></table>
 
 ### ExposeServiceDecl {:#ExposeServiceDecl}
@@ -1307,6 +1316,53 @@ Type: <code>uint32</code>
             <td> The path by which the capability is being exposed.
 
  Must be an absolute path starting with /.
+</td>
+        </tr></table>
+
+### ExposeRunnerDecl {:#ExposeRunnerDecl}
+
+
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#88)*
+
+ Declares a runner exposed to a component's containing realm, such as a
+ runner exposed by the component or one of its children at runtime.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The provider of the capability relative to the component itself. Must
+ be `self` or `child`.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>source_name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td> The name of the runner, by which it was presented to this component.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>target</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The destination to which the runner is exposed: either the component's realm or the
+ framework.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>target_name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td> The name by which the capability is being exposed.
 </td>
         </tr></table>
 
@@ -1502,6 +1558,91 @@ Type: <code>uint32</code>
             </td>
             <td> Reference to the target of the capability. Must be `child` or
  `collection`.
+</td>
+        </tr></table>
+
+### OfferRunnerDecl {:#OfferRunnerDecl}
+
+
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#104)*
+
+ Declares a runner offered by a component to one of its children, which may
+ have been offered by the component's containing realm, the component itself,
+ or one of its other children.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The provider of the capability relative to the component itself. Must be
+ `realm`, `self`, or `child`.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>source_name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td> Name of the runner being offered.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>target</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> Reference to the target of the capability. Must be `child` or
+ `collection`.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>target_name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td> Name under which the capability is being offered.
+</td>
+        </tr></table>
+
+### RunnerDecl {:#RunnerDecl}
+
+
+*Defined in [fuchsia.sys2/runner_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/runner_decl.fidl#8)*
+
+ Declares a runner capability backed by a service.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td> The name of this runner.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#Ref'>Ref</a></code>
+            </td>
+            <td> The provider of the underlying service relative to the component itself.
+ Must be `realm`, `self`, or `child`.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>source_path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td> The path of the capability within the specified source.
 </td>
         </tr></table>
 
@@ -1708,6 +1849,27 @@ Type: <code>uint32</code>
  namespace. Must not be set if `type` is `META`.
 
  Must be an absolute path starting with /.
+</td>
+        </tr></table>
+
+### UseRunnerDecl {:#UseRunnerDecl}
+
+
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#93)*
+
+ Declares a runner used by a component, which was offered to the component's
+ environment.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td> The name of the runner, as it was presented to this component.
 </td>
         </tr></table>
 
@@ -2251,7 +2413,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#10">MAX_STORAGE_NAME_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#10">MAX_RUNNER_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
                 </td>
@@ -2259,7 +2421,15 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#11">MAX_PATH_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#11">MAX_STORAGE_NAME_LENGTH</a></td>
+            <td>
+                    <code>100</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#12">MAX_PATH_LENGTH</a></td>
             <td>
                     <code>1024</code>
                 </td>
@@ -2267,7 +2437,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#12">MAX_URL_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#13">MAX_URL_LENGTH</a></td>
             <td>
                     <code>4096</code>
                 </td>
@@ -2275,7 +2445,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#13">MAX_MONIKER_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#14">MAX_MONIKER_LENGTH</a></td>
             <td>
                     <code>4096</code>
                 </td>
@@ -2283,7 +2453,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#16">ERR_COMPONENT_DIED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#17">ERR_COMPONENT_DIED</a></td>
             <td>
                     <code>1</code>
                 </td>

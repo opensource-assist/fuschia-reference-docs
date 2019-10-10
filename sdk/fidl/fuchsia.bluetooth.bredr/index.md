@@ -251,6 +251,7 @@ Book: /_book.yaml
 
 
 
+ Identifies a communications protocol along with protocol-specific parameters.
 
 
 <table>
@@ -276,6 +277,7 @@ Book: /_book.yaml
 
 
 
+ A description of a profile that this service conforms to.
 
 
 <table>
@@ -308,6 +310,7 @@ Book: /_book.yaml
 
 
 
+ Human-readable information about a service. Strings are encoded in UTF-8.
 
 
 <table>
@@ -316,28 +319,33 @@ Book: /_book.yaml
             <td>
                 <code>string</code>
             </td>
-            <td></td>
+            <td> Language that is represented.  Must be two characters long and a valid
+ ICO 639:1988 identifier.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>name</code></td>
             <td>
                 <code>string?</code>
             </td>
-            <td></td>
+            <td> Service name
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>description</code></td>
             <td>
                 <code>string?</code>
             </td>
-            <td></td>
+            <td> A human-readable description
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>provider</code></td>
             <td>
                 <code>string?</code>
             </td>
-            <td></td>
+            <td> The provider of this service (person or organization)
+</td>
             <td>No default</td>
         </tr>
 </table>
@@ -347,6 +355,7 @@ Book: /_book.yaml
 
 
 
+ A generic attribute, used for protocol information;
 
 
 <table>
@@ -380,42 +389,54 @@ Book: /_book.yaml
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td></td>
+            <td> UUIDs of service classes that this service record conforms to.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>protocol_descriptors</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#ProtocolDescriptor'>ProtocolDescriptor</a>&gt;</code>
             </td>
-            <td></td>
+            <td> The protocols that can be used to gain access to this service, with their
+ protocol-specific identifiers.
+ This is ordered from lowest level to highest.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>additional_protocol_descriptors</code></td>
             <td>
                 <code>vector&lt;vector&gt;?</code>
             </td>
-            <td></td>
+            <td> Additional protocol descriptor lists, if the service requires more channels
+ in addition to the main service.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>profile_descriptors</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#ProfileDescriptor'>ProfileDescriptor</a>&gt;</code>
             </td>
-            <td></td>
+            <td> Bluetooth profiles that are supported by this service.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>information</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#Information'>Information</a>&gt;</code>
             </td>
-            <td></td>
+            <td> Human-readable service information, in one or more languages.
+ The first set of information is considered the primary language.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>additional_attributes</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#Attribute'>Attribute</a>&gt;?</code>
             </td>
-            <td></td>
+            <td> Additional attributes included in the Service Definition, for specific
+ services.
+ All of these attributes should have an Attribute ID above 0x0200.
+</td>
             <td>No default</td>
         </tr>
 </table>
@@ -459,6 +480,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.bredr/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#8)*
 
+ A building element in SDP.  Used for various low-level and custom parameters.
 
 
 <table>
@@ -501,6 +523,10 @@ Type: <code>uint16</code>
 
 *Defined in [fuchsia.bluetooth.bredr/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#39)*
 
+ Defined Protocol Identifiers for the Protocol Descriptor
+ We intentionally omit deprecated profile identifiers.
+ From Bluetooth Assigned Numbers:
+ https://www.bluetooth.com/specifications/assigned-numbers/service-discovery
 
 
 <table>
@@ -567,6 +593,11 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.bredr/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#85)*
 
+ Identifiers that are valid for Bluetooth Classes / Profiles
+ We intentionally omit classes and profile IDs that are unsupported, deprecated,
+ or reserved for use by Fuchsia Bluetooth.
+ From Bluetooth Assigned Numbers for SDP
+ https://www.bluetooth.com/specifications/assigned-numbers/service-discovery
 
 
 <table>
@@ -768,7 +799,10 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>int64</code></td>
-            <td></td>
+            <td> Defined PSMs from the Bluetooth Assigned Numbers
+ https://www.bluetooth.com/specifications/assigned-numbers/logical-link-control
+ Used in DataElementData for protocol parameters for L2CAP.
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#60">kPSM_RFCOMM</a></td>
@@ -880,7 +914,9 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint16</code></td>
-            <td></td>
+            <td> Universal attribute IDs.
+ From the Bluetooth Specification, Version 5, Vol 3, Part B
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#169">ATTR_SERVICE_CLASS_ID_LIST</a></td>

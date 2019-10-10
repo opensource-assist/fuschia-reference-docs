@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## PayloadStream {:#PayloadStream}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#46)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#56)*
 
  Protocol for streaming the FVM payload.
 
@@ -57,7 +57,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Paver {:#Paver}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#62)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#72)*
 
  Protocol for managing boot partitions.
 
@@ -67,9 +67,37 @@ Book: /_book.yaml
  |InitializePartitionTables| and |WipeVolumes| can be used to control which device is
  paved to.
 
+### InitializeAbr {:#InitializeAbr}
+
+ Initializes ABR metadata. Should only be called to initialize ABR
+ metadata for the first time (i.e. it should not be called every boot),
+ or recover from corrupted ABR metadata.
+
+ Returns `ZX_ERR_NOT_SUPPORTED` if A/B partition scheme is not supported
+ and we always boot from configuration A.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
 ### QueryActiveConfiguration {:#QueryActiveConfiguration}
 
  Queries active configuration.
+
+ Returns `ZX_ERR_NOT_SUPPORTED` if A/B partition scheme is not supported
+ and we always boot from configuration A.
 
 #### Request
 <table>
@@ -87,11 +115,40 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### SetActiveConfiguration {:#SetActiveConfiguration}
+### QueryConfigurationStatus {:#QueryConfigurationStatus}
+
+ Queries status of |configuration|.
+
+ Returns `ZX_ERR_INVALID_ARGS` if `Configuration.RECOVERY` is passed in via |configuration|.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>configuration</code></td>
+            <td>
+                <code><a class='link' href='#Configuration'>Configuration</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Paver_QueryConfigurationStatus_Result'>Paver_QueryConfigurationStatus_Result</a></code>
+            </td>
+        </tr></table>
+
+### SetConfigurationActive {:#SetConfigurationActive}
 
  Updates persistent metadata identifying which configuration should be selected as 'primary'
  for booting purposes. Should only be called after `KERNEL` as well as optional
  `VERIFIED_BOOT_METADATA` assets for specified `configuration` were written successfully.
+
+ Returns `ZX_ERR_INVALID_ARGS` if `Configuration.RECOVERY` is passed in via |configuration|.
 
 #### Request
 <table>
@@ -114,11 +171,50 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### MarkActiveConfigurationSuccessful {:#MarkActiveConfigurationSuccessful}
+### SetConfigurationUnbootable {:#SetConfigurationUnbootable}
+
+ Updates persistent metadata identifying whether |configuration| is bootable.
+ Should only be called in the following situations:
+ * Before `KERNEL` as well as optional `VERIFIED_BOOT_METADATA` assets for specified
+   |configuration| are written.
+ * After successfully booting from a new configuration and marking it healthy. This method
+   would be then called on the old configuration.
+ * After "successfully" booting from a new configuration, but encountering an unrecoverable
+   error during health check. This method would be then called on the new configuration.
+
+ If the configuration is unbootable, no action is taken.
+
+ Returns `ZX_ERR_INVALID_ARGS` if `Configuration.RECOVERY` is passed in via |configuration|.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>configuration</code></td>
+            <td>
+                <code><a class='link' href='#Configuration'>Configuration</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+### SetActiveConfigurationHealthy {:#SetActiveConfigurationHealthy}
 
  Updates persistent metadata identifying that active configuration is stable. Used to signal
  "rollback to previous slot" logic is not needed anymore. Meant to be called in subsequent
- boot attempt after `SetActiveConfiguration` was called.
+ boot attempt after `SetActiveConfiguration` was called. Will return error if active
+ configuration is currently unbootable.
+
+ If the configuration is already marked healthy, no action is taken.
 
 #### Request
 <table>
@@ -133,6 +229,37 @@ Book: /_book.yaml
             <td><code>status</code></td>
             <td>
                 <code>int32</code>
+            </td>
+        </tr></table>
+
+### ReadAsset {:#ReadAsset}
+
+ Reads partition corresponding to |configuration| and |asset| into a
+ vmo and returns it.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>configuration</code></td>
+            <td>
+                <code><a class='link' href='#Configuration'>Configuration</a></code>
+            </td>
+        </tr><tr>
+            <td><code>asset</code></td>
+            <td>
+                <code><a class='link' href='#Asset'>Asset</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Paver_ReadAsset_Result'>Paver_ReadAsset_Result</a></code>
             </td>
         </tr></table>
 
@@ -381,8 +508,44 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### Paver_QueryConfigurationStatus_Response {:#Paver_QueryConfigurationStatus_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>status</code></td>
+            <td>
+                <code><a class='link' href='#ConfigurationStatus'>ConfigurationStatus</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Paver_ReadAsset_Response {:#Paver_ReadAsset_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>asset</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### ReadInfo {:#ReadInfo}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#28)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#38)*
 
 
 
@@ -455,6 +618,29 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### ConfigurationStatus {:#ConfigurationStatus}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#29)*
+
+ Set of states configuration may be in.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>HEALTHY</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>PENDING</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>UNBOOTABLE</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr></table>
+
 
 
 
@@ -480,8 +666,46 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### Paver_QueryConfigurationStatus_Result {:#Paver_QueryConfigurationStatus_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Paver_QueryConfigurationStatus_Response'>Paver_QueryConfigurationStatus_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Paver_ReadAsset_Result {:#Paver_ReadAsset_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Paver_ReadAsset_Response'>Paver_ReadAsset_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### ReadResult {:#ReadResult}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#35)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#45)*
 
 
 <table>

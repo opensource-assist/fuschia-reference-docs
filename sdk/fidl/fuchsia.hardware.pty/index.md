@@ -24,6 +24,7 @@ Book: /_book.yaml
  Create another connection to the same remote object.
 
  `flags` may be any of:
+
  - `OPEN_RIGHT_*`
  - `OPEN_FLAG_APPEND`
  - `OPEN_FLAG_NO_REMOTE`
@@ -36,7 +37,8 @@ Book: /_book.yaml
  cloned object.
  The cloned object must have rights less than or equal to the original object.
  Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+ It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
+ `CLONE_FLAG_SAME_RIGHTS`.
 
 #### Request
 <table>
@@ -207,59 +209,9 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### Ioctl {:#Ioctl}
-
- Deprecated. Only for use with compatibility with devhost.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>opcode</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>max_out</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>in</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>s</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>handles</code></td>
-            <td>
-                <code>vector&lt;handle&gt;[2]</code>
-            </td>
-        </tr><tr>
-            <td><code>out</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
-            </td>
-        </tr></table>
-
 ### Read {:#Read}
 
- Reads 'count' bytes at the seek offset.
+ Reads `count` bytes at the seek offset.
  The seek offset is moved forward by the number of bytes read.
 
  This method requires following rights: `OPEN_RIGHT_READABLE`.
@@ -292,7 +244,7 @@ Book: /_book.yaml
 
 ### ReadAt {:#ReadAt}
 
- Reads 'count' bytes at the provided offset.
+ Reads `count` bytes at the provided offset.
  Does not affect the seek offset.
 
  This method requires following rights: `OPEN_RIGHT_READABLE`.
@@ -466,7 +418,7 @@ Book: /_book.yaml
 
 ### GetFlags {:#GetFlags}
 
- Acquires the Directory::Open rights and flags used to access this file.
+ Acquires the `Directory.Open` rights and flags used to access this file.
 
  This method does not require any rights.
 
@@ -493,7 +445,7 @@ Book: /_book.yaml
 
 ### SetFlags {:#SetFlags}
 
- Changes the Directory::Open flags used to access the file.
+ Changes the `Directory.Open` flags used to access the file.
  Supported flags which can be turned on / off:
  - `OPEN_FLAG_APPEND`
 
@@ -528,6 +480,7 @@ Book: /_book.yaml
  `flags` may be any of `VMO_FLAG_*`.
 
  This method requires following rights:
+
  - `OPEN_RIGHT_WRITABLE` if `flags` includes `VMO_FLAG_WRITE`.
  - `OPEN_RIGHT_READABLE` if `flags` includes `VMO_FLAG_READ` or `VMO_FLAG_EXEC`.
 

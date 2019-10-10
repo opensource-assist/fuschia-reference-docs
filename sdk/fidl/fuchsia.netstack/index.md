@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Netstack {:#Netstack}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#124)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#123)*
 
 
 ### GetPortForService {:#GetPortForService}
@@ -180,22 +180,6 @@ Book: /_book.yaml
                 <code><a class='link' href='#NetInterfaceStats'>NetInterfaceStats</a></code>
             </td>
         </tr></table>
-
-### GetAggregateStats {:#GetAggregateStats}
-
- Get stats for all NICs on the stack.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>object</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.io/index.html'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/index.html#Directory'>Directory</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
 
 ### SetInterfaceStatus {:#SetInterfaceStatus}
 
@@ -456,7 +440,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## ResolverAdmin {:#ResolverAdmin}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#186)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#182)*
 
 
 ### SetNameServers {:#SetNameServers}
@@ -475,7 +459,7 @@ Book: /_book.yaml
 
 
 ## RouteTableTransaction {:#RouteTableTransaction}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#191)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#187)*
 
 
 ### AddRoute {:#AddRoute}
@@ -527,7 +511,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Netstack {:#Netstack}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#124)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#123)*
 
 
 ### GetPortForService {:#GetPortForService}
@@ -700,22 +684,6 @@ Book: /_book.yaml
                 <code><a class='link' href='#NetInterfaceStats'>NetInterfaceStats</a></code>
             </td>
         </tr></table>
-
-### GetAggregateStats {:#GetAggregateStats}
-
- Get stats for all NICs on the stack.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>object</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.io/index.html'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/index.html#Directory'>Directory</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
 
 ### SetInterfaceStatus {:#SetInterfaceStatus}
 
@@ -976,7 +944,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## ResolverAdmin {:#ResolverAdmin}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#186)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#182)*
 
 
 ### SetNameServers {:#SetNameServers}
@@ -995,7 +963,7 @@ Book: /_book.yaml
 
 
 ## RouteTableTransaction {:#RouteTableTransaction}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#191)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#187)*
 
 
 ### AddRoute {:#AddRoute}
@@ -1062,7 +1030,7 @@ Book: /_book.yaml
 </table>
 
 ### NetErr {:#NetErr}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#28)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#27)*
 
 
 
@@ -1087,7 +1055,7 @@ Book: /_book.yaml
 </table>
 
 ### NetTrafficStats {:#NetTrafficStats}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#33)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#32)*
 
 
 
@@ -1112,7 +1080,7 @@ Book: /_book.yaml
 </table>
 
 ### NetInterfaceStats {:#NetInterfaceStats}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#38)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#37)*
 
 
 
@@ -1146,7 +1114,7 @@ Book: /_book.yaml
 </table>
 
 ### InterfaceConfig {:#InterfaceConfig}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#47)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#46)*
 
 
 
@@ -1189,7 +1157,7 @@ Book: /_book.yaml
 </table>
 
 ### NetInterface {:#NetInterface}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#66)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#65)*
 
 
 
@@ -1271,7 +1239,7 @@ Book: /_book.yaml
 </table>
 
 ### NetInterface2 {:#NetInterface2}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#82)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#81)*
 
 
 
@@ -1360,7 +1328,7 @@ Book: /_book.yaml
 </table>
 
 ### RouteTableEntry {:#RouteTableEntry}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#100)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#99)*
 
 
 
@@ -1399,7 +1367,7 @@ Book: /_book.yaml
 </table>
 
 ### RouteTableEntry2 {:#RouteTableEntry2}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#110)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#109)*
 
 
 
@@ -1446,7 +1414,7 @@ Book: /_book.yaml
 </table>
 
 ### SocketAddress {:#SocketAddress}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#118)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#117)*
 
 
 
@@ -1482,7 +1450,7 @@ Book: /_book.yaml
 </table>
 
 ### NetErr {:#NetErr}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#28)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#27)*
 
 
 
@@ -1507,7 +1475,7 @@ Book: /_book.yaml
 </table>
 
 ### NetTrafficStats {:#NetTrafficStats}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#33)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#32)*
 
 
 
@@ -1532,7 +1500,7 @@ Book: /_book.yaml
 </table>
 
 ### NetInterfaceStats {:#NetInterfaceStats}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#38)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#37)*
 
 
 
@@ -1566,7 +1534,7 @@ Book: /_book.yaml
 </table>
 
 ### InterfaceConfig {:#InterfaceConfig}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#47)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#46)*
 
 
 
@@ -1609,7 +1577,7 @@ Book: /_book.yaml
 </table>
 
 ### NetInterface {:#NetInterface}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#66)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#65)*
 
 
 
@@ -1691,7 +1659,7 @@ Book: /_book.yaml
 </table>
 
 ### NetInterface2 {:#NetInterface2}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#82)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#81)*
 
 
 
@@ -1780,7 +1748,7 @@ Book: /_book.yaml
 </table>
 
 ### RouteTableEntry {:#RouteTableEntry}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#100)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#99)*
 
 
 
@@ -1819,7 +1787,7 @@ Book: /_book.yaml
 </table>
 
 ### RouteTableEntry2 {:#RouteTableEntry2}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#110)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#109)*
 
 
 
@@ -1866,7 +1834,7 @@ Book: /_book.yaml
 </table>
 
 ### SocketAddress {:#SocketAddress}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#118)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#117)*
 
 
 
@@ -1897,7 +1865,7 @@ Book: /_book.yaml
 ### Protocol {:#Protocol}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#13)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#12)*
 
 
 
@@ -1919,7 +1887,7 @@ Type: <code>uint32</code>
 ### Status {:#Status}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#19)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#18)*
 
 
 
@@ -1953,7 +1921,7 @@ Type: <code>uint32</code>
 ### Protocol {:#Protocol}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#13)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#12)*
 
 
 
@@ -1975,7 +1943,7 @@ Type: <code>uint32</code>
 ### Status {:#Status}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#19)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#18)*
 
 
 
@@ -2032,7 +2000,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### IpAddressConfig {:#IpAddressConfig}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#60)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#59)*
 
 
 <table>
@@ -2070,7 +2038,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### IpAddressConfig {:#IpAddressConfig}
-*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#60)*
+*Defined in [fuchsia.netstack/netstack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#59)*
 
 
 <table>
@@ -2098,7 +2066,7 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#97">NetInterfaceFlagUp</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#96">NetInterfaceFlagUp</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -2107,7 +2075,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#98">NetInterfaceFlagDhcp</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#97">NetInterfaceFlagDhcp</a></td>
             <td>
                     <code>2</code>
                 </td>
@@ -2115,7 +2083,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#97">NetInterfaceFlagUp</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#96">NetInterfaceFlagUp</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -2124,7 +2092,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#98">NetInterfaceFlagDhcp</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#97">NetInterfaceFlagDhcp</a></td>
             <td>
                     <code>2</code>
                 </td>

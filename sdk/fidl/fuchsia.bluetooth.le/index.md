@@ -12,6 +12,11 @@ Book: /_book.yaml
 
 ### GetPeripherals {:#GetPeripherals}
 
+ Returns the list of peripherals that are known to the system from previous scan, connection,
+ and/or bonding procedures. The results can be filtered based on service UUIDs that are known to
+ be present on the peripheral.
+
+ This method only returns peripherals (i.e. connectable devices).
 
 #### Request
 <table>
@@ -36,6 +41,9 @@ Book: /_book.yaml
 
 ### GetPeripheral {:#GetPeripheral}
 
+ Returns information about a single peripheral that is known to the system from previous scan,
+ connection, and/or bonding procedures based on its unique identifier. Returns null if
+ `identifier` is not recognized.
 
 #### Request
 <table>
@@ -60,6 +68,14 @@ Book: /_book.yaml
 
 ### StartScan {:#StartScan}
 
+ Initiates a scan session for nearby peripherals and broadcasters. Discovered devices will be
+ reported via CentralDelegate.OnDeviceDiscovered(). If a scan session is already in progress,
+ `filter` will replace the existing session's filter.
+
+ If `filter` is null or empty (i.e. none of its fields has been populated) then the delegate
+ will be notified for all discoverable devices that are found. This is not recommended; clients
+ should generally filter results by at least one of `filter.service_uuids`,
+ `filter.service_data`, and/or `filter.manufacturer_identifier`.
 
 #### Request
 <table>
@@ -84,6 +100,7 @@ Book: /_book.yaml
 
 ### StopScan {:#StopScan}
 
+ Terminate a previously started scan session.
 
 #### Request
 <table>
@@ -94,6 +111,12 @@ Book: /_book.yaml
 
 ### ConnectPeripheral {:#ConnectPeripheral}
 
+ Creates a connection to the peripheral device with the given identifier.
+ Returns the status of the operation in `status`.
+
+ On success, `gatt_client` will be bound and can be used for GATT client
+ role procedures. On failure, `gatt_client` will be closed and `status` will
+ indicate an error.
 
 #### Request
 <table>
@@ -123,6 +146,7 @@ Book: /_book.yaml
 
 ### DisconnectPeripheral {:#DisconnectPeripheral}
 
+ Disconnects this Central's connection to the peripheral with the given identifier.
 
 #### Request
 <table>
@@ -147,6 +171,8 @@ Book: /_book.yaml
 
 ### OnScanStateChanged {:#OnScanStateChanged}
 
+ Called when the scan state changes, e.g. when a scan session terminates due to a call to
+ Central.StopScan() or another unexpected condition.
 
 
 
@@ -162,6 +188,9 @@ Book: /_book.yaml
 
 ### OnDeviceDiscovered {:#OnDeviceDiscovered}
 
+ Called for each peripheral/broadcaster that is discovered during a scan session. `rssi`
+ contains the received signal strength of the advertising packet that generated this event, if
+ available.
 
 
 
@@ -177,6 +206,7 @@ Book: /_book.yaml
 
 ### OnPeripheralDisconnected {:#OnPeripheralDisconnected}
 
+ Called when this Central's connection to a peripheral with the given identifier is terminated.
 
 
 
@@ -197,14 +227,14 @@ Book: /_book.yaml
  services and establish L2CAP channels.
 
 ## AdvertisingHandle {:#AdvertisingHandle}
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#75)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#79)*
 
  Capability that is valid for the duration of advertising. The caller can close the handle to
  stop advertising. If the system internally stops advertising for any reason, the handle will be
  closed to communicate this to the client.
 
 ## Peripheral {:#Peripheral}
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#78)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#83)*
 
 
 ### StartAdvertising {:#StartAdvertising}
@@ -289,6 +319,32 @@ Book: /_book.yaml
 
 ### StartAdvertisingDeprecated {:#StartAdvertisingDeprecated}
 
+ [[DEPRECATED]]
+
+ Starts sending advertisements based on the given parameters.
+   - `advertising_data`: The advertising data that should be included in the payload.
+   - `scan_result`: The scan result that will be returned when the advertisement is
+                    scanned.  Setting this will mark the advertisement set as scannable.
+   - `connectable`: when true, this advertisement will be marked as connectable.
+                 NOTE: connections can be made to a GATT server even if this is not set.
+   - `interval_ms`: The requested interval to advertise this set at in milliseconds.
+                    minimum 20, maximum 10,000,000 (almost 3 hours). A reasonable
+                    default is 1 second (1000).
+   - `anonymous`: if true, the address of this device will not be included
+
+ If the `tx_power_level` is set in either AdvertisingData, it will be replaced with
+ the actual TX Power level reported by the adapter, or included in the extended header
+ of the Advertising PDU to save advertising space.
+
+ If `scan_result` and `advertising_data` are both set, legacy advertising will be used,
+ which limits the size of the advertising data.
+
+ This request will fail if:
+   - The `service_uuids` field of `advertising_data` contains a UUID that does not match
+     a GATT service that was previously registered by this application;
+   - If the provided advertising data cannot fit within the advertising payload MTU that
+     is supported on the current platform and parameters.
+   - If `anonymous` advertising is requested but the controller cannot support it.
 
 #### Request
 <table>
@@ -338,6 +394,9 @@ Book: /_book.yaml
 
 ### StopAdvertisingDeprecated {:#StopAdvertisingDeprecated}
 
+ [[DEPRECATED]]
+
+ Stop an advertising session that was previously started by this application.
 
 #### Request
 <table>
@@ -362,6 +421,9 @@ Book: /_book.yaml
 
 ### OnCentralConnected {:#OnCentralConnected}
 
+ [[DEPRECATED]]
+
+ Called when a remote central device has connected to a connectable advertisement.
 
 
 
@@ -382,6 +444,9 @@ Book: /_book.yaml
 
 ### OnCentralDisconnected {:#OnCentralDisconnected}
 
+ [[DEPRECATED]]
+
+ Called when a remote central previously connected to this application is disconnected.
 
 
 
@@ -401,6 +466,11 @@ Book: /_book.yaml
 
 ### GetPeripherals {:#GetPeripherals}
 
+ Returns the list of peripherals that are known to the system from previous scan, connection,
+ and/or bonding procedures. The results can be filtered based on service UUIDs that are known to
+ be present on the peripheral.
+
+ This method only returns peripherals (i.e. connectable devices).
 
 #### Request
 <table>
@@ -425,6 +495,9 @@ Book: /_book.yaml
 
 ### GetPeripheral {:#GetPeripheral}
 
+ Returns information about a single peripheral that is known to the system from previous scan,
+ connection, and/or bonding procedures based on its unique identifier. Returns null if
+ `identifier` is not recognized.
 
 #### Request
 <table>
@@ -449,6 +522,14 @@ Book: /_book.yaml
 
 ### StartScan {:#StartScan}
 
+ Initiates a scan session for nearby peripherals and broadcasters. Discovered devices will be
+ reported via CentralDelegate.OnDeviceDiscovered(). If a scan session is already in progress,
+ `filter` will replace the existing session's filter.
+
+ If `filter` is null or empty (i.e. none of its fields has been populated) then the delegate
+ will be notified for all discoverable devices that are found. This is not recommended; clients
+ should generally filter results by at least one of `filter.service_uuids`,
+ `filter.service_data`, and/or `filter.manufacturer_identifier`.
 
 #### Request
 <table>
@@ -473,6 +554,7 @@ Book: /_book.yaml
 
 ### StopScan {:#StopScan}
 
+ Terminate a previously started scan session.
 
 #### Request
 <table>
@@ -483,6 +565,12 @@ Book: /_book.yaml
 
 ### ConnectPeripheral {:#ConnectPeripheral}
 
+ Creates a connection to the peripheral device with the given identifier.
+ Returns the status of the operation in `status`.
+
+ On success, `gatt_client` will be bound and can be used for GATT client
+ role procedures. On failure, `gatt_client` will be closed and `status` will
+ indicate an error.
 
 #### Request
 <table>
@@ -512,6 +600,7 @@ Book: /_book.yaml
 
 ### DisconnectPeripheral {:#DisconnectPeripheral}
 
+ Disconnects this Central's connection to the peripheral with the given identifier.
 
 #### Request
 <table>
@@ -536,6 +625,8 @@ Book: /_book.yaml
 
 ### OnScanStateChanged {:#OnScanStateChanged}
 
+ Called when the scan state changes, e.g. when a scan session terminates due to a call to
+ Central.StopScan() or another unexpected condition.
 
 
 
@@ -551,6 +642,9 @@ Book: /_book.yaml
 
 ### OnDeviceDiscovered {:#OnDeviceDiscovered}
 
+ Called for each peripheral/broadcaster that is discovered during a scan session. `rssi`
+ contains the received signal strength of the advertising packet that generated this event, if
+ available.
 
 
 
@@ -566,6 +660,7 @@ Book: /_book.yaml
 
 ### OnPeripheralDisconnected {:#OnPeripheralDisconnected}
 
+ Called when this Central's connection to a peripheral with the given identifier is terminated.
 
 
 
@@ -586,14 +681,14 @@ Book: /_book.yaml
  services and establish L2CAP channels.
 
 ## AdvertisingHandle {:#AdvertisingHandle}
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#75)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#79)*
 
  Capability that is valid for the duration of advertising. The caller can close the handle to
  stop advertising. If the system internally stops advertising for any reason, the handle will be
  closed to communicate this to the client.
 
 ## Peripheral {:#Peripheral}
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#78)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#83)*
 
 
 ### StartAdvertising {:#StartAdvertising}
@@ -678,6 +773,32 @@ Book: /_book.yaml
 
 ### StartAdvertisingDeprecated {:#StartAdvertisingDeprecated}
 
+ [[DEPRECATED]]
+
+ Starts sending advertisements based on the given parameters.
+   - `advertising_data`: The advertising data that should be included in the payload.
+   - `scan_result`: The scan result that will be returned when the advertisement is
+                    scanned.  Setting this will mark the advertisement set as scannable.
+   - `connectable`: when true, this advertisement will be marked as connectable.
+                 NOTE: connections can be made to a GATT server even if this is not set.
+   - `interval_ms`: The requested interval to advertise this set at in milliseconds.
+                    minimum 20, maximum 10,000,000 (almost 3 hours). A reasonable
+                    default is 1 second (1000).
+   - `anonymous`: if true, the address of this device will not be included
+
+ If the `tx_power_level` is set in either AdvertisingData, it will be replaced with
+ the actual TX Power level reported by the adapter, or included in the extended header
+ of the Advertising PDU to save advertising space.
+
+ If `scan_result` and `advertising_data` are both set, legacy advertising will be used,
+ which limits the size of the advertising data.
+
+ This request will fail if:
+   - The `service_uuids` field of `advertising_data` contains a UUID that does not match
+     a GATT service that was previously registered by this application;
+   - If the provided advertising data cannot fit within the advertising payload MTU that
+     is supported on the current platform and parameters.
+   - If `anonymous` advertising is requested but the controller cannot support it.
 
 #### Request
 <table>
@@ -727,6 +848,9 @@ Book: /_book.yaml
 
 ### StopAdvertisingDeprecated {:#StopAdvertisingDeprecated}
 
+ [[DEPRECATED]]
+
+ Stop an advertising session that was previously started by this application.
 
 #### Request
 <table>
@@ -751,6 +875,9 @@ Book: /_book.yaml
 
 ### OnCentralConnected {:#OnCentralConnected}
 
+ [[DEPRECATED]]
+
+ Called when a remote central device has connected to a connectable advertisement.
 
 
 
@@ -771,6 +898,9 @@ Book: /_book.yaml
 
 ### OnCentralDisconnected {:#OnCentralDisconnected}
 
+ [[DEPRECATED]]
+
+ Called when a remote central previously connected to this application is disconnected.
 
 
 
@@ -856,6 +986,7 @@ Book: /_book.yaml
 
 
 
+ [[DEPRECATED]]
 
 
 <table>
@@ -881,6 +1012,7 @@ Book: /_book.yaml
 
 
 
+ [[DEPRECATED]]
 
 
 <table>
@@ -906,6 +1038,8 @@ Book: /_book.yaml
 
 
 
+ Represents advertising and scan response data advertised by a broadcaster or peripheral.
+ [[DEPRECATED]]
 
 
 <table>
@@ -914,56 +1048,66 @@ Book: /_book.yaml
             <td>
                 <code>string?</code>
             </td>
-            <td></td>
+            <td> Name of the device.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>tx_power_level</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Int8'>Int8</a>?</code>
             </td>
-            <td></td>
+            <td> The radio transmission power level reported in the advertisement.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>appearance</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#UInt16'>UInt16</a>?</code>
             </td>
-            <td></td>
+            <td> The appearance reported in the advertisemet.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>service_uuids</code></td>
             <td>
                 <code>vector&lt;string&gt;?</code>
             </td>
-            <td></td>
+            <td> List of service UUIDs reported in the advertisement.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>service_data</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#ServiceDataEntry'>ServiceDataEntry</a>&gt;?</code>
             </td>
-            <td></td>
+            <td> Service data included in the advertisement.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>manufacturer_specific_data</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#ManufacturerSpecificDataEntry'>ManufacturerSpecificDataEntry</a>&gt;?</code>
             </td>
-            <td></td>
+            <td> Manufacturer specific data entries.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>solicited_service_uuids</code></td>
             <td>
                 <code>vector&lt;string&gt;?</code>
             </td>
-            <td></td>
+            <td> Service UUIDs that were solicited in the advertisement. Peripherals can invite centrals that
+ expose certain services to connect to them using service solicitation.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>uris</code></td>
             <td>
                 <code>vector&lt;string&gt;?</code>
             </td>
-            <td></td>
+            <td> URIs included in the advertising packet.
+ These are full URIs (they are encoded/decoded automatically)
+</td>
             <td>No default</td>
         </tr>
 </table>
@@ -973,6 +1117,9 @@ Book: /_book.yaml
 
 
 
+ Represents a remote Bluetooth Low Energy device. A RemoteDevice can represent a central,
+ broadcaster, or peripheral based on the API from which it was received.
+ [[DEPRECATED]]
 
 
 <table>
@@ -981,28 +1128,33 @@ Book: /_book.yaml
             <td>
                 <code>string</code>
             </td>
-            <td></td>
+            <td> Identifier that uniquely identifies this device on the current system.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>connectable</code></td>
             <td>
                 <code>bool</code>
             </td>
-            <td></td>
+            <td> Whether or not this device is connectable. Non-connectable devices are typically acting in the
+ LE broadcaster role.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>rssi</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Int8'>Int8</a>?</code>
             </td>
-            <td></td>
+            <td> The last known RSSI of this device, if known.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>advertising_data</code></td>
             <td>
                 <code><a class='link' href='#AdvertisingDataDeprecated'>AdvertisingDataDeprecated</a>?</code>
             </td>
-            <td></td>
+            <td> Advertising data broadcast by this device if this device is a broadcaster or peripheral.
+</td>
             <td>No default</td>
         </tr>
 </table>
@@ -1012,6 +1164,10 @@ Book: /_book.yaml
 
 
 
+ Filter parameters for use during a scan. A discovered peripheral or broadcaster will be reported
+ to applications only if it satisfies all of the provided filter parameters. Null fields will be
+ ignored.
+ [[DEPRECATED]]
 
 
 <table>
@@ -1020,42 +1176,57 @@ Book: /_book.yaml
             <td>
                 <code>vector&lt;string&gt;?</code>
             </td>
-            <td></td>
+            <td> Filter based on advertised service UUIDs. A peripheral that advertises at least one of the
+ entries in `service_uuids` will satisfy this filter.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>service_data_uuids</code></td>
             <td>
                 <code>vector&lt;string&gt;?</code>
             </td>
-            <td></td>
+            <td> Filter based on service data containing one of the given UUIDs.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>manufacturer_identifier</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#UInt16'>UInt16</a>?</code>
             </td>
-            <td></td>
+            <td> Filter based on a company identifier present in the manufacturer data. If this filter parameter
+ is set, then the advertising payload must contain manufacturer specific data with the provided
+ company identifier to satisfy this filter.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>connectable</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Bool'>Bool</a>?</code>
             </td>
-            <td></td>
+            <td> Filter based on whether or not a device is connectable. For example, a client that is only
+ interested in peripherals that it can connect to can set this to true. Similarly a client can
+ scan only for braodcasters by setting this to false.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>name_substring</code></td>
             <td>
                 <code>string?</code>
             </td>
-            <td></td>
+            <td> Filter results based on a portion of the advertised device name.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>max_path_loss</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Int8'>Int8</a>?</code>
             </td>
-            <td></td>
+            <td> Filter results based on the path loss of the radio wave. A device that matches this filter must
+ satisfy the following:
+   1. Radio transmission power level and received signal strength must be available for the path
+      loss calculation;
+   2. The calculated path loss value must be less than, or equal to, `max_path_loss`.
+</td>
             <td>No default</td>
         </tr>
 </table>
@@ -1128,6 +1299,7 @@ Book: /_book.yaml
 
 
 
+ [[DEPRECATED]]
 
 
 <table>
@@ -1153,6 +1325,7 @@ Book: /_book.yaml
 
 
 
+ [[DEPRECATED]]
 
 
 <table>
@@ -1178,6 +1351,8 @@ Book: /_book.yaml
 
 
 
+ Represents advertising and scan response data advertised by a broadcaster or peripheral.
+ [[DEPRECATED]]
 
 
 <table>
@@ -1186,56 +1361,66 @@ Book: /_book.yaml
             <td>
                 <code>string?</code>
             </td>
-            <td></td>
+            <td> Name of the device.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>tx_power_level</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Int8'>Int8</a>?</code>
             </td>
-            <td></td>
+            <td> The radio transmission power level reported in the advertisement.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>appearance</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#UInt16'>UInt16</a>?</code>
             </td>
-            <td></td>
+            <td> The appearance reported in the advertisemet.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>service_uuids</code></td>
             <td>
                 <code>vector&lt;string&gt;?</code>
             </td>
-            <td></td>
+            <td> List of service UUIDs reported in the advertisement.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>service_data</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#ServiceDataEntry'>ServiceDataEntry</a>&gt;?</code>
             </td>
-            <td></td>
+            <td> Service data included in the advertisement.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>manufacturer_specific_data</code></td>
             <td>
                 <code>vector&lt;<a class='link' href='#ManufacturerSpecificDataEntry'>ManufacturerSpecificDataEntry</a>&gt;?</code>
             </td>
-            <td></td>
+            <td> Manufacturer specific data entries.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>solicited_service_uuids</code></td>
             <td>
                 <code>vector&lt;string&gt;?</code>
             </td>
-            <td></td>
+            <td> Service UUIDs that were solicited in the advertisement. Peripherals can invite centrals that
+ expose certain services to connect to them using service solicitation.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>uris</code></td>
             <td>
                 <code>vector&lt;string&gt;?</code>
             </td>
-            <td></td>
+            <td> URIs included in the advertising packet.
+ These are full URIs (they are encoded/decoded automatically)
+</td>
             <td>No default</td>
         </tr>
 </table>
@@ -1245,6 +1430,9 @@ Book: /_book.yaml
 
 
 
+ Represents a remote Bluetooth Low Energy device. A RemoteDevice can represent a central,
+ broadcaster, or peripheral based on the API from which it was received.
+ [[DEPRECATED]]
 
 
 <table>
@@ -1253,28 +1441,33 @@ Book: /_book.yaml
             <td>
                 <code>string</code>
             </td>
-            <td></td>
+            <td> Identifier that uniquely identifies this device on the current system.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>connectable</code></td>
             <td>
                 <code>bool</code>
             </td>
-            <td></td>
+            <td> Whether or not this device is connectable. Non-connectable devices are typically acting in the
+ LE broadcaster role.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>rssi</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Int8'>Int8</a>?</code>
             </td>
-            <td></td>
+            <td> The last known RSSI of this device, if known.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>advertising_data</code></td>
             <td>
                 <code><a class='link' href='#AdvertisingDataDeprecated'>AdvertisingDataDeprecated</a>?</code>
             </td>
-            <td></td>
+            <td> Advertising data broadcast by this device if this device is a broadcaster or peripheral.
+</td>
             <td>No default</td>
         </tr>
 </table>
@@ -1284,6 +1477,10 @@ Book: /_book.yaml
 
 
 
+ Filter parameters for use during a scan. A discovered peripheral or broadcaster will be reported
+ to applications only if it satisfies all of the provided filter parameters. Null fields will be
+ ignored.
+ [[DEPRECATED]]
 
 
 <table>
@@ -1292,42 +1489,57 @@ Book: /_book.yaml
             <td>
                 <code>vector&lt;string&gt;?</code>
             </td>
-            <td></td>
+            <td> Filter based on advertised service UUIDs. A peripheral that advertises at least one of the
+ entries in `service_uuids` will satisfy this filter.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>service_data_uuids</code></td>
             <td>
                 <code>vector&lt;string&gt;?</code>
             </td>
-            <td></td>
+            <td> Filter based on service data containing one of the given UUIDs.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>manufacturer_identifier</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#UInt16'>UInt16</a>?</code>
             </td>
-            <td></td>
+            <td> Filter based on a company identifier present in the manufacturer data. If this filter parameter
+ is set, then the advertising payload must contain manufacturer specific data with the provided
+ company identifier to satisfy this filter.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>connectable</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Bool'>Bool</a>?</code>
             </td>
-            <td></td>
+            <td> Filter based on whether or not a device is connectable. For example, a client that is only
+ interested in peripherals that it can connect to can set this to true. Similarly a client can
+ scan only for braodcasters by setting this to false.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>name_substring</code></td>
             <td>
                 <code>string?</code>
             </td>
-            <td></td>
+            <td> Filter results based on a portion of the advertised device name.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>max_path_loss</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/index.html'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/index.html#Int8'>Int8</a>?</code>
             </td>
-            <td></td>
+            <td> Filter results based on the path loss of the radio wave. A device that matches this filter must
+ satisfy the following:
+   1. Radio transmission power level and received signal strength must be available for the path
+      loss calculation;
+   2. The calculated path loss value must be less than, or equal to, `max_path_loss`.
+</td>
             <td>No default</td>
         </tr>
 </table>
@@ -1361,6 +1573,10 @@ Type: <code>uint32</code>
             <td><code>4</code></td>
             <td></td>
         </tr><tr>
+            <td><code>ABORTED</code></td>
+            <td><code>5</code></td>
+            <td></td>
+        </tr><tr>
             <td><code>FAILED</code></td>
             <td><code>6</code></td>
             <td></td>
@@ -1369,7 +1585,7 @@ Type: <code>uint32</code>
 ### AdvertisingModeHint {:#AdvertisingModeHint}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#33)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#37)*
 
  A client can indicate the transmission rate of advertising packets by specifying a mode. The
  mode provides a hint to the system when configuring the controller with advertising interval and
@@ -1420,6 +1636,10 @@ Type: <code>uint32</code>
             <td><code>4</code></td>
             <td></td>
         </tr><tr>
+            <td><code>ABORTED</code></td>
+            <td><code>5</code></td>
+            <td></td>
+        </tr><tr>
             <td><code>FAILED</code></td>
             <td><code>6</code></td>
             <td></td>
@@ -1428,7 +1648,7 @@ Type: <code>uint32</code>
 ### AdvertisingModeHint {:#AdvertisingModeHint}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#33)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#37)*
 
  A client can indicate the transmission rate of advertising packets by specifying a mode. The
  mode provides a hint to the system when configuring the controller with advertising interval and
@@ -1586,7 +1806,7 @@ Type: <code>uint8</code>
 ### AdvertisingParameters {:#AdvertisingParameters}
 
 
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#49)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#53)*
 
  Represents the parameters for configuring advertisements.
 
@@ -1764,7 +1984,7 @@ Type: <code>uint8</code>
 ### AdvertisingParameters {:#AdvertisingParameters}
 
 
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#49)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#53)*
 
  Represents the parameters for configuring advertisements.
 
