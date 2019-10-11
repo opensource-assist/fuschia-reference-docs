@@ -784,13 +784,11 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ADDED</code></td>
             <td><code>1</code></td>
-            <td> The interface is added.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>REMOVED</code></td>
             <td><code>2</code></td>
-            <td> The interface is removed.
-</td>
+            <td></td>
         </tr></table>
 
 ### PhysicalStatus {:#PhysicalStatus}
@@ -804,13 +802,11 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DOWN</code></td>
             <td><code>1</code></td>
-            <td> The link is not attached to the medium.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>UP</code></td>
             <td><code>2</code></td>
-            <td> The link is attached to the medium.
-</td>
+            <td></td>
         </tr></table>
 
 ### AdministrativeStatus {:#AdministrativeStatus}
@@ -824,13 +820,11 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DISABLED</code></td>
             <td><code>1</code></td>
-            <td> The interface is administratively disabled.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ENABLED</code></td>
             <td><code>2</code></td>
-            <td> The interface is administratively enabled.
-</td>
+            <td></td>
         </tr></table>
 
 ### Error {:#Error}

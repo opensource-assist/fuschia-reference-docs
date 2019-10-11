@@ -870,13 +870,11 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LAZY</code></td>
             <td><code>0</code></td>
-            <td> Start component instance only when another instance binds to it.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>EAGER</code></td>
             <td><code>1</code></td>
-            <td> Start component instance as soon as parent starts.
-</td>
+            <td></td>
         </tr></table>
 
 ### Durability {:#Durability}
@@ -891,14 +889,11 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>PERSISTENT</code></td>
             <td><code>1</code></td>
-            <td> An instance exists until either it or its parent is destroyed.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>TRANSIENT</code></td>
             <td><code>2</code></td>
-            <td> An instance exists until either its parent instance is stopped
- or it is explicitly destroyed.
-</td>
+            <td></td>
         </tr></table>
 
 ### StorageType {:#StorageType}
@@ -913,19 +908,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DATA</code></td>
             <td><code>1</code></td>
-            <td> General data storage.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>CACHE</code></td>
             <td><code>2</code></td>
-            <td> Cache storage that may be deleted at any time by the system.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>META</code></td>
             <td><code>3</code></td>
-            <td> Meta storage that will be used by component manager to persist metadata
- and other information about the component
-</td>
+            <td></td>
         </tr></table>
 
 ### Error {:#Error}
@@ -940,49 +931,39 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INTERNAL</code></td>
             <td><code>1</code></td>
-            <td> Component manager encountered an otherwise unspecified error while
- performing the operation.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>INVALID_ARGUMENTS</code></td>
             <td><code>2</code></td>
-            <td> At least one argument had an invalid format.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>UNSUPPORTED</code></td>
             <td><code>3</code></td>
-            <td> The feature is not yet supported.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>INSTANCE_NOT_FOUND</code></td>
             <td><code>4</code></td>
-            <td> The component instance was not found.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>INSTANCE_ALREADY_EXISTS</code></td>
             <td><code>5</code></td>
-            <td> The component instance already exists.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>INSTANCE_CANNOT_START</code></td>
             <td><code>6</code></td>
-            <td> The component instance could not be started.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>INSTANCE_CANNOT_RESOLVE</code></td>
             <td><code>7</code></td>
-            <td> Failed to resolve the component's declaration.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>COLLECTION_NOT_FOUND</code></td>
             <td><code>8</code></td>
-            <td> The component collection was not found.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>NO_SPACE</code></td>
             <td><code>9</code></td>
-            <td> There was insufficient space to perform the operation.
-</td>
+            <td></td>
         </tr></table>
 
 

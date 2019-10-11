@@ -704,13 +704,11 @@ Type: <code>uint64</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LIGHTBULB</code></td>
             <td><code>0</code></td>
-            <td> Does nothing, but visible in inspect.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>DOWNLOAD_BLOB</code></td>
             <td><code>1</code></td>
-            <td> Perform blob downloading in the package resolver instead of amber.
-</td>
+            <td></td>
         </tr></table>
 
 

@@ -397,13 +397,11 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DUAL_MODE</code></td>
             <td><code>1</code></td>
-            <td> Support both BR/EDR and LE in LMP features.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>LE_ONLY</code></td>
             <td><code>2</code></td>
-            <td> Limits supported features and HCI commands to those that are required for LE only.
-</td>
+            <td></td>
         </tr></table>
 
 ### ConnectionState {:#ConnectionState}
@@ -724,28 +722,23 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ADV_IND</code></td>
             <td><code>0</code></td>
-            <td> Connectable and scannable.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ADV_DIRECT_IND</code></td>
             <td><code>1</code></td>
-            <td> Connectable, high-duty cycle, directed.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ADV_SCAN_IND</code></td>
             <td><code>2</code></td>
-            <td> Scannable, undirected.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ADV_NONCONN_IND</code></td>
             <td><code>3</code></td>
-            <td> Non-connectable, undirected
-</td>
+            <td></td>
         </tr><tr>
             <td><code>SCAN_RSP</code></td>
             <td><code>4</code></td>
-            <td> Scan response
-</td>
+            <td></td>
         </tr></table>
 
 

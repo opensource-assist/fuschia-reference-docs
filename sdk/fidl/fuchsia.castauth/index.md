@@ -122,13 +122,11 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>FILE_NOT_FOUND</code></td>
             <td><code>1</code></td>
-            <td> Key/cert not found in storage.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>CRYPTO_ERROR</code></td>
             <td><code>2</code></td>
-            <td> Error occurred during signing operation.
-</td>
+            <td></td>
         </tr></table>
 
 

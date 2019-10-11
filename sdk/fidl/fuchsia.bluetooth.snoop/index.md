@@ -181,18 +181,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>CMD</code></td>
             <td><code>0</code></td>
-            <td> Command sent from the host to the controller.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>EVENT</code></td>
             <td><code>1</code></td>
-            <td> Event sent from the controller to the host.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>DATA</code></td>
             <td><code>2</code></td>
-            <td> Data sent from the controller to the host.
-</td>
+            <td></td>
         </tr></table>
 
 

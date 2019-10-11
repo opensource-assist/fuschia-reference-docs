@@ -167,40 +167,31 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>OK</code></td>
             <td><code>0</code></td>
-            <td> the call completed successfully
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ERR_DVFS_INFO</code></td>
             <td><code>1</code></td>
-            <td> failed to get the DVFS operating
- points information
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ERR_DVFS_OPP_IDX</code></td>
             <td><code>2</code></td>
-            <td> failed to get the dvfs opp index
- which is set currently
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ERR_TEMPERATURE</code></td>
             <td><code>3</code></td>
-            <td> failed to get the temperature
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ERR_FAN_LEVEL</code></td>
             <td><code>4</code></td>
-            <td> failed to get the fan level
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ERR_CPU_STATS</code></td>
             <td><code>5</code></td>
-            <td> failed to get cpu stats info
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ERR_MEM_STATS</code></td>
             <td><code>6</code></td>
-            <td> failed to get memory stat info
-</td>
+            <td></td>
         </tr></table>
 
 

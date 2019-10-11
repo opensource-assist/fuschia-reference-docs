@@ -125,14 +125,11 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>USER</code></td>
             <td><code>0</code></td>
-            <td> The update check was initiated by an interactive user, or the user is
- otherwise blocked and waiting for the result of this update check.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>SERVICE</code></td>
             <td><code>1</code></td>
-            <td> The update check was initiated by a service, in the background.
-</td>
+            <td></td>
         </tr></table>
 
 ### ManagerState {:#ManagerState}
@@ -173,67 +170,31 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>IDLE</code></td>
             <td><code>0</code></td>
-            <td> The Manager is currently idle (in between updates).
-
- Next states:
- * `CHECKING_FOR_UPDATES`
-</td>
+            <td></td>
         </tr><tr>
             <td><code>CHECKING_FOR_UPDATES</code></td>
             <td><code>1</code></td>
-            <td> The Manager is currently checking for an update.
-
- Next states:
- * `IDLE` update is not available
- * `UPDATE_AVAILABLE` update is available but not allowed by policy
- * `PERFORMING_UPDATE` update is available and allowed by policy
- * `ENCOUNTERED_ERROR` on error
-</td>
+            <td></td>
         </tr><tr>
             <td><code>UPDATE_AVAILABLE</code></td>
             <td><code>2</code></td>
-            <td> The Manager has found an available update but is not allowed to update
- due to policy.
-
- Next states:
- * `CHECKING_FOR_UPDATES` when CheckNow() is called or a background update starts
-</td>
+            <td></td>
         </tr><tr>
             <td><code>PERFORMING_UPDATE</code></td>
             <td><code>3</code></td>
-            <td> The Manager has started the available update.
-
- Next states:
- * `WAITING_FOR_REBOOT` on success
- * `ENCOUNTERED_ERROR` on error
-</td>
+            <td></td>
         </tr><tr>
             <td><code>WAITING_FOR_REBOOT</code></td>
             <td><code>4</code></td>
-            <td> The update has been performed, and the device is waiting to be rebooted.
-
- Next states:
- * `FINALIZING_UPDATE` after device reboot
- * `ENCOUNTERED_ERROR` on error
-</td>
+            <td></td>
         </tr><tr>
             <td><code>FINALIZING_UPDATE</code></td>
             <td><code>5</code></td>
-            <td> The update is being finalized after reboot.
-
- Next states:
- * `IDLE` on success
- * `ENCOUNTERED_ERROR` on error
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ENCOUNTERED_ERROR</code></td>
             <td><code>6</code></td>
-            <td> The Manager is reporting to Omaha that an error has occurred during the
- update.
-
- Next states:
- * `IDLE`
-</td>
+            <td></td>
         </tr></table>
 
 ### CheckStartedResult {:#CheckStartedResult}
@@ -247,20 +208,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>STARTED</code></td>
             <td><code>0</code></td>
-            <td> The update check has been started.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>IN_PROGRESS</code></td>
             <td><code>1</code></td>
-            <td> The update check was not started, as an update is already in progress, `monitor` is
- attached to that update and will immediately get a OnState() call on current state.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>THROTTLED</code></td>
             <td><code>2</code></td>
-            <td> The update check was not started, because too many requests to check have
- been made in a short period of time.
-</td>
+            <td></td>
         </tr></table>
 
 

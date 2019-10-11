@@ -50,23 +50,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN</code></td>
             <td><code>0</code></td>
-            <td> State is not determined.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>IN_PROGRESS</code></td>
             <td><code>1</code></td>
-            <td> Setup is not complete and is in progress.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>OFFLINE</code></td>
             <td><code>2</code></td>
-            <td> Configured once but disconnected for now.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>COMPLETE</code></td>
             <td><code>3</code></td>
-            <td> Setup is complete and device is connected.
-</td>
+            <td></td>
         </tr></table>
 
 

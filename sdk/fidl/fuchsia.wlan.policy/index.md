@@ -600,15 +600,11 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LOCAL_ONLY</code></td>
             <td><code>1</code></td>
-            <td> Allows for connectivity between co-located devices.  Local only access points do not
- forward traffic to other network connections.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>UNRESTRICTED</code></td>
             <td><code>2</code></td>
-            <td> Allows for full connectivity with traffic potentially being forwarded
- to other network connections (ex., tethering mode).
-</td>
+            <td></td>
         </tr></table>
 
 ### OperatingState {:#OperatingState}
@@ -623,20 +619,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>FAILED</code></td>
             <td><code>1</code></td>
-            <td> Access point operation failed.  Access points that enter the failed state will
- have one update informing registered listeners of the failure and then an
- additional update with the access point removed from the list.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>STARTING</code></td>
             <td><code>2</code></td>
-            <td> Access point operation is starting up.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ACTIVE</code></td>
             <td><code>3</code></td>
-            <td> Access point operation is active.
-</td>
+            <td></td>
         </tr></table>
 
 ### ScanErrorCode {:#ScanErrorCode}
@@ -651,14 +642,11 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>GENERAL_ERROR</code></td>
             <td><code>1</code></td>
-            <td> Unexpected scan error without a specific cause.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>CANCELLED</code></td>
             <td><code>2</code></td>
-            <td> Scan was cancelled and stopped.  This can happen due to operating state changes,
- higher priority operations or conflicting requests.
-</td>
+            <td></td>
         </tr></table>
 
 ### WlanClientState {:#WlanClientState}
@@ -695,19 +683,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>SUPPORTED</code></td>
             <td><code>1</code></td>
-            <td> Denotes that the network is supported and connections can be attempted (given
- appropriate credentials when required).
-</td>
+            <td></td>
         </tr><tr>
             <td><code>DISALLOWED_INSECURE</code></td>
             <td><code>2</code></td>
-            <td> The network uses a deprecated security protocol and is explicitly not supported.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>DISALLOWED_NOT_SUPPORTED</code></td>
             <td><code>3</code></td>
-            <td> The network uses a currently unsupported security protocol.
-</td>
+            <td></td>
         </tr></table>
 
 ### NetworkConfigChangeError {:#NetworkConfigChangeError}
@@ -738,24 +722,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>FAILED</code></td>
             <td><code>1</code></td>
-            <td> The connection attempt was terminated due to an error.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>DISCONNECTED</code></td>
             <td><code>2</code></td>
-            <td> The network is disconnected.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>CONNECTING</code></td>
             <td><code>3</code></td>
-            <td> The device is attempting a connection to a network.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>CONNECTED</code></td>
             <td><code>4</code></td>
-            <td> The connection is now established.  Note: This does not make any guarantees
- about higher level network reachability.
-</td>
+            <td></td>
         </tr></table>
 
 ### DisconnectStatus {:#DisconnectStatus}
@@ -770,29 +749,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>TIMED_OUT</code></td>
             <td><code>1</code></td>
-            <td> The requested connection attempt failed due to timeout.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>CREDENTIALS_FAILED</code></td>
             <td><code>2</code></td>
-            <td> The requested connection attempt failed due to suspected credential failure.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>CONNECTION_STOPPED</code></td>
             <td><code>3</code></td>
-            <td> The existing connection was explicitly disconnected by an action of wlan
- service on this device.  This can be the result of wlan connections being
- disabled, network configuration being removed or a connection attempt to a
- different network (as examples).
-</td>
+            <td></td>
         </tr><tr>
             <td><code>CONNECTION_FAILED</code></td>
             <td><code>4</code></td>
-            <td> The existing connection failed unexpectedly in a way that is not an
- explicitly triggered disconnect by the device (or user).  Examples
- of unexpected disconnections include: an underlying error (driver,
- firmware, etc.), beacon loss, access point failure.
-</td>
+            <td></td>
         </tr></table>
 
 ### SecurityType {:#SecurityType}
@@ -840,18 +809,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ANY</code></td>
             <td><code>1</code></td>
-            <td> Allows for band switching depending on device operating mode and environment.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ONLY_2_4GHZ</code></td>
             <td><code>2</code></td>
-            <td> Restricted to 2.4 GHz bands only.
-</td>
+            <td></td>
         </tr><tr>
             <td><code>ONLY_5GHZ</code></td>
             <td><code>3</code></td>
-            <td> Restricted to 5 GHz bands only.
-</td>
+            <td></td>
         </tr></table>
 
 

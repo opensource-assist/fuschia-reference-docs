@@ -394,13 +394,11 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN_FAILURE</code></td>
             <td><code>1</code></td>
-            <td> Failure reason is not known
-</td>
+            <td></td>
         </tr><tr>
             <td><code>PROTOCOL_ERROR</code></td>
             <td><code>2</code></td>
-            <td> The peer is unable to perform the request
-</td>
+            <td></td>
         </tr></table>
 
 
