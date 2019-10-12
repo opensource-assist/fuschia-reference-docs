@@ -76,11 +76,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BACKSTOP</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The clock has been initialized to a known-prior reference time but may be highly inaccurate.
+</td>
         </tr><tr>
             <td><code>EXTERNAL</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The clock has been initialized from a suitably accurate external time source. For many
+ devices the most common external time source is a network time server.
+</td>
         </tr></table>
 
 

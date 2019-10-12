@@ -755,11 +755,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>AUTOLOGIN_GUEST</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Do not require an account and login always as guest.
+</td>
         </tr><tr>
             <td><code>AUTH_PROVIDER</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Requires a provisioned account through auth provider.
+</td>
         </tr></table>
 
 ### ConnectionStatus {:#ConnectionStatus}
@@ -777,19 +779,23 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>DISCONNECTED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The connection is at a resting disconnected state.
+</td>
         </tr><tr>
             <td><code>CONNECTING</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The connection is being established.
+</td>
         </tr><tr>
             <td><code>CONNECTED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The connection is active.
+</td>
         </tr><tr>
             <td><code>DISCONNECTING</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The connection is in the process of being disconnected.
+</td>
         </tr></table>
 
 ### WirelessSecurity {:#WirelessSecurity}
@@ -807,11 +813,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>UNSECURED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The network is open and requires no password.
+</td>
         </tr><tr>
             <td><code>SECURED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The network is protected by a password.
+</td>
         </tr></table>
 
 ### WpaAuth {:#WpaAuth}
@@ -905,7 +913,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>WAN</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> we have access to the wide area network.
+</td>
         </tr></table>
 
 ### HourCycle {:#HourCycle}
@@ -919,11 +928,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>H12</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> 12-hour clock
+</td>
         </tr><tr>
             <td><code>H23</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> 24-hour clock (from 0:00:00 to 23:59:59)
+</td>
         </tr></table>
 
 ### TemperatureUnit {:#TemperatureUnit}

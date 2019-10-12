@@ -445,15 +445,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UPRIGHT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The default; upright glyphs.
+</td>
         </tr><tr>
             <td><code>ITALIC</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Specially designed, slanted and slightly calligraphic glyphs.
+</td>
         </tr><tr>
             <td><code>OBLIQUE</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Skewed glyphs. Oblique usually means an geometric transformation of the upright variant,
+ rather than a custom-designed variant.
+</td>
         </tr></table>
 
 ### Width {:#Width}
@@ -470,39 +474,48 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ULTRA_CONDENSED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> 50% of normal width
+</td>
         </tr><tr>
             <td><code>EXTRA_CONDENSED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> 62.5% of normal width
+</td>
         </tr><tr>
             <td><code>CONDENSED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> 75% of normal width
+</td>
         </tr><tr>
             <td><code>SEMI_CONDENSED</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> 87.5% of normal width
+</td>
         </tr><tr>
             <td><code>NORMAL</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> Normal width
+</td>
         </tr><tr>
             <td><code>SEMI_EXPANDED</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> 112.5% of normal width
+</td>
         </tr><tr>
             <td><code>EXPANDED</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> 125% of normal width
+</td>
         </tr><tr>
             <td><code>EXTRA_EXPANDED</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> 150% of normal width
+</td>
         </tr><tr>
             <td><code>ULTRA_EXPANDED</code></td>
             <td><code>9</code></td>
-            <td></td>
+            <td> 200% of normal width
+</td>
         </tr></table>
 
 ### GenericFontFamily {:#GenericFontFamily}
@@ -527,39 +540,64 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>SERIF</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Glyphs have little "serifs", hooks, or notches at the ends of most strokes.
+ Examples: Georgia, Noto Serif, Times New Roman.
+</td>
         </tr><tr>
             <td><code>SANS_SERIF</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Glyphs that have no serifs at the ends of most strokes.
+ Examples: Arial, Noto Sans, Roboto, Tahoma.
+</td>
         </tr><tr>
             <td><code>MONOSPACE</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Fixed-width fonts.
+ Examples: Consolas, Courier New, Inconsolata.
+</td>
         </tr><tr>
             <td><code>CURSIVE</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> Handwritten or cursive fonts.
+ Examples: Brush Script, Comic Sans, Lucida Calligraphy.
+</td>
         </tr><tr>
             <td><code>FANTASY</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> Decorative fonts.
+ Examples: Impact, Papyrus.
+</td>
         </tr><tr>
             <td><code>SYSTEM_UI</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> The default user interface font on the target platform.
+ This is included for completeness with the CSS specification; font manifests should not
+ declare that a font belongs to the `SYSTEM_UI` generic family, but instead should declare a
+ more specific option (e.g. `SERIF` for Roboto).
+
+ Not commonly used.
+</td>
         </tr><tr>
             <td><code>EMOJI</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> Fonts that are used specifically for rendering emoji code points.
+ Examples: Noto Color Emoji.
+</td>
         </tr><tr>
             <td><code>MATH</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> Fonts that are used primarily for rendering mathematical expressions.
+
+ Not commonly used.
+</td>
         </tr><tr>
             <td><code>FANGSONG</code></td>
             <td><code>9</code></td>
-            <td></td>
+            <td> A group of Chinese fonts between serif and cursive, often used for official Chinese
+ Government documents.
+
+ Not commonly used.
+</td>
         </tr></table>
 
 

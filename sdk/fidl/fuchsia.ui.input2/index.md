@@ -314,11 +314,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>PRESSED</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Key is pressed down.
+</td>
         </tr><tr>
             <td><code>RELEASED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Key is released.
+</td>
         </tr></table>
 
 ### Status {:#Status}
@@ -362,423 +364,633 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>A</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Keyboard a and A
+ Corresponds to USB HID page 0x0007 usage 0x0004
+</td>
         </tr><tr>
             <td><code>B</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Keyboard b and B
+ Corresponds to USB HID page 0x0007 usage 0x0005
+</td>
         </tr><tr>
             <td><code>C</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Keyboard c and C
+ Corresponds to USB HID page 0x0007 usage 0x0006
+</td>
         </tr><tr>
             <td><code>D</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> Keyboard d and D
+ Corresponds to USB HID page 0x0007 usage 0x0007
+</td>
         </tr><tr>
             <td><code>E</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> Keyboard e and E
+ Corresponds to USB HID page 0x0007 usage 0x0008
+</td>
         </tr><tr>
             <td><code>F</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> Keyboard f and F
+ Corresponds to USB HID page 0x0007 usage 0x0009
+</td>
         </tr><tr>
             <td><code>G</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> Keyboard g and G
+ Corresponds to USB HID page 0x0007 usage 0x000a
+</td>
         </tr><tr>
             <td><code>H</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> Keyboard h and H
+ Corresponds to USB HID page 0x0007 usage 0x000b
+</td>
         </tr><tr>
             <td><code>I</code></td>
             <td><code>9</code></td>
-            <td></td>
+            <td> Keyboard i and I
+ Corresponds to USB HID page 0x0007 usage 0x000c
+</td>
         </tr><tr>
             <td><code>J</code></td>
             <td><code>10</code></td>
-            <td></td>
+            <td> Keyboard j and J
+ Corresponds to USB HID page 0x0007 usage 0x000d
+</td>
         </tr><tr>
             <td><code>K</code></td>
             <td><code>11</code></td>
-            <td></td>
+            <td> Keyboard k and K
+ Corresponds to USB HID page 0x0007 usage 0x000e
+</td>
         </tr><tr>
             <td><code>L</code></td>
             <td><code>12</code></td>
-            <td></td>
+            <td> Keyboard l and L
+ Corresponds to USB HID page 0x0007 usage 0x000f
+</td>
         </tr><tr>
             <td><code>M</code></td>
             <td><code>13</code></td>
-            <td></td>
+            <td> Keyboard m and M
+ Corresponds to USB HID page 0x0007 usage 0x0010
+</td>
         </tr><tr>
             <td><code>N</code></td>
             <td><code>14</code></td>
-            <td></td>
+            <td> Keyboard n and N
+ Corresponds to USB HID page 0x0007 usage 0x0011
+</td>
         </tr><tr>
             <td><code>O</code></td>
             <td><code>15</code></td>
-            <td></td>
+            <td> Keyboard o and O
+ Corresponds to USB HID page 0x0007 usage 0x0012
+</td>
         </tr><tr>
             <td><code>P</code></td>
             <td><code>16</code></td>
-            <td></td>
+            <td> Keyboard p and P
+ Corresponds to USB HID page 0x0007 usage 0x0013
+</td>
         </tr><tr>
             <td><code>Q</code></td>
             <td><code>17</code></td>
-            <td></td>
+            <td> Keyboard q and Q
+ Corresponds to USB HID page 0x0007 usage 0x0014
+</td>
         </tr><tr>
             <td><code>R</code></td>
             <td><code>18</code></td>
-            <td></td>
+            <td> Keyboard r and R
+ Corresponds to USB HID page 0x0007 usage 0x0015
+</td>
         </tr><tr>
             <td><code>S</code></td>
             <td><code>19</code></td>
-            <td></td>
+            <td> Keyboard s and S
+ Corresponds to USB HID page 0x0007 usage 0x0016
+</td>
         </tr><tr>
             <td><code>T</code></td>
             <td><code>20</code></td>
-            <td></td>
+            <td> Keyboard t and T
+ Corresponds to USB HID page 0x0007 usage 0x0017
+</td>
         </tr><tr>
             <td><code>U</code></td>
             <td><code>21</code></td>
-            <td></td>
+            <td> Keyboard u and U
+ Corresponds to USB HID page 0x0007 usage 0x0018
+</td>
         </tr><tr>
             <td><code>V</code></td>
             <td><code>22</code></td>
-            <td></td>
+            <td> Keyboard v and V
+ Corresponds to USB HID page 0x0007 usage 0x0019
+</td>
         </tr><tr>
             <td><code>W</code></td>
             <td><code>23</code></td>
-            <td></td>
+            <td> Keyboard w and W
+ Corresponds to USB HID page 0x0007 usage 0x001a
+</td>
         </tr><tr>
             <td><code>X</code></td>
             <td><code>24</code></td>
-            <td></td>
+            <td> Keyboard x and X
+ Corresponds to USB HID page 0x0007 usage 0x001b
+</td>
         </tr><tr>
             <td><code>Y</code></td>
             <td><code>25</code></td>
-            <td></td>
+            <td> Keyboard y and Y
+ Corresponds to USB HID page 0x0007 usage 0x001c
+</td>
         </tr><tr>
             <td><code>Z</code></td>
             <td><code>26</code></td>
-            <td></td>
+            <td> Keyboard z and Z
+ Corresponds to USB HID page 0x0007 usage 0x001d
+</td>
         </tr><tr>
             <td><code>KEY_1</code></td>
             <td><code>27</code></td>
-            <td></td>
+            <td> Keyboard 1 and !
+ Corresponds to USB HID page 0x0007 usage 0x001e
+</td>
         </tr><tr>
             <td><code>KEY_2</code></td>
             <td><code>28</code></td>
-            <td></td>
+            <td> Keyboard 2 and @
+ Corresponds to USB HID page 0x0007 usage 0x001f
+</td>
         </tr><tr>
             <td><code>KEY_3</code></td>
             <td><code>29</code></td>
-            <td></td>
+            <td> Keyboard 3 and #
+ Corresponds to USB HID page 0x0007 usage 0x0020
+</td>
         </tr><tr>
             <td><code>KEY_4</code></td>
             <td><code>30</code></td>
-            <td></td>
+            <td> Keyboard 4 and $
+ Corresponds to USB HID page 0x0007 usage 0x0021
+</td>
         </tr><tr>
             <td><code>KEY_5</code></td>
             <td><code>31</code></td>
-            <td></td>
+            <td> Keyboard 5 and %
+ Corresponds to USB HID page 0x0007 usage 0x0022
+</td>
         </tr><tr>
             <td><code>KEY_6</code></td>
             <td><code>32</code></td>
-            <td></td>
+            <td> Keyboard 6 and ^
+ Corresponds to USB HID page 0x0007 usage 0x0023
+</td>
         </tr><tr>
             <td><code>KEY_7</code></td>
             <td><code>33</code></td>
-            <td></td>
+            <td> Keyboard 7 and &
+ Corresponds to USB HID page 0x0007 usage 0x0024
+</td>
         </tr><tr>
             <td><code>KEY_8</code></td>
             <td><code>34</code></td>
-            <td></td>
+            <td> Keyboard 8 and *
+ Corresponds to USB HID page 0x0007 usage 0x0025
+</td>
         </tr><tr>
             <td><code>KEY_9</code></td>
             <td><code>35</code></td>
-            <td></td>
+            <td> Keyboard 9 and (
+ Corresponds to USB HID page 0x0007 usage 0x0026
+</td>
         </tr><tr>
             <td><code>KEY_0</code></td>
             <td><code>36</code></td>
-            <td></td>
+            <td> Keyboard 0 and )
+ Corresponds to USB HID page 0x0007 usage 0x0027
+</td>
         </tr><tr>
             <td><code>ENTER</code></td>
             <td><code>37</code></td>
-            <td></td>
+            <td> Keyboard Enter (Return)
+ Corresponds to USB HID page 0x0007 usage 0x0028
+</td>
         </tr><tr>
             <td><code>ESCAPE</code></td>
             <td><code>38</code></td>
-            <td></td>
+            <td> Keyboard Escape
+ Corresponds to USB HID page 0x0007 usage 0x0029
+</td>
         </tr><tr>
             <td><code>BACKSPACE</code></td>
             <td><code>39</code></td>
-            <td></td>
+            <td> Keyboard Backspace (Backward Delete)
+ Corresponds to USB HID page 0x0007 usage 0x002a
+</td>
         </tr><tr>
             <td><code>TAB</code></td>
             <td><code>40</code></td>
-            <td></td>
+            <td> Keyboard Tab
+ Corresponds to USB HID page 0x0007 usage 0x002b
+</td>
         </tr><tr>
             <td><code>SPACE</code></td>
             <td><code>41</code></td>
-            <td></td>
+            <td> Keyboard Spacebar
+ Corresponds to USB HID page 0x0007 usage 0x002c
+</td>
         </tr><tr>
             <td><code>MINUS</code></td>
             <td><code>42</code></td>
-            <td></td>
+            <td> Keyboard - and (underscore)
+ Corresponds to USB HID page 0x0007 usage 0x002d
+</td>
         </tr><tr>
             <td><code>EQUALS</code></td>
             <td><code>43</code></td>
-            <td></td>
+            <td> Keyboard = and +
+ Corresponds to USB HID page 0x0007 usage 0x002e
+</td>
         </tr><tr>
             <td><code>LEFT_BRACE</code></td>
             <td><code>44</code></td>
-            <td></td>
+            <td> Keyboard [ and {
+ Corresponds to USB HID page 0x0007 usage 0x002f
+</td>
         </tr><tr>
             <td><code>RIGHT_BRACE</code></td>
             <td><code>45</code></td>
-            <td></td>
+            <td> Keyboard ] and }
+ Corresponds to USB HID page 0x0007 usage 0x0030
+</td>
         </tr><tr>
             <td><code>BACKSLASH</code></td>
             <td><code>46</code></td>
-            <td></td>
+            <td> Keyboard \ and |
+ Corresponds to USB HID page 0x0007 usage 0x0031
+</td>
         </tr><tr>
             <td><code>NON_US_HASH</code></td>
             <td><code>47</code></td>
-            <td></td>
+            <td> Keyboard Non-US # and ~
+ Corresponds to USB HID page 0x0007 usage 0x0032
+</td>
         </tr><tr>
             <td><code>SEMICOLON</code></td>
             <td><code>48</code></td>
-            <td></td>
+            <td> Keyboard ; and :
+ Corresponds to USB HID page 0x0007 usage 0x0033
+</td>
         </tr><tr>
             <td><code>APOSTROPHE</code></td>
             <td><code>49</code></td>
-            <td></td>
+            <td> Keyboard ' and "
+ Corresponds to USB HID page 0x0007 usage 0x0034
+</td>
         </tr><tr>
             <td><code>GRAVE_ACCENT</code></td>
             <td><code>50</code></td>
-            <td></td>
+            <td> Keyboard Grave Accent and Tilde
+ Corresponds to USB HID page 0x0007 usage 0x0035
+</td>
         </tr><tr>
             <td><code>COMMA</code></td>
             <td><code>51</code></td>
-            <td></td>
+            <td> Keyboard , and <
+ Corresponds to USB HID page 0x0007 usage 0x0036
+</td>
         </tr><tr>
             <td><code>DOT</code></td>
             <td><code>52</code></td>
-            <td></td>
+            <td> Keyboard . and >
+ Corresponds to USB HID page 0x0007 usage 0x0037
+</td>
         </tr><tr>
             <td><code>SLASH</code></td>
             <td><code>53</code></td>
-            <td></td>
+            <td> Keyboard / and ?
+ Corresponds to USB HID page 0x0007 usage 0x0038
+</td>
         </tr><tr>
             <td><code>CAPS_LOCK</code></td>
             <td><code>54</code></td>
-            <td></td>
+            <td> Keyboard Caps Lock
+ Corresponds to USB HID page 0x0007 usage 0x0039
+</td>
         </tr><tr>
             <td><code>F1</code></td>
             <td><code>55</code></td>
-            <td></td>
+            <td> Keyboard F1
+ Corresponds to USB HID page 0x0007 usage 0x003a
+</td>
         </tr><tr>
             <td><code>F2</code></td>
             <td><code>56</code></td>
-            <td></td>
+            <td> Keyboard F2
+ Corresponds to USB HID page 0x0007 usage 0x003b
+</td>
         </tr><tr>
             <td><code>F3</code></td>
             <td><code>57</code></td>
-            <td></td>
+            <td> Keyboard F3
+ Corresponds to USB HID page 0x0007 usage 0x003c
+</td>
         </tr><tr>
             <td><code>F4</code></td>
             <td><code>58</code></td>
-            <td></td>
+            <td> Keyboard F4
+ Corresponds to USB HID page 0x0007 usage 0x003d
+</td>
         </tr><tr>
             <td><code>F5</code></td>
             <td><code>59</code></td>
-            <td></td>
+            <td> Keyboard F5
+ Corresponds to USB HID page 0x0007 usage 0x003e
+</td>
         </tr><tr>
             <td><code>F6</code></td>
             <td><code>60</code></td>
-            <td></td>
+            <td> Keyboard F6
+ Corresponds to USB HID page 0x0007 usage 0x003f
+</td>
         </tr><tr>
             <td><code>F7</code></td>
             <td><code>61</code></td>
-            <td></td>
+            <td> Keyboard F7
+ Corresponds to USB HID page 0x0007 usage 0x0040
+</td>
         </tr><tr>
             <td><code>F8</code></td>
             <td><code>62</code></td>
-            <td></td>
+            <td> Keyboard F8
+ Corresponds to USB HID page 0x0007 usage 0x0041
+</td>
         </tr><tr>
             <td><code>F9</code></td>
             <td><code>63</code></td>
-            <td></td>
+            <td> Keyboard F9
+ Corresponds to USB HID page 0x0007 usage 0x0042
+</td>
         </tr><tr>
             <td><code>F10</code></td>
             <td><code>64</code></td>
-            <td></td>
+            <td> Keyboard F10
+ Corresponds to USB HID page 0x0007 usage 0x0043
+</td>
         </tr><tr>
             <td><code>F11</code></td>
             <td><code>65</code></td>
-            <td></td>
+            <td> Keyboard F11
+ Corresponds to USB HID page 0x0007 usage 0x0044
+</td>
         </tr><tr>
             <td><code>F12</code></td>
             <td><code>66</code></td>
-            <td></td>
+            <td> Keyboard F12
+ Corresponds to USB HID page 0x0007 usage 0x0045
+</td>
         </tr><tr>
             <td><code>PRINT_SCREEN</code></td>
             <td><code>67</code></td>
-            <td></td>
+            <td> Keyboard Print Screen
+ Corresponds to USB HID page 0x0007 usage 0x0046
+</td>
         </tr><tr>
             <td><code>SCROLL_LOCK</code></td>
             <td><code>68</code></td>
-            <td></td>
+            <td> Keyboard Scroll Lock
+ Corresponds to USB HID page 0x0007 usage 0x0047
+</td>
         </tr><tr>
             <td><code>PAUSE</code></td>
             <td><code>69</code></td>
-            <td></td>
+            <td> Keyboard Pause
+ Corresponds to USB HID page 0x0007 usage 0x0048
+</td>
         </tr><tr>
             <td><code>INSERT</code></td>
             <td><code>70</code></td>
-            <td></td>
+            <td> Keyboard Insert
+ Corresponds to USB HID page 0x0007 usage 0x0049
+</td>
         </tr><tr>
             <td><code>HOME</code></td>
             <td><code>71</code></td>
-            <td></td>
+            <td> Keyboard Home
+ Corresponds to USB HID page 0x0007 usage 0x004a
+</td>
         </tr><tr>
             <td><code>PAGE_UP</code></td>
             <td><code>72</code></td>
-            <td></td>
+            <td> Keyboard Page Up
+ Corresponds to USB HID page 0x0007 usage 0x004b
+</td>
         </tr><tr>
             <td><code>DELETE</code></td>
             <td><code>73</code></td>
-            <td></td>
+            <td> Keyboard Forward Delete
+ Corresponds to USB HID page 0x0007 usage 0x004c
+</td>
         </tr><tr>
             <td><code>END</code></td>
             <td><code>74</code></td>
-            <td></td>
+            <td> Keyboard End
+ Corresponds to USB HID page 0x0007 usage 0x004d
+</td>
         </tr><tr>
             <td><code>PAGE_DOWN</code></td>
             <td><code>75</code></td>
-            <td></td>
+            <td> Keyboard Page Down
+ Corresponds to USB HID page 0x0007 usage 0x004e
+</td>
         </tr><tr>
             <td><code>RIGHT</code></td>
             <td><code>76</code></td>
-            <td></td>
+            <td> Keyboard Right Arrow
+ Corresponds to USB HID page 0x0007 usage 0x004f
+</td>
         </tr><tr>
             <td><code>LEFT</code></td>
             <td><code>77</code></td>
-            <td></td>
+            <td> Keyboard Left Arrow
+ Corresponds to USB HID page 0x0007 usage 0x0050
+</td>
         </tr><tr>
             <td><code>DOWN</code></td>
             <td><code>78</code></td>
-            <td></td>
+            <td> Keyboard Down Arrow
+ Corresponds to USB HID page 0x0007 usage 0x0051
+</td>
         </tr><tr>
             <td><code>UP</code></td>
             <td><code>79</code></td>
-            <td></td>
+            <td> Keyboard Up Arrow
+ Corresponds to USB HID page 0x0007 usage 0x0052
+</td>
         </tr><tr>
             <td><code>NON_US_BACKSLASH</code></td>
             <td><code>80</code></td>
-            <td></td>
+            <td> Keyboard Non-US \ and |
+ Corresponds to USB HID page 0x0007 usage 0x0064
+</td>
         </tr><tr>
             <td><code>LEFT_CTRL</code></td>
             <td><code>81</code></td>
-            <td></td>
+            <td> Keyboard Left Control
+ Corresponds to USB HID page 0x0007 usage 0x00e0
+</td>
         </tr><tr>
             <td><code>LEFT_SHIFT</code></td>
             <td><code>82</code></td>
-            <td></td>
+            <td> Keyboard Left Shift
+ Corresponds to USB HID page 0x0007 usage 0x00e1
+</td>
         </tr><tr>
             <td><code>LEFT_ALT</code></td>
             <td><code>83</code></td>
-            <td></td>
+            <td> Keyboard Left Alt
+ Corresponds to USB HID page 0x0007 usage 0x00e2
+</td>
         </tr><tr>
             <td><code>LEFT_META</code></td>
             <td><code>84</code></td>
-            <td></td>
+            <td> Keyboard Left GUI (Meta, Windows)
+ Corresponds to USB HID page 0x0007 usage 0x00e3
+</td>
         </tr><tr>
             <td><code>RIGHT_CTRL</code></td>
             <td><code>85</code></td>
-            <td></td>
+            <td> Keyboard Right Control
+ Corresponds to USB HID page 0x0007 usage 0x00e4
+</td>
         </tr><tr>
             <td><code>RIGHT_SHIFT</code></td>
             <td><code>86</code></td>
-            <td></td>
+            <td> Keyboard Right Shift
+ Corresponds to USB HID page 0x0007 usage 0x00e5
+</td>
         </tr><tr>
             <td><code>RIGHT_ALT</code></td>
             <td><code>87</code></td>
-            <td></td>
+            <td> Keyboard Right Alt
+ Corresponds to USB HID page 0x0007 usage 0x00e6
+</td>
         </tr><tr>
             <td><code>RIGHT_META</code></td>
             <td><code>88</code></td>
-            <td></td>
+            <td> Keyboard Right GUI (Meta, Windows)
+ Corresponds to USB HID page 0x0007 usage 0x00e7
+</td>
         </tr><tr>
             <td><code>NUM_LOCK</code></td>
             <td><code>512</code></td>
-            <td></td>
+            <td> Keypad Num Lock and Clear
+ Corresponds to USB HID page 0x0007 usage 0x0053
+</td>
         </tr><tr>
             <td><code>KEYPAD_SLASH</code></td>
             <td><code>513</code></td>
-            <td></td>
+            <td> Keypad /
+ Corresponds to USB HID page 0x0007 usage 0x0054
+</td>
         </tr><tr>
             <td><code>KEYPAD_ASTERISK</code></td>
             <td><code>514</code></td>
-            <td></td>
+            <td> Keypad *
+ Corresponds to USB HID page 0x0007 usage 0x0055
+</td>
         </tr><tr>
             <td><code>KEYPAD_MINUS</code></td>
             <td><code>515</code></td>
-            <td></td>
+            <td> Keypad -
+ Corresponds to USB HID page 0x0007 usage 0x0056
+</td>
         </tr><tr>
             <td><code>KEYPAD_PLUS</code></td>
             <td><code>516</code></td>
-            <td></td>
+            <td> Keypad +
+ Corresponds to USB HID page 0x0007 usage 0x0057
+</td>
         </tr><tr>
             <td><code>KEYPAD_ENTER</code></td>
             <td><code>517</code></td>
-            <td></td>
+            <td> Keypad ENTER
+ Corresponds to USB HID page 0x0007 usage 0x0058
+</td>
         </tr><tr>
             <td><code>KEYPAD_1</code></td>
             <td><code>518</code></td>
-            <td></td>
+            <td> Keypad 1 and End
+ Corresponds to USB HID page 0x0007 usage 0x0059
+</td>
         </tr><tr>
             <td><code>KEYPAD_2</code></td>
             <td><code>519</code></td>
-            <td></td>
+            <td> Keypad 2 and Down Arrow
+ Corresponds to USB HID page 0x0007 usage 0x005a
+</td>
         </tr><tr>
             <td><code>KEYPAD_3</code></td>
             <td><code>520</code></td>
-            <td></td>
+            <td> Keypad 3 and Page Down
+ Corresponds to USB HID page 0x0007 usage 0x005b
+</td>
         </tr><tr>
             <td><code>KEYPAD_4</code></td>
             <td><code>521</code></td>
-            <td></td>
+            <td> Keypad 4 and Left Arrow
+ Corresponds to USB HID page 0x0007 usage 0x005c
+</td>
         </tr><tr>
             <td><code>KEYPAD_5</code></td>
             <td><code>522</code></td>
-            <td></td>
+            <td> Keypad 5
+ Corresponds to USB HID page 0x0007 usage 0x005d
+</td>
         </tr><tr>
             <td><code>KEYPAD_6</code></td>
             <td><code>523</code></td>
-            <td></td>
+            <td> Keypad 6 and Right Arrow
+ Corresponds to USB HID page 0x0007 usage 0x005e
+</td>
         </tr><tr>
             <td><code>KEYPAD_7</code></td>
             <td><code>524</code></td>
-            <td></td>
+            <td> Keypad 7 and Home
+ Corresponds to USB HID page 0x0007 usage 0x005f
+</td>
         </tr><tr>
             <td><code>KEYPAD_8</code></td>
             <td><code>525</code></td>
-            <td></td>
+            <td> Keypad 8 and Up Arrow
+ Corresponds to USB HID page 0x0007 usage 0x0060
+</td>
         </tr><tr>
             <td><code>KEYPAD_9</code></td>
             <td><code>526</code></td>
-            <td></td>
+            <td> Keypad 9 and Page Up
+ Corresponds to USB HID page 0x0007 usage 0x0061
+</td>
         </tr><tr>
             <td><code>KEYPAD_0</code></td>
             <td><code>527</code></td>
-            <td></td>
+            <td> Keypad 0 and Insert
+ Corresponds to USB HID page 0x0007 usage 0x0062
+</td>
         </tr><tr>
             <td><code>KEYPAD_DOT</code></td>
             <td><code>528</code></td>
-            <td></td>
+            <td> Keypad . and Delete
+ Corresponds to USB HID page 0x0007 usage 0x0063
+</td>
         </tr><tr>
             <td><code>MEDIA_MUTE</code></td>
             <td><code>768</code></td>
@@ -808,59 +1020,89 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ALT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The Alt (Alternative) key.
+ This key enables the alternate modifier function for interpreting
+ concurrent or subsequent keyboard input.
+ This key value is also used for the Apple Option key.
+</td>
         </tr><tr>
             <td><code>ALT_GRAPH</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The Alternate Graphics (AltGr or AltGraph) key.
+ This key is used enable the ISO Level 3 shift modifier (the standard
+ Shift key is the level 2 modifier). See [ISO9995-1].
+</td>
         </tr><tr>
             <td><code>CAPS_LOCK</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The Caps Lock (Capital) key.
+ Toggle capital character lock function for interpreting subsequent
+ keyboard input event.
+</td>
         </tr><tr>
             <td><code>CONTROL</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The Control or Ctrl key, to enable control modifier function for
+ interpreting concurrent or subsequent keyboard input.
+</td>
         </tr><tr>
             <td><code>META</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> The Meta key, to enable meta modifier function for interpreting
+ concurrent or subsequent keyboard input.
+ This key value is used for the Windows Logo key and the Apple Command
+ or ⌘ key.
+</td>
         </tr><tr>
             <td><code>NUM_LOCK</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> The NumLock or Number Lock key, to toggle numpad mode function for
+ interpreting subsequent keyboard input.
+</td>
         </tr><tr>
             <td><code>SCROLL_LOCK</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> "ScrollLock" The Scroll Lock key, to toggle between scrolling and cursor
+ movement modes.
+</td>
         </tr><tr>
             <td><code>SHIFT</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> The Shift key, to enable shift modifier function for interpreting
+ concurrent or subsequent keyboard input.
+</td>
         </tr><tr>
             <td><code>ARROW_DOWN</code></td>
             <td><code>33</code></td>
-            <td></td>
+            <td> The down arrow key, to navigate or traverse downward.
+</td>
         </tr><tr>
             <td><code>ARROW_LEFT</code></td>
             <td><code>34</code></td>
-            <td></td>
+            <td> The left arrow key, to navigate or traverse leftward.
+</td>
         </tr><tr>
             <td><code>ARROW_RIGHT</code></td>
             <td><code>35</code></td>
-            <td></td>
+            <td> The right arrow key, to navigate or traverse rightward.
+</td>
         </tr><tr>
             <td><code>ARROW_UP</code></td>
             <td><code>36</code></td>
-            <td></td>
+            <td> The up arrow key, to navigate or traverse upward.
+</td>
         </tr><tr>
             <td><code>END</code></td>
             <td><code>37</code></td>
-            <td></td>
+            <td> The End key, used with keyboard entry to go to the end of content.
+</td>
         </tr><tr>
             <td><code>HOME</code></td>
             <td><code>38</code></td>
-            <td></td>
+            <td> The Home key, used with keyboard entry, to go to start of content.
+ For the mobile phone Home key (which goes to the phone’s main screen),
+ use "GO_HOME".
+</td>
         </tr><tr>
             <td><code>PAGE_DOWN</code></td>
             <td><code>39</code></td>
@@ -872,23 +1114,33 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ENTER</code></td>
             <td><code>49</code></td>
-            <td></td>
+            <td> The Enter or ↵ key, to activate current selection or accept current input.
+ This key value is also used for the Return (Macintosh numpad) key.
+</td>
         </tr><tr>
             <td><code>TAB</code></td>
             <td><code>50</code></td>
-            <td></td>
+            <td> The Horizontal Tabulation Tab key.
+</td>
         </tr><tr>
             <td><code>BACKSPACE</code></td>
             <td><code>65</code></td>
-            <td></td>
+            <td> The Backspace key. This key value is also used for the key labeled Delete
+ on MacOS keyboards.
+</td>
         </tr><tr>
             <td><code>DELETE</code></td>
             <td><code>66</code></td>
-            <td></td>
+            <td> The Delete (Del) Key.
+ This key value is also used for the key labeled Delete on MacOS keyboards
+ when modified by the Fn key.
+</td>
         </tr><tr>
             <td><code>INSERT</code></td>
             <td><code>67</code></td>
-            <td></td>
+            <td> The Insert (Ins) key, to toggle between text modes for insertion or
+ overtyping.
+</td>
         </tr><tr>
             <td><code>F1</code></td>
             <td><code>97</code></td>
@@ -940,19 +1192,27 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>CONTEXT_MENU</code></td>
             <td><code>129</code></td>
-            <td></td>
+            <td> Show the application’s context menu.
+ This key is commonly found between the right Meta key and the right
+ Control key.
+</td>
         </tr><tr>
             <td><code>ESCAPE</code></td>
             <td><code>130</code></td>
-            <td></td>
+            <td> The Esc key. This key was originally used to initiate an escape sequence,
+ but is now more generally used to exit or "escape" the current context,
+ such as closing a dialog or exiting full screen mode.
+</td>
         </tr><tr>
             <td><code>GO_BACK</code></td>
             <td><code>177</code></td>
-            <td></td>
+            <td> The Back key.
+</td>
         </tr><tr>
             <td><code>GO_HOME</code></td>
             <td><code>178</code></td>
-            <td></td>
+            <td> The Home key, which goes to the phone’s main screen.
+</td>
         </tr></table>
 
 ### KeyEventPhase {:#KeyEventPhase}
@@ -967,11 +1227,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>PRESSED</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Key is pressed down.
+</td>
         </tr><tr>
             <td><code>RELEASED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Key is released.
+</td>
         </tr></table>
 
 ### Status {:#Status}
@@ -1015,423 +1277,633 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>A</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Keyboard a and A
+ Corresponds to USB HID page 0x0007 usage 0x0004
+</td>
         </tr><tr>
             <td><code>B</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Keyboard b and B
+ Corresponds to USB HID page 0x0007 usage 0x0005
+</td>
         </tr><tr>
             <td><code>C</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Keyboard c and C
+ Corresponds to USB HID page 0x0007 usage 0x0006
+</td>
         </tr><tr>
             <td><code>D</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> Keyboard d and D
+ Corresponds to USB HID page 0x0007 usage 0x0007
+</td>
         </tr><tr>
             <td><code>E</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> Keyboard e and E
+ Corresponds to USB HID page 0x0007 usage 0x0008
+</td>
         </tr><tr>
             <td><code>F</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> Keyboard f and F
+ Corresponds to USB HID page 0x0007 usage 0x0009
+</td>
         </tr><tr>
             <td><code>G</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> Keyboard g and G
+ Corresponds to USB HID page 0x0007 usage 0x000a
+</td>
         </tr><tr>
             <td><code>H</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> Keyboard h and H
+ Corresponds to USB HID page 0x0007 usage 0x000b
+</td>
         </tr><tr>
             <td><code>I</code></td>
             <td><code>9</code></td>
-            <td></td>
+            <td> Keyboard i and I
+ Corresponds to USB HID page 0x0007 usage 0x000c
+</td>
         </tr><tr>
             <td><code>J</code></td>
             <td><code>10</code></td>
-            <td></td>
+            <td> Keyboard j and J
+ Corresponds to USB HID page 0x0007 usage 0x000d
+</td>
         </tr><tr>
             <td><code>K</code></td>
             <td><code>11</code></td>
-            <td></td>
+            <td> Keyboard k and K
+ Corresponds to USB HID page 0x0007 usage 0x000e
+</td>
         </tr><tr>
             <td><code>L</code></td>
             <td><code>12</code></td>
-            <td></td>
+            <td> Keyboard l and L
+ Corresponds to USB HID page 0x0007 usage 0x000f
+</td>
         </tr><tr>
             <td><code>M</code></td>
             <td><code>13</code></td>
-            <td></td>
+            <td> Keyboard m and M
+ Corresponds to USB HID page 0x0007 usage 0x0010
+</td>
         </tr><tr>
             <td><code>N</code></td>
             <td><code>14</code></td>
-            <td></td>
+            <td> Keyboard n and N
+ Corresponds to USB HID page 0x0007 usage 0x0011
+</td>
         </tr><tr>
             <td><code>O</code></td>
             <td><code>15</code></td>
-            <td></td>
+            <td> Keyboard o and O
+ Corresponds to USB HID page 0x0007 usage 0x0012
+</td>
         </tr><tr>
             <td><code>P</code></td>
             <td><code>16</code></td>
-            <td></td>
+            <td> Keyboard p and P
+ Corresponds to USB HID page 0x0007 usage 0x0013
+</td>
         </tr><tr>
             <td><code>Q</code></td>
             <td><code>17</code></td>
-            <td></td>
+            <td> Keyboard q and Q
+ Corresponds to USB HID page 0x0007 usage 0x0014
+</td>
         </tr><tr>
             <td><code>R</code></td>
             <td><code>18</code></td>
-            <td></td>
+            <td> Keyboard r and R
+ Corresponds to USB HID page 0x0007 usage 0x0015
+</td>
         </tr><tr>
             <td><code>S</code></td>
             <td><code>19</code></td>
-            <td></td>
+            <td> Keyboard s and S
+ Corresponds to USB HID page 0x0007 usage 0x0016
+</td>
         </tr><tr>
             <td><code>T</code></td>
             <td><code>20</code></td>
-            <td></td>
+            <td> Keyboard t and T
+ Corresponds to USB HID page 0x0007 usage 0x0017
+</td>
         </tr><tr>
             <td><code>U</code></td>
             <td><code>21</code></td>
-            <td></td>
+            <td> Keyboard u and U
+ Corresponds to USB HID page 0x0007 usage 0x0018
+</td>
         </tr><tr>
             <td><code>V</code></td>
             <td><code>22</code></td>
-            <td></td>
+            <td> Keyboard v and V
+ Corresponds to USB HID page 0x0007 usage 0x0019
+</td>
         </tr><tr>
             <td><code>W</code></td>
             <td><code>23</code></td>
-            <td></td>
+            <td> Keyboard w and W
+ Corresponds to USB HID page 0x0007 usage 0x001a
+</td>
         </tr><tr>
             <td><code>X</code></td>
             <td><code>24</code></td>
-            <td></td>
+            <td> Keyboard x and X
+ Corresponds to USB HID page 0x0007 usage 0x001b
+</td>
         </tr><tr>
             <td><code>Y</code></td>
             <td><code>25</code></td>
-            <td></td>
+            <td> Keyboard y and Y
+ Corresponds to USB HID page 0x0007 usage 0x001c
+</td>
         </tr><tr>
             <td><code>Z</code></td>
             <td><code>26</code></td>
-            <td></td>
+            <td> Keyboard z and Z
+ Corresponds to USB HID page 0x0007 usage 0x001d
+</td>
         </tr><tr>
             <td><code>KEY_1</code></td>
             <td><code>27</code></td>
-            <td></td>
+            <td> Keyboard 1 and !
+ Corresponds to USB HID page 0x0007 usage 0x001e
+</td>
         </tr><tr>
             <td><code>KEY_2</code></td>
             <td><code>28</code></td>
-            <td></td>
+            <td> Keyboard 2 and @
+ Corresponds to USB HID page 0x0007 usage 0x001f
+</td>
         </tr><tr>
             <td><code>KEY_3</code></td>
             <td><code>29</code></td>
-            <td></td>
+            <td> Keyboard 3 and #
+ Corresponds to USB HID page 0x0007 usage 0x0020
+</td>
         </tr><tr>
             <td><code>KEY_4</code></td>
             <td><code>30</code></td>
-            <td></td>
+            <td> Keyboard 4 and $
+ Corresponds to USB HID page 0x0007 usage 0x0021
+</td>
         </tr><tr>
             <td><code>KEY_5</code></td>
             <td><code>31</code></td>
-            <td></td>
+            <td> Keyboard 5 and %
+ Corresponds to USB HID page 0x0007 usage 0x0022
+</td>
         </tr><tr>
             <td><code>KEY_6</code></td>
             <td><code>32</code></td>
-            <td></td>
+            <td> Keyboard 6 and ^
+ Corresponds to USB HID page 0x0007 usage 0x0023
+</td>
         </tr><tr>
             <td><code>KEY_7</code></td>
             <td><code>33</code></td>
-            <td></td>
+            <td> Keyboard 7 and &
+ Corresponds to USB HID page 0x0007 usage 0x0024
+</td>
         </tr><tr>
             <td><code>KEY_8</code></td>
             <td><code>34</code></td>
-            <td></td>
+            <td> Keyboard 8 and *
+ Corresponds to USB HID page 0x0007 usage 0x0025
+</td>
         </tr><tr>
             <td><code>KEY_9</code></td>
             <td><code>35</code></td>
-            <td></td>
+            <td> Keyboard 9 and (
+ Corresponds to USB HID page 0x0007 usage 0x0026
+</td>
         </tr><tr>
             <td><code>KEY_0</code></td>
             <td><code>36</code></td>
-            <td></td>
+            <td> Keyboard 0 and )
+ Corresponds to USB HID page 0x0007 usage 0x0027
+</td>
         </tr><tr>
             <td><code>ENTER</code></td>
             <td><code>37</code></td>
-            <td></td>
+            <td> Keyboard Enter (Return)
+ Corresponds to USB HID page 0x0007 usage 0x0028
+</td>
         </tr><tr>
             <td><code>ESCAPE</code></td>
             <td><code>38</code></td>
-            <td></td>
+            <td> Keyboard Escape
+ Corresponds to USB HID page 0x0007 usage 0x0029
+</td>
         </tr><tr>
             <td><code>BACKSPACE</code></td>
             <td><code>39</code></td>
-            <td></td>
+            <td> Keyboard Backspace (Backward Delete)
+ Corresponds to USB HID page 0x0007 usage 0x002a
+</td>
         </tr><tr>
             <td><code>TAB</code></td>
             <td><code>40</code></td>
-            <td></td>
+            <td> Keyboard Tab
+ Corresponds to USB HID page 0x0007 usage 0x002b
+</td>
         </tr><tr>
             <td><code>SPACE</code></td>
             <td><code>41</code></td>
-            <td></td>
+            <td> Keyboard Spacebar
+ Corresponds to USB HID page 0x0007 usage 0x002c
+</td>
         </tr><tr>
             <td><code>MINUS</code></td>
             <td><code>42</code></td>
-            <td></td>
+            <td> Keyboard - and (underscore)
+ Corresponds to USB HID page 0x0007 usage 0x002d
+</td>
         </tr><tr>
             <td><code>EQUALS</code></td>
             <td><code>43</code></td>
-            <td></td>
+            <td> Keyboard = and +
+ Corresponds to USB HID page 0x0007 usage 0x002e
+</td>
         </tr><tr>
             <td><code>LEFT_BRACE</code></td>
             <td><code>44</code></td>
-            <td></td>
+            <td> Keyboard [ and {
+ Corresponds to USB HID page 0x0007 usage 0x002f
+</td>
         </tr><tr>
             <td><code>RIGHT_BRACE</code></td>
             <td><code>45</code></td>
-            <td></td>
+            <td> Keyboard ] and }
+ Corresponds to USB HID page 0x0007 usage 0x0030
+</td>
         </tr><tr>
             <td><code>BACKSLASH</code></td>
             <td><code>46</code></td>
-            <td></td>
+            <td> Keyboard \ and |
+ Corresponds to USB HID page 0x0007 usage 0x0031
+</td>
         </tr><tr>
             <td><code>NON_US_HASH</code></td>
             <td><code>47</code></td>
-            <td></td>
+            <td> Keyboard Non-US # and ~
+ Corresponds to USB HID page 0x0007 usage 0x0032
+</td>
         </tr><tr>
             <td><code>SEMICOLON</code></td>
             <td><code>48</code></td>
-            <td></td>
+            <td> Keyboard ; and :
+ Corresponds to USB HID page 0x0007 usage 0x0033
+</td>
         </tr><tr>
             <td><code>APOSTROPHE</code></td>
             <td><code>49</code></td>
-            <td></td>
+            <td> Keyboard ' and "
+ Corresponds to USB HID page 0x0007 usage 0x0034
+</td>
         </tr><tr>
             <td><code>GRAVE_ACCENT</code></td>
             <td><code>50</code></td>
-            <td></td>
+            <td> Keyboard Grave Accent and Tilde
+ Corresponds to USB HID page 0x0007 usage 0x0035
+</td>
         </tr><tr>
             <td><code>COMMA</code></td>
             <td><code>51</code></td>
-            <td></td>
+            <td> Keyboard , and <
+ Corresponds to USB HID page 0x0007 usage 0x0036
+</td>
         </tr><tr>
             <td><code>DOT</code></td>
             <td><code>52</code></td>
-            <td></td>
+            <td> Keyboard . and >
+ Corresponds to USB HID page 0x0007 usage 0x0037
+</td>
         </tr><tr>
             <td><code>SLASH</code></td>
             <td><code>53</code></td>
-            <td></td>
+            <td> Keyboard / and ?
+ Corresponds to USB HID page 0x0007 usage 0x0038
+</td>
         </tr><tr>
             <td><code>CAPS_LOCK</code></td>
             <td><code>54</code></td>
-            <td></td>
+            <td> Keyboard Caps Lock
+ Corresponds to USB HID page 0x0007 usage 0x0039
+</td>
         </tr><tr>
             <td><code>F1</code></td>
             <td><code>55</code></td>
-            <td></td>
+            <td> Keyboard F1
+ Corresponds to USB HID page 0x0007 usage 0x003a
+</td>
         </tr><tr>
             <td><code>F2</code></td>
             <td><code>56</code></td>
-            <td></td>
+            <td> Keyboard F2
+ Corresponds to USB HID page 0x0007 usage 0x003b
+</td>
         </tr><tr>
             <td><code>F3</code></td>
             <td><code>57</code></td>
-            <td></td>
+            <td> Keyboard F3
+ Corresponds to USB HID page 0x0007 usage 0x003c
+</td>
         </tr><tr>
             <td><code>F4</code></td>
             <td><code>58</code></td>
-            <td></td>
+            <td> Keyboard F4
+ Corresponds to USB HID page 0x0007 usage 0x003d
+</td>
         </tr><tr>
             <td><code>F5</code></td>
             <td><code>59</code></td>
-            <td></td>
+            <td> Keyboard F5
+ Corresponds to USB HID page 0x0007 usage 0x003e
+</td>
         </tr><tr>
             <td><code>F6</code></td>
             <td><code>60</code></td>
-            <td></td>
+            <td> Keyboard F6
+ Corresponds to USB HID page 0x0007 usage 0x003f
+</td>
         </tr><tr>
             <td><code>F7</code></td>
             <td><code>61</code></td>
-            <td></td>
+            <td> Keyboard F7
+ Corresponds to USB HID page 0x0007 usage 0x0040
+</td>
         </tr><tr>
             <td><code>F8</code></td>
             <td><code>62</code></td>
-            <td></td>
+            <td> Keyboard F8
+ Corresponds to USB HID page 0x0007 usage 0x0041
+</td>
         </tr><tr>
             <td><code>F9</code></td>
             <td><code>63</code></td>
-            <td></td>
+            <td> Keyboard F9
+ Corresponds to USB HID page 0x0007 usage 0x0042
+</td>
         </tr><tr>
             <td><code>F10</code></td>
             <td><code>64</code></td>
-            <td></td>
+            <td> Keyboard F10
+ Corresponds to USB HID page 0x0007 usage 0x0043
+</td>
         </tr><tr>
             <td><code>F11</code></td>
             <td><code>65</code></td>
-            <td></td>
+            <td> Keyboard F11
+ Corresponds to USB HID page 0x0007 usage 0x0044
+</td>
         </tr><tr>
             <td><code>F12</code></td>
             <td><code>66</code></td>
-            <td></td>
+            <td> Keyboard F12
+ Corresponds to USB HID page 0x0007 usage 0x0045
+</td>
         </tr><tr>
             <td><code>PRINT_SCREEN</code></td>
             <td><code>67</code></td>
-            <td></td>
+            <td> Keyboard Print Screen
+ Corresponds to USB HID page 0x0007 usage 0x0046
+</td>
         </tr><tr>
             <td><code>SCROLL_LOCK</code></td>
             <td><code>68</code></td>
-            <td></td>
+            <td> Keyboard Scroll Lock
+ Corresponds to USB HID page 0x0007 usage 0x0047
+</td>
         </tr><tr>
             <td><code>PAUSE</code></td>
             <td><code>69</code></td>
-            <td></td>
+            <td> Keyboard Pause
+ Corresponds to USB HID page 0x0007 usage 0x0048
+</td>
         </tr><tr>
             <td><code>INSERT</code></td>
             <td><code>70</code></td>
-            <td></td>
+            <td> Keyboard Insert
+ Corresponds to USB HID page 0x0007 usage 0x0049
+</td>
         </tr><tr>
             <td><code>HOME</code></td>
             <td><code>71</code></td>
-            <td></td>
+            <td> Keyboard Home
+ Corresponds to USB HID page 0x0007 usage 0x004a
+</td>
         </tr><tr>
             <td><code>PAGE_UP</code></td>
             <td><code>72</code></td>
-            <td></td>
+            <td> Keyboard Page Up
+ Corresponds to USB HID page 0x0007 usage 0x004b
+</td>
         </tr><tr>
             <td><code>DELETE</code></td>
             <td><code>73</code></td>
-            <td></td>
+            <td> Keyboard Forward Delete
+ Corresponds to USB HID page 0x0007 usage 0x004c
+</td>
         </tr><tr>
             <td><code>END</code></td>
             <td><code>74</code></td>
-            <td></td>
+            <td> Keyboard End
+ Corresponds to USB HID page 0x0007 usage 0x004d
+</td>
         </tr><tr>
             <td><code>PAGE_DOWN</code></td>
             <td><code>75</code></td>
-            <td></td>
+            <td> Keyboard Page Down
+ Corresponds to USB HID page 0x0007 usage 0x004e
+</td>
         </tr><tr>
             <td><code>RIGHT</code></td>
             <td><code>76</code></td>
-            <td></td>
+            <td> Keyboard Right Arrow
+ Corresponds to USB HID page 0x0007 usage 0x004f
+</td>
         </tr><tr>
             <td><code>LEFT</code></td>
             <td><code>77</code></td>
-            <td></td>
+            <td> Keyboard Left Arrow
+ Corresponds to USB HID page 0x0007 usage 0x0050
+</td>
         </tr><tr>
             <td><code>DOWN</code></td>
             <td><code>78</code></td>
-            <td></td>
+            <td> Keyboard Down Arrow
+ Corresponds to USB HID page 0x0007 usage 0x0051
+</td>
         </tr><tr>
             <td><code>UP</code></td>
             <td><code>79</code></td>
-            <td></td>
+            <td> Keyboard Up Arrow
+ Corresponds to USB HID page 0x0007 usage 0x0052
+</td>
         </tr><tr>
             <td><code>NON_US_BACKSLASH</code></td>
             <td><code>80</code></td>
-            <td></td>
+            <td> Keyboard Non-US \ and |
+ Corresponds to USB HID page 0x0007 usage 0x0064
+</td>
         </tr><tr>
             <td><code>LEFT_CTRL</code></td>
             <td><code>81</code></td>
-            <td></td>
+            <td> Keyboard Left Control
+ Corresponds to USB HID page 0x0007 usage 0x00e0
+</td>
         </tr><tr>
             <td><code>LEFT_SHIFT</code></td>
             <td><code>82</code></td>
-            <td></td>
+            <td> Keyboard Left Shift
+ Corresponds to USB HID page 0x0007 usage 0x00e1
+</td>
         </tr><tr>
             <td><code>LEFT_ALT</code></td>
             <td><code>83</code></td>
-            <td></td>
+            <td> Keyboard Left Alt
+ Corresponds to USB HID page 0x0007 usage 0x00e2
+</td>
         </tr><tr>
             <td><code>LEFT_META</code></td>
             <td><code>84</code></td>
-            <td></td>
+            <td> Keyboard Left GUI (Meta, Windows)
+ Corresponds to USB HID page 0x0007 usage 0x00e3
+</td>
         </tr><tr>
             <td><code>RIGHT_CTRL</code></td>
             <td><code>85</code></td>
-            <td></td>
+            <td> Keyboard Right Control
+ Corresponds to USB HID page 0x0007 usage 0x00e4
+</td>
         </tr><tr>
             <td><code>RIGHT_SHIFT</code></td>
             <td><code>86</code></td>
-            <td></td>
+            <td> Keyboard Right Shift
+ Corresponds to USB HID page 0x0007 usage 0x00e5
+</td>
         </tr><tr>
             <td><code>RIGHT_ALT</code></td>
             <td><code>87</code></td>
-            <td></td>
+            <td> Keyboard Right Alt
+ Corresponds to USB HID page 0x0007 usage 0x00e6
+</td>
         </tr><tr>
             <td><code>RIGHT_META</code></td>
             <td><code>88</code></td>
-            <td></td>
+            <td> Keyboard Right GUI (Meta, Windows)
+ Corresponds to USB HID page 0x0007 usage 0x00e7
+</td>
         </tr><tr>
             <td><code>NUM_LOCK</code></td>
             <td><code>512</code></td>
-            <td></td>
+            <td> Keypad Num Lock and Clear
+ Corresponds to USB HID page 0x0007 usage 0x0053
+</td>
         </tr><tr>
             <td><code>KEYPAD_SLASH</code></td>
             <td><code>513</code></td>
-            <td></td>
+            <td> Keypad /
+ Corresponds to USB HID page 0x0007 usage 0x0054
+</td>
         </tr><tr>
             <td><code>KEYPAD_ASTERISK</code></td>
             <td><code>514</code></td>
-            <td></td>
+            <td> Keypad *
+ Corresponds to USB HID page 0x0007 usage 0x0055
+</td>
         </tr><tr>
             <td><code>KEYPAD_MINUS</code></td>
             <td><code>515</code></td>
-            <td></td>
+            <td> Keypad -
+ Corresponds to USB HID page 0x0007 usage 0x0056
+</td>
         </tr><tr>
             <td><code>KEYPAD_PLUS</code></td>
             <td><code>516</code></td>
-            <td></td>
+            <td> Keypad +
+ Corresponds to USB HID page 0x0007 usage 0x0057
+</td>
         </tr><tr>
             <td><code>KEYPAD_ENTER</code></td>
             <td><code>517</code></td>
-            <td></td>
+            <td> Keypad ENTER
+ Corresponds to USB HID page 0x0007 usage 0x0058
+</td>
         </tr><tr>
             <td><code>KEYPAD_1</code></td>
             <td><code>518</code></td>
-            <td></td>
+            <td> Keypad 1 and End
+ Corresponds to USB HID page 0x0007 usage 0x0059
+</td>
         </tr><tr>
             <td><code>KEYPAD_2</code></td>
             <td><code>519</code></td>
-            <td></td>
+            <td> Keypad 2 and Down Arrow
+ Corresponds to USB HID page 0x0007 usage 0x005a
+</td>
         </tr><tr>
             <td><code>KEYPAD_3</code></td>
             <td><code>520</code></td>
-            <td></td>
+            <td> Keypad 3 and Page Down
+ Corresponds to USB HID page 0x0007 usage 0x005b
+</td>
         </tr><tr>
             <td><code>KEYPAD_4</code></td>
             <td><code>521</code></td>
-            <td></td>
+            <td> Keypad 4 and Left Arrow
+ Corresponds to USB HID page 0x0007 usage 0x005c
+</td>
         </tr><tr>
             <td><code>KEYPAD_5</code></td>
             <td><code>522</code></td>
-            <td></td>
+            <td> Keypad 5
+ Corresponds to USB HID page 0x0007 usage 0x005d
+</td>
         </tr><tr>
             <td><code>KEYPAD_6</code></td>
             <td><code>523</code></td>
-            <td></td>
+            <td> Keypad 6 and Right Arrow
+ Corresponds to USB HID page 0x0007 usage 0x005e
+</td>
         </tr><tr>
             <td><code>KEYPAD_7</code></td>
             <td><code>524</code></td>
-            <td></td>
+            <td> Keypad 7 and Home
+ Corresponds to USB HID page 0x0007 usage 0x005f
+</td>
         </tr><tr>
             <td><code>KEYPAD_8</code></td>
             <td><code>525</code></td>
-            <td></td>
+            <td> Keypad 8 and Up Arrow
+ Corresponds to USB HID page 0x0007 usage 0x0060
+</td>
         </tr><tr>
             <td><code>KEYPAD_9</code></td>
             <td><code>526</code></td>
-            <td></td>
+            <td> Keypad 9 and Page Up
+ Corresponds to USB HID page 0x0007 usage 0x0061
+</td>
         </tr><tr>
             <td><code>KEYPAD_0</code></td>
             <td><code>527</code></td>
-            <td></td>
+            <td> Keypad 0 and Insert
+ Corresponds to USB HID page 0x0007 usage 0x0062
+</td>
         </tr><tr>
             <td><code>KEYPAD_DOT</code></td>
             <td><code>528</code></td>
-            <td></td>
+            <td> Keypad . and Delete
+ Corresponds to USB HID page 0x0007 usage 0x0063
+</td>
         </tr><tr>
             <td><code>MEDIA_MUTE</code></td>
             <td><code>768</code></td>
@@ -1461,59 +1933,89 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ALT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The Alt (Alternative) key.
+ This key enables the alternate modifier function for interpreting
+ concurrent or subsequent keyboard input.
+ This key value is also used for the Apple Option key.
+</td>
         </tr><tr>
             <td><code>ALT_GRAPH</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The Alternate Graphics (AltGr or AltGraph) key.
+ This key is used enable the ISO Level 3 shift modifier (the standard
+ Shift key is the level 2 modifier). See [ISO9995-1].
+</td>
         </tr><tr>
             <td><code>CAPS_LOCK</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The Caps Lock (Capital) key.
+ Toggle capital character lock function for interpreting subsequent
+ keyboard input event.
+</td>
         </tr><tr>
             <td><code>CONTROL</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The Control or Ctrl key, to enable control modifier function for
+ interpreting concurrent or subsequent keyboard input.
+</td>
         </tr><tr>
             <td><code>META</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> The Meta key, to enable meta modifier function for interpreting
+ concurrent or subsequent keyboard input.
+ This key value is used for the Windows Logo key and the Apple Command
+ or ⌘ key.
+</td>
         </tr><tr>
             <td><code>NUM_LOCK</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> The NumLock or Number Lock key, to toggle numpad mode function for
+ interpreting subsequent keyboard input.
+</td>
         </tr><tr>
             <td><code>SCROLL_LOCK</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> "ScrollLock" The Scroll Lock key, to toggle between scrolling and cursor
+ movement modes.
+</td>
         </tr><tr>
             <td><code>SHIFT</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> The Shift key, to enable shift modifier function for interpreting
+ concurrent or subsequent keyboard input.
+</td>
         </tr><tr>
             <td><code>ARROW_DOWN</code></td>
             <td><code>33</code></td>
-            <td></td>
+            <td> The down arrow key, to navigate or traverse downward.
+</td>
         </tr><tr>
             <td><code>ARROW_LEFT</code></td>
             <td><code>34</code></td>
-            <td></td>
+            <td> The left arrow key, to navigate or traverse leftward.
+</td>
         </tr><tr>
             <td><code>ARROW_RIGHT</code></td>
             <td><code>35</code></td>
-            <td></td>
+            <td> The right arrow key, to navigate or traverse rightward.
+</td>
         </tr><tr>
             <td><code>ARROW_UP</code></td>
             <td><code>36</code></td>
-            <td></td>
+            <td> The up arrow key, to navigate or traverse upward.
+</td>
         </tr><tr>
             <td><code>END</code></td>
             <td><code>37</code></td>
-            <td></td>
+            <td> The End key, used with keyboard entry to go to the end of content.
+</td>
         </tr><tr>
             <td><code>HOME</code></td>
             <td><code>38</code></td>
-            <td></td>
+            <td> The Home key, used with keyboard entry, to go to start of content.
+ For the mobile phone Home key (which goes to the phone’s main screen),
+ use "GO_HOME".
+</td>
         </tr><tr>
             <td><code>PAGE_DOWN</code></td>
             <td><code>39</code></td>
@@ -1525,23 +2027,33 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ENTER</code></td>
             <td><code>49</code></td>
-            <td></td>
+            <td> The Enter or ↵ key, to activate current selection or accept current input.
+ This key value is also used for the Return (Macintosh numpad) key.
+</td>
         </tr><tr>
             <td><code>TAB</code></td>
             <td><code>50</code></td>
-            <td></td>
+            <td> The Horizontal Tabulation Tab key.
+</td>
         </tr><tr>
             <td><code>BACKSPACE</code></td>
             <td><code>65</code></td>
-            <td></td>
+            <td> The Backspace key. This key value is also used for the key labeled Delete
+ on MacOS keyboards.
+</td>
         </tr><tr>
             <td><code>DELETE</code></td>
             <td><code>66</code></td>
-            <td></td>
+            <td> The Delete (Del) Key.
+ This key value is also used for the key labeled Delete on MacOS keyboards
+ when modified by the Fn key.
+</td>
         </tr><tr>
             <td><code>INSERT</code></td>
             <td><code>67</code></td>
-            <td></td>
+            <td> The Insert (Ins) key, to toggle between text modes for insertion or
+ overtyping.
+</td>
         </tr><tr>
             <td><code>F1</code></td>
             <td><code>97</code></td>
@@ -1593,19 +2105,27 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>CONTEXT_MENU</code></td>
             <td><code>129</code></td>
-            <td></td>
+            <td> Show the application’s context menu.
+ This key is commonly found between the right Meta key and the right
+ Control key.
+</td>
         </tr><tr>
             <td><code>ESCAPE</code></td>
             <td><code>130</code></td>
-            <td></td>
+            <td> The Esc key. This key was originally used to initiate an escape sequence,
+ but is now more generally used to exit or "escape" the current context,
+ such as closing a dialog or exiting full screen mode.
+</td>
         </tr><tr>
             <td><code>GO_BACK</code></td>
             <td><code>177</code></td>
-            <td></td>
+            <td> The Back key.
+</td>
         </tr><tr>
             <td><code>GO_HOME</code></td>
             <td><code>178</code></td>
-            <td></td>
+            <td> The Home key, which goes to the phone’s main screen.
+</td>
         </tr></table>
 
 

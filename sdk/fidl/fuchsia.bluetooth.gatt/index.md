@@ -2035,19 +2035,25 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NO_ERROR</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Indicates that the operation was successful.
+</td>
         </tr><tr>
             <td><code>INVALID_OFFSET</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Indicates that the offset used in a read or write request exceeds the
+ bounds of the value.
+</td>
         </tr><tr>
             <td><code>INVALID_VALUE_LENGTH</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Indicates that the value given in a write request would exceed the maximum
+ length allowed for the destionation characteristic or descriptor.
+</td>
         </tr><tr>
             <td><code>NOT_PERMITTED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Indicates that a read or write request is not permitted.
+</td>
         </tr></table>
 
 ### ErrorCode {:#ErrorCode}
@@ -2063,19 +2069,25 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NO_ERROR</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Indicates that the operation was successful.
+</td>
         </tr><tr>
             <td><code>INVALID_OFFSET</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Indicates that the offset used in a read or write request exceeds the
+ bounds of the value.
+</td>
         </tr><tr>
             <td><code>INVALID_VALUE_LENGTH</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Indicates that the value given in a write request would exceed the maximum
+ length allowed for the destionation characteristic or descriptor.
+</td>
         </tr><tr>
             <td><code>NOT_PERMITTED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Indicates that a read or write request is not permitted.
+</td>
         </tr></table>
 
 

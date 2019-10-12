@@ -604,7 +604,8 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>SerialPort</code></td>
             <td><code>4353</code></td>
-            <td></td>
+            <td> ServiceDiscoveryService and BrowseGroupDescriptorService used by Fuchsia
+</td>
         </tr><tr>
             <td><code>DialupNetworking</code></td>
             <td><code>4355</code></td>
@@ -620,7 +621,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>Headset</code></td>
             <td><code>4360</code></td>
-            <td></td>
+            <td> Headset Profile (HSP)
+</td>
         </tr><tr>
             <td><code>HeadsetAudioGateway</code></td>
             <td><code>4370</code></td>
@@ -632,7 +634,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>AudioSource</code></td>
             <td><code>4362</code></td>
-            <td></td>
+            <td> Advanced Audio Distribution Profile (A2DP)
+</td>
         </tr><tr>
             <td><code>AudioSink</code></td>
             <td><code>4363</code></td>
@@ -644,7 +647,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>AVRemoteControlTarget</code></td>
             <td><code>4364</code></td>
-            <td></td>
+            <td> Audio/Video Remote Control Profil (AVRCP)
+</td>
         </tr><tr>
             <td><code>AVRemoteControl</code></td>
             <td><code>4366</code></td>
@@ -656,7 +660,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>PANU</code></td>
             <td><code>4373</code></td>
-            <td></td>
+            <td> Personal Area Networking (PAN)
+</td>
         </tr><tr>
             <td><code>NAP</code></td>
             <td><code>4374</code></td>
@@ -668,7 +673,9 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>Handsfree</code></td>
             <td><code>4382</code></td>
-            <td></td>
+            <td> Basic Printing and Basic Imaging Profiles omitted (unsupported)
+ Hands-Free Profile (HFP)
+</td>
         </tr><tr>
             <td><code>HandsfreeAudioGateway</code></td>
             <td><code>4383</code></td>
@@ -676,11 +683,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>SIM_Access</code></td>
             <td><code>4397</code></td>
-            <td></td>
+            <td> Human Interface Device and Hardcopy Cable Replacement Profile omitted (unsupported)
+</td>
         </tr><tr>
             <td><code>PhonebookPCE</code></td>
             <td><code>4398</code></td>
-            <td></td>
+            <td> Phonebook Access Profile (PBAP)
+</td>
         </tr><tr>
             <td><code>PhonebookPSE</code></td>
             <td><code>4399</code></td>
@@ -692,7 +701,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>MessageAccessServer</code></td>
             <td><code>4402</code></td>
-            <td></td>
+            <td> Message Access Profile (MAP)
+</td>
         </tr><tr>
             <td><code>MessageNotificationServer</code></td>
             <td><code>4403</code></td>
@@ -704,7 +714,9 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>MPSProfile</code></td>
             <td><code>4410</code></td>
-            <td></td>
+            <td> GNSS and 3DSP omitted (unsupported)
+ Multi-Profile Specification (MPS)
+</td>
         </tr><tr>
             <td><code>MPSClass</code></td>
             <td><code>4411</code></td>
@@ -712,7 +724,10 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>VideoSource</code></td>
             <td><code>4867</code></td>
-            <td></td>
+            <td> Calendar, Task, and Notes Profile omitted (unsupported)
+ Device ID used by Fuchsia
+ Video Distribution Profile (VDP)
+</td>
         </tr><tr>
             <td><code>VideoSink</code></td>
             <td><code>4868</code></td>
@@ -724,7 +739,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>HDP</code></td>
             <td><code>5120</code></td>
-            <td></td>
+            <td> Health Device Profile (HDP)
+</td>
         </tr><tr>
             <td><code>HDPSource</code></td>
             <td><code>5121</code></td>

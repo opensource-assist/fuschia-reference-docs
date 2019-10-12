@@ -7806,15 +7806,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>VALUE_TOO_BIG</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The `AnnotationValue.buffer` size exceeds the maximum length,
+ `MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES`.
+</td>
         </tr><tr>
             <td><code>TOO_MANY_ANNOTATIONS</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The total number of annotations on the story or module being annotated
+ exceeds `MAX_ANNOTATIONS_PER_STORY` or `MAX_ANNOTATIONS_PER_MODULE`.
+</td>
         </tr><tr>
             <td><code>NOT_FOUND</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The resource to be annotated was not found and could not be resolved
+ by, for example, waiting, or creating the missing resource automatically.
+ This error may be returned by StoryPuppetMaster.AnnotateModule(), which
+ can wait for a missing Module, but requires the Module's Story exist.
+</td>
         </tr></table>
 
 ### EntityWriteStatus {:#EntityWriteStatus}
@@ -7832,11 +7840,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Indicates a failure of the entity provider to write the update.
+</td>
         </tr><tr>
             <td><code>READ_ONLY</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Entity providers are not necessarily required to support entity mutation.
+</td>
         </tr></table>
 
 ### StartModuleStatus {:#StartModuleStatus}
@@ -7891,11 +7901,16 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INTERNAL</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Module that was added to the story from within the story by another
+ module using ModuleContext.AddModuleToStory() or
+ ModuleContext.EmbedModule().
+</td>
         </tr><tr>
             <td><code>EXTERNAL</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Module that was added to the story from outside the story using
+ PuppetMaster.
+</td>
         </tr></table>
 
 ### ModuleState {:#ModuleState}
@@ -7923,15 +7938,20 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>RUNNING</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Module instance was created.
+</td>
         </tr><tr>
             <td><code>STOPPED</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> Module instance is stopped after Module.Stop(). No further transitions are
+ to be expected.
+</td>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> Connection to the Module instance was closed without Stop() request. No
+ further transitions are to be expected.
+</td>
         </tr></table>
 
 ### FindModulesStatus {:#FindModulesStatus}
@@ -7945,11 +7965,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>SUCCESS</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> A search was successfully conducted.
+</td>
         </tr><tr>
             <td><code>UNKNOWN_HANDLER</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> `FindModulesQuery.handler` was specified but the resolver doesn't know
+ about it.
+</td>
         </tr></table>
 
 ### ExecuteStatus {:#ExecuteStatus}
@@ -8001,7 +8024,8 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ERR_STORY_ALREADY_CREATED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The story cannot be (re)configured because it was already created.
+</td>
         </tr></table>
 
 ### StoryVisualState {:#StoryVisualState}
@@ -8047,15 +8071,20 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>RUNNING</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Story was started using StoryController.Start().
+</td>
         </tr><tr>
             <td><code>STOPPING</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Story is in the middle of stopping after StoryController.Stop() was
+ called.
+</td>
         </tr><tr>
             <td><code>STOPPED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Story was not yet run, or Story was stopped after StoryController.Stop()
+ was called.
+</td>
         </tr></table>
 
 ### StoryVisibilityState {:#StoryVisibilityState}
@@ -8079,11 +8108,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEFAULT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Default state for a story.
+</td>
         </tr><tr>
             <td><code>IMMERSIVE</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Full-screen user experience, e.g. playing a video.
+</td>
         </tr></table>
 
 ### SurfaceArrangement {:#SurfaceArrangement}
@@ -8098,19 +8129,26 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No arrangement specified.
+</td>
         </tr><tr>
             <td><code>COPRESENT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Desire to present simultaneously.
+</td>
         </tr><tr>
             <td><code>SEQUENTIAL</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The parent prefers to not be presented simultaneously with its child.
+ (The child may still become part of a simultaneous presentation depending
+ on the relationships between it and subsequently added surfaces).
+</td>
         </tr><tr>
             <td><code>ONTOP</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Place this surface on top of and obscuring the parent surface. This is a
+ complete replacement, not a modal or inset presentation.
+</td>
         </tr></table>
 
 ### SurfaceDependency {:#SurfaceDependency}
@@ -8125,11 +8163,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No dependency specified.
+</td>
         </tr><tr>
             <td><code>DEPENDENT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Child is dependent on parent.
+ If parent is dismissed, child is dismissed as well.
+</td>
         </tr></table>
 
 ### AnnotationError {:#AnnotationError}
@@ -8144,15 +8185,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>VALUE_TOO_BIG</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The `AnnotationValue.buffer` size exceeds the maximum length,
+ `MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES`.
+</td>
         </tr><tr>
             <td><code>TOO_MANY_ANNOTATIONS</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The total number of annotations on the story or module being annotated
+ exceeds `MAX_ANNOTATIONS_PER_STORY` or `MAX_ANNOTATIONS_PER_MODULE`.
+</td>
         </tr><tr>
             <td><code>NOT_FOUND</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The resource to be annotated was not found and could not be resolved
+ by, for example, waiting, or creating the missing resource automatically.
+ This error may be returned by StoryPuppetMaster.AnnotateModule(), which
+ can wait for a missing Module, but requires the Module's Story exist.
+</td>
         </tr></table>
 
 ### EntityWriteStatus {:#EntityWriteStatus}
@@ -8170,11 +8219,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Indicates a failure of the entity provider to write the update.
+</td>
         </tr><tr>
             <td><code>READ_ONLY</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Entity providers are not necessarily required to support entity mutation.
+</td>
         </tr></table>
 
 ### StartModuleStatus {:#StartModuleStatus}
@@ -8229,11 +8280,16 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INTERNAL</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Module that was added to the story from within the story by another
+ module using ModuleContext.AddModuleToStory() or
+ ModuleContext.EmbedModule().
+</td>
         </tr><tr>
             <td><code>EXTERNAL</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Module that was added to the story from outside the story using
+ PuppetMaster.
+</td>
         </tr></table>
 
 ### ModuleState {:#ModuleState}
@@ -8261,15 +8317,20 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>RUNNING</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Module instance was created.
+</td>
         </tr><tr>
             <td><code>STOPPED</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> Module instance is stopped after Module.Stop(). No further transitions are
+ to be expected.
+</td>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> Connection to the Module instance was closed without Stop() request. No
+ further transitions are to be expected.
+</td>
         </tr></table>
 
 ### FindModulesStatus {:#FindModulesStatus}
@@ -8283,11 +8344,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>SUCCESS</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> A search was successfully conducted.
+</td>
         </tr><tr>
             <td><code>UNKNOWN_HANDLER</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> `FindModulesQuery.handler` was specified but the resolver doesn't know
+ about it.
+</td>
         </tr></table>
 
 ### ExecuteStatus {:#ExecuteStatus}
@@ -8339,7 +8403,8 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ERR_STORY_ALREADY_CREATED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The story cannot be (re)configured because it was already created.
+</td>
         </tr></table>
 
 ### StoryVisualState {:#StoryVisualState}
@@ -8385,15 +8450,20 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>RUNNING</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Story was started using StoryController.Start().
+</td>
         </tr><tr>
             <td><code>STOPPING</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Story is in the middle of stopping after StoryController.Stop() was
+ called.
+</td>
         </tr><tr>
             <td><code>STOPPED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Story was not yet run, or Story was stopped after StoryController.Stop()
+ was called.
+</td>
         </tr></table>
 
 ### StoryVisibilityState {:#StoryVisibilityState}
@@ -8417,11 +8487,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEFAULT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Default state for a story.
+</td>
         </tr><tr>
             <td><code>IMMERSIVE</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Full-screen user experience, e.g. playing a video.
+</td>
         </tr></table>
 
 ### SurfaceArrangement {:#SurfaceArrangement}
@@ -8436,19 +8508,26 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No arrangement specified.
+</td>
         </tr><tr>
             <td><code>COPRESENT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Desire to present simultaneously.
+</td>
         </tr><tr>
             <td><code>SEQUENTIAL</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The parent prefers to not be presented simultaneously with its child.
+ (The child may still become part of a simultaneous presentation depending
+ on the relationships between it and subsequently added surfaces).
+</td>
         </tr><tr>
             <td><code>ONTOP</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Place this surface on top of and obscuring the parent surface. This is a
+ complete replacement, not a modal or inset presentation.
+</td>
         </tr></table>
 
 ### SurfaceDependency {:#SurfaceDependency}
@@ -8463,11 +8542,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No dependency specified.
+</td>
         </tr><tr>
             <td><code>DEPENDENT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Child is dependent on parent.
+ If parent is dismissed, child is dismissed as well.
+</td>
         </tr></table>
 
 

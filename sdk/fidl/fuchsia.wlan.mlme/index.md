@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## MLME {:#MLME}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#871)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#602)*
 
 
 ### StartScan {:#StartScan}
@@ -726,7 +726,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Connector {:#Connector}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#976)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#707)*
 
  This protocol is used to connect to the interface's underlying MLME.
 
@@ -830,540 +830,8 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### CapabilityInfo {:#CapabilityInfo}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#55)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>ess</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>ibss</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>cf_pollable</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>cf_poll_req</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>privacy</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>short_preamble</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>spectrum_mgmt</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>qos</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>short_slot_time</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>apsd</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>radio_msmt</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>delayed_block_ack</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>immediate_block_ack</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### HtCapabilityInfo {:#HtCapabilityInfo}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#90)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>ldpc_coding_cap</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>chan_width_set</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>sm_power_save</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>greenfield</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>short_gi_20</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>short_gi_40</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_stbc</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rx_stbc</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>delayed_block_ack</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>max_amsdu_len</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>dsss_in_40</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>intolerant_40</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>lsig_txop_protect</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### AmpduParams {:#AmpduParams}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#117)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>exponent</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>min_start_spacing</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### SupportedMcsSet {:#SupportedMcsSet}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#124)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>rx_mcs_set</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rx_highest_rate</code></td>
-            <td>
-                <code>uint16</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_mcs_set_defined</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_rx_diff</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_max_ss</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_ueqm</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### HtExtCapabilities {:#HtExtCapabilities}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#152)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>pco</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>pco_transition</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>mcs_feedback</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>htc_ht_support</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rd_responder</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### TxBfCapability {:#TxBfCapability}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#184)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>implicit_rx</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rx_stag_sounding</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_stag_sounding</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rx_ndp</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_ndp</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>implicit</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>calibration</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>csi</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>noncomp_steering</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>comp_steering</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>csi_feedback</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>noncomp_feedback</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>comp_feedback</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>min_grouping</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>csi_antennas</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>noncomp_steering_ants</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>comp_steering_ants</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>csi_rows</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>chan_estimation</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### AselCapability {:#AselCapability}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#207)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>asel</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>csi_feedback_tx_asel</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>ant_idx_feedback_tx_asel</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>explicit_csi_feedback</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>antenna_idx_feedback</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rx_asel</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_sounding_ppdu</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### HtCapabilities {:#HtCapabilities}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#217)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#67)*
 
 
 
@@ -1371,146 +839,9 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>ht_cap_info</code></td>
+            <td><code>bytes</code></td>
             <td>
-                <code><a class='link' href='#HtCapabilityInfo'>HtCapabilityInfo</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>ampdu_params</code></td>
-            <td>
-                <code><a class='link' href='#AmpduParams'>AmpduParams</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>mcs_set</code></td>
-            <td>
-                <code><a class='link' href='#SupportedMcsSet'>SupportedMcsSet</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>ht_ext_cap</code></td>
-            <td>
-                <code><a class='link' href='#HtExtCapabilities'>HtExtCapabilities</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>txbf_cap</code></td>
-            <td>
-                <code><a class='link' href='#TxBfCapability'>TxBfCapability</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>asel_cap</code></td>
-            <td>
-                <code><a class='link' href='#AselCapability'>AselCapability</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### HTOperationInfo {:#HTOperationInfo}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#251)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>secondary_chan_offset</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>sta_chan_width</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rifs_mode</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>ht_protect</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>nongreenfield_present</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>obss_non_ht</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>center_freq_seg2</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>dual_beacon</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>dual_cts_protect</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>stbc_beacon</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>lsig_txop_protect</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>pco_active</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>pco_phase</code></td>
-            <td>
-                <code>bool</code>
+                <code>uint8[26]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1518,7 +849,7 @@ Book: /_book.yaml
 </table>
 
 ### HtOperation {:#HtOperation}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#267)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#72)*
 
 
 
@@ -1526,245 +857,9 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>primary_chan</code></td>
+            <td><code>bytes</code></td>
             <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>ht_op_info</code></td>
-            <td>
-                <code><a class='link' href='#HTOperationInfo'>HTOperationInfo</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>basic_mcs_set</code></td>
-            <td>
-                <code><a class='link' href='#SupportedMcsSet'>SupportedMcsSet</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### VhtCapabilitiesInfo {:#VhtCapabilitiesInfo}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#287)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>max_mpdu_len</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>supported_cbw_set</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rx_ldpc</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>sgi_cbw80</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>sgi_cbw160</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_stbc</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rx_stbc</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>su_bfer</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>su_bfee</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>bfee_sts</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>num_sounding</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>mu_bfer</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>mu_bfee</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>txop_ps</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>htc_vht</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>max_ampdu_exp</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>link_adapt</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rx_ant_pattern</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_ant_pattern</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>ext_nss_bw</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### VhtMcsNss {:#VhtMcsNss}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#318)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>rx_max_mcs</code></td>
-            <td>
-                <code>uint8[8]</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>rx_max_data_rate</code></td>
-            <td>
-                <code>uint16</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>max_nsts</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_max_mcs</code></td>
-            <td>
-                <code>uint8[8]</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>tx_max_data_rate</code></td>
-            <td>
-                <code>uint16</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>ext_nss_bw</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
-### BasicVhtMcsNss {:#BasicVhtMcsNss}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#329)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>max_mcs</code></td>
-            <td>
-                <code>uint8[8]</code>
+                <code>uint8[22]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1772,7 +867,7 @@ Book: /_book.yaml
 </table>
 
 ### VhtCapabilities {:#VhtCapabilities}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#334)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#77)*
 
 
 
@@ -1780,16 +875,9 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>vht_cap_info</code></td>
+            <td><code>bytes</code></td>
             <td>
-                <code><a class='link' href='#VhtCapabilitiesInfo'>VhtCapabilitiesInfo</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>vht_mcs_nss</code></td>
-            <td>
-                <code><a class='link' href='#VhtMcsNss'>VhtMcsNss</a></code>
+                <code>uint8[12]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1797,7 +885,7 @@ Book: /_book.yaml
 </table>
 
 ### VhtOperation {:#VhtOperation}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#348)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#82)*
 
 
 
@@ -1805,30 +893,9 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>vht_cbw</code></td>
+            <td><code>bytes</code></td>
             <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>center_freq_seg0</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>center_freq_seg1</code></td>
-            <td>
-                <code>uint8</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>basic_mcs</code></td>
-            <td>
-                <code><a class='link' href='#BasicVhtMcsNss'>BasicVhtMcsNss</a></code>
+                <code>uint8[5]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1836,7 +903,7 @@ Book: /_book.yaml
 </table>
 
 ### BSSDescription {:#BSSDescription}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#356)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#87)*
 
 
 
@@ -1895,7 +962,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>cap</code></td>
             <td>
-                <code><a class='link' href='#CapabilityInfo'>CapabilityInfo</a></code>
+                <code>uint16</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1996,7 +1063,7 @@ Book: /_book.yaml
 </table>
 
 ### ScanResult {:#ScanResult}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#400)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#131)*
 
 
 
@@ -2021,7 +1088,7 @@ Book: /_book.yaml
 </table>
 
 ### ScanEnd {:#ScanEnd}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#405)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#136)*
 
 
 
@@ -2046,7 +1113,7 @@ Book: /_book.yaml
 </table>
 
 ### JoinRequest {:#JoinRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#412)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#143)*
 
 
 
@@ -2099,7 +1166,7 @@ Book: /_book.yaml
 </table>
 
 ### JoinConfirm {:#JoinConfirm}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#438)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#169)*
 
 
 
@@ -2117,7 +1184,7 @@ Book: /_book.yaml
 </table>
 
 ### AuthenticateRequest {:#AuthenticateRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#452)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#183)*
 
 
 
@@ -2149,7 +1216,7 @@ Book: /_book.yaml
 </table>
 
 ### AuthenticateConfirm {:#AuthenticateConfirm}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#472)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#203)*
 
 
 
@@ -2181,7 +1248,7 @@ Book: /_book.yaml
 </table>
 
 ### AuthenticateIndication {:#AuthenticateIndication}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#482)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#213)*
 
 
 
@@ -2206,7 +1273,7 @@ Book: /_book.yaml
 </table>
 
 ### AuthenticateResponse {:#AuthenticateResponse}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#491)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#222)*
 
 
 
@@ -2231,7 +1298,7 @@ Book: /_book.yaml
 </table>
 
 ### DeauthenticateRequest {:#DeauthenticateRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#569)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#300)*
 
 
 
@@ -2256,7 +1323,7 @@ Book: /_book.yaml
 </table>
 
 ### DeauthenticateConfirm {:#DeauthenticateConfirm}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#578)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#309)*
 
 
 
@@ -2274,7 +1341,7 @@ Book: /_book.yaml
 </table>
 
 ### DeauthenticateIndication {:#DeauthenticateIndication}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#584)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#315)*
 
 
 
@@ -2299,7 +1366,7 @@ Book: /_book.yaml
 </table>
 
 ### AssociateRequest {:#AssociateRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#593)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#324)*
 
 
 
@@ -2331,7 +1398,7 @@ Book: /_book.yaml
 </table>
 
 ### AssociateConfirm {:#AssociateConfirm}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#617)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#348)*
 
 
 
@@ -2356,7 +1423,7 @@ Book: /_book.yaml
 </table>
 
 ### AssociateIndication {:#AssociateIndication}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#627)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#358)*
 
 
 
@@ -2395,7 +1462,7 @@ Book: /_book.yaml
 </table>
 
 ### AssociateResponse {:#AssociateResponse}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#641)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#372)*
 
 
 
@@ -2427,7 +1494,7 @@ Book: /_book.yaml
 </table>
 
 ### DisassociateRequest {:#DisassociateRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#651)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#382)*
 
 
 
@@ -2452,7 +1519,7 @@ Book: /_book.yaml
 </table>
 
 ### DisassociateConfirm {:#DisassociateConfirm}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#660)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#391)*
 
 
 
@@ -2470,7 +1537,7 @@ Book: /_book.yaml
 </table>
 
 ### DisassociateIndication {:#DisassociateIndication}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#666)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#397)*
 
 
 
@@ -2495,7 +1562,7 @@ Book: /_book.yaml
 </table>
 
 ### ResetRequest {:#ResetRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#675)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#406)*
 
 
 
@@ -2520,7 +1587,7 @@ Book: /_book.yaml
 </table>
 
 ### Country {:#Country}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#689)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#420)*
 
 
 
@@ -2545,7 +1612,7 @@ Book: /_book.yaml
 </table>
 
 ### StartRequest {:#StartRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#697)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#428)*
 
 
 
@@ -2626,7 +1693,7 @@ Book: /_book.yaml
 </table>
 
 ### StartConfirm {:#StartConfirm}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#745)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#476)*
 
 
 
@@ -2644,7 +1711,7 @@ Book: /_book.yaml
 </table>
 
 ### StopRequest {:#StopRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#751)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#482)*
 
 
 
@@ -2662,7 +1729,7 @@ Book: /_book.yaml
 </table>
 
 ### StopConfirm {:#StopConfirm}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#761)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#492)*
 
 
 
@@ -2680,7 +1747,7 @@ Book: /_book.yaml
 </table>
 
 ### SetKeyDescriptor {:#SetKeyDescriptor}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#774)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#505)*
 
 
 
@@ -2740,7 +1807,7 @@ Book: /_book.yaml
 </table>
 
 ### SetKeysRequest {:#SetKeysRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#785)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#516)*
 
 
 
@@ -2758,7 +1825,7 @@ Book: /_book.yaml
 </table>
 
 ### DeleteKeyDescriptor {:#DeleteKeyDescriptor}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#791)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#522)*
 
 
 
@@ -2790,7 +1857,7 @@ Book: /_book.yaml
 </table>
 
 ### DeleteKeysRequest {:#DeleteKeysRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#797)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#528)*
 
 
 
@@ -2808,7 +1875,7 @@ Book: /_book.yaml
 </table>
 
 ### EapolRequest {:#EapolRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#803)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#534)*
 
 
 
@@ -2840,7 +1907,7 @@ Book: /_book.yaml
 </table>
 
 ### EapolConfirm {:#EapolConfirm}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#817)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#548)*
 
 
 
@@ -2858,7 +1925,7 @@ Book: /_book.yaml
 </table>
 
 ### MeshConfiguration {:#MeshConfiguration}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#822)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#553)*
 
 
 
@@ -2918,7 +1985,7 @@ Book: /_book.yaml
 </table>
 
 ### MeshPeeringCommon {:#MeshPeeringCommon}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#833)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#564)*
 
 
 
@@ -2999,7 +2066,7 @@ Book: /_book.yaml
 </table>
 
 ### MeshPeeringOpenAction {:#MeshPeeringOpenAction}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#847)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#578)*
 
 
 
@@ -3017,7 +2084,7 @@ Book: /_book.yaml
 </table>
 
 ### MeshPeeringConfirmAction {:#MeshPeeringConfirmAction}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#852)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#583)*
 
 
 
@@ -3049,7 +2116,7 @@ Book: /_book.yaml
 </table>
 
 ### MeshPeeringParams {:#MeshPeeringParams}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#858)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#589)*
 
 
 
@@ -3081,7 +2148,7 @@ Book: /_book.yaml
 </table>
 
 ### GetMeshPathTableRequest {:#GetMeshPathTableRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#865)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#596)*
 
 
 
@@ -3187,7 +2254,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>cap</code></td>
             <td>
-                <code><a class='link' href='#CapabilityInfo'>CapabilityInfo</a></code>
+                <code>uint16</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3475,410 +2542,10 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### ChanWidthSet {:#ChanWidthSet}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#73)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>TWENTY_ONLY</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>TWENTY_FORTY</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr></table>
-
-### SmPowerSave {:#SmPowerSave}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#78)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>STATIC</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>DYNAMIC</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>RESERVED</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>DISABLED</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr></table>
-
-### MaxAmsduLen {:#MaxAmsduLen}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#85)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>OCTETS_3839</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>OCTETS_7935</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr></table>
-
-### MinMpduStartSpacing {:#MinMpduStartSpacing}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#106)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>NO_RESTRICT</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>QUARTER_USEC</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>HALF_USEC</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>ONE_USEC</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>TWO_USEC</code></td>
-            <td><code>4</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>FOUR_USEC</code></td>
-            <td><code>5</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>EIGHT_USEC</code></td>
-            <td><code>6</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>SIXTEEN_USEC</code></td>
-            <td><code>7</code></td>
-            <td></td>
-        </tr></table>
-
-### PcoTransitionTime {:#PcoTransitionTime}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#138)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>PCO_RESERVED</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>PCO_400_USEC</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>PCO_1500_USEC</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>PCO_5000_USEC</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr></table>
-
-### McsFeedback {:#McsFeedback}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#145)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>MCS_NOFEEDBACK</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>MCS_RESERVED</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>MCS_UNSOLICIED</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>MCS_BOTH</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr></table>
-
-### Calibration {:#Calibration}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#162)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>CALIBRATION_NONE</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>CALIBRATION_RESPOND_NOINITIATE</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>CALIBRATION_RESERVED</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>CALIBRATION_RESPOND_INITIATE</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr></table>
-
-### Feedback {:#Feedback}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#169)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>FEEDBACK_NONE</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>FEEDBACK_DELAYED</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>FEEDBACK_IMMEDIATE</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>FEEDBACK_DELAYED_IMMEDIATE</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr></table>
-
-### MinGroup {:#MinGroup}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#177)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>MIN_GROUP_ONE</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>MIN_GROUP_ONE_TWO</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>MIN_GROUP_ONE_FOUR</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>MIN_GROUP_ONE_TWO_FOUR</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr></table>
-
-### SecChanOffset {:#SecChanOffset}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#232)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>SECONDARY_NONE</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>SECONDARY_ABOVE</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>RESERVED</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>SECONDARY_BELOW</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr></table>
-
-### StaChanWidth {:#StaChanWidth}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#239)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>TWENTY</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>ANY</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr></table>
-
-### HtProtect {:#HtProtect}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#244)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>NONE</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>NONMEMBER</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>TWENTY_MHZ</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>NON_HT_MIXED</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr></table>
-
-### MaxMpduLen {:#MaxMpduLen}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#273)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>OCTETS_3895</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>OCTETS_7991</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>OCTETS_11454</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr></table>
-
-### VhtLinkAdaptation {:#VhtLinkAdaptation}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#279)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>NO_FEEDBACK</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>UNSOLICITED</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>BOTH</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr></table>
-
-### VhtMcs {:#VhtMcs}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#310)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>SET_0_TO_7</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>SET_0_TO_8</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>SET_0_TO_9</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>SET_NONE</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr></table>
-
-### VhtCbw {:#VhtCbw}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#340)*
-
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>CBW_20_40</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>CBW_80_160_80P80</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>CBW_160</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>CBW_80P80</code></td>
-            <td><code>3</code></td>
-            <td></td>
-        </tr></table>
-
 ### ScanResultCodes {:#ScanResultCodes}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#393)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#124)*
 
 
 
@@ -3904,7 +2571,7 @@ Type: <code>uint32</code>
 ### JoinResultCodes {:#JoinResultCodes}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#432)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#163)*
 
 
 
@@ -3922,7 +2589,7 @@ Type: <code>uint32</code>
 ### AuthenticationTypes {:#AuthenticationTypes}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#444)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#175)*
 
 
 
@@ -3948,7 +2615,7 @@ Type: <code>uint32</code>
 ### AuthenticateResultCodes {:#AuthenticateResultCodes}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#462)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#193)*
 
 
 
@@ -3982,7 +2649,7 @@ Type: <code>uint32</code>
 ### ReasonCode {:#ReasonCode}
 Type: <code>uint16</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#501)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#232)*
 
 
 
@@ -4236,7 +2903,7 @@ Type: <code>uint16</code>
 ### AssociateResultCodes {:#AssociateResultCodes}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#605)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#336)*
 
 
 
@@ -4282,7 +2949,7 @@ Type: <code>uint32</code>
 ### StartResultCodes {:#StartResultCodes}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#737)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#468)*
 
 
 
@@ -4312,7 +2979,7 @@ Type: <code>uint32</code>
 ### StopResultCodes {:#StopResultCodes}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#755)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#486)*
 
 
 
@@ -4334,7 +3001,7 @@ Type: <code>uint32</code>
 ### KeyType {:#KeyType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#767)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#498)*
 
 
 
@@ -4360,7 +3027,7 @@ Type: <code>uint32</code>
 ### EapolResultCodes {:#EapolResultCodes}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#811)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#542)*
 
 
 
@@ -4494,7 +3161,39 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#683">countryEnvironAll</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#58">HT_CAP_LEN</a></td>
+            <td>
+                    <code>26</code>
+                </td>
+                <td><code>uint8</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#60">HT_OP_LEN</a></td>
+            <td>
+                    <code>22</code>
+                </td>
+                <td><code>uint8</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#62">VHT_CAP_LEN</a></td>
+            <td>
+                    <code>12</code>
+                </td>
+                <td><code>uint8</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#64">VHT_OP_LEN</a></td>
+            <td>
+                    <code>5</code>
+                </td>
+                <td><code>uint8</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#414">countryEnvironAll</a></td>
             <td>
                     <code>32</code>
                 </td>
@@ -4502,7 +3201,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#684">countryEnvironOutdoor</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#415">countryEnvironOutdoor</a></td>
             <td>
                     <code>79</code>
                 </td>
@@ -4510,7 +3209,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#685">countryEnvironIndoor</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#416">countryEnvironIndoor</a></td>
             <td>
                     <code>73</code>
                 </td>
@@ -4518,7 +3217,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#686">countryEnvironNonCountry</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#417">countryEnvironNonCountry</a></td>
             <td>
                     <code>88</code>
                 </td>

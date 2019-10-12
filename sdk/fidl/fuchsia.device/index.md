@@ -612,23 +612,59 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEVICE_POWER_STATE_D0</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Mandatory Working state. Device is fully functional, can take I/O,
+ issue interrrupts. This state is mandatory for all devices
+ The device enters into this state by default, when powered on.
+</td>
         </tr><tr>
             <td><code>DEVICE_POWER_STATE_D1</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> [OPTIONAL] Device is not working when in this state. It cannot process
+ I/O nor issue interrupts, unless it is armed for some special interrupts
+ that can wake up the system/device. When in this state, the restore time
+ of getting back to working state is less than other low-power states
+ Power savings in this state are lesser than other low power states.
+ Device may retain some hardware context and full initialization
+ may not be needed when resuming from this state.
+</td>
         </tr><tr>
             <td><code>DEVICE_POWER_STATE_D2</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> [OPTIONAL] Device is not working when in this state. It cannot process
+ I/O nor issue interrupts, unless it is armed for some special interrupts
+ that can wake up the system/device. When in this state, the restore time
+ of getting back to working state is more than DEVICE_POWER_STATE_D1 and
+ less than restore time of getting back from DEVICE_POWER_STATE_D3HOT,
+ DEVICE_POWER_STATE_D3COLD. Power savings in this state are lesser
+ than DEVICE_POWER_STATE_D3COLD, DEVICE_POWER_STATE_D3HOT.
+ Device may retain some hardware context and full initialization
+ may not be needed when resuming from this state.
+</td>
         </tr><tr>
             <td><code>DEVICE_POWER_STATE_D3HOT</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> [OPTIONAL] Device is not working when in this state. It cannot process
+ I/O nor issue interrupts, unless it is armed for some special interrupts
+ that can wake up the system/device. When in this state, the restore time
+ of getting back to working state is more than DEVICE_POWER_STATE_D1,
+ DEVICE_POWER_STATE_D3HOT and less than restore time of getting back from
+ DEVICE_POWER_STATE_D3COLD. Power savings in this state are lesser
+ than DEVICE_POWER_STATE_D3COLD. Device has no context and full initialization
+ by the device driver when resuming from this state.
+ Although the device is completely off, it is still powered on and is enumerable.
+</td>
         </tr><tr>
             <td><code>DEVICE_POWER_STATE_D3COLD</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> [MANDATORY] Device is not working when in this state. It cannot process
+ I/O nor issue interrupts, unless it is armed for some special interrupts
+ that can wake up the system/device. When in this state, the restore time
+ of getting back to working state is more than all other low power states.
+ Power savings are more compared to all other low-power states.
+ Device has no context and full initialization by the device driver when
+ resuming from this state. In this state, the power to this device is turned off.
+ Device may be powered by other auxiliary supplies to support wake capability.
+</td>
         </tr></table>
 
 

@@ -1963,7 +1963,8 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>REMOTE_DEBUGGING_PORT_NOT_OPENED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The remote debugging service was not opened.
+</td>
         </tr></table>
 
 ### ConsoleLogLevel {:#ConsoleLogLevel}
@@ -1977,23 +1978,28 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>100</code></td>
-            <td></td>
+            <td> No logging.
+</td>
         </tr><tr>
             <td><code>DEBUG</code></td>
             <td><code>-1</code></td>
-            <td></td>
+            <td> Outputs messages from `console.debug()` and above levels.
+</td>
         </tr><tr>
             <td><code>INFO</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Outputs messages from `console.log()`, `console.info()` and above levels.
+</td>
         </tr><tr>
             <td><code>WARN</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Outputs messages from `console.warn()` and `console.error()`.
+</td>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Outputs messages from `console.error()`.
+</td>
         </tr></table>
 
 ### FrameError {:#FrameError}
@@ -2008,19 +2014,23 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INTERNAL_ERROR</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> An internal error occured.
+</td>
         </tr><tr>
             <td><code>BUFFER_NOT_UTF8</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The provided buffer is not UTF-8 encoded.
+</td>
         </tr><tr>
             <td><code>INVALID_ORIGIN</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The Frame's URL does not match any of the origins provided by the caller.
+</td>
         </tr><tr>
             <td><code>NO_DATA_IN_MESSAGE</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The required `data` property is missing from a <a class='link' href='#fuchsia.web.WebMessage'>fuchsia.web.WebMessage</a>.
+</td>
         </tr></table>
 
 ### NavigationControllerError {:#NavigationControllerError}
@@ -2035,11 +2045,13 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INVALID_URL</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The provided URL is invalid.
+</td>
         </tr><tr>
             <td><code>INVALID_HEADER</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> At least one of the provided headers was invalid.
+</td>
         </tr></table>
 
 ### ReloadType {:#ReloadType}
@@ -2054,11 +2066,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>PARTIAL_CACHE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Reloads the current entry, bypassing the cache for the main resource.
+</td>
         </tr><tr>
             <td><code>NO_CACHE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Reloads the current entry, bypassing the cache entirely.
+</td>
         </tr></table>
 
 ### LoadUrlReason {:#LoadUrlReason}
@@ -2073,11 +2087,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LINK</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Navigation was initiated by the user following a link.
+</td>
         </tr><tr>
             <td><code>TYPED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Navigation was initiated by a user-provided URL.
+</td>
         </tr></table>
 
 ### PageType {:#PageType}
@@ -2092,11 +2108,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NORMAL</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Regular web page.
+</td>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Error page.
+</td>
         </tr></table>
 
 ### ContextError {:#ContextError}
@@ -2110,7 +2128,8 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>REMOTE_DEBUGGING_PORT_NOT_OPENED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The remote debugging service was not opened.
+</td>
         </tr></table>
 
 ### ConsoleLogLevel {:#ConsoleLogLevel}
@@ -2124,23 +2143,28 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>100</code></td>
-            <td></td>
+            <td> No logging.
+</td>
         </tr><tr>
             <td><code>DEBUG</code></td>
             <td><code>-1</code></td>
-            <td></td>
+            <td> Outputs messages from `console.debug()` and above levels.
+</td>
         </tr><tr>
             <td><code>INFO</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Outputs messages from `console.log()`, `console.info()` and above levels.
+</td>
         </tr><tr>
             <td><code>WARN</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Outputs messages from `console.warn()` and `console.error()`.
+</td>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Outputs messages from `console.error()`.
+</td>
         </tr></table>
 
 ### FrameError {:#FrameError}
@@ -2155,19 +2179,23 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INTERNAL_ERROR</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> An internal error occured.
+</td>
         </tr><tr>
             <td><code>BUFFER_NOT_UTF8</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The provided buffer is not UTF-8 encoded.
+</td>
         </tr><tr>
             <td><code>INVALID_ORIGIN</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The Frame's URL does not match any of the origins provided by the caller.
+</td>
         </tr><tr>
             <td><code>NO_DATA_IN_MESSAGE</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The required `data` property is missing from a <a class='link' href='#fuchsia.web.WebMessage'>fuchsia.web.WebMessage</a>.
+</td>
         </tr></table>
 
 ### NavigationControllerError {:#NavigationControllerError}
@@ -2182,11 +2210,13 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INVALID_URL</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The provided URL is invalid.
+</td>
         </tr><tr>
             <td><code>INVALID_HEADER</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> At least one of the provided headers was invalid.
+</td>
         </tr></table>
 
 ### ReloadType {:#ReloadType}
@@ -2201,11 +2231,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>PARTIAL_CACHE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Reloads the current entry, bypassing the cache for the main resource.
+</td>
         </tr><tr>
             <td><code>NO_CACHE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Reloads the current entry, bypassing the cache entirely.
+</td>
         </tr></table>
 
 ### LoadUrlReason {:#LoadUrlReason}
@@ -2220,11 +2252,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LINK</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Navigation was initiated by the user following a link.
+</td>
         </tr><tr>
             <td><code>TYPED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Navigation was initiated by a user-provided URL.
+</td>
         </tr></table>
 
 ### PageType {:#PageType}
@@ -2239,11 +2273,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NORMAL</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Regular web page.
+</td>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Error page.
+</td>
         </tr></table>
 
 

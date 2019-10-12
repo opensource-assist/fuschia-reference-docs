@@ -214,7 +214,8 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEFAULT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The default action associated with the role of an element.
+</td>
         </tr></table>
 
 ### Role {:#Role}
@@ -229,7 +230,8 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Role used to represent elements which role is not currently supported.
+</td>
         </tr></table>
 
 

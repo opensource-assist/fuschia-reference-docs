@@ -520,7 +520,9 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>CONTENT_HAS_PRESENTED</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The underlying Graph has connected its Link, called Present(), and the acquisition fences of
+ the Present() call have all be reached.
+</td>
         </tr></table>
 
 

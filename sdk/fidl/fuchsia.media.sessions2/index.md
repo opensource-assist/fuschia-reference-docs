@@ -1491,11 +1491,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ARTWORK</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Artwork for the playing media.
+</td>
         </tr><tr>
             <td><code>SOURCE_ICON</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> An icon for the source of the playing media (e.g. the player or
+ streaming service).
+</td>
         </tr></table>
 
 ### ContentType {:#ContentType}
@@ -1546,7 +1549,8 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>IDLE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The initial state of a session if there is no associated media.
+</td>
         </tr><tr>
             <td><code>PLAYING</code></td>
             <td><code>1</code></td>
@@ -1562,7 +1566,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The player cannot recover from this state and will close.
+</td>
         </tr></table>
 
 ### Error {:#Error}
@@ -1591,15 +1596,18 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>OFF</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No repeat.
+</td>
         </tr><tr>
             <td><code>GROUP</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Repeat the relevant group of media (e.g. playlist).
+</td>
         </tr><tr>
             <td><code>SINGLE</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Repeat the currently playing media.
+</td>
         </tr></table>
 
 ### MediaImageType {:#MediaImageType}
@@ -1613,11 +1621,14 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ARTWORK</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Artwork for the playing media.
+</td>
         </tr><tr>
             <td><code>SOURCE_ICON</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> An icon for the source of the playing media (e.g. the player or
+ streaming service).
+</td>
         </tr></table>
 
 ### ContentType {:#ContentType}
@@ -1668,7 +1679,8 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>IDLE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The initial state of a session if there is no associated media.
+</td>
         </tr><tr>
             <td><code>PLAYING</code></td>
             <td><code>1</code></td>
@@ -1684,7 +1696,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The player cannot recover from this state and will close.
+</td>
         </tr></table>
 
 ### Error {:#Error}
@@ -1713,15 +1726,18 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>OFF</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No repeat.
+</td>
         </tr><tr>
             <td><code>GROUP</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Repeat the relevant group of media (e.g. playlist).
+</td>
         </tr><tr>
             <td><code>SINGLE</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Repeat the currently playing media.
+</td>
         </tr></table>
 
 

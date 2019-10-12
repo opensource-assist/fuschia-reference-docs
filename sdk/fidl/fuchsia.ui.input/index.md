@@ -2893,19 +2893,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>PRESSED</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> When key is pressed down.
+</td>
         </tr><tr>
             <td><code>RELEASED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> When key is released.
+</td>
         </tr><tr>
             <td><code>CANCELLED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> This key `PRESSED` is not directed to this input client anymore.
+</td>
         </tr><tr>
             <td><code>REPEAT</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Whether this is an automatically generated key repeat
+</td>
         </tr></table>
 
 ### PointerEventType {:#PointerEventType}
@@ -2919,19 +2923,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>TOUCH</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> A touch-based pointer device.
+</td>
         </tr><tr>
             <td><code>STYLUS</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> A pointer device with a stylus.
+</td>
         </tr><tr>
             <td><code>INVERTED_STYLUS</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> A pointer device with a stylus that has been inverted.
+</td>
         </tr><tr>
             <td><code>MOUSE</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> A pointer device without a stylus.
+</td>
         </tr></table>
 
 ### PointerEventPhase {:#PointerEventPhase}
@@ -2945,31 +2953,52 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ADD</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The device has started tracking the pointer.
+
+ For example, the pointer might be hovering above the device, having not yet
+ made contact with the surface of the device.
+</td>
         </tr><tr>
             <td><code>HOVER</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The pointer has moved with respect to the device while not in contact with
+ the device.
+</td>
         </tr><tr>
             <td><code>DOWN</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The pointer has made contact with the device.
+
+ For `MOUSE` devices, this is triggered when the primary button is pressed
+ down to emulate a touch on the screen.
+</td>
         </tr><tr>
             <td><code>MOVE</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The pointer has moved with respect to the device while in contact with the
+ device.
+</td>
         </tr><tr>
             <td><code>UP</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The pointer has stopped making contact with the device.
+
+ For `MOUSE` devices, this is triggered when the primary button is
+ released.
+</td>
         </tr><tr>
             <td><code>REMOVE</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> The device is no longer tracking the pointer.
+
+ For example, the pointer might have drifted out of the device's hover
+ detection range or might have been disconnected from the system entirely.
+</td>
         </tr><tr>
             <td><code>CANCEL</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> The input from the pointer is no longer directed towards this receiver.
+</td>
         </tr></table>
 
 ### AxisScale {:#AxisScale}
@@ -3056,11 +3085,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UPSTREAM</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The position has affinity for the upstream side of the text position.
+
+ For example, if the offset of the text position is a line break, the
+ position represents the end of the first line.
+</td>
         </tr><tr>
             <td><code>DOWNSTREAM</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The position has affinity for the downstream side of the text position.
+
+ For example, if the offset of the text position is a line break, the
+ position represents the start of the second line.
+</td>
         </tr></table>
 
 ### KeyboardType {:#KeyboardType}
@@ -3142,19 +3179,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>PRESSED</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> When key is pressed down.
+</td>
         </tr><tr>
             <td><code>RELEASED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> When key is released.
+</td>
         </tr><tr>
             <td><code>CANCELLED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> This key `PRESSED` is not directed to this input client anymore.
+</td>
         </tr><tr>
             <td><code>REPEAT</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Whether this is an automatically generated key repeat
+</td>
         </tr></table>
 
 ### PointerEventType {:#PointerEventType}
@@ -3168,19 +3209,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>TOUCH</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> A touch-based pointer device.
+</td>
         </tr><tr>
             <td><code>STYLUS</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> A pointer device with a stylus.
+</td>
         </tr><tr>
             <td><code>INVERTED_STYLUS</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> A pointer device with a stylus that has been inverted.
+</td>
         </tr><tr>
             <td><code>MOUSE</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> A pointer device without a stylus.
+</td>
         </tr></table>
 
 ### PointerEventPhase {:#PointerEventPhase}
@@ -3194,31 +3239,52 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ADD</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The device has started tracking the pointer.
+
+ For example, the pointer might be hovering above the device, having not yet
+ made contact with the surface of the device.
+</td>
         </tr><tr>
             <td><code>HOVER</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The pointer has moved with respect to the device while not in contact with
+ the device.
+</td>
         </tr><tr>
             <td><code>DOWN</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The pointer has made contact with the device.
+
+ For `MOUSE` devices, this is triggered when the primary button is pressed
+ down to emulate a touch on the screen.
+</td>
         </tr><tr>
             <td><code>MOVE</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The pointer has moved with respect to the device while in contact with the
+ device.
+</td>
         </tr><tr>
             <td><code>UP</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The pointer has stopped making contact with the device.
+
+ For `MOUSE` devices, this is triggered when the primary button is
+ released.
+</td>
         </tr><tr>
             <td><code>REMOVE</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> The device is no longer tracking the pointer.
+
+ For example, the pointer might have drifted out of the device's hover
+ detection range or might have been disconnected from the system entirely.
+</td>
         </tr><tr>
             <td><code>CANCEL</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> The input from the pointer is no longer directed towards this receiver.
+</td>
         </tr></table>
 
 ### AxisScale {:#AxisScale}
@@ -3305,11 +3371,19 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UPSTREAM</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The position has affinity for the upstream side of the text position.
+
+ For example, if the offset of the text position is a line break, the
+ position represents the end of the first line.
+</td>
         </tr><tr>
             <td><code>DOWNSTREAM</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The position has affinity for the downstream side of the text position.
+
+ For example, if the offset of the text position is a line break, the
+ position represents the start of the second line.
+</td>
         </tr></table>
 
 ### KeyboardType {:#KeyboardType}

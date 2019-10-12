@@ -866,19 +866,26 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INVALID_SERVICE_NAME</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The specified service name is invalid.
+</td>
         </tr><tr>
             <td><code>INVALID_INSTANCE_NAME</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The specified instance name is invalid.
+</td>
         </tr><tr>
             <td><code>ALREADY_PUBLISHED_LOCALLY</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The specified service instance is already being published by this
+ mDNS implementation.
+</td>
         </tr><tr>
             <td><code>ALREADY_PUBLISHED_ON_SUBNET</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The specified service instance is already being published by another
+ host on the subnet. This result occurs when an initial probe discovers
+ a conflicting instance.
+</td>
         </tr></table>
 
 ### Error {:#Error}
@@ -893,19 +900,26 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INVALID_SERVICE_NAME</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The specified service name is invalid.
+</td>
         </tr><tr>
             <td><code>INVALID_INSTANCE_NAME</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The specified instance name is invalid.
+</td>
         </tr><tr>
             <td><code>ALREADY_PUBLISHED_LOCALLY</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The specified service instance is already being published by this
+ mDNS implementation.
+</td>
         </tr><tr>
             <td><code>ALREADY_PUBLISHED_ON_SUBNET</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> The specified service instance is already being published by another
+ host on the subnet. This result occurs when an initial probe discovers
+ a conflicting instance.
+</td>
         </tr></table>
 
 

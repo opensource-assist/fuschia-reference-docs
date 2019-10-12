@@ -1429,19 +1429,24 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No color blindness.
+</td>
         </tr><tr>
             <td><code>PROTANOMALY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Red-green color blindness due to reduced sensitivity to red light.
+</td>
         </tr><tr>
             <td><code>DEUTERANOMALY</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Red-green color blindness due to reduced sensitivity to green light.
+</td>
         </tr><tr>
             <td><code>TRITANOMALY</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Blue-yellow color blindness. It is due to reduced sensitivity to blue
+ light.
+</td>
         </tr></table>
 
 ### CaptionFontFamily {:#CaptionFontFamily}
@@ -1499,23 +1504,28 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No border around fonts.
+</td>
         </tr><tr>
             <td><code>DROP_SHADOW</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> A shadow "behind" and slightly offset from each edge.
+</td>
         </tr><tr>
             <td><code>RAISED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> A bevel that mimics a 3D raised effect.
+</td>
         </tr><tr>
             <td><code>DEPRESSED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> A bevel that mimics a 3D depressed effect.
+</td>
         </tr><tr>
             <td><code>OUTLINE</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> A plain border around each shapes.
+</td>
         </tr></table>
 
 ### AudioStreamSettingSource {:#AudioStreamSettingSource}
@@ -1530,15 +1540,20 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEFAULT</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The volume is default.
+</td>
         </tr><tr>
             <td><code>USER</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The volume is set by the user. When the |source| in AudioStreamSettings is
+ set to this, the audio volume is set to |user_volume|.
+</td>
         </tr><tr>
             <td><code>SYSTEM</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The system takes control of the volume. This is used when the system constantly
+ calculates and changes the volume. The volume is not stored for this source.
+</td>
         </tr></table>
 
 ### Error {:#Error}
@@ -1572,15 +1587,18 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> No override has been set.
+</td>
         </tr><tr>
             <td><code>AUTOLOGIN_GUEST</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Do not require an account and login always as guest.
+</td>
         </tr><tr>
             <td><code>AUTH_PROVIDER</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Requires a provisioned account through auth provider.
+</td>
         </tr></table>
 
 ### ColorBlindnessType {:#ColorBlindnessType}
@@ -1594,19 +1612,24 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No color blindness.
+</td>
         </tr><tr>
             <td><code>PROTANOMALY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Red-green color blindness due to reduced sensitivity to red light.
+</td>
         </tr><tr>
             <td><code>DEUTERANOMALY</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Red-green color blindness due to reduced sensitivity to green light.
+</td>
         </tr><tr>
             <td><code>TRITANOMALY</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Blue-yellow color blindness. It is due to reduced sensitivity to blue
+ light.
+</td>
         </tr></table>
 
 ### CaptionFontFamily {:#CaptionFontFamily}
@@ -1664,23 +1687,28 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> No border around fonts.
+</td>
         </tr><tr>
             <td><code>DROP_SHADOW</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> A shadow "behind" and slightly offset from each edge.
+</td>
         </tr><tr>
             <td><code>RAISED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> A bevel that mimics a 3D raised effect.
+</td>
         </tr><tr>
             <td><code>DEPRESSED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> A bevel that mimics a 3D depressed effect.
+</td>
         </tr><tr>
             <td><code>OUTLINE</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> A plain border around each shapes.
+</td>
         </tr></table>
 
 ### AudioStreamSettingSource {:#AudioStreamSettingSource}
@@ -1695,15 +1723,20 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEFAULT</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The volume is default.
+</td>
         </tr><tr>
             <td><code>USER</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The volume is set by the user. When the |source| in AudioStreamSettings is
+ set to this, the audio volume is set to |user_volume|.
+</td>
         </tr><tr>
             <td><code>SYSTEM</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The system takes control of the volume. This is used when the system constantly
+ calculates and changes the volume. The volume is not stored for this source.
+</td>
         </tr></table>
 
 ### Error {:#Error}
@@ -1737,15 +1770,18 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> No override has been set.
+</td>
         </tr><tr>
             <td><code>AUTOLOGIN_GUEST</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Do not require an account and login always as guest.
+</td>
         </tr><tr>
             <td><code>AUTH_PROVIDER</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Requires a provisioned account through auth provider.
+</td>
         </tr></table>
 
 

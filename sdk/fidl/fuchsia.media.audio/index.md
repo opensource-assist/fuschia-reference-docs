@@ -422,7 +422,8 @@ Type: <code>uint16</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>SCALE_LINEAR</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Amplitude scale changes at a fixed rate across the ramp duration.
+</td>
         </tr></table>
 
 ### RampType {:#RampType}
@@ -437,7 +438,8 @@ Type: <code>uint16</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>SCALE_LINEAR</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Amplitude scale changes at a fixed rate across the ramp duration.
+</td>
         </tr></table>
 
 

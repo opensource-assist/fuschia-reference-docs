@@ -4364,15 +4364,18 @@ Type: <code>uint64</code>
         </tr><tr>
             <td><code>AMLOGIC_SECURE</code></td>
             <td><code>1152921504606912512</code></td>
-            <td></td>
+            <td> Heap used for amlogic protected memory.
+</td>
         </tr><tr>
             <td><code>AMLOGIC_SECURE_VDEC</code></td>
             <td><code>1152921504606912513</code></td>
-            <td></td>
+            <td> Heap used for amlogic protected memory between decrypt and video decode.
+</td>
         </tr><tr>
             <td><code>GOLDFISH_DEVICE_LOCAL</code></td>
             <td><code>1152921504606978048</code></td>
-            <td></td>
+            <td> Heap used by goldfish vulkan for device-local memory.
+</td>
         </tr></table>
 
 ### CoherencyDomain {:#CoherencyDomain}
@@ -4424,27 +4427,33 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>R8G8B8A8</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> RGB only, 8 bits per each of R/G/B/A sample
+</td>
         </tr><tr>
             <td><code>BGRA32</code></td>
             <td><code>101</code></td>
-            <td></td>
+            <td> 32bpp BGRA, 1 plane.  RGB only, 8 bits per each of B/G/R/A sample.
+</td>
         </tr><tr>
             <td><code>I420</code></td>
             <td><code>102</code></td>
-            <td></td>
+            <td> YUV only, 8 bits per Y sample
+</td>
         </tr><tr>
             <td><code>M420</code></td>
             <td><code>103</code></td>
-            <td></td>
+            <td> YUV only, 8 bits per Y sample
+</td>
         </tr><tr>
             <td><code>NV12</code></td>
             <td><code>104</code></td>
-            <td></td>
+            <td> YUV only, 8 bits per Y sample
+</td>
         </tr><tr>
             <td><code>YUY2</code></td>
             <td><code>105</code></td>
-            <td></td>
+            <td> YUV only, 8 bits per Y sample
+</td>
         </tr><tr>
             <td><code>MJPEG</code></td>
             <td><code>106</code></td>
@@ -4452,27 +4461,33 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>YV12</code></td>
             <td><code>107</code></td>
-            <td></td>
+            <td> YUV only, 8 bits per Y sample
+</td>
         </tr><tr>
             <td><code>BGR24</code></td>
             <td><code>108</code></td>
-            <td></td>
+            <td> 24bpp BGR, 1 plane. RGB only, 8 bits per each of B/G/R sample
+</td>
         </tr><tr>
             <td><code>RGB565</code></td>
             <td><code>109</code></td>
-            <td></td>
+            <td> 16bpp RGB, 1 plane. 5 bits R, 6 bits G, 5 bits B
+</td>
         </tr><tr>
             <td><code>RGB332</code></td>
             <td><code>110</code></td>
-            <td></td>
+            <td> 8bpp RGB, 1 plane. 3 bits R, 3 bits G, 2 bits B
+</td>
         </tr><tr>
             <td><code>RGB2220</code></td>
             <td><code>111</code></td>
-            <td></td>
+            <td> 8bpp RGB, 1 plane. 2 bits R, 2 bits G, 2 bits B
+</td>
         </tr><tr>
             <td><code>L8</code></td>
             <td><code>112</code></td>
-            <td></td>
+            <td> 8bpp, Luminance-only.
+</td>
         </tr></table>
 
 ### ColorSpaceType {:#ColorSpaceType}
@@ -4512,39 +4527,48 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INVALID</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Not a valid color space type.
+</td>
         </tr><tr>
             <td><code>SRGB</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> sRGB
+</td>
         </tr><tr>
             <td><code>REC601_NTSC</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> 601 NTSC ("525 line") YCbCr primaries, narrow
+</td>
         </tr><tr>
             <td><code>REC601_NTSC_FULL_RANGE</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> 601 NTSC ("525 line") YCbCr primaries, wide
+</td>
         </tr><tr>
             <td><code>REC601_PAL</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> 601 PAL ("625 line") YCbCr primaries, narrow
+</td>
         </tr><tr>
             <td><code>REC601_PAL_FULL_RANGE</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> 601 PAL ("625 line") YCbCr primaries, wide
+</td>
         </tr><tr>
             <td><code>REC709</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> 709 YCbCr (not RGB)
+</td>
         </tr><tr>
             <td><code>REC2020</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> 2020 YCbCr (not RGB, not YcCbcCrc)
+</td>
         </tr><tr>
             <td><code>REC2100</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> 2100 YCbCr (not RGB, not ICtCp)
+</td>
         </tr></table>
 
 ### HeapType {:#HeapType}
@@ -4565,15 +4589,18 @@ Type: <code>uint64</code>
         </tr><tr>
             <td><code>AMLOGIC_SECURE</code></td>
             <td><code>1152921504606912512</code></td>
-            <td></td>
+            <td> Heap used for amlogic protected memory.
+</td>
         </tr><tr>
             <td><code>AMLOGIC_SECURE_VDEC</code></td>
             <td><code>1152921504606912513</code></td>
-            <td></td>
+            <td> Heap used for amlogic protected memory between decrypt and video decode.
+</td>
         </tr><tr>
             <td><code>GOLDFISH_DEVICE_LOCAL</code></td>
             <td><code>1152921504606978048</code></td>
-            <td></td>
+            <td> Heap used by goldfish vulkan for device-local memory.
+</td>
         </tr></table>
 
 ### CoherencyDomain {:#CoherencyDomain}
@@ -4625,27 +4652,33 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>R8G8B8A8</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> RGB only, 8 bits per each of R/G/B/A sample
+</td>
         </tr><tr>
             <td><code>BGRA32</code></td>
             <td><code>101</code></td>
-            <td></td>
+            <td> 32bpp BGRA, 1 plane.  RGB only, 8 bits per each of B/G/R/A sample.
+</td>
         </tr><tr>
             <td><code>I420</code></td>
             <td><code>102</code></td>
-            <td></td>
+            <td> YUV only, 8 bits per Y sample
+</td>
         </tr><tr>
             <td><code>M420</code></td>
             <td><code>103</code></td>
-            <td></td>
+            <td> YUV only, 8 bits per Y sample
+</td>
         </tr><tr>
             <td><code>NV12</code></td>
             <td><code>104</code></td>
-            <td></td>
+            <td> YUV only, 8 bits per Y sample
+</td>
         </tr><tr>
             <td><code>YUY2</code></td>
             <td><code>105</code></td>
-            <td></td>
+            <td> YUV only, 8 bits per Y sample
+</td>
         </tr><tr>
             <td><code>MJPEG</code></td>
             <td><code>106</code></td>
@@ -4653,27 +4686,33 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>YV12</code></td>
             <td><code>107</code></td>
-            <td></td>
+            <td> YUV only, 8 bits per Y sample
+</td>
         </tr><tr>
             <td><code>BGR24</code></td>
             <td><code>108</code></td>
-            <td></td>
+            <td> 24bpp BGR, 1 plane. RGB only, 8 bits per each of B/G/R sample
+</td>
         </tr><tr>
             <td><code>RGB565</code></td>
             <td><code>109</code></td>
-            <td></td>
+            <td> 16bpp RGB, 1 plane. 5 bits R, 6 bits G, 5 bits B
+</td>
         </tr><tr>
             <td><code>RGB332</code></td>
             <td><code>110</code></td>
-            <td></td>
+            <td> 8bpp RGB, 1 plane. 3 bits R, 3 bits G, 2 bits B
+</td>
         </tr><tr>
             <td><code>RGB2220</code></td>
             <td><code>111</code></td>
-            <td></td>
+            <td> 8bpp RGB, 1 plane. 2 bits R, 2 bits G, 2 bits B
+</td>
         </tr><tr>
             <td><code>L8</code></td>
             <td><code>112</code></td>
-            <td></td>
+            <td> 8bpp, Luminance-only.
+</td>
         </tr></table>
 
 ### ColorSpaceType {:#ColorSpaceType}
@@ -4713,39 +4752,48 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INVALID</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Not a valid color space type.
+</td>
         </tr><tr>
             <td><code>SRGB</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> sRGB
+</td>
         </tr><tr>
             <td><code>REC601_NTSC</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> 601 NTSC ("525 line") YCbCr primaries, narrow
+</td>
         </tr><tr>
             <td><code>REC601_NTSC_FULL_RANGE</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> 601 NTSC ("525 line") YCbCr primaries, wide
+</td>
         </tr><tr>
             <td><code>REC601_PAL</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> 601 PAL ("625 line") YCbCr primaries, narrow
+</td>
         </tr><tr>
             <td><code>REC601_PAL_FULL_RANGE</code></td>
             <td><code>5</code></td>
-            <td></td>
+            <td> 601 PAL ("625 line") YCbCr primaries, wide
+</td>
         </tr><tr>
             <td><code>REC709</code></td>
             <td><code>6</code></td>
-            <td></td>
+            <td> 709 YCbCr (not RGB)
+</td>
         </tr><tr>
             <td><code>REC2020</code></td>
             <td><code>7</code></td>
-            <td></td>
+            <td> 2020 YCbCr (not RGB, not YcCbcCrc)
+</td>
         </tr><tr>
             <td><code>REC2100</code></td>
             <td><code>8</code></td>
-            <td></td>
+            <td> 2100 YCbCr (not RGB, not ICtCp)
+</td>
         </tr></table>
 
 

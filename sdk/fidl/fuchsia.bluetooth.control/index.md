@@ -2235,19 +2235,26 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>CONSENT</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The user is asked to accept or reject pairing.
+</td>
         </tr><tr>
             <td><code>PASSKEY_DISPLAY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The user is shown a 6-digit numerical passkey which they must enter on the
+ peer device.
+</td>
         </tr><tr>
             <td><code>PASSKEY_COMPARISON</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The user is shown a 6-digit numerical passkey which will also shown on the
+ peer device. The user must compare the passkeys and accept the pairing if
+ the passkeys match.
+</td>
         </tr><tr>
             <td><code>PASSKEY_ENTRY</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The user is asked to enter a 6-digit passkey.
+</td>
         </tr></table>
 
 ### PairingKeypressType {:#PairingKeypressType}
@@ -2261,19 +2268,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DIGIT_ENTERED</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The user has entered a single digit.
+</td>
         </tr><tr>
             <td><code>DIGIT_ERASED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The user has erased a single digit.
+</td>
         </tr><tr>
             <td><code>PASSKEY_CLEARED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The user has cleared the entire passkey.
+</td>
         </tr><tr>
             <td><code>PASSKEY_ENTERED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The user has finished entering the passkey.
+</td>
         </tr></table>
 
 ### Appearance {:#Appearance}
@@ -2602,19 +2613,26 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>CONSENT</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The user is asked to accept or reject pairing.
+</td>
         </tr><tr>
             <td><code>PASSKEY_DISPLAY</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The user is shown a 6-digit numerical passkey which they must enter on the
+ peer device.
+</td>
         </tr><tr>
             <td><code>PASSKEY_COMPARISON</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The user is shown a 6-digit numerical passkey which will also shown on the
+ peer device. The user must compare the passkeys and accept the pairing if
+ the passkeys match.
+</td>
         </tr><tr>
             <td><code>PASSKEY_ENTRY</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The user is asked to enter a 6-digit passkey.
+</td>
         </tr></table>
 
 ### PairingKeypressType {:#PairingKeypressType}
@@ -2628,19 +2646,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DIGIT_ENTERED</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> The user has entered a single digit.
+</td>
         </tr><tr>
             <td><code>DIGIT_ERASED</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> The user has erased a single digit.
+</td>
         </tr><tr>
             <td><code>PASSKEY_CLEARED</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The user has cleared the entire passkey.
+</td>
         </tr><tr>
             <td><code>PASSKEY_ENTERED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The user has finished entering the passkey.
+</td>
         </tr></table>
 
 ### Appearance {:#Appearance}

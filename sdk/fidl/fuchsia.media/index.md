@@ -6853,23 +6853,34 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BACKGROUND</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Stream is intended to be used for ambient or background sound. Streams
+ that can be interrupted without consequence should use this.
+</td>
         </tr><tr>
             <td><code>MEDIA</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Stream is intended to be used for normal functionality. Streams that
+ are part of normal functionality should use this.
+</td>
         </tr><tr>
             <td><code>INTERRUPTION</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Stream is intended to interrupt any ongoing function of the device.
+ Streams that are used for interruptions like notifications should use
+ this.
+</td>
         </tr><tr>
             <td><code>SYSTEM_AGENT</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Stream is for interaction with a system agent.  This should be used
+ in response to a user initiated trigger.
+</td>
         </tr><tr>
             <td><code>COMMUNICATION</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> Stream is intended to be used for some form of real time user to user
+ communication. Voice/Video chat should use this.
+</td>
         </tr></table>
 
 ### AudioCaptureUsage {:#AudioCaptureUsage}
@@ -6886,19 +6897,32 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BACKGROUND</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Stream is used to capture audio while in the background.  These streams
+ may be active at any the time and are considered privileged.
+ Example: Listening for Hotwords
+</td>
         </tr><tr>
             <td><code>FOREGROUND</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Stream is intended to be used for normal capture functionality. Streams
+ that are used for audio capture while the stream creator is in the
+ foreground should use this.
+ Example: Voice Recorder
+</td>
         </tr><tr>
             <td><code>SYSTEM_AGENT</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Stream is for interaction with a system agent.  This should only be used
+ once a user has signalled their intent to have the interaction with an
+ interested party.
+ Examples: Assistant, Siri, Alexa
+</td>
         </tr><tr>
             <td><code>COMMUNICATION</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Stream is intended to be used for some form of real time user to user
+ communication. Voice/Video chat should use this.
+</td>
         </tr></table>
 
 ### Behavior {:#Behavior}
@@ -6913,15 +6937,18 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Mix the streams.
+</td>
         </tr><tr>
             <td><code>DUCK</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Apply a gain to duck the volume of one of the streams. (-14.0db)
+</td>
         </tr><tr>
             <td><code>MUTE</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Apply a gain to mute one of the streams. (-160.0db)
+</td>
         </tr></table>
 
 ### AudioOutputRoutingPolicy {:#AudioOutputRoutingPolicy}
@@ -6958,31 +6985,41 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> An internal error with an unspecified reason.
+</td>
         </tr><tr>
             <td><code>INVALID_INPUT_FORMAT_DETAILS</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The client provided invalid input format details.
+</td>
         </tr><tr>
             <td><code>INCOMPATIBLE_BUFFERS_PROVIDED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The server received buffers that are not suitable for the operation to
+ be performed. An example of this would be if a Decoder received output
+ buffers that are too small to decode a frame into.
+</td>
         </tr><tr>
             <td><code>DECODER_UNKNOWN</code></td>
             <td><code>16777217</code></td>
-            <td></td>
+            <td> An internal decoder error with an unspecified reason.
+</td>
         </tr><tr>
             <td><code>ENCODER_UNKNOWN</code></td>
             <td><code>33554433</code></td>
-            <td></td>
+            <td> An internal encoder error with an unspecified reason.
+</td>
         </tr><tr>
             <td><code>DECRYPTOR_UNKNOWN</code></td>
             <td><code>50331649</code></td>
-            <td></td>
+            <td> An internal decryptor error with an unspecified reason.
+</td>
         </tr><tr>
             <td><code>DECRYPTOR_NO_KEY</code></td>
             <td><code>50331650</code></td>
-            <td></td>
+            <td> The requested KeyId is not available for use by the Decryptor. The
+ client may try again later if that key becomes available.
+</td>
         </tr></table>
 
 ### AudioBitrateMode {:#AudioBitrateMode}
@@ -7264,7 +7301,8 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>MPEG2_AAC_LC</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> MPEG-2 Low Complexity
+</td>
         </tr></table>
 
 ### AudioSampleFormat {:#AudioSampleFormat}
@@ -7279,19 +7317,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNSIGNED_8</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> 8-bit unsigned samples, sample size 1 byte.
+</td>
         </tr><tr>
             <td><code>SIGNED_16</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> 16-bit signed samples, host-endian, sample size 2 bytes.
+</td>
         </tr><tr>
             <td><code>SIGNED_24_IN_32</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> 24-bit signed samples in 32 bits, host-endian, sample size 4 bytes.
+</td>
         </tr><tr>
             <td><code>FLOAT</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> 32-bit floating-point samples, sample size 4 bytes.
+</td>
         </tr></table>
 
 ### ColorSpace {:#ColorSpace}
@@ -7339,23 +7381,34 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BACKGROUND</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Stream is intended to be used for ambient or background sound. Streams
+ that can be interrupted without consequence should use this.
+</td>
         </tr><tr>
             <td><code>MEDIA</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Stream is intended to be used for normal functionality. Streams that
+ are part of normal functionality should use this.
+</td>
         </tr><tr>
             <td><code>INTERRUPTION</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Stream is intended to interrupt any ongoing function of the device.
+ Streams that are used for interruptions like notifications should use
+ this.
+</td>
         </tr><tr>
             <td><code>SYSTEM_AGENT</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Stream is for interaction with a system agent.  This should be used
+ in response to a user initiated trigger.
+</td>
         </tr><tr>
             <td><code>COMMUNICATION</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> Stream is intended to be used for some form of real time user to user
+ communication. Voice/Video chat should use this.
+</td>
         </tr></table>
 
 ### AudioCaptureUsage {:#AudioCaptureUsage}
@@ -7372,19 +7425,32 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BACKGROUND</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Stream is used to capture audio while in the background.  These streams
+ may be active at any the time and are considered privileged.
+ Example: Listening for Hotwords
+</td>
         </tr><tr>
             <td><code>FOREGROUND</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Stream is intended to be used for normal capture functionality. Streams
+ that are used for audio capture while the stream creator is in the
+ foreground should use this.
+ Example: Voice Recorder
+</td>
         </tr><tr>
             <td><code>SYSTEM_AGENT</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Stream is for interaction with a system agent.  This should only be used
+ once a user has signalled their intent to have the interaction with an
+ interested party.
+ Examples: Assistant, Siri, Alexa
+</td>
         </tr><tr>
             <td><code>COMMUNICATION</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> Stream is intended to be used for some form of real time user to user
+ communication. Voice/Video chat should use this.
+</td>
         </tr></table>
 
 ### Behavior {:#Behavior}
@@ -7399,15 +7465,18 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> Mix the streams.
+</td>
         </tr><tr>
             <td><code>DUCK</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> Apply a gain to duck the volume of one of the streams. (-14.0db)
+</td>
         </tr><tr>
             <td><code>MUTE</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> Apply a gain to mute one of the streams. (-160.0db)
+</td>
         </tr></table>
 
 ### AudioOutputRoutingPolicy {:#AudioOutputRoutingPolicy}
@@ -7444,31 +7513,41 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> An internal error with an unspecified reason.
+</td>
         </tr><tr>
             <td><code>INVALID_INPUT_FORMAT_DETAILS</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> The client provided invalid input format details.
+</td>
         </tr><tr>
             <td><code>INCOMPATIBLE_BUFFERS_PROVIDED</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> The server received buffers that are not suitable for the operation to
+ be performed. An example of this would be if a Decoder received output
+ buffers that are too small to decode a frame into.
+</td>
         </tr><tr>
             <td><code>DECODER_UNKNOWN</code></td>
             <td><code>16777217</code></td>
-            <td></td>
+            <td> An internal decoder error with an unspecified reason.
+</td>
         </tr><tr>
             <td><code>ENCODER_UNKNOWN</code></td>
             <td><code>33554433</code></td>
-            <td></td>
+            <td> An internal encoder error with an unspecified reason.
+</td>
         </tr><tr>
             <td><code>DECRYPTOR_UNKNOWN</code></td>
             <td><code>50331649</code></td>
-            <td></td>
+            <td> An internal decryptor error with an unspecified reason.
+</td>
         </tr><tr>
             <td><code>DECRYPTOR_NO_KEY</code></td>
             <td><code>50331650</code></td>
-            <td></td>
+            <td> The requested KeyId is not available for use by the Decryptor. The
+ client may try again later if that key becomes available.
+</td>
         </tr></table>
 
 ### AudioBitrateMode {:#AudioBitrateMode}
@@ -7750,7 +7829,8 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>MPEG2_AAC_LC</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td> MPEG-2 Low Complexity
+</td>
         </tr></table>
 
 ### AudioSampleFormat {:#AudioSampleFormat}
@@ -7765,19 +7845,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNSIGNED_8</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td> 8-bit unsigned samples, sample size 1 byte.
+</td>
         </tr><tr>
             <td><code>SIGNED_16</code></td>
             <td><code>2</code></td>
-            <td></td>
+            <td> 16-bit signed samples, host-endian, sample size 2 bytes.
+</td>
         </tr><tr>
             <td><code>SIGNED_24_IN_32</code></td>
             <td><code>3</code></td>
-            <td></td>
+            <td> 24-bit signed samples in 32 bits, host-endian, sample size 4 bytes.
+</td>
         </tr><tr>
             <td><code>FLOAT</code></td>
             <td><code>4</code></td>
-            <td></td>
+            <td> 32-bit floating-point samples, sample size 4 bytes.
+</td>
         </tr></table>
 
 ### ColorSpace {:#ColorSpace}
