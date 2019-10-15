@@ -2788,6 +2788,36 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### BufferFormat {:#BufferFormat}
+*Defined in [fuchsia.sysmem/formats_deprecated.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/formats_deprecated.fidl#9)*
+
+
+
+ Describes how the contents of buffers are represented.
+ Buffers of each type are described by their own tables.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>tag</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> Since this struct used to be a single member union, we kept the tag
+ to avoid any wire format changes. The tag must be set to `0`,
+ no other value is correct.
+</td>
+            <td>0</td>
+        </tr><tr>
+            <td><code>image</code></td>
+            <td>
+                <code><a class='link' href='#ImageFormat'>ImageFormat</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### PixelFormat {:#PixelFormat}
 *Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#11)*
 
@@ -4006,6 +4036,36 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### BufferFormat {:#BufferFormat}
+*Defined in [fuchsia.sysmem/formats_deprecated.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/formats_deprecated.fidl#9)*
+
+
+
+ Describes how the contents of buffers are represented.
+ Buffers of each type are described by their own tables.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>tag</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> Since this struct used to be a single member union, we kept the tag
+ to avoid any wire format changes. The tag must be set to `0`,
+ no other value is correct.
+</td>
+            <td>0</td>
+        </tr><tr>
+            <td><code>image</code></td>
+            <td>
+                <code><a class='link' href='#ImageFormat'>ImageFormat</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### PixelFormat {:#PixelFormat}
 *Defined in [fuchsia.sysmem/image_formats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/image_formats.fidl#11)*
 
@@ -4802,36 +4862,6 @@ Type: <code>uint32</code>
 
 ## **UNIONS**
 
-### BufferFormat {:#BufferFormat}
-*Defined in [fuchsia.sysmem/formats_deprecated.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/formats_deprecated.fidl#9)*
-
- Describes how the contents of buffers are represented.
- Buffers of each type are described by their own tables.
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>image</code></td>
-            <td>
-                <code><a class='link' href='#ImageFormat'>ImageFormat</a></code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### BufferSpec {:#BufferSpec}
-*Defined in [fuchsia.sysmem/formats_deprecated.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/formats_deprecated.fidl#15)*
-
- Describes constraints for allocating buffers of some desired form.
- Buffers of each type are described by their own tables.
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>image</code></td>
-            <td>
-                <code><a class='link' href='#ImageSpec'>ImageSpec</a></code>
-            </td>
-            <td></td>
-        </tr></table>
-
 ### SecureMem_GetPhysicalSecureHeaps_Result {:#SecureMem_GetPhysicalSecureHeaps_Result}
 *generated*
 
@@ -4866,36 +4896,6 @@ Type: <code>uint32</code>
             <td><code>err</code></td>
             <td>
                 <code>int32</code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### BufferFormat {:#BufferFormat}
-*Defined in [fuchsia.sysmem/formats_deprecated.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/formats_deprecated.fidl#9)*
-
- Describes how the contents of buffers are represented.
- Buffers of each type are described by their own tables.
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>image</code></td>
-            <td>
-                <code><a class='link' href='#ImageFormat'>ImageFormat</a></code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### BufferSpec {:#BufferSpec}
-*Defined in [fuchsia.sysmem/formats_deprecated.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/formats_deprecated.fidl#15)*
-
- Describes constraints for allocating buffers of some desired form.
- Buffers of each type are described by their own tables.
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>image</code></td>
-            <td>
-                <code><a class='link' href='#ImageSpec'>ImageSpec</a></code>
             </td>
             <td></td>
         </tr></table>

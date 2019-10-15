@@ -99,7 +99,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Session {:#Session}
-*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#12)*
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#13)*
 
  Client use Sessions to interact with a Scenic instance by enqueuing commands
  that create or modify resources.
@@ -250,13 +250,120 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### Present2 {:#Present2}
+
+ Present all previously enqueued operations. In order to pipeline the
+ preparation of the resources required to render the scene, two lists of
+ fences, implemented as events, are passed.
+
+ When a client calls Present2, they receive an immediate callback
+ consisting of the same information they would get as if they had called
+ |RequestPresentationTimes| with the equivalent
+ |requested_prediction_span|. See its documentation below for more
+ information, as Present2's functionality is a superset of it.
+
+ Then, when the commands flushed by Present2 make it to display, an
+ |OnFramePresented| event is fired. This event includes information
+ pertaining to all Present2s that had content that were part of that
+ frame.
+
+ Clients may only use one of Present/Present2 per Session.
+ Switching between both is an error that will result in the Session being
+ closed.
+
+ SCHEDULING PRESENTATIONS
+
+ |requested_presentation_time| specifies the time on or after which the
+ client would like the enqueued operations to take visible effect
+ (light up pixels on the screen), expressed in nanoseconds in the
+ `CLOCK_MONOTONIC` timebase.
+
+ Using a |requested_presentation_time| in the present or past (such as 0)
+ schedules enqueued operations to take visible effect as soon as
+ possible, during the next frame to be prepared. Requested presentation
+ times must be monotonically increasing.
+
+ Using a |requested_presentation_time| in the future schedules the enqueued
+ operations to take visible effect as closely as possible to or after
+ the stated time, but no earlier.
+
+ Each rendered frame has a target presentation time. This is when Scenic
+ aims to have the frame presented to the user. Before rendering a frame,
+ the scene manager applies all enqueued operations associated with all
+ prior calls to Present2 whose |requested_presentation_time| is on or
+ before the frame's target presentation time.
+
+ SYNCHRONIZATION
+
+ Scenic will wait until all of a session's |acquire_fences| are ready
+ before it will execute the presented commands.
+
+ |release_fences| is the list of events that will be signalled by Scenic when
+ the following Present2 call's |acquire_fences| has been signalled, and
+ the updated session state has been fully committed: future frames will be
+ rendered using this state, and all frames generated using previous session
+ states have been fully-rendered and presented to the display.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requested_presentation_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
+            <td><code>acquire_fences</code></td>
+            <td>
+                <code>vector&lt;event&gt;</code>
+            </td>
+        </tr><tr>
+            <td><code>release_fences</code></td>
+            <td>
+                <code>vector&lt;event&gt;</code>
+            </td>
+        </tr><tr>
+            <td><code>requested_prediction_span</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>request_presentation_times_info</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.scenic.scheduling/index.html'>fuchsia.scenic.scheduling</a>/<a class='link' href='../fuchsia.scenic.scheduling/index.html#FuturePresentationTimes'>FuturePresentationTimes</a></code>
+            </td>
+        </tr></table>
+
+### OnFramePresented {:#OnFramePresented}
+
+ This event is fired whenever a set of one or more Present2s are
+ presented simultaenously, and are therefore no longer in flight.
+
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>frame_presented_info</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.scenic.scheduling/index.html'>fuchsia.scenic.scheduling</a>/<a class='link' href='../fuchsia.scenic.scheduling/index.html#FramePresentedInfo'>FramePresentedInfo</a></code>
+            </td>
+        </tr></table>
+
 ### RequestPresentationTimes {:#RequestPresentationTimes}
 
  Returns information about future presentation times, and their
  respective latch points. Clients can use the returned information to
  make informed scheduling decisions: if a client wants their frame to be
- displayed at a given presentation time, they should aim to have all of
- their work finished before that presentation time's associated latch point.
+ displayed at a given |presentation_time|, they should aim to have all
+ |acquire_fences| fired before the associated |latch_point|.
 
  Scenic will attempt to return predictions that span a duration equal to
  |requested_prediction_span|, up to a limit.
@@ -269,7 +376,7 @@ Book: /_book.yaml
     <tr>
             <td><code>requested_prediction_span</code></td>
             <td>
-                <code>uint64</code>
+                <code>int64</code>
             </td>
         </tr></table>
 
@@ -302,7 +409,7 @@ Book: /_book.yaml
 
 
 ## SessionListener {:#SessionListener}
-*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#147)*
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#208)*
 
  Listens for events which occur within the session.
 
@@ -437,7 +544,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Session {:#Session}
-*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#12)*
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#13)*
 
  Client use Sessions to interact with a Scenic instance by enqueuing commands
  that create or modify resources.
@@ -588,13 +695,120 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### Present2 {:#Present2}
+
+ Present all previously enqueued operations. In order to pipeline the
+ preparation of the resources required to render the scene, two lists of
+ fences, implemented as events, are passed.
+
+ When a client calls Present2, they receive an immediate callback
+ consisting of the same information they would get as if they had called
+ |RequestPresentationTimes| with the equivalent
+ |requested_prediction_span|. See its documentation below for more
+ information, as Present2's functionality is a superset of it.
+
+ Then, when the commands flushed by Present2 make it to display, an
+ |OnFramePresented| event is fired. This event includes information
+ pertaining to all Present2s that had content that were part of that
+ frame.
+
+ Clients may only use one of Present/Present2 per Session.
+ Switching between both is an error that will result in the Session being
+ closed.
+
+ SCHEDULING PRESENTATIONS
+
+ |requested_presentation_time| specifies the time on or after which the
+ client would like the enqueued operations to take visible effect
+ (light up pixels on the screen), expressed in nanoseconds in the
+ `CLOCK_MONOTONIC` timebase.
+
+ Using a |requested_presentation_time| in the present or past (such as 0)
+ schedules enqueued operations to take visible effect as soon as
+ possible, during the next frame to be prepared. Requested presentation
+ times must be monotonically increasing.
+
+ Using a |requested_presentation_time| in the future schedules the enqueued
+ operations to take visible effect as closely as possible to or after
+ the stated time, but no earlier.
+
+ Each rendered frame has a target presentation time. This is when Scenic
+ aims to have the frame presented to the user. Before rendering a frame,
+ the scene manager applies all enqueued operations associated with all
+ prior calls to Present2 whose |requested_presentation_time| is on or
+ before the frame's target presentation time.
+
+ SYNCHRONIZATION
+
+ Scenic will wait until all of a session's |acquire_fences| are ready
+ before it will execute the presented commands.
+
+ |release_fences| is the list of events that will be signalled by Scenic when
+ the following Present2 call's |acquire_fences| has been signalled, and
+ the updated session state has been fully committed: future frames will be
+ rendered using this state, and all frames generated using previous session
+ states have been fully-rendered and presented to the display.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requested_presentation_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
+            <td><code>acquire_fences</code></td>
+            <td>
+                <code>vector&lt;event&gt;</code>
+            </td>
+        </tr><tr>
+            <td><code>release_fences</code></td>
+            <td>
+                <code>vector&lt;event&gt;</code>
+            </td>
+        </tr><tr>
+            <td><code>requested_prediction_span</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>request_presentation_times_info</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.scenic.scheduling/index.html'>fuchsia.scenic.scheduling</a>/<a class='link' href='../fuchsia.scenic.scheduling/index.html#FuturePresentationTimes'>FuturePresentationTimes</a></code>
+            </td>
+        </tr></table>
+
+### OnFramePresented {:#OnFramePresented}
+
+ This event is fired whenever a set of one or more Present2s are
+ presented simultaenously, and are therefore no longer in flight.
+
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>frame_presented_info</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.scenic.scheduling/index.html'>fuchsia.scenic.scheduling</a>/<a class='link' href='../fuchsia.scenic.scheduling/index.html#FramePresentedInfo'>FramePresentedInfo</a></code>
+            </td>
+        </tr></table>
+
 ### RequestPresentationTimes {:#RequestPresentationTimes}
 
  Returns information about future presentation times, and their
  respective latch points. Clients can use the returned information to
  make informed scheduling decisions: if a client wants their frame to be
- displayed at a given presentation time, they should aim to have all of
- their work finished before that presentation time's associated latch point.
+ displayed at a given |presentation_time|, they should aim to have all
+ |acquire_fences| fired before the associated |latch_point|.
 
  Scenic will attempt to return predictions that span a duration equal to
  |requested_prediction_span|, up to a limit.
@@ -607,7 +821,7 @@ Book: /_book.yaml
     <tr>
             <td><code>requested_prediction_span</code></td>
             <td>
-                <code>uint64</code>
+                <code>int64</code>
             </td>
         </tr></table>
 
@@ -640,7 +854,7 @@ Book: /_book.yaml
 
 
 ## SessionListener {:#SessionListener}
-*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#147)*
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#208)*
 
  Listens for events which occur within the session.
 

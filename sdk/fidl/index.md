@@ -263,6 +263,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.kms/index">fuchsia.kms</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.ldsvc/index">fuchsia.ldsvc</a></td>
     <td></td>
 </tr>
@@ -319,10 +323,6 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.modular.internal/index">fuchsia.modular.internal</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.modular.session/index">fuchsia.modular.session</a></td>
     <td></td>
 </tr>
@@ -372,6 +372,14 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.netstack/index">fuchsia.netstack</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.overnet/index">fuchsia.overnet</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.overnet.protocol/index">fuchsia.overnet.protocol</a></td>
     <td></td>
 </tr>
 <tr>

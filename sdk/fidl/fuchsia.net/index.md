@@ -223,7 +223,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>ipv4_addrs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Ipv4Address'>Ipv4Address</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Ipv4Address'>Ipv4Address</a>&gt;[256]</code>
             </td>
             <td> All of the IPv4 addresses for the requested hostname.
 </td>
@@ -231,7 +231,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>ipv6_addrs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Ipv6Address'>Ipv6Address</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Ipv6Address'>Ipv6Address</a>&gt;[256]</code>
             </td>
             <td> All of the IPv6 addresses for the requested hostname.
 </td>
@@ -239,7 +239,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>canonical_name</code></td>
             <td>
-                <code>string?</code>
+                <code>string[256]?</code>
             </td>
             <td> The canonical name of the requested hostname (usually the DNS CNAME record, if one exists).
 </td>
@@ -416,7 +416,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>ipv4_addrs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Ipv4Address'>Ipv4Address</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Ipv4Address'>Ipv4Address</a>&gt;[256]</code>
             </td>
             <td> All of the IPv4 addresses for the requested hostname.
 </td>
@@ -424,7 +424,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>ipv6_addrs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Ipv6Address'>Ipv6Address</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#Ipv6Address'>Ipv6Address</a>&gt;[256]</code>
             </td>
             <td> All of the IPv6 addresses for the requested hostname.
 </td>
@@ -432,7 +432,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>canonical_name</code></td>
             <td>
-                <code>string?</code>
+                <code>string[256]?</code>
             </td>
             <td> The canonical name of the requested hostname (usually the DNS CNAME record, if one exists).
 </td>

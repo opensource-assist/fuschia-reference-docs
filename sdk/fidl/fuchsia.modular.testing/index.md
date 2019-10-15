@@ -480,7 +480,7 @@ Book: /_book.yaml
 
  By default, the following services are made available to the hermetic
  environment:
-  * fuchsia.auth.account.AccountManager
+  * fuchsia.identity.account.AccountManager
   * fuchsia.devicesettings.DeviceSettingsManager
 
  Additional services may be supplied using using
@@ -672,7 +672,7 @@ Book: /_book.yaml
 
  By default, the following services are made available to the hermetic
  environment:
-  * fuchsia.auth.account.AccountManager
+  * fuchsia.identity.account.AccountManager
   * fuchsia.devicesettings.DeviceSettingsManager
 
  Additional services may be supplied using using

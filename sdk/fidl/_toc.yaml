@@ -129,6 +129,8 @@ toc:
   path: /reference/fidl/fuchsia.io
 - title: fuchsia.kernel
   path: /reference/fidl/fuchsia.kernel
+- title: fuchsia.kms
+  path: /reference/fidl/fuchsia.kms
 - title: fuchsia.ldsvc
   path: /reference/fidl/fuchsia.ldsvc
 - title: fuchsia.ledger
@@ -157,8 +159,6 @@ toc:
   path: /reference/fidl/fuchsia.modular
 - title: fuchsia.modular.auth
   path: /reference/fidl/fuchsia.modular.auth
-- title: fuchsia.modular.internal
-  path: /reference/fidl/fuchsia.modular.internal
 - title: fuchsia.modular.session
   path: /reference/fidl/fuchsia.modular.session
 - title: fuchsia.modular.testing
@@ -185,6 +185,10 @@ toc:
   path: /reference/fidl/fuchsia.net.stack
 - title: fuchsia.netstack
   path: /reference/fidl/fuchsia.netstack
+- title: fuchsia.overnet
+  path: /reference/fidl/fuchsia.overnet
+- title: fuchsia.overnet.protocol
+  path: /reference/fidl/fuchsia.overnet.protocol
 - title: fuchsia.paver
   path: /reference/fidl/fuchsia.paver
 - title: fuchsia.perfmon.cpu

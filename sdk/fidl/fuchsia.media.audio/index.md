@@ -193,18 +193,6 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
-### NotifyVolumeMuteChangedHandled {:#NotifyVolumeMuteChangedHandled}
-
- Acknowledges receipt of a volume or mute change event. Clients must
- acknowledge receipt to continue receiving events.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
 ## GainControl {:#GainControl}
 *Defined in [fuchsia.media.audio/gain_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#17)*
 
@@ -391,18 +379,6 @@ Book: /_book.yaml
                 <code>bool</code>
             </td>
         </tr></table>
-
-### NotifyVolumeMuteChangedHandled {:#NotifyVolumeMuteChangedHandled}
-
- Acknowledges receipt of a volume or mute change event. Clients must
- acknowledge receipt to continue receiving events.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
 
 
 

@@ -209,6 +209,66 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### NodeGetFlags {:#NodeGetFlags}
+
+ Acquires the `Directory.Open` rights and flags used to access this file.
+
+ This method does not require any rights.
+ This method has the same functionality as GetFlags for File and is
+ meant as an in-progress replacement.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>s</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>flags</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+### NodeSetFlags {:#NodeSetFlags}
+
+ Changes the `Directory.Open` flags used to access the file.
+ Supported flags which can be turned on / off:
+ - `OPEN_FLAG_APPEND`
+
+ This method does not require any rights.
+ This method has the same functionality as SetFlags for File and is
+ meant as an in-progress replacement.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>flags</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>s</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
 ### Bind {:#Bind}
 
  Sets the local address used for the socket.
@@ -669,6 +729,66 @@ Book: /_book.yaml
             <td><code>attributes</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.io/index.html'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/index.html#NodeAttributes'>NodeAttributes</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>s</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+### NodeGetFlags {:#NodeGetFlags}
+
+ Acquires the `Directory.Open` rights and flags used to access this file.
+
+ This method does not require any rights.
+ This method has the same functionality as GetFlags for File and is
+ meant as an in-progress replacement.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>s</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>flags</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+### NodeSetFlags {:#NodeSetFlags}
+
+ Changes the `Directory.Open` flags used to access the file.
+ Supported flags which can be turned on / off:
+ - `OPEN_FLAG_APPEND`
+
+ This method does not require any rights.
+ This method has the same functionality as SetFlags for File and is
+ meant as an in-progress replacement.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>flags</code></td>
+            <td>
+                <code>uint32</code>
             </td>
         </tr></table>
 

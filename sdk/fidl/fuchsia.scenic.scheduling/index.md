@@ -8,39 +8,8 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
-### PresentationInfo {:#PresentationInfo}
-*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#7)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>latch_point</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-            <td> The |latch_point| is guaranteed to be less than |presentation_time|. The
- latch point is the time where clients should aim to have their updates
- and fences ready in order for the content to be presented at the
- corresponding presentation time.
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>presentation_time</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-            <td> The predicted time in which the enqueued operations are anticipated to take
- visible effect, expressed in nanoseconds in the |CLOCK_MONOTONIC| timebase.
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### FuturePresentationTimes {:#FuturePresentationTimes}
-*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#21)*
+*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#37)*
 
 
 
@@ -78,8 +47,8 @@ Book: /_book.yaml
         </tr>
 </table>
 
-### PresentationInfo {:#PresentationInfo}
-*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#7)*
+### FramePresentedInfo {:#FramePresentedInfo}
+*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#55)*
 
 
 
@@ -87,30 +56,37 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>latch_point</code></td>
+            <td><code>actual_presentation_time</code></td>
             <td>
-                <code>uint64</code>
+                <code>int64</code>
             </td>
-            <td> The |latch_point| is guaranteed to be less than |presentation_time|. The
- latch point is the time where clients should aim to have their updates
- and fences ready in order for the content to be presented at the
- corresponding presentation time.
+            <td> The time the frame was presented to the user. This value was captured
+ after the fact, differentiating it from the |presentation_time|s
+ included in |FuturePresentationTimes|.
 </td>
             <td>No default</td>
         </tr><tr>
-            <td><code>presentation_time</code></td>
+            <td><code>presentation_infos</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#PresentReceivedInfo'>PresentReceivedInfo</a>&gt;[32]</code>
+            </td>
+            <td> The presentation informations for each Present2() that comprised the
+ content of this frame. These are ordered by present submission order.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>num_presents_allowed</code></td>
             <td>
                 <code>uint64</code>
             </td>
-            <td> The predicted time in which the enqueued operations are anticipated to take
- visible effect, expressed in nanoseconds in the |CLOCK_MONOTONIC| timebase.
+            <td> The number of times remaining that the client can call |Present2|.
 </td>
             <td>No default</td>
         </tr>
 </table>
 
 ### FuturePresentationTimes {:#FuturePresentationTimes}
-*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#21)*
+*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#37)*
 
 
 
@@ -148,9 +124,177 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### FramePresentedInfo {:#FramePresentedInfo}
+*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#55)*
 
 
 
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>actual_presentation_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> The time the frame was presented to the user. This value was captured
+ after the fact, differentiating it from the |presentation_time|s
+ included in |FuturePresentationTimes|.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>presentation_infos</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#PresentReceivedInfo'>PresentReceivedInfo</a>&gt;[32]</code>
+            </td>
+            <td> The presentation informations for each Present2() that comprised the
+ content of this frame. These are ordered by present submission order.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>num_presents_allowed</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> The number of times remaining that the client can call |Present2|.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+
+
+
+
+## **TABLES**
+
+### PresentationInfo {:#PresentationInfo}
+
+
+*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#11)*
+
+ The times we predict for a future presentation, expressed in nanoseconds in
+ the |CLOCK_MONOTONIC| timebase.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>latch_point</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> The time where Scenic processes all pending updates to its scene graph
+ and render a new frame. Clients should aim to have all  commands sent
+ and acquire fences reached in order to have their  content be
+ presented at the corresponding |presentation_time|. The |latch_point|
+ is guaranteed to be less than |presentation_time|.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>presentation_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> The time in which the enqueued operations submitted before |latch_point|
+ take visible effect. This time is usually but not necessarily vsync.
+</td>
+        </tr></table>
+
+### PresentReceivedInfo {:#PresentReceivedInfo}
+
+
+*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#26)*
+
+ The times we record for each Present2, expressed in nanoseconds in the
+ |CLOCK_MONOTONIC| timebase.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>present_received_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> The time Scenic receives the Present2 call.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>latched_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> The time Scenic latched the Present2 call to. This is guaranteed to be
+ greater than the |present_received_time|.
+</td>
+        </tr></table>
+
+### PresentationInfo {:#PresentationInfo}
+
+
+*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#11)*
+
+ The times we predict for a future presentation, expressed in nanoseconds in
+ the |CLOCK_MONOTONIC| timebase.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>latch_point</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> The time where Scenic processes all pending updates to its scene graph
+ and render a new frame. Clients should aim to have all  commands sent
+ and acquire fences reached in order to have their  content be
+ presented at the corresponding |presentation_time|. The |latch_point|
+ is guaranteed to be less than |presentation_time|.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>presentation_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> The time in which the enqueued operations submitted before |latch_point|
+ take visible effect. This time is usually but not necessarily vsync.
+</td>
+        </tr></table>
+
+### PresentReceivedInfo {:#PresentReceivedInfo}
+
+
+*Defined in [fuchsia.scenic.scheduling/prediction_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.scheduling/prediction_info.fidl#26)*
+
+ The times we record for each Present2, expressed in nanoseconds in the
+ |CLOCK_MONOTONIC| timebase.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>present_received_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> The time Scenic receives the Present2 call.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>latched_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> The time Scenic latched the Present2 call to. This is guaranteed to be
+ greater than the |present_received_time|.
+</td>
+        </tr></table>
 
 
 
