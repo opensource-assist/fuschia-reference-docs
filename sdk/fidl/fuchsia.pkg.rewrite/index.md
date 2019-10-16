@@ -192,6 +192,7 @@ Book: /_book.yaml
 
  * status `ZX_OK` the staged edits were successfully committed.
  * status `ZX_ERR_UNAVAILABLE` another transaction committed before this one.
+ * status `ZX_ERR_ACCESS_DENIED` editing dynamic rewrite rules is permanently disabled.
 
 #### Request
 <table>

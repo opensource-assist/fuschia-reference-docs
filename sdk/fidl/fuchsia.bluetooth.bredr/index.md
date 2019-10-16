@@ -771,13 +771,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>str</code></td>
             <td>
-                <code>string?</code>
+                <code>string</code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>uuid</code></td>
             <td>
-                <code>string?</code>
+                <code>string</code>
             </td>
             <td></td>
         </tr><tr>
@@ -789,7 +789,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>bytes</code></td>
             <td>
-                <code>vector&lt;uint8&gt;?</code>
+                <code>vector&lt;uint8&gt;</code>
             </td>
             <td></td>
         </tr><tr>
