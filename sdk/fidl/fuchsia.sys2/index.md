@@ -1183,7 +1183,7 @@ Type: <code>uint32</code>
 ### ExposeServiceDecl {:#ExposeServiceDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#20)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#21)*
 
  Declares a service exposed to a component's containing realm, such as a
  service exposed by the component or one of its children at runtime.
@@ -1238,7 +1238,7 @@ Type: <code>uint32</code>
 ### ExposeLegacyServiceDecl {:#ExposeLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#46)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#47)*
 
  Declares a legacy service exposed to a component's containing realm, such as
  a legacy service exposed by the component or one of its children at runtime.
@@ -1291,7 +1291,7 @@ Type: <code>uint32</code>
 ### ExposeDirectoryDecl {:#ExposeDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#67)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#68)*
 
  Declares a directory exposed to a component's containing realm, such as a
  directory exposed by the component or one of its children at runtime.
@@ -1341,7 +1341,7 @@ Type: <code>uint32</code>
 ### ExposeRunnerDecl {:#ExposeRunnerDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#88)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#89)*
 
  Declares a runner exposed to a component's containing realm, such as a
  runner exposed by the component or one of its children at runtime.
@@ -1388,7 +1388,7 @@ Type: <code>uint32</code>
 ### OfferServiceDecl {:#OfferServiceDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#23)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#24)*
 
  Declares a service offered by a component to one of its children, which may
  have been offered by the component's containing realm, the component itself,
@@ -1442,7 +1442,7 @@ Type: <code>uint32</code>
 ### OfferLegacyServiceDecl {:#OfferLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#48)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#49)*
 
  Declares a legacy service offered by a component to one of its children,
  which may have been offered by the component's containing realm, the
@@ -1494,7 +1494,7 @@ Type: <code>uint32</code>
 ### OfferDirectoryDecl {:#OfferDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#68)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#69)*
 
  Declares a directory offered by a component to one of its children, which
  may have been offered by the component's containing realm, the component
@@ -1544,7 +1544,7 @@ Type: <code>uint32</code>
 ### OfferStorageDecl {:#OfferStorageDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#89)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#90)*
 
  Declares a storage capability offered by a component to one of its children,
  such as meta storage offered by the component's containing realm or cache
@@ -1583,7 +1583,7 @@ Type: <code>uint32</code>
 ### OfferRunnerDecl {:#OfferRunnerDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#104)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#105)*
 
  Declares a runner offered by a component to one of its children, which may
  have been offered by the component's containing realm, the component itself,
@@ -1708,7 +1708,7 @@ Type: <code>uint32</code>
 ### UseServiceDecl {:#UseServiceDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#21)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#22)*
 
  Declares a service used by a component, which was offered to the component's
  environment.
@@ -1755,7 +1755,7 @@ Type: <code>uint32</code>
 ### UseLegacyServiceDecl {:#UseLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#44)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#45)*
 
  Declares a legacy service used by a component, which was offered to the
  component's environment.
@@ -1800,7 +1800,7 @@ Type: <code>uint32</code>
 ### UseDirectoryDecl {:#UseDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#62)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#63)*
 
  Declares a directory used by a component, which was offered to the
  component's environment.
@@ -1842,7 +1842,7 @@ Type: <code>uint32</code>
 ### UseStorageDecl {:#UseStorageDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#80)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#81)*
 
  Declares storage used by a component, which was offered to the component's
  environment.
@@ -1874,7 +1874,7 @@ Type: <code>uint32</code>
 ### UseRunnerDecl {:#UseRunnerDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#93)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#94)*
 
  Declares a runner used by a component, which was offered to the component's
  environment.
@@ -1884,11 +1884,12 @@ Type: <code>uint32</code>
     <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
     <tr>
             <td>1</td>
-            <td><code>name</code></td>
+            <td><code>source_name</code></td>
             <td>
                 <code>string[100]</code>
             </td>
-            <td> The name of the runner, as it was presented to this component.
+            <td> The name of the runner, as it was presented to this component by the
+ realm.
 </td>
         </tr></table>
 
@@ -2263,6 +2264,12 @@ Type: <code>uint32</code>
                 <code><a class='link' href='#ExposeDirectoryDecl'>ExposeDirectoryDecl</a></code>
             </td>
             <td></td>
+        </tr><tr>
+            <td><code>runner</code></td>
+            <td>
+                <code><a class='link' href='#ExposeRunnerDecl'>ExposeRunnerDecl</a></code>
+            </td>
+            <td></td>
         </tr></table>
 
 ### OfferDecl {:#OfferDecl}
@@ -2295,6 +2302,12 @@ Type: <code>uint32</code>
             <td><code>storage</code></td>
             <td>
                 <code><a class='link' href='#OfferStorageDecl'>OfferStorageDecl</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>runner</code></td>
+            <td>
+                <code><a class='link' href='#OfferRunnerDecl'>OfferRunnerDecl</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2373,6 +2386,12 @@ Type: <code>uint32</code>
             <td><code>storage</code></td>
             <td>
                 <code><a class='link' href='#UseStorageDecl'>UseStorageDecl</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>runner</code></td>
+            <td>
+                <code><a class='link' href='#UseRunnerDecl'>UseRunnerDecl</a></code>
             </td>
             <td></td>
         </tr></table>

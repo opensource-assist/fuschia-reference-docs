@@ -275,6 +275,13 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.location.namedplace/index">fuchsia.location.namedplace</a></td>
+    <td> Protocols and types related to named places. Named places include cities,
+ countries, regions, etc. This specifically excludes protocols and types
+ related to latitude and longitude.
+</td>
+</tr>
+<tr>
     <td><a href="fuchsia.logger/index">fuchsia.logger</a></td>
     <td></td>
 </tr>

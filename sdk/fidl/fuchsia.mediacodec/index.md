@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## CodecFactory {:#CodecFactory}
-*Defined in [fuchsia.mediacodec/codec_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.mediacodec/codec_factory.fidl#222)*
+*Defined in [fuchsia.mediacodec/codec_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.mediacodec/codec_factory.fidl#255)*
 
 
 ### OnCodecList {:#OnCodecList}
@@ -70,7 +70,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### CodecDescription {:#CodecDescription}
-*Defined in [fuchsia.mediacodec/codec_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.mediacodec/codec_factory.fidl#187)*
+*Defined in [fuchsia.mediacodec/codec_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.mediacodec/codec_factory.fidl#220)*
 
 
 
@@ -140,10 +140,34 @@ Book: /_book.yaml
 
 ## **ENUMS**
 
+### SecureMemoryMode {:#SecureMemoryMode}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.mediacodec/codec_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.mediacodec/codec_factory.fidl#22)*
+
+ Whether buffers need to be secure.  If not specified, the default is OFF.
+
+ This enum may have additional values added later; code handling this type
+ should be written with this in mind.  For example, in C++, having a
+ "default" case in any switch statement on this type will avoid compilation
+ warnings/errors when a new value is added.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>OFF</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ON</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr></table>
+
 ### CodecType {:#CodecType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.mediacodec/codec_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.mediacodec/codec_factory.fidl#182)*
+*Defined in [fuchsia.mediacodec/codec_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.mediacodec/codec_factory.fidl#215)*
 
 
 
@@ -165,7 +189,7 @@ Type: <code>uint32</code>
 ### CreateDecoder_Params {:#CreateDecoder_Params}
 
 
-*Defined in [fuchsia.mediacodec/codec_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.mediacodec/codec_factory.fidl#14)*
+*Defined in [fuchsia.mediacodec/codec_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.mediacodec/codec_factory.fidl#29)*
 
 
 
@@ -340,12 +364,40 @@ Type: <code>uint32</code>
  headers.  This is not an attempt at a mechanism to fully work around a
  codec that doesn't handle split headers.
 </td>
+        </tr><tr>
+            <td>9</td>
+            <td><code>secure_output_mode</code></td>
+            <td>
+                <code><a class='link' href='#SecureMemoryMode'>SecureMemoryMode</a></code>
+            </td>
+            <td> If set to ON, the decoder must support secure buffers on output, and
+ must reject non-secure buffers on output.
+
+ If set to OFF or not set, the created decoder will reject secure buffers
+ on output by closing the StreamProcessor channel.
+
+ If secure_input_mode ON, secure_output_mode must also be ON.
+</td>
+        </tr><tr>
+            <td>10</td>
+            <td><code>secure_input_mode</code></td>
+            <td>
+                <code><a class='link' href='#SecureMemoryMode'>SecureMemoryMode</a></code>
+            </td>
+            <td> If set to ON, the decoder must support secure buffers on input and must
+ reject non-secure buffers on input.
+
+ If set to OFF or not set, the created decoder will reject secure buffers
+ on input by closing the StreamProcessor channel.
+
+ If secure_input_mode ON, secure_output_mode must also be ON.
+</td>
         </tr></table>
 
 ### CreateEncoder_Params {:#CreateEncoder_Params}
 
 
-*Defined in [fuchsia.mediacodec/codec_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.mediacodec/codec_factory.fidl#168)*
+*Defined in [fuchsia.mediacodec/codec_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.mediacodec/codec_factory.fidl#201)*
 
  Parameters used to request an encoder.
 

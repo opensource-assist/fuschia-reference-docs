@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Stack {:#Stack}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#126)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#138)*
 
 
 ### AddEthernetInterface {:#AddEthernetInterface}
@@ -21,7 +21,7 @@ Book: /_book.yaml
     <tr>
             <td><code>topological_path</code></td>
             <td>
-                <code>string</code>
+                <code>string[255]</code>
             </td>
         </tr><tr>
             <td><code>device</code></td>
@@ -82,7 +82,7 @@ Book: /_book.yaml
     <tr>
             <td><code>ifs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#InterfaceInfo'>InterfaceInfo</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#InterfaceInfo'>InterfaceInfo</a>&gt;[255]</code>
             </td>
         </tr></table>
 
@@ -393,7 +393,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Log {:#Log}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#198)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#212)*
 
 
 ### SetLogLevel {:#SetLogLevel}
@@ -573,7 +573,7 @@ Book: /_book.yaml
 </table>
 
 ### InterfaceAddress {:#InterfaceAddress}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#37)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#49)*
 
 
 
@@ -581,7 +581,7 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>ipAddress</code></td>
+            <td><code>ip_address</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.net/index.html'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/index.html#IpAddress'>IpAddress</a></code>
             </td>
@@ -589,7 +589,7 @@ Book: /_book.yaml
 </td>
             <td>No default</td>
         </tr><tr>
-            <td><code>prefixLen</code></td>
+            <td><code>prefix_len</code></td>
             <td>
                 <code>uint8</code>
             </td>
@@ -600,7 +600,7 @@ Book: /_book.yaml
 </table>
 
 ### InterfaceInfo {:#InterfaceInfo}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#45)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#57)*
 
 
 
@@ -629,7 +629,7 @@ Book: /_book.yaml
 </table>
 
 ### InterfaceProperties {:#InterfaceProperties}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#55)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#67)*
 
 
 
@@ -639,7 +639,7 @@ Book: /_book.yaml
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>name</code></td>
             <td>
-                <code>string</code>
+                <code>string[32]</code>
             </td>
             <td> Human friendly name of the interface. eg. eth001, wlanx35.
 </td>
@@ -647,7 +647,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>topopath</code></td>
             <td>
-                <code>string</code>
+                <code>string[255]</code>
             </td>
             <td> The topological path to the device, representing a stable identifier for the interface
  hardware.
@@ -656,7 +656,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>filepath</code></td>
             <td>
-                <code>string</code>
+                <code>string[255]</code>
             </td>
             <td> An unstable file path corresponding to the interface. Used in watching the creation
  and destruction of the interface, or in accessing the interface using netdump.
@@ -688,7 +688,7 @@ Book: /_book.yaml
 </td>
             <td>No default</td>
         </tr><tr>
-            <td><code>administrativeStatus</code></td>
+            <td><code>administrative_status</code></td>
             <td>
                 <code><a class='link' href='#AdministrativeStatus'>AdministrativeStatus</a></code>
             </td>
@@ -696,7 +696,7 @@ Book: /_book.yaml
 </td>
             <td>No default</td>
         </tr><tr>
-            <td><code>physicalStatus</code></td>
+            <td><code>physical_status</code></td>
             <td>
                 <code><a class='link' href='#PhysicalStatus'>PhysicalStatus</a></code>
             </td>
@@ -706,7 +706,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>addresses</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#InterfaceAddress'>InterfaceAddress</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#InterfaceAddress'>InterfaceAddress</a>&gt;[255]</code>
             </td>
             <td> The list of addresses currently assigned to the interface.
 </td>
@@ -715,7 +715,7 @@ Book: /_book.yaml
 </table>
 
 ### ForwardingEntry {:#ForwardingEntry}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#98)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#110)*
 
 
 
@@ -743,7 +743,7 @@ Book: /_book.yaml
 </table>
 
 ### InterfaceStatusChange {:#InterfaceStatusChange}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#106)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#118)*
 
 
 
@@ -776,7 +776,7 @@ Book: /_book.yaml
 ### PresenceStatus {:#PresenceStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#10)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#22)*
 
 
 
@@ -796,7 +796,7 @@ Type: <code>uint32</code>
 ### PhysicalStatus {:#PhysicalStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#17)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#29)*
 
 
 
@@ -816,7 +816,7 @@ Type: <code>uint32</code>
 ### AdministrativeStatus {:#AdministrativeStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#24)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#36)*
 
 
 
@@ -836,7 +836,7 @@ Type: <code>uint32</code>
 ### Error {:#Error}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#114)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#126)*
 
 
 
@@ -878,7 +878,7 @@ Type: <code>uint32</code>
 ### LogLevelFilter {:#LogLevelFilter}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#188)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#202)*
 
  Note LogLevelFilter and protocol Log is transient,
  and is planned to be deprecated by logger.fidl's LogLevelFilter.
@@ -1147,7 +1147,7 @@ Type: <code>int32</code>
         </tr></table>
 
 ### InterfaceStatus {:#InterfaceStatus}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#31)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#43)*
 
 
 <table>
@@ -1172,21 +1172,21 @@ Type: <code>int32</code>
         </tr></table>
 
 ### ForwardingDestination {:#ForwardingDestination}
-*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net-stack/stack.fidl#89)*
+*Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#101)*
 
  A ForwardingDestination represents either the device that should transmit a packet or the address
  of the next hop in the route.
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>deviceId</code></td>
+            <td><code>device_id</code></td>
             <td>
                 <code>uint64</code>
             </td>
             <td> The opaque identifier of the device to which packets should be forwarded.
 </td>
         </tr><tr>
-            <td><code>nextHop</code></td>
+            <td><code>next_hop</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.net/index.html'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/index.html#IpAddress'>IpAddress</a></code>
             </td>

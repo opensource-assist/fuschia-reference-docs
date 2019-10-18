@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## KeyManager {:#KeyManager}
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#54)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#53)*
 
 
 ### SealData {:#SealData}
@@ -32,14 +32,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>cipher_text</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a>?</code>
+                <code><a class='link' href='#KeyManager_SealData_Result'>KeyManager_SealData_Result</a></code>
             </td>
         </tr></table>
 
@@ -64,14 +59,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>plain_text</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a>?</code>
+                <code><a class='link' href='#KeyManager_UnsealData_Result'>KeyManager_UnsealData_Result</a></code>
             </td>
         </tr></table>
 
@@ -104,9 +94,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
+                <code><a class='link' href='#KeyManager_GenerateAsymmetricKey_Result'>KeyManager_GenerateAsymmetricKey_Result</a></code>
             </td>
         </tr></table>
 
@@ -143,9 +133,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
+                <code><a class='link' href='#KeyManager_GenerateAsymmetricKeyWithAlgorithm_Result'>KeyManager_GenerateAsymmetricKeyWithAlgorithm_Result</a></code>
             </td>
         </tr></table>
 
@@ -188,9 +178,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
+                <code><a class='link' href='#KeyManager_ImportAsymmetricPrivateKey_Result'>KeyManager_ImportAsymmetricPrivateKey_Result</a></code>
             </td>
         </tr></table>
 
@@ -221,9 +211,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
+                <code><a class='link' href='#KeyManager_GetAsymmetricPrivateKey_Result'>KeyManager_GetAsymmetricPrivateKey_Result</a></code>
             </td>
         </tr></table>
 
@@ -233,7 +223,7 @@ Book: /_book.yaml
 
  Delete a key for `key_name`.  For all the current handle to the deleted key, they would
  become invalid and all following requests on those handles would return `KEY_NOT_FOUND`, user
- should close the invalid handles once get `KEY_NOT_FOUND` Status.
+ should close the invalid handles once get `KEY_NOT_FOUND` error.
 
 #### Request
 <table>
@@ -250,14 +240,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
+                <code><a class='link' href='#KeyManager_DeleteKey_Result'>KeyManager_DeleteKey_Result</a></code>
             </td>
         </tr></table>
 
 ## Key {:#Key}
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#115)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#114)*
 
 
 ### GetKeyOrigin {:#GetKeyOrigin}
@@ -274,19 +264,14 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>key_origin</code></td>
-            <td>
-                <code><a class='link' href='#KeyOrigin'>KeyOrigin</a></code>
+                <code><a class='link' href='#Key_GetKeyOrigin_Result'>Key_GetKeyOrigin_Result</a></code>
             </td>
         </tr></table>
 
 ## AsymmetricPrivateKey {:#AsymmetricPrivateKey}
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#120)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#119)*
 
 
 ### GetKeyOrigin {:#GetKeyOrigin}
@@ -303,14 +288,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>key_origin</code></td>
-            <td>
-                <code><a class='link' href='#KeyOrigin'>KeyOrigin</a></code>
+                <code><a class='link' href='#Key_GetKeyOrigin_Result'>Key_GetKeyOrigin_Result</a></code>
             </td>
         </tr></table>
 
@@ -333,14 +313,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>signature</code></td>
-            <td>
-                <code><a class='link' href='#Signature'>Signature</a>?</code>
+                <code><a class='link' href='#AsymmetricPrivateKey_Sign_Result'>AsymmetricPrivateKey_Sign_Result</a></code>
             </td>
         </tr></table>
 
@@ -358,14 +333,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>public_key</code></td>
-            <td>
-                <code><a class='link' href='#PublicKey'>PublicKey</a>?</code>
+                <code><a class='link' href='#AsymmetricPrivateKey_GetPublicKey_Result'>AsymmetricPrivateKey_GetPublicKey_Result</a></code>
             </td>
         </tr></table>
 
@@ -383,14 +353,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>key_algorithm</code></td>
-            <td>
-                <code><a class='link' href='#AsymmetricKeyAlgorithm'>AsymmetricKeyAlgorithm</a></code>
+                <code><a class='link' href='#AsymmetricPrivateKey_GetKeyAlgorithm_Result'>AsymmetricPrivateKey_GetKeyAlgorithm_Result</a></code>
             </td>
         </tr></table>
 
@@ -422,14 +387,9 @@ Book: /_book.yaml
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>derived_key</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[32]</code>
+                <code><a class='link' href='#StatelessKeyManager_GetHardwareDerivedKey_Result'>StatelessKeyManager_GetHardwareDerivedKey_Result</a></code>
             </td>
         </tr></table>
 
@@ -437,8 +397,171 @@ Book: /_book.yaml
 
 ## **STRUCTS**
 
+### KeyManager_SealData_Response {:#KeyManager_SealData_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>cipher_text</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### KeyManager_UnsealData_Response {:#KeyManager_UnsealData_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>plain_text</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/index.html'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/index.html#Buffer'>Buffer</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### KeyManager_GenerateAsymmetricKey_Response {:#KeyManager_GenerateAsymmetricKey_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### KeyManager_GenerateAsymmetricKeyWithAlgorithm_Response {:#KeyManager_GenerateAsymmetricKeyWithAlgorithm_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### KeyManager_ImportAsymmetricPrivateKey_Response {:#KeyManager_ImportAsymmetricPrivateKey_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### KeyManager_GetAsymmetricPrivateKey_Response {:#KeyManager_GetAsymmetricPrivateKey_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### KeyManager_DeleteKey_Response {:#KeyManager_DeleteKey_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Key_GetKeyOrigin_Response {:#Key_GetKeyOrigin_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>key_origin</code></td>
+            <td>
+                <code><a class='link' href='#KeyOrigin'>KeyOrigin</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### AsymmetricPrivateKey_Sign_Response {:#AsymmetricPrivateKey_Sign_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>signature</code></td>
+            <td>
+                <code><a class='link' href='#Signature'>Signature</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### AsymmetricPrivateKey_GetPublicKey_Response {:#AsymmetricPrivateKey_GetPublicKey_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>public_key</code></td>
+            <td>
+                <code><a class='link' href='#PublicKey'>PublicKey</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### AsymmetricPrivateKey_GetKeyAlgorithm_Response {:#AsymmetricPrivateKey_GetKeyAlgorithm_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>key_algorithm</code></td>
+            <td>
+                <code><a class='link' href='#AsymmetricKeyAlgorithm'>AsymmetricKeyAlgorithm</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Signature {:#Signature}
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#45)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#44)*
 
 
 
@@ -456,7 +579,7 @@ Book: /_book.yaml
 </table>
 
 ### PublicKey {:#PublicKey}
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#49)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#48)*
 
 
 
@@ -473,11 +596,29 @@ Book: /_book.yaml
         </tr>
 </table>
 
+### StatelessKeyManager_GetHardwareDerivedKey_Response {:#StatelessKeyManager_GetHardwareDerivedKey_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>derived_key</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[32]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 
 
 ## **ENUMS**
 
-### Status {:#Status}
+### Error {:#Error}
 Type: <code>uint32</code>
 
 *Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#12)*
@@ -486,10 +627,6 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>OK</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
             <td><code>INTERNAL_ERROR</code></td>
             <td><code>1</code></td>
             <td> Internal unexpected error.
@@ -519,7 +656,7 @@ Type: <code>uint32</code>
 ### AsymmetricKeyAlgorithm {:#AsymmetricKeyAlgorithm}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#26)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#25)*
 
 
 
@@ -565,7 +702,7 @@ Type: <code>uint32</code>
 ### KeyOrigin {:#KeyOrigin}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#38)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#37)*
 
 
 
@@ -585,6 +722,236 @@ Type: <code>uint32</code>
 
 
 
+
+## **UNIONS**
+
+### KeyManager_SealData_Result {:#KeyManager_SealData_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#KeyManager_SealData_Response'>KeyManager_SealData_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### KeyManager_UnsealData_Result {:#KeyManager_UnsealData_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#KeyManager_UnsealData_Response'>KeyManager_UnsealData_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### KeyManager_GenerateAsymmetricKey_Result {:#KeyManager_GenerateAsymmetricKey_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#KeyManager_GenerateAsymmetricKey_Response'>KeyManager_GenerateAsymmetricKey_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### KeyManager_GenerateAsymmetricKeyWithAlgorithm_Result {:#KeyManager_GenerateAsymmetricKeyWithAlgorithm_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#KeyManager_GenerateAsymmetricKeyWithAlgorithm_Response'>KeyManager_GenerateAsymmetricKeyWithAlgorithm_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### KeyManager_ImportAsymmetricPrivateKey_Result {:#KeyManager_ImportAsymmetricPrivateKey_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#KeyManager_ImportAsymmetricPrivateKey_Response'>KeyManager_ImportAsymmetricPrivateKey_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### KeyManager_GetAsymmetricPrivateKey_Result {:#KeyManager_GetAsymmetricPrivateKey_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#KeyManager_GetAsymmetricPrivateKey_Response'>KeyManager_GetAsymmetricPrivateKey_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### KeyManager_DeleteKey_Result {:#KeyManager_DeleteKey_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#KeyManager_DeleteKey_Response'>KeyManager_DeleteKey_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Key_GetKeyOrigin_Result {:#Key_GetKeyOrigin_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Key_GetKeyOrigin_Response'>Key_GetKeyOrigin_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### AsymmetricPrivateKey_Sign_Result {:#AsymmetricPrivateKey_Sign_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AsymmetricPrivateKey_Sign_Response'>AsymmetricPrivateKey_Sign_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### AsymmetricPrivateKey_GetPublicKey_Result {:#AsymmetricPrivateKey_GetPublicKey_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AsymmetricPrivateKey_GetPublicKey_Response'>AsymmetricPrivateKey_GetPublicKey_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### AsymmetricPrivateKey_GetKeyAlgorithm_Result {:#AsymmetricPrivateKey_GetKeyAlgorithm_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AsymmetricPrivateKey_GetKeyAlgorithm_Response'>AsymmetricPrivateKey_GetKeyAlgorithm_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### StatelessKeyManager_GetHardwareDerivedKey_Result {:#StatelessKeyManager_GetHardwareDerivedKey_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#StatelessKeyManager_GetHardwareDerivedKey_Response'>StatelessKeyManager_GetHardwareDerivedKey_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
 
 
 

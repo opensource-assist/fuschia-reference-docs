@@ -135,6 +135,8 @@ toc:
   path: /reference/fidl/fuchsia.ldsvc
 - title: fuchsia.ledger
   path: /reference/fidl/fuchsia.ledger
+- title: fuchsia.location.namedplace
+  path: /reference/fidl/fuchsia.location.namedplace
 - title: fuchsia.logger
   path: /reference/fidl/fuchsia.logger
 - title: fuchsia.math
