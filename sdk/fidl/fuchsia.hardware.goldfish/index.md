@@ -1,14 +1,157 @@
 Project: /_project.yaml
 Book: /_book.yaml
 
-# fuchsia.hardware.goldfish.pipe
+# fuchsia.hardware.goldfish
 
 
 ## **PROTOCOLS**
 
-## Device {:#Device}
-*Defined in [fuchsia.hardware.goldfish.pipe/goldfish-pipe.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-goldfish-pipe/goldfish-pipe.fidl#22)*
+## AddressSpaceDevice {:#AddressSpaceDevice}
+*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#11)*
 
+ Interface for the Goldfish address space driver allocating memory blocks.
+
+### AllocateBlock {:#AllocateBlock}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>size</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>res</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>paddr</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>vmo</code></td>
+            <td>
+                <code>handle&lt;vmo&gt;?</code>
+            </td>
+        </tr></table>
+
+### DeallocateBlock {:#DeallocateBlock}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>paddr</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>res</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+## ControlDevice {:#ControlDevice}
+*Defined in [fuchsia.hardware.goldfish/goldfish_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_control.fidl#17)*
+
+ Interface for the Goldfish control driver providing color buffers.
+
+### CreateColorBuffer {:#CreateColorBuffer}
+
+ Create shared color buffer. Color buffer is automatically freed when
+ all references to `vmo` have been closed. Fails if VMO is not
+ associated with goldfish heap memory.
+ Returns ZX_ERR_ALREADY_EXISTS if color buffer has already been created.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>vmo</code></td>
+            <td>
+                <code>handle&lt;vmo&gt;</code>
+            </td>
+        </tr><tr>
+            <td><code>width</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>height</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr><tr>
+            <td><code>format</code></td>
+            <td>
+                <code><a class='link' href='#ColorBufferFormatType'>ColorBufferFormatType</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>res</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+### GetColorBuffer {:#GetColorBuffer}
+
+ Get color buffer for VMO. Fails if VMO is not associated with a color
+ buffer.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>vmo</code></td>
+            <td>
+                <code>handle&lt;vmo&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>res</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+## PipeDevice {:#PipeDevice}
+*Defined in [fuchsia.hardware.goldfish/goldfish_pipe.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_pipe.fidl#23)*
+
+ Interface for the Goldfish pipe driver.
 
 ### OpenPipe {:#OpenPipe}
 
@@ -30,7 +173,7 @@ Book: /_book.yaml
 
 
 ## Pipe {:#Pipe}
-*Defined in [fuchsia.hardware.goldfish.pipe/goldfish-pipe.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-goldfish-pipe/goldfish-pipe.fidl#31)*
+*Defined in [fuchsia.hardware.goldfish/goldfish_pipe.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_pipe.fidl#32)*
 
 
 ### SetBufferSize {:#SetBufferSize}
@@ -227,6 +370,27 @@ Book: /_book.yaml
 
 
 
+## **ENUMS**
+
+### ColorBufferFormatType {:#ColorBufferFormatType}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.hardware.goldfish/goldfish_control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_control.fidl#10)*
+
+ Color buffer formats.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>RGBA</code></td>
+            <td><code>6408</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>BGRA</code></td>
+            <td><code>32993</code></td>
+            <td></td>
+        </tr></table>
+
 
 
 
@@ -241,7 +405,7 @@ Book: /_book.yaml
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-goldfish-pipe/goldfish-pipe.fidl#11">SIGNAL_READABLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_pipe.fidl#11">SIGNAL_READABLE</a></td>
             <td>
                     <code>16777216</code>
                 </td>
@@ -251,7 +415,7 @@ Book: /_book.yaml
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-goldfish-pipe/goldfish-pipe.fidl#15">SIGNAL_WRITABLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_pipe.fidl#15">SIGNAL_WRITABLE</a></td>
             <td>
                     <code>33554432</code>
                 </td>
@@ -261,7 +425,7 @@ Book: /_book.yaml
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-goldfish-pipe/goldfish-pipe.fidl#19">SIGNAL_HANGUP</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_pipe.fidl#19">SIGNAL_HANGUP</a></td>
             <td>
                     <code>67108864</code>
                 </td>

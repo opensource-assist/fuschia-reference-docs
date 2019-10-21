@@ -44,6 +44,50 @@ Book: /_book.yaml
             </td>
         </tr></table>
 
+### GetDeadlineProfile {:#GetDeadlineProfile}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>capacity</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>deadline</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>period</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string[64]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>profile</code></td>
+            <td>
+                <code>handle&lt;profile&gt;?</code>
+            </td>
+        </tr></table>
+
 
 
 

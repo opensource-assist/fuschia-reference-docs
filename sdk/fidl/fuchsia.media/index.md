@@ -1103,7 +1103,7 @@ Book: /_book.yaml
 
 
 ## AudioRenderer {:#AudioRenderer}
-*Defined in [fuchsia.media/audio_renderer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_renderer.fidl#23)*
+*Defined in [fuchsia.media/audio_renderer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_renderer.fidl#21)*
 
 
  AudioRenderers can be in one of two states at any point in time, either
@@ -1116,7 +1116,6 @@ Book: /_book.yaml
 
  If an AudioRenderer must be reconfigured, it is best practice to always call
  `DiscardAllPackets` on the AudioRenderer, before starting to reconfigure it.
-
 
 ### AddPayloadBuffer {:#AddPayloadBuffer}
 
@@ -1262,25 +1261,6 @@ Book: /_book.yaml
             <td><code>type</code></td>
             <td>
                 <code><a class='link' href='#AudioStreamType'>AudioStreamType</a></code>
-            </td>
-        </tr></table>
-
-
-
-### SetStreamType {:#SetStreamType}
-
- Sets the stream type to be delivered by the client. This method is used
- for compressed pass-through. The media_specific field must be of type
- audio.
- NOTE: Not currently implemented.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>type</code></td>
-            <td>
-                <code><a class='link' href='#StreamType'>StreamType</a></code>
             </td>
         </tr></table>
 

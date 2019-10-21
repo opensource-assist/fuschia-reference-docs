@@ -75,6 +75,8 @@ toc:
   path: /reference/fidl/fuchsia.diagnostics
 - title: fuchsia.diagnostics.inspect
   path: /reference/fidl/fuchsia.diagnostics.inspect
+- title: fuchsia.diagnostics.stream
+  path: /reference/fidl/fuchsia.diagnostics.stream
 - title: fuchsia.exception
   path: /reference/fidl/fuchsia.exception
 - title: fuchsia.factory
@@ -97,12 +99,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.display
 - title: fuchsia.hardware.ethernet
   path: /reference/fidl/fuchsia.hardware.ethernet
-- title: fuchsia.hardware.goldfish.address.space
-  path: /reference/fidl/fuchsia.hardware.goldfish.address.space
-- title: fuchsia.hardware.goldfish.control
-  path: /reference/fidl/fuchsia.hardware.goldfish.control
-- title: fuchsia.hardware.goldfish.pipe
-  path: /reference/fidl/fuchsia.hardware.goldfish.pipe
+- title: fuchsia.hardware.goldfish
+  path: /reference/fidl/fuchsia.hardware.goldfish
 - title: fuchsia.hardware.input
   path: /reference/fidl/fuchsia.hardware.input
 - title: fuchsia.hardware.pty
@@ -119,6 +117,8 @@ toc:
   path: /reference/fidl/fuchsia.identity.account
 - title: fuchsia.identity.internal
   path: /reference/fidl/fuchsia.identity.internal
+- title: fuchsia.identity.keys
+  path: /reference/fidl/fuchsia.identity.keys
 - title: fuchsia.images
   path: /reference/fidl/fuchsia.images
 - title: fuchsia.inspect.deprecated
@@ -257,6 +257,8 @@ toc:
   path: /reference/fidl/fuchsia.ui.app
 - title: fuchsia.ui.brightness
   path: /reference/fidl/fuchsia.ui.brightness
+- title: fuchsia.ui.display
+  path: /reference/fidl/fuchsia.ui.display
 - title: fuchsia.ui.focus
   path: /reference/fidl/fuchsia.ui.focus
 - title: fuchsia.ui.gfx

@@ -1597,8 +1597,19 @@ Book: /_book.yaml
 
 
 
+### Restart {:#Restart}
+
+ Restarts the session without logging out the user.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+
 ## SessionShellPresentationProvider {:#SessionShellPresentationProvider}
-*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#80)*
+*Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#83)*
 
  Session shell provides this service to the framework which may plumb it to
  different subscribers, such as story shell and intelligence provider.

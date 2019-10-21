@@ -6,11 +6,10 @@ Book: /_book.yaml
 
 ## **PROTOCOLS**
 
-## Overnet {:#Overnet}
-*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#12)*
+## ServiceConsumer {:#ServiceConsumer}
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#14)*
 
- Overnet forms a mesh network of peer devices which can proxy some Zircon objects between 
- said devices.
+ Interfaces applicable to consuming services from other devices
 
 ### ListPeers {:#ListPeers}
 
@@ -34,28 +33,6 @@ Book: /_book.yaml
                 <code>vector&lt;<a class='link' href='#Peer'>Peer</a>&gt;</code>
             </td>
         </tr></table>
-
-### RegisterService {:#RegisterService}
-
- Register a new service to be exported by Overnet.
- If an existing service has the same `service_name`, it's replaced by this service.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>service_name</code></td>
-            <td>
-                <code>string[255]</code>
-            </td>
-        </tr><tr>
-            <td><code>provider</code></td>
-            <td>
-                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a></code>
-            </td>
-        </tr></table>
-
-
 
 ### ConnectToService {:#ConnectToService}
 
@@ -83,6 +60,38 @@ Book: /_book.yaml
 
 
 
+## ServicePublisher {:#ServicePublisher}
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#28)*
+
+ Interfaces applicable to sharing services with ServiceConsumer's
+
+### PublishService {:#PublishService}
+
+ Register a new service to be exported by Overnet.
+ If an existing service has the same `service_name`, it's replaced by this service.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>service_name</code></td>
+            <td>
+                <code>string[255]</code>
+            </td>
+        </tr><tr>
+            <td><code>provider</code></td>
+            <td>
+                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a></code>
+            </td>
+        </tr></table>
+
+
+
+## MeshController {:#MeshController}
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#37)*
+
+ Interfaces applicable to controlling an Overnet mesh
+
 ### AttachSocketLink {:#AttachSocketLink}
 
  Attach a socket as a new link.
@@ -104,8 +113,85 @@ Book: /_book.yaml
 
 
 
+## Overnet {:#Overnet}
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#45)*
+
+ Legacy Overnet interface for applications that did not distinguish between ServiceConsumer and
+ ServicePublisher
+
+### ListPeers {:#ListPeers}
+
+ Returns a list of all peers that are connected to this Overnet.
+ If this list has not been updated since the last call to this method, it waits until
+ new data is available.
+ Concurrent calls to ListPeers will result in channel closure.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>peers</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#Peer'>Peer</a>&gt;</code>
+            </td>
+        </tr></table>
+
+### ConnectToService {:#ConnectToService}
+
+ Connect `chan` to some external service on `node` with name `service_name`.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>node</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.overnet.protocol/index.html'>fuchsia.overnet.protocol</a>/<a class='link' href='../fuchsia.overnet.protocol/index.html#NodeId'>NodeId</a></code>
+            </td>
+        </tr><tr>
+            <td><code>service_name</code></td>
+            <td>
+                <code>string[255]</code>
+            </td>
+        </tr><tr>
+            <td><code>chan</code></td>
+            <td>
+                <code>handle&lt;channel&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+### PublishService {:#PublishService}
+
+ Register a new service to be exported by Overnet.
+ If an existing service has the same `service_name`, it's replaced by this service.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>service_name</code></td>
+            <td>
+                <code>string[255]</code>
+            </td>
+        </tr><tr>
+            <td><code>provider</code></td>
+            <td>
+                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a></code>
+            </td>
+        </tr></table>
+
+
+
 ## ServiceProvider {:#ServiceProvider}
-*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#31)*
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#51)*
 
  A ServiceProvider is a factory for one service.
 
@@ -136,7 +222,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### Peer {:#Peer}
-*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#38)*
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#58)*
 
 
 
@@ -180,7 +266,7 @@ Book: /_book.yaml
 ### SocketLinkOptions {:#SocketLinkOptions}
 
 
-*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#48)*
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#68)*
 
  Extra arguments for attaching a socket link to an Overnet mesh.
 
@@ -200,7 +286,7 @@ Book: /_book.yaml
 ### ConnectionInfo {:#ConnectionInfo}
 
 
-*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#54)*
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#74)*
 
  Information provided to a ServiceProvider about an incoming connection.
 

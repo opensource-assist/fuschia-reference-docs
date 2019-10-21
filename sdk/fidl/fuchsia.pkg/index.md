@@ -244,6 +244,8 @@ Book: /_book.yaml
  local system.
 
  + request `package_url` The package URL of a font package.
+ + request `update_policy` Freshness and caching policies to be used when the
+   `FontResolver` is fetching packages.
  + request `directory_request` Request for a directory that will be resolved when the package
    has been successfully cached. The directory should contain a single file, corresponding to
    the asset filename. The client should retain the directory handle for as long as needed to
@@ -265,6 +267,11 @@ Book: /_book.yaml
             <td><code>package_url</code></td>
             <td>
                 <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>update_policy</code></td>
+            <td>
+                <code><a class='link' href='#UpdatePolicy'>UpdatePolicy</a></code>
             </td>
         </tr><tr>
             <td><code>directory_request</code></td>

@@ -358,7 +358,7 @@ Book: /_book.yaml
     </table>
 
 ## AuthListener {:#AuthListener}
-*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#19)*
+*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#20)*
 
  A protocol to receive events when the authentication state of an account
  changes.
@@ -412,7 +412,7 @@ Book: /_book.yaml
     </table>
 
 ## AuthTarget {:#AuthTarget}
-*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#35)*
+*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#36)*
 
  A protocol that is extended by other protocols defining an entity
  (referred to as the "target") with an authentication state, such as a
@@ -485,7 +485,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Account {:#Account}
-*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#63)*
+*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#64)*
 
  A protocol that exposes information about the personae and recovery account
  for a Fuchsia account and provides methods to manipulate these.
@@ -738,7 +738,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Persona {:#Persona}
-*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#124)*
+*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#125)*
 
  A protocol that exposes basic information about a Fuchsia persona and access
  to the authentication tokens that are visible through it.
@@ -840,7 +840,7 @@ Book: /_book.yaml
  `application_url` A url for the Fuchsia agent that this channel will be
                    used by. Applications are only allowed to access
                    tokens that they created.
- `token_manager` The client end of a `Persona` channel
+ `token_manager` The client end of a `TokenManager` channel
 
 #### Request
 <table>
@@ -865,6 +865,46 @@ Book: /_book.yaml
             <td><code>result</code></td>
             <td>
                 <code><a class='link' href='#Persona_GetTokenManager_Result'>Persona_GetTokenManager_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetKeyManager {:#GetKeyManager}
+
+ Connects a channel to access and manage key material that is consistent
+ across all devices with access to this persona.
+
+ Persona key storage is a very limited resource. Only a small number of
+ core components should use KeyManager, often in order to supply more
+ scalable forms of synchronization to other applications (e.g. Ledger).
+
+ `application_url` A url for the component that this channel will be
+                   used by. Applications are only allowed to access
+                   their own keys.
+ `key_manager` The client end of a `KeyManager` channel
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>application_url</code></td>
+            <td>
+                <code>string[2083]</code>
+            </td>
+        </tr><tr>
+            <td><code>key_manager</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.identity.keys/index.html'>fuchsia.identity.keys</a>/<a class='link' href='../fuchsia.identity.keys/index.html#KeyManager'>KeyManager</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Persona_GetKeyManager_Result'>Persona_GetKeyManager_Result</a></code>
             </td>
         </tr></table>
 
@@ -1123,6 +1163,17 @@ Book: /_book.yaml
 </table>
 
 ### Persona_GetTokenManager_Response {:#Persona_GetTokenManager_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Persona_GetKeyManager_Response {:#Persona_GetKeyManager_Response}
 *generated*
 
 
@@ -1471,6 +1522,25 @@ Type: <code>uint32</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Persona_GetTokenManager_Response'>Persona_GetTokenManager_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Persona_GetKeyManager_Result {:#Persona_GetKeyManager_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Persona_GetKeyManager_Response'>Persona_GetKeyManager_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

@@ -152,6 +152,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.diagnostics.stream/index">fuchsia.diagnostics.stream</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.exception/index">fuchsia.exception</a></td>
     <td></td>
 </tr>
@@ -196,15 +200,7 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.hardware.goldfish.address.space/index">fuchsia.hardware.goldfish.address.space</a></td>
-    <td></td>
-</tr>
-<tr>
-    <td><a href="fuchsia.hardware.goldfish.control/index">fuchsia.hardware.goldfish.control</a></td>
-    <td></td>
-</tr>
-<tr>
-    <td><a href="fuchsia.hardware.goldfish.pipe/index">fuchsia.hardware.goldfish.pipe</a></td>
+    <td><a href="fuchsia.hardware.goldfish/index">fuchsia.hardware.goldfish</a></td>
     <td></td>
 </tr>
 <tr>
@@ -241,6 +237,12 @@ Book: /_book.yaml
 <tr>
     <td><a href="fuchsia.identity.internal/index">fuchsia.identity.internal</a></td>
     <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.identity.keys/index">fuchsia.identity.keys</a></td>
+    <td> Defines protocols to manage and access key material that is consistent
+ across all devices provisioned with a particular identity.
+</td>
 </tr>
 <tr>
     <td><a href="fuchsia.images/index">fuchsia.images</a></td>
@@ -520,6 +522,10 @@ Book: /_book.yaml
 </tr>
 <tr>
     <td><a href="fuchsia.ui.brightness/index">fuchsia.ui.brightness</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.ui.display/index">fuchsia.ui.display</a></td>
     <td></td>
 </tr>
 <tr>
