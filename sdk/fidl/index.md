@@ -156,6 +156,10 @@ Book: /_book.yaml
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.diagnostics.streaming/index">fuchsia.diagnostics.streaming</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.exception/index">fuchsia.exception</a></td>
     <td></td>
 </tr>

@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Controller {:#Controller}
-*Defined in [fuchsia.perfmon.cpu/perfmon.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-perfmon-cpu/perfmon.fidl#135)*
+*Defined in [fuchsia.perfmon.cpu/perfmon.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-perfmon-cpu/perfmon.fidl#134)*
 
 
 ### GetProperties {:#GetProperties}

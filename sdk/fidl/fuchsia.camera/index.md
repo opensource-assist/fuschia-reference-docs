@@ -165,7 +165,7 @@ Book: /_book.yaml
         </tr></table>
 
 ## Manager {:#Manager}
-*Defined in [fuchsia.camera/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/manager.fidl#46)*
+*Defined in [fuchsia.camera/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/manager.fidl#45)*
 
  The Camera Manager grants access to individual or sets of cameras
  1) You request the list of cameras, which gives you camera descriptions
@@ -287,7 +287,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>stream</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.camera.common/index.html'>fuchsia.camera.common</a>/<a class='link' href='../fuchsia.camera.common/index.html#Stream'>Stream</a>&gt;</code>
+                <code>request&lt;<a class='link' href='#Stream'>Stream</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>client_token</code></td>
@@ -478,7 +478,7 @@ Book: /_book.yaml
 </table>
 
 ### VideoStream {:#VideoStream}
-*Defined in [fuchsia.camera/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/manager.fidl#14)*
+*Defined in [fuchsia.camera/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/manager.fidl#13)*
 
 
 
@@ -512,7 +512,7 @@ Book: /_book.yaml
 </table>
 
 ### VideoStreamV2 {:#VideoStreamV2}
-*Defined in [fuchsia.camera/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/manager.fidl#30)*
+*Defined in [fuchsia.camera/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/manager.fidl#29)*
 
 
 
@@ -537,7 +537,7 @@ Book: /_book.yaml
         </tr><tr>
             <td><code>format</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.camera.common/index.html'>fuchsia.camera.common</a>/<a class='link' href='../fuchsia.camera.common/index.html#VideoFormat'>VideoFormat</a></code>
+                <code><a class='link' href='#VideoFormat'>VideoFormat</a></code>
             </td>
             <td> The requested video format. Note that this field is necessary to set the
  frame rate, even when calling CreateStream. When calling CreateStream

@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Qmi {:#Qmi}
-*Defined in [fuchsia.hardware.telephony.transport/qmi.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-telephony-transport/qmi.fidl#11)*
+*Defined in [fuchsia.hardware.telephony.transport/qmi.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-telephony-transport/qmi.fidl#10)*
 
 
 ### SetChannel {:#SetChannel}

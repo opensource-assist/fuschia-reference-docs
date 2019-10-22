@@ -77,6 +77,8 @@ toc:
   path: /reference/fidl/fuchsia.diagnostics.inspect
 - title: fuchsia.diagnostics.stream
   path: /reference/fidl/fuchsia.diagnostics.stream
+- title: fuchsia.diagnostics.streaming
+  path: /reference/fidl/fuchsia.diagnostics.streaming
 - title: fuchsia.exception
   path: /reference/fidl/fuchsia.exception
 - title: fuchsia.factory

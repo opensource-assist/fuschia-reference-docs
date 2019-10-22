@@ -7,7 +7,7 @@ Book: /_book.yaml
 ## **PROTOCOLS**
 
 ## Controller {:#Controller}
-*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#9)*
+*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#21)*
 
 
 ### StartTracing {:#StartTracing}
@@ -68,7 +68,7 @@ Book: /_book.yaml
 ## **STRUCTS**
 
 ### KnownCategory {:#KnownCategory}
-*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#40)*
+*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#52)*
 
 
 
@@ -99,7 +99,7 @@ Book: /_book.yaml
 ### BufferingMode {:#BufferingMode}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#46)*
+*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#58)*
 
 
 
@@ -125,7 +125,7 @@ Type: <code>uint8</code>
 ### ProviderSpec {:#ProviderSpec}
 
 
-*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#53)*
+*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#65)*
 
 
 
@@ -150,7 +150,7 @@ Type: <code>uint8</code>
 ### TraceOptions {:#TraceOptions}
 
 
-*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#59)*
+*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#71)*
 
  Provides options for the trace.
 
@@ -205,4 +205,46 @@ Type: <code>uint8</code>
 
 
 
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#8">MAX_NUM_PROVIDERS</a></td>
+            <td>
+                    <code>100</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> The maximum number of providers supported.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#11">MAX_PROVIDER_NAME_LENGTH</a></td>
+            <td>
+                    <code>100</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> The maximum length of a provider's name.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#14">MAX_NUM_CATEGORIES</a></td>
+            <td>
+                    <code>100</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> The maximum number of categories supported.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#17">MAX_CATEGORY_NAME_LENGTH</a></td>
+            <td>
+                    <code>100</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> The maximum length of a category name.
+</td>
+        </tr>
+    
+</table>
 
