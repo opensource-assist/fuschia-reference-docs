@@ -1,6 +1,6 @@
 toc:
 - title: Overview
-  path: /reference/fidl/index.md
+  path: /reference/fidl/README.md
 - title: fidl.examples.echo
   path: /reference/fidl/fidl.examples.echo
 - title: fuchsia.accessibility.semantics
@@ -39,8 +39,6 @@ toc:
   path: /reference/fidl/fuchsia.boot
 - title: fuchsia.camera
   path: /reference/fidl/fuchsia.camera
-- title: fuchsia.camera.common
-  path: /reference/fidl/fuchsia.camera.common
 - title: fuchsia.camera2
   path: /reference/fidl/fuchsia.camera2
 - title: fuchsia.camera2.hal
