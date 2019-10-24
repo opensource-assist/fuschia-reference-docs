@@ -253,7 +253,7 @@
         </tr></table>
 
 ## AccountListener {#AccountListener}
-*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#135)*
+*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#138)*
 
  A protocol to receive events when the set of accounts on a device or the
  authentication states of these accounts change.
@@ -411,7 +411,7 @@
     </table>
 
 ## AuthTarget {#AuthTarget}
-*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#36)*
+*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#38)*
 
  A protocol that is extended by other protocols defining an entity
  (referred to as the "target") with an authentication state, such as a
@@ -484,7 +484,7 @@
         </tr></table>
 
 ## Account {#Account}
-*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#64)*
+*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#68)*
 
  A protocol that exposes information about the personae and recovery account
  for a Fuchsia account and provides methods to manipulate these.
@@ -737,7 +737,7 @@
         </tr></table>
 
 ## Persona {#Persona}
-*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#125)*
+*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#129)*
 
  A protocol that exposes basic information about a Fuchsia persona and access
  to the authentication tokens that are visible through it.
@@ -1027,7 +1027,7 @@
 </table>
 
 ### AccountListenerOptions {#AccountListenerOptions}
-*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#111)*
+*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#112)*
 
 
 
@@ -1069,6 +1069,37 @@
             </td>
             <td> An `AuthChangeGranularity` expressing the magnitude of change in
  authentication state that will lead to AuthStateChange events.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Scenario {#Scenario}
+*Defined in [fuchsia.identity.account/auth_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_state.fidl#64)*
+
+
+
+ Defines the context to consider when creating authentication states.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>include_test</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> If true, experimental or test authenticators are included when creating
+ authentication states and MUST NOT be used to hand out sensitive user
+ information.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>threat_scenario</code></td>
+            <td>
+                <code><a class='link' href='#ThreatScenario'>ThreatScenario</a></code>
+            </td>
+            <td> Defines the threat scenario to consider when creating
+ authentication states.
 </td>
             <td>No default</td>
         </tr>
@@ -1187,6 +1218,141 @@
 
 ## **ENUMS**
 
+### Presence {#Presence}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.identity.account/auth_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_state.fidl#8)*
+
+ An assessment of whether the account owner is present.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>LOCKED</code></td>
+            <td><code>1</code></td>
+            <td> The account itself is locked and inaccessible.
+</td>
+        </tr><tr>
+            <td><code>ABSENT</code></td>
+            <td><code>2</code></td>
+            <td> The account owner is marked as absent.
+</td>
+        </tr><tr>
+            <td><code>PRESENCE_UNKNOWN</code></td>
+            <td><code>3</code></td>
+            <td> No information (either affirming or dissenting) is available about the
+ current presence of the account owner.
+</td>
+        </tr><tr>
+            <td><code>PRESENT</code></td>
+            <td><code>4</code></td>
+            <td> The account owner is marked as present.
+</td>
+        </tr></table>
+
+### Engagement {#Engagement}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.identity.account/auth_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_state.fidl#24)*
+
+ An assessment of whether the account owner is engaged.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>LOCKED</code></td>
+            <td><code>1</code></td>
+            <td> The account itself is locked and inaccessible.
+</td>
+        </tr><tr>
+            <td><code>DISENGAGED</code></td>
+            <td><code>2</code></td>
+            <td> The account owner is marked as disengaged.
+</td>
+        </tr><tr>
+            <td><code>ENGAGEMENT_UNKNOWN</code></td>
+            <td><code>3</code></td>
+            <td> No information (either affirming or dissenting) is available about the
+ current engagement of the account owner.
+</td>
+        </tr><tr>
+            <td><code>ENGAGED</code></td>
+            <td><code>4</code></td>
+            <td> The account owner is marked as engaged.
+</td>
+        </tr></table>
+
+### ThreatScenario {#ThreatScenario}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.identity.account/auth_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_state.fidl#40)*
+
+ A type of attacker to consider when creating authentication states.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>NONE</code></td>
+            <td><code>1</code></td>
+            <td> No attackers are considered.
+</td>
+        </tr><tr>
+            <td><code>BASIC_ATTACKER</code></td>
+            <td><code>2</code></td>
+            <td> People that may typically and frequently gain access to a user’s device
+ are considered. Examples include nefarious roommates, coworkers,
+ houseguests, family members, or thieves. We assume limited technical
+ skills and/or motivation and commonly available technology.
+
+ Additionally, remote abusers performing an (initially untargeted) attack
+ are considered. We assume these attackers use the standard tools of
+ their trade such as password dumps, phishing toolkits, brute forcing, or
+ stolen identities.
+</td>
+        </tr><tr>
+            <td><code>ADVANCED_ATTACKER</code></td>
+            <td><code>3</code></td>
+            <td> Technologically capable people or organizations who are motivated to
+ perform a targeted attack on a user are considered. Examples include
+ freelance security professionals, organized crime, law enforcement, and
+ government agencies.
+</td>
+        </tr></table>
+
+### AuthStateSummary {#AuthStateSummary}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.identity.account/auth_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_state.fidl#76)*
+
+ A high level assessment of whether the account owner is present and engaged.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>LOCKED</code></td>
+            <td><code>1</code></td>
+            <td> The account itself is locked and inaccessible.
+</td>
+        </tr><tr>
+            <td><code>NOT_KNOWN_TO_BE_PRESENT_OR_ENGAGED</code></td>
+            <td><code>2</code></td>
+            <td> The account owner is probably physically close to the device but cannot
+ be said to be either actively using the device or be physically close
+ it.
+</td>
+        </tr><tr>
+            <td><code>PRESENT_WITHOUT_KNOWN_ENGAGEMENT</code></td>
+            <td><code>3</code></td>
+            <td> The account owner is probably physically close to the device but cannot
+ be said to be actively using it.
+</td>
+        </tr><tr>
+            <td><code>ENGAGED</code></td>
+            <td><code>4</code></td>
+            <td> The account owner is probably actively using the device.
+</td>
+        </tr></table>
+
 ### Lifetime {#Lifetime}
 Type: <code>uint8</code>
 
@@ -1279,6 +1445,96 @@ Type: <code>uint32</code>
         </tr></table>
 
 
+
+## **TABLES**
+
+### AuthState {#AuthState}
+
+
+*Defined in [fuchsia.identity.account/auth_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_state.fidl#98)*
+
+ An assessment of the current presence and engagement of an account owner,
+ under the provided scenario, including the system's confidence in that
+ assessment and its timeliness.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>scenario</code></td>
+            <td>
+                <code><a class='link' href='#Scenario'>Scenario</a></code>
+            </td>
+            <td> The scenario that was considered when creating this authentication
+ state.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>summary</code></td>
+            <td>
+                <code><a class='link' href='#AuthStateSummary'>AuthStateSummary</a></code>
+            </td>
+            <td> A high level assessment of whether the account owner is present and
+ engaged.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>presence</code></td>
+            <td>
+                <code><a class='link' href='#Presence'>Presence</a></code>
+            </td>
+            <td> An assessment of whether the account owner is present.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>engagement</code></td>
+            <td>
+                <code><a class='link' href='#Engagement'>Engagement</a></code>
+            </td>
+            <td> An assessment of whether the account owner is engaged.
+</td>
+        </tr></table>
+
+### AuthChangeGranularity {#AuthChangeGranularity}
+
+
+*Defined in [fuchsia.identity.account/auth_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_state.fidl#120)*
+
+ An expression of the types of changes to an auth state that should be
+ reported over listener interfaces. By default no changes will be reported.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>summary_changes</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> If true, any changes in the `AuthStateSummary` enumeration will be
+ reported.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>presence_changes</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> If true, any changes in the `AuthState.presence` enumeration will
+ be reported.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>engagement_changes</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> If true, any changes in the `AuthState.engagement` enumeration will
+ be reported.
+</td>
+        </tr></table>
 
 
 

@@ -833,7 +833,7 @@
     </table>
 
 ## SecureMem {#SecureMem}
-*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#31)*
+*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#27)*
 
  SecureMem
 
@@ -853,7 +853,6 @@
  TEE, as the plumbing goes from the bootloader to the TEE.  However, this
  protocol intentionally doesn't care which heaps are dynamically-allocated
  and which are fixed-location.
-
 
 ### GetPhysicalSecureHeaps {#GetPhysicalSecureHeaps}
 
@@ -2098,7 +2097,7 @@
 </table>
 
 ### PhysicalSecureHeap {#PhysicalSecureHeap}
-*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#92)*
+*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#88)*
 
 
 
@@ -2133,7 +2132,7 @@
 </table>
 
 ### PhysicalSecureHeaps {#PhysicalSecureHeaps}
-*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#108)*
+*Defined in [fuchsia.sysmem/secure_mem.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#104)*
 
 
 
@@ -2632,7 +2631,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#105">MAX_HEAPS_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#101">MAX_HEAPS_COUNT</a></td>
             <td>
                     <code>32</code>
                 </td>
@@ -2795,6 +2794,14 @@ Type: <code>uint32</code>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#65">videoUsageDecryptorOutput</a></td>
             <td>
                     <code>16</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#69">videoUsageHwDecoderInternal</a></td>
+            <td>
+                    <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
             <td></td>
