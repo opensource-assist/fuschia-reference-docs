@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Echo {#Echo}
-*Defined in [fidl.examples.echo/echo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/examples/fidl/services/echo.fidl#8)*
+*Defined in [fidl.examples.echo/echo.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/examples/fidl/services/echo.test.fidl#8)*
 
 
 ### EchoString {#EchoString}
