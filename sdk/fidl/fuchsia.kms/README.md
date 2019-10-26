@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## KeyManager {#KeyManager}
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#53)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#65)*
 
 
 ### SealData {#SealData}
@@ -246,7 +246,7 @@
         </tr></table>
 
 ## Key {#Key}
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#114)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#126)*
 
 
 ### GetKeyOrigin {#GetKeyOrigin}
@@ -269,8 +269,28 @@
             </td>
         </tr></table>
 
+### GetKeyProvider {#GetKeyProvider}
+
+ Get the name for the crypto provider backing up the key.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Key_GetKeyProvider_Result'>Key_GetKeyProvider_Result</a></code>
+            </td>
+        </tr></table>
+
 ## AsymmetricPrivateKey {#AsymmetricPrivateKey}
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#119)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#134)*
 
 
 ### GetKeyOrigin {#GetKeyOrigin}
@@ -290,6 +310,26 @@
             <td><code>result</code></td>
             <td>
                 <code><a class='link' href='#Key_GetKeyOrigin_Result'>Key_GetKeyOrigin_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetKeyProvider {#GetKeyProvider}
+
+ Get the name for the crypto provider backing up the key.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Key_GetKeyProvider_Result'>Key_GetKeyProvider_Result</a></code>
             </td>
         </tr></table>
 
@@ -505,6 +545,24 @@
         </tr>
 </table>
 
+### Key_GetKeyProvider_Response {#Key_GetKeyProvider_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>key_provider</code></td>
+            <td>
+                <code><a class='link' href='#KeyProvider'>KeyProvider</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### AsymmetricPrivateKey_Sign_Response {#AsymmetricPrivateKey_Sign_Response}
 *generated*
 
@@ -560,7 +618,7 @@
 </table>
 
 ### Signature {#Signature}
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#44)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#56)*
 
 
 
@@ -578,7 +636,7 @@
 </table>
 
 ### PublicKey {#PublicKey}
-*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#48)*
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#60)*
 
 
 
@@ -633,7 +691,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>KEY_ALREADY_EXISTS</code></td>
             <td><code>2</code></td>
-            <td> When trying to create/import a new key however another key with the same name already exists.
+            <td> When trying to create/import a new key but a key with the same name already exists.
 </td>
         </tr><tr>
             <td><code>KEY_NOT_FOUND</code></td>
@@ -715,6 +773,37 @@ Type: <code>uint32</code>
             <td><code>IMPORTED</code></td>
             <td><code>2</code></td>
             <td> The key was imported.
+</td>
+        </tr></table>
+
+### KeyProvider {#KeyProvider}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.kms/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#44)*
+
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>MOCK_PROVIDER</code></td>
+            <td><code>1</code></td>
+            <td> A mock provider only used for unit testing.
+</td>
+        </tr><tr>
+            <td><code>SOFTWARE_PROVIDER</code></td>
+            <td><code>2</code></td>
+            <td> A software provider that uses rust AesGcm trait for symmetric key operation and mundane for
+ asymmetric key operation.
+</td>
+        </tr><tr>
+            <td><code>SOFTWARE_ASYMMETRIC_ONLY_PROVIDER</code></td>
+            <td><code>3</code></td>
+            <td> A software provider that only supports mundane-based asymmetric key operation.
+</td>
+        </tr><tr>
+            <td><code>OPTEE_PROVIDER</code></td>
+            <td><code>4</code></td>
+            <td> A crypto provider based on Keysafe Trusted App in OPTEE.
 </td>
         </tr></table>
 
@@ -866,6 +955,25 @@ Type: <code>uint32</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Key_GetKeyOrigin_Response'>Key_GetKeyOrigin_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Key_GetKeyProvider_Result {#Key_GetKeyProvider_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Key_GetKeyProvider_Response'>Key_GetKeyProvider_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Controller {#Controller}
-*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#21)*
+*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#23)*
 
 
 ### StartTracing {#StartTracing}
@@ -43,6 +43,26 @@
 
 
 
+### GetProviders {#GetProviders}
+
+ Return the set of registered providers.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>providers</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#ProviderInfo'>ProviderInfo</a>&gt;[100]</code>
+            </td>
+        </tr></table>
+
 ### GetKnownCategories {#GetKnownCategories}
 
 
@@ -67,7 +87,7 @@
 ## **STRUCTS**
 
 ### KnownCategory {#KnownCategory}
-*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#52)*
+*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#57)*
 
 
 
@@ -98,7 +118,7 @@
 ### BufferingMode {#BufferingMode}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#58)*
+*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#63)*
 
 
 
@@ -124,7 +144,7 @@ Type: <code>uint8</code>
 ### ProviderSpec {#ProviderSpec}
 
 
-*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#65)*
+*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#70)*
 
 
 
@@ -149,7 +169,7 @@ Type: <code>uint8</code>
 ### TraceOptions {#TraceOptions}
 
 
-*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#71)*
+*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#76)*
 
  Provides options for the trace.
 
@@ -197,6 +217,42 @@ Type: <code>uint8</code>
 </td>
         </tr></table>
 
+### ProviderInfo {#ProviderInfo}
+
+
+*Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#96)*
+
+ Result of |GetProviders|.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> The provider's ID, assigned by trace-manager.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>pid</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> The provider's pid.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>name</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td> The name of the provider.
+</td>
+        </tr></table>
+
 
 
 
@@ -209,7 +265,7 @@ Type: <code>uint8</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#8">MAX_NUM_PROVIDERS</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#10">MAX_NUM_PROVIDERS</a></td>
             <td>
                     <code>100</code>
                 </td>
@@ -218,7 +274,7 @@ Type: <code>uint8</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#11">MAX_PROVIDER_NAME_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#13">MAX_PROVIDER_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
                 </td>
@@ -227,7 +283,7 @@ Type: <code>uint8</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#14">MAX_NUM_CATEGORIES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#16">MAX_NUM_CATEGORIES</a></td>
             <td>
                     <code>100</code>
                 </td>
@@ -236,7 +292,7 @@ Type: <code>uint8</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#17">MAX_CATEGORY_NAME_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#19">MAX_CATEGORY_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
                 </td>

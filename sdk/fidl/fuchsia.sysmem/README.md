@@ -1341,7 +1341,8 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td></td>
+            <td> 0 is treated as 0xFFFFFFFF.
+</td>
             <td>4294967295</td>
         </tr><tr>
             <td><code>physically_contiguous_required</code></td>
@@ -1408,7 +1409,7 @@
 </table>
 
 ### BufferMemorySettings {#BufferMemorySettings}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#232)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#233)*
 
 
 
@@ -1456,7 +1457,7 @@
 </table>
 
 ### ImageFormatConstraints {#ImageFormatConstraints}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#244)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#245)*
 
 
 
@@ -1518,6 +1519,7 @@
             <td> Maximum width in pixels.  For example Scenic may set this field
  (directly or via sub-participants) to the maximum width that can be
  composited.
+ 0 is treated as 0xFFFFFFFF.
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1537,6 +1539,7 @@
             <td> Maximum height in pixels.  For example Scenic may set this field
  (directly or via sub-participants) to the maximum height that can be
  composited.
+ 0 is treated as 0xFFFFFFFF.
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1553,6 +1556,7 @@
                 <code>uint32</code>
             </td>
             <td> Must be >= the value implied by max_coded_width for plane 0.
+ 0 is treated as 0xFFFFFFFF.
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1563,6 +1567,7 @@
             <td> The max image area in pixels is limited indirectly via
  BufferSettings.size_bytes, and can also be enforced directly via this
  field.
+ 0 is treated as 0xFFFFFFFF.
 </td>
             <td>4294967295</td>
         </tr><tr>
@@ -1571,7 +1576,7 @@
                 <code>uint32</code>
             </td>
             <td> Number of layers within a multi-layered image.
- Defaults to 1 if not specified.
+ 0 is treated as 1.
 </td>
             <td>1</td>
         </tr><tr>
@@ -1580,6 +1585,7 @@
                 <code>uint32</code>
             </td>
             <td> coded_width % width_divisor must be 0.
+ 0 is treated as 1.
 </td>
             <td>1</td>
         </tr><tr>
@@ -1588,6 +1594,7 @@
                 <code>uint32</code>
             </td>
             <td> coded_height % height_divisor must be 0.
+ 0 is treated as 1.
 </td>
             <td>1</td>
         </tr><tr>
@@ -1596,6 +1603,7 @@
                 <code>uint32</code>
             </td>
             <td> bytes_per_row % bytes_per_row_divisor must be 0.
+ 0 is treated as 1.
 </td>
             <td>1</td>
         </tr><tr>
@@ -1604,6 +1612,7 @@
                 <code>uint32</code>
             </td>
             <td> vmo_usable_start % start_offset_divisor must be 0.
+ 0 is treated as 1.
 </td>
             <td>1</td>
         </tr><tr>
@@ -1612,6 +1621,7 @@
                 <code>uint32</code>
             </td>
             <td> display_width % display_width_divisor must be 0.
+ 0 is treated as 1.
 </td>
             <td>1</td>
         </tr><tr>
@@ -1620,6 +1630,7 @@
                 <code>uint32</code>
             </td>
             <td> display_height % display_height_divisor must be 0.
+ 0 is treated as 1.
 </td>
             <td>1</td>
         </tr><tr>
@@ -1661,6 +1672,7 @@
  TODO(dustingreen): Make it easier to allocate buffers of minimal size
  that can (optionally) also handle 90 degree rotated version of the max
  dimensions / alternate required bounds for another main aspect ratio.
+ 0 is treated as 0xFFFFFFFF.
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1675,7 +1687,8 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td></td>
+            <td> 0 is treated as 0xFFFFFFFF.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>required_max_coded_height</code></td>
@@ -1689,7 +1702,8 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td></td>
+            <td> 0 is treated as 0xFFFFFFFF.
+</td>
             <td>No default</td>
         </tr><tr>
             <td><code>required_max_bytes_per_row</code></td>
@@ -1702,7 +1716,7 @@
 </table>
 
 ### ImageFormat_2 {#ImageFormat_2}
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#358)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#372)*
 
 
 
@@ -2243,7 +2257,7 @@ Type: <code>uint64</code>
 ### CoherencyDomain {#CoherencyDomain}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#226)*
+*Defined in [fuchsia.sysmem/constraints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/constraints.fidl#227)*
 
  Inaccessible is only for cases where there is no CPU-based access to the
  buffers.  A secure_required buffer can still have CoherencyDomain Cpu or

@@ -1105,6 +1105,94 @@
         </tr>
 </table>
 
+### AuthState {#AuthState}
+*Defined in [fuchsia.identity.account/auth_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_state.fidl#98)*
+
+
+
+ An assessment of the current presence and engagement of an account owner,
+ under the provided scenario, including the system's confidence in that
+ assessment and its timeliness.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>scenario</code></td>
+            <td>
+                <code><a class='link' href='#Scenario'>Scenario</a></code>
+            </td>
+            <td> The scenario that was considered when creating this authentication
+ state.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>summary</code></td>
+            <td>
+                <code><a class='link' href='#AuthStateSummary'>AuthStateSummary</a></code>
+            </td>
+            <td> A high level assessment of whether the account owner is present and
+ engaged.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>presence</code></td>
+            <td>
+                <code><a class='link' href='#Presence'>Presence</a></code>
+            </td>
+            <td> An assessment of whether the account owner is present.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>engagement</code></td>
+            <td>
+                <code><a class='link' href='#Engagement'>Engagement</a></code>
+            </td>
+            <td> An assessment of whether the account owner is engaged.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### AuthChangeGranularity {#AuthChangeGranularity}
+*Defined in [fuchsia.identity.account/auth_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_state.fidl#120)*
+
+
+
+ An expression of the types of changes to an auth state that should be
+ reported over listener interfaces. By default no changes will be reported.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>summary_changes</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> If true, any changes in the `AuthStateSummary` enumeration will be
+ reported.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>presence_changes</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> If true, any changes in the `AuthState.presence` enumeration will
+ be reported.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>engagement_changes</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> If true, any changes in the `AuthState.engagement` enumeration will
+ be reported.
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### AuthTarget_GetAuthState_Response {#AuthTarget_GetAuthState_Response}
 *generated*
 
@@ -1445,96 +1533,6 @@ Type: <code>uint32</code>
         </tr></table>
 
 
-
-## **TABLES**
-
-### AuthState {#AuthState}
-
-
-*Defined in [fuchsia.identity.account/auth_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_state.fidl#98)*
-
- An assessment of the current presence and engagement of an account owner,
- under the provided scenario, including the system's confidence in that
- assessment and its timeliness.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>scenario</code></td>
-            <td>
-                <code><a class='link' href='#Scenario'>Scenario</a></code>
-            </td>
-            <td> The scenario that was considered when creating this authentication
- state.
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>summary</code></td>
-            <td>
-                <code><a class='link' href='#AuthStateSummary'>AuthStateSummary</a></code>
-            </td>
-            <td> A high level assessment of whether the account owner is present and
- engaged.
-</td>
-        </tr><tr>
-            <td>3</td>
-            <td><code>presence</code></td>
-            <td>
-                <code><a class='link' href='#Presence'>Presence</a></code>
-            </td>
-            <td> An assessment of whether the account owner is present.
-</td>
-        </tr><tr>
-            <td>4</td>
-            <td><code>engagement</code></td>
-            <td>
-                <code><a class='link' href='#Engagement'>Engagement</a></code>
-            </td>
-            <td> An assessment of whether the account owner is engaged.
-</td>
-        </tr></table>
-
-### AuthChangeGranularity {#AuthChangeGranularity}
-
-
-*Defined in [fuchsia.identity.account/auth_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_state.fidl#120)*
-
- An expression of the types of changes to an auth state that should be
- reported over listener interfaces. By default no changes will be reported.
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>summary_changes</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> If true, any changes in the `AuthStateSummary` enumeration will be
- reported.
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>presence_changes</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> If true, any changes in the `AuthState.presence` enumeration will
- be reported.
-</td>
-        </tr><tr>
-            <td>3</td>
-            <td><code>engagement_changes</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td> If true, any changes in the `AuthState.engagement` enumeration will
- be reported.
-</td>
-        </tr></table>
 
 
 
