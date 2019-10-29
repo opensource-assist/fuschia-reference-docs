@@ -154,22 +154,6 @@
 
 
 
-### BindGainControl {#BindGainControl}
-
- Binds to the session's gain control for control and notifications.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>gain_control_request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.audio/'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/#GainControl'>GainControl</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### BindVolumeControl {#BindVolumeControl}
 
  Binds to the session's volume control for control and notifications.
@@ -187,7 +171,7 @@
 
 
 ## SessionsWatcher {#SessionsWatcher}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#80)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#76)*
 
  `SessionsWatcher` watches the collection of published sessions.
 
@@ -246,7 +230,7 @@
     </table>
 
 ## Discovery {#Discovery}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#100)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#96)*
 
  `Discovery` observes the collection of published media sessions
  and connects clients to them.
@@ -958,7 +942,7 @@ Type: <code>uint32</code>
 ### WatchOptions {#WatchOptions}
 
 
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#74)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#70)*
 
 
 

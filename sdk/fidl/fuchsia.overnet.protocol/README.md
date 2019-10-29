@@ -3,6 +3,39 @@
 # fuchsia.overnet.protocol
 
 
+## **PROTOCOLS**
+
+## Diagnostic {#Diagnostic}
+*Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#127)*
+
+ Diagnostic information exported by Overnet peers.
+ This interface is additionally exported to the Overnet mesh.
+
+### Probe {#Probe}
+
+ Probe some basic statistics from this node
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>selector</code></td>
+            <td>
+                <code><a class='link' href='#ProbeSelector'>ProbeSelector</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#ProbeResult'>ProbeResult</a></code>
+            </td>
+        </tr></table>
+
 
 
 ## **STRUCTS**
@@ -237,6 +270,63 @@
 
 ## **ENUMS**
 
+### OperatingSystem {#OperatingSystem}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#74)*
+
+ The operating system running a node.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>FUCHSIA</code></td>
+            <td><code>0</code></td>
+            <td> Fuchsia
+</td>
+        </tr><tr>
+            <td><code>LINUX</code></td>
+            <td><code>1</code></td>
+            <td> Linux
+</td>
+        </tr><tr>
+            <td><code>MAC</code></td>
+            <td><code>2</code></td>
+            <td> MacOS
+</td>
+        </tr></table>
+
+### Implementation {#Implementation}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#84)*
+
+ The implementation of a node that's running.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>UNIT_TEST</code></td>
+            <td><code>0</code></td>
+            <td> Some unit test... shouldn't be seen in the wild.
+</td>
+        </tr><tr>
+            <td><code>OVERNET_STACK</code></td>
+            <td><code>1</code></td>
+            <td> The overnetstack daemon on Fuchsia.
+</td>
+        </tr><tr>
+            <td><code>ASCENDD</code></td>
+            <td><code>2</code></td>
+            <td> The non-Fuchsia routing daemon Ascendd.
+</td>
+        </tr><tr>
+            <td><code>HOIST_RUST_CRATE</code></td>
+            <td><code>3</code></td>
+            <td> The `hoist` Rust crate embedding Overnet.
+</td>
+        </tr></table>
+
 ### ReliabilityAndOrdering {#ReliabilityAndOrdering}
 Type: <code>uint32</code>
 
@@ -278,6 +368,327 @@ Type: <code>uint32</code>
 
 
 ## **TABLES**
+
+### PeerConnectionDiagnosticInfo {#PeerConnectionDiagnosticInfo}
+
+
+*Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#8)*
+
+ Diagnostic data on a single peer connection.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#NodeId'>NodeId</a></code>
+            </td>
+            <td> Source address.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>destination</code></td>
+            <td>
+                <code><a class='link' href='#NodeId'>NodeId</a></code>
+            </td>
+            <td> Destination address.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>is_client</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> Whether this connection is a client.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>is_established</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> True if the connection established and ready to send traffic.
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>received_packets</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of packets received.
+</td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>sent_packets</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of packets sent.
+</td>
+        </tr><tr>
+            <td>7</td>
+            <td><code>lost_packets</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of packets lost.
+</td>
+        </tr><tr>
+            <td>8</td>
+            <td><code>round_trip_time_microseconds</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Round trip time for the connection in microseconds.
+</td>
+        </tr><tr>
+            <td>9</td>
+            <td><code>congestion_window_bytes</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Current congestion window in bytes.
+</td>
+        </tr><tr>
+            <td>10</td>
+            <td><code>messages_sent</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of overnet messages sent.
+</td>
+        </tr><tr>
+            <td>11</td>
+            <td><code>bytes_sent</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of bytes sent due to overnet messages.
+</td>
+        </tr><tr>
+            <td>12</td>
+            <td><code>connect_to_service_sends</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of connect to service requests.
+</td>
+        </tr><tr>
+            <td>13</td>
+            <td><code>connect_to_service_send_bytes</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of bytes sent due to connect to service requests.
+</td>
+        </tr><tr>
+            <td>14</td>
+            <td><code>update_node_description_sends</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of node description updates.
+</td>
+        </tr><tr>
+            <td>15</td>
+            <td><code>update_node_description_send_bytes</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of bytes sent due to node description updates.
+</td>
+        </tr><tr>
+            <td>16</td>
+            <td><code>update_link_status_sends</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of link status updates.
+</td>
+        </tr><tr>
+            <td>17</td>
+            <td><code>update_link_status_send_bytes</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of bytes sent due to link status updates.
+</td>
+        </tr><tr>
+            <td>18</td>
+            <td><code>update_link_status_ack_sends</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of link status update acknowledgements sent.
+</td>
+        </tr><tr>
+            <td>19</td>
+            <td><code>update_link_status_ack_send_bytes</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of bytes sent due to link status update acknowledgements.
+</td>
+        </tr></table>
+
+### LinkDiagnosticInfo {#LinkDiagnosticInfo}
+
+
+*Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#50)*
+
+ Diagnostic data on a single link.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>source</code></td>
+            <td>
+                <code><a class='link' href='#NodeId'>NodeId</a></code>
+            </td>
+            <td> Source address.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>destination</code></td>
+            <td>
+                <code><a class='link' href='#NodeId'>NodeId</a></code>
+            </td>
+            <td> Destination address.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>source_local_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Source identifier for this link.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>received_packets</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of packets received.
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>sent_packets</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of packets sent.
+</td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>received_bytes</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of bytes received.
+</td>
+        </tr><tr>
+            <td>7</td>
+            <td><code>sent_bytes</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of bytes sent.
+</td>
+        </tr><tr>
+            <td>8</td>
+            <td><code>round_trip_time_microseconds</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Round trip time for the connection in microseconds.
+</td>
+        </tr><tr>
+            <td>9</td>
+            <td><code>pings_sent</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of ping requests sent.
+</td>
+        </tr><tr>
+            <td>10</td>
+            <td><code>packets_forwarded</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td> Number of packets forwarded.
+</td>
+        </tr></table>
+
+### NodeDescription {#NodeDescription}
+
+
+*Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#96)*
+
+ Diagnostic data on a single node.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>operating_system</code></td>
+            <td>
+                <code><a class='link' href='#OperatingSystem'>OperatingSystem</a></code>
+            </td>
+            <td> A string saying something about what operating system this node is running on
+ Currently used: 'fuchsia', 'linux', 'mac'
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>implementation</code></td>
+            <td>
+                <code><a class='link' href='#Implementation'>Implementation</a></code>
+            </td>
+            <td> A string saying something about the runtime environment of a node
+</td>
+        </tr></table>
+
+### ProbeResult {#ProbeResult}
+
+
+*Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#105)*
+
+ Composition of results from Diagnostic/Probe.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>node_description</code></td>
+            <td>
+                <code><a class='link' href='#NodeDescription'>NodeDescription</a></code>
+            </td>
+            <td> Node description, obtained by probing ProbeSelector.NODE_DESCRIPTION
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>peer_connections</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#PeerConnectionDiagnosticInfo'>PeerConnectionDiagnosticInfo</a>&gt;</code>
+            </td>
+            <td> Peer connections list, obtained by probing ProbeSelector.PEER_CONNECTIONS
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>links</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#LinkDiagnosticInfo'>LinkDiagnosticInfo</a>&gt;</code>
+            </td>
+            <td> Link list, obtained by probing ProbeSelector.LINKS
+</td>
+        </tr></table>
 
 ### ConnectToServiceOptions {#ConnectToServiceOptions}
 
@@ -444,6 +855,30 @@ Type: <code>uint32</code>
         </tr></table>
 
 
+
+## **BITS**
+
+### ProbeSelector {#ProbeSelector}
+Type: <code>uint64</code>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td>NODE_DESCRIPTION</td>
+            <td>1</td>
+            <td> Request ProbeResult.node_description is present in the result
+</td>
+        </tr><tr>
+            <td>PEER_CONNECTIONS</td>
+            <td>2</td>
+            <td> Request ProbeResult.peer_connections is present in the result
+</td>
+        </tr><tr>
+            <td>LINKS</td>
+            <td>4</td>
+            <td> Request ProbeResult.links is present in the result
+</td>
+        </tr></table>
 
 
 

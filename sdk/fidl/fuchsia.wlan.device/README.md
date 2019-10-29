@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Phy {#Phy}
-*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#109)*
+*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#112)*
 
 
 ### Query {#Query}
@@ -101,7 +101,7 @@
         </tr></table>
 
 ## Connector {#Connector}
-*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#120)*
+*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#123)*
 
  This protocol is used to connect to the real Phy protocol underlying this device.
 
@@ -228,7 +228,7 @@
 </table>
 
 ### BandInfo {#BandInfo}
-*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#52)*
+*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#55)*
 
 
 
@@ -257,9 +257,9 @@
             <td></td>
             <td>No default</td>
         </tr><tr>
-            <td><code>basic_rates</code></td>
+            <td><code>rates</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[16]</code>
+                <code>vector&lt;uint8&gt;[12]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -274,7 +274,7 @@
 </table>
 
 ### PhyInfo {#PhyInfo}
-*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#60)*
+*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#63)*
 
 
 
@@ -341,7 +341,7 @@
 </table>
 
 ### QueryResponse {#QueryResponse}
-*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#79)*
+*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#82)*
 
 
 
@@ -366,7 +366,7 @@
 </table>
 
 ### CreateIfaceRequest {#CreateIfaceRequest}
-*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#84)*
+*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#87)*
 
 
 
@@ -391,7 +391,7 @@
 </table>
 
 ### CreateIfaceResponse {#CreateIfaceResponse}
-*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#90)*
+*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#93)*
 
 
 
@@ -416,7 +416,7 @@
 </table>
 
 ### DestroyIfaceRequest {#DestroyIfaceRequest}
-*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#95)*
+*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#98)*
 
 
 
@@ -434,7 +434,7 @@
 </table>
 
 ### DestroyIfaceResponse {#DestroyIfaceResponse}
-*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#99)*
+*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#102)*
 
 
 
@@ -452,7 +452,7 @@
 </table>
 
 ### SetCountryRequest {#SetCountryRequest}
-*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#105)*
+*Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#108)*
 
 
 
@@ -562,4 +562,18 @@ Type: <code>uint32</code>
 
 
 
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#51">MAX_NUM_RATES</a></td>
+            <td>
+                    <code>12</code>
+                </td>
+                <td><code>uint8</code></td>
+            <td></td>
+        </tr>
+    
+</table>
 
