@@ -389,7 +389,7 @@
             </td>
         </tr></table>
 
-### WipeVolumes {#WipeVolumes}
+### WipeVolume {#WipeVolume}
 
  Wipes the FVM partition from the device. Should not be confused with factory reset, which
  is less intrusive.
@@ -397,10 +397,12 @@
  Notable use cases include recovering from corrupted FVM as well as setting device to a
  "clean" state for automation.
 
- If |block_device| is not provided, the paver will perform a search for
- the the FVM. If multiple block devices have valid GPT, |block_device| can be provided
- to specify which one to target. It assumed that channel backing
- |block_device| also implements `fuchsia.io.Node` for now.
+ If |block_device| is not provided, the paver will perform a search for the the FVM.
+ If multiple block devices have valid GPT, |block_device| can be provided to specify
+ which one to target. It assumed that channel backing |block_device| also implements
+ `fuchsia.io.Node` for now.
+
+ On success, returns a channel to the initialized FVM volume.
 
 #### Request
 <table>
@@ -417,9 +419,9 @@
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Paver_WipeVolume_Result'>Paver_WipeVolume_Result</a></code>
             </td>
         </tr></table>
 
@@ -537,6 +539,24 @@
             <td><code>asset</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.mem/'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/#Buffer'>Buffer</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Paver_WipeVolume_Response {#Paver_WipeVolume_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>volume</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.hardware.block/'>fuchsia.hardware.block</a>/<a class='link' href='../fuchsia.hardware.block/#Block'>Block</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -698,6 +718,25 @@ Type: <code>uint32</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Paver_ReadAsset_Response'>Paver_ReadAsset_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Paver_WipeVolume_Result {#Paver_WipeVolume_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Paver_WipeVolume_Response'>Paver_WipeVolume_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

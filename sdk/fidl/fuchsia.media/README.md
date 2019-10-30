@@ -4141,7 +4141,7 @@ Type: <code>uint32</code>
 ### AudioOutputRoutingPolicy {#AudioOutputRoutingPolicy}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#171)*
+*Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#174)*
 
 
 
@@ -6261,7 +6261,7 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#32">MIN_PCM_CHANNEL_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#36">MIN_PCM_CHANNEL_COUNT</a></td>
             <td>
                     <code>1</code>
                 </td>
@@ -6270,7 +6270,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#33">MAX_PCM_CHANNEL_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#37">MAX_PCM_CHANNEL_COUNT</a></td>
             <td>
                     <code>8</code>
                 </td>
@@ -6278,7 +6278,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#34">MIN_PCM_FRAMES_PER_SECOND</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#38">MIN_PCM_FRAMES_PER_SECOND</a></td>
             <td>
                     <code>1000</code>
                 </td>
@@ -6286,7 +6286,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#35">MAX_PCM_FRAMES_PER_SECOND</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#39">MAX_PCM_FRAMES_PER_SECOND</a></td>
             <td>
                     <code>192000</code>
                 </td>

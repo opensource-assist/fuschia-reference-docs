@@ -307,6 +307,7 @@
 
  Return Values:
  * `ZX_OK` if the repository was added.
+ * `ZX_ERR_ACCESS_DENIED` if editing repositories is permanently disabled.
  * `ZX_ERR_ALREADY_EXISTS` if the repository already exists.
  * `ZX_ERR_INVALID_ARGS` if the repository is malformed.
 
@@ -342,9 +343,11 @@
  * `repo_url` is the URL of the repository we want to remove.
 
  Return Values:
- * Returns `ZX_OK` if the repository was removed.
- * Returns `ZX_ERR_INVALID_ARGS` if the `repo_url` is malformed.
- * Returns `ZX_ERR_NOT_FOUND` if the repository does not exist.
+ * `ZX_OK` if the repository was removed.
+ * `ZX_ERR_ACCESS_DENIED` if editing repositories is permanently disabled or the
+   `repo_url` matches a static repository.
+ * `ZX_ERR_INVALID_ARGS` if the `repo_url` is malformed.
+ * `ZX_ERR_NOT_FOUND` if the repository does not exist.
 
 #### Request
 <table>
@@ -469,7 +472,7 @@
 
 
 ## RepositoryIterator {#RepositoryIterator}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#129)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#132)*
 
  The iterator over all the repositories defined in a `PackageResolver`.
 
@@ -726,7 +729,7 @@ Type: <code>uint64</code>
 ### RepositoryConfig {#RepositoryConfig}
 
 
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#76)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#79)*
 
  Describes the configuration necessary to connect to a repository and it's mirrors.
 
@@ -776,7 +779,7 @@ Type: <code>uint64</code>
 ### MirrorConfig {#MirrorConfig}
 
 
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#113)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#116)*
 
  Describes the configuration necessary to connect to a mirror.
 
@@ -825,7 +828,7 @@ Type: <code>uint64</code>
 ## **XUNIONS**
 
 ### RepositoryKeyConfig {#RepositoryKeyConfig}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#99)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#102)*
 
  Describes the keys used by the repository to authenticate it's packages.
 
@@ -842,7 +845,7 @@ Type: <code>uint64</code>
         </tr></table>
 
 ### RepositoryBlobKey {#RepositoryBlobKey}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#107)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#110)*
 
  Describes a key used to decrypt blobs.
 
