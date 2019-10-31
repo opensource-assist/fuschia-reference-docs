@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## ContentDecryptionModule {#ContentDecryptionModule}
-*Defined in [fuchsia.media.drm/content_decryption.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/content_decryption.fidl#32)*
+*Defined in [fuchsia.media.drm/content_decryption.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/content_decryption.fidl#25)*
 
  A protocol for managing content license sessions and providing decryption of
  media content. There may be zero to many active <a class='link' href='#LicenseSession'>LicenseSession</a>s
@@ -208,25 +208,6 @@
             </td>
         </tr></table>
 
-### GetSupportedEncryptionModes {#GetSupportedEncryptionModes}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>encryption_modes</code></td>
-            <td>
-                <code>vector&lt;string&gt;</code>
-            </td>
-        </tr></table>
-
 ### GetSupportedEncryptionSchemes {#GetSupportedEncryptionSchemes}
 
  Queries for the list of supported encryption schemes.
@@ -257,7 +238,7 @@
         </tr></table>
 
 ## LicenseSession {#LicenseSession}
-*Defined in [fuchsia.media.drm/license_session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#93)*
+*Defined in [fuchsia.media.drm/license_session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#87)*
 
  A protocol for exchanging messages pertaining to the establishment of a
  media license and the encryption keys associated with it.
@@ -409,21 +390,6 @@
             <td><code>request</code></td>
             <td>
                 <code><a class='link' href='#LicenseMessage'>LicenseMessage</a></code>
-            </td>
-        </tr></table>
-
-### OnKeysChanged {#OnKeysChanged}
-
-
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>key_info</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#KeyInfo'>KeyInfo</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -805,31 +771,6 @@
         </tr>
 </table>
 
-### KeyInfo {#KeyInfo}
-*Defined in [fuchsia.media.drm/license_session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#58)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>key_id</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.media/'>fuchsia.media</a>/<a class='link' href='../fuchsia.media/#KeyId'>KeyId</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>status</code></td>
-            <td>
-                <code><a class='link' href='#KeyStatus'>KeyStatus</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### Provisioner_SetServerCertificate_Response {#Provisioner_SetServerCertificate_Response}
 *generated*
 
@@ -1014,7 +955,7 @@ Type: <code>uint32</code>
 ### KeyStatus {#KeyStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media.drm/license_session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#63)*
+*Defined in [fuchsia.media.drm/license_session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#57)*
 
 
 
@@ -1084,7 +1025,7 @@ Type: <code>uint32</code>
 ### DecryptorParams {#DecryptorParams}
 
 
-*Defined in [fuchsia.media.drm/content_decryption.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/content_decryption.fidl#16)*
+*Defined in [fuchsia.media.drm/content_decryption.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/content_decryption.fidl#9)*
 
 
 
@@ -1112,7 +1053,7 @@ Type: <code>uint32</code>
 ### KeyState {#KeyState}
 
 
-*Defined in [fuchsia.media.drm/license_session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#83)*
+*Defined in [fuchsia.media.drm/license_session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#77)*
 
 
 
@@ -1243,30 +1184,6 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/content_decryption.fidl#11">ENCRYPTION_MODE_CENC</a></td>
-            <td><code>cenc</code></td>
-                    <td><code>String</code></td>
-            <td></td>
-        </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/content_decryption.fidl#12">ENCRYPTION_MODE_CBC1</a></td>
-            <td><code>cbc1</code></td>
-                    <td><code>String</code></td>
-            <td></td>
-        </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/content_decryption.fidl#13">ENCRYPTION_MODE_CENS</a></td>
-            <td><code>cens</code></td>
-                    <td><code>String</code></td>
-            <td></td>
-        </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/content_decryption.fidl#14">ENCRYPTION_MODE_CBCS</a></td>
-            <td><code>cbcs</code></td>
-                    <td><code>String</code></td>
-            <td></td>
-        </tr>
-    <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#12">LICENSE_INIT_DATA_TYPE_CENC</a></td>
             <td><code>cenc</code></td>
                     <td><code>String</code></td>

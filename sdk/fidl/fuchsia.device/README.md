@@ -35,6 +35,33 @@
             </td>
         </tr></table>
 
+### Rebind {#Rebind}
+
+ This api will unbind all the children of this device and bind the
+ requested driver. If the driver is empty, it will autobind.
+ The Rebind will not return until the bind completes.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>driver</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
 ### ScheduleUnbind {#ScheduleUnbind}
 
  Disconnect this device and allow its parent to be bound again.

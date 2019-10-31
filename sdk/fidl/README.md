@@ -516,6 +516,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.ui.activity/index">fuchsia.ui.activity</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.ui.app/index">fuchsia.ui.app</a></td>
     <td></td>
 </tr>
