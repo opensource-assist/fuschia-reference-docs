@@ -3784,7 +3784,7 @@
 </table>
 
 ### AudioStreamType {#AudioStreamType}
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#66)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#67)*
 
 
 
@@ -3817,7 +3817,7 @@
 </table>
 
 ### VideoStreamType {#VideoStreamType}
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#92)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#93)*
 
 
 
@@ -3898,7 +3898,7 @@
 </table>
 
 ### TextStreamType {#TextStreamType}
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#128)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#129)*
 
 
 
@@ -3910,7 +3910,7 @@
 </table>
 
 ### SubpictureStreamType {#SubpictureStreamType}
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#136)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#137)*
 
 
 
@@ -4474,7 +4474,7 @@ Type: <code>uint32</code>
 ### AudioSampleFormat {#AudioSampleFormat}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#74)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#75)*
 
  Enumerates the supported audio sample formats.
 
@@ -4505,7 +4505,7 @@ Type: <code>uint32</code>
 ### ColorSpace {#ColorSpace}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#116)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#117)*
 
 
 
@@ -6593,116 +6593,122 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#40">AUDIO_ENCODING_AMRNB</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#40">AUDIO_ENCODING_AACLATM</a></td>
+            <td><code>fuchsia.media.aaclatm</code></td>
+                    <td><code>String</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#41">AUDIO_ENCODING_AMRNB</a></td>
             <td><code>fuchsia.media.amrnb</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#41">AUDIO_ENCODING_AMRWB</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#42">AUDIO_ENCODING_AMRWB</a></td>
             <td><code>fuchsia.media.amrwb</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#42">AUDIO_ENCODING_APTX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#43">AUDIO_ENCODING_APTX</a></td>
             <td><code>fuchsia.media.aptx</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#43">AUDIO_ENCODING_FLAC</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#44">AUDIO_ENCODING_FLAC</a></td>
             <td><code>fuchsia.media.flac</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#44">AUDIO_ENCODING_GSMMS</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#45">AUDIO_ENCODING_GSMMS</a></td>
             <td><code>fuchsia.media.gsmms</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#45">AUDIO_ENCODING_LPCM</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#46">AUDIO_ENCODING_LPCM</a></td>
             <td><code>fuchsia.media.lpcm</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#46">AUDIO_ENCODING_MP3</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#47">AUDIO_ENCODING_MP3</a></td>
             <td><code>fuchsia.media.mp3</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#47">AUDIO_ENCODING_PCMALAW</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#48">AUDIO_ENCODING_PCMALAW</a></td>
             <td><code>fuchsia.media.pcmalaw</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#48">AUDIO_ENCODING_PCMMULAW</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#49">AUDIO_ENCODING_PCMMULAW</a></td>
             <td><code>fuchsia.media.pcmmulaw</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#49">AUDIO_ENCODING_SBC</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#50">AUDIO_ENCODING_SBC</a></td>
             <td><code>fuchsia.media.sbc</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#50">AUDIO_ENCODING_VORBIS</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#51">AUDIO_ENCODING_VORBIS</a></td>
             <td><code>fuchsia.media.vorbis</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#53">VIDEO_ENCODING_H263</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#54">VIDEO_ENCODING_H263</a></td>
             <td><code>fuchsia.media.h263</code></td>
                     <td><code>String</code></td>
             <td> Video encodings.
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#54">VIDEO_ENCODING_H264</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#55">VIDEO_ENCODING_H264</a></td>
             <td><code>fuchsia.media.h264</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#55">VIDEO_ENCODING_MPEG4</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#56">VIDEO_ENCODING_MPEG4</a></td>
             <td><code>fuchsia.media.mpeg4</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#56">VIDEO_ENCODING_THEORA</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#57">VIDEO_ENCODING_THEORA</a></td>
             <td><code>fuchsia.media.theora</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#57">VIDEO_ENCODING_UNCOMPRESSED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#58">VIDEO_ENCODING_UNCOMPRESSED</a></td>
             <td><code>fuchsia.media.uncompressed_video</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#58">VIDEO_ENCODING_VP3</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#59">VIDEO_ENCODING_VP3</a></td>
             <td><code>fuchsia.media.vp3</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#59">VIDEO_ENCODING_VP8</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#60">VIDEO_ENCODING_VP8</a></td>
             <td><code>fuchsia.media.vp8</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#60">VIDEO_ENCODING_VP9</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#61">VIDEO_ENCODING_VP9</a></td>
             <td><code>fuchsia.media.vp9</code></td>
                     <td><code>String</code></td>
             <td></td>

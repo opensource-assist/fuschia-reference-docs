@@ -28,7 +28,7 @@
 
 
 ## KeyboardCaptureListenerHACK {#KeyboardCaptureListenerHACK}
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#12)*
+*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#11)*
 
  `Presentation.CaptureKeyboardEvent` will consume this listener interface and
  call `OnEvent` when the registered keyboard event occurs.
@@ -49,7 +49,7 @@
 
 
 ## PointerCaptureListenerHACK {#PointerCaptureListenerHACK}
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#18)*
+*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#17)*
 
  `Presentation.CapturePointerEvent` will consume this listener interface and
  call `OnEvent` when a pointer event occurs.
@@ -70,7 +70,7 @@
 
 
 ## MediaButtonsListener {#MediaButtonsListener}
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#24)*
+*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#23)*
 
  `Presentation.RegisterMediaButtonsListener` will consume this listener interface
  and call `OnMediaButtonsEvent` when the registered media buttons event occurs.
@@ -91,124 +91,10 @@
 
 
 ## Presentation {#Presentation}
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#31)*
+*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#30)*
 
  Allows clients of Presenter.Present() to control a presentation.
  Experimental.
-
-### EnableClipping {#EnableClipping}
-
- Enable or disable clipping for the Scenic renderer associated with the
- presentation.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>enabled</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-
-
-### UseOrthographicView {#UseOrthographicView}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
-### UsePerspectiveView {#UsePerspectiveView}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
-### SetRendererParams {#SetRendererParams}
-
- Set parameters such as the shadow algorithm used to render the scene.
- NOTE: a single param would be better than an array; see TO-529.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>params</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.ui.gfx/'>fuchsia.ui.gfx</a>/<a class='link' href='../fuchsia.ui.gfx/#RendererParam'>RendererParam</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### SetDisplayUsage {#SetDisplayUsage}
-
- Override the intended usage of the display.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>usage</code></td>
-            <td>
-                <code><a class='link' href='#DisplayUsage'>DisplayUsage</a></code>
-            </td>
-        </tr></table>
-
-
-
-### SetDisplayRotation {#SetDisplayRotation}
-
- Rotates the display.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>display_rotation_degrees</code></td>
-            <td>
-                <code>float32</code>
-            </td>
-        </tr><tr>
-            <td><code>animate</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-
-
-### SetDisplaySizeInMm {#SetDisplaySizeInMm}
-
- Override the dimensions of the display. Values must be less than the actual
- size of the display. If either of the values are 0, then they are ignored
- and the actual size of the display is used.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>width_in_mm</code></td>
-            <td>
-                <code>float32</code>
-            </td>
-        </tr><tr>
-            <td><code>height_in_mm</code></td>
-            <td>
-                <code>float32</code>
-            </td>
-        </tr></table>
-
-
 
 ### CaptureKeyboardEventHACK {#CaptureKeyboardEventHACK}
 
@@ -251,40 +137,6 @@
 
 
 
-### GetPresentationMode {#GetPresentationMode}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>mode</code></td>
-            <td>
-                <code><a class='link' href='#PresentationMode'>PresentationMode</a></code>
-            </td>
-        </tr></table>
-
-### SetPresentationModeListener {#SetPresentationModeListener}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>listener</code></td>
-            <td>
-                <code><a class='link' href='#PresentationModeListener'>PresentationModeListener</a></code>
-            </td>
-        </tr></table>
-
-
-
 ### RegisterMediaButtonsListener {#RegisterMediaButtonsListener}
 
  Registers a listener for media buttons events.
@@ -319,7 +171,7 @@
 
 
 ## PresentationModeListener {#PresentationModeListener}
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#97)*
+*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#70)*
 
  Tell client that the screen mode has changed, according to sensors.
  N.B. There can be a race where the actual mode continues to change, after
@@ -437,7 +289,7 @@ Type: <code>uint32</code>
 ### PresentationMode {#PresentationMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#86)*
+*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#59)*
 
  Screen modes that can be detected via sensor data.
  N.B. We use accelerometers to measure gravity when at rest, so detection is
