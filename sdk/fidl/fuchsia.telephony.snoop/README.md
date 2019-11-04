@@ -8,7 +8,7 @@
 ## Publisher {#Publisher}
 *Defined in [fuchsia.telephony.snoop/tel-snoop.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-telephony-snoop/tel-snoop.fidl#27)*
 
- Protocol for forwarding QMI messages from driver to Snoop CLI
+ Protocol for forwarding messages to Snooper.
 
 ### SendMessage {#SendMessage}
 
@@ -24,6 +24,47 @@
         </tr></table>
 
 
+
+## Snooper {#Snooper}
+*Defined in [fuchsia.telephony.snoop/tel-snoop.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-telephony-snoop/tel-snoop.fidl#33)*
+
+ Protocol for forwarding Message from Snooper.
+
+### GetDeviceNum {#GetDeviceNum}
+
+ Get number of devices that connect to Snooper.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>device_num</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+### OnMessage {#OnMessage}
+
+ Snoop message which receives by Snooper client.
+
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>msg</code></td>
+            <td>
+                <code><a class='link' href='#Message'>Message</a></code>
+            </td>
+        </tr></table>
 
 
 

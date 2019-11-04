@@ -202,6 +202,26 @@
             </td>
         </tr></table>
 
+### GetPlayStatus {#GetPlayStatus}
+
+ Returns the status of the currently playing media.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_GetPlayStatus_Result'>Controller_GetPlayStatus_Result</a></code>
+            </td>
+        </tr></table>
+
 ### SetAbsoluteVolume {#SetAbsoluteVolume}
 
  Request the absolute volume on the peer be changed. Returns the actual volume set by the
@@ -428,6 +448,24 @@
             <td><code>attributes</code></td>
             <td>
                 <code><a class='link' href='#MediaAttributes'>MediaAttributes</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Controller_GetPlayStatus_Response {#Controller_GetPlayStatus_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>play_status</code></td>
+            <td>
+                <code><a class='link' href='#PlayStatus'>PlayStatus</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -894,7 +932,7 @@ Type: <code>uint8</code>
 ### AvcPanelCommand {#AvcPanelCommand}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#121)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#137)*
 
  Defined by AV\C Panel specification.
 
@@ -1226,6 +1264,46 @@ Type: <code>uint8</code>
 </td>
         </tr></table>
 
+### PlayStatus {#PlayStatus}
+
+
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#122)*
+
+ Status of currently playing media on the TG.
+ Defined by AVRCP 1.6.2 section 6.7.1, Table 6.29.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>song_length</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> The total length of the currently playing media, in milliseconds.
+ Optional, if the TG does not support song length.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>song_position</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td> The current position of the playing media, in milliseconds elapsed.
+ Optional, if the TG does not support song position.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>playback_status</code></td>
+            <td>
+                <code><a class='link' href='#PlaybackStatus'>PlaybackStatus</a></code>
+            </td>
+            <td> The playback status of the currently playing media.
+ Mandatory, the TG must respond with a PlaybackStatus.
+</td>
+        </tr></table>
+
 
 
 ## **UNIONS**
@@ -1296,6 +1374,25 @@ Type: <code>uint8</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Controller_GetMediaAttributes_Response'>Controller_GetMediaAttributes_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Controller_GetPlayStatus_Result {#Controller_GetPlayStatus_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_GetPlayStatus_Response'>Controller_GetPlayStatus_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

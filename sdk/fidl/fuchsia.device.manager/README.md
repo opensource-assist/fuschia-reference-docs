@@ -37,7 +37,7 @@
         </tr></table>
 
 ## DeviceController {#DeviceController}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#91)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#108)*
 
  Protocol for controlling devices in a devhost process from the devcoordinator
 
@@ -191,7 +191,7 @@
 
 
 ## DevhostController {#DevhostController}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#129)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#146)*
 
  Protocol for controlling a devhost process from the devcoordinator
 
@@ -325,7 +325,7 @@
         </tr></table>
 
 ## Coordinator {#Coordinator}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#168)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#185)*
 
  Interface for the devices in devhosts to coordinate with the devcoordinator.
 
@@ -746,19 +746,9 @@
                 <code>string[31]</code>
             </td>
         </tr><tr>
-            <td><code>props</code></td>
+            <td><code>comp_desc</code></td>
             <td>
-                <code>vector&lt;uint64&gt;[256]</code>
-            </td>
-        </tr><tr>
-            <td><code>components</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#DeviceComponent'>DeviceComponent</a>&gt;[16]</code>
-            </td>
-        </tr><tr>
-            <td><code>coresident_device_index</code></td>
-            <td>
-                <code>uint32</code>
+                <code><a class='link' href='#CompositeDeviceDescriptor'>CompositeDeviceDescriptor</a></code>
             </td>
         </tr></table>
 
@@ -1200,7 +1190,7 @@
 </table>
 
 ### DeviceComponentPart {#DeviceComponentPart}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#62)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#65)*
 
 
 
@@ -1226,7 +1216,7 @@
 </table>
 
 ### DeviceComponent {#DeviceComponent}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#71)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#74)*
 
 
 
@@ -1245,6 +1235,72 @@
             <td><code>parts</code></td>
             <td>
                 <code>[16]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### DeviceMetadata {#DeviceMetadata}
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#83)*
+
+
+
+ Metadata that can be added to a device
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>key</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>data</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[8192]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### CompositeDeviceDescriptor {#CompositeDeviceDescriptor}
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#89)*
+
+
+
+ Composite device parts and properties
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>props</code></td>
+            <td>
+                <code>vector&lt;uint64&gt;[256]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>components</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#DeviceComponent'>DeviceComponent</a>&gt;[16]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>coresident_device_index</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>metadata</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#DeviceMetadata'>DeviceMetadata</a>&gt;[32]?</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1296,7 +1352,7 @@ Type: <code>uint8</code>
 ### CompatibilityTestStatus {#CompatibilityTestStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#80)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#97)*
 
  A enum of CompatibilityTestStatus
 
@@ -1731,7 +1787,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#41">METADATA_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#41">METADATA_BYTES_MAX</a></td>
             <td>
                     <code>8192</code>
                 </td>
@@ -1740,7 +1796,16 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#44">PROPERTIES_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#44">METADATA_MAX</a></td>
+            <td>
+                    <code>32</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> Maximum number of metadata that can be added to a device
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#47">PROPERTIES_MAX</a></td>
             <td>
                     <code>256</code>
                 </td>
@@ -1749,7 +1814,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#47">COMPONENTS_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#50">COMPONENTS_MAX</a></td>
             <td>
                     <code>16</code>
                 </td>
@@ -1758,7 +1823,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#50">DEVICE_COMPONENT_PARTS_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#53">DEVICE_COMPONENT_PARTS_MAX</a></td>
             <td>
                     <code>16</code>
                 </td>
@@ -1767,7 +1832,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#53">DEVICE_COMPONENT_PART_INSTRUCTIONS_MAX</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#56">DEVICE_COMPONENT_PART_INSTRUCTIONS_MAX</a></td>
             <td>
                     <code>32</code>
                 </td>

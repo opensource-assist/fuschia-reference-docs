@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Controller {#Controller}
-*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#112)*
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#129)*
 
  Interface for manipulating a device in a devhost
 
@@ -324,6 +324,32 @@
             </td>
         </tr></table>
 
+### GetDevicePerformanceStates {#GetDevicePerformanceStates}
+
+ Gets the device performance states. Used by the system wide power manager
+ to manage power for this device.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>states</code></td>
+            <td>
+                <code>[20]</code>
+            </td>
+        </tr><tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
 ### UpdatePowerStateMapping {#UpdatePowerStateMapping}
 
  Updates the mapping between system power states to device power states. Used by the system
@@ -522,7 +548,7 @@
 </table>
 
 ### DevicePowerStateInfo {#DevicePowerStateInfo}
-*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#85)*
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#90)*
 
 
 
@@ -571,8 +597,44 @@
         </tr>
 </table>
 
+### DevicePerformanceStateInfo {#DevicePerformanceStateInfo}
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#108)*
+
+
+
+ Performance state info for a device. A performance state is relevant only
+ when the device is in non-sleeping working device power state.
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>state_id</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>restore_latency</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td> Restore time for coming out of this state to fully working performant state.
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>is_supported</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> Is this state supported?
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### SystemPowerStateInfo {#SystemPowerStateInfo}
-*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#101)*
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#118)*
 
 
 
@@ -630,7 +692,7 @@
 ### DevicePowerState {#DevicePowerState}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#40)*
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#42)*
 
 
 
@@ -858,7 +920,23 @@ Type: <code>uint8</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#25">DEVICE_SIGNAL_READABLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#22">MAX_DEVICE_PERFORMANCE_STATES</a></td>
+            <td>
+                    <code>20</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#23">MIN_DEVICE_PERFORMANCE_STATES</a></td>
+            <td>
+                    <code>1</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#27">DEVICE_SIGNAL_READABLE</a></td>
             <td>
                     <code>16777216</code>
                 </td>
@@ -868,7 +946,7 @@ Type: <code>uint8</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#29">DEVICE_SIGNAL_OOB</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#31">DEVICE_SIGNAL_OOB</a></td>
             <td>
                     <code>33554432</code>
                 </td>
@@ -879,7 +957,7 @@ Type: <code>uint8</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#32">DEVICE_SIGNAL_WRITABLE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#34">DEVICE_SIGNAL_WRITABLE</a></td>
             <td>
                     <code>67108864</code>
                 </td>
@@ -889,7 +967,7 @@ Type: <code>uint8</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#35">DEVICE_SIGNAL_ERROR</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#37">DEVICE_SIGNAL_ERROR</a></td>
             <td>
                     <code>134217728</code>
                 </td>
@@ -899,13 +977,22 @@ Type: <code>uint8</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#38">DEVICE_SIGNAL_HANGUP</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#40">DEVICE_SIGNAL_HANGUP</a></td>
             <td>
                     <code>268435456</code>
                 </td>
                 <td><code>uint32</code></td>
             <td> Signal that will be active on a device event handle if the device has been disconnected.
  This is primarily used by the PTY support.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#87">DEVICE_PERFORMANCE_STATE_P0</a></td>
+            <td>
+                    <code>0</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> [MANDATORY] Default performant state when the device is in DEVICE_POWER_STATE_D0
 </td>
         </tr>
     <tr>

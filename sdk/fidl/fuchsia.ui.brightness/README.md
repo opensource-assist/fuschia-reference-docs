@@ -103,6 +103,52 @@
 
 
 
+## ColorAdjustment {#ColorAdjustment}
+*Defined in [fuchsia.ui.brightness/color_adjustment.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_adjustment.fidl#11)*
+
+ Allows a presentation owner to register a handler for color adjustments.
+ This API is implemented by the Brightness Manager and
+ called by Root Presenter.
+
+### RegisterColorAdjustmentHandler {#RegisterColorAdjustmentHandler}
+
+ Registers a handler for changes in the color adjustment configuration.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>handler</code></td>
+            <td>
+                <code><a class='link' href='#ColorAdjustmentHandler'>ColorAdjustmentHandler</a></code>
+            </td>
+        </tr></table>
+
+
+
+## ColorAdjustmentHandler {#ColorAdjustmentHandler}
+*Defined in [fuchsia.ui.brightness/color_adjustment.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_adjustment.fidl#19)*
+
+ Handler implemented by the owner of the presentation.
+ The brightness manager uses this protocol to request changes to the
+ screen's color adjustment matrix.
+
+### SetColorAdjustment {#SetColorAdjustment}
+
+ Called when the color adjustment  has changed.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>color_adjustment</code></td>
+            <td>
+                <code><a class='link' href='#ColorAdjustmentTable'>ColorAdjustmentTable</a></code>
+            </td>
+        </tr></table>
+
+
+
 
 
 ## **STRUCTS**
@@ -156,6 +202,30 @@
 
 
 
+
+## **TABLES**
+
+### ColorAdjustmentTable {#ColorAdjustmentTable}
+
+
+*Defined in [fuchsia.ui.brightness/color_adjustment.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_adjustment.fidl#25)*
+
+ The table for screen color tint adjustments.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>matrix</code></td>
+            <td>
+                <code>float32[9]</code>
+            </td>
+            <td> 3x3 Matrix in row-major form which will be used by root presenter
+ to apply color adjustment.
+ This field may be omitted to disable color adjustment.
+</td>
+        </tr></table>
 
 
 

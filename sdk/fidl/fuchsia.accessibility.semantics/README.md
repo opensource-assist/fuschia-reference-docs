@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## SemanticsManager {#SemanticsManager}
-*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#30)*
+*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#33)*
 
  An interface to manage connections with views for the purposes of gathering semantic information
  about their current UI state.
@@ -42,7 +42,7 @@
 
 
 ## SemanticTree {#SemanticTree}
-*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#51)*
+*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#54)*
 
  Interface to update the semantic tree for a particular view. Nodes can be added, updated or
  deleted. Because the size of an update may exceed FIDL transfer limits, clients are responsible
@@ -111,7 +111,7 @@
     </table>
 
 ## SemanticListener {#SemanticListener}
-*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#80)*
+*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#83)*
 
  A semantic provider is the client-side interface that the manager can use to enable or disable
  semantic updates, and to ask clients to perform accessibility actions.
@@ -213,14 +213,29 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEFAULT</code></td>
             <td><code>1</code></td>
-            <td> The default action associated with the role of an element.
+            <td> The default action associated with the element.
+</td>
+        </tr><tr>
+            <td><code>SECONDARY</code></td>
+            <td><code>2</code></td>
+            <td> The secondary action associated with the element. This may correspond to a long press (touchscreens) or right click (mouse).
+</td>
+        </tr><tr>
+            <td><code>SET_FOCUS</code></td>
+            <td><code>3</code></td>
+            <td> Set (input/non-accessibility) focus on this element.
+</td>
+        </tr><tr>
+            <td><code>SET_VALUE</code></td>
+            <td><code>4</code></td>
+            <td> Set the element's value.
 </td>
         </tr></table>
 
 ### Role {#Role}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#16)*
+*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#22)*
 
  Represents a role of an element on a UI.
 
@@ -231,6 +246,57 @@ Type: <code>uint32</code>
             <td><code>1</code></td>
             <td> Role used to represent elements which role is not currently supported.
 </td>
+        </tr><tr>
+            <td><code>BUTTON</code></td>
+            <td><code>2</code></td>
+            <td> Something on screen that can be clicked/activated, that has a single function.
+</td>
+        </tr><tr>
+            <td><code>HEADER</code></td>
+            <td><code>3</code></td>
+            <td> Header text, e.g. something tagged <h1> in HTML.
+</td>
+        </tr><tr>
+            <td><code>IMAGE</code></td>
+            <td><code>4</code></td>
+            <td> An image or graphic.
+</td>
+        </tr><tr>
+            <td><code>TEXT_FIELD</code></td>
+            <td><code>5</code></td>
+            <td> A field containing text that is not a header.
+</td>
+        </tr></table>
+
+### CheckedState {#CheckedState}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#53)*
+
+ Represents the state of a UI checkbox.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>NONE</code></td>
+            <td><code>1</code></td>
+            <td> Used when no data is entered or the element is not a check box.
+</td>
+        </tr><tr>
+            <td><code>TRUE</code></td>
+            <td><code>2</code></td>
+            <td> True
+</td>
+        </tr><tr>
+            <td><code>FALSE</code></td>
+            <td><code>3</code></td>
+            <td> False
+</td>
+        </tr><tr>
+            <td><code>MIXED</code></td>
+            <td><code>4</code></td>
+            <td> Indeterminate state
+</td>
         </tr></table>
 
 
@@ -240,7 +306,7 @@ Type: <code>uint32</code>
 ### Attributes {#Attributes}
 
 
-*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#25)*
+*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#39)*
 
  An attribute is an essential property to describe an element. Unlike states, attributes do not
  change over the life of an element.
@@ -256,21 +322,36 @@ Type: <code>uint32</code>
             <td>
                 <code>string[16384]</code>
             </td>
-            <td> The label for an element. If longer than MAX_LABEL_SIZE the client is responsible for
- truncating the label.
+            <td> The primary label for an element. If longer than MAX_LABEL_SIZE the client is responsible
+ for truncating the label.
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>secondary_label</code></td>
+            <td>
+                <code>string[16384]</code>
+            </td>
+            <td> The secondary label for an element. If longer than MAX_LABEL_SIZE the client is responsible
+ for truncating the label.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>secondary_action_description</code></td>
+            <td>
+                <code>string[16384]</code>
+            </td>
+            <td> A description of what the secondary action on a node (equivalent to long press or right click) should do.
 </td>
         </tr></table>
 
 ### States {#States}
 
 
-*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#36)*
+*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#67)*
 
  A state is a dynamic property of an element that may change in response to
  user action or automated processes. Thus, they are different from attributes
  in an important point, which is frequency of change.
- Example: a checkbox can be checked / unchecked, and this state can be
- altered via user input.
 
 
 <table>
@@ -281,16 +362,47 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the element is checked.
+            <td> DEPRECATED
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>checked_state</code></td>
+            <td>
+                <code><a class='link' href='#CheckedState'>CheckedState</a></code>
+            </td>
+            <td> State of a checkbox.
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>selected</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> Whether the element is currently selected.
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>hidden</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td> Whether the element is currently hidden or marked invisible by the framework.
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>value</code></td>
+            <td>
+                <code>string[16384]</code>
+            </td>
+            <td> The user-entered value of the element, if applicable. If longer than MAX_VALUE_SIZE the
+ client is responsible for truncating.
 </td>
         </tr></table>
 
 ### Node {#Node}
 
 
-*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#46)*
-
- Node: data structure to represent semantic information about a UI element.
+*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#88)*
 
  The Node represents a semantic element on an interface. This may
  be a button, a text field, a checkbox or any element that has a relevant
@@ -345,7 +457,7 @@ Type: <code>uint32</code>
             <td>6</td>
             <td><code>child_ids</code></td>
             <td>
-                <code>vector&lt;uint32&gt;[256]</code>
+                <code>vector&lt;uint32&gt;[20000]</code>
             </td>
             <td> The list of child IDs of this node, in traversal order. Runtimes supplying semantic tree
  information are responsible for ensuring the tree does not contain cycles. Each node may
@@ -365,14 +477,14 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.ui.gfx/'>fuchsia.ui.gfx</a>/<a class='link' href='../fuchsia.ui.gfx/#mat4'>mat4</a></code>
             </td>
-            <td> Transform from parent coordinate space to local space.
+            <td> Transform from parent coordinate space to local space. 4x4 for compatibility with scenic.
 </td>
         </tr></table>
 
 ### Hit {#Hit}
 
 
-*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#68)*
+*Defined in [fuchsia.accessibility.semantics/semantics_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#71)*
 
  Results of hit testing on a view's semantic tree which is implemented by
  Runtimes(like Flutter/Chrome) and sent to Accessibility.
@@ -423,7 +535,7 @@ Type: <code>uint32</code>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#14">MAX_FAN_OUT</a></td>
             <td>
-                    <code>256</code>
+                    <code>20000</code>
                 </td>
                 <td><code>uint64</code></td>
             <td> Maximum number of children for a node in the semantic tree.
@@ -445,6 +557,15 @@ Type: <code>uint32</code>
                 </td>
                 <td><code>uint64</code></td>
             <td> Maximum size of a label string, in bytes.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#23">MAX_VALUE_SIZE</a></td>
+            <td>
+                    <code>16384</code>
+                </td>
+                <td><code>uint64</code></td>
+            <td> Maximum size of a value string, in bytes.
 </td>
         </tr>
     
