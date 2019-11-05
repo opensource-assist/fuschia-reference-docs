@@ -52,12 +52,42 @@
  suspended waiting for an exception handler (in limbo). This is the core
  feature that enables Just In Time (JIT) debugging.
 
-### ListProcessesWaitingOnException {#ListProcessesWaitingOnException}
+### WatchActive {#WatchActive}
+
+ Watchs for changes determining whether the limbo is currently active,
+ using a Hanging Get pattern. An active limbo could be empty (not have
+ any processes waiting on an exception). However, an inactive limbo is
+ guaranteed to not have any processes waiting in it.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>is_active</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+### WatchProcessesWaitingOnException {#WatchProcessesWaitingOnException}
+
+ Watch for processes that are waiting on exceptions, using a Hanging Get
+ Pattern.
 
  Returns information on all the processes currently waiting on an exception.
  The information provided is intended to correctly identify an exception
  and determine whether the caller wants to actually handle it.
  To retrieve an exception, use the |GetException| call.
+
+ Returns ZX_ERR_UNAVAILABLE if limbo is not active.
+ Returns ZX_ERR_CANCELED if there was an outstanding call and the limbo
+ becomes inactive.
 
  NOTE: The |process| and |thread| handle will only have the ZX_RIGHT_READ
        right, so no modification will be able to be done on them.
@@ -72,9 +102,9 @@
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>exception_list</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#ProcessExceptionMetadata'>ProcessExceptionMetadata</a>&gt;[32]</code>
+                <code><a class='link' href='#ProcessLimbo_WatchProcessesWaitingOnException_Result'>ProcessLimbo_WatchProcessesWaitingOnException_Result</a></code>
             </td>
         </tr></table>
 
@@ -87,6 +117,7 @@
  list of available exceptions.
 
  Returns ZX_ERR_NOT_FOUND if the process is not waiting on an exception.
+ Returns ZX_ERR_UNAVAILABLE if limbo is not active.
 
 #### Request
 <table>
@@ -168,6 +199,24 @@
             <td><code>type</code></td>
             <td>
                 <code><a class='link' href='#ExceptionType'>ExceptionType</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### ProcessLimbo_WatchProcessesWaitingOnException_Response {#ProcessLimbo_WatchProcessesWaitingOnException_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>exception_list</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#ProcessExceptionMetadata'>ProcessExceptionMetadata</a>&gt;[32]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -309,7 +358,7 @@ Type: <code>uint32</code>
 ### ProcessExceptionMetadata {#ProcessExceptionMetadata}
 
 
-*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#47)*
+*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#61)*
 
  Intended to be read only metadada associated with an exception waiting in
  limbo. The handles provided will only have read-only access to the resource,
@@ -350,6 +399,25 @@ Type: <code>uint32</code>
 
 
 ## **UNIONS**
+
+### ProcessLimbo_WatchProcessesWaitingOnException_Result {#ProcessLimbo_WatchProcessesWaitingOnException_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#ProcessLimbo_WatchProcessesWaitingOnException_Response'>ProcessLimbo_WatchProcessesWaitingOnException_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
 
 ### ProcessLimbo_RetrieveException_Result {#ProcessLimbo_RetrieveException_Result}
 *generated*

@@ -327,44 +327,6 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
-### ReliabilityAndOrdering {#ReliabilityAndOrdering}
-Type: <code>uint32</code>
-
-*Defined in [fuchsia.overnet.protocol/labels.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/labels.fidl#21)*
-
- Reliability and ordering constraints for a stream.
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>ReliableOrdered</code></td>
-            <td><code>1</code></td>
-            <td> Datagrams are delivered reliably in an ordered fashion.
-</td>
-        </tr><tr>
-            <td><code>UnreliableOrdered</code></td>
-            <td><code>2</code></td>
-            <td> Datagrams are delivered unreliably, yet order between messages is maintained.
-</td>
-        </tr><tr>
-            <td><code>ReliableUnordered</code></td>
-            <td><code>3</code></td>
-            <td> Datagrams are delivered reliably, but may be delivered out of order.
-</td>
-        </tr><tr>
-            <td><code>UnreliableUnordered</code></td>
-            <td><code>4</code></td>
-            <td> No guarantees on ordering or reliability. Note that messages will be delivered
- at most once.
-</td>
-        </tr><tr>
-            <td><code>TailReliable</code></td>
-            <td><code>5</code></td>
-            <td> Messages are delivered in order. The most recently sent message is considered
- reliable, while all other messages are considered unreliable.
-</td>
-        </tr></table>
-
 
 
 ## **TABLES**

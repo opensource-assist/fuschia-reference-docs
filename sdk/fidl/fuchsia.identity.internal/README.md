@@ -235,13 +235,27 @@
  Moves the AccountHandler from the `Transferred` state to the
  `Initialized` state.
 
+ `context` An `AccountHandlerContext` that can supply account and
+           authentication services and contextual state.
+ `id` The account's local identifier.
+
  Fails with FAILED_PRECONDITION if the AccountHandler is not in the `Transferred`
  state.
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
-    </table>
+    <tr>
+            <td><code>context</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerContext'>AccountHandlerContext</a></code>
+            </td>
+        </tr><tr>
+            <td><code>id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
 
 
 #### Response
@@ -448,7 +462,7 @@
 
 
 ## AccountHandlerContext {#AccountHandlerContext}
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#253)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#260)*
 
  An interface that supplies the account and authentication services that
  an AccountHandler needs to perform its role in the system.
@@ -648,7 +662,7 @@
 ### AccountData {#AccountData}
 
 
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#266)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#273)*
 
  Contents of an account, used for serialization during account transfer.
 

@@ -946,12 +946,12 @@
 
 
 
- Sets a camera's clip-space transform.
+ Sets a camera's 2D clip-space transform.
 
  Constraints:
  - `camera_id` refs a `Camera`.
  - `translation` is the desired translation, in Vulkan NDC.
- - `scale` is the scale factor to apply before translation.
+ - `scale` is the scale factor to apply on the x/y plane before translation.
 
 
 <table>
