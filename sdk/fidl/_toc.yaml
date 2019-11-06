@@ -119,6 +119,10 @@ toc:
   path: /reference/fidl/fuchsia.identity.internal
 - title: fuchsia.identity.keys
   path: /reference/fidl/fuchsia.identity.keys
+- title: fuchsia.identity.prototype
+  path: /reference/fidl/fuchsia.identity.prototype
+- title: fuchsia.identity.transfer
+  path: /reference/fidl/fuchsia.identity.transfer
 - title: fuchsia.images
   path: /reference/fidl/fuchsia.images
 - title: fuchsia.inspect.deprecated

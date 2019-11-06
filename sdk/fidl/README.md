@@ -244,6 +244,14 @@
 </td>
 </tr>
 <tr>
+    <td><a href="fuchsia.identity.prototype/index">fuchsia.identity.prototype</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.identity.transfer/index">fuchsia.identity.transfer</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.images/index">fuchsia.images</a></td>
     <td></td>
 </tr>
