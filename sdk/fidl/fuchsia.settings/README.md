@@ -835,19 +835,14 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>DEFAULT</code></td>
-            <td><code>0</code></td>
-            <td> The volume is default.
-</td>
-        </tr><tr>
             <td><code>USER</code></td>
-            <td><code>1</code></td>
+            <td><code>0</code></td>
             <td> The volume is set by the user. When the |source| in AudioStreamSettings is
  set to this, the audio volume is set to |user_volume|.
 </td>
         </tr><tr>
             <td><code>SYSTEM</code></td>
-            <td><code>2</code></td>
+            <td><code>1</code></td>
             <td> The system takes control of the volume. This is used when the system constantly
  calculates and changes the volume. The volume is not stored for this source.
 </td>
@@ -1063,7 +1058,7 @@ Type: <code>uint32</code>
 ### Volume {#Volume}
 
 
-*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#35)*
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#33)*
 
 
 
@@ -1092,7 +1087,7 @@ Type: <code>uint32</code>
 ### AudioStreamSettings {#AudioStreamSettings}
 
 
-*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#45)*
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#43)*
 
 
 
@@ -1128,7 +1123,7 @@ Type: <code>uint32</code>
 ### AudioSettings {#AudioSettings}
 
 
-*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#57)*
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#55)*
 
 
 
@@ -1156,7 +1151,7 @@ Type: <code>uint32</code>
 ### AudioInput {#AudioInput}
 
 
-*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#66)*
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#64)*
 
 
 
