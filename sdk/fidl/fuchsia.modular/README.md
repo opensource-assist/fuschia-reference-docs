@@ -78,37 +78,6 @@
 
 
 
-### RunTask {#RunTask}
-
- Called when some task identified by `task_id` is scheduled to run. The task
- was first posted by this Agent using `AgentContext.ScheduleTask()`. The
- return callback is called by this Agent when all work related to this task
- is completed. Note that the framework may call `Lifecycle.Terminate()`
- before RunTask returns.
-
- TODO(alhaad): The current implementation allows the Agent to run a task
- until its callback returns. If the task takes a long time to finish, the
- framework has no way to signal a request for termination other than to shut
- down the entire Agent instance. Instead, we should cap task length with
- strategies like budgets. Also, the Task should likely have its own
- connection that allows for more signalling.
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>task_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
 ## AgentContext {#AgentContext}
 *Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#11)*
 

@@ -372,7 +372,7 @@
 </table>
 
 ### FamilyName {#FamilyName}
-*Defined in [fuchsia.fonts/provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#22)*
+*Defined in [fuchsia.fonts/provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#25)*
 
 
 
@@ -430,6 +430,45 @@ Type: <code>uint32</code>
             <td><code>FANTASY</code></td>
             <td><code>5</code></td>
             <td></td>
+        </tr></table>
+
+### CacheMissPolicy {#CacheMissPolicy}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.fonts/provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#44)*
+
+ Options for what the font server should do if the client requests a typeface that is not yet
+ cached.
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>BLOCK_UNTIL_DOWNLOADED</code></td>
+            <td><code>1</code></td>
+            <td> The server will attempt to load the uncached typeface before providing a response. This is
+ the *default* behavior.
+
+ This option is not recommended for synchronous clients that block rendering while waiting
+ for a font.
+</td>
+        </tr><tr>
+            <td><code>RETURN_EMPTY_RESPONSE</code></td>
+            <td><code>2</code></td>
+            <td> The server will tell the client that the uncached typeface is unavailable, by returning an
+ empty <a class='link' href='#TypefaceResponse'>TypefaceResponse</a>. The uncached typeface may be downloaded
+ asynchronously to be available for future requests.
+
+ This is similar to `font-display: block` in CSS.
+</td>
+        </tr><tr>
+            <td><code>RETURN_FALLBACK</code></td>
+            <td><code>3</code></td>
+            <td> The server will attempt to provide a cached fallback typeface (if allowed by the fallback
+ restrictions in <a class='link' href='#TypefaceRequestFlags'>TypefaceRequestFlags</a>). The uncached typeface may be
+ downloaded asynchronously to be available for future requests.
+
+ This is similar to `font-display: swap` in CSS.
+</td>
         </tr></table>
 
 ### Slant {#Slant}
@@ -620,7 +659,7 @@ Type: <code>uint32</code>
 ### TypefaceRequest {#TypefaceRequest}
 
 
-*Defined in [fuchsia.fonts/provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#40)*
+*Defined in [fuchsia.fonts/provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#68)*
 
  Parameters for requesting a typeface.
 
@@ -643,12 +682,28 @@ Type: <code>uint32</code>
             </td>
             <td> Flags for how to process the request, such as which kinds of substitutions are permitted.
 </td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>cache_miss_policy</code></td>
+            <td>
+                <code><a class='link' href='#CacheMissPolicy'>CacheMissPolicy</a></code>
+            </td>
+            <td> Setting for what to do if the requested typeface exists but is not cached, and therefore
+ cannot be served immediately.
+
+ If this field is empty, the default policy is
+ <a class='link' href='#CacheMissPolicy.BLOCK_UNTIL_DOWNLOADED'>CacheMissPolicy.BLOCK_UNTIL_DOWNLOADED</a>.
+
+ If the client needs an immediate response, it can choose one of the non-blocking policies.
+ In this case, clients can also register to be notified when new fonts have been added to the
+ cache by calling <a class='link' href='#Provider.RegisterFontSetEventListener'>Provider.RegisterFontSetEventListener</a>.
+</td>
         </tr></table>
 
 ### TypefaceQuery {#TypefaceQuery}
 
 
-*Defined in [fuchsia.fonts/provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#48)*
+*Defined in [fuchsia.fonts/provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#88)*
 
  Parameters for looking up a typeface.
 
@@ -690,7 +745,7 @@ Type: <code>uint32</code>
             <td>4</td>
             <td><code>code_points</code></td>
             <td>
-                <code>vector&lt;uint32&gt;</code>
+                <code>vector&lt;uint32&gt;[128]</code>
             </td>
             <td> Optional code points for which glyphs must be present in the returned face.
 
@@ -718,7 +773,7 @@ Type: <code>uint32</code>
 ### TypefaceResponse {#TypefaceResponse}
 
 
-*Defined in [fuchsia.fonts/provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#87)*
+*Defined in [fuchsia.fonts/provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#127)*
 
  Response to a TypefaceRequest. Contains the digital font file and metadata corresponding to a
  returned typeface. Clients are expected to cache the results if they plan to reuse them.
@@ -762,7 +817,7 @@ Type: <code>uint32</code>
 ### FontFamilyInfo {#FontFamilyInfo}
 
 
-*Defined in [fuchsia.fonts/provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#106)*
+*Defined in [fuchsia.fonts/provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#146)*
 
  Information about a font family that can be requested using `Provider.GetFontFamilyInfo()`.
 
@@ -899,7 +954,16 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#14">MAX_FACE_QUERY_LANGUAGES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#14">MAX_FACE_QUERY_CODE_POINTS</a></td>
+            <td>
+                    <code>128</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td> The maximum number of code points allowed in a typeface query.
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#17">MAX_FACE_QUERY_LANGUAGES</a></td>
             <td>
                     <code>8</code>
                 </td>
@@ -908,7 +972,7 @@ Type: <code>uint32</code>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#17">MAX_FAMILY_STYLES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#20">MAX_FAMILY_STYLES</a></td>
             <td>
                     <code>300</code>
                 </td>

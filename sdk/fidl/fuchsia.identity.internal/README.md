@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## AccountHandlerControl {#AccountHandlerControl}
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#76)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#78)*
 
  The control channel for an AccountHandler component.
 
@@ -462,7 +462,7 @@
 
 
 ## AccountHandlerContext {#AccountHandlerContext}
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#260)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#262)*
 
  An interface that supplies the account and authentication services that
  an AccountHandler needs to perform its role in the system.
@@ -662,7 +662,7 @@
 ### AccountData {#AccountData}
 
 
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#273)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#275)*
 
  Contents of an account, used for serialization during account transfer.
 
@@ -897,4 +897,26 @@
 
 
 
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#11">HASH_SIZE</a></td>
+            <td>
+                    <code>32</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#12">HASH_SALT_SIZE</a></td>
+            <td>
+                    <code>32</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    
+</table>
 

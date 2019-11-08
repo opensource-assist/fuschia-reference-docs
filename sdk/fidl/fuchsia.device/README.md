@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Controller {#Controller}
-*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#129)*
+*Defined in [fuchsia.device/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#128)*
 
  Interface for manipulating a device in a devhost
 
@@ -29,9 +29,9 @@
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Controller_Bind_Result'>Controller_Bind_Result</a></code>
             </td>
         </tr></table>
 
@@ -56,9 +56,9 @@
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Controller_Rebind_Result'>Controller_Rebind_Result</a></code>
             </td>
         </tr></table>
 
@@ -77,9 +77,9 @@
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='#Controller_ScheduleUnbind_Result'>Controller_ScheduleUnbind_Result</a></code>
             </td>
         </tr></table>
 
@@ -150,6 +150,26 @@
             <td><code>path</code></td>
             <td>
                 <code>string[1024]?</code>
+            </td>
+        </tr></table>
+
+### GetTopologicalPathNew {#GetTopologicalPathNew}
+
+ Return the topological path for this device
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_GetTopologicalPathNew_Result'>Controller_GetTopologicalPathNew_Result</a></code>
             </td>
         </tr></table>
 
@@ -453,6 +473,43 @@
             </td>
         </tr></table>
 
+### SetPerformanceState {#SetPerformanceState}
+
+ Set the performance state of this device to the requested performance state. This is only
+ called for the current device and none of the descendants are aware of the state
+ transition.
+ On success, the out_state and the requested_state is same. If the device is in a working
+ state, the performance state will be changed to requested_state immediately. If the device
+ is in non-working state, the performance state will be the requested_state whenever the
+ device transitions to working state.
+ On failure, the out_state will have the state that the device can go into.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requested_state</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>out_state</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
 ## NameProvider {#NameProvider}
 *Defined in [fuchsia.device/name-provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/name-provider.fidl#17)*
 
@@ -481,6 +538,57 @@
 
 
 ## **STRUCTS**
+
+### Controller_Bind_Response {#Controller_Bind_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Controller_Rebind_Response {#Controller_Rebind_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Controller_ScheduleUnbind_Response {#Controller_ScheduleUnbind_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Controller_GetTopologicalPathNew_Response {#Controller_GetTopologicalPathNew_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>path</code></td>
+            <td>
+                <code>string[1024]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
 
 ### Controller_GetDevicePowerCaps_Response {#Controller_GetDevicePowerCaps_Response}
 *generated*
@@ -619,7 +727,7 @@
             <td>
                 <code>int64</code>
             </td>
-            <td> Restore time for coming out of this state to fully working performant state.
+            <td> Restore time for coming out of this state to fully working performance state.
 </td>
             <td>No default</td>
         </tr><tr>
@@ -760,6 +868,82 @@ Type: <code>uint8</code>
 
 
 ## **UNIONS**
+
+### Controller_Bind_Result {#Controller_Bind_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_Bind_Response'>Controller_Bind_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Controller_Rebind_Result {#Controller_Rebind_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_Rebind_Response'>Controller_Rebind_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Controller_ScheduleUnbind_Result {#Controller_ScheduleUnbind_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_ScheduleUnbind_Response'>Controller_ScheduleUnbind_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Controller_GetTopologicalPathNew_Result {#Controller_GetTopologicalPathNew_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_GetTopologicalPathNew_Response'>Controller_GetTopologicalPathNew_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
 
 ### Controller_GetDevicePowerCaps_Result {#Controller_GetDevicePowerCaps_Result}
 *generated*
@@ -908,7 +1092,7 @@ Type: <code>uint8</code>
                 </td>
                 <td><code>uint32</code></td>
             <td> Maximum device power states. In future this should account
- for performant states.
+ for performance states.
 </td>
         </tr>
     <tr>
@@ -992,7 +1176,7 @@ Type: <code>uint8</code>
                     <code>0</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> [MANDATORY] Default performant state when the device is in DEVICE_POWER_STATE_D0
+            <td> [MANDATORY] Default performance state when the device is in DEVICE_POWER_STATE_D0
 </td>
         </tr>
     <tr>
