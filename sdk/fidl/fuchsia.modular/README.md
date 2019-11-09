@@ -1927,28 +1927,6 @@
 
 
 
-### GetModuleController {#GetModuleController}
-
- DEPRECATED
- (metadata about, and requesting changes to runtime state).
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>module_path</code></td>
-            <td>
-                <code>vector&lt;string&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#ModuleController'>ModuleController</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ### Annotate {#Annotate}
 
  Attach the `annotations` to the story.
@@ -1977,7 +1955,7 @@
         </tr></table>
 
 ## StoryWatcher {#StoryWatcher}
-*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#49)*
+*Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#45)*
 
  Implemented by the client calling StoryController.Watch().
 

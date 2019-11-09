@@ -423,6 +423,32 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### ModularConfig {#ModularConfig}
+
+
+*Defined in [fuchsia.modular.session/modular_config.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.session/modular_config.fidl#171)*
+
+ Contains the configurations for the modular framework components.
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>basemgr_config</code></td>
+            <td>
+                <code><a class='link' href='#BasemgrConfig'>BasemgrConfig</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>sessionmgr_config</code></td>
+            <td>
+                <code><a class='link' href='#SessionmgrConfig'>SessionmgrConfig</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 
 
 
