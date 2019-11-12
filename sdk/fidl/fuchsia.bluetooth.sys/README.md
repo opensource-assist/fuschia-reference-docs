@@ -283,7 +283,7 @@
         </tr></table>
 
 ## Bootstrap {#Bootstrap}
-*Defined in [fuchsia.bluetooth.sys/bootstrap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/bootstrap.fidl#22)*
+*Defined in [fuchsia.bluetooth.sys/bootstrap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/bootstrap.fidl#23)*
 
  Protocol used to initialize persistent core Bluetooth data. This protocol populates data that
  determine the identity of this device as perceived by other Bluetooth devices.
@@ -783,6 +783,10 @@ Type: <code>uint32</code>
             <td><code>INVALID_HOST_IDENTITY</code></td>
             <td><code>1</code></td>
             <td></td>
+        </tr><tr>
+            <td><code>WRITE_FAILURE</code></td>
+            <td><code>2</code></td>
+            <td></td>
         </tr></table>
 
 ### InputCapability {#InputCapability}
@@ -1073,13 +1077,13 @@ Type: <code>uint32</code>
 </td>
         </tr><tr>
             <td>2</td>
-            <td><code>piconet_leader</code></td>
+            <td><code>role_preference</code></td>
             <td>
-                <code>bool</code>
+                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#ConnectionRole'>ConnectionRole</a></code>
             </td>
-            <td> True if the peer prefers to lead the piconet. This is determined by role
- switch procedures. Paging and connecting from a peer does not automatically
- set this flag.
+            <td> The peer's preferred piconet role. This is determined by role switch procedures. Paging and
+ connecting from a peer does not automatically set this flag. If absent, the peer has not
+ expressed a preference.
 </td>
         </tr><tr>
             <td>3</td>
@@ -1171,6 +1175,9 @@ Type: <code>uint32</code>
             <td> The local Identity Resolving Key used by a bt-host device to generate Resolvable Private
  Addresses when privacy is enabled.
 
+ May be absent for hosts that do not use LE privacy, or that only use Non-Resolvable Private
+ Addresses.
+
  NOTE: This key is distributed to LE peers during pairing procedures. The client must take
  care to assign an IRK that consistent with the local bt-host identity.
 </td>
@@ -1179,7 +1186,7 @@ Type: <code>uint32</code>
 ### Identity {#Identity}
 
 
-*Defined in [fuchsia.bluetooth.sys/identity.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/identity.fidl#122)*
+*Defined in [fuchsia.bluetooth.sys/identity.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/identity.fidl#125)*
 
  Represents the persistent configuration of a single host-subsystem instance. This is used for
  identity presentation (inquiry, inquiry response, and advertisement) and for bonding secrets

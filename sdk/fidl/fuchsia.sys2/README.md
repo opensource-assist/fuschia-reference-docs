@@ -861,8 +861,9 @@
 ### StartupMode {#StartupMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.sys2/child_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/child_decl.fidl#7)*
+*Defined in [fuchsia.sys2/child_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/child_decl.fidl#30)*
 
+ Describes under what conditions the component may be started.
 
 
 <table>
@@ -874,7 +875,9 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>EAGER</code></td>
             <td><code>1</code></td>
-            <td> Start component instance as soon as parent starts.
+            <td> Start component instance as soon as parent starts. This mode is only
+ supported for statically declared children -- a dynamic instance may only be
+ started by binding to it.
 </td>
         </tr></table>
 
@@ -991,7 +994,7 @@ Type: <code>uint32</code>
 ### ChildDecl {#ChildDecl}
 
 
-*Defined in [fuchsia.sys2/child_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/child_decl.fidl#15)*
+*Defined in [fuchsia.sys2/child_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/child_decl.fidl#8)*
 
  Statically declares a child component instance.
 

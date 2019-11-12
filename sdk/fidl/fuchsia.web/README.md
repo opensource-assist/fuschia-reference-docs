@@ -36,7 +36,7 @@
 
 
 ## Context {#Context}
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#139)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#145)*
 
  Manages browsing state (e.g. LocalStorage, cookies, etc) associated with a set of
  <a class='link' href='#fuchsia.web.Frame'>fuchsia.web.Frame</a>.
@@ -1295,12 +1295,23 @@ Type: <code>uint32</code>
  [EME API](https://www.w3.org/TR/encrypted-media/#key-system). Requires
  <a class='link' href='#fuchsia.media.drm.PlayReady'>fuchsia.media.drm.PlayReady</a> service.
 </td>
+        </tr><tr>
+            <td>9</td>
+            <td><code>unsafely_treat_insecure_origins_as_secure</code></td>
+            <td>
+                <code>vector&lt;string&gt;[100]</code>
+            </td>
+            <td> Treat given insecure origins as secure origins. For the definition of secure contexts, see
+ https://w3c.github.io/webappsec-secure-contexts/ and
+ https://www.w3.org/TR/powerful-features/#is-origin-trustworthy.
+ Example value: `{"http://a.com", "http://b.com"}`.
+</td>
         </tr></table>
 
 ### CreateFrameParams {#CreateFrameParams}
 
 
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#165)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#171)*
 
 
 
@@ -1985,7 +1996,15 @@ Type: <code>uint64</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#20">MAX_HEADERS_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#20">MAX_SCHEME_AND_HOST_LENGTH</a></td>
+            <td>
+                    <code>513</code>
+                </td>
+                <td><code>int32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#24">MAX_HEADERS_COUNT</a></td>
             <td>
                     <code>4096</code>
                 </td>
@@ -1993,7 +2012,7 @@ Type: <code>uint64</code>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#23">MAX_RULE_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#27">MAX_RULE_COUNT</a></td>
             <td>
                     <code>4096</code>
                 </td>

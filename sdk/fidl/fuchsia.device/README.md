@@ -510,6 +510,36 @@
             </td>
         </tr></table>
 
+### ConfigureAutoSuspend {#ConfigureAutoSuspend}
+
+ Configure autosuspend of device to this deepest sleep state.
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>enable</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr><tr>
+            <td><code>requested_deepest_sleep_state</code></td>
+            <td>
+                <code><a class='link' href='#DevicePowerState'>DevicePowerState</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
 ## NameProvider {#NameProvider}
 *Defined in [fuchsia.device/name-provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/name-provider.fidl#17)*
 
