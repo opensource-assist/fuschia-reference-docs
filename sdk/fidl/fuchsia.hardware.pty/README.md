@@ -2,15 +2,14 @@
 
 # fuchsia.hardware.pty
 
- A PTY (pseudoterminal) emulates terminal devices, with a "server" side
- (which represents the keyboard+monitor side of the terminal and is obtained
- by opening /dev/misc/ptmx) and a number of "client" sides which are obtained
- by calling `OpenClient`.
-
- Client PTYs are identified by the `id` used in the `OpenClient` call. The
- first Client PTY *must* be 0, and it is the only Client PTY that is allowed
- to create additional Client PTYs, receive Events, etc. It is the
- Controlling PTY.
+<p>A PTY (pseudoterminal) emulates terminal devices, with a &quot;server&quot; side
+(which represents the keyboard+monitor side of the terminal and is obtained
+by opening /dev/misc/ptmx) and a number of &quot;client&quot; sides which are obtained
+by calling <code>OpenClient</code>.</p>
+<p>Client PTYs are identified by the <code>id</code> used in the <code>OpenClient</code> call. The
+first Client PTY <em>must</em> be 0, and it is the only Client PTY that is allowed
+to create additional Client PTYs, receive Events, etc. It is the
+Controlling PTY.</p>
 
 ## **PROTOCOLS**
 
@@ -20,24 +19,22 @@
 
 ### Clone {#Clone}
 
- Create another connection to the same remote object.
-
- `flags` may be any of:
-
- - `OPEN_RIGHT_*`
- - `OPEN_FLAG_APPEND`
- - `OPEN_FLAG_NO_REMOTE`
- - `OPEN_FLAG_DESCRIBE`
- - `CLONE_FLAG_SAME_RIGHTS`
-
- All other flags are ignored.
-
- The `OPEN_RIGHT_*` bits in `flags` request corresponding rights over the resulting
- cloned object.
- The cloned object must have rights less than or equal to the original object.
- Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
- `CLONE_FLAG_SAME_RIGHTS`.
+<p>Create another connection to the same remote object.</p>
+<p><code>flags</code> may be any of:</p>
+<ul>
+<li><code>OPEN_RIGHT_*</code></li>
+<li><code>OPEN_FLAG_APPEND</code></li>
+<li><code>OPEN_FLAG_NO_REMOTE</code></li>
+<li><code>OPEN_FLAG_DESCRIBE</code></li>
+<li><code>CLONE_FLAG_SAME_RIGHTS</code></li>
+</ul>
+<p>All other flags are ignored.</p>
+<p>The <code>OPEN_RIGHT_*</code> bits in <code>flags</code> request corresponding rights over the resulting
+cloned object.
+The cloned object must have rights less than or equal to the original object.
+Alternatively, pass <code>CLONE_FLAG_SAME_RIGHTS</code> to inherit the rights on the source connection.
+It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
+<code>CLONE_FLAG_SAME_RIGHTS</code>.</p>
 
 #### Request
 <table>
@@ -58,9 +55,8 @@
 
 ### Close {#Close}
 
- Terminates connection with object.
-
- This method does not require any rights.
+<p>Terminates connection with object.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -80,10 +76,9 @@
 
 ### Describe {#Describe}
 
- Returns extra information about the type of the object.
- If the `Describe` operation fails, the connection is closed.
-
- This method does not require any rights.
+<p>Returns extra information about the type of the object.
+If the <code>Describe</code> operation fails, the connection is closed.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -103,11 +98,10 @@
 
 ### OnOpen {#OnOpen}
 
- An event produced eagerly by a FIDL server if requested by `OPEN_FLAG_DESCRIBE`.
-
- Indicates the success or failure of the open operation, and optionally describes the
- object. If the status is `ZX_OK`, `info` contains descriptive information about the object
- (the same as would be returned by `Describe`).
+<p>An event produced eagerly by a FIDL server if requested by <code>OPEN_FLAG_DESCRIBE</code>.</p>
+<p>Indicates the success or failure of the open operation, and optionally describes the
+object. If the status is <code>ZX_OK</code>, <code>info</code> contains descriptive information about the object
+(the same as would be returned by <code>Describe</code>).</p>
 
 
 
@@ -128,9 +122,8 @@
 
 ### Sync {#Sync}
 
- Synchronizes updates to the node to the underlying media, if it exists.
-
- This method does not require any rights.
+<p>Synchronizes updates to the node to the underlying media, if it exists.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -150,9 +143,8 @@
 
 ### GetAttr {#GetAttr}
 
- Acquires information about the node.
-
- This method does not require any rights.
+<p>Acquires information about the node.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -177,10 +169,9 @@
 
 ### SetAttr {#SetAttr}
 
- Updates information about the node.
- `flags` may be any of `NODE_ATTRIBUTE_FLAG_*`.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Updates information about the node.
+<code>flags</code> may be any of <code>NODE_ATTRIBUTE_FLAG_*</code>.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -210,11 +201,10 @@
 
 ### NodeGetFlags {#NodeGetFlags}
 
- Acquires the `Directory.Open` rights and flags used to access this file.
-
- This method does not require any rights.
- This method has the same functionality as GetFlags for File and is
- meant as an in-progress replacement.
+<p>Acquires the <code>Directory.Open</code> rights and flags used to access this file.</p>
+<p>This method does not require any rights.
+This method has the same functionality as GetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -239,13 +229,14 @@
 
 ### NodeSetFlags {#NodeSetFlags}
 
- Changes the `Directory.Open` flags used to access the file.
- Supported flags which can be turned on / off:
- - `OPEN_FLAG_APPEND`
-
- This method does not require any rights.
- This method has the same functionality as SetFlags for File and is
- meant as an in-progress replacement.
+<p>Changes the <code>Directory.Open</code> flags used to access the file.
+Supported flags which can be turned on / off:</p>
+<ul>
+<li><code>OPEN_FLAG_APPEND</code></li>
+</ul>
+<p>This method does not require any rights.
+This method has the same functionality as SetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -270,10 +261,9 @@
 
 ### Read {#Read}
 
- Reads `count` bytes at the seek offset.
- The seek offset is moved forward by the number of bytes read.
-
- This method requires following rights: `OPEN_RIGHT_READABLE`.
+<p>Reads <code>count</code> bytes at the seek offset.
+The seek offset is moved forward by the number of bytes read.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_READABLE</code>.</p>
 
 #### Request
 <table>
@@ -303,10 +293,9 @@
 
 ### ReadAt {#ReadAt}
 
- Reads `count` bytes at the provided offset.
- Does not affect the seek offset.
-
- This method requires following rights: `OPEN_RIGHT_READABLE`.
+<p>Reads <code>count</code> bytes at the provided offset.
+Does not affect the seek offset.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_READABLE</code>.</p>
 
 #### Request
 <table>
@@ -341,10 +330,9 @@
 
 ### Write {#Write}
 
- Writes data at the seek offset.
- The seek offset is moved forward by the number of bytes written.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Writes data at the seek offset.
+The seek offset is moved forward by the number of bytes written.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -374,10 +362,9 @@
 
 ### WriteAt {#WriteAt}
 
- Writes data to the provided offset.
- Does not affect the seek offset.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Writes data to the provided offset.
+Does not affect the seek offset.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -412,10 +399,9 @@
 
 ### Seek {#Seek}
 
- Moves the offset at which the next invocation of `Read()` or `Write()` will
- occur.
-
- This method does not require any rights.
+<p>Moves the offset at which the next invocation of <code>Read()</code> or <code>Write()</code> will
+occur.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -450,9 +436,8 @@
 
 ### Truncate {#Truncate}
 
- Shrinks the file size to 'length' bytes.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Shrinks the file size to 'length' bytes.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -477,9 +462,8 @@
 
 ### GetFlags {#GetFlags}
 
- Acquires the `Directory.Open` rights and flags used to access this file.
-
- This method does not require any rights.
+<p>Acquires the <code>Directory.Open</code> rights and flags used to access this file.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -504,11 +488,12 @@
 
 ### SetFlags {#SetFlags}
 
- Changes the `Directory.Open` flags used to access the file.
- Supported flags which can be turned on / off:
- - `OPEN_FLAG_APPEND`
-
- This method does not require any rights.
+<p>Changes the <code>Directory.Open</code> flags used to access the file.
+Supported flags which can be turned on / off:</p>
+<ul>
+<li><code>OPEN_FLAG_APPEND</code></li>
+</ul>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -533,15 +518,14 @@
 
 ### GetBuffer {#GetBuffer}
 
- Acquires a buffer representing this file, if there is one, with the
- requested access rights.
-
- `flags` may be any of `VMO_FLAG_*`.
-
- This method requires following rights:
-
- - `OPEN_RIGHT_WRITABLE` if `flags` includes `VMO_FLAG_WRITE`.
- - `OPEN_RIGHT_READABLE` if `flags` includes `VMO_FLAG_READ` or `VMO_FLAG_EXEC`.
+<p>Acquires a buffer representing this file, if there is one, with the
+requested access rights.</p>
+<p><code>flags</code> may be any of <code>VMO_FLAG_*</code>.</p>
+<p>This method requires following rights:</p>
+<ul>
+<li><code>OPEN_RIGHT_WRITABLE</code> if <code>flags</code> includes <code>VMO_FLAG_WRITE</code>.</li>
+<li><code>OPEN_RIGHT_READABLE</code> if <code>flags</code> includes <code>VMO_FLAG_READ</code> or <code>VMO_FLAG_EXEC</code>.</li>
+</ul>
 
 #### Request
 <table>
@@ -571,15 +555,15 @@
 
 ### OpenClient {#OpenClient}
 
- Open a client PTY device with a unique `id`. `client` should be a handle
- to one endpoint of a channel that (on success) will become an open
- connection to the newly created device. On failure, the channel will be
- closed. Closing the channel will close the connection and release the
- device. If the provided `id` is 0, then the new client is a controlling
- client and has the capability to open additional clients. If the
- current device is not a controlling client, `ZX_ERR_ACCESS_DENIED` will be
- returned. If `id` is not unique, `ZX_ERR_INVALID_ARGS` will be returned.
- Otherwise the status code from `device_add` is passed on.
+<p>Open a client PTY device with a unique <code>id</code>. <code>client</code> should be a handle
+to one endpoint of a channel that (on success) will become an open
+connection to the newly created device. On failure, the channel will be
+closed. Closing the channel will close the connection and release the
+device. If the provided <code>id</code> is 0, then the new client is a controlling
+client and has the capability to open additional clients. If the
+current device is not a controlling client, <code>ZX_ERR_ACCESS_DENIED</code> will be
+returned. If <code>id</code> is not unique, <code>ZX_ERR_INVALID_ARGS</code> will be returned.
+Otherwise the status code from <code>device_add</code> is passed on.</p>
 
 #### Request
 <table>
@@ -609,9 +593,8 @@
 
 ### ClrSetFeature {#ClrSetFeature}
 
- allowed on Client PTYs
- -----------------------------
- Clear and/or Set PTY Features
+<h2>allowed on Client PTYs</h2>
+<p>Clear and/or Set PTY Features</p>
 
 #### Request
 <table>
@@ -646,7 +629,7 @@
 
 ### GetWindowSize {#GetWindowSize}
 
- Obtain the window size (in character cells)
+<p>Obtain the window size (in character cells)</p>
 
 #### Request
 <table>
@@ -671,10 +654,9 @@
 
 ### MakeActive {#MakeActive}
 
- allowed on the Controlling PTY
- -------------------------------------
- Select which Client PTY receives input.
- Reads will simply block on non-active PTYs.
+<h2>allowed on the Controlling PTY</h2>
+<p>Select which Client PTY receives input.
+Reads will simply block on non-active PTYs.</p>
 
 #### Request
 <table>
@@ -699,7 +681,7 @@
 
 ### ReadEvents {#ReadEvents}
 
- Returns pending OOB events, simultaneously clearing them
+<p>Returns pending OOB events, simultaneously clearing them</p>
 
 #### Request
 <table>
@@ -724,9 +706,8 @@
 
 ### SetWindowSize {#SetWindowSize}
 
- allowed on the Server PTY
- --------------------------------
- Sets the window size
+<h2>allowed on the Server PTY</h2>
+<p>Sets the window size</p>
 
 #### Request
 <table>
@@ -799,8 +780,8 @@
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> When Feature Raw is enabled, OOB Events like ^c, ^z, etc are not generated.
- Instead the character is read from the read() input path.
+            <td><p>When Feature Raw is enabled, OOB Events like ^c, ^z, etc are not generated.
+Instead the character is read from the read() input path.</p>
 </td>
         </tr>
     <tr>
@@ -809,7 +790,7 @@
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> The terminal has no active client.
+            <td><p>The terminal has no active client.</p>
 </td>
         </tr>
     <tr>
@@ -818,7 +799,7 @@
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> The terminal received a ^C control character.
+            <td><p>The terminal received a ^C control character.</p>
 </td>
         </tr>
     <tr>
@@ -827,7 +808,7 @@
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> The terminal received a ^Z control character.
+            <td><p>The terminal received a ^Z control character.</p>
 </td>
         </tr>
     <tr>
@@ -836,7 +817,7 @@
                     <code>7</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> All events
+            <td><p>All events</p>
 </td>
         </tr>
     <tr>
@@ -845,7 +826,7 @@
                     <code>33554432</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> When an event is pending, this signal is asserted on the Controlling PTY.
+            <td><p>When an event is pending, this signal is asserted on the Controlling PTY.</p>
 </td>
         </tr>
     

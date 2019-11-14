@@ -8,38 +8,35 @@
 ## Realm {#Realm}
 *Defined in [fuchsia.sys2/realm.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/realm.fidl#15)*
 
- A protocol used by a component instance to manage its own realm, such as for
- binding to its children.
-
- The component manager provides this service to components that use
- `/svc/fuchsia.sys2.Realm`.
+<p>A protocol used by a component instance to manage its own realm, such as for
+binding to its children.</p>
+<p>The component manager provides this service to components that use
+<code>/svc/fuchsia.sys2.Realm</code>.</p>
 
 ### BindChild {#BindChild}
 
- Binds to a child component instance, causing it to start running if it
- is not already. When this function successfully returns, `child` is
- running and `exposed_dir` is bound to a directory that contains the
- capabilities which the child exposed to its realm via
- `ComponentDecl.exposes` (specified via "expose" declarations in the
- component’s manifest).
-
- `exposed_dir` is a valid channel as long as `child` is running. `child`
- will remain running until it either stops on its own, or `DestroyChild`
- causes the child instance to be destroyed.
-
- For example, if the child exposes a service `/svc/example.Echo` then
- `exposed_dir` will contain that service at that path.
-
- NOTE: `BindChild` does not support pipelining with `CreateChild`. If
- `BindChild` is called on an instance before `CreateChild` successfully
- returns, it may return `INSTANCE_NOT_FOUND`.
-
- Errors:
- - `INVALID_ARGUMENTS`: `child` is not a valid child reference.  -
- - `INSTANCE_NOT_FOUND`: `child` does not exist.
- - `INSTANCE_CANNOT_START`: `child` was not running and there was an error
-   starting it.
- - `INSTANCE_CANNOT_RESOLVE`: `child`'s component declaration failed to resolve.
+<p>Binds to a child component instance, causing it to start running if it
+is not already. When this function successfully returns, <code>child</code> is
+running and <code>exposed_dir</code> is bound to a directory that contains the
+capabilities which the child exposed to its realm via
+<code>ComponentDecl.exposes</code> (specified via &quot;expose&quot; declarations in the
+component’s manifest).</p>
+<p><code>exposed_dir</code> is a valid channel as long as <code>child</code> is running. <code>child</code>
+will remain running until it either stops on its own, or <code>DestroyChild</code>
+causes the child instance to be destroyed.</p>
+<p>For example, if the child exposes a service <code>/svc/example.Echo</code> then
+<code>exposed_dir</code> will contain that service at that path.</p>
+<p>NOTE: <code>BindChild</code> does not support pipelining with <code>CreateChild</code>. If
+<code>BindChild</code> is called on an instance before <code>CreateChild</code> successfully
+returns, it may return <code>INSTANCE_NOT_FOUND</code>.</p>
+<p>Errors:</p>
+<ul>
+<li><code>INVALID_ARGUMENTS</code>: <code>child</code> is not a valid child reference.  -</li>
+<li><code>INSTANCE_NOT_FOUND</code>: <code>child</code> does not exist.</li>
+<li><code>INSTANCE_CANNOT_START</code>: <code>child</code> was not running and there was an error
+starting it.</li>
+<li><code>INSTANCE_CANNOT_RESOLVE</code>: <code>child</code>'s component declaration failed to resolve.</li>
+</ul>
 
 #### Request
 <table>
@@ -69,15 +66,16 @@
 
 ### CreateChild {#CreateChild}
 
- Creates a child component instance dynamically. When this function
- returns successfully, the instance exists, but it may not be running.
-
- Errors:
- - `INVALID_ARGUMENTS`: `collection` is not a valid reference or `child`
-   is not a valid declaration.
- - `COLLECTION_NOT_FOUND`: `collection` does not exist.
- - `INSTANCE_ALREADY_EXISTS`: `decl.name` already exists in `collection`.
- - `NO_SPACE`: Could not allocate storage for the new instance.
+<p>Creates a child component instance dynamically. When this function
+returns successfully, the instance exists, but it may not be running.</p>
+<p>Errors:</p>
+<ul>
+<li><code>INVALID_ARGUMENTS</code>: <code>collection</code> is not a valid reference or <code>child</code>
+is not a valid declaration.</li>
+<li><code>COLLECTION_NOT_FOUND</code>: <code>collection</code> does not exist.</li>
+<li><code>INSTANCE_ALREADY_EXISTS</code>: <code>decl.name</code> already exists in <code>collection</code>.</li>
+<li><code>NO_SPACE</code>: Could not allocate storage for the new instance.</li>
+</ul>
 
 #### Request
 <table>
@@ -107,17 +105,18 @@
 
 ### DestroyChild {#DestroyChild}
 
- Destroys a dynamically-created component instance. When this function
- returns, the client should assume the instance no longer exists.
- However, some cleanup (such as stopping the component instance or
- freeing its storage) may be performed in the background after the
- function returns.
-
- Errors:
- - `INVALID_ARGUMENTS`: `child` is not a valid reference or does not refer
-   to a dynamic instance.
- - `INSTANCE_NOT_FOUND`: `child` does not exist.
- - `COLLECTION_NOT_FOUND`: `collection` does not exist.
+<p>Destroys a dynamically-created component instance. When this function
+returns, the client should assume the instance no longer exists.
+However, some cleanup (such as stopping the component instance or
+freeing its storage) may be performed in the background after the
+function returns.</p>
+<p>Errors:</p>
+<ul>
+<li><code>INVALID_ARGUMENTS</code>: <code>child</code> is not a valid reference or does not refer
+to a dynamic instance.</li>
+<li><code>INSTANCE_NOT_FOUND</code>: <code>child</code> does not exist.</li>
+<li><code>COLLECTION_NOT_FOUND</code>: <code>collection</code> does not exist.</li>
+</ul>
 
 #### Request
 <table>
@@ -142,15 +141,15 @@
 
 ### ListChildren {#ListChildren}
 
- Returns an iterator that lists all instances in a collection.
-
- NOTE: The results are not guaranteed to be consistent. Instances may be
- created or destroyed while the iterator is live, but those changes
- won't be observed by the iterator after this method returns.
-
- Errors:
- - `INVALID_ARGUMENTS`: `collection` is not a valid reference.
- - `COLLECTION_NOT_FOUND`: `collection` does not exist.
+<p>Returns an iterator that lists all instances in a collection.</p>
+<p>NOTE: The results are not guaranteed to be consistent. Instances may be
+created or destroyed while the iterator is live, but those changes
+won't be observed by the iterator after this method returns.</p>
+<p>Errors:</p>
+<ul>
+<li><code>INVALID_ARGUMENTS</code>: <code>collection</code> is not a valid reference.</li>
+<li><code>COLLECTION_NOT_FOUND</code>: <code>collection</code> does not exist.</li>
+</ul>
 
 #### Request
 <table>
@@ -181,14 +180,13 @@
 ## ChildIterator {#ChildIterator}
 *Defined in [fuchsia.sys2/realm.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/realm.fidl#81)*
 
- A protocol to iterate over the list of children in a realm.
+<p>A protocol to iterate over the list of children in a realm.</p>
 
 ### Next {#Next}
 
- Advance the iterator and return the next batch of children.
-
- Returns a vector of `ChildRef`. Returns an empty vector when there are
- no more children.
+<p>Advance the iterator and return the next batch of children.</p>
+<p>Returns a vector of <code>ChildRef</code>. Returns an empty vector when there are
+no more children.</p>
 
 #### Request
 <table>
@@ -209,33 +207,29 @@
 ## ComponentResolver {#ComponentResolver}
 *Defined in [fuchsia.sys2/component_resolver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_resolver.fidl#22)*
 
- An interface for resolving a URL to a component.
-
- This interface is implemented by components that provide support
- for loading components with a particular URL scheme.   For example,
- the Fuchsia package component resolver exposes a service with this
- interface to resolve component URLs using the "fuchsia-pkg://" scheme.
-
- To use a resolver to resolve URLs within your realm, register it
- in your realm's manifest.  (TODO: explain in more detail)
-
- Note: The component manager is the only intended direct client of this
- interface.
+<p>An interface for resolving a URL to a component.</p>
+<p>This interface is implemented by components that provide support
+for loading components with a particular URL scheme.   For example,
+the Fuchsia package component resolver exposes a service with this
+interface to resolve component URLs using the &quot;fuchsia-pkg://&quot; scheme.</p>
+<p>To use a resolver to resolve URLs within your realm, register it
+in your realm's manifest.  (TODO: explain in more detail)</p>
+<p>Note: The component manager is the only intended direct client of this
+interface.</p>
 
 ### Resolve {#Resolve}
 
- Resolves a component with the given URL.
-
- `component_url` is the unescaped URL of the component to resolve.
-
- If successful, returns `ZX_OK` and information about the component
- that was resolved.
-
- On failure, returns null `info` and...
- - `ZX_ERR_INVALID_ARGS`: The component's URL was malformed.
- - `ZX_ERR_NOT_FOUND`: The component does not exist.
- - `ZX_ERR_UNAVAILABLE`: The resolver was unable to retrieve or parse
-   the component's resources.
+<p>Resolves a component with the given URL.</p>
+<p><code>component_url</code> is the unescaped URL of the component to resolve.</p>
+<p>If successful, returns <code>ZX_OK</code> and information about the component
+that was resolved.</p>
+<p>On failure, returns null <code>info</code> and...</p>
+<ul>
+<li><code>ZX_ERR_INVALID_ARGS</code>: The component's URL was malformed.</li>
+<li><code>ZX_ERR_NOT_FOUND</code>: The component does not exist.</li>
+<li><code>ZX_ERR_UNAVAILABLE</code>: The resolver was unable to retrieve or parse
+the component's resources.</li>
+</ul>
 
 #### Request
 <table>
@@ -266,26 +260,22 @@
 ## ComponentRunner {#ComponentRunner}
 *Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#23)*
 
- An interface for running components.
-
- This interface is implemented by components that provide an execution
- environment for running particular classes of programs.  For example,
- the Dart virtual machine exposes a service with this interface to run
- Dart programs.
-
- To specify the runner needed to run your component, set the "runner_url"
- property in your component's manifest.
-
- Note: The component manager is the only intended direct client of this
- interface.
+<p>An interface for running components.</p>
+<p>This interface is implemented by components that provide an execution
+environment for running particular classes of programs.  For example,
+the Dart virtual machine exposes a service with this interface to run
+Dart programs.</p>
+<p>To specify the runner needed to run your component, set the &quot;runner_url&quot;
+property in your component's manifest.</p>
+<p>Note: The component manager is the only intended direct client of this
+interface.</p>
 
 ### Start {#Start}
 
- Starts running a new component instance described by `start_info`.
-
- The caller of this method takes responsibility for binding client
- connections and controlling the lifetime of the newly started
- component instance through the requested `controller`.
+<p>Starts running a new component instance described by <code>start_info</code>.</p>
+<p>The caller of this method takes responsibility for binding client
+connections and controlling the lifetime of the newly started
+component instance through the requested <code>controller</code>.</p>
 
 #### Request
 <table>
@@ -307,52 +297,44 @@
 ## ComponentController {#ComponentController}
 *Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#94)*
 
- An interface for binding client connections and controlling the lifetime
- of a component instance started using `ComponentRunner.Start()`.
-
- When the controlled component instance terminates or becomes inaccessible
- for any reason, the server invokes `OnEpitaph()` and closes its endpoint
- of the controller interface.
-
- LIFECYCLE
-
- A component may exist in one of two states, Started or Stopped. The component
- is Started from time `ComponentRunner.Start()` is called until the
- ComponentRunner closes the ComponentController handle. The component then
- transitions to Stopped.
-
- `Stop()` is called to indicate a ComponentRunner should end a component's
- execution. `Kill()` indicates that a runner must halt a component's
- execution immediately and close the ComponentController's server end. After
- the ComponentController is closed the component manager can tear down the
- namespace it hosts for the stopped component. The component manager may
- call `Kill()` without first having called `Stop()`.
-
- EPITAPH
-
- This interface uses a FIDL epitaph to indicate that the controller
- component instance has terminated and to describe its final disposition.
-
- The following epitaph status codes have particular significance:
-
- - `ZX_OK`: The component instance was successfully terminated in response
-   to `Stop()` and its runtime resources have been fully released.
- - `ZX_ERR_UNAVAILABLE`: The runner was unable to start the component
-   instance.  e.g. The runner could not retrieve the component's assets.
- - `ERR_COMPONENT_DIED`: The component instance was started but
-   subsequently terminated unexpectedly.
-
- Other status codes (e.g. `ZX_ERR_PEER_CLOSED`) may indicate a failure
- of the component runner itself.  The component manager may respond to such
- failures by terminating the component runner's job to ensure system
- stability.
+<p>An interface for binding client connections and controlling the lifetime
+of a component instance started using <code>ComponentRunner.Start()</code>.</p>
+<p>When the controlled component instance terminates or becomes inaccessible
+for any reason, the server invokes <code>OnEpitaph()</code> and closes its endpoint
+of the controller interface.</p>
+<p>LIFECYCLE</p>
+<p>A component may exist in one of two states, Started or Stopped. The component
+is Started from time <code>ComponentRunner.Start()</code> is called until the
+ComponentRunner closes the ComponentController handle. The component then
+transitions to Stopped.</p>
+<p><code>Stop()</code> is called to indicate a ComponentRunner should end a component's
+execution. <code>Kill()</code> indicates that a runner must halt a component's
+execution immediately and close the ComponentController's server end. After
+the ComponentController is closed the component manager can tear down the
+namespace it hosts for the stopped component. The component manager may
+call <code>Kill()</code> without first having called <code>Stop()</code>.</p>
+<p>EPITAPH</p>
+<p>This interface uses a FIDL epitaph to indicate that the controller
+component instance has terminated and to describe its final disposition.</p>
+<p>The following epitaph status codes have particular significance:</p>
+<ul>
+<li><code>ZX_OK</code>: The component instance was successfully terminated in response
+to <code>Stop()</code> and its runtime resources have been fully released.</li>
+<li><code>ZX_ERR_UNAVAILABLE</code>: The runner was unable to start the component
+instance.  e.g. The runner could not retrieve the component's assets.</li>
+<li><code>ERR_COMPONENT_DIED</code>: The component instance was started but
+subsequently terminated unexpectedly.</li>
+</ul>
+<p>Other status codes (e.g. <code>ZX_ERR_PEER_CLOSED</code>) may indicate a failure
+of the component runner itself.  The component manager may respond to such
+failures by terminating the component runner's job to ensure system
+stability.</p>
 
 ### Stop {#Stop}
 
- Requests the runner to stop the controlled component instance.
-
- After stopping the component instance, the server should report
- an epitaph then close its endpoint of the controller interface.
+<p>Requests the runner to stop the controlled component instance.</p>
+<p>After stopping the component instance, the server should report
+an epitaph then close its endpoint of the controller interface.</p>
 
 #### Request
 <table>
@@ -363,13 +345,12 @@
 
 ### Kill {#Kill}
 
- Stop this component immediately. This ComponentRunner must immediately
- kill the component instance, set an epitaph set on the channel, and
- close the channel. After the channel closes, the component instance will
- be considered by the component manager to be Stopped and the component's
- namespace will be torn down.
-
- Kill() may have been preceeded by Stop(), but that is not guaranteed.
+<p>Stop this component immediately. This ComponentRunner must immediately
+kill the component instance, set an epitaph set on the channel, and
+close the channel. After the channel closes, the component instance will
+be considered by the component manager to be Stopped and the component's
+namespace will be torn down.</p>
+<p>Kill() may have been preceeded by Stop(), but that is not guaranteed.</p>
 
 #### Request
 <table>
@@ -381,14 +362,14 @@
 ## SystemController {#SystemController}
 *Defined in [fuchsia.sys2/system_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/system_controller.fidl#10)*
 
- An interface implemented by ComponentManager that requests the
- ComponentManager stop all components and exit.
+<p>An interface implemented by ComponentManager that requests the
+ComponentManager stop all components and exit.</p>
 
 ### Shutdown {#Shutdown}
 
- Stop all components, return an empty result, close this protocol's
- channel, and exit ComponentManager. If this is the root ComponentManager
- is exited we expect the system will reboot.
+<p>Stop all components, return an empty result, close this protocol's
+channel, and exit ComponentManager. If this is the root ComponentManager
+is exited we expect the system will reboot.</p>
 
 #### Request
 <table>
@@ -404,20 +385,19 @@
 ## WorkScheduler {#WorkScheduler}
 *Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#40)*
 
- Framework service: API for scheduling and canceling work. Each component instance can access
- work items that it has scheduled (but not others' scheduled work items). Work items are
- scheduled _roughly_ at the specified time and frequency; the service implementation may specify
- its notion of _roughly_, and may provide a configuration API to tune this notion.
-
- Each scheduled work item is identified by a client-provided `WorkId`. Each scheduled work item
- has a `WorkId` that is unique with respect to scheduled work items belonging to the same
- component instance.
+<p>Framework service: API for scheduling and canceling work. Each component instance can access
+work items that it has scheduled (but not others' scheduled work items). Work items are
+scheduled <em>roughly</em> at the specified time and frequency; the service implementation may specify
+its notion of <em>roughly</em>, and may provide a configuration API to tune this notion.</p>
+<p>Each scheduled work item is identified by a client-provided <code>WorkId</code>. Each scheduled work item
+has a <code>WorkId</code> that is unique with respect to scheduled work items belonging to the same
+component instance.</p>
 
 ### ScheduleWork {#ScheduleWork}
 
- Schedule a new work item identified by `work_id`. The work item is to be scheduled roughly
- at the time corresponding to `work_request.start`. When `work_request.period` is specified,
- reschedule work roughly every `work_request.period` until the the work item is canceled.
+<p>Schedule a new work item identified by <code>work_id</code>. The work item is to be scheduled roughly
+at the time corresponding to <code>work_request.start</code>. When <code>work_request.period</code> is specified,
+reschedule work roughly every <code>work_request.period</code> until the the work item is canceled.</p>
 
 #### Request
 <table>
@@ -447,7 +427,7 @@
 
 ### CancelWork {#CancelWork}
 
- Cancel the scheduled work item specified by `work_id`.
+<p>Cancel the scheduled work item specified by <code>work_id</code>.</p>
 
 #### Request
 <table>
@@ -473,12 +453,11 @@
 ## Worker {#Worker}
 *Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#57)*
 
- Component-exposed service: Work scheduler connects to this service to invoke scheduled work item
- callbacks. The service implementation is responsible for invoking the code that corresponds to
- the scheduled work item identified by `work_id`.
-
- Note: The intent of exposing this service is to expose it to the `WorkScheduler` service
- provider (i.e., the framework) and no one else.
+<p>Component-exposed service: Work scheduler connects to this service to invoke scheduled work item
+callbacks. The service implementation is responsible for invoking the code that corresponds to
+the scheduled work item identified by <code>work_id</code>.</p>
+<p>Note: The intent of exposing this service is to expose it to the <code>WorkScheduler</code> service
+provider (i.e., the framework) and no one else.</p>
 
 ### DoWork {#DoWork}
 
@@ -507,19 +486,19 @@
 ## WorkSchedulerControl {#WorkSchedulerControl}
 *Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#69)*
 
- Framework service: Administrative API for controlling parameters of the `WorkScheduler`
- framework service. So long as there are work items with deadlines in the next `batch_period`,
- the `WorkScheduler` will sleep for `batch_period`, then wake up and immediately dispatch a batch
- of work items: all those with past deadlines. It will repeat this process until no work items
- would be scheduled in the next `batch_period`, at which point it will go to sleep until the next
- deadline. This strategy ensures that each work item is dispatched approximately within
- `batch_period` of its deadline.
+<p>Framework service: Administrative API for controlling parameters of the <code>WorkScheduler</code>
+framework service. So long as there are work items with deadlines in the next <code>batch_period</code>,
+the <code>WorkScheduler</code> will sleep for <code>batch_period</code>, then wake up and immediately dispatch a batch
+of work items: all those with past deadlines. It will repeat this process until no work items
+would be scheduled in the next <code>batch_period</code>, at which point it will go to sleep until the next
+deadline. This strategy ensures that each work item is dispatched approximately within
+<code>batch_period</code> of its deadline.</p>
 
 ### GetBatchPeriod {#GetBatchPeriod}
 
- Get the current period between `WorkScheduler` attempts to dispatch a batch of work.
- `batch_period` is a non-negative 64-bit integer in the range [0, 2^63-1], representing a
- number of nanoseconds between dispatching batches of work.
+<p>Get the current period between <code>WorkScheduler</code> attempts to dispatch a batch of work.
+<code>batch_period</code> is a non-negative 64-bit integer in the range [0, 2^63-1], representing a
+number of nanoseconds between dispatching batches of work.</p>
 
 #### Request
 <table>
@@ -539,9 +518,9 @@
 
 ### SetBatchPeriod {#SetBatchPeriod}
 
- Set the current period between `WorkScheduler` attempts to batch and dispatch a batch of
- work. `batch_period` is a non-negative 64-bit integer in the range [0, 2^63-1], representing
- a number of nanoseconds between dispatching batches of work.
+<p>Set the current period between <code>WorkScheduler</code> attempts to batch and dispatch a batch of
+work. <code>batch_period</code> is a non-negative 64-bit integer in the range [0, 2^63-1], representing
+a number of nanoseconds between dispatching batches of work.</p>
 
 #### Request
 <table>
@@ -573,7 +552,7 @@
 
 
 
- A reference to a component’s containing realm, i.e. the parent component.
+<p>A reference to a component’s containing realm, i.e. the parent component.</p>
 
 
 <table>
@@ -585,7 +564,7 @@
 
 
 
- A reference to the component itself.
+<p>A reference to the component itself.</p>
 
 
 <table>
@@ -597,7 +576,7 @@
 
 
 
- A reference to one of the component's child instances.
+<p>A reference to one of the component's child instances.</p>
 
 
 <table>
@@ -606,9 +585,9 @@
             <td>
                 <code>string[100]</code>
             </td>
-            <td> The name assigned to the child by its parent. If `collection` is set,
- `name` is scoped to `collection` and the child is a dynamic instance.
- Required.
+            <td><p>The name assigned to the child by its parent. If <code>collection</code> is set,
+<code>name</code> is scoped to <code>collection</code> and the child is a dynamic instance.
+Required.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -616,9 +595,9 @@
             <td>
                 <code>string[100]?</code>
             </td>
-            <td> The collection `name` belongs to. If omitted, `name` references a static
- instance. This field must be omitted if the `ChildRef` is being used in
- a component declaration. Optional.
+            <td><p>The collection <code>name</code> belongs to. If omitted, <code>name</code> references a static
+instance. This field must be omitted if the <code>ChildRef</code> is being used in
+a component declaration. Optional.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -629,7 +608,7 @@
 
 
 
- A reference to one of the component's collections.
+<p>A reference to one of the component's collections.</p>
 
 
 <table>
@@ -648,7 +627,7 @@
 
 
 
- A reference to one of the component's storage sections.
+<p>A reference to one of the component's storage sections.</p>
 
 
 <table>
@@ -667,7 +646,7 @@
 
 
 
- A reference to the component framework itself.
+<p>A reference to the component framework itself.</p>
 
 
 <table>
@@ -679,18 +658,16 @@
 
 
 
- A moniker encodes the relationship between two component instances that
- exist in the component instance tree at runtime.
-
- To understand this better, consider two component instances labeled "A"
- and "B" that are both children of a component instance labeled "P".
-
- At runtime, when "B" requests a service from "A" through a channel
- established by the component manager, the component manager may provide
- "A" with a moniker that encodes "B's" identity relative to "A" itself.
- The moniker's encoded value describes the directed path to traverse from
- "A" (the moniker's origin) to "B" (the moniker's referent), passing
- through "P" (their common ancestor).
+<p>A moniker encodes the relationship between two component instances that
+exist in the component instance tree at runtime.</p>
+<p>To understand this better, consider two component instances labeled &quot;A&quot;
+and &quot;B&quot; that are both children of a component instance labeled &quot;P&quot;.</p>
+<p>At runtime, when &quot;B&quot; requests a service from &quot;A&quot; through a channel
+established by the component manager, the component manager may provide
+&quot;A&quot; with a moniker that encodes &quot;B's&quot; identity relative to &quot;A&quot; itself.
+The moniker's encoded value describes the directed path to traverse from
+&quot;A&quot; (the moniker's origin) to &quot;B&quot; (the moniker's referent), passing
+through &quot;P&quot; (their common ancestor).</p>
 
 
 <table>
@@ -699,7 +676,7 @@
             <td>
                 <code>string[4096]</code>
             </td>
-            <td> An opaque representation of the moniker's relation.
+            <td><p>An opaque representation of the moniker's relation.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -754,18 +731,18 @@
 
 
 
- A namespace specifies the set of directories that a component instance
- receives at start-up.  Each component instance's namespace is tailored
- to provide access to a set of files and services that are appropriate
- to that component instance's role in the system (its sandbox).
-
- By convention, a component's namespace typically contains some or all
- of the following directories:
-
- - "/svc": A directory containing services that the component requested
-           to use via its "import" declarations.
- - "/pkg": A directory containing the component's package, including its
-           binaries, libraries, and other assets.
+<p>A namespace specifies the set of directories that a component instance
+receives at start-up.  Each component instance's namespace is tailored
+to provide access to a set of files and services that are appropriate
+to that component instance's role in the system (its sandbox).</p>
+<p>By convention, a component's namespace typically contains some or all
+of the following directories:</p>
+<ul>
+<li>&quot;/svc&quot;: A directory containing services that the component requested
+to use via its &quot;import&quot; declarations.</li>
+<li>&quot;/pkg&quot;: A directory containing the component's package, including its
+binaries, libraries, and other assets.</li>
+</ul>
 
 
 <table>
@@ -774,11 +751,10 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> The mount point for each of the directories below, each including a
- leading slash.  For example, ["/pkg", "/svc", "/config/data"].
-
- Each mount point must be unique and non-overlapping.
- For example, ["/foo", "/foo/bar"] is invalid.
+            <td><p>The mount point for each of the directories below, each including a
+leading slash.  For example, [&quot;/pkg&quot;, &quot;/svc&quot;, &quot;/config/data&quot;].</p>
+<p>Each mount point must be unique and non-overlapping.
+For example, [&quot;/foo&quot;, &quot;/foo/bar&quot;] is invalid.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -786,7 +762,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='../fuchsia.io/'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/#Directory'>Directory</a>&gt;</code>
             </td>
-            <td> The directories mounted at each path in the namespace.
+            <td><p>The directories mounted at each path in the namespace.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -863,21 +839,21 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/child_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/child_decl.fidl#30)*
 
- Describes under what conditions the component may be started.
+<p>Describes under what conditions the component may be started.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LAZY</code></td>
             <td><code>0</code></td>
-            <td> Start component instance only when another instance binds to it.
+            <td><p>Start component instance only when another instance binds to it.</p>
 </td>
         </tr><tr>
             <td><code>EAGER</code></td>
             <td><code>1</code></td>
-            <td> Start component instance as soon as parent starts. This mode is only
- supported for statically declared children -- a dynamic instance may only be
- started by binding to it.
+            <td><p>Start component instance as soon as parent starts. This mode is only
+supported for statically declared children -- a dynamic instance may only be
+started by binding to it.</p>
 </td>
         </tr></table>
 
@@ -886,20 +862,20 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/collection_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/collection_decl.fidl#18)*
 
- The durability of component instances created in a collection.
+<p>The durability of component instances created in a collection.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>PERSISTENT</code></td>
             <td><code>1</code></td>
-            <td> An instance exists until either it or its parent is destroyed.
+            <td><p>An instance exists until either it or its parent is destroyed.</p>
 </td>
         </tr><tr>
             <td><code>TRANSIENT</code></td>
             <td><code>2</code></td>
-            <td> An instance exists until either its parent instance is stopped
- or it is explicitly destroyed.
+            <td><p>An instance exists until either its parent instance is stopped
+or it is explicitly destroyed.</p>
 </td>
         </tr></table>
 
@@ -908,25 +884,25 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/storage_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/storage_decl.fidl#8)*
 
- The type of storage offered by this component.
+<p>The type of storage offered by this component.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DATA</code></td>
             <td><code>1</code></td>
-            <td> General data storage.
+            <td><p>General data storage.</p>
 </td>
         </tr><tr>
             <td><code>CACHE</code></td>
             <td><code>2</code></td>
-            <td> Cache storage that may be deleted at any time by the system.
+            <td><p>Cache storage that may be deleted at any time by the system.</p>
 </td>
         </tr><tr>
             <td><code>META</code></td>
             <td><code>3</code></td>
-            <td> Meta storage that will be used by component manager to persist metadata
- and other information about the component
+            <td><p>Meta storage that will be used by component manager to persist metadata
+and other information about the component</p>
 </td>
         </tr></table>
 
@@ -935,55 +911,55 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/error.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/error.fidl#8)*
 
- Standard error codes for component framework protocols.
+<p>Standard error codes for component framework protocols.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INTERNAL</code></td>
             <td><code>1</code></td>
-            <td> Component manager encountered an otherwise unspecified error while
- performing the operation.
+            <td><p>Component manager encountered an otherwise unspecified error while
+performing the operation.</p>
 </td>
         </tr><tr>
             <td><code>INVALID_ARGUMENTS</code></td>
             <td><code>2</code></td>
-            <td> At least one argument had an invalid format.
+            <td><p>At least one argument had an invalid format.</p>
 </td>
         </tr><tr>
             <td><code>UNSUPPORTED</code></td>
             <td><code>3</code></td>
-            <td> The feature is not yet supported.
+            <td><p>The feature is not yet supported.</p>
 </td>
         </tr><tr>
             <td><code>INSTANCE_NOT_FOUND</code></td>
             <td><code>4</code></td>
-            <td> The component instance was not found.
+            <td><p>The component instance was not found.</p>
 </td>
         </tr><tr>
             <td><code>INSTANCE_ALREADY_EXISTS</code></td>
             <td><code>5</code></td>
-            <td> The component instance already exists.
+            <td><p>The component instance already exists.</p>
 </td>
         </tr><tr>
             <td><code>INSTANCE_CANNOT_START</code></td>
             <td><code>6</code></td>
-            <td> The component instance could not be started.
+            <td><p>The component instance could not be started.</p>
 </td>
         </tr><tr>
             <td><code>INSTANCE_CANNOT_RESOLVE</code></td>
             <td><code>7</code></td>
-            <td> Failed to resolve the component's declaration.
+            <td><p>Failed to resolve the component's declaration.</p>
 </td>
         </tr><tr>
             <td><code>COLLECTION_NOT_FOUND</code></td>
             <td><code>8</code></td>
-            <td> The component collection was not found.
+            <td><p>The component collection was not found.</p>
 </td>
         </tr><tr>
             <td><code>NO_SPACE</code></td>
             <td><code>9</code></td>
-            <td> There was insufficient space to perform the operation.
+            <td><p>There was insufficient space to perform the operation.</p>
 </td>
         </tr></table>
 
@@ -996,7 +972,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/child_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/child_decl.fidl#8)*
 
- Statically declares a child component instance.
+<p>Statically declares a child component instance.</p>
 
 
 <table>
@@ -1007,10 +983,9 @@ Type: <code>uint32</code>
             <td>
                 <code>string[100]</code>
             </td>
-            <td> The name assigned to the child by its parent.
-
- Must be non-empty, unique among all siblings, and contain only the
- following characters: [a-z0-9-_.].
+            <td><p>The name assigned to the child by its parent.</p>
+<p>Must be non-empty, unique among all siblings, and contain only the
+following characters: [a-z0-9-_.].</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1018,9 +993,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string[4096]</code>
             </td>
-            <td> The child component's URL.
-
- Must be non-empty and a well-formed URL.
+            <td><p>The child component's URL.</p>
+<p>Must be non-empty and a well-formed URL.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1028,7 +1002,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#StartupMode'>StartupMode</a></code>
             </td>
-            <td> The startup mode for the component instance.
+            <td><p>The startup mode for the component instance.</p>
 </td>
         </tr></table>
 
@@ -1037,7 +1011,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/collection_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/collection_decl.fidl#8)*
 
- Statically declares a component instance collection.
+<p>Statically declares a component instance collection.</p>
 
 
 <table>
@@ -1048,8 +1022,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string[100]</code>
             </td>
-            <td> The name of the collection. Instances created in the collection are
- scoped to this name.
+            <td><p>The name of the collection. Instances created in the collection are
+scoped to this name.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1057,7 +1031,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Durability'>Durability</a></code>
             </td>
-            <td> The durability of instances in the collection.
+            <td><p>The durability of instances in the collection.</p>
 </td>
         </tr></table>
 
@@ -1066,11 +1040,10 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/component_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/component_decl.fidl#14)*
 
- A component declaration.
-
- This information is typically encoded in the component manifest (.cm file)
- if it has one or may be generated at runtime by a component resolver for
- those that don't.
+<p>A component declaration.</p>
+<p>This information is typically encoded in the component manifest (.cm file)
+if it has one or may be generated at runtime by a component resolver for
+those that don't.</p>
 
 
 <table>
@@ -1081,25 +1054,27 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.data/'>fuchsia.data</a>/<a class='link' href='../fuchsia.data/#Dictionary'>Dictionary</a></code>
             </td>
-            <td> Information about the program to run when the component is executed.
-
- The component manager provides the contents of this dictionary to the
- component runner when executing the program. Each component runner can
- freely define the contents of this dictionary as needed.
-
- The system's default runner understands the following entries:
-
- - "binary": string
-   The path of the executable relative to the root of the package.
-   Typically an ELF binary.
-
- - "args": vector of strings
-   The command-line arguments to provide to the executable at runtime.
-
- - "env": dictionary of strings
-   The environment variables to provide to the executable at runtime.
-
- Other runners may define different entries.
+            <td><p>Information about the program to run when the component is executed.</p>
+<p>The component manager provides the contents of this dictionary to the
+component runner when executing the program. Each component runner can
+freely define the contents of this dictionary as needed.</p>
+<p>The system's default runner understands the following entries:</p>
+<ul>
+<li>
+<p>&quot;binary&quot;: string
+The path of the executable relative to the root of the package.
+Typically an ELF binary.</p>
+</li>
+<li>
+<p>&quot;args&quot;: vector of strings
+The command-line arguments to provide to the executable at runtime.</p>
+</li>
+<li>
+<p>&quot;env&quot;: dictionary of strings
+The environment variables to provide to the executable at runtime.</p>
+</li>
+</ul>
+<p>Other runners may define different entries.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1107,11 +1082,10 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#UseDecl'>UseDecl</a>&gt;</code>
             </td>
-            <td> List of capabilities used by the component. These consist of
- capabilities offered to the component that are installed in its incoming
- namespace.
-
- The used capabilities must be unique and non-overlapping.
+            <td><p>List of capabilities used by the component. These consist of
+capabilities offered to the component that are installed in its incoming
+namespace.</p>
+<p>The used capabilities must be unique and non-overlapping.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1119,11 +1093,10 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#ExposeDecl'>ExposeDecl</a>&gt;</code>
             </td>
-            <td> List of capabilities exposed by the component. These consist of
- capabilities that are made visible to the containing realm. The parent
- may `offer` these capabilities to its children, but not `use` them.
-
- The exposed capabilities must be unique and non-overlapping.
+            <td><p>List of capabilities exposed by the component. These consist of
+capabilities that are made visible to the containing realm. The parent
+may <code>offer</code> these capabilities to its children, but not <code>use</code> them.</p>
+<p>The exposed capabilities must be unique and non-overlapping.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1131,11 +1104,10 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#OfferDecl'>OfferDecl</a>&gt;</code>
             </td>
-            <td> List of capabilities offered to the component’s children. These consist
- of capabilities that the given children may `use`, which may come from a
- child, the containing realm, or the component's own outgoing namespace.
-
- The offered capabilities must be unique and non-overlapping.
+            <td><p>List of capabilities offered to the component’s children. These consist
+of capabilities that the given children may <code>use</code>, which may come from a
+child, the containing realm, or the component's own outgoing namespace.</p>
+<p>The offered capabilities must be unique and non-overlapping.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -1143,7 +1115,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.data/'>fuchsia.data</a>/<a class='link' href='../fuchsia.data/#Dictionary'>Dictionary</a></code>
             </td>
-            <td> Additional metadata about the component.
+            <td><p>Additional metadata about the component.</p>
 </td>
         </tr><tr>
             <td>6</td>
@@ -1151,8 +1123,8 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#ChildDecl'>ChildDecl</a>&gt;</code>
             </td>
-            <td> The component's statically instantiated children. The children must have
- unique names.
+            <td><p>The component's statically instantiated children. The children must have
+unique names.</p>
 </td>
         </tr><tr>
             <td>7</td>
@@ -1160,7 +1132,7 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#CollectionDecl'>CollectionDecl</a>&gt;</code>
             </td>
-            <td> The component's collections. The collections must have unique names.
+            <td><p>The component's collections. The collections must have unique names.</p>
 </td>
         </tr><tr>
             <td>8</td>
@@ -1168,8 +1140,8 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#StorageDecl'>StorageDecl</a>&gt;</code>
             </td>
-            <td> List of storage capabilities created by this component.
- Storage capabilities can be offered to children.
+            <td><p>List of storage capabilities created by this component.
+Storage capabilities can be offered to children.</p>
 </td>
         </tr><tr>
             <td>9</td>
@@ -1177,21 +1149,20 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#RunnerDecl'>RunnerDecl</a>&gt;</code>
             </td>
-            <td> List of runner capabilities created by this component.
- Runner capabilities can be exposed to the parent's realm or offered to children.
+            <td><p>List of runner capabilities created by this component.
+Runner capabilities can be exposed to the parent's realm or offered to children.</p>
 </td>
         </tr></table>
 
 ### ExposeServiceDecl {#ExposeServiceDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#21)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#23)*
 
- Declares a service exposed to a component's containing realm, such as a
- service exposed by the component or one of its children at runtime.
-
- To learn more about services, see:
- https://fuchsia.dev/fuchsia-src/glossary#service
+<p>Declares a service exposed to a component's containing realm, such as a
+service exposed by the component or one of its children at runtime.</p>
+<p>To learn more about services, see:
+https://fuchsia.dev/fuchsia-src/glossary#service</p>
 
 
 <table>
@@ -1202,8 +1173,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the capability relative to the component itself. Must
- be `self` or `child`.
+            <td><p>The provider of the capability relative to the component itself. Must
+be <code>self</code> or <code>child</code>.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1211,10 +1182,9 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the service, by which it was presented to this
- component.
-
- Must be an absolute path starting with /.
+            <td><p>Path identifying the service, by which it was presented to this
+component.</p>
+<p>Must be an absolute path starting with /.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1222,8 +1192,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The destination to which the service is exposed: either the component's realm or the
- framework.
+            <td><p>The destination to which the service is exposed: either the component's realm or the
+framework.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1231,22 +1201,20 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The path by which the capability is being exposed.
-
- Must be an absolute path starting with /.
+            <td><p>The path by which the capability is being exposed.</p>
+<p>Must be an absolute path starting with /.</p>
 </td>
         </tr></table>
 
 ### ExposeLegacyServiceDecl {#ExposeLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#47)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#49)*
 
- Declares a legacy service exposed to a component's containing realm, such as
- a legacy service exposed by the component or one of its children at runtime.
-
- A legacy service is a service with a single instance, provided by a single
- FIDL protocol.
+<p>Declares a legacy service exposed to a component's containing realm, such as
+a legacy service exposed by the component or one of its children at runtime.</p>
+<p>A legacy service is a service with a single instance, provided by a single
+FIDL protocol.</p>
 
 
 <table>
@@ -1257,8 +1225,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the capability relative to the component itself. Must
- be `self` or `child`.
+            <td><p>The provider of the capability relative to the component itself. Must
+be <code>self</code> or <code>child</code>.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1266,8 +1234,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the legacy service, by which it was presented to this
- component.
+            <td><p>Path identifying the legacy service, by which it was presented to this
+component.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1275,8 +1243,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The destination to which the legacy service is exposed: either the component's realm or the
- framework.
+            <td><p>The destination to which the legacy service is exposed: either the component's realm or the
+framework.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1284,19 +1252,18 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The path by which the capability is being exposed.
-
- Must be an absolute path starting with /.
+            <td><p>The path by which the capability is being exposed.</p>
+<p>Must be an absolute path starting with /.</p>
 </td>
         </tr></table>
 
 ### ExposeDirectoryDecl {#ExposeDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#68)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#70)*
 
- Declares a directory exposed to a component's containing realm, such as a
- directory exposed by the component or one of its children at runtime.
+<p>Declares a directory exposed to a component's containing realm, such as a
+directory exposed by the component or one of its children at runtime.</p>
 
 
 <table>
@@ -1307,8 +1274,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the capability relative to the component itself. Must
- be `self` or `child`.
+            <td><p>The provider of the capability relative to the component itself. Must
+be <code>self</code> or <code>child</code>.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1316,8 +1283,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the directory, by which it was presented to this
- component.
+            <td><p>Path identifying the directory, by which it was presented to this
+component.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1325,8 +1292,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The destination to which the directory is exposed: either the component's realm or the
- framework.
+            <td><p>The destination to which the directory is exposed: either the component's realm or the
+framework.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1334,19 +1301,26 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The path by which the capability is being exposed.
-
- Must be an absolute path starting with /.
+            <td><p>The path by which the capability is being exposed.</p>
+<p>Must be an absolute path starting with /.</p>
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>rights</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.io2/'>fuchsia.io2</a>/<a class='link' href='../fuchsia.io2/#Operations'>Operations</a></code>
+            </td>
+            <td><p>The rights to expose this directory with, required iff <code>source == self</code>.</p>
 </td>
         </tr></table>
 
 ### ExposeRunnerDecl {#ExposeRunnerDecl}
 
 
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#89)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#94)*
 
- Declares a runner exposed to a component's containing realm, such as a
- runner exposed by the component or one of its children at runtime.
+<p>Declares a runner exposed to a component's containing realm, such as a
+runner exposed by the component or one of its children at runtime.</p>
 
 
 <table>
@@ -1357,8 +1331,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the capability relative to the component itself. Must
- be `self` or `child`.
+            <td><p>The provider of the capability relative to the component itself. Must
+be <code>self</code> or <code>child</code>.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1366,7 +1340,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[100]</code>
             </td>
-            <td> The name of the runner, by which it was presented to this component.
+            <td><p>The name of the runner, by which it was presented to this component.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1374,8 +1348,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The destination to which the runner is exposed: either the component's realm or the
- framework.
+            <td><p>The destination to which the runner is exposed: either the component's realm or the
+framework.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1383,21 +1357,20 @@ Type: <code>uint32</code>
             <td>
                 <code>string[100]</code>
             </td>
-            <td> The name by which the capability is being exposed.
+            <td><p>The name by which the capability is being exposed.</p>
 </td>
         </tr></table>
 
 ### OfferServiceDecl {#OfferServiceDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#24)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#26)*
 
- Declares a service offered by a component to one of its children, which may
- have been offered by the component's containing realm, the component itself,
- or one of its other children.
-
- To learn more about services, see:
- https://fuchsia.dev/fuchsia-src/glossary#service
+<p>Declares a service offered by a component to one of its children, which may
+have been offered by the component's containing realm, the component itself,
+or one of its other children.</p>
+<p>To learn more about services, see:
+https://fuchsia.dev/fuchsia-src/glossary#service</p>
 
 
 <table>
@@ -1408,8 +1381,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the capability relative to the component itself. Must be
- `realm`, `self`, or `child`.
+            <td><p>The provider of the capability relative to the component itself. Must be
+<code>realm</code>, <code>self</code>, or <code>child</code>.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1417,9 +1390,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the service being offered.
-
- Must be an absolute path starting with /.
+            <td><p>Path identifying the service being offered.</p>
+<p>Must be an absolute path starting with /.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1427,7 +1399,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> Reference to the target. Must be `child` or `collection`.
+            <td><p>Reference to the target. Must be <code>child</code> or <code>collection</code>.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1435,23 +1407,21 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The path under which the capability is being offered.
-
- Must be an absolute path starting with /.
+            <td><p>The path under which the capability is being offered.</p>
+<p>Must be an absolute path starting with /.</p>
 </td>
         </tr></table>
 
 ### OfferLegacyServiceDecl {#OfferLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#49)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#51)*
 
- Declares a legacy service offered by a component to one of its children,
- which may have been offered by the component's containing realm, the
- component itself, or one of its other children.
-
- A legacy service is a service with a single instance, provided by a single
- FIDL protocol.
+<p>Declares a legacy service offered by a component to one of its children,
+which may have been offered by the component's containing realm, the
+component itself, or one of its other children.</p>
+<p>A legacy service is a service with a single instance, provided by a single
+FIDL protocol.</p>
 
 
 <table>
@@ -1462,8 +1432,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the capability relative to the component itself. Must be
- `realm`, `self`, or `child`.
+            <td><p>The provider of the capability relative to the component itself. Must be
+<code>realm</code>, <code>self</code>, or <code>child</code>.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1471,7 +1441,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the legacy service being offered.
+            <td><p>Path identifying the legacy service being offered.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1479,7 +1449,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> Reference to the target. Must be `child` or `collection`.
+            <td><p>Reference to the target. Must be <code>child</code> or <code>collection</code>.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1487,20 +1457,19 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The path under which the capability is being offered.
-
- Must be an absolute path starting with /.
+            <td><p>The path under which the capability is being offered.</p>
+<p>Must be an absolute path starting with /.</p>
 </td>
         </tr></table>
 
 ### OfferDirectoryDecl {#OfferDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#69)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#71)*
 
- Declares a directory offered by a component to one of its children, which
- may have been offered by the component's containing realm, the component
- itself, or one of its other children.
+<p>Declares a directory offered by a component to one of its children, which
+may have been offered by the component's containing realm, the component
+itself, or one of its other children.</p>
 
 
 <table>
@@ -1511,8 +1480,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the capability relative to the component itself. Must be
- `realm`, `self`, or `child`.
+            <td><p>The provider of the capability relative to the component itself. Must be
+<code>realm</code>, <code>self</code>, or <code>child</code>.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1520,7 +1489,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the directory being offered.
+            <td><p>Path identifying the directory being offered.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1528,8 +1497,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> Reference to the target of the capability. Must be `child` or
- `collection`.
+            <td><p>Reference to the target of the capability. Must be <code>child</code> or
+<code>collection</code>.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1537,20 +1506,27 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The path under which the capability is being offered.
-
- Must be an absolute path starting with /.
+            <td><p>The path under which the capability is being offered.</p>
+<p>Must be an absolute path starting with /.</p>
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>rights</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.io2/'>fuchsia.io2</a>/<a class='link' href='../fuchsia.io2/#Operations'>Operations</a></code>
+            </td>
+            <td><p>The rights this directory should be offered with, required iff <code>source == self</code>.</p>
 </td>
         </tr></table>
 
 ### OfferStorageDecl {#OfferStorageDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#90)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#95)*
 
- Declares a storage capability offered by a component to one of its children,
- such as meta storage offered by the component's containing realm or cache
- storage offered by the component itself.
+<p>Declares a storage capability offered by a component to one of its children,
+such as meta storage offered by the component's containing realm or cache
+storage offered by the component itself.</p>
 
 
 <table>
@@ -1561,7 +1537,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#StorageType'>StorageType</a></code>
             </td>
-            <td> The type of storage being offered.
+            <td><p>The type of storage being offered.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1569,7 +1545,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The source of the storage capability. Must be `realm` or `storage`.
+            <td><p>The source of the storage capability. Must be <code>realm</code> or <code>storage</code>.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1577,19 +1553,19 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> Reference to the target of the capability. Must be `child` or
- `collection`.
+            <td><p>Reference to the target of the capability. Must be <code>child</code> or
+<code>collection</code>.</p>
 </td>
         </tr></table>
 
 ### OfferRunnerDecl {#OfferRunnerDecl}
 
 
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#105)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#110)*
 
- Declares a runner offered by a component to one of its children, which may
- have been offered by the component's containing realm, the component itself,
- or one of its other children.
+<p>Declares a runner offered by a component to one of its children, which may
+have been offered by the component's containing realm, the component itself,
+or one of its other children.</p>
 
 
 <table>
@@ -1600,8 +1576,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the capability relative to the component itself. Must be
- `realm`, `self`, or `child`.
+            <td><p>The provider of the capability relative to the component itself. Must be
+<code>realm</code>, <code>self</code>, or <code>child</code>.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1609,7 +1585,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[100]</code>
             </td>
-            <td> Name of the runner being offered.
+            <td><p>Name of the runner being offered.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1617,8 +1593,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> Reference to the target of the capability. Must be `child` or
- `collection`.
+            <td><p>Reference to the target of the capability. Must be <code>child</code> or
+<code>collection</code>.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1626,7 +1602,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[100]</code>
             </td>
-            <td> Name under which the capability is being offered.
+            <td><p>Name under which the capability is being offered.</p>
 </td>
         </tr></table>
 
@@ -1635,7 +1611,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/runner_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/runner_decl.fidl#8)*
 
- Declares a runner capability backed by a service.
+<p>Declares a runner capability backed by a service.</p>
 
 
 <table>
@@ -1646,7 +1622,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[100]</code>
             </td>
-            <td> The name of this runner.
+            <td><p>The name of this runner.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1654,8 +1630,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the underlying service relative to the component itself.
- Must be `realm`, `self`, or `child`.
+            <td><p>The provider of the underlying service relative to the component itself.
+Must be <code>realm</code>, <code>self</code>, or <code>child</code>.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1663,7 +1639,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The path of the capability within the specified source.
+            <td><p>The path of the capability within the specified source.</p>
 </td>
         </tr></table>
 
@@ -1672,8 +1648,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/storage_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/storage_decl.fidl#22)*
 
- Declares a storage capability backed by a directory from which data, cache,
- or meta storage can be offered.
+<p>Declares a storage capability backed by a directory from which data, cache,
+or meta storage can be offered.</p>
 
 
 <table>
@@ -1684,7 +1660,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[100]</code>
             </td>
-            <td> The name of this storage
+            <td><p>The name of this storage</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1692,8 +1668,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the underlying directory capability relative to the
- component itself. Must be `realm`, `self`, or `child`.
+            <td><p>The provider of the underlying directory capability relative to the
+component itself. Must be <code>realm</code>, <code>self</code>, or <code>child</code>.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1701,22 +1677,21 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The incoming path to the directory capability. If "source == SELF", this
- is a path in the component's outgoing directory. Otherwise, it is the
- path by which the capability was presented to the component.
+            <td><p>The incoming path to the directory capability. If &quot;source == SELF&quot;, this
+is a path in the component's outgoing directory. Otherwise, it is the
+path by which the capability was presented to the component.</p>
 </td>
         </tr></table>
 
 ### UseServiceDecl {#UseServiceDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#22)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#24)*
 
- Declares a service used by a component, which was offered to the component's
- environment.
-
- To learn more about services, see:
- https://fuchsia.dev/fuchsia-src/glossary#service
+<p>Declares a service used by a component, which was offered to the component's
+environment.</p>
+<p>To learn more about services, see:
+https://fuchsia.dev/fuchsia-src/glossary#service</p>
 
 
 <table>
@@ -1727,8 +1702,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the service relative to the component itself. Must
- be |realm| or |framework|.
+            <td><p>The provider of the service relative to the component itself. Must
+be |realm| or |framework|.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1736,10 +1711,9 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the service, by which it was presented to this
- component.
-
- Must be an absolute path starting with /.
+            <td><p>Path identifying the service, by which it was presented to this
+component.</p>
+<p>Must be an absolute path starting with /.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1747,23 +1721,21 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The path where the capability should be installed in the component's
- namespace.
-
- Must be an absolute path starting with /.
+            <td><p>The path where the capability should be installed in the component's
+namespace.</p>
+<p>Must be an absolute path starting with /.</p>
 </td>
         </tr></table>
 
 ### UseLegacyServiceDecl {#UseLegacyServiceDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#45)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#47)*
 
- Declares a legacy service used by a component, which was offered to the
- component's environment.
-
- A legacy service is a service with a single instance, provided by a single
- FIDL protocol.
+<p>Declares a legacy service used by a component, which was offered to the
+component's environment.</p>
+<p>A legacy service is a service with a single instance, provided by a single
+FIDL protocol.</p>
 
 
 <table>
@@ -1774,8 +1746,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the legacy service relative to the component itself.
- Must be |realm| or |framework|.
+            <td><p>The provider of the legacy service relative to the component itself.
+Must be |realm| or |framework|.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1783,8 +1755,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the legacy service, by which it was presented to this
- component.
+            <td><p>Path identifying the legacy service, by which it was presented to this
+component.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1792,20 +1764,19 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The path where the capability should be installed in the component's
- namespace.
-
- Must be an absolute path starting with /.
+            <td><p>The path where the capability should be installed in the component's
+namespace.</p>
+<p>Must be an absolute path starting with /.</p>
 </td>
         </tr></table>
 
 ### UseDirectoryDecl {#UseDirectoryDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#63)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#65)*
 
- Declares a directory used by a component, which was offered to the
- component's environment.
+<p>Declares a directory used by a component, which was offered to the
+component's environment.</p>
 
 
 <table>
@@ -1816,8 +1787,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ref'>Ref</a></code>
             </td>
-            <td> The provider of the directory relative to the component itself. Must
- be |realm| or |framework|.
+            <td><p>The provider of the directory relative to the component itself. Must
+be |realm| or |framework|.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1825,8 +1796,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> Path identifying the directory, by which it was presented to this
- component.
+            <td><p>Path identifying the directory, by which it was presented to this
+component.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1834,20 +1805,27 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The path where the capability should be installed in the component's
- namespace.
-
- Must be an absolute path starting with /.
+            <td><p>The path where the capability should be installed in the component's
+namespace.</p>
+<p>Must be an absolute path starting with /.</p>
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>rights</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.io2/'>fuchsia.io2</a>/<a class='link' href='../fuchsia.io2/#Operations'>Operations</a></code>
+            </td>
+            <td><p>The rights required by the component to use this directory.</p>
 </td>
         </tr></table>
 
 ### UseStorageDecl {#UseStorageDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#81)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#86)*
 
- Declares storage used by a component, which was offered to the component's
- environment.
+<p>Declares storage used by a component, which was offered to the component's
+environment.</p>
 
 
 <table>
@@ -1858,7 +1836,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#StorageType'>StorageType</a></code>
             </td>
-            <td> Type of storage used by the component.
+            <td><p>Type of storage used by the component.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1866,20 +1844,19 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The path where the capability should be installed in the component's
- namespace. Must not be set if `type` is `META`.
-
- Must be an absolute path starting with /.
+            <td><p>The path where the capability should be installed in the component's
+namespace. Must not be set if <code>type</code> is <code>META</code>.</p>
+<p>Must be an absolute path starting with /.</p>
 </td>
         </tr></table>
 
 ### UseRunnerDecl {#UseRunnerDecl}
 
 
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#94)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#99)*
 
- Declares a runner used by a component, which was offered to the component's
- environment.
+<p>Declares a runner used by a component, which was offered to the component's
+environment.</p>
 
 
 <table>
@@ -1890,8 +1867,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string[100]</code>
             </td>
-            <td> The name of the runner, as it was presented to this component by the
- realm.
+            <td><p>The name of the runner, as it was presented to this component by the
+realm.</p>
 </td>
         </tr></table>
 
@@ -1900,10 +1877,9 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/component.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component.fidl#11)*
 
- A component is a unit of executable software.
-
- This object provides the component's declaration, access to its package's
- content, and relevant metadata.
+<p>A component is a unit of executable software.</p>
+<p>This object provides the component's declaration, access to its package's
+content, and relevant metadata.</p>
 
 
 <table>
@@ -1914,9 +1890,9 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The resolved URL of the component.
- This is the canonical URL obtained by the component resolver after
- after following redirects and resolving relative paths.
+            <td><p>The resolved URL of the component.
+This is the canonical URL obtained by the component resolver after
+after following redirects and resolving relative paths.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1924,9 +1900,9 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ComponentDecl'>ComponentDecl</a></code>
             </td>
-            <td> The component's declaration.
- This information is typically obtained from the component's manifest
- or generated by the component resolver.
+            <td><p>The component's declaration.
+This information is typically obtained from the component's manifest
+or generated by the component resolver.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1934,15 +1910,13 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Package'>Package</a></code>
             </td>
-            <td> The package that contains the component.
- By convention, the component's package is mapped to "/pkg" in its
- namespace at runtime.
-
- This is null if the component is not represented as a package.
- In that case, it is the runner's responsibility to load the component's
- resource from the `resolved_url`.  This mechanism is used for web
- applications.
-
+            <td><p>The package that contains the component.
+By convention, the component's package is mapped to &quot;/pkg&quot; in its
+namespace at runtime.</p>
+<p>This is null if the component is not represented as a package.
+In that case, it is the runner's responsibility to load the component's
+resource from the <code>resolved_url</code>.  This mechanism is used for web
+applications.</p>
 </td>
         </tr></table>
 
@@ -1951,7 +1925,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#34)*
 
- Parameters for starting a new component instance.
+<p>Parameters for starting a new component instance.</p>
 
 
 <table>
@@ -1962,9 +1936,9 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The resolved URL of the component.
- This is the canonical URL obtained by the component resolver after
- after following redirects and resolving relative paths.
+            <td><p>The resolved URL of the component.
+This is the canonical URL obtained by the component resolver after
+after following redirects and resolving relative paths.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1972,8 +1946,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.data/'>fuchsia.data</a>/<a class='link' href='../fuchsia.data/#Dictionary'>Dictionary</a></code>
             </td>
-            <td> The component's program declaration.
- This information originates from `ComponentDecl.program`.
+            <td><p>The component's program declaration.
+This information originates from <code>ComponentDecl.program</code>.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1981,7 +1955,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ComponentNamespace'>ComponentNamespace</a></code>
             </td>
-            <td> The namespace to provide to the component instance.
+            <td><p>The namespace to provide to the component instance.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1989,7 +1963,7 @@ Type: <code>uint32</code>
             <td>
                 <code>request&lt;<a class='link' href='../fuchsia.io/'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/#Directory'>Directory</a>&gt;</code>
             </td>
-            <td> The directory this component serves.
+            <td><p>The directory this component serves.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -1997,8 +1971,8 @@ Type: <code>uint32</code>
             <td>
                 <code>request&lt;<a class='link' href='../fuchsia.io/'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/#Directory'>Directory</a>&gt;</code>
             </td>
-            <td> The directory served by the runner to present runtime information about
- the component.
+            <td><p>The directory served by the runner to present runtime information about
+the component.</p>
 </td>
         </tr></table>
 
@@ -2007,9 +1981,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/package.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/package.fidl#12)*
 
- A package is a signed collection of immutable files.
-
- This object provides access to a package's content and relevant metadata.
+<p>A package is a signed collection of immutable files.</p>
+<p>This object provides access to a package's content and relevant metadata.</p>
 
 
 <table>
@@ -2020,7 +1993,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The URL of the package itself.
+            <td><p>The URL of the package itself.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -2028,7 +2001,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.io/'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/#Directory'>Directory</a></code>
             </td>
-            <td> The package's content directory.
+            <td><p>The package's content directory.</p>
 </td>
         </tr></table>
 
@@ -2037,7 +2010,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#22)*
 
- Parameters for a new piece of work to be scheduled.
+<p>Parameters for a new piece of work to be scheduled.</p>
 
 
 <table>
@@ -2048,7 +2021,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Start'>Start</a></code>
             </td>
-            <td> Time when corresponding work item should be _first_ scheduled.
+            <td><p>Time when corresponding work item should be <em>first</em> scheduled.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -2056,9 +2029,9 @@ Type: <code>uint32</code>
             <td>
                 <code>int64</code>
             </td>
-            <td> Delay between repeated schedulings of corresponding work item. This is left unspecified for
- one-shot work that should not repeat. Repeating work items are rescheduled indefinitely
- until it is canceled.
+            <td><p>Delay between repeated schedulings of corresponding work item. This is left unspecified for
+one-shot work that should not repeat. Repeating work items are rescheduled indefinitely
+until it is canceled.</p>
 </td>
         </tr></table>
 
@@ -2242,10 +2215,10 @@ Type: <code>uint32</code>
 ## **XUNIONS**
 
 ### ExposeDecl {#ExposeDecl}
-*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#9)*
+*Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#11)*
 
- Declares a capability exposed to either a component's containing realm or to the framework.
- For example, a legacy service exposed by the component at runtime.
+<p>Declares a capability exposed to either a component's containing realm or to the framework.
+For example, a legacy service exposed by the component at runtime.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -2275,11 +2248,11 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### OfferDecl {#OfferDecl}
-*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#10)*
+*Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#12)*
 
- Declares a capability offered by a component to one of its children, which
- may have been offered by the component's containing realm, the component
- itself, or one of its other children.
+<p>Declares a capability offered by a component to one of its children, which
+may have been offered by the component's containing realm, the component
+itself, or one of its other children.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -2317,8 +2290,8 @@ Type: <code>uint32</code>
 ### Ref {#Ref}
 *Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#9)*
 
- A reference to a capability source or destination relative to this
- component.
+<p>A reference to a capability source or destination relative to this
+component.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -2360,10 +2333,10 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### UseDecl {#UseDecl}
-*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#9)*
+*Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#11)*
 
- Declares a capability used by a component, which was offered to the
- component's environment.
+<p>Declares a capability used by a component, which was offered to the
+component's environment.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -2401,7 +2374,7 @@ Type: <code>uint32</code>
 ### Start {#Start}
 *Defined in [fuchsia.sys2/work_scheduler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#13)*
 
- Different ways to specify when to schedule a work item for the first time.
+<p>Different ways to specify when to schedule a work item for the first time.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -2409,15 +2382,15 @@ Type: <code>uint32</code>
             <td>
                 <code>int64</code>
             </td>
-            <td> A non-negative delay to wait before scheduling work.
+            <td><p>A non-negative delay to wait before scheduling work.</p>
 </td>
         </tr><tr>
             <td><code>monotonic_time</code></td>
             <td>
                 <code>int64</code>
             </td>
-            <td> A fixed point in time to start scheduling work, interpreted like `ZX_CLOCK_MONOTONIC`:
- number of nanoseconds since the system was powered on.
+            <td><p>A fixed point in time to start scheduling work, interpreted like <code>ZX_CLOCK_MONOTONIC</code>:
+number of nanoseconds since the system was powered on.</p>
 </td>
         </tr></table>
 
@@ -2498,7 +2471,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>int32</code></td>
-            <td> Error produced when a component terminates unexpected.
+            <td><p>Error produced when a component terminates unexpected.</p>
 </td>
         </tr>
     <tr>

@@ -8,13 +8,13 @@
 ## Peer {#Peer}
 *Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#109)*
 
- Protocol used to drive the state of a fake peer device.
+<p>Protocol used to drive the state of a fake peer device.</p>
 
 ### AssignConnectionStatus {#AssignConnectionStatus}
 
- Assign a HCI `status` for the controller to generate in response to connection requests.
- Applies to all successive HCI_Create_Connection and HCI_LE_Create_Connection commands. The
- procedure is acknowledged with an empty response.
+<p>Assign a HCI <code>status</code> for the controller to generate in response to connection requests.
+Applies to all successive HCI_Create_Connection and HCI_LE_Create_Connection commands. The
+procedure is acknowledged with an empty response.</p>
 
 #### Request
 <table>
@@ -34,8 +34,8 @@
 
 ### EmulateLeConnectionComplete {#EmulateLeConnectionComplete}
 
- Emulates a LE connection event. Does nothing if the peer is already connected. The
- `role` parameter determines the link layer connection role.
+<p>Emulates a LE connection event. Does nothing if the peer is already connected. The
+<code>role</code> parameter determines the link layer connection role.</p>
 
 #### Request
 <table>
@@ -51,7 +51,7 @@
 
 ### EmulateDisconnectionComplete {#EmulateDisconnectionComplete}
 
- Emulate disconnection. Does nothing if the peer is not connected.
+<p>Emulate disconnection. Does nothing if the peer is not connected.</p>
 
 #### Request
 <table>
@@ -62,14 +62,13 @@
 
 ### WatchConnectionStates {#WatchConnectionStates}
 
- Watch connection state changes using the
- [hanging get pattern](/docs/development/api/fidl.md#delay-responses-using-hanging-gets).
- Notifies the most recent controller connection state if there has been a change since the
- last time this method was called.
-
- Only one call to this method can be outstanding at a given time. The
- <a class='link' href='#Peer'>Peer</a> channel will be closed if a call is received when one is
- already pending.
+<p>Watch connection state changes using the
+<a href="/docs/development/api/fidl.md#delay-responses-using-hanging-gets">hanging get pattern</a>.
+Notifies the most recent controller connection state if there has been a change since the
+last time this method was called.</p>
+<p>Only one call to this method can be outstanding at a given time. The
+<a class='link' href='#Peer'>Peer</a> channel will be closed if a call is received when one is
+already pending.</p>
 
 #### Request
 <table>
@@ -90,13 +89,13 @@
 ## HciEmulator {#HciEmulator}
 *Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#135)*
 
- Protocol used to emulate a Bluetooth controller that supports the standard Bluetooth HCI.
+<p>Protocol used to emulate a Bluetooth controller that supports the standard Bluetooth HCI.</p>
 
 ### Publish {#Publish}
 
- Publish a bt-hci device using the provided `settings`. Each HciEmulator instance can only
- manage a single bt-hci device. Returns Emulator.`HCI_ALREADY_PUBLISHED` if the device has
- already been published.
+<p>Publish a bt-hci device using the provided <code>settings</code>. Each HciEmulator instance can only
+manage a single bt-hci device. Returns Emulator.<code>HCI_ALREADY_PUBLISHED</code> if the device has
+already been published.</p>
 
 #### Request
 <table>
@@ -121,18 +120,16 @@
 
 ### AddLowEnergyPeer {#AddLowEnergyPeer}
 
- Inserts a new LE peer device to be emulated by this controller. Once registered, the state
- of the fake peer can be driven and observed using the `peer` handle.
-
- A reply will be sent to acknowledge the creation of the fake peer. If a peer cannot be
- initialized (e.g. due to a missing required field in `parameters` or for containing an
- address that is already emulated) the `peer` handle will be closed and an error reply will
- be sent.
-
- The peer will appear in advertising reports and respond to requests according to its
- configuration as long as the `peer` channel is open. The emulator stops emulating this peer
- when the channel gets closed, which makes it no longer discoverable and not respond to any
- requests.
+<p>Inserts a new LE peer device to be emulated by this controller. Once registered, the state
+of the fake peer can be driven and observed using the <code>peer</code> handle.</p>
+<p>A reply will be sent to acknowledge the creation of the fake peer. If a peer cannot be
+initialized (e.g. due to a missing required field in <code>parameters</code> or for containing an
+address that is already emulated) the <code>peer</code> handle will be closed and an error reply will
+be sent.</p>
+<p>The peer will appear in advertising reports and respond to requests according to its
+configuration as long as the <code>peer</code> channel is open. The emulator stops emulating this peer
+when the channel gets closed, which makes it no longer discoverable and not respond to any
+requests.</p>
 
 #### Request
 <table>
@@ -162,18 +159,16 @@
 
 ### AddBredrPeer {#AddBredrPeer}
 
- Inserts a new BR/EDR peer device to be emulated by this controller. Once registered, the state
- of the fake peer can be driven and observed using the `peer` handle.
-
- A reply will be sent to acknowledge the creation of the fake peer. If a peer cannot be
- initialized (e.g. due to a missing required field in `parameters` or for containing an
- address that is already emulated) the `peer` handle will be closed and an error reply will
- be sent.
-
- The peer will appear in inquiry results and respond to requests according to its
- configuration as long as the `peer` channel is open. The emulator stops emulating this peer
- when the channel gets closed, which makes it no longer discoverable and not respond to any
- requests.
+<p>Inserts a new BR/EDR peer device to be emulated by this controller. Once registered, the state
+of the fake peer can be driven and observed using the <code>peer</code> handle.</p>
+<p>A reply will be sent to acknowledge the creation of the fake peer. If a peer cannot be
+initialized (e.g. due to a missing required field in <code>parameters</code> or for containing an
+address that is already emulated) the <code>peer</code> handle will be closed and an error reply will
+be sent.</p>
+<p>The peer will appear in inquiry results and respond to requests according to its
+configuration as long as the <code>peer</code> channel is open. The emulator stops emulating this peer
+when the channel gets closed, which makes it no longer discoverable and not respond to any
+requests.</p>
 
 #### Request
 <table>
@@ -203,14 +198,13 @@
 
 ### WatchLeScanStates {#WatchLeScanStates}
 
- Returns the most recent set of state transitions for the link layer LE scan procedure. This
- method returns when there has been a state change since the last invocation of this method
- by this client.
-
- Only one call to this method can be outstanding at a given time. The
- <a class='link' href='#HciEmulator'>HciEmulator</a> channel will be closed if a call received when one is
- already pending.
- (see [hanging get pattern](//docs/development/api/fidl.md#delay-responses-using-hanging-gets))
+<p>Returns the most recent set of state transitions for the link layer LE scan procedure. This
+method returns when there has been a state change since the last invocation of this method
+by this client.</p>
+<p>Only one call to this method can be outstanding at a given time. The
+<a class='link' href='#HciEmulator'>HciEmulator</a> channel will be closed if a call received when one is
+already pending.
+(see <a href="//docs/development/api/fidl.md#delay-responses-using-hanging-gets">hanging get pattern</a>)</p>
 
 #### Request
 <table>
@@ -230,14 +224,13 @@
 
 ### WatchLegacyAdvertisingStates {#WatchLegacyAdvertisingStates}
 
- Returns the most recent set of state transitions for the link layer LE legacy advertising
- procedure. This method returns when there has been a state change since the last invocation
- of this method by this client.
-
- Only one call to this method can be outstanding at a given time. The
- <a class='link' href='#HciEmulator'>HciEmulator</a> channel will be closed if a call received when one is
- already pending.
- (see [hanging get pattern](//docs/development/api/fidl.md#delay-responses-using-hanging-gets))
+<p>Returns the most recent set of state transitions for the link layer LE legacy advertising
+procedure. This method returns when there has been a state change since the last invocation
+of this method by this client.</p>
+<p>Only one call to this method can be outstanding at a given time. The
+<a class='link' href='#HciEmulator'>HciEmulator</a> channel will be closed if a call received when one is
+already pending.
+(see <a href="//docs/development/api/fidl.md#delay-responses-using-hanging-gets">hanging get pattern</a>)</p>
 
 #### Request
 <table>
@@ -297,7 +290,7 @@
 
 
 
- The HCI ACL data flow-control parameters.
+<p>The HCI ACL data flow-control parameters.</p>
 
 
 <table>
@@ -306,7 +299,7 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> ACL frame MTU in bytes.
+            <td><p>ACL frame MTU in bytes.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -314,7 +307,7 @@
             <td>
                 <code>uint8</code>
             </td>
-            <td> The maximum number of ACL frames that the controller can buffer.
+            <td><p>The maximum number of ACL frames that the controller can buffer.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -347,7 +340,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#10)*
 
- Error codes that can be generated for emulator-wide configurations.
+<p>Error codes that can be generated for emulator-wide configurations.</p>
 
 
 <table>
@@ -366,7 +359,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#16)*
 
- Error codes that are generated for functions that manipulate fake peers.
+<p>Error codes that are generated for functions that manipulate fake peers.</p>
 
 
 <table>
@@ -389,19 +382,19 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#28)*
 
- Pre-set HCI configurations.
+<p>Pre-set HCI configurations.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DUAL_MODE</code></td>
             <td><code>1</code></td>
-            <td> Support both BR/EDR and LE in LMP features.
+            <td><p>Support both BR/EDR and LE in LMP features.</p>
 </td>
         </tr><tr>
             <td><code>LE_ONLY</code></td>
             <td><code>2</code></td>
-            <td> Limits supported features and HCI commands to those that are required for LE only.
+            <td><p>Limits supported features and HCI commands to those that are required for LE only.</p>
 </td>
         </tr></table>
 
@@ -428,8 +421,8 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.test/hci_errors.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_errors.fidl#9)*
 
- Defines the list of HCI protocol error codes that a Bluetooth controller can report. These
- values are taken from Bluetooth Core Specification v5.1, Vol 2, Part D.
+<p>Defines the list of HCI protocol error codes that a Bluetooth controller can report. These
+values are taken from Bluetooth Core Specification v5.1, Vol 2, Part D.</p>
 
 
 <table>
@@ -716,34 +709,34 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.test/le_procedures.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#13)*
 
- LE legacy advertising types from Bluetooth Core Specification 5.1 Vol 2, Part E, Section 7.8.5.
+<p>LE legacy advertising types from Bluetooth Core Specification 5.1 Vol 2, Part E, Section 7.8.5.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ADV_IND</code></td>
             <td><code>0</code></td>
-            <td> Connectable and scannable.
+            <td><p>Connectable and scannable.</p>
 </td>
         </tr><tr>
             <td><code>ADV_DIRECT_IND</code></td>
             <td><code>1</code></td>
-            <td> Connectable, high-duty cycle, directed.
+            <td><p>Connectable, high-duty cycle, directed.</p>
 </td>
         </tr><tr>
             <td><code>ADV_SCAN_IND</code></td>
             <td><code>2</code></td>
-            <td> Scannable, undirected.
+            <td><p>Scannable, undirected.</p>
 </td>
         </tr><tr>
             <td><code>ADV_NONCONN_IND</code></td>
             <td><code>3</code></td>
-            <td> Non-connectable, undirected
+            <td><p>Non-connectable, undirected</p>
 </td>
         </tr><tr>
             <td><code>SCAN_RSP</code></td>
             <td><code>4</code></td>
-            <td> Scan response
+            <td><p>Scan response</p>
 </td>
         </tr></table>
 
@@ -756,7 +749,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#46)*
 
- Controller settings used by the emulator.
+<p>Controller settings used by the emulator.</p>
 
 
 <table>
@@ -767,7 +760,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Address'>Address</a></code>
             </td>
-            <td> The `BD_ADDR` (BR/EDR) or LE Public Device Address. Defaults to "00:00:00:00:00:00".
+            <td><p>The <code>BD_ADDR</code> (BR/EDR) or LE Public Device Address. Defaults to &quot;00:00:00:00:00:00&quot;.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -775,7 +768,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#HciConfig'>HciConfig</a></code>
             </td>
-            <td> Supported HCI command configuration. Defaults to "`DUAL_MODE`".
+            <td><p>Supported HCI command configuration. Defaults to &quot;<code>DUAL_MODE</code>&quot;.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -783,7 +776,7 @@ Type: <code>uint8</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> True if the 5.0 extended advertising features are supported. Defaults to "false".
+            <td><p>True if the 5.0 extended advertising features are supported. Defaults to &quot;false&quot;.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -791,10 +784,10 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#AclBufferSettings'>AclBufferSettings</a></code>
             </td>
-            <td> The ACL-U data buffer settings. Defaults to
-    data_packet_length: 1024
-    total_num_data_packets: 5
- IF `hci_config` is set to `DUAL_MODE`. Defaults to null otherwise.
+            <td><p>The ACL-U data buffer settings. Defaults to
+data_packet_length: 1024
+total_num_data_packets: 5
+IF <code>hci_config</code> is set to <code>DUAL_MODE</code>. Defaults to null otherwise.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -802,9 +795,9 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#AclBufferSettings'>AclBufferSettings</a></code>
             </td>
-            <td> The LE-U ACL data buffer settings. Defaults to
-    data_packet_length: 251
-    total_num_data_packets: 5
+            <td><p>The LE-U ACL data buffer settings. Defaults to
+data_packet_length: 251
+total_num_data_packets: 5</p>
 </td>
         </tr></table>
 
@@ -813,7 +806,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#73)*
 
- Parameters used to emulate a peer's behavior over the Low Energy transport.
+<p>Parameters used to emulate a peer's behavior over the Low Energy transport.</p>
 
 
 <table>
@@ -824,7 +817,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Address'>Address</a></code>
             </td>
-            <td> The LE identity address of the peer. This field is mandatory.
+            <td><p>The LE identity address of the peer. This field is mandatory.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -832,8 +825,8 @@ Type: <code>uint8</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> When present and true, the peer will send connectable advertisements and accept connection
- requests. The peer will ignore connection requests if not connectable.
+            <td><p>When present and true, the peer will send connectable advertisements and accept connection
+requests. The peer will ignore connection requests if not connectable.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -841,8 +834,8 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#AdvertisingData'>AdvertisingData</a></code>
             </td>
-            <td> The advertising data contents. If not present, the advertising data sent by this peer will
- be empty.
+            <td><p>The advertising data contents. If not present, the advertising data sent by this peer will
+be empty.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -850,8 +843,8 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#AdvertisingData'>AdvertisingData</a></code>
             </td>
-            <td> The scan response data contents. When present, the fake controller will generate scannable
- advertising packets and scan response events.
+            <td><p>The scan response data contents. When present, the fake controller will generate scannable
+advertising packets and scan response events.</p>
 </td>
         </tr></table>
 
@@ -860,7 +853,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#91)*
 
- Parameters used to emulate a peer's behavior over the BR/EDR transport.
+<p>Parameters used to emulate a peer's behavior over the BR/EDR transport.</p>
 
 
 <table>
@@ -871,7 +864,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Address'>Address</a></code>
             </td>
-            <td> The BD_ADDR of the peer. This field is mandatory.
+            <td><p>The BD_ADDR of the peer. This field is mandatory.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -879,8 +872,8 @@ Type: <code>uint8</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> When present and true, the peer will accept connection requests. The peer will ignore
- connection requests if not connectable.
+            <td><p>When present and true, the peer will accept connection requests. The peer will ignore
+connection requests if not connectable.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -888,7 +881,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#DeviceClass'>DeviceClass</a></code>
             </td>
-            <td> The device class reported in the inquiry response for this peer during device discovery.
+            <td><p>The device class reported in the inquiry response for this peer during device discovery.</p>
 </td>
         </tr></table>
 
@@ -897,7 +890,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.test/le_procedures.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#31)*
 
- Controller parameters for legacy advertising.
+<p>Controller parameters for legacy advertising.</p>
 
 
 <table>
@@ -908,8 +901,8 @@ Type: <code>uint8</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> True if advertising has been enabled using the HCI_LE_Set_Advertising_Enable command.
- This field is always present.
+            <td><p>True if advertising has been enabled using the HCI_LE_Set_Advertising_Enable command.
+This field is always present.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -917,8 +910,8 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#LegacyAdvertisingType'>LegacyAdvertisingType</a></code>
             </td>
-            <td> The most recently configured advertising type. This field is always present. Defaults to
- <a class='link' href='#LegacyAdvertisingType.ADV_IND'>LegacyAdvertisingType.ADV_IND</a>.
+            <td><p>The most recently configured advertising type. This field is always present. Defaults to
+<a class='link' href='#LegacyAdvertisingType.ADV_IND'>LegacyAdvertisingType.ADV_IND</a>.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -926,8 +919,8 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#AddressType'>AddressType</a></code>
             </td>
-            <td> The LE address type being used for advertising. This field is always present. Defaults to
- <a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#AddressType.PUBLIC'>AddressType.PUBLIC</a>.
+            <td><p>The LE address type being used for advertising. This field is always present. Defaults to
+<a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#AddressType.PUBLIC'>AddressType.PUBLIC</a>.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -935,7 +928,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint16</code>
             </td>
-            <td> The host-specified advertising interval range parameters. Present only if configured.
+            <td><p>The host-specified advertising interval range parameters. Present only if configured.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -950,7 +943,7 @@ Type: <code>uint8</code>
             <td>
                 <code>vector&lt;uint8&gt;[31]</code>
             </td>
-            <td> Any configured advertising and scan response data. Present only if either field is non-zero.
+            <td><p>Any configured advertising and scan response data. Present only if either field is non-zero.</p>
 </td>
         </tr><tr>
             <td>7</td>
@@ -966,8 +959,8 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.test/le_procedures.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#55)*
 
- Represents the LE scan state. The fields are present if scan parameters have been
- configured.
+<p>Represents the LE scan state. The fields are present if scan parameters have been
+configured.</p>
 
 
 <table>
@@ -978,7 +971,7 @@ Type: <code>uint8</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> True if a scan is enabled.
+            <td><p>True if a scan is enabled.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -986,7 +979,7 @@ Type: <code>uint8</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> True if an active scan is enabled. Otherwise the scan is passive.
+            <td><p>True if an active scan is enabled. Otherwise the scan is passive.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -994,9 +987,9 @@ Type: <code>uint8</code>
             <td>
                 <code>uint16</code>
             </td>
-            <td> The scan interval and window parameters. These are defined in Bluetooth controller
- "timeslices" where 1 slice = 0.625 ms. Valid values range from 0x4 (2.5 ms) to 0x4000 (10.24
- ms).
+            <td><p>The scan interval and window parameters. These are defined in Bluetooth controller
+&quot;timeslices&quot; where 1 slice = 0.625 ms. Valid values range from 0x4 (2.5 ms) to 0x4000 (10.24
+ms).</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1011,7 +1004,7 @@ Type: <code>uint8</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> True if duplicate filtering has been enabled.
+            <td><p>True if duplicate filtering has been enabled.</p>
 </td>
         </tr><tr>
             <td>6</td>
@@ -1019,7 +1012,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#AddressType'>AddressType</a></code>
             </td>
-            <td> The type of local device address used.
+            <td><p>The type of local device address used.</p>
 </td>
         </tr></table>
 

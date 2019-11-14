@@ -8,21 +8,21 @@
 ## Engine {#Engine}
 *Defined in [fuchsia.pkg.rewrite/rewrite.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg.rewrite/rewrite.fidl#95)*
 
- Manages fuchsia-pkg:// rewrite rules.
-
- When a package resolver is asked to resolve a fuchsia-pkg URL, it must first
- iterate through its sequence of rewrite rules (given by <a class='link' href='#List'>List</a>). The
- rewrite engine will rewrite the given URL with the first rule that:
- * matches the given URL
- * produces a valid URL when applied to the given URL
- If no rules match, the URL is resolved as-is.
-
- This interface is intended to be implemented by package resolver components,
- and used by repository administration tools.
+<p>Manages fuchsia-pkg:// rewrite rules.</p>
+<p>When a package resolver is asked to resolve a fuchsia-pkg URL, it must first
+iterate through its sequence of rewrite rules (given by <a class='link' href='#List'>List</a>). The
+rewrite engine will rewrite the given URL with the first rule that:</p>
+<ul>
+<li>matches the given URL</li>
+<li>produces a valid URL when applied to the given URL
+If no rules match, the URL is resolved as-is.</li>
+</ul>
+<p>This interface is intended to be implemented by package resolver components,
+and used by repository administration tools.</p>
 
 ### StartEditTransaction {#StartEditTransaction}
 
- Begins a rule edit transaction.
+<p>Begins a rule edit transaction.</p>
 
 #### Request
 <table>
@@ -38,9 +38,10 @@
 
 ### List {#List}
 
- Return an iterator over all rewrite rules.
-
- + request `iterator` is a request for an iterator.
+<p>Return an iterator over all rewrite rules.</p>
+<ul>
+<li>request <code>iterator</code> is a request for an iterator.</li>
+</ul>
 
 #### Request
 <table>
@@ -56,11 +57,12 @@
 
 ### ListStatic {#ListStatic}
 
- Return an iterator over all static (immutable) rewrite rules. These
- rules are handled as lower priority than dynamic rules and cannot be
- modified (although they can be overridden) by <a class='link' href='#EditTransaction'>EditTransaction</a>s.
-
- + request `iterator` is a request for an iterator.
+<p>Return an iterator over all static (immutable) rewrite rules. These
+rules are handled as lower priority than dynamic rules and cannot be
+modified (although they can be overridden) by <a class='link' href='#EditTransaction'>EditTransaction</a>s.</p>
+<ul>
+<li>request <code>iterator</code> is a request for an iterator.</li>
+</ul>
 
 #### Request
 <table>
@@ -76,21 +78,24 @@
 
 ### TestApply {#TestApply}
 
- Rewrite the given `url` with the current rewrite rule set, returning the
- `rewritten` url.  If no rules match or a rule matches but performs an
- identity transformation, this API returns `url` unchanged.
-
- This API is intended only for reflecting on rule side effects. Using
- this API to pre-apply the rules, then passing the result to
- <a class='link' href='../fuchsia.pkg/'>fuchsia.pkg</a>/<a class='link' href='../fuchsia.pkg/#PackageResolver.Resolve'>PackageResolver.Resolve</a> would apply the rules twice.
-
- + request `url` the url to rewrite.
- - response `rewritten` the rewritten url.
- * error `ZX_ERR_INVALID_ARGS` If `url` is not a valid `fuchsia-pkg://`
-    URL. See <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>.
-
- <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>:
-    https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/package_url.md
+<p>Rewrite the given <code>url</code> with the current rewrite rule set, returning the
+<code>rewritten</code> url.  If no rules match or a rule matches but performs an
+identity transformation, this API returns <code>url</code> unchanged.</p>
+<p>This API is intended only for reflecting on rule side effects. Using
+this API to pre-apply the rules, then passing the result to
+<a class='link' href='../fuchsia.pkg/'>fuchsia.pkg</a>/<a class='link' href='../fuchsia.pkg/#PackageResolver.Resolve'>PackageResolver.Resolve</a> would apply the rules twice.</p>
+<ul>
+<li>request <code>url</code> the url to rewrite.</li>
+</ul>
+<ul>
+<li>response <code>rewritten</code> the rewritten url.</li>
+</ul>
+<ul>
+<li>error <code>ZX_ERR_INVALID_ARGS</code> If <code>url</code> is not a valid <code>fuchsia-pkg://</code>
+URL. See <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>.</li>
+</ul>
+<p><a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>:
+https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/package_url.md</p>
 
 #### Request
 <table>
@@ -119,11 +124,12 @@
 
 ### ListDynamic {#ListDynamic}
 
- Return an iterator over all dynamic (editable) rewrite rules. The
- iterator will reflect any changes made to the rewrite rules so far in
- this transaction.
-
- + request `iterator` is a request for an iterator.
+<p>Return an iterator over all dynamic (editable) rewrite rules. The
+iterator will reflect any changes made to the rewrite rules so far in
+this transaction.</p>
+<ul>
+<li>request <code>iterator</code> is a request for an iterator.</li>
+</ul>
 
 #### Request
 <table>
@@ -139,8 +145,8 @@
 
 ### ResetAll {#ResetAll}
 
- Removes all dynamically configured rewrite rules, leaving only any
- statically configured rules.
+<p>Removes all dynamically configured rewrite rules, leaving only any
+statically configured rules.</p>
 
 #### Request
 <table>
@@ -151,17 +157,18 @@
 
 ### Add {#Add}
 
- Add a rewrite rule with highest priority. If `rule` already exists, this
- API will prioritize it over other rules.
-
- + request `rule` the rewrite rule to persist.
-
- * status `ZX_OK` if the rule was staged to be added.
- * status `ZX_ERR_INVALID_ARGS` If `url` is not a valid `fuchsia-pkg://`
-    URL. See <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>.
-
- <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>:
-    https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/package_url.md
+<p>Add a rewrite rule with highest priority. If <code>rule</code> already exists, this
+API will prioritize it over other rules.</p>
+<ul>
+<li>request <code>rule</code> the rewrite rule to persist.</li>
+</ul>
+<ul>
+<li>status <code>ZX_OK</code> if the rule was staged to be added.</li>
+<li>status <code>ZX_ERR_INVALID_ARGS</code> If <code>url</code> is not a valid <code>fuchsia-pkg://</code>
+URL. See <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>.</li>
+</ul>
+<p><a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>:
+https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/package_url.md</p>
 
 #### Request
 <table>
@@ -186,12 +193,13 @@
 
 ### Commit {#Commit}
 
- Commit this transaction, or detect another transaction that committed
- before this one.
-
- * status `ZX_OK` the staged edits were successfully committed.
- * status `ZX_ERR_UNAVAILABLE` another transaction committed before this one.
- * status `ZX_ERR_ACCESS_DENIED` editing dynamic rewrite rules is permanently disabled.
+<p>Commit this transaction, or detect another transaction that committed
+before this one.</p>
+<ul>
+<li>status <code>ZX_OK</code> the staged edits were successfully committed.</li>
+<li>status <code>ZX_ERR_UNAVAILABLE</code> another transaction committed before this one.</li>
+<li>status <code>ZX_ERR_ACCESS_DENIED</code> editing dynamic rewrite rules is permanently disabled.</li>
+</ul>
 
 #### Request
 <table>
@@ -212,14 +220,15 @@
 ## RuleIterator {#RuleIterator}
 *Defined in [fuchsia.pkg.rewrite/rewrite.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg.rewrite/rewrite.fidl#164)*
 
- The iterator over all the rewrite rules defined in a <a class='link' href='#Engine'>Engine</a>.
+<p>The iterator over all the rewrite rules defined in a <a class='link' href='#Engine'>Engine</a>.</p>
 
 ### Next {#Next}
 
- Advance the iterator and return the next batch of rules.
-
- - response `rules` a vector of <a class='link' href='#Rule'>Rule</a> rules. Will return an empty
-    vector when there are no more rules.
+<p>Advance the iterator and return the next batch of rules.</p>
+<ul>
+<li>response <code>rules</code> a vector of <a class='link' href='#Rule'>Rule</a> rules. Will return an empty
+vector when there are no more rules.</li>
+</ul>
 
 #### Request
 <table>
@@ -264,42 +273,35 @@
 
 
 
- A literal match and replacement rule.
-
- # Examples
-
- Replaces example.com with test.example.com for all packages
- ```
- {
-     host_match: "example.com"
-     host_replacement: "test.example.com"
-     path_prefix_match: "/"
-     path_prefix_replacement: "/"
- }
- ```
-
- Replaces example.com with test.example.com for
- fuchsia-pkg://example.com/rolldice. A package called "rolldice" in another
- repo would not be rewritten.
- ```
- {
-     host_match: "example.com"
-     host_replacement: "test.example.com"
-     path_prefix_match: "/rolldice"
-     path_prefix_replacement: "/rolldice"
- }
- ```
-
- Redirects all packages under "fuchsia-pkg://example.com/examples/" to
- "fuchsia-pkg://example.com/examples/beta/".
- ```
- {
-     host_match: "example.com"
-     host_replacement: "example.com"
-     path_prefix_match: "/examples/"
-     path_prefix_replacement: "/examples/beta/"
- }
- ```
+<p>A literal match and replacement rule.</p>
+<h1>Examples</h1>
+<p>Replaces example.com with test.example.com for all packages</p>
+<pre><code>{
+    host_match: &quot;example.com&quot;
+    host_replacement: &quot;test.example.com&quot;
+    path_prefix_match: &quot;/&quot;
+    path_prefix_replacement: &quot;/&quot;
+}
+</code></pre>
+<p>Replaces example.com with test.example.com for
+fuchsia-pkg://example.com/rolldice. A package called &quot;rolldice&quot; in another
+repo would not be rewritten.</p>
+<pre><code>{
+    host_match: &quot;example.com&quot;
+    host_replacement: &quot;test.example.com&quot;
+    path_prefix_match: &quot;/rolldice&quot;
+    path_prefix_replacement: &quot;/rolldice&quot;
+}
+</code></pre>
+<p>Redirects all packages under &quot;fuchsia-pkg://example.com/examples/&quot; to
+&quot;fuchsia-pkg://example.com/examples/beta/&quot;.</p>
+<pre><code>{
+    host_match: &quot;example.com&quot;
+    host_replacement: &quot;example.com&quot;
+    path_prefix_match: &quot;/examples/&quot;
+    path_prefix_replacement: &quot;/examples/beta/&quot;
+}
+</code></pre>
 
 
 <table>
@@ -308,7 +310,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The exact hostname to match.
+            <td><p>The exact hostname to match.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -316,7 +318,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The new hostname to replace the matched `host_match` with.
+            <td><p>The new hostname to replace the matched <code>host_match</code> with.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -324,21 +326,17 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The absolute path to a package or directory to match against.
-
- If `path_prefix_match` ends with '/', it will match any packages or
- subdirectories below the matched path.
- If `path_prefix_match` does not end with '/', it will be interpreted as
- as an exact match.
-
- # Examples
-
- "/example" only matches a package called "example" at the root of the
- repo. "/parent/examples" and "/examples" would not match.
-
- "/example/" would match any package under the "example" path at the root
- of the repo.  For example, "/example/", "/example/package" would both
- match.
+            <td><p>The absolute path to a package or directory to match against.</p>
+<p>If <code>path_prefix_match</code> ends with '/', it will match any packages or
+subdirectories below the matched path.
+If <code>path_prefix_match</code> does not end with '/', it will be interpreted as
+as an exact match.</p>
+<h1>Examples</h1>
+<p>&quot;/example&quot; only matches a package called &quot;example&quot; at the root of the
+repo. &quot;/parent/examples&quot; and &quot;/examples&quot; would not match.</p>
+<p>&quot;/example/&quot; would match any package under the &quot;example&quot; path at the root
+of the repo.  For example, &quot;/example/&quot;, &quot;/example/package&quot; would both
+match.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -346,12 +344,11 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The absolute path to a single package or a directory to replace the
- matched `path_prefix_match` with.
-
- `path_prefix_match` and `path_prefix_replacement` must both match
- directories or both match exact packages. Mixing the two forms is not
- allowed.
+            <td><p>The absolute path to a single package or a directory to replace the
+matched <code>path_prefix_match</code> with.</p>
+<p><code>path_prefix_match</code> and <code>path_prefix_replacement</code> must both match
+directories or both match exact packages. Mixing the two forms is not
+allowed.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -391,7 +388,7 @@
 ### Rule {#Rule}
 *Defined in [fuchsia.pkg.rewrite/rewrite.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg.rewrite/rewrite.fidl#79)*
 
- A rewrite rule, represented as an xunion for future compatibility.
+<p>A rewrite rule, represented as an xunion for future compatibility.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>

@@ -8,17 +8,16 @@
 ## CastKeySigner {#CastKeySigner}
 *Defined in [fuchsia.castauth/cast_auth.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.castauth/cast_auth.fidl#26)*
 
- This FIDL interface is used to sign with hardware Cast key.
- It is intended for short-term use only and will not be supported on all
- devices. It will eventually be replaced by an attestation service.
+<p>This FIDL interface is used to sign with hardware Cast key.
+It is intended for short-term use only and will not be supported on all
+devices. It will eventually be replaced by an attestation service.</p>
 
 ### SignHash {#SignHash}
 
- Use Cast key to sign a hash value.
-
- The input is hash value.
- The return value is the error code or the signature if the operation
- succeeds. The signature algorithm is RSA-2048-PKCS1.
+<p>Use Cast key to sign a hash value.</p>
+<p>The input is hash value.
+The return value is the error code or the signature if the operation
+succeeds. The signature algorithm is RSA-2048-PKCS1.</p>
 
 #### Request
 <table>
@@ -43,11 +42,10 @@
 
 ### GetCertificateChain {#GetCertificateChain}
 
- Get the Cast certificate chain.
-
- The return value is the error code or the certificate chain if
- the operation succeeds. The chain contains Cast key cert,
- one or more intermediate CA certs and root CA cert.
+<p>Get the Cast certificate chain.</p>
+<p>The return value is the error code or the certificate chain if
+the operation succeeds. The chain contains Cast key cert,
+one or more intermediate CA certs and root CA cert.</p>
 
 #### Request
 <table>
@@ -114,19 +112,19 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.castauth/cast_auth.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.castauth/cast_auth.fidl#15)*
 
- Error codes for CastKeySigner operations.
+<p>Error codes for CastKeySigner operations.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>FILE_NOT_FOUND</code></td>
             <td><code>1</code></td>
-            <td> Key/cert not found in storage.
+            <td><p>Key/cert not found in storage.</p>
 </td>
         </tr><tr>
             <td><code>CRYPTO_ERROR</code></td>
             <td><code>2</code></td>
-            <td> Error occurred during signing operation.
+            <td><p>Error occurred during signing operation.</p>
 </td>
         </tr></table>
 
@@ -177,8 +175,8 @@ Type: <code>uint32</code>
 ### Asn1EncodedHash {#Asn1EncodedHash}
 *Defined in [fuchsia.castauth/cast_auth.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.castauth/cast_auth.fidl#9)*
 
- Input hash to be signed by Cast key.
- It must be ASN1-encoded SHA1 or SHA256 hash, with sizes 35 or 51 bytes.
+<p>Input hash to be signed by Cast key.
+It must be ASN1-encoded SHA1 or SHA256 hash, with sizes 35 or 51 bytes.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>

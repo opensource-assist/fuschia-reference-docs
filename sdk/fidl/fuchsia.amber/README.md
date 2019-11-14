@@ -11,7 +11,7 @@
 
 ### DoTest {#DoTest}
 
- simple no-op that can be used to test the connection
+<p>simple no-op that can be used to test the connection</p>
 
 #### Request
 <table>
@@ -36,7 +36,7 @@
 
 ### AddSrc {#AddSrc}
 
- Add a TUF source repository.
+<p>Add a TUF source repository.</p>
 
 #### Request
 <table>
@@ -61,9 +61,9 @@
 
 ### RemoveSrc {#RemoveSrc}
 
- Remove a TUF source repository. SourceConfigs that were bundled when the
- system was built may be removed, but that funcionality may change in the
- future. See PKG-150.
+<p>Remove a TUF source repository. SourceConfigs that were bundled when the
+system was built may be removed, but that funcionality may change in the
+future. See PKG-150.</p>
 
 #### Request
 <table>
@@ -88,7 +88,7 @@
 
 ### ListSrcs {#ListSrcs}
 
- Get the list of URLs of the current set of sources
+<p>Get the list of URLs of the current set of sources</p>
 
 #### Request
 <table>
@@ -108,8 +108,8 @@
 
 ### GetBlob {#GetBlob}
 
- Get a content blob identified by the given hashed Merkle root.
- This operation is asynchronous and provides no results.
+<p>Get a content blob identified by the given hashed Merkle root.
+This operation is asynchronous and provides no results.</p>
 
 #### Request
 <table>
@@ -140,15 +140,15 @@
 
 ### GetUpdateComplete {#GetUpdateComplete}
 
- Get an update for the package identified by 'name' which has the
- provided version. If no version is supplied, the latest available
- version of that package will be retrieved. The package data is sent to
- PackageFS which then stores the package in BlobFS. This method returns
- a channel that will provide the ultimate results. The channel will become
- readable when the update is complete. If at that time the User0 signal is
- set on the channel, the result is an error string that may be read from
- the channel, otherwise the result is success, and the new merkleroot can
- be read from the channel.
+<p>Get an update for the package identified by 'name' which has the
+provided version. If no version is supplied, the latest available
+version of that package will be retrieved. The package data is sent to
+PackageFS which then stores the package in BlobFS. This method returns
+a channel that will provide the ultimate results. The channel will become
+readable when the update is complete. If at that time the User0 signal is
+set on the channel, the result is an error string that may be read from
+the channel, otherwise the result is success, and the new merkleroot can
+be read from the channel.</p>
 
 #### Request
 <table>
@@ -202,9 +202,9 @@
 
 ### Login {#Login}
 
- Log into the source specified by the source id. Returns the oauth2
- device flow code if the source is configured for authentication, or null
- if not.
+<p>Log into the source specified by the source id. Returns the oauth2
+device flow code if the source is configured for authentication, or null
+if not.</p>
 
 #### Request
 <table>
@@ -258,7 +258,7 @@
 
 ### GC {#GC}
 
- Trigger a garbage collection.
+<p>Trigger a garbage collection.</p>
 
 #### Request
 <table>
@@ -269,8 +269,8 @@
 
 ### PackagesFailed {#PackagesFailed}
 
- Sent when a blob fails to write, causing one or more package installs to
- permanently fail.
+<p>Sent when a blob fails to write, causing one or more package installs to
+permanently fail.</p>
 
 #### Request
 <table>
@@ -296,13 +296,12 @@
 
 ### OpenRepository {#OpenRepository}
 
- Opens a TUF repository specified by the provided RepositoryConfig.
- The repository will stay open for the life of the OpenedRepository
- channel.
-
- Packages in the opened repository can be accessed via
- OpenedRepository.GetUpdateComplete, but will not appear in calls to
- the global GetUpdateComplete, above.
+<p>Opens a TUF repository specified by the provided RepositoryConfig.
+The repository will stay open for the life of the OpenedRepository
+channel.</p>
+<p>Packages in the opened repository can be accessed via
+OpenedRepository.GetUpdateComplete, but will not appear in calls to
+the global GetUpdateComplete, above.</p>
 
 #### Request
 <table>
@@ -336,10 +335,10 @@
 
 ### GetUpdateComplete {#GetUpdateComplete}
 
- Get an update for the package identified by 'name' which has the
- provided variant. The package data is sent to PackageFS which then
- stores the package in BlobFS. This method provides a FetchResult that
- will send the ultimate results.
+<p>Get an update for the package identified by 'name' which has the
+provided variant. The package data is sent to PackageFS which then
+stores the package in BlobFS. This method provides a FetchResult that
+will send the ultimate results.</p>
 
 #### Request
 <table>
@@ -370,8 +369,8 @@
 
 ### MerkleFor {#MerkleFor}
 
- Finds the merkle hash for the package identified by 'name' which has the
- provided variant. Does not install the package or fetch any blobs.
+<p>Finds the merkle hash for the package identified by 'name' which has the
+provided variant. Does not install the package or fetch any blobs.</p>
 
 #### Request
 <table>
@@ -417,12 +416,12 @@
 ## FetchResult {#FetchResult}
 *Defined in [fuchsia.amber/amber.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.amber/amber.fidl#214)*
 
- A protocol providing results for a OpenedRepository.GetUpdateComplete call.
- Only one event will be sent before the channel is closed.
+<p>A protocol providing results for a OpenedRepository.GetUpdateComplete call.
+Only one event will be sent before the channel is closed.</p>
 
 ### OnSuccess {#OnSuccess}
 
- Sent when the package is successfully installed and available for use.
+<p>Sent when the package is successfully installed and available for use.</p>
 
 
 
@@ -438,7 +437,7 @@
 
 ### OnError {#OnError}
 
- Sent when the package fails to install for some reason.
+<p>Sent when the package fails to install for some reason.</p>
 
 
 
@@ -559,7 +558,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Supported TUF key types. The only supported algorithm is ed25519.
+            <td><p>Supported TUF key types. The only supported algorithm is ed25519.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -567,7 +566,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The value of the key encoded in hex.
+            <td><p>The value of the key encoded in hex.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -586,8 +585,8 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> If insecureSkipTlsVerify is true, TLS will accept any certificate
- provided by the server. This should only be used for testing.
+            <td><p>If insecureSkipTlsVerify is true, TLS will accept any certificate
+provided by the server. This should only be used for testing.</p>
 </td>
             <td>false</td>
         </tr><tr>
@@ -595,9 +594,9 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> The set of root certificate authorities that clients use when verifying
- server certificates. If the list is empty, TLS uses the host's root CA
- set.
+            <td><p>The set of root certificate authorities that clients use when verifying
+server certificates. If the list is empty, TLS uses the host's root CA
+set.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -616,7 +615,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> If true, prevent re-use of TCP connections between HTTP requests.
+            <td><p>If true, prevent re-use of TCP connections between HTTP requests.</p>
 </td>
             <td>false</td>
         </tr><tr>
@@ -624,8 +623,8 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The keep-alive period for an active network connection. A zero value
- means that we use the system default.
+            <td><p>The keep-alive period for an active network connection. A zero value
+means that we use the system default.</p>
 </td>
             <td>0</td>
         </tr><tr>
@@ -633,8 +632,8 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The maximum number of idle (keep-alive) connections across all hosts. A
- zero value means that we use the system default.
+            <td><p>The maximum number of idle (keep-alive) connections across all hosts. A
+zero value means that we use the system default.</p>
 </td>
             <td>0</td>
         </tr><tr>
@@ -642,8 +641,8 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The maximum number of idle (keep-alive) connections across for each
- host. A zero value means we use the system default.
+            <td><p>The maximum number of idle (keep-alive) connections across for each
+host. A zero value means we use the system default.</p>
 </td>
             <td>0</td>
         </tr><tr>
@@ -651,8 +650,8 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The maximum amount of time to wait for a connection to complete in
- milliseconds. A zero value means we use the system default.
+            <td><p>The maximum amount of time to wait for a connection to complete in
+milliseconds. A zero value means we use the system default.</p>
 </td>
             <td>0</td>
         </tr><tr>
@@ -660,8 +659,8 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The deadline in milliseconds for a request to complete. A zero value
- means that we use the system default.
+            <td><p>The deadline in milliseconds for a request to complete. A zero value
+means that we use the system default.</p>
 </td>
             <td>0</td>
         </tr><tr>
@@ -669,9 +668,9 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The maximum amount of time in milliseconds an idle (keep-alive)
- connection will remain idle before closing itself. A zero value means
- that we use the system default.
+            <td><p>The maximum amount of time in milliseconds an idle (keep-alive)
+connection will remain idle before closing itself. A zero value means
+that we use the system default.</p>
 </td>
             <td>0</td>
         </tr><tr>
@@ -679,8 +678,8 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The amount of time to wait for a server's response headers. A zero value
- means that we use the system default.
+            <td><p>The amount of time to wait for a server's response headers. A zero value
+means that we use the system default.</p>
 </td>
             <td>0</td>
         </tr><tr>
@@ -688,9 +687,9 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The deadline in milliseconds to wait for a server's first response
- headers if the request has an "Expect: 100-continue" header. A zero
- value means that we use the system default.
+            <td><p>The deadline in milliseconds to wait for a server's first response
+headers if the request has an &quot;Expect: 100-continue&quot; header. A zero
+value means that we use the system default.</p>
 </td>
             <td>0</td>
         </tr><tr>
@@ -698,8 +697,8 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The deadline in milliseconds to wait for a TLS handshake. Zero means that we use the system
- default.
+            <td><p>The deadline in milliseconds to wait for a TLS handshake. Zero means that we use the system
+default.</p>
 </td>
             <td>0</td>
         </tr><tr>
@@ -743,7 +742,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> A unique identifier that distinquishes this source from others.
+            <td><p>A unique identifier that distinquishes this source from others.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -751,7 +750,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The canonical URL for the TUF repository.
+            <td><p>The canonical URL for the TUF repository.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -759,8 +758,8 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Optionally download package blobs from this repository. If not
- specified, blobs will be fetched from `$repoUrl/blobs`.
+            <td><p>Optionally download package blobs from this repository. If not
+specified, blobs will be fetched from <code>$repoUrl/blobs</code>.</p>
 </td>
             <td>string</td>
         </tr><tr>
@@ -768,9 +767,9 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The rate limit indicates the number of requests per rateReriod,
- expressed in milliseconds. A limit or period of zero means there is no
- limit.
+            <td><p>The rate limit indicates the number of requests per rateReriod,
+expressed in milliseconds. A limit or period of zero means there is no
+limit.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -778,7 +777,7 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The TUF metadata will be refreshed after it is ratePeriod seconds stale.
+            <td><p>The TUF metadata will be refreshed after it is ratePeriod seconds stale.</p>
 </td>
             <td>3600</td>
         </tr><tr>
@@ -786,8 +785,8 @@
             <td>
                 <code>vector&lt;<a class='link' href='#KeyConfig'>KeyConfig</a>&gt;</code>
             </td>
-            <td> A vector of public keys. These keys must match one of the trusted keys
- known to the system.
+            <td><p>A vector of public keys. These keys must match one of the trusted keys
+known to the system.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -816,7 +815,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> If true, the source supports the /auto SSE endpoint for live updates
+            <td><p>If true, the source supports the /auto SSE endpoint for live updates</p>
 </td>
             <td>false</td>
         </tr><tr>

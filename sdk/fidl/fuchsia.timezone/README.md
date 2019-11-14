@@ -8,11 +8,11 @@
 ## TimeService {#TimeService}
 *Defined in [fuchsia.timezone/time_service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.timezone/time_service.fidl#9)*
 
- Interface to allow manual updates of the system time.
+<p>Interface to allow manual updates of the system time.</p>
 
 ### Update {#Update}
 
- Requests an immediate update of the time from network.
+<p>Requests an immediate update of the time from network.</p>
 
 #### Request
 <table>
@@ -41,9 +41,9 @@
 
 ### GetTimezoneOffsetMinutes {#GetTimezoneOffsetMinutes}
 
- Returns local timezone offset (in minutes from UTC. Can be negative) for
- the supplied number of milliseconds since the Unix epoch. Returns a
- non-zero DST offset when appropriate.
+<p>Returns local timezone offset (in minutes from UTC. Can be negative) for
+the supplied number of milliseconds since the Unix epoch. Returns a
+non-zero DST offset when appropriate.</p>
 
 #### Request
 <table>
@@ -73,7 +73,7 @@
 
 ### SetTimezone {#SetTimezone}
 
- Sets the timezone for the machine based on an ICU ID.
+<p>Sets the timezone for the machine based on an ICU ID.</p>
 
 #### Request
 <table>
@@ -98,7 +98,7 @@
 
 ### GetTimezoneId {#GetTimezoneId}
 
- Gets the timezone ID string.
+<p>Gets the timezone ID string.</p>
 
 #### Request
 <table>
@@ -118,7 +118,7 @@
 
 ### Watch {#Watch}
 
- Watches for updates to the timezone ID.
+<p>Watches for updates to the timezone ID.</p>
 
 #### Request
 <table>
@@ -138,7 +138,7 @@
 
 ### OnTimezoneOffsetChange {#OnTimezoneOffsetChange}
 
- When the timezone changes, returns the new timezone ID.
+<p>When the timezone changes, returns the new timezone ID.</p>
 
 #### Request
 <table>

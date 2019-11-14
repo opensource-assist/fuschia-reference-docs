@@ -8,9 +8,9 @@
 ## WlantapCtl {#WlantapCtl}
 *Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#21)*
 
- Instruct the wlantap-ctl device to creates a fake wlantap-phy device based on the
- `WlantapPhyConfig` passed in. The newly created wlantap-phy device will use the channel to
- allow a `WlantapPhy` client to observe and control its behavior.
+<p>Instruct the wlantap-ctl device to creates a fake wlantap-phy device based on the
+<code>WlantapPhyConfig</code> passed in. The newly created wlantap-phy device will use the channel to
+allow a <code>WlantapPhy</code> client to observe and control its behavior.</p>
 
 ### CreatePhy {#CreatePhy}
 
@@ -44,17 +44,17 @@
 ## WlantapPhy {#WlantapPhy}
 *Defined in [fuchsia.wlan.tap/wlantap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/wlantap.fidl#112)*
 
- Allow the test program to observe and control the behavior of the wlantap-phy device.
- A wlantap-phy device is a special vendor device and its driver (Fuchsia being the vendor)
- used for testing purpose.
- Implements a subset of |wlanmac_ifc_t| and |wlanmac_protocol_ops_t| in
- //garnet/lib/wlan/protocol/include/wlan/protocol/mac.h
- Implements a subset of |WlanphyImpl| protocol in
- //zircon/system/banjo/ddk.protocol.wlanphyimpl/wlanphy-impl.banjo
+<p>Allow the test program to observe and control the behavior of the wlantap-phy device.
+A wlantap-phy device is a special vendor device and its driver (Fuchsia being the vendor)
+used for testing purpose.
+Implements a subset of |wlanmac_ifc_t| and |wlanmac_protocol_ops_t| in
+//garnet/lib/wlan/protocol/include/wlan/protocol/mac.h
+Implements a subset of |WlanphyImpl| protocol in
+//zircon/system/banjo/ddk.protocol.wlanphyimpl/wlanphy-impl.banjo</p>
 
 ### Rx {#Rx}
 
- The device "receives" a frame "over the air" and pass it up to driver.
+<p>The device &quot;receives&quot; a frame &quot;over the air&quot; and pass it up to driver.</p>
 
 #### Request
 <table>
@@ -80,7 +80,7 @@
 
 ### Status {#Status}
 
- The device report its status to the driver. (Not used).
+<p>The device report its status to the driver. (Not used).</p>
 
 #### Request
 <table>
@@ -101,8 +101,8 @@
 
 ### ReportTxStatus {#ReportTxStatus}
 
- For rate selection (Minstrel), the device's last frame transmission is a success/failure,
- with a certain number of retries.
+<p>For rate selection (Minstrel), the device's last frame transmission is a success/failure,
+with a certain number of retries.</p>
 
 #### Request
 <table>
@@ -123,7 +123,7 @@
 
 ### Tx {#Tx}
 
- The device is to send a frame "over the air".
+<p>The device is to send a frame &quot;over the air&quot;.</p>
 
 
 
@@ -139,9 +139,9 @@
 
 ### WlanmacStart {#WlanmacStart}
 
- The device created by its parent device (wlantap-phy: wlanphy) is
- detected and being connected by wlanstack/wlancfg.
- The device is to enter the "running" state.
+<p>The device created by its parent device (wlantap-phy: wlanphy) is
+detected and being connected by wlanstack/wlancfg.
+The device is to enter the &quot;running&quot; state.</p>
 
 
 
@@ -157,7 +157,7 @@
 
 ### SetChannel {#SetChannel}
 
- The device is to switch to the specified channel.
+<p>The device is to switch to the specified channel.</p>
 
 
 
@@ -173,8 +173,8 @@
 
 ### ConfigureBss {#ConfigureBss}
 
- AP: The device is to use args.config as a template for beacon frames.
- Client: The device is to be configured with this BSS as it peer.
+<p>AP: The device is to use args.config as a template for beacon frames.
+Client: The device is to be configured with this BSS as it peer.</p>
 
 
 
@@ -190,7 +190,7 @@
 
 ### SetKey {#SetKey}
 
- The device is to install the keys (often coming from RSN, exceptions apply).
+<p>The device is to install the keys (often coming from RSN, exceptions apply).</p>
 
 
 
@@ -206,8 +206,8 @@
 
 ### SetCountry {#SetCountry}
 
- The device is to change its radio and power settings to conform to the regulation of the
- specified country.
+<p>The device is to change its radio and power settings to conform to the regulation of the
+specified country.</p>
 
 
 
@@ -230,7 +230,7 @@
 
 
 
- Describes the capabilities of the fake wlantap-phy device to be created.
+<p>Describes the capabilities of the fake wlantap-phy device to be created.</p>
 
 
 <table>
@@ -263,9 +263,9 @@
 
 
 
- Information pertaining to incoming packets. One WlanRxInfo is associated with each packet.
- You are encouraged to use the default value in //src/connectivity/wlan/testing/hw-sim/src/lib.rs
- See wlan_rx_info_t for details about each field.
+<p>Information pertaining to incoming packets. One WlanRxInfo is associated with each packet.
+You are encouraged to use the default value in //src/connectivity/wlan/testing/hw-sim/src/lib.rs
+See wlan_rx_info_t for details about each field.</p>
 
 
 <table>
@@ -340,9 +340,9 @@
 
 
 
- Instruction from generic WLAN driver on how to send a packet. One WlanTxInfo per packet.
- These values are populated by the wlantap driver and should not be specified manually.
- See wlan_tx_info_t for details about each field.
+<p>Instruction from generic WLAN driver on how to send a packet. One WlanTxInfo per packet.
+These values are populated by the wlantap driver and should not be specified manually.
+See wlan_tx_info_t for details about each field.</p>
 
 
 <table>
@@ -396,8 +396,8 @@
 
 
 
- An outgoing packet that is to be "sent" by the wlantap device. |data| contains the packet
- in its wire format.
+<p>An outgoing packet that is to be &quot;sent&quot; by the wlantap device. |data| contains the packet
+in its wire format.</p>
 
 
 <table>
@@ -423,9 +423,9 @@
 
 
 
- BSS that is to be configured, or "remembered", by the wlantap device.
- These values are populated by the wlantap driver and should not be specified manually.
- See wlan_bss_config_t for details about each field.
+<p>BSS that is to be configured, or &quot;remembered&quot;, by the wlantap device.
+These values are populated by the wlantap driver and should not be specified manually.
+See wlan_bss_config_t for details about each field.</p>
 
 
 <table>
@@ -458,9 +458,9 @@
 
 
 
- Configuration pertaining to security keys, often used by RSN and other secure authentication.
- These values are populated by the wlantap driver and should not be specified manually.
- See wlan_key_config_t for details about each field.
+<p>Configuration pertaining to security keys, often used by RSN and other secure authentication.
+These values are populated by the wlantap driver and should not be specified manually.
+See wlan_key_config_t for details about each field.</p>
 
 
 <table>
@@ -521,9 +521,9 @@
 
 
 
- One entry in a WlanTxStatus report, 1 report can contain up to 8 entries (see below).
- These values are populated by the wlantap driver and should not be specified manually.
- See wlan_tx_status_entry_t for details about each field.
+<p>One entry in a WlanTxStatus report, 1 report can contain up to 8 entries (see below).
+These values are populated by the wlantap driver and should not be specified manually.
+See wlan_tx_status_entry_t for details about each field.</p>
 
 
 <table>
@@ -549,9 +549,9 @@
 
 
 
- TX status report used by Minstrel rate selection algorithm. One report per packet.
- You are encouraged to use the default value in //src/connectivity/wlan/testing/hw-sim/src/lib.rs
- See wlan_tx_status_t for details about each field.
+<p>TX status report used by Minstrel rate selection algorithm. One report per packet.
+You are encouraged to use the default value in //src/connectivity/wlan/testing/hw-sim/src/lib.rs
+See wlan_tx_status_t for details about each field.</p>
 
 
 <table>
@@ -584,9 +584,9 @@
 
 
 
- Country code the device is to switch to.
- These values are populated by the wlantap driver and should not be specified manually.
- See also phy.fidl SetCountryRequest/Response.
+<p>Country code the device is to switch to.
+These values are populated by the wlantap driver and should not be specified manually.
+See also phy.fidl SetCountryRequest/Response.</p>
 
 
 <table>

@@ -321,7 +321,7 @@ Type: <code>int8</code>
                     <code>16384</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td> Max log bytes per call to a listener
+            <td><p>Max log bytes per call to a listener</p>
 </td>
         </tr>
     

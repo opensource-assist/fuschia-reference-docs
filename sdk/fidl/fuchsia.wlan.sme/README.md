@@ -423,7 +423,7 @@
 
 
 
- Empty struct used as credential value for open networks.
+<p>Empty struct used as credential value for open networks.</p>
 
 
 <table>
@@ -560,7 +560,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#11)*
 
- Security protection which should mirror the Protection enum defined in wlan lib common
+<p>Security protection which should mirror the Protection enum defined in wlan lib common</p>
 
 
 <table>
@@ -769,7 +769,7 @@ Type: <code>uint32</code>
 ### Credential {#Credential}
 *Defined in [fuchsia.wlan.sme/sme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/sme.fidl#86)*
 
- Information required to connect to a protected network.
+<p>Information required to connect to a protected network.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -777,21 +777,21 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Empty'>Empty</a></code>
             </td>
-            <td> The network does not use credentials (open networks).
+            <td><p>The network does not use credentials (open networks).</p>
 </td>
         </tr><tr>
             <td><code>password</code></td>
             <td>
                 <code>vector&lt;uint8&gt;</code>
             </td>
-            <td> Plaintext password (handled as binary data).
+            <td><p>Plaintext password (handled as binary data).</p>
 </td>
         </tr><tr>
             <td><code>psk</code></td>
             <td>
                 <code>vector&lt;uint8&gt;</code>
             </td>
-            <td> Hash representation of the network passphrase (handled as binary data).
+            <td><p>Hash representation of the network passphrase (handled as binary data).</p>
 </td>
         </tr></table>
 

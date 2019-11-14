@@ -8,26 +8,24 @@
 ## PrototypeAccountTransferControl {#PrototypeAccountTransferControl}
 *Defined in [fuchsia.identity.prototype/account_transfer_prototype.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_transfer_prototype.fidl#17)*
 
- A temporary control interface exposed by Account Manager for prototyping.
- Once the functionality is ready to be brought out of prototype stage this
- protocol will be removed and its methods will be moved to the
- AccountManager interface.  This interface is intended only for use by
- development tools to manually initiate an account transfer, and should
- generally not be used.
+<p>A temporary control interface exposed by Account Manager for prototyping.
+Once the functionality is ready to be brought out of prototype stage this
+protocol will be removed and its methods will be moved to the
+AccountManager interface.  This interface is intended only for use by
+development tools to manually initiate an account transfer, and should
+generally not be used.</p>
 
 ### TransferAccount {#TransferAccount}
 
- Provisions an account on the current device onto another device.
-
- `account_id` The local id of the account to transfer.
- `target_device` The device on which the account should be provisioned,
-                 identified using an Overnet NodeId.
- `target_lifetime` The lifetime the account should have on the target
-                   device
-
- Returns successfully if the account is provisioned on the remote device
- successfully.  Fails with an UNSUPPORTED_OPERATION error if the account
- is already present on the remote device.
+<p>Provisions an account on the current device onto another device.</p>
+<p><code>account_id</code> The local id of the account to transfer.
+<code>target_device</code> The device on which the account should be provisioned,
+identified using an Overnet NodeId.
+<code>target_lifetime</code> The lifetime the account should have on the target
+device</p>
+<p>Returns successfully if the account is provisioned on the remote device
+successfully.  Fails with an UNSUPPORTED_OPERATION error if the account
+is already present on the remote device.</p>
 
 #### Request
 <table>

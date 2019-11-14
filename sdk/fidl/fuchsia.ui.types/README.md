@@ -12,9 +12,9 @@
 
 
 
- Represents a color. Interfaces that use this struct should document whether
- or not the floats have been premultiplied by alpha. Range per channel is
- usually between 0.0 and 1.0.
+<p>Represents a color. Interfaces that use this struct should document whether
+or not the floats have been premultiplied by alpha. Range per channel is
+usually between 0.0 and 1.0.</p>
 
 
 <table>
@@ -54,8 +54,8 @@
 
 
 
- Represents a color without alpha channel. Range per channel is usually
- between 0.0 and 1.0.
+<p>Represents a color without alpha channel. Range per channel is usually
+between 0.0 and 1.0.</p>
 
 
 <table>

@@ -11,18 +11,26 @@
 
 ### AddSelector {#AddSelector}
 
- Adds a [fuchsia.diagnostics.inspect/ReaderSelector] to the Inspect instance,
- which will be used when determining which Inspect data to parse and return.
- + request `selector` a [fuchsia.diagnostics.inspect/ReaderSelector]
-   defining a specific component-hierarchy and inspect-tree pattern
-   of interest to the client.
- * error a [fuchsia.diagnostics.inspect/ReaderError]
-   value indicating how the call failed.
-   - `UNIMPLEMENTED_FORMAT` means that a selector whose format is
-     not yet supported was provided.
-
-   - `INVALID_SELECTOR` means that a selector which had an invalid
-     structure was passed in and failed verficiation.
+<p>Adds a [fuchsia.diagnostics.inspect/ReaderSelector] to the Inspect instance,
+which will be used when determining which Inspect data to parse and return.
++ request <code>selector</code> a [fuchsia.diagnostics.inspect/ReaderSelector]
+defining a specific component-hierarchy and inspect-tree pattern
+of interest to the client.</p>
+<ul>
+<li>error a [fuchsia.diagnostics.inspect/ReaderError]
+value indicating how the call failed.
+<ul>
+<li>
+<p><code>UNIMPLEMENTED_FORMAT</code> means that a selector whose format is
+not yet supported was provided.</p>
+</li>
+<li>
+<p><code>INVALID_SELECTOR</code> means that a selector which had an invalid
+structure was passed in and failed verficiation.</p>
+</li>
+</ul>
+</li>
+</ul>
 
 #### Request
 <table>
@@ -47,7 +55,7 @@
 
 ### ClearSelectors {#ClearSelectors}
 
- Removes all previously added ReaderSelectors from the Inspect instance.
+<p>Removes all previously added ReaderSelectors from the Inspect instance.</p>
 
 #### Request
 <table>
@@ -58,24 +66,31 @@
 
 ### Format {#Format}
 
- Parses the inspect data of the component hierarchy into a format
- specified by the [fuchsia.diagnostics.inspect/FormatSettings] struct,
- dump that formatted string to a VMO, and return a buffer to the VMO.
-
- The inspect data which is parsed is defined both by the static
- configuration of the service and the ReaderSelectors which are
- currently added to the instance. If no added ReaderSelectors
- have been added to the current instance, the default behavior
- is to parse all Inspect data that the instance has access to.
-
- + request `settings` the `fuchsia.diagnostics.inspect/FormatSettings` that
-   specifies the format of the read Inspect data.
- - response `inspect_data_result` the `fuchsia.mem/Buffer` which contains
-   the formatted inspect data.
- * error a [fuchsia.diagnostics.inspect/ReaderError]
-   value indicating how the call failed.
-   - `IO` means that parsing the Inspect VMO or writing the formatted data
-      failed.
+<p>Parses the inspect data of the component hierarchy into a format
+specified by the [fuchsia.diagnostics.inspect/FormatSettings] struct,
+dump that formatted string to a VMO, and return a buffer to the VMO.</p>
+<p>The inspect data which is parsed is defined both by the static
+configuration of the service and the ReaderSelectors which are
+currently added to the instance. If no added ReaderSelectors
+have been added to the current instance, the default behavior
+is to parse all Inspect data that the instance has access to.</p>
+<ul>
+<li>request <code>settings</code> the <code>fuchsia.diagnostics.inspect/FormatSettings</code> that
+specifies the format of the read Inspect data.</li>
+</ul>
+<ul>
+<li>response <code>inspect_data_result</code> the <code>fuchsia.mem/Buffer</code> which contains
+the formatted inspect data.</li>
+</ul>
+<ul>
+<li>error a [fuchsia.diagnostics.inspect/ReaderError]
+value indicating how the call failed.
+<ul>
+<li><code>IO</code> means that parsing the Inspect VMO or writing the formatted data
+failed.</li>
+</ul>
+</li>
+</ul>
 
 #### Request
 <table>
@@ -172,8 +187,8 @@
 
 
 
- Structured selector containing all required information for the
- Inspect service to provide specific views into inspect data.
+<p>Structured selector containing all required information for the
+Inspect service to provide specific views into inspect data.</p>
 
 
 <table>
@@ -203,8 +218,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.diagnostics.inspect/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics.inspect/inspect.fidl#34)*
 
- Enums describing the potential fail states
- of the reader service.
+<p>Enums describing the potential fail states
+of the reader service.</p>
 
 
 <table>
@@ -249,10 +264,10 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.diagnostics.inspect/selector.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics.inspect/selector.fidl#45)*
 
- TreeSelector represents a selection request on a nested structure where each
- nested node has properties that can be retrieved. The node_path specifies which
- nodes we search through, and the target_properties specify which properties to
- look for on the matched nodes.
+<p>TreeSelector represents a selection request on a nested structure where each
+nested node has properties that can be retrieved. The node_path specifies which
+nodes we search through, and the target_properties specify which properties to
+look for on the matched nodes.</p>
 
 
 <table>
@@ -322,8 +337,8 @@ Type: <code>uint32</code>
 ### DisplaySettings {#DisplaySettings}
 *Defined in [fuchsia.diagnostics.inspect/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics.inspect/inspect.fidl#22)*
 
- Criteria for how to format
- the selected Inspect data.
+<p>Criteria for how to format
+the selected Inspect data.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -343,7 +358,7 @@ Type: <code>uint32</code>
 ### ReaderSelector {#ReaderSelector}
 *Defined in [fuchsia.diagnostics.inspect/inspect.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics.inspect/inspect.fidl#44)*
 
- Selection criteria for data returned by the Reader service.
+<p>Selection criteria for data returned by the Reader service.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -351,23 +366,23 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Selector'>Selector</a></code>
             </td>
-            <td> The reader applies the selection defined
- by structured_selector to all possible inspect data that it
- has access to, returning a potential subset, but not superset,
- of what would be returned by selection using only the system
- configuration.
+            <td><p>The reader applies the selection defined
+by structured_selector to all possible inspect data that it
+has access to, returning a potential subset, but not superset,
+of what would be returned by selection using only the system
+configuration.</p>
 </td>
         </tr><tr>
             <td><code>string_selector</code></td>
             <td>
                 <code>string[1024]</code>
             </td>
-            <td> The reader parses the string-based selector
- string_selector into a structured selector and then will apply
- the selection defined by structured_selector to all possible inspect
- data that it has access to, returning a potential subset, but
- not a superset of what would be returned by selection using only the
- system configuration.
+            <td><p>The reader parses the string-based selector
+string_selector into a structured selector and then will apply
+the selection defined by structured_selector to all possible inspect
+data that it has access to, returning a potential subset, but
+not a superset of what would be returned by selection using only the
+system configuration.</p>
 </td>
         </tr></table>
 

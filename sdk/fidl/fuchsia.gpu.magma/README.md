@@ -11,7 +11,7 @@
 
 ### Query {#Query}
 
- Get a parameter.
+<p>Get a parameter.</p>
 
 #### Request
 <table>
@@ -36,7 +36,7 @@
 
 ### QueryReturnsBuffer {#QueryReturnsBuffer}
 
- Get a parameter and store it in a new vmo.
+<p>Get a parameter and store it in a new vmo.</p>
 
 #### Request
 <table>
@@ -61,7 +61,7 @@
 
 ### Connect {#Connect}
 
- Get the magma ipc channels.
+<p>Get the magma ipc channels.</p>
 
 #### Request
 <table>
@@ -91,7 +91,7 @@
 
 ### DumpState {#DumpState}
 
- Dumps driver and hardware state.
+<p>Dumps driver and hardware state.</p>
 
 #### Request
 <table>
@@ -107,7 +107,7 @@
 
 ### TestRestart {#TestRestart}
 
- For testing only.
+<p>For testing only.</p>
 
 #### Request
 <table>
@@ -122,7 +122,7 @@
 
 ### ImportBuffer {#ImportBuffer}
 
- Imports a buffer for use in the system driver.
+<p>Imports a buffer for use in the system driver.</p>
 
 #### Request
 <table>
@@ -138,7 +138,7 @@
 
 ### ReleaseBuffer {#ReleaseBuffer}
 
- Destroys the buffer with `buffer_id` within this connection.
+<p>Destroys the buffer with <code>buffer_id</code> within this connection.</p>
 
 #### Request
 <table>
@@ -154,7 +154,7 @@
 
 ### ImportObject {#ImportObject}
 
- Imports an object for use in the system driver.
+<p>Imports an object for use in the system driver.</p>
 
 #### Request
 <table>
@@ -175,7 +175,7 @@
 
 ### ReleaseObject {#ReleaseObject}
 
- Destroys the object with `object_id` within this connection.
+<p>Destroys the object with <code>object_id</code> within this connection.</p>
 
 #### Request
 <table>
@@ -196,7 +196,7 @@
 
 ### CreateContext {#CreateContext}
 
- Creates context `context_id`.
+<p>Creates context <code>context_id</code>.</p>
 
 #### Request
 <table>
@@ -212,7 +212,7 @@
 
 ### DestroyContext {#DestroyContext}
 
- Destroys context `context_id`.
+<p>Destroys context <code>context_id</code>.</p>
 
 #### Request
 <table>
@@ -228,7 +228,7 @@
 
 ### ExecuteCommandBufferWithResources {#ExecuteCommandBufferWithResources}
 
- Submits a command buffer for execution on the GPU, with associated resources.
+<p>Submits a command buffer for execution on the GPU, with associated resources.</p>
 
 #### Request
 <table>
@@ -264,7 +264,7 @@
 
 ### ExecuteImmediateCommands {#ExecuteImmediateCommands}
 
- Submits a series of commands for execution on the GPU without using a command buffer.
+<p>Submits a series of commands for execution on the GPU without using a command buffer.</p>
 
 #### Request
 <table>
@@ -290,7 +290,7 @@
 
 ### GetError {#GetError}
 
- Retrieve the current magma error status.
+<p>Retrieve the current magma error status.</p>
 
 #### Request
 <table>
@@ -310,9 +310,9 @@
 
 ### MapBufferGpu {#MapBufferGpu}
 
- Maps `page_count` pages of `buffer` from `page_offset` onto the GPU in the connection's
- address space at `gpu_va`.  `flags` is a set of flags from `MAGMA_GPU_MAP_FLAGS` that
- specify how the GPU can access the buffer.
+<p>Maps <code>page_count</code> pages of <code>buffer</code> from <code>page_offset</code> onto the GPU in the connection's
+address space at <code>gpu_va</code>.  <code>flags</code> is a set of flags from <code>MAGMA_GPU_MAP_FLAGS</code> that
+specify how the GPU can access the buffer.</p>
 
 #### Request
 <table>
@@ -348,8 +348,8 @@
 
 ### UnmapBufferGpu {#UnmapBufferGpu}
 
- Releases the mapping at `gpu_va` from the GPU.
- Buffers will also be implicitly unmapped when released.
+<p>Releases the mapping at <code>gpu_va</code> from the GPU.
+Buffers will also be implicitly unmapped when released.</p>
 
 #### Request
 <table>
@@ -370,8 +370,8 @@
 
 ### CommitBuffer {#CommitBuffer}
 
- Ensures that `page_count` pages starting at `page_offset` from the beginning of the
- buffer are backed by physical memory.
+<p>Ensures that <code>page_count</code> pages starting at <code>page_offset</code> from the beginning of the
+buffer are backed by physical memory.</p>
 
 #### Request
 <table>
@@ -477,7 +477,7 @@
                     <code>2048</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Primary declarations.
+            <td><p>Primary declarations.</p>
 </td>
         </tr>
     

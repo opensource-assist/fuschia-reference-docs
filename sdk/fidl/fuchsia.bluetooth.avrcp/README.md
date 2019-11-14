@@ -11,10 +11,10 @@
 
 ### GetControllerForTarget {#GetControllerForTarget}
 
- Returns a controller client to a remote target (TG) service at the peer specified by
- `peer_id`.
- TODO (BT-305): change peer_id to fuchsia.bluetooth.PeerId type after BrEdr profile service
- switches.
+<p>Returns a controller client to a remote target (TG) service at the peer specified by
+<code>peer_id</code>.
+TODO (BT-305): change peer_id to fuchsia.bluetooth.PeerId type after BrEdr profile service
+switches.</p>
 
 #### Request
 <table>
@@ -44,10 +44,10 @@
 
 ### SetAbsoluteVolumeHandler {#SetAbsoluteVolumeHandler}
 
- Set the absolute volume handler for the peer specified at `peer_id` to handle absolute
- volume commands and notifications received from the peer. Only one handler may be set with
- a peer at at time. If a second handler is registered it will be dropped and an error will
- be returned.
+<p>Set the absolute volume handler for the peer specified at <code>peer_id</code> to handle absolute
+volume commands and notifications received from the peer. Only one handler may be set with
+a peer at at time. If a second handler is registered it will be dropped and an error will
+be returned.</p>
 
 #### Request
 <table>
@@ -78,16 +78,16 @@
 ## AbsoluteVolumeHandler {#AbsoluteVolumeHandler}
 *Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#92)*
 
- Handler for absolute volume requests from a remote peer. See AVRCP v 1.6.2 section 6.13.2.
- Absolute volume is represented as a percentage using one byte with the most significant bit
- reserved. 0% is represented as 0x0 and 100% as 0x7f. Volume should scaled between the
- two values.
+<p>Handler for absolute volume requests from a remote peer. See AVRCP v 1.6.2 section 6.13.2.
+Absolute volume is represented as a percentage using one byte with the most significant bit
+reserved. 0% is represented as 0x0 and 100% as 0x7f. Volume should scaled between the
+two values.</p>
 
 ### SetVolume {#SetVolume}
 
- Requests that the absolute volume of the player be changed.
- `requested_volume` is the requested volume by the peer.
- Returns the actual volume set locally by the handler.
+<p>Requests that the absolute volume of the player be changed.
+<code>requested_volume</code> is the requested volume by the peer.
+Returns the actual volume set locally by the handler.</p>
 
 #### Request
 <table>
@@ -112,9 +112,9 @@
 
 ### OnVolumeChanged {#OnVolumeChanged}
 
- Returns latest volume of the handler to the AVRCP service. This function should return
- immediately on the first call and if the volume has changed since the last call to this
- function, otherwise it should only return when the volume has been changed.
+<p>Returns latest volume of the handler to the AVRCP service. This function should return
+immediately on the first call and if the volume has changed since the last call to this
+function, otherwise it should only return when the volume has been changed.</p>
 
 #### Request
 <table>
@@ -134,7 +134,7 @@
 
 ### GetCurrentVolume {#GetCurrentVolume}
 
- Returns the current volume immediately.
+<p>Returns the current volume immediately.</p>
 
 #### Request
 <table>
@@ -155,19 +155,26 @@
 ## Controller {#Controller}
 *Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#111)*
 
- Client wrapper for local controller (CT) -> remote target (TG) AVCTP connections between devices.
- A client is high level construct and does not represent a connection with a device.
- Connections are internally managed and may be shared by multiple clients.
- The actual connection may be opened on-demand after any command here is called.
+<p>Client wrapper for local controller (CT) -&gt; remote target (TG) AVCTP connections between devices.
+A client is high level construct and does not represent a connection with a device.
+Connections are internally managed and may be shared by multiple clients.
+The actual connection may be opened on-demand after any command here is called.</p>
 
 ### GetPlayerApplicationSettings {#GetPlayerApplicationSettings}
 
- Returns the remote PlayerApplicationSettings.
+<p>Returns currently set player application setting values for the <code>attribute_ids</code>.
+If no <code>attribute_ids</code> are provided, this method will query the TG for all valid
+attribute ID's, and return the currently set player application setting values.</p>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
-    </table>
+    <tr>
+            <td><code>attribute_ids</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#PlayerApplicationSettingAttributeId'>PlayerApplicationSettingAttributeId</a>&gt;[131]</code>
+            </td>
+        </tr></table>
 
 
 #### Response
@@ -180,11 +187,41 @@
             </td>
         </tr></table>
 
+### SetPlayerApplicationSettings {#SetPlayerApplicationSettings}
+
+<p>Sets the player application settings specified by <code>requested_settings</code>. Only
+settings specified in the input <code>requested_settings</code> will be overwritten.
+Returns the actual settings that were set.
+Settings provided in the <code>requested_settings</code> that are unsupported or unknown
+will not be set; the returned <code>set_settings</code> will include only the settings
+that were successfully set on the remote target.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requested_settings</code></td>
+            <td>
+                <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_SetPlayerApplicationSettings_Result'>Controller_SetPlayerApplicationSettings_Result</a></code>
+            </td>
+        </tr></table>
+
 ### GetMediaAttributes {#GetMediaAttributes}
 
- Returns the currently playing media attributes.
- May send either the GetElementAttributes or GetItemAttributes command depending on what
- is supported.
+<p>Returns the currently playing media attributes.
+May send either the GetElementAttributes or GetItemAttributes command depending on what
+is supported.</p>
 
 #### Request
 <table>
@@ -204,7 +241,7 @@
 
 ### GetPlayStatus {#GetPlayStatus}
 
- Returns the status of the currently playing media.
+<p>Returns the status of the currently playing media.</p>
 
 #### Request
 <table>
@@ -224,9 +261,9 @@
 
 ### SetAbsoluteVolume {#SetAbsoluteVolume}
 
- Request the absolute volume on the peer be changed. Returns the actual volume set by the
- peer. Values can range from 0x00 to 0x7F (with 100% volume being 0x7F). You may not get a
- volume changed notification event from the remote peer as result of changing this.
+<p>Request the absolute volume on the peer be changed. Returns the actual volume set by the
+peer. Values can range from 0x00 to 0x7F (with 100% volume being 0x7F). You may not get a
+volume changed notification event from the remote peer as result of changing this.</p>
 
 #### Request
 <table>
@@ -251,7 +288,7 @@
 
 ### InformBatteryStatus {#InformBatteryStatus}
 
- Inform target of the controller's battery level.
+<p>Inform target of the controller's battery level.</p>
 
 #### Request
 <table>
@@ -276,15 +313,14 @@
 
 ### SetNotificationFilter {#SetNotificationFilter}
 
- Filters notifications that will be received with <a class='link' href='#OnNotification'>OnNotification</a>. Not all notifications
- are supported by all peers. Resetting the notification filter may trigger all requested
- notification types to post their current value to <a class='link' href='#OnNotification'>OnNotification</a> immediately.
-
- The `position_change_interval` argument is used to set the interval in seconds that the
- controller client would like to be notified of `TRACK_POS_CHANGED` events.
- `position_change_interval` is ignored if `TRACK_POS` is not set. The position change interval
- is best effort and not a guarantee and events may arrive more frequently or less frequently
- than requested.
+<p>Filters notifications that will be received with <a class='link' href='#OnNotification'>OnNotification</a>. Not all notifications
+are supported by all peers. Resetting the notification filter may trigger all requested
+notification types to post their current value to <a class='link' href='#OnNotification'>OnNotification</a> immediately.</p>
+<p>The <code>position_change_interval</code> argument is used to set the interval in seconds that the
+controller client would like to be notified of <code>TRACK_POS_CHANGED</code> events.
+<code>position_change_interval</code> is ignored if <code>TRACK_POS</code> is not set. The position change interval
+is best effort and not a guarantee and events may arrive more frequently or less frequently
+than requested.</p>
 
 #### Request
 <table>
@@ -305,14 +341,14 @@
 
 ### OnNotification {#OnNotification}
 
- Incoming notification events from the target peer. `timestamp` is monotonic wall time
- of when the event was received by the peer.
- You must call <a class='link' href='#NotifyNotificationHandled'>NotifyNotificationHandled</a> after receving a notification event to
- acknowledge delivery. Multiple non-discrete events may be combined into a single
- notification if acknowledged after a new event arrives from a peer.
- Call <a class='link' href='#SetNotificationFilter'>SetNotificationFilter</a> to set the notifications that are requested of the peer.
- All notifications are discrete state changes except volume change and position change
- notifications.
+<p>Incoming notification events from the target peer. <code>timestamp</code> is monotonic wall time
+of when the event was received by the peer.
+You must call <a class='link' href='#NotifyNotificationHandled'>NotifyNotificationHandled</a> after receving a notification event to
+acknowledge delivery. Multiple non-discrete events may be combined into a single
+notification if acknowledged after a new event arrives from a peer.
+Call <a class='link' href='#SetNotificationFilter'>SetNotificationFilter</a> to set the notifications that are requested of the peer.
+All notifications are discrete state changes except volume change and position change
+notifications.</p>
 
 
 
@@ -333,7 +369,7 @@
 
 ### NotifyNotificationHandled {#NotifyNotificationHandled}
 
- Call to acknowledge handling of a notification from <a class='link' href='#OnNotification'>OnNotification</a>.
+<p>Call to acknowledge handling of a notification from <a class='link' href='#OnNotification'>OnNotification</a>.</p>
 
 #### Request
 <table>
@@ -344,7 +380,7 @@
 
 ### SetAddressedPlayer {#SetAddressedPlayer}
 
- Changes the addressed `player_id` on the target when multiple are supported.
+<p>Changes the addressed <code>player_id</code> on the target when multiple are supported.</p>
 
 #### Request
 <table>
@@ -369,7 +405,7 @@
 
 ### SendCommand {#SendCommand}
 
- Send an AV\C passthrough key command. Sends both a key down and key up event.
+<p>Send an AV\C passthrough key command. Sends both a key down and key up event.</p>
 
 #### Request
 <table>
@@ -427,7 +463,25 @@
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>settings</code></td>
+            <td><code>current_settings</code></td>
+            <td>
+                <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Controller_SetPlayerApplicationSettings_Response {#Controller_SetPlayerApplicationSettings_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>set_settings</code></td>
             <td>
                 <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
             </td>
@@ -523,40 +577,26 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
-### PlayerApplicationSettings {#PlayerApplicationSettings}
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#101)*
+### CustomAttributeValue {#CustomAttributeValue}
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#128)*
 
 
 
- Defined by AVRCP 1.6.2 Appendix F (player application settings).
+<p>The custom attribute value and its description.</p>
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>equalizer</code></td>
+            <td><code>description</code></td>
             <td>
-                <code>bool</code>
+                <code>string[255]</code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
-            <td><code>repeat_status_mode</code></td>
+            <td><code>value</code></td>
             <td>
-                <code><a class='link' href='#RepeatStatusMode'>RepeatStatusMode</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>shuffle_mode</code></td>
-            <td>
-                <code><a class='link' href='#ShuffleMode'>ShuffleMode</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>scan_mode</code></td>
-            <td>
-                <code><a class='link' href='#ScanMode'>ScanMode</a></code>
+                <code>uint8</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -564,11 +604,11 @@
 </table>
 
 ### MediaAttributes {#MediaAttributes}
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#109)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#169)*
 
 
 
- Defined by AVRCP 1.6.2 Appendix E (media attributes).
+<p>Defined by AVRCP 1.6.2 Appendix E (media attributes).</p>
 
 
 <table>
@@ -633,7 +673,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#12)*
 
- Status codes for commands sent as the controller
+<p>Status codes for commands sent as the controller</p>
 
 
 <table>
@@ -688,8 +728,8 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#28)*
 
- Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification) and Appendix H.
- Style note: named exactly as they are in the specification with the "EVENT_" prefix.
+<p>Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification) and Appendix H.
+Style note: named exactly as they are in the specification with the &quot;EVENT_&quot; prefix.</p>
 
 
 <table>
@@ -752,8 +792,8 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#46)*
 
- Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
- Format for `EVENT_SYSTEM_STATUS_CHANGED`.
+<p>Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
+Format for <code>EVENT_SYSTEM_STATUS_CHANGED</code>.</p>
 
 
 <table>
@@ -776,8 +816,8 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#54)*
 
- Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
- Format for `EVENT_PLAYBACK_STATUS_CHANGED`.
+<p>Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
+Format for <code>EVENT_PLAYBACK_STATUS_CHANGED</code>.</p>
 
 
 <table>
@@ -812,9 +852,9 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#66)*
 
- Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
- Format for `EVENT_BATT_STATUS_CHANGED`.
- Same encoding also defined by 6.5.8 (InformBatteryStatusOfCT).
+<p>Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
+Format for <code>EVENT_BATT_STATUS_CHANGED</code>.
+Same encoding also defined by 6.5.8 (InformBatteryStatusOfCT).</p>
 
 
 <table>
@@ -849,7 +889,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#76)*
 
- Defined by AVRCP 1.6.2 Appendix F (player application settings).
+<p>Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
 
 
 <table>
@@ -880,7 +920,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#85)*
 
- Defined by AVRCP 1.6.2 Appendix F (player application settings).
+<p>Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
 
 
 <table>
@@ -907,7 +947,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#93)*
 
- Defined by AVRCP 1.6.2 Appendix F (player application settings).
+<p>Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
 
 
 <table>
@@ -929,12 +969,59 @@ Type: <code>uint8</code>
             <td></td>
         </tr></table>
 
+### Equalizer {#Equalizer}
+Type: <code>uint8</code>
+
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#101)*
+
+<p>Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>OFF</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>ON</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr></table>
+
+### PlayerApplicationSettingAttributeId {#PlayerApplicationSettingAttributeId}
+Type: <code>uint8</code>
+
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#120)*
+
+<p>0x80 - 0xFF is reserved for custom player application settings.
+Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>EQUALIZER</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>REPEAT_STATUS_MODE</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SHUFFLE_MODE</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>SCAN_MODE</code></td>
+            <td><code>4</code></td>
+            <td></td>
+        </tr></table>
+
 ### AvcPanelCommand {#AvcPanelCommand}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#137)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#197)*
 
- Defined by AV\C Panel specification.
+<p>Defined by AV\C Panel specification.</p>
 
 
 <table>
@@ -1185,7 +1272,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#59)*
 
- Event data from incoming target notifications.
+<p>Event data from incoming target notifications.</p>
 
 
 <table>
@@ -1196,7 +1283,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#PlaybackStatus'>PlaybackStatus</a></code>
             </td>
-            <td> `EVENT_PLAYBACK_STATUS_CHANGED` event data
+            <td><p><code>EVENT_PLAYBACK_STATUS_CHANGED</code> event data</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1204,7 +1291,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> `EVENT_TRACK_CHANGED` event data
+            <td><p><code>EVENT_TRACK_CHANGED</code> event data</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1212,7 +1299,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint32</code>
             </td>
-            <td> `EVENT_TRACK_POS_CHANGED` event data
+            <td><p><code>EVENT_TRACK_POS_CHANGED</code> event data</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1220,7 +1307,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#BatteryStatus'>BatteryStatus</a></code>
             </td>
-            <td> `EVENT_BATT_STATUS_CHANGED` event data
+            <td><p><code>EVENT_BATT_STATUS_CHANGED</code> event data</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -1228,7 +1315,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#SystemStatus'>SystemStatus</a></code>
             </td>
-            <td> `EVENT_SYSTEM_STATUS_CHANGED` event data
+            <td><p><code>EVENT_SYSTEM_STATUS_CHANGED</code> event data</p>
 </td>
         </tr><tr>
             <td>6</td>
@@ -1236,7 +1323,7 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
             </td>
-            <td> `EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED` event data
+            <td><p><code>EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED</code> event data</p>
 </td>
         </tr><tr>
             <td>7</td>
@@ -1244,7 +1331,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint16</code>
             </td>
-            <td> `EVENT_ADDRESSED_PLAYER_CHANGED` event data
+            <td><p><code>EVENT_ADDRESSED_PLAYER_CHANGED</code> event data</p>
 </td>
         </tr><tr>
             <td>8</td>
@@ -1252,7 +1339,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint8</code>
             </td>
-            <td> `EVENT_VOLUME_CHANGED` event data
+            <td><p><code>EVENT_VOLUME_CHANGED</code> event data</p>
 </td>
         </tr><tr>
             <td>9</td>
@@ -1260,17 +1347,115 @@ Type: <code>uint8</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> `CONNECTION_CHANGE` event data
+            <td><p><code>CONNECTION_CHANGE</code> event data</p>
+</td>
+        </tr></table>
+
+### CustomPlayerApplicationSetting {#CustomPlayerApplicationSetting}
+
+
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#135)*
+
+<p>Specification allowed player application settings.
+Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>attribute_id</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td><p>The attribute id for the custom setting. Must be between 0x80-0xFF, as
+defined in AVRCP 1.6.2 Appendix F.</p>
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>attribute_name</code></td>
+            <td>
+                <code>string[255]</code>
+            </td>
+            <td><p>The string descriptor of the custom attribute.</p>
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>possible_values</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#CustomAttributeValue'>CustomAttributeValue</a>&gt;[255]</code>
+            </td>
+            <td><p>The possible values the custom attribute can take.</p>
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>current_value</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td><p>The current value that the custom setting is set to.</p>
+</td>
+        </tr></table>
+
+### PlayerApplicationSettings {#PlayerApplicationSettings}
+
+
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#151)*
+
+<p>Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>equalizer</code></td>
+            <td>
+                <code><a class='link' href='#Equalizer'>Equalizer</a></code>
+            </td>
+            <td><p>The equalizer status of the remote target.</p>
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>repeat_status_mode</code></td>
+            <td>
+                <code><a class='link' href='#RepeatStatusMode'>RepeatStatusMode</a></code>
+            </td>
+            <td><p>The repeat mode status of the remote target.</p>
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>shuffle_mode</code></td>
+            <td>
+                <code><a class='link' href='#ShuffleMode'>ShuffleMode</a></code>
+            </td>
+            <td><p>The shuffle mode status of the remote target.</p>
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>scan_mode</code></td>
+            <td>
+                <code><a class='link' href='#ScanMode'>ScanMode</a></code>
+            </td>
+            <td><p>The scan mode status of the remote target.</p>
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>custom_settings</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#CustomPlayerApplicationSetting'>CustomPlayerApplicationSetting</a>&gt;[127]</code>
+            </td>
+            <td><p>Custom settings that are specification allowed.</p>
 </td>
         </tr></table>
 
 ### PlayStatus {#PlayStatus}
 
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#122)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#182)*
 
- Status of currently playing media on the TG.
- Defined by AVRCP 1.6.2 section 6.7.1, Table 6.29.
+<p>Status of currently playing media on the TG.
+Defined by AVRCP 1.6.2 section 6.7.1, Table 6.29.</p>
 
 
 <table>
@@ -1281,8 +1466,8 @@ Type: <code>uint8</code>
             <td>
                 <code>uint32</code>
             </td>
-            <td> The total length of the currently playing media, in milliseconds.
- Optional, if the TG does not support song length.
+            <td><p>The total length of the currently playing media, in milliseconds.
+Optional, if the TG does not support song length.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1290,8 +1475,8 @@ Type: <code>uint8</code>
             <td>
                 <code>uint32</code>
             </td>
-            <td> The current position of the playing media, in milliseconds elapsed.
- Optional, if the TG does not support song position.
+            <td><p>The current position of the playing media, in milliseconds elapsed.
+Optional, if the TG does not support song position.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1299,8 +1484,8 @@ Type: <code>uint8</code>
             <td>
                 <code><a class='link' href='#PlaybackStatus'>PlaybackStatus</a></code>
             </td>
-            <td> The playback status of the currently playing media.
- Mandatory, the TG must respond with a PlaybackStatus.
+            <td><p>The playback status of the currently playing media.
+Mandatory, the TG must respond with a PlaybackStatus.</p>
 </td>
         </tr></table>
 
@@ -1355,6 +1540,25 @@ Type: <code>uint8</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Controller_GetPlayerApplicationSettings_Response'>Controller_GetPlayerApplicationSettings_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#ControllerError'>ControllerError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Controller_SetPlayerApplicationSettings_Result {#Controller_SetPlayerApplicationSettings_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_SetPlayerApplicationSettings_Response'>Controller_SetPlayerApplicationSettings_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1493,49 +1697,85 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td>PLAYBACK_STATUS</td>
             <td>1</td>
-            <td> AVRCP `EVENT_PLAYBACK_STATUS_CHANGED` Notification
+            <td><p>AVRCP <code>EVENT_PLAYBACK_STATUS_CHANGED</code> Notification</p>
 </td>
         </tr><tr>
             <td>TRACK</td>
             <td>2</td>
-            <td> AVRCP `EVENT_TRACK_CHANGED` Notification
+            <td><p>AVRCP <code>EVENT_TRACK_CHANGED</code> Notification</p>
 </td>
         </tr><tr>
             <td>TRACK_POS</td>
             <td>4</td>
-            <td> AVRCP `EVENT_TRACK_POS_CHANGED` Notification
+            <td><p>AVRCP <code>EVENT_TRACK_POS_CHANGED</code> Notification</p>
 </td>
         </tr><tr>
             <td>BATT_STATUS</td>
             <td>8</td>
-            <td> AVRCP `EVENT_BATT_STATUS_CHANGED` Notification
+            <td><p>AVRCP <code>EVENT_BATT_STATUS_CHANGED</code> Notification</p>
 </td>
         </tr><tr>
             <td>SYSTEM_STATUS</td>
             <td>16</td>
-            <td> AVRCP `EVENT_SYSTEM_STATUS_CHANGED` Notification
+            <td><p>AVRCP <code>EVENT_SYSTEM_STATUS_CHANGED</code> Notification</p>
 </td>
         </tr><tr>
             <td>PLAYER_APPLICATION_SETTINGS</td>
             <td>32</td>
-            <td> AVRCP `EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED` Notification
+            <td><p>AVRCP <code>EVENT_PLAYER_APPLICATION_SETTINGS_CHANGED</code> Notification</p>
 </td>
         </tr><tr>
             <td>ADDRESSED_PLAYER</td>
             <td>64</td>
-            <td> AVRCP `EVENT_ADDRESSED_PLAYER_CHANGED` Notification
+            <td><p>AVRCP <code>EVENT_ADDRESSED_PLAYER_CHANGED</code> Notification</p>
 </td>
         </tr><tr>
             <td>VOLUME</td>
             <td>128</td>
-            <td> AVRCP `EVENT_VOLUME_CHANGED` Notification
+            <td><p>AVRCP <code>EVENT_VOLUME_CHANGED</code> Notification</p>
 </td>
         </tr><tr>
             <td>CONNECTION</td>
             <td>65536</td>
-            <td> Internal connection change event.
+            <td><p>Internal connection change event.</p>
 </td>
         </tr></table>
 
 
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#108">MAX_CUSTOM_ATTRIBUTES</a></td>
+            <td>
+                    <code>127</code>
+                </td>
+                <td><code>uint64</code></td>
+            <td><p>The maximum number of custom attributes that can be used.
+Defined by AVRCP 1.6.2 Appendix F.</p>
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#112">MAX_ATTRIBUTE_VALUES</a></td>
+            <td>
+                    <code>255</code>
+                </td>
+                <td><code>uint64</code></td>
+            <td><p>The maximum number of possible values an attribute can take on.
+Defined by AVRCP 1.6.2 Sec 6.5.2</p>
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#116">MAX_ATTRIBUTES</a></td>
+            <td>
+                    <code>131</code>
+                </td>
+                <td><code>uint64</code></td>
+            <td><p>The total number of attributes that can be set. The custom attributes + the 4
+defined attributes, <code>PlayerApplicationSettingAttributeId</code>. 4 + 127 = 131.</p>
+</td>
+        </tr>
+    
+</table>
 

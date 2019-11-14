@@ -8,12 +8,12 @@
 ## RunListener {#RunListener}
 *Defined in [fuchsia.test/suite.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.test/suite.fidl#38)*
 
- Listener listens to results from |`Suite.Run`| request.
+<p>Listener listens to results from |<code>Suite.Run</code>| request.</p>
 
 ### OnTestCaseStarted {#OnTestCaseStarted}
 
- Indicates that an individual test case has started execution and provides
- the primary log stream used by this test case.
+<p>Indicates that an individual test case has started execution and provides
+the primary log stream used by this test case.</p>
 
 #### Request
 <table>
@@ -34,8 +34,8 @@
 
 ### OnTestCaseFinished {#OnTestCaseFinished}
 
- Indicates that an invididual test case has completed and outcome is
- available.
+<p>Indicates that an invididual test case has completed and outcome is
+available.</p>
 
 #### Request
 <table>
@@ -60,7 +60,7 @@
 
 ### GetTests {#GetTests}
 
- Enumerate the test cases available in this test suite.
+<p>Enumerate the test cases available in this test suite.</p>
 
 #### Request
 <table>
@@ -80,9 +80,9 @@
 
 ### Run {#Run}
 
- Run the specified test cases. Results are returned over the results
- channel. The Suite is expected to execute tests one at a time in the order
- specified. Closing |run_listener| marks end of this call.
+<p>Run the specified test cases. Results are returned over the results
+channel. The Suite is expected to execute tests one at a time in the order
+specified. Closing |run_listener| marks end of this call.</p>
 
 #### Request
 <table>
@@ -117,7 +117,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.test/suite.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.test/suite.fidl#17)*
 
- Defines the end state of a test case.
+<p>Defines the end state of a test case.</p>
 
 
 <table>
@@ -140,7 +140,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.test/suite.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.test/suite.fidl#11)*
 
- Description of a single test case.
+<p>Description of a single test case.</p>
 
 
 <table>
@@ -151,7 +151,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[512]</code>
             </td>
-            <td> Used to show human readable results.
+            <td><p>Used to show human readable results.</p>
 </td>
         </tr></table>
 
@@ -160,9 +160,9 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.test/suite.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.test/suite.fidl#27)*
 
- Represents the results of invoking a single test case.
- Should be named 'Result', but this interacts awkwardly with Rust's generated
- code.
+<p>Represents the results of invoking a single test case.
+Should be named 'Result', but this interacts awkwardly with Rust's generated
+code.</p>
 
 
 <table>
@@ -181,7 +181,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.test/suite.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.test/suite.fidl#49)*
 
- Specification of a test to run.
+<p>Specification of a test to run.</p>
 
 
 <table>
@@ -192,7 +192,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Case'>Case</a></code>
             </td>
-            <td> Test case to execute.
+            <td><p>Test case to execute.</p>
 </td>
         </tr></table>
 

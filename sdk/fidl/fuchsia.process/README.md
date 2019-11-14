@@ -8,28 +8,23 @@
 ## Launcher {#Launcher}
 *Defined in [fuchsia.process/launcher.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/launcher.fidl#118)*
 
- A low-level interface for launching processes.
-
- This interface is used for manually assembling a process. The caller supplies
- all the capabilities for the newly created process.
-
- That create processes typically use `fdio_spawn` or `fdio_spawn_etc` rather
- than using this interface directly. The `fdio_spawn` and `fdio_spawn_etc`
- functions are implemented using this interface.
-
- Debuggers and other clients that need to create processes in a suspended
- state often use this interface directly. These clients use the
- `CreateWithoutStarting` method to create the process without actually
- starting it.
+<p>A low-level interface for launching processes.</p>
+<p>This interface is used for manually assembling a process. The caller supplies
+all the capabilities for the newly created process.</p>
+<p>That create processes typically use <code>fdio_spawn</code> or <code>fdio_spawn_etc</code> rather
+than using this interface directly. The <code>fdio_spawn</code> and <code>fdio_spawn_etc</code>
+functions are implemented using this interface.</p>
+<p>Debuggers and other clients that need to create processes in a suspended
+state often use this interface directly. These clients use the
+<code>CreateWithoutStarting</code> method to create the process without actually
+starting it.</p>
 
 ### Launch {#Launch}
 
- Creates and starts the process described by `info`.
-
- After processing this message, the `Launcher` is reset to its initial
- state and is ready to launch another process.
-
- `process` is present if, and only if, `status` is `ZX_OK`.
+<p>Creates and starts the process described by <code>info</code>.</p>
+<p>After processing this message, the <code>Launcher</code> is reset to its initial
+state and is ready to launch another process.</p>
+<p><code>process</code> is present if, and only if, <code>status</code> is <code>ZX_OK</code>.</p>
 
 #### Request
 <table>
@@ -59,15 +54,12 @@
 
 ### CreateWithoutStarting {#CreateWithoutStarting}
 
- Creates the process described by `info` but does not start it.
-
- After processing this message, the `Launcher` is reset to its initial
- state and is ready to launch another process.
-
- The caller is responsible for calling `zx_process_start` using the data
- in `ProcessStartData` to actually start the process.
-
- `data` is present if, and only if, `status` is `ZX_OK`.
+<p>Creates the process described by <code>info</code> but does not start it.</p>
+<p>After processing this message, the <code>Launcher</code> is reset to its initial
+state and is ready to launch another process.</p>
+<p>The caller is responsible for calling <code>zx_process_start</code> using the data
+in <code>ProcessStartData</code> to actually start the process.</p>
+<p><code>data</code> is present if, and only if, <code>status</code> is <code>ZX_OK</code>.</p>
 
 #### Request
 <table>
@@ -97,9 +89,8 @@
 
 ### AddArgs {#AddArgs}
 
- Adds the given arguments to the command-line for the process.
-
- Calling this method multiple times concatenates the arguments.
+<p>Adds the given arguments to the command-line for the process.</p>
+<p>Calling this method multiple times concatenates the arguments.</p>
 
 #### Request
 <table>
@@ -115,9 +106,8 @@
 
 ### AddEnvirons {#AddEnvirons}
 
- Adds the given variables to the environment variables for the process.
-
- Calling this method multiple times concatenates the variables.
+<p>Adds the given variables to the environment variables for the process.</p>
+<p>Calling this method multiple times concatenates the variables.</p>
 
 #### Request
 <table>
@@ -133,13 +123,11 @@
 
 ### AddNames {#AddNames}
 
- Adds the given names to the namespace for the process.
-
- The paths in the namespace must be non-overlapping. See
- <https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/namespaces.md>
- for details.
-
- Calling this method multiple times concatenates the names.
+<p>Adds the given names to the namespace for the process.</p>
+<p>The paths in the namespace must be non-overlapping. See
+<a href="https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/namespaces.md">https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/namespaces.md</a>
+for details.</p>
+<p>Calling this method multiple times concatenates the names.</p>
 
 #### Request
 <table>
@@ -155,9 +143,8 @@
 
 ### AddHandles {#AddHandles}
 
- Adds the given handles to the startup handles for the process.
-
- Calling this method multiple times concatenates the handles.
+<p>Adds the given handles to the startup handles for the process.</p>
+<p>Calling this method multiple times concatenates the handles.</p>
 
 #### Request
 <table>
@@ -174,34 +161,29 @@
 ## Resolver {#Resolver}
 *Defined in [fuchsia.process/resolver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/resolver.fidl#29)*
 
- An interface for resolving names to executables and library loaders.
-
- An executable itself is often not sufficient to create a working process
- because many executables also load shared libraries. On Fuchsia, there is no
- global pool of shared libraries. Instead, every process has an associated
- `fuchsia.ldsvc.Loader`, which provides access to a private pool of shared
- libraries appropriate for that process.
-
- This interface provides a protocol for resolving a name into both the
- `handle<vmo>` for the executable and the `fuchsia.ldsvc.Loader` for its
- associated shared libraries.
-
- This interface is rarely used directly. Instead, `fdio_spawn` and
- `fdio_spawn_etc` use this interface internally when they try to run a file
- with a `#!resolve` directive.
+<p>An interface for resolving names to executables and library loaders.</p>
+<p>An executable itself is often not sufficient to create a working process
+because many executables also load shared libraries. On Fuchsia, there is no
+global pool of shared libraries. Instead, every process has an associated
+<code>fuchsia.ldsvc.Loader</code>, which provides access to a private pool of shared
+libraries appropriate for that process.</p>
+<p>This interface provides a protocol for resolving a name into both the
+<code>handle&lt;vmo&gt;</code> for the executable and the <code>fuchsia.ldsvc.Loader</code> for its
+associated shared libraries.</p>
+<p>This interface is rarely used directly. Instead, <code>fdio_spawn</code> and
+<code>fdio_spawn_etc</code> use this interface internally when they try to run a file
+with a <code>#!resolve</code> directive.</p>
 
 ### Resolve {#Resolve}
 
- Resolves the given `name` to an `executable` and an shared library
- loader.
-
- If present, the `executable` is suitable for use as the `executable`
- property of `LaunchInfo`. If present, the `ldsvc` is suitable for use as
- the `PA_LDSVC_LOADER` handle when launching the process.
-
- For example, the resolver might locate the given `name` inside a package
- and return the executable binary from the package as well as a shared
- library loader scoped to that package.
+<p>Resolves the given <code>name</code> to an <code>executable</code> and an shared library
+loader.</p>
+<p>If present, the <code>executable</code> is suitable for use as the <code>executable</code>
+property of <code>LaunchInfo</code>. If present, the <code>ldsvc</code> is suitable for use as
+the <code>PA_LDSVC_LOADER</code> handle when launching the process.</p>
+<p>For example, the resolver might locate the given <code>name</code> inside a package
+and return the executable binary from the package as well as a shared
+library loader scoped to that package.</p>
 
 #### Request
 <table>
@@ -243,14 +225,12 @@
 
 
 
- Information about a handle provided to a process at startup.
-
- Processes are given a set of initial handles as part of the bootstrapping
- sequence. Some of these handles are associated with zx.procarg identifiers
- that designate their intended use by the new process.
-
- This structure represents one such handle and its associated zx.procarg
- identifier.
+<p>Information about a handle provided to a process at startup.</p>
+<p>Processes are given a set of initial handles as part of the bootstrapping
+sequence. Some of these handles are associated with zx.procarg identifiers
+that designate their intended use by the new process.</p>
+<p>This structure represents one such handle and its associated zx.procarg
+identifier.</p>
 
 
 <table>
@@ -259,7 +239,7 @@
             <td>
                 <code>handle&lt;handle&gt;</code>
             </td>
-            <td> The handle to use for this process argument.
+            <td><p>The handle to use for this process argument.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -267,10 +247,9 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> Process argument identifier.
-
- See <zircon/processargs.h> for definitions of well-known process
- arguments.
+            <td><p>Process argument identifier.</p>
+<p>See &lt;zircon/processargs.h&gt; for definitions of well-known process
+arguments.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -281,13 +260,11 @@
 
 
 
- A namespace entry provided to a process at startup.
-
- Processes are given a set of initial handles as part of the bootstrapping
- sequence. Some of these handles are associated with paths that designate
- their intended use by the new process as namespace entries.
-
- This structure represents one such handle and its associated namespace path.
+<p>A namespace entry provided to a process at startup.</p>
+<p>Processes are given a set of initial handles as part of the bootstrapping
+sequence. Some of these handles are associated with paths that designate
+their intended use by the new process as namespace entries.</p>
+<p>This structure represents one such handle and its associated namespace path.</p>
 
 
 <table>
@@ -296,9 +273,8 @@
             <td>
                 <code>string[4096]</code>
             </td>
-            <td> Path at which to install the associated directory.
-
- Must be an absolute path (i.e., start with '/').
+            <td><p>Path at which to install the associated directory.</p>
+<p>Must be an absolute path (i.e., start with '/').</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -306,7 +282,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.io/'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/#Directory'>Directory</a></code>
             </td>
-            <td> The associated directory.
+            <td><p>The associated directory.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -317,7 +293,7 @@
 
 
 
- The information needed to launch a process.
+<p>The information needed to launch a process.</p>
 
 
 <table>
@@ -326,7 +302,7 @@
             <td>
                 <code>handle&lt;vmo&gt;</code>
             </td>
-            <td> The executable to run in the process.
+            <td><p>The executable to run in the process.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -334,7 +310,7 @@
             <td>
                 <code>handle&lt;job&gt;</code>
             </td>
-            <td> The job in which to create the process.
+            <td><p>The job in which to create the process.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -342,7 +318,7 @@
             <td>
                 <code>string[32]</code>
             </td>
-            <td> The name to assign to the created process.
+            <td><p>The name to assign to the created process.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -353,9 +329,8 @@
 
 
 
- The information required to start a process.
-
- To start the process, call `zx_process_start` with the arguments provided.
+<p>The information required to start a process.</p>
+<p>To start the process, call <code>zx_process_start</code> with the arguments provided.</p>
 
 
 <table>
@@ -364,7 +339,7 @@
             <td>
                 <code>handle&lt;process&gt;</code>
             </td>
-            <td> The process that was created.
+            <td><p>The process that was created.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -372,9 +347,8 @@
             <td>
                 <code>handle&lt;vmar&gt;</code>
             </td>
-            <td> The vmar object that was created when the process was created.
-
- See <https://fuchsia.googlesource.com/fuchsia/+/master/docs/zircon/syscalls/process_create.md>.
+            <td><p>The vmar object that was created when the process was created.</p>
+<p>See <a href="https://fuchsia.googlesource.com/fuchsia/+/master/docs/zircon/syscalls/process_create.md">https://fuchsia.googlesource.com/fuchsia/+/master/docs/zircon/syscalls/process_create.md</a>.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -382,9 +356,8 @@
             <td>
                 <code>handle&lt;thread&gt;</code>
             </td>
-            <td> The initial thread for the process.
-
- Should be passed to `zx_process_start` when starting the process.
+            <td><p>The initial thread for the process.</p>
+<p>Should be passed to <code>zx_process_start</code> when starting the process.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -392,9 +365,8 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The address of the initial entry point in the process.
-
- Should be passed to `zx_process_start` when starting the process.
+            <td><p>The address of the initial entry point in the process.</p>
+<p>Should be passed to <code>zx_process_start</code> when starting the process.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -402,9 +374,8 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The stack pointer value for the initial thread of the process.
-
- Should be passed to `zx_process_start` when starting the process.
+            <td><p>The stack pointer value for the initial thread of the process.</p>
+<p>Should be passed to <code>zx_process_start</code> when starting the process.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -412,9 +383,8 @@
             <td>
                 <code>handle&lt;channel&gt;</code>
             </td>
-            <td> The bootstrap channel to pass to the process on startup.
-
- Should be passed to `zx_process_start` when starting the process.
+            <td><p>The bootstrap channel to pass to the process on startup.</p>
+<p>Should be passed to <code>zx_process_start</code> when starting the process.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -422,9 +392,8 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The base address of the vDSO to pass to the process on startup.
-
- Should be passed to `zx_process_start` when starting the process.
+            <td><p>The base address of the vDSO to pass to the process on startup.</p>
+<p>Should be passed to <code>zx_process_start</code> when starting the process.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -432,9 +401,8 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The base load address of the ELF file loaded.
-
- Most often used by debuggers or other tools that inspect the process.
+            <td><p>The base load address of the ELF file loaded.</p>
+<p>Most often used by debuggers or other tools that inspect the process.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -469,7 +437,7 @@
                     <code>2048</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> The maximum size for a name used by `Resolver`.
+            <td><p>The maximum size for a name used by <code>Resolver</code>.</p>
 </td>
         </tr>
     

@@ -8,15 +8,14 @@
 ## Provider {#Provider}
 *Defined in [fuchsia.castconfig/cast_config.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.castconfig/cast_config.fidl#19)*
 
- Interface that provides cast config data.
+<p>Interface that provides cast config data.</p>
 
 ### Watch {#Watch}
 
- Requests a buffer containing cast config data.
- This call implements the Hanging Get protocol as detailed in
- https://fuchsia.googlesource.com/fuchsia/+/master/docs/development/api/fidl.md#delay-responses-using-hanging-gets
-
- All error cases are terminal, clients should not retry on error.
+<p>Requests a buffer containing cast config data.
+This call implements the Hanging Get protocol as detailed in
+https://fuchsia.googlesource.com/fuchsia/+/master/docs/development/api/fidl.md#delay-responses-using-hanging-gets</p>
+<p>All error cases are terminal, clients should not retry on error.</p>
 
 #### Request
 <table>
@@ -36,11 +35,10 @@
 
 ### Notify {#Notify}
 
- Notifies the config provider of the config status.
-
- `processed`: `true` if successfully recieved and processed
- `retry`: If `processed` is `false` config provider determines if a retry
-  is appropriate.
+<p>Notifies the config provider of the config status.</p>
+<p><code>processed</code>: <code>true</code> if successfully recieved and processed
+<code>retry</code>: If <code>processed</code> is <code>false</code> config provider determines if a retry
+is appropriate.</p>
 
 #### Request
 <table>
@@ -94,19 +92,19 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.castconfig/cast_config.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.castconfig/cast_config.fidl#10)*
 
- Error codes for the Watch operation.
+<p>Error codes for the Watch operation.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NO_CAST_CONFIG</code></td>
             <td><code>1</code></td>
-            <td> Error when there is no cast config available.
+            <td><p>Error when there is no cast config available.</p>
 </td>
         </tr><tr>
             <td><code>INTERNAL</code></td>
             <td><code>2</code></td>
-            <td> Generic error.
+            <td><p>Generic error.</p>
 </td>
         </tr></table>
 

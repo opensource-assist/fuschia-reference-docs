@@ -8,11 +8,11 @@
 ## Player {#Player}
 *Defined in [fuchsia.media.playback/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/player.fidl#16)*
 
- Plays media.
+<p>Plays media.</p>
 
 ### CreateHttpSource {#CreateHttpSource}
 
- Creates a source that reads from a URL.
+<p>Creates a source that reads from a URL.</p>
 
 #### Request
 <table>
@@ -38,7 +38,7 @@
 
 ### CreateFileSource {#CreateFileSource}
 
- Creates a source that reads from a file.
+<p>Creates a source that reads from a file.</p>
 
 #### Request
 <table>
@@ -59,7 +59,7 @@
 
 ### CreateReaderSource {#CreateReaderSource}
 
- Creates a source that reads from a `SeekingReader`.
+<p>Creates a source that reads from a <code>SeekingReader</code>.</p>
 
 #### Request
 <table>
@@ -80,11 +80,11 @@
 
 ### CreateElementarySource {#CreateElementarySource}
 
- Creates a source that allows the client to provide independent elementary
- streams to the player. duration_ns, can_pause, can_seek and metadata are
- all included in the SourceStatus and, when the `ElementarySource` is used by
- the player, in the `PlayerStatus` as well. `can_pause` and `can_seek`, when
- false, constrain the capabilities of the player.
+<p>Creates a source that allows the client to provide independent elementary
+streams to the player. duration_ns, can_pause, can_seek and metadata are
+all included in the SourceStatus and, when the <code>ElementarySource</code> is used by
+the player, in the <code>PlayerStatus</code> as well. <code>can_pause</code> and <code>can_seek</code>, when
+false, constrain the capabilities of the player.</p>
 
 #### Request
 <table>
@@ -120,8 +120,8 @@
 
 ### SetSource {#SetSource}
 
- Sets the source for this player to use. If source is null, the player
- becomes idle.
+<p>Sets the source for this player to use. If source is null, the player
+becomes idle.</p>
 
 #### Request
 <table>
@@ -137,10 +137,10 @@
 
 ### TransitionToSource {#TransitionToSource}
 
- Transitions to the specified source when playback of the current source
- reaches transition_pts. The new source starts playback at start_pts. If
- a transition is already pending, it will be discarded in favor of the new
- transition.
+<p>Transitions to the specified source when playback of the current source
+reaches transition_pts. The new source starts playback at start_pts. If
+a transition is already pending, it will be discarded in favor of the new
+transition.</p>
 
 #### Request
 <table>
@@ -166,8 +166,8 @@
 
 ### CancelSourceTransition {#CancelSourceTransition}
 
- Cancels a pending transition, returning the source. If no transition is
- pending, the request channel is closed.
+<p>Cancels a pending transition, returning the source. If no transition is
+pending, the request channel is closed.</p>
 
 #### Request
 <table>
@@ -183,8 +183,8 @@
 
 ### SetHttpSource {#SetHttpSource}
 
- Sets an HTTP URL to read from. The provided headers are added to each
- HTTP request issued to the URL.
+<p>Sets an HTTP URL to read from. The provided headers are added to each
+HTTP request issued to the URL.</p>
 
 #### Request
 <table>
@@ -205,7 +205,7 @@
 
 ### SetFileSource {#SetFileSource}
 
- Sets a file channel to read from.
+<p>Sets a file channel to read from.</p>
 
 #### Request
 <table>
@@ -221,7 +221,7 @@
 
 ### Play {#Play}
 
- Starts playback.
+<p>Starts playback.</p>
 
 #### Request
 <table>
@@ -232,7 +232,7 @@
 
 ### Pause {#Pause}
 
- Pauses playback.
+<p>Pauses playback.</p>
 
 #### Request
 <table>
@@ -243,8 +243,8 @@
 
 ### OnStatusChanged {#OnStatusChanged}
 
- Provides current status immediately after binding and whenever status
- changes thereafter.
+<p>Provides current status immediately after binding and whenever status
+changes thereafter.</p>
 
 
 
@@ -260,7 +260,7 @@
 
 ### Seek {#Seek}
 
- Seeks to the specified position, specified in nanoseconds.
+<p>Seeks to the specified position, specified in nanoseconds.</p>
 
 #### Request
 <table>
@@ -276,7 +276,7 @@
 
 ### CreateView {#CreateView}
 
- Creates a video view.
+<p>Creates a video view.</p>
 
 #### Request
 <table>
@@ -292,7 +292,7 @@
 
 ### BindGainControl {#BindGainControl}
 
- Binds to the gain control for this player.
+<p>Binds to the gain control for this player.</p>
 
 #### Request
 <table>
@@ -308,7 +308,7 @@
 
 ### AddBinding {#AddBinding}
 
- Adds a new binding to this player.
+<p>Adds a new binding to this player.</p>
 
 #### Request
 <table>
@@ -387,11 +387,11 @@
 ## SourceManager {#SourceManager}
 *Defined in [fuchsia.media.playback/source_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/source_manager.fidl#13)*
 
- Manages sources on behalf of a Player.
+<p>Manages sources on behalf of a Player.</p>
 
 ### CreateHttpSource {#CreateHttpSource}
 
- Creates a source that reads from a URL.
+<p>Creates a source that reads from a URL.</p>
 
 #### Request
 <table>
@@ -417,7 +417,7 @@
 
 ### CreateFileSource {#CreateFileSource}
 
- Creates a source that reads from a file.
+<p>Creates a source that reads from a file.</p>
 
 #### Request
 <table>
@@ -438,7 +438,7 @@
 
 ### CreateReaderSource {#CreateReaderSource}
 
- Creates a source that reads from a `SeekingReader`.
+<p>Creates a source that reads from a <code>SeekingReader</code>.</p>
 
 #### Request
 <table>
@@ -459,11 +459,11 @@
 
 ### CreateElementarySource {#CreateElementarySource}
 
- Creates a source that allows the client to provide independent elementary
- streams to the player. duration_ns, can_pause, can_seek and metadata are
- all included in the SourceStatus and, when the `ElementarySource` is used by
- the player, in the `PlayerStatus` as well. `can_pause` and `can_seek`, when
- false, constrain the capabilities of the player.
+<p>Creates a source that allows the client to provide independent elementary
+streams to the player. duration_ns, can_pause, can_seek and metadata are
+all included in the SourceStatus and, when the <code>ElementarySource</code> is used by
+the player, in the <code>PlayerStatus</code> as well. <code>can_pause</code> and <code>can_seek</code>, when
+false, constrain the capabilities of the player.</p>
 
 #### Request
 <table>
@@ -499,8 +499,8 @@
 
 ### SetSource {#SetSource}
 
- Sets the source for this player to use. If source is null, the player
- becomes idle.
+<p>Sets the source for this player to use. If source is null, the player
+becomes idle.</p>
 
 #### Request
 <table>
@@ -516,10 +516,10 @@
 
 ### TransitionToSource {#TransitionToSource}
 
- Transitions to the specified source when playback of the current source
- reaches transition_pts. The new source starts playback at start_pts. If
- a transition is already pending, it will be discarded in favor of the new
- transition.
+<p>Transitions to the specified source when playback of the current source
+reaches transition_pts. The new source starts playback at start_pts. If
+a transition is already pending, it will be discarded in favor of the new
+transition.</p>
 
 #### Request
 <table>
@@ -545,8 +545,8 @@
 
 ### CancelSourceTransition {#CancelSourceTransition}
 
- Cancels a pending transition, returning the source. If no transition is
- pending, the request channel is closed.
+<p>Cancels a pending transition, returning the source. If no transition is
+pending, the request channel is closed.</p>
 
 #### Request
 <table>
@@ -563,7 +563,7 @@
 ## Source {#Source}
 *Defined in [fuchsia.media.playback/source_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/source_manager.fidl#54)*
 
- A source of content that may be used by a player.
+<p>A source of content that may be used by a player.</p>
 
 ### OnStatusChanged {#OnStatusChanged}
 
@@ -583,7 +583,7 @@
 ## ElementarySource {#ElementarySource}
 *Defined in [fuchsia.media.playback/source_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/source_manager.fidl#61)*
 
- `Source` variant for providing elementary streams directly to the player.
+<p><code>Source</code> variant for providing elementary streams directly to the player.</p>
 
 ### OnStatusChanged {#OnStatusChanged}
 
@@ -602,14 +602,14 @@
 
 ### AddStream {#AddStream}
 
- Adds an elementary stream. The elementary stream can be removed by
- closing the `SimpleStreamSink`. `ticks_per_second_numerator` and
- `ticks_per_second_denominator` indicate the units that will be used for
- `Streampacket` timestamp values. For nanoseconds units, for example,
- `ticks_per_second_numerator` should be 1000000000 and
- `ticks_per_second_denominator` should be 1. To use units of frames for
- 48k audio, `ticks_per_second_numerator` should be 48000 and
- `ticks_per_second_denominator` should be 1.
+<p>Adds an elementary stream. The elementary stream can be removed by
+closing the <code>SimpleStreamSink</code>. <code>ticks_per_second_numerator</code> and
+<code>ticks_per_second_denominator</code> indicate the units that will be used for
+<code>Streampacket</code> timestamp values. For nanoseconds units, for example,
+<code>ticks_per_second_numerator</code> should be 1000000000 and
+<code>ticks_per_second_denominator</code> should be 1. To use units of frames for
+48k audio, <code>ticks_per_second_numerator</code> should be 48000 and
+<code>ticks_per_second_denominator</code> should be 1.</p>
 
 #### Request
 <table>
@@ -640,10 +640,10 @@
 
 ### AddBinding {#AddBinding}
 
- Adds a new binding to this `ElementarySource`. By using this method,
- the client can obtain an additional channel through which to communicate
- to this `ElementarySource` even after a channel is consumed by a call to
- `SourceManager.SetSource`.
+<p>Adds a new binding to this <code>ElementarySource</code>. By using this method,
+the client can obtain an additional channel through which to communicate
+to this <code>ElementarySource</code> even after a channel is consumed by a call to
+<code>SourceManager.SetSource</code>.</p>
 
 #### Request
 <table>
@@ -666,7 +666,7 @@
 
 
 
- Player status information.
+<p>Player status information.</p>
 
 
 <table>
@@ -675,7 +675,7 @@
             <td>
                 <code>int64</code>
             </td>
-            <td> Duration of the content.
+            <td><p>Duration of the content.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -683,7 +683,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the player can pause.
+            <td><p>Whether the player can pause.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -691,7 +691,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the player can seek.
+            <td><p>Whether the player can seek.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -699,7 +699,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the source has an audio stream.
+            <td><p>Whether the source has an audio stream.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -707,7 +707,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the source has a video stream.
+            <td><p>Whether the source has a video stream.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -715,10 +715,10 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Indicates whether the player is ready to play. After `SetHttpSource`,
- `SetFileSource` or `SourceManager.SetSource` is called, this value is
- false until the player is fully prepared to play the content from the
- source.
+            <td><p>Indicates whether the player is ready to play. After <code>SetHttpSource</code>,
+<code>SetFileSource</code> or <code>SourceManager.SetSource</code> is called, this value is
+false until the player is fully prepared to play the content from the
+source.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -733,7 +733,7 @@
             <td>
                 <code><a class='link' href='#Problem'>Problem</a>?</code>
             </td>
-            <td> Indicates a problem preventing intended operation.
+            <td><p>Indicates a problem preventing intended operation.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -741,9 +741,9 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Indicates whether an audio stream is currently connected for rendering.
- This value will be false if `has_audio` is false or if the audio stream
- type isn't supported.
+            <td><p>Indicates whether an audio stream is currently connected for rendering.
+This value will be false if <code>has_audio</code> is false or if the audio stream
+type isn't supported.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -751,9 +751,9 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Indicates whether a video stream is currently connected for rendering.
- This value will be false if `has_video` is false or if the video stream
- type isn't supported.
+            <td><p>Indicates whether a video stream is currently connected for rendering.
+This value will be false if <code>has_video</code> is false or if the video stream
+type isn't supported.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -761,8 +761,8 @@
             <td>
                 <code><a class='link' href='../fuchsia.math/'>fuchsia.math</a>/<a class='link' href='../fuchsia.math/#Size'>Size</a>?</code>
             </td>
-            <td> Size of the video currently being produced. This value will be null if
- the video size is currently unknown.
+            <td><p>Size of the video currently being produced. This value will be null if
+the video size is currently unknown.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -770,8 +770,8 @@
             <td>
                 <code><a class='link' href='../fuchsia.math/'>fuchsia.math</a>/<a class='link' href='../fuchsia.math/#Size'>Size</a>?</code>
             </td>
-            <td> Relative dimensions of a video pixel. This value will be null if the
- pixel aspect ratio is currently unknown.
+            <td><p>Relative dimensions of a video pixel. This value will be null if the
+pixel aspect ratio is currently unknown.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -779,8 +779,8 @@
             <td>
                 <code><a class='link' href='../fuchsia.media/'>fuchsia.media</a>/<a class='link' href='../fuchsia.media/#TimelineFunction'>TimelineFunction</a>?</code>
             </td>
-            <td> Function translating local time to presentation time. This value will be
- null if the timeline function is currently undefined.
+            <td><p>Function translating local time to presentation time. This value will be
+null if the timeline function is currently undefined.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -788,7 +788,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Indicates whether presentation for all streams has reached end-of-stream.
+            <td><p>Indicates whether presentation for all streams has reached end-of-stream.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -799,16 +799,15 @@
 
 
 
- Models a problem preventing intended operation.
-
- A `Problem` is generally surfaced as part of a component's status, probably
- as an optional field. Absence of a `Problem` means that nothing is preventing
- intended operation. When a problem is exposed, the client can take action
- automatically or present relevant UI. If a problem can be resolved by some
- action, the client may take that action automatically or enlist the user
- somehow in the resolution. In either case, the problem goes away when the
- issue that caused it to be exposed is resolved. By design, there is no
- general means of dismissing a problem.
+<p>Models a problem preventing intended operation.</p>
+<p>A <code>Problem</code> is generally surfaced as part of a component's status, probably
+as an optional field. Absence of a <code>Problem</code> means that nothing is preventing
+intended operation. When a problem is exposed, the client can take action
+automatically or present relevant UI. If a problem can be resolved by some
+action, the client may take that action automatically or enlist the user
+somehow in the resolution. In either case, the problem goes away when the
+issue that caused it to be exposed is resolved. By design, there is no
+general means of dismissing a problem.</p>
 
 
 <table>
@@ -817,7 +816,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The type of problem. This is a string for extensibility.
+            <td><p>The type of problem. This is a string for extensibility.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -825,7 +824,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> Type-dependent details.
+            <td><p>Type-dependent details.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -836,7 +835,7 @@
 
 
 
- Source status information.
+<p>Source status information.</p>
 
 
 <table>
@@ -845,7 +844,7 @@
             <td>
                 <code>int64</code>
             </td>
-            <td> Duration of the content.
+            <td><p>Duration of the content.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -853,7 +852,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the source can pause.
+            <td><p>Whether the source can pause.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -861,7 +860,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the source can seek.
+            <td><p>Whether the source can seek.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -869,7 +868,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the source has an audio stream.
+            <td><p>Whether the source has an audio stream.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -877,7 +876,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the source has a video stream.
+            <td><p>Whether the source has a video stream.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -885,8 +884,8 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Indicates whether the source is ready. A true value signals that the
- content has been probed and there are no known problems with it.
+            <td><p>Indicates whether the source is ready. A true value signals that the
+content has been probed and there are no known problems with it.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -894,7 +893,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.media/'>fuchsia.media</a>/<a class='link' href='../fuchsia.media/#Metadata'>Metadata</a>?</code>
             </td>
-            <td> Describes the media.
+            <td><p>Describes the media.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -902,8 +901,8 @@
             <td>
                 <code><a class='link' href='#Problem'>Problem</a>?</code>
             </td>
-            <td> Indicates a problem preventing intended operation. A null value
- indicates that the source is functioning as intended.
+            <td><p>Indicates a problem preventing intended operation. A null value
+indicates that the source is functioning as intended.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -966,8 +965,8 @@
                     <code>18446744073709551615</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td> Distinguished value for the `size` value returned by `SeekingReader.Describe`
- Indicating that the size isn't known.
+            <td><p>Distinguished value for the <code>size</code> value returned by <code>SeekingReader.Describe</code>
+Indicating that the size isn't known.</p>
 </td>
         </tr>
     

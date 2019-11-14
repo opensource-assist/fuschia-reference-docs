@@ -8,11 +8,11 @@
 ## SessionManager {#SessionManager}
 *Defined in [fuchsia.virtualconsole/session-manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-virtualconsole/session-manager.fidl#12)*
 
- Manages virtual console sessions.
+<p>Manages virtual console sessions.</p>
 
 ### CreateSession {#CreateSession}
 
- Create a new virtual console session.
+<p>Create a new virtual console session.</p>
 
 #### Request
 <table>
@@ -37,7 +37,7 @@
 
 ### HasPrimaryConnected {#HasPrimaryConnected}
 
- Returns true if virtcon currently has a display that it can display something on.
+<p>Returns true if virtcon currently has a display that it can display something on.</p>
 
 #### Request
 <table>

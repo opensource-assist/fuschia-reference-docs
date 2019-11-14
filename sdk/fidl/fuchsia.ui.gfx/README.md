@@ -27,13 +27,13 @@
 ## PoseBufferProvider {#PoseBufferProvider}
 *Defined in [fuchsia.ui.gfx/pose_buffer_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/pose_buffer_provider.fidl#9)*
 
- A minimal fidl interface to allow sourcing the contents of a PoseBuffer from another service.
+<p>A minimal fidl interface to allow sourcing the contents of a PoseBuffer from another service.</p>
 
 ### SetPoseBuffer {#SetPoseBuffer}
 
- Sets the PoseBuffer and the parameters PoseBufferProvider will use to fill that PoseBuffer.
- Setting this when it is already set will replace the previously set parameters with the new
- parameters, which will release the provider's reference to the buffer.
+<p>Sets the PoseBuffer and the parameters PoseBufferProvider will use to fill that PoseBuffer.
+Setting this when it is already set will replace the previously set parameters with the new
+parameters, which will release the provider's reference to the buffer.</p>
 
 #### Request
 <table>
@@ -71,8 +71,8 @@
 
 
 
- Instructs the compositor to create the specified `Resource`, and to register
- it in a table so that it can be referenced by subsequent commands.
+<p>Instructs the compositor to create the specified <code>Resource</code>, and to register
+it in a table so that it can be referenced by subsequent commands.</p>
 
 
 <table>
@@ -81,7 +81,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> An ID that is currently not used within the session.
+            <td><p>An ID that is currently not used within the session.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -99,13 +99,13 @@
 
 
 
- Releases the client's reference to the resource; it is then illegal to use
- the ID in subsequent Commands.  Other references to the resource may exist,
- so releasing the resource does not result in its immediate destruction; it is
- only destroyed once the last reference is released.  For example, the
- resource may be required to render an in-progress frame, or it may be
- referred to by another resource).  However, the ID will be immediately
- unregistered, and may be reused to create a new resource.
+<p>Releases the client's reference to the resource; it is then illegal to use
+the ID in subsequent Commands.  Other references to the resource may exist,
+so releasing the resource does not result in its immediate destruction; it is
+only destroyed once the last reference is released.  For example, the
+resource may be required to render an in-progress frame, or it may be
+referred to by another resource).  However, the ID will be immediately
+unregistered, and may be reused to create a new resource.</p>
 
 
 <table>
@@ -114,7 +114,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> ID of the resource to be dereferenced.
+            <td><p>ID of the resource to be dereferenced.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -125,14 +125,13 @@
 
 
 
- Create an external reference to the specified resource, which can then be
- imported into another Session by passing a handle to `token`'s peer to
- ImportResourceCmd; see that comment for more details.
-
- The importing client is typically in a different process than the exporter.
- No specific mechanism is provided for transferring a token from an exporter
- to an importer; collaborators may choose any out-of-band API they wish to do
- so.
+<p>Create an external reference to the specified resource, which can then be
+imported into another Session by passing a handle to <code>token</code>'s peer to
+ImportResourceCmd; see that comment for more details.</p>
+<p>The importing client is typically in a different process than the exporter.
+No specific mechanism is provided for transferring a token from an exporter
+to an importer; collaborators may choose any out-of-band API they wish to do
+so.</p>
 
 
 <table>
@@ -158,25 +157,22 @@
 
 
 
- Import a resource that was exported via ExportResourceCmd().  `token` is
- a handle to the eventpair peer that was used to export the resource, and
- `spec` describes the type of the imported resource, and the commands which
- can legally be applied to it.  Afterward, `id` can be used to refer to the
- resource in an Command, similarly (but not identically: see below) to a
- resource that was created in the session.  For example, you can add children
- to an imported EntityNode via AddChildCmd.
-
- However, note that the importer does not gain full access to the imported
- resource, but rather to an attenuated subset of its capabilities.  For
- example, you cannot use a DetachCmd to detach an imported EntityNode from
- its parent.
-
- Unlike ExportResourceCmd, there is no configurable timeout.  There is an
- expectation that the exported resource will become available in a short
- amount of time.  TODO: this needs elaboration... e.g. we might notify via the
- SessionListener when we know that the link will never be made (e.g. if the
- peer of the import token is destroyed).
-
+<p>Import a resource that was exported via ExportResourceCmd().  <code>token</code> is
+a handle to the eventpair peer that was used to export the resource, and
+<code>spec</code> describes the type of the imported resource, and the commands which
+can legally be applied to it.  Afterward, <code>id</code> can be used to refer to the
+resource in an Command, similarly (but not identically: see below) to a
+resource that was created in the session.  For example, you can add children
+to an imported EntityNode via AddChildCmd.</p>
+<p>However, note that the importer does not gain full access to the imported
+resource, but rather to an attenuated subset of its capabilities.  For
+example, you cannot use a DetachCmd to detach an imported EntityNode from
+its parent.</p>
+<p>Unlike ExportResourceCmd, there is no configurable timeout.  There is an
+expectation that the exported resource will become available in a short
+amount of time.  TODO: this needs elaboration... e.g. we might notify via the
+SessionListener when we know that the link will never be made (e.g. if the
+peer of the import token is destroyed).</p>
 
 
 <table>
@@ -209,20 +205,19 @@
 
 
 
- Sets/clears a node's tag value.
-
- A session can apply a tag value to any node to which it has access, including
- imported nodes.  These tags are private to the session and cannot be read
- or modified by other sessions.  When multiple sessions import the same node,
- each session will only observe its own tag values.
-
- Hit test results for a session only include nodes which the session has
- tagged with a non-zero value.  Therefore a session can use tag values to
- associate nodes with their functional purpose when picked.
-
- Constraints:
- - `node_id` refs a `Node`.
- - `tag_value` is the tag value to assign, or 0 to remove the tag.
+<p>Sets/clears a node's tag value.</p>
+<p>A session can apply a tag value to any node to which it has access, including
+imported nodes.  These tags are private to the session and cannot be read
+or modified by other sessions.  When multiple sessions import the same node,
+each session will only observe its own tag values.</p>
+<p>Hit test results for a session only include nodes which the session has
+tagged with a non-zero value.  Therefore a session can use tag values to
+associate nodes with their functional purpose when picked.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>node_id</code> refs a <code>Node</code>.</li>
+<li><code>tag_value</code> is the tag value to assign, or 0 to remove the tag.</li>
+</ul>
 
 
 <table>
@@ -248,16 +243,16 @@
 
 
 
- Detaches a parentable object from its parent (e.g. a node from a parent node,
- or a layer from a layer stack).  It is illegal to apply this command to a
- non-parentable object.  No-op if the target object currently has no parent.
-
- Constraints:
- - `id` refs a parentable object
-
- Discussion:
- For nodes, this command will detach a node from its parent, regardless of
- whether it is a part or a child of its parent.
+<p>Detaches a parentable object from its parent (e.g. a node from a parent node,
+or a layer from a layer stack).  It is illegal to apply this command to a
+non-parentable object.  No-op if the target object currently has no parent.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>id</code> refs a parentable object</li>
+</ul>
+<p>Discussion:
+For nodes, this command will detach a node from its parent, regardless of
+whether it is a part or a child of its parent.</p>
 
 
 <table>
@@ -276,10 +271,11 @@
 
 
 
- Sets a Resource's (typically a Node's) translation.
-
- Constraints:
- - `id` refs a Resource with the has_transform characteristic.
+<p>Sets a Resource's (typically a Node's) translation.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>id</code> refs a Resource with the has_transform characteristic.</li>
+</ul>
 
 
 <table>
@@ -305,10 +301,11 @@
 
 
 
- Sets a Resource's (typically a Node's) scale.
-
- Constraints:
- - `id` refs a Resource with the has_transform characteristic.
+<p>Sets a Resource's (typically a Node's) scale.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>id</code> refs a Resource with the has_transform characteristic.</li>
+</ul>
 
 
 <table>
@@ -334,10 +331,11 @@
 
 
 
- Sets a Resource's (typically a Node's) rotation.
-
- Constraints:
- - `id` refs a Resource with the has_transform characteristic.
+<p>Sets a Resource's (typically a Node's) rotation.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>id</code> refs a Resource with the has_transform characteristic.</li>
+</ul>
 
 
 <table>
@@ -363,10 +361,11 @@
 
 
 
- Sets a Resource's (typically a Node's) anchor point.
-
- Constraints:
- - `id` refs a Resource with the has_transform characteristic.
+<p>Sets a Resource's (typically a Node's) anchor point.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>id</code> refs a Resource with the has_transform characteristic.</li>
+</ul>
 
 
 <table>
@@ -392,12 +391,13 @@
 
 
 
- Sets an object's size.
-
- Constraints:
- - `id` refs a resizeable object.
- - some objects that support this command may have additional constraints
-   (e.g. in some cases `depth` must be zero).
+<p>Sets an object's size.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>id</code> refs a resizeable object.</li>
+<li>some objects that support this command may have additional constraints
+(e.g. in some cases <code>depth</code> must be zero).</li>
+</ul>
 
 
 <table>
@@ -423,11 +423,12 @@
 
 
 
- Sets a node's opacity.
-
- Constraints:
- - `node_id` refs a `Node` with the has_opacity characteristic.
- - `opacity` is in the range [0, 1].
+<p>Sets a node's opacity.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>node_id</code> refs a <code>Node</code> with the has_opacity characteristic.</li>
+<li><code>opacity</code> is in the range [0, 1].</li>
+</ul>
 
 
 <table>
@@ -453,12 +454,11 @@
 
 
 
- Sends a hint about a pending size change to the given node and all nodes
- below. This is generally sent before an animation.
-
- `width_change_factor` and `height_change_factor` is how much bigger or smaller
- the item is expected to be in the near future. This one number encapsulate
- both changes in scale, as well as changes to layout width and height.
+<p>Sends a hint about a pending size change to the given node and all nodes
+below. This is generally sent before an animation.</p>
+<p><code>width_change_factor</code> and <code>height_change_factor</code> is how much bigger or smaller
+the item is expected to be in the near future. This one number encapsulate
+both changes in scale, as well as changes to layout width and height.</p>
 
 
 <table>
@@ -491,15 +491,15 @@
 
 
 
- Add a node as a child to another node.
-
- Constraints:
- - `id` refs a Node with the has_children characteristic.
- - `child_id` refs any Node.
-
- Discussion:
- The child node is first removed from its existing parent, as if DetachCmd
- was applied first.
+<p>Add a node as a child to another node.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>id</code> refs a Node with the has_children characteristic.</li>
+<li><code>child_id</code> refs any Node.</li>
+</ul>
+<p>Discussion:
+The child node is first removed from its existing parent, as if DetachCmd
+was applied first.</p>
 
 
 <table>
@@ -525,21 +525,21 @@
 
 
 
- Add a node as a part of another node.  The implications of being a part
- rather than a child differ based on the type of the part.  However, one
- implication is constant: removing all of a node's children (e.g. via
- DetachChildrenCmd) does not affect its parts.  This is similar to the
- "shadow DOM" in a web browser: the controls of a <video> element are
- implemented as using the shadow DOM, and do no show up amongst the children
- of that element.
-
- Constraints:
- - `id` refs a Node with the has_parts characteristic.
- - `part_id` refs any Node.
-
- Discussion:
- The part node is first removed from its existing parent, as if DetachCmd
- was applied first.
+<p>Add a node as a part of another node.  The implications of being a part
+rather than a child differ based on the type of the part.  However, one
+implication is constant: removing all of a node's children (e.g. via
+DetachChildrenCmd) does not affect its parts.  This is similar to the
+&quot;shadow DOM&quot; in a web browser: the controls of a <video> element are
+implemented as using the shadow DOM, and do no show up amongst the children
+of that element.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>id</code> refs a Node with the has_parts characteristic.</li>
+<li><code>part_id</code> refs any Node.</li>
+</ul>
+<p>Discussion:
+The part node is first removed from its existing parent, as if DetachCmd
+was applied first.</p>
 
 
 <table>
@@ -565,7 +565,7 @@
 
 
 
- Detaches all of a node's children (but not its parts).
+<p>Detaches all of a node's children (but not its parts).</p>
 
 
 <table>
@@ -584,19 +584,19 @@
 
 
 
- Sets/clears a node's shape.
-
- Constraints:
- - `node_id` refs a `Node` with the has_shape characteristic.
- - `shape_id` refs a `Shape`, or nothing.
- - if this command causes the target to have both a `Shape` and a `Material`,
-   then these must be compatible with each other (see README.md regarding
-   "Shape/Material Compatibility").
-
- Discussion:
- In order to be painted, a node requires both a `Shape` and a `Material`.
- Without a material, a node can still participate in hit-testing and clipping.
- Without a shape, a node cannot do any of the above.
+<p>Sets/clears a node's shape.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>node_id</code> refs a <code>Node</code> with the has_shape characteristic.</li>
+<li><code>shape_id</code> refs a <code>Shape</code>, or nothing.</li>
+<li>if this command causes the target to have both a <code>Shape</code> and a <code>Material</code>,
+then these must be compatible with each other (see README.md regarding
+&quot;Shape/Material Compatibility&quot;).</li>
+</ul>
+<p>Discussion:
+In order to be painted, a node requires both a <code>Shape</code> and a <code>Material</code>.
+Without a material, a node can still participate in hit-testing and clipping.
+Without a shape, a node cannot do any of the above.</p>
 
 
 <table>
@@ -622,19 +622,19 @@
 
 
 
- Sets/clears a node's material.
-
- Constraints:
- - `node_id` refs a `Node` with the has_material characteristic.
- - `material_id` refs a `Material`, or nothing.
- - if this command causes the target to have both a `Shape` and a `Material`,
-   then these must be compatible with each other (see README.md regarding
-   "Shape/Material Compatibility").
-
- Discussion:
- In order to be painted, a node requires both a `Shape` and a `Material`.
- Without a material, a node can still participate in hit-testing and clipping.
- Without a shape, a node cannot do any of the above.
+<p>Sets/clears a node's material.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>node_id</code> refs a <code>Node</code> with the has_material characteristic.</li>
+<li><code>material_id</code> refs a <code>Material</code>, or nothing.</li>
+<li>if this command causes the target to have both a <code>Shape</code> and a <code>Material</code>,
+then these must be compatible with each other (see README.md regarding
+&quot;Shape/Material Compatibility&quot;).</li>
+</ul>
+<p>Discussion:
+In order to be painted, a node requires both a <code>Shape</code> and a <code>Material</code>.
+Without a material, a node can still participate in hit-testing and clipping.
+Without a shape, a node cannot do any of the above.</p>
 
 
 <table>
@@ -660,22 +660,22 @@
 
 
 
- Sets/clears a node's clip.  DEPRECATED: use SetClipPlanesCmd.
-
- Constraints:
- - `node_id` refs a `Node` with the has_clip characteristic.
- - `clip_id` a `Node` with the is_clip characteristic, or nothing.  If the
-   referenced node is not rooted, then it will have no effect (since its
-   full world-transform cannot be determined).
- - `clip_to_self` If false, children are only clipped to the region specified
-   by `clip_id`.  If true, children are additionally clipped to the node's
-   shape (as determined by its ShapeNode parts).
-
- Discussion:
- If a node has a clip, it will be applied to both the parts and the children
- of the node.  Under some circumstances (TBD), a clip will not be applicable
- to a node; in such cases it will be as though no clip has been specified for
- the node.
+<p>Sets/clears a node's clip.  DEPRECATED: use SetClipPlanesCmd.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>node_id</code> refs a <code>Node</code> with the has_clip characteristic.</li>
+<li><code>clip_id</code> a <code>Node</code> with the is_clip characteristic, or nothing.  If the
+referenced node is not rooted, then it will have no effect (since its
+full world-transform cannot be determined).</li>
+<li><code>clip_to_self</code> If false, children are only clipped to the region specified
+by <code>clip_id</code>.  If true, children are additionally clipped to the node's
+shape (as determined by its ShapeNode parts).</li>
+</ul>
+<p>Discussion:
+If a node has a clip, it will be applied to both the parts and the children
+of the node.  Under some circumstances (TBD), a clip will not be applicable
+to a node; in such cases it will be as though no clip has been specified for
+the node.</p>
 
 
 <table>
@@ -708,11 +708,10 @@
 
 
 
- Sets a node's hit test behavior.
-
- Discussion:
- By default, hit testing is performed on the node's content, its parts,
- and its children.
+<p>Sets a node's hit test behavior.</p>
+<p>Discussion:
+By default, hit testing is performed on the node's content, its parts,
+and its children.</p>
 
 
 <table>
@@ -738,10 +737,11 @@
 
 
 
- Sets the properties for a ViewHolder's attached View.
-
- Constraints:
- - `view_holder_id` refs a `ViewHolder`.
+<p>Sets the properties for a ViewHolder's attached View.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>view_holder_id</code> refs a <code>ViewHolder</code>.</li>
+</ul>
 
 
 <table>
@@ -792,12 +792,13 @@
 
 
 
- Sets a renderer's camera.
-
- Constraints:
- - `renderer_id` refs a `Renderer`.
- - `camera_id` refs a `Camera`, or stops rendering by passing zero.
- - `matrix` is a value or variable of type kMatrix4x4.
+<p>Sets a renderer's camera.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>renderer_id</code> refs a <code>Renderer</code>.</li>
+<li><code>camera_id</code> refs a <code>Camera</code>, or stops rendering by passing zero.</li>
+<li><code>matrix</code> is a value or variable of type kMatrix4x4.</li>
+</ul>
 
 
 <table>
@@ -823,14 +824,15 @@
 
 
 
- Sets a camera's view matrix.
- This operation can be applied to both Cameras and StereoCameras.
-
- Constraints:
- - `camera_id` refs a `Camera`.
- - `eye_position` is the position of the eye.
- - `eye_look_at` is the point is the scene the that eye is pointed at.
- - `eye_up` defines the camera's "up" vector.
+<p>Sets a camera's view matrix.
+This operation can be applied to both Cameras and StereoCameras.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>camera_id</code> refs a <code>Camera</code>.</li>
+<li><code>eye_position</code> is the position of the eye.</li>
+<li><code>eye_look_at</code> is the point is the scene the that eye is pointed at.</li>
+<li><code>eye_up</code> defines the camera's &quot;up&quot; vector.</li>
+</ul>
 
 
 <table>
@@ -870,15 +872,15 @@
 
 
 
- Sets a camera's projection matrix.
- This operation cannot be applied to a StereoCamera.
-
- Constraints:
- - `camera_id` refs a `Camera` that is not a `StereoCamera`.
- - `fovy` is the Y-axis field of view, in radians.
-
- NOTE: A default orthographic projection is specified by setting `fovy` to
- zero.  In this case, the camera transform is ignored.
+<p>Sets a camera's projection matrix.
+This operation cannot be applied to a StereoCamera.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>camera_id</code> refs a <code>Camera</code> that is not a <code>StereoCamera</code>.</li>
+<li><code>fovy</code> is the Y-axis field of view, in radians.</li>
+</ul>
+<p>NOTE: A default orthographic projection is specified by setting <code>fovy</code> to
+zero.  In this case, the camera transform is ignored.</p>
 
 
 <table>
@@ -904,16 +906,16 @@
 
 
 
- Sets a StereoCamera's projection matrices.
- This operation can only be applied to a StereoCamera.
-
- Constraints:
- - `camera_id` refs a `StereoCamera`.
- - `left_projection` is the projection matrix for the left eye.
- - `right_projection` is the projection matrix for the right eye.
-
- These projection matrices may also contain a transform in camera space for
- their eye if needed.
+<p>Sets a StereoCamera's projection matrices.
+This operation can only be applied to a StereoCamera.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>camera_id</code> refs a <code>StereoCamera</code>.</li>
+<li><code>left_projection</code> is the projection matrix for the left eye.</li>
+<li><code>right_projection</code> is the projection matrix for the right eye.</li>
+</ul>
+<p>These projection matrices may also contain a transform in camera space for
+their eye if needed.</p>
 
 
 <table>
@@ -946,12 +948,13 @@
 
 
 
- Sets a camera's 2D clip-space transform.
-
- Constraints:
- - `camera_id` refs a `Camera`.
- - `translation` is the desired translation, in Vulkan NDC.
- - `scale` is the scale factor to apply on the x/y plane before translation.
+<p>Sets a camera's 2D clip-space transform.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>camera_id</code> refs a <code>Camera</code>.</li>
+<li><code>translation</code> is the desired translation, in Vulkan NDC.</li>
+<li><code>scale</code> is the scale factor to apply on the x/y plane before translation.</li>
+</ul>
 
 
 <table>
@@ -984,78 +987,69 @@
 
 
 
- Sets the "pose buffer" for the camera identified by `camera_id`.
- This operation can be applied to both Cameras and StereoCameras.
-
- This will override any position and rotation set for the camera and will
- make it take its position and rotation from the pose buffer each frame
- based on the presentation time for that frame.
-
- A pose buffer represents a ring buffer of poses for a fixed number of time
- points in the future. Each entry in the buffer identified by `buffer_id` is
- a quaternion and a position layed out as follows:
-
- struct Pose {
-   // Quaternion
-   float32 a;
-   float32 b;
-   float32 c;
-   float32 d;
-
-   // Position
-   float32 x;
-   float32 y;
-   float32 z;
-
-   // Reserved/Padding
-   byte[4] reserved;
- }
-
- The buffer can be thought of as a packed array of `num_entries` Pose structs
- and is required to be at least num_entries * sizeof(Pose) bytes.
-
- The quaternions and positions are specified in the space of the camera's
- parent node.
-
- `base_time` is a base time point expressed in nanoseconds in the
- `CLOCK_MONOTONIC` timebase and `time_interval` is the time in nanoseconds
- between entries in the buffer. `base_time` must be in the past.
-
- For a given point in time `t` expressed in nanoseconds in the
- `CLOCK_MONOTONIC` timebase the index of the corresponding pose in
- the pose buffer can be computed as follows:
-
- index(t) = ((t - base_time) / time_interval) % num_entries
-
- poses[index(t)] is valid for t over the time interval (t - time_interval, t]
- and should be expected to updated continuously without synchronization
- for the duration of that interval. If a single pose value is needed for
- multiple non-atomic operations a value should be latched and stored outside
- the pose buffer.
-
- Because the poses are not protected by any synchronization primitives it is
- possible that when a pose is latched it will be only partially updated, and
- the pose being read will contain some components from the pose before it is
- updated and some components from the updated pose. The safety of using these
- "torn" poses relies on two things:
-
- 1) Sequential poses written to poses[index(t)] are very similar to each
- other numerically, so that if some components are taken from the first and
- some are taken from another the result is numerically similar to both
-
- 2) The space of positions and quaternions is locally flat at the scale of
- changes between sequential updates, which guarantees that two poses which
- are numerically similar also represent semantically similar poses (i.e.
- there are no discontinuities which will cause a small numerical change in
- the position or quaterninon to cause a large change in the encoded pose)
- For positions this is guaranteed because Scenic uses a Euclidean 3-space
- which is globally flat and for quaternions this is guaranteed because
- quaternions encode rotation as points on a unit 4-sphere, and spheres are
- locally flat. For more details on the encoding of rotations in quaterions
- see https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation
-
- This commanderation is intended for late latching camera pose to support
- low-latency motion-tracked rendering.
+<p>Sets the &quot;pose buffer&quot; for the camera identified by <code>camera_id</code>.
+This operation can be applied to both Cameras and StereoCameras.</p>
+<p>This will override any position and rotation set for the camera and will
+make it take its position and rotation from the pose buffer each frame
+based on the presentation time for that frame.</p>
+<p>A pose buffer represents a ring buffer of poses for a fixed number of time
+points in the future. Each entry in the buffer identified by <code>buffer_id</code> is
+a quaternion and a position layed out as follows:</p>
+<p>struct Pose {
+// Quaternion
+float32 a;
+float32 b;
+float32 c;
+float32 d;</p>
+<p>// Position
+float32 x;
+float32 y;
+float32 z;</p>
+<p>// Reserved/Padding
+byte[4] reserved;
+}</p>
+<p>The buffer can be thought of as a packed array of <code>num_entries</code> Pose structs
+and is required to be at least num_entries * sizeof(Pose) bytes.</p>
+<p>The quaternions and positions are specified in the space of the camera's
+parent node.</p>
+<p><code>base_time</code> is a base time point expressed in nanoseconds in the
+<code>CLOCK_MONOTONIC</code> timebase and <code>time_interval</code> is the time in nanoseconds
+between entries in the buffer. <code>base_time</code> must be in the past.</p>
+<p>For a given point in time <code>t</code> expressed in nanoseconds in the
+<code>CLOCK_MONOTONIC</code> timebase the index of the corresponding pose in
+the pose buffer can be computed as follows:</p>
+<p>index(t) = ((t - base_time) / time_interval) % num_entries</p>
+<p>poses[index(t)] is valid for t over the time interval (t - time_interval, t]
+and should be expected to updated continuously without synchronization
+for the duration of that interval. If a single pose value is needed for
+multiple non-atomic operations a value should be latched and stored outside
+the pose buffer.</p>
+<p>Because the poses are not protected by any synchronization primitives it is
+possible that when a pose is latched it will be only partially updated, and
+the pose being read will contain some components from the pose before it is
+updated and some components from the updated pose. The safety of using these
+&quot;torn&quot; poses relies on two things:</p>
+<ol>
+<li>
+<p>Sequential poses written to poses[index(t)] are very similar to each
+other numerically, so that if some components are taken from the first and
+some are taken from another the result is numerically similar to both</p>
+</li>
+<li>
+<p>The space of positions and quaternions is locally flat at the scale of
+changes between sequential updates, which guarantees that two poses which
+are numerically similar also represent semantically similar poses (i.e.
+there are no discontinuities which will cause a small numerical change in
+the position or quaterninon to cause a large change in the encoded pose)
+For positions this is guaranteed because Scenic uses a Euclidean 3-space
+which is globally flat and for quaternions this is guaranteed because
+quaternions encode rotation as points on a unit 4-sphere, and spheres are
+locally flat. For more details on the encoding of rotations in quaterions
+see https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation</p>
+</li>
+</ol>
+<p>This commanderation is intended for late latching camera pose to support
+low-latency motion-tracked rendering.</p>
 
 
 <table>
@@ -1102,7 +1096,7 @@
 
 
 
- Sets the color of the Light identified by `light_id`.
+<p>Sets the color of the Light identified by <code>light_id</code>.</p>
 
 
 <table>
@@ -1128,7 +1122,7 @@
 
 
 
- Sets the direction of the DirectionalLight identified by `light_id`.
+<p>Sets the direction of the DirectionalLight identified by <code>light_id</code>.</p>
 
 
 <table>
@@ -1154,9 +1148,9 @@
 
 
 
- DEPRECATED
- Adds the light specified by `light_id` specified by `light_id` to the scene
- identified by `scene_id`.
+<p>DEPRECATED
+Adds the light specified by <code>light_id</code> specified by <code>light_id</code> to the scene
+identified by <code>scene_id</code>.</p>
 
 
 <table>
@@ -1182,8 +1176,8 @@
 
 
 
- Detach the light specified by `light_id` from the scene that it is attached
- to, if any.
+<p>Detach the light specified by <code>light_id</code> from the scene that it is attached
+to, if any.</p>
 
 
 <table>
@@ -1202,7 +1196,7 @@
 
 
 
- Detach all lights from the scene specified by `scene_id`.
+<p>Detach all lights from the scene specified by <code>scene_id</code>.</p>
 
 
 <table>
@@ -1221,15 +1215,15 @@
 
 
 
- Sets/clears a material's texture.
-
- Constraints:
- - `material_id` refs a `Material`.
- - `texture_id` refs a `Image`, `ImagePipe`, or nothing.
-
- If no texture is provided (i.e. `texture_id` is zero), a solid color is used.
- If a texture is provided, then the value sampled from the texture is
- multiplied by the color.
+<p>Sets/clears a material's texture.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>material_id</code> refs a <code>Material</code>.</li>
+<li><code>texture_id</code> refs a <code>Image</code>, <code>ImagePipe</code>, or nothing.</li>
+</ul>
+<p>If no texture is provided (i.e. <code>texture_id</code> is zero), a solid color is used.
+If a texture is provided, then the value sampled from the texture is
+multiplied by the color.</p>
 
 
 <table>
@@ -1255,13 +1249,13 @@
 
 
 
- Sets a material's color.
-
- Constraints:
- - `material_id` refs a `Material`.
-
- If a texture is set on the material, then the value sampled from the texture
- is multiplied by the color.
+<p>Sets a material's color.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>material_id</code> refs a <code>Material</code>.</li>
+</ul>
+<p>If a texture is set on the material, then the value sampled from the texture
+is multiplied by the color.</p>
 
 
 <table>
@@ -1295,7 +1289,7 @@
             <td>
                 <code><a class='link' href='#ValueType'>ValueType</a></code>
             </td>
-            <td> kVector2 or kVector3.
+            <td><p>kVector2 or kVector3.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1303,7 +1297,7 @@
             <td>
                 <code><a class='link' href='#ValueType'>ValueType</a></code>
             </td>
-            <td> kVector2 or kVector3 (must match position_type), or kNone.
+            <td><p>kVector2 or kVector3 (must match position_type), or kNone.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1311,7 +1305,7 @@
             <td>
                 <code><a class='link' href='#ValueType'>ValueType</a></code>
             </td>
-            <td> kVector2 or kNone.
+            <td><p>kVector2 or kNone.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -1403,12 +1397,14 @@
 
 
 
- Add a layer to a layer stack.
- Constraints:
- - `layer_stack_id` refs a `LayerStack`.
- - `layer_id` refs a `Layer`.
- - The layer must not already belong to a different stack; it must first be
-   detached.
+<p>Add a layer to a layer stack.
+Constraints:</p>
+<ul>
+<li><code>layer_stack_id</code> refs a <code>LayerStack</code>.</li>
+<li><code>layer_id</code> refs a <code>Layer</code>.</li>
+<li>The layer must not already belong to a different stack; it must first be
+detached.</li>
+</ul>
 
 
 <table>
@@ -1434,11 +1430,13 @@
 
 
 
- Remove a layer from a layer stack.
- Constraints:
- - `layer_stack_id` refs a `LayerStack`.
- - `layer_id` refs a `Layer`.
- - The layer must belong to this stack.
+<p>Remove a layer from a layer stack.
+Constraints:</p>
+<ul>
+<li><code>layer_stack_id</code> refs a <code>LayerStack</code>.</li>
+<li><code>layer_id</code> refs a <code>Layer</code>.</li>
+<li>The layer must belong to this stack.</li>
+</ul>
 
 
 <table>
@@ -1464,9 +1462,11 @@
 
 
 
- Remove all layers from a layer stack.
- Constraints
- - `layer_stack_id` refs a `LayerStack`.
+<p>Remove all layers from a layer stack.
+Constraints</p>
+<ul>
+<li><code>layer_stack_id</code> refs a <code>LayerStack</code>.</li>
+</ul>
 
 
 <table>
@@ -1485,10 +1485,12 @@
 
 
 
- Set a compositor's layer stack, replacing the current stack (if any).
- Constraints:
- - `compositor_id` refs a `DisplayCompositor` or `ImagePipeCompositor`.
- - `layer_stack_id` refs a `LayerStack`.
+<p>Set a compositor's layer stack, replacing the current stack (if any).
+Constraints:</p>
+<ul>
+<li><code>compositor_id</code> refs a <code>DisplayCompositor</code> or <code>ImagePipeCompositor</code>.</li>
+<li><code>layer_stack_id</code> refs a <code>LayerStack</code>.</li>
+</ul>
 
 
 <table>
@@ -1514,10 +1516,12 @@
 
 
 
- Set a layer's renderer, replacing the current renderer (if any).
- Constraints:
- - `layer_id` refs a `Layer`.
- - `renderer_id` refs a `Renderer`.
+<p>Set a layer's renderer, replacing the current renderer (if any).
+Constraints:</p>
+<ul>
+<li><code>layer_id</code> refs a <code>Layer</code>.</li>
+<li><code>renderer_id</code> refs a <code>Renderer</code>.</li>
+</ul>
 
 
 <table>
@@ -1543,10 +1547,9 @@
 
 
 
- Sets a parameter that affects how a renderer renders a scene.
-
- `renderer_id` refs the Renderer that is being modified.
- `param` describes the parameter that should be set, and to what.
+<p>Sets a parameter that affects how a renderer renders a scene.</p>
+<p><code>renderer_id</code> refs the Renderer that is being modified.
+<code>param</code> describes the parameter that should be set, and to what.</p>
 
 
 <table>
@@ -1572,15 +1575,15 @@
 
 
 
- Sets which events a resource should deliver to the session listener.
- This command replaces any prior event mask for the resource.
-
- The initial event mask for a resource is zero, meaning no events are
- reported.
-
- Constraints:
- - `resource_id` is a valid resource id
- - `event_mask` is zero or a combination of `k*EventMask` bits OR'ed together.
+<p>Sets which events a resource should deliver to the session listener.
+This command replaces any prior event mask for the resource.</p>
+<p>The initial event mask for a resource is zero, meaning no events are
+reported.</p>
+<p>Constraints:</p>
+<ul>
+<li><code>resource_id</code> is a valid resource id</li>
+<li><code>event_mask</code> is zero or a combination of <code>k*EventMask</code> bits OR'ed together.</li>
+</ul>
 
 
 <table>
@@ -1606,16 +1609,16 @@
 
 
 
- Sets/clears a label to help developers identify the purpose of the resource
- when using diagnostic tools.
-
- The label serves no functional purpose in the scene graph.  It exists only
- to help developers understand its structure.  The scene manager may truncate
- or discard labels at will.
-
- Constraints:
- - The label's maximum length is `kLabelMaxLength` characters.
- - Setting the label to an empty string clears it.
+<p>Sets/clears a label to help developers identify the purpose of the resource
+when using diagnostic tools.</p>
+<p>The label serves no functional purpose in the scene graph.  It exists only
+to help developers understand its structure.  The scene manager may truncate
+or discard labels at will.</p>
+<p>Constraints:</p>
+<ul>
+<li>The label's maximum length is <code>kLabelMaxLength</code> characters.</li>
+<li>Setting the label to an empty string clears it.</li>
+</ul>
 
 
 <table>
@@ -1641,15 +1644,13 @@
 
 
 
- Set whether clipping should be disabled for the specified renderer.  For a
- newly-created renderer, clipping will NOT be disabled (i.e. it will be
- enabled).
-
- NOTE: this disables visual clipping only; objects are still clipped for the
- purposes of hit-testing.
-
- `renderer_id` refs the target renderer.
- `disable_clipping` specifies whether the clipping should be disabled.
+<p>Set whether clipping should be disabled for the specified renderer.  For a
+newly-created renderer, clipping will NOT be disabled (i.e. it will be
+enabled).</p>
+<p>NOTE: this disables visual clipping only; objects are still clipped for the
+purposes of hit-testing.</p>
+<p><code>renderer_id</code> refs the target renderer.
+<code>disable_clipping</code> specifies whether the clipping should be disabled.</p>
 
 
 <table>
@@ -1686,11 +1687,12 @@
 
 
 
- Sets the list of clip planes that apply to a Node and all of its children.  Replaces
- the list set by any previous SetClipPlanesCmd.
-
- - `node_id` refs a `Node` with the has_clip characteristic.
- - `clip_planes` is the new list of oriented clip planes.
+<p>Sets the list of clip planes that apply to a Node and all of its children.  Replaces
+the list set by any previous SetClipPlanesCmd.</p>
+<ul>
+<li><code>node_id</code> refs a <code>Node</code> with the has_clip characteristic.</li>
+<li><code>clip_planes</code> is the new list of oriented clip planes.</li>
+</ul>
 
 
 <table>
@@ -1716,7 +1718,7 @@
 
 
 
- Sets the position of the PointLight identified by `light_id`.
+<p>Sets the position of the PointLight identified by <code>light_id</code>.</p>
 
 
 <table>
@@ -1742,12 +1744,11 @@
 
 
 
- Sets the falloff factor of the PointLight identified by `light_id`.
- A value of 1.0 corresponds to the physically-based "inverse-square law"
- (see Wikipedia).  Other values can be used for artistic effect, e.g. a
- value of 0.0 means that the radiance of a surface is not dependant on
- its distance from the light.
-
+<p>Sets the falloff factor of the PointLight identified by <code>light_id</code>.
+A value of 1.0 corresponds to the physically-based &quot;inverse-square law&quot;
+(see Wikipedia).  Other values can be used for artistic effect, e.g. a
+value of 0.0 means that the radiance of a surface is not dependant on
+its distance from the light.</p>
 
 
 <table>
@@ -1773,8 +1774,8 @@
 
 
 
- Adds the light specified by `light_id` specified by `light_id` to the scene
- identified by `scene_id`.
+<p>Adds the light specified by <code>light_id</code> specified by <code>light_id</code> to the scene
+identified by <code>scene_id</code>.</p>
 
 
 <table>
@@ -1800,8 +1801,8 @@
 
 
 
- Adds the light specified by `light_id` specified by `light_id` to the scene
- identified by `scene_id`.
+<p>Adds the light specified by <code>light_id</code> specified by <code>light_id</code> to the scene
+identified by <code>scene_id</code>.</p>
 
 
 <table>
@@ -1827,8 +1828,8 @@
 
 
 
- Adds the light specified by `light_id` specified by `light_id` to the scene
- identified by `scene_id`.
+<p>Adds the light specified by <code>light_id</code> specified by <code>light_id</code> to the scene
+identified by <code>scene_id</code>.</p>
 
 
 <table>
@@ -1854,20 +1855,17 @@
 
 
 
- Set the color conversion applied to the compositor's display.
- The conversion is applied to to each pixel according to the formula:
-
- (matrix * (pixel + preoffsets)) + postoffsets
-
- where pixel is a column vector consisting of the pixel's 3 components.
-
- `matrix` is passed in row-major order. Clients will be responsible
- for passing default values, when needed.
- Default values are not currently supported in fidl.
- Default Values:
-   preoffsets = [0 0 0]
-   matrix = [1 0 0 0 1 0 0 0 1]
-   postoffsets = [0 0 0]
+<p>Set the color conversion applied to the compositor's display.
+The conversion is applied to to each pixel according to the formula:</p>
+<p>(matrix * (pixel + preoffsets)) + postoffsets</p>
+<p>where pixel is a column vector consisting of the pixel's 3 components.</p>
+<p><code>matrix</code> is passed in row-major order. Clients will be responsible
+for passing default values, when needed.
+Default values are not currently supported in fidl.
+Default Values:
+preoffsets = [0 0 0]
+matrix = [1 0 0 0 1 0 0 0 1]
+postoffsets = [0 0 0]</p>
 
 
 <table>
@@ -1907,17 +1905,17 @@
 
 
 
- Depending on the device, the display might be rotated
- with respect to what the lower level device controller
- considers the physical orientation of pixels. The
- compositors and layers must be in alignment with the
- underlying physical orientation which means that for
- certain operations like screenshotting, they cannot
- provide results with the accurate orientation unless
- they have information about how the higher-level display
- is orienting the screen. The only legal values for the
- rotation are 0, 90, 180, and 270, which are each
-  applied counterclockwise.
+<p>Depending on the device, the display might be rotated
+with respect to what the lower level device controller
+considers the physical orientation of pixels. The
+compositors and layers must be in alignment with the
+underlying physical orientation which means that for
+certain operations like screenshotting, they cannot
+provide results with the accurate orientation unless
+they have information about how the higher-level display
+is orienting the screen. The only legal values for the
+rotation are 0, 90, 180, and 270, which are each
+applied counterclockwise.</p>
 
 
 <table>
@@ -1993,7 +1991,7 @@
 
 
 
- Provides information about a display.
+<p>Provides information about a display.</p>
 
 
 <table>
@@ -2002,7 +2000,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The size of the display, in physical pixels.
+            <td><p>The size of the display, in physical pixels.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2020,16 +2018,16 @@
 
 
 
- Provides rendering target metrics information about the specified node.
-
- This event is delivered when the following conditions are true:
- - The node is a descendant of a `Scene`.
- - The node has `kMetricsEventMask` set to an enabled state.
- - The node's metrics have changed since they were last delivered, or since
-   `kMetricsEventMask` transitioned from a disabled state to an enabled state.
-
- Subscribe to this event to receive information about the scale factors you
- should apply when generating textures for your nodes.
+<p>Provides rendering target metrics information about the specified node.</p>
+<p>This event is delivered when the following conditions are true:</p>
+<ul>
+<li>The node is a descendant of a <code>Scene</code>.</li>
+<li>The node has <code>kMetricsEventMask</code> set to an enabled state.</li>
+<li>The node's metrics have changed since they were last delivered, or since
+<code>kMetricsEventMask</code> transitioned from a disabled state to an enabled state.</li>
+</ul>
+<p>Subscribe to this event to receive information about the scale factors you
+should apply when generating textures for your nodes.</p>
 
 
 <table>
@@ -2055,16 +2053,16 @@
 
 
 
- Delivered in response to a size change hint from a parent node
- (SendSizeChangeHintCmd).
-
- This event is delivered when the following conditions are true:
- - The node has `kSizeChangeEventMask` set to an enabled state.
- - A parent node has sent a SendSizeChangeHintCmd.
-
- Subscribe to this event to receive information about how large textures you
- will need in the near future for your nodes. The canonical use case is to
- pre-allocate memory to avoid repeated re-allocations.
+<p>Delivered in response to a size change hint from a parent node
+(SendSizeChangeHintCmd).</p>
+<p>This event is delivered when the following conditions are true:</p>
+<ul>
+<li>The node has <code>kSizeChangeEventMask</code> set to an enabled state.</li>
+<li>A parent node has sent a SendSizeChangeHintCmd.</li>
+</ul>
+<p>Subscribe to this event to receive information about how large textures you
+will need in the near future for your nodes. The canonical use case is to
+pre-allocate memory to avoid repeated re-allocations.</p>
 
 
 <table>
@@ -2097,9 +2095,9 @@
 
 
 
- Delivered when the imported resource with the given ID is no longer bound to
- its host resource, or if the imported resource can not be bound because
- the host resource is not available.
+<p>Delivered when the imported resource with the given ID is no longer bound to
+its host resource, or if the imported resource can not be bound because
+the host resource is not available.</p>
 
 
 <table>
@@ -2118,7 +2116,7 @@
 
 
 
- Delivered to a ViewHolder's Session when its peer View is connected.
+<p>Delivered to a ViewHolder's Session when its peer View is connected.</p>
 
 
 <table>
@@ -2137,11 +2135,10 @@
 
 
 
- Delivered to a ViewHolder's Session when its peer View is disconnected or
- destroyed.
-
- If the View is destroyed before the connection is established, then this
- event will be delivered immediately when the ViewHolder attempts to connect.
+<p>Delivered to a ViewHolder's Session when its peer View is disconnected or
+destroyed.</p>
+<p>If the View is destroyed before the connection is established, then this
+event will be delivered immediately when the ViewHolder attempts to connect.</p>
 
 
 <table>
@@ -2160,11 +2157,10 @@
 
 
 
- Delivered to a View's Session when its peer ViewHolder is disconnected or
- destroyed.
-
- If the ViewHolder is destroyed before the connection is established, then
- this event will be delivered immediately when the View attempts to connect.
+<p>Delivered to a View's Session when its peer ViewHolder is disconnected or
+destroyed.</p>
+<p>If the ViewHolder is destroyed before the connection is established, then
+this event will be delivered immediately when the View attempts to connect.</p>
 
 
 <table>
@@ -2183,10 +2179,9 @@
 
 
 
- Delivered to a View's Session when its peer ViewHolder is connected.
-
- If the ViewHolder is destroyed before the connection is established, then
- this event will not be delivered.
+<p>Delivered to a View's Session when its peer ViewHolder is connected.</p>
+<p>If the ViewHolder is destroyed before the connection is established, then
+this event will not be delivered.</p>
 
 
 <table>
@@ -2205,12 +2200,11 @@
 
 
 
- Delivered to a View's Session when the parent ViewHolder for the given View
- becomes a part of a Scene.
-
- A ViewHolder is considered to be part of a Scene if there is an unbroken
- chain of parent-child relationships between the Scene node and the
- ViewHolder node.
+<p>Delivered to a View's Session when the parent ViewHolder for the given View
+becomes a part of a Scene.</p>
+<p>A ViewHolder is considered to be part of a Scene if there is an unbroken
+chain of parent-child relationships between the Scene node and the
+ViewHolder node.</p>
 
 
 <table>
@@ -2236,15 +2230,13 @@
 
 
 
- Delivered to a View's Session when the parent ViewHolder for the given View
- is no longer part of a scene.
-
- This can happen if the ViewHolder is detached directly from the scene, or
- if one of its parent nodes is.
-
- A ViewHolder is considered to be part of a Scene if there is an unbroken
- chain of parent-child relationships between the Scene node and the
- ViewHolder node.
+<p>Delivered to a View's Session when the parent ViewHolder for the given View
+is no longer part of a scene.</p>
+<p>This can happen if the ViewHolder is detached directly from the scene, or
+if one of its parent nodes is.</p>
+<p>A ViewHolder is considered to be part of a Scene if there is an unbroken
+chain of parent-child relationships between the Scene node and the
+ViewHolder node.</p>
 
 
 <table>
@@ -2263,8 +2255,8 @@
 
 
 
- Delivered when the parent ViewHolder for the given View makes a change to
- the View's properties.
+<p>Delivered when the parent ViewHolder for the given View makes a change to
+the View's properties.</p>
 
 
 <table>
@@ -2290,7 +2282,7 @@
 
 
 
- Delivered to a ViewHolder's Session when its peer View's state has changed.
+<p>Delivered to a ViewHolder's Session when its peer View's state has changed.</p>
 
 
 <table>
@@ -2316,15 +2308,13 @@
 
 
 
- Describes where a hit occurred within the content of a node tagged
- by this session.
-
- To compute the point of intersection within the node's local coordinate
- system, perform the following calculation using the ray which was
- originally passed to `Session.HitTest()`.
-
-   hit_point = ray.origin + (hit.distance * ray.direction)
-   local_point = hit.inverse_transform * hit_point
+<p>Describes where a hit occurred within the content of a node tagged
+by this session.</p>
+<p>To compute the point of intersection within the node's local coordinate
+system, perform the following calculation using the ray which was
+originally passed to <code>Session.HitTest()</code>.</p>
+<p>hit_point = ray.origin + (hit.distance * ray.direction)
+local_point = hit.inverse_transform * hit_point</p>
 
 
 <table>
@@ -2333,7 +2323,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The node's tag value.
+            <td><p>The node's tag value.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2341,8 +2331,8 @@
             <td>
                 <code><a class='link' href='#vec4'>vec4</a></code>
             </td>
-            <td> The origin of the ray that was used for the hit test, in the hit
- node's coordinate system.
+            <td><p>The origin of the ray that was used for the hit test, in the hit
+node's coordinate system.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2350,8 +2340,8 @@
             <td>
                 <code><a class='link' href='#vec4'>vec4</a></code>
             </td>
-            <td> The direction of the ray that was used for the hit test, in the hit
- node's coordinate system.
+            <td><p>The direction of the ray that was used for the hit test, in the hit
+node's coordinate system.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2359,9 +2349,9 @@
             <td>
                 <code><a class='link' href='#mat4'>mat4</a></code>
             </td>
-            <td> The inverse transformation matrix which maps the coordinate system of
- the node at which the hit test was initiated into the local coordinate
- system of the node which was hit.
+            <td><p>The inverse transformation matrix which maps the coordinate system of
+the node at which the hit test was initiated into the local coordinate
+system of the node which was hit.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2369,8 +2359,8 @@
             <td>
                 <code>float32</code>
             </td>
-            <td> The distance from the ray's origin to the closest point of intersection
- in multiples of the ray's direction vector.
+            <td><p>The distance from the ray's origin to the closest point of intersection
+in multiples of the ray's direction vector.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -2381,10 +2371,12 @@
 
 
 
- Characteristics:
- - has_parent
- - has_shape
- - has_material
+<p>Characteristics:</p>
+<ul>
+<li>has_parent</li>
+<li>has_shape</li>
+<li>has_material</li>
+</ul>
 
 
 <table>
@@ -2403,10 +2395,12 @@
 
 
 
- Characteristics:
- - has_parent
- - is_clip
- - has_parts
+<p>Characteristics:</p>
+<ul>
+<li>has_parent</li>
+<li>is_clip</li>
+<li>has_parts</li>
+</ul>
 
 
 <table>
@@ -2425,12 +2419,14 @@
 
 
 
- Characteristics:
- - has_transform
- - has_parent
- - has_children
- - has_parts
- - has_opacity
+<p>Characteristics:</p>
+<ul>
+<li>has_transform</li>
+<li>has_parent</li>
+<li>has_children</li>
+<li>has_parts</li>
+<li>has_opacity</li>
+</ul>
 
 
 <table>
@@ -2449,12 +2445,14 @@
 
 
 
- Characteristics:
- - has_transform
- - has_children
- - has_parent
- - has_parts
- - has_clip
+<p>Characteristics:</p>
+<ul>
+<li>has_transform</li>
+<li>has_children</li>
+<li>has_parent</li>
+<li>has_parts</li>
+<li>has_clip</li>
+</ul>
 
 
 <table>
@@ -2491,7 +2489,7 @@
 
 
 
- `ImagePipe2` is a `Resource` that can be used as a `Texture` for a `Material`.
+<p><code>ImagePipe2</code> is a <code>Resource</code> that can be used as a <code>Texture</code> for a <code>Material</code>.</p>
 
 
 <table>
@@ -2510,8 +2508,8 @@
 
 
 
- `Memory` is a `Resource` that wraps a client-provided Zircon vmo to register
- it with Scenic.
+<p><code>Memory</code> is a <code>Resource</code> that wraps a client-provided Zircon vmo to register
+it with Scenic.</p>
 
 
 <table>
@@ -2544,7 +2542,7 @@
 
 
 
- An image mapped to a range of a `Memory` resource.
+<p>An image mapped to a range of a <code>Memory</code> resource.</p>
 
 
 <table>
@@ -2577,7 +2575,7 @@
 
 
 
- A buffer mapped to a range of `Memory`.
+<p>A buffer mapped to a range of <code>Memory</code>.</p>
 
 
 <table>
@@ -2610,17 +2608,15 @@
 
 
 
- Represents the root of a subgraph within a larger scene graph.  Nodes can be
- attached to the `View` as children, and these Nodes will have the `View`s'
- coordinate transform applied to their own, in addition to being clipped to
- the `View`s' bounding box.
- See `ViewProperties`.
-
- Each `View` is linked to a paired `ViewHolder` via a shared token pair.
-
- Usually the `View` and its associated `ViewHolder` exist in separate
- processes.  By combining them, the UI for an entire system can be built
- using content contributed from many different processes.
+<p>Represents the root of a subgraph within a larger scene graph.  Nodes can be
+attached to the <code>View</code> as children, and these Nodes will have the <code>View</code>s'
+coordinate transform applied to their own, in addition to being clipped to
+the <code>View</code>s' bounding box.
+See <code>ViewProperties</code>.</p>
+<p>Each <code>View</code> is linked to a paired <code>ViewHolder</code> via a shared token pair.</p>
+<p>Usually the <code>View</code> and its associated <code>ViewHolder</code> exist in separate
+processes.  By combining them, the UI for an entire system can be built
+using content contributed from many different processes.</p>
 
 
 <table>
@@ -2671,23 +2667,20 @@
 
 
 
- Represents the root of a subgraph within a larger scene graph.  Nodes can be
- attached to the |View| as children, and these Nodes will have the |View|s'
- coordinate transform applied to their own, in addition to being clipped to
- the |View|s' bounding box.
- See |ViewProperties|.
-
- Each |View| is linked to a paired |ViewHolder| via a shared token pair.
-
- Usually the |View| and its associated |ViewHolder| exist in separate
- processes.  By combining them, the UI for an entire system can be built
- using content contributed from many different processes.
-
- Clients self-identify their |View| with a |ViewRef|, which is a stable
- identifier that may be cloned and passed to other components in a
- feed-forward style. It is accompanied by a |ViewRefControl|, which Scenic
- uses to signal |View| destruction across the system; the |ViewRefControl|
- must be unique - do not clone it.
+<p>Represents the root of a subgraph within a larger scene graph.  Nodes can be
+attached to the |View| as children, and these Nodes will have the |View|s'
+coordinate transform applied to their own, in addition to being clipped to
+the |View|s' bounding box.
+See |ViewProperties|.</p>
+<p>Each |View| is linked to a paired |ViewHolder| via a shared token pair.</p>
+<p>Usually the |View| and its associated |ViewHolder| exist in separate
+processes.  By combining them, the UI for an entire system can be built
+using content contributed from many different processes.</p>
+<p>Clients self-identify their |View| with a |ViewRef|, which is a stable
+identifier that may be cloned and passed to other components in a
+feed-forward style. It is accompanied by a |ViewRefControl|, which Scenic
+uses to signal |View| destruction across the system; the |ViewRefControl|
+must be unique - do not clone it.</p>
 
 
 <table>
@@ -2703,7 +2696,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.ui.views/'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/#ViewRefControl'>ViewRefControl</a></code>
             </td>
-            <td> |control_ref.reference| must have full rights (i.e., with signaling).
+            <td><p>|control_ref.reference| must have full rights (i.e., with signaling).</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2711,7 +2704,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.ui.views/'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/#ViewRef'>ViewRef</a></code>
             </td>
-            <td> |view_ref.reference| must have basic rights (i.e., no signaling).
+            <td><p>|view_ref.reference| must have basic rights (i.e., no signaling).</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2729,15 +2722,13 @@
 
 
 
- Represents an attachment point for a subgraph within a larger scene graph.
- The `ViewHolder` can be attached to a Node as a child, and the contents of
- the linked `View` will become a child of the Node as well.
-
- Each `ViewHolder` is linked to a paired `View` via a shared token pair.
-
- Usually the `ViewHolder` and its associated `View` exist in separate
- processes.  By combining them, the UI for an entire system can be built
- using content contributed from many different processes.
+<p>Represents an attachment point for a subgraph within a larger scene graph.
+The <code>ViewHolder</code> can be attached to a Node as a child, and the contents of
+the linked <code>View</code> will become a child of the Node as well.</p>
+<p>Each <code>ViewHolder</code> is linked to a paired <code>View</code> via a shared token pair.</p>
+<p>Usually the <code>ViewHolder</code> and its associated <code>View</code> exist in separate
+processes.  By combining them, the UI for an entire system can be built
+using content contributed from many different processes.</p>
 
 
 <table>
@@ -2788,8 +2779,8 @@
 
 
 
- A Compositor draws its `LayerStack` into a framebuffer provided by its
- attached `Display`, if any.  If no display is attached, nothing is rendered.
+<p>A Compositor draws its <code>LayerStack</code> into a framebuffer provided by its
+attached <code>Display</code>, if any.  If no display is attached, nothing is rendered.</p>
 
 
 <table>
@@ -2808,8 +2799,8 @@
 
 
 
- A DisplayCompositor draws its attached `LayerStack` into an image that is
- presented on a display.
+<p>A DisplayCompositor draws its attached <code>LayerStack</code> into an image that is
+presented on a display.</p>
 
 
 <table>
@@ -2828,8 +2819,8 @@
 
 
 
- An ImagePipeCompositor draws its attached `LayerStack` into an image that is
- presented on an image-pipe.
+<p>An ImagePipeCompositor draws its attached <code>LayerStack</code> into an image that is
+presented on an image-pipe.</p>
 
 
 <table>
@@ -2848,13 +2839,14 @@
 
 
 
- A LayerStack is a stack of layers that are attached to a Compositor, which
- draws them in order of increasing Z-order (or rather, presents the illusion
- of drawing them in that order: it may apply any optimizations that don't
- affect the output).
-
- Supported commands:
- - AddLayer
+<p>A LayerStack is a stack of layers that are attached to a Compositor, which
+draws them in order of increasing Z-order (or rather, presents the illusion
+of drawing them in that order: it may apply any optimizations that don't
+affect the output).</p>
+<p>Supported commands:</p>
+<ul>
+<li>AddLayer</li>
+</ul>
 
 
 <table>
@@ -2873,20 +2865,21 @@
 
 
 
- A Layer is a 2-dimensional image that is drawn by a Compositor.  The
- contents of each Layer in a Layerstack are independent of each other.
- A layer is not drawn unless it has a camera, texture, or color.
-
- Supported commands:
- - Detach
- - SetCamera
- - SetColor
- - SetTexture
- - SetSize (depth must be zero)
- - SetSize
- - SetTranslation (z component determines the relative Z-ordering of layers)
- - SetRotation (must rotate around Z-axis)
- - SetScale
+<p>A Layer is a 2-dimensional image that is drawn by a Compositor.  The
+contents of each Layer in a Layerstack are independent of each other.
+A layer is not drawn unless it has a camera, texture, or color.</p>
+<p>Supported commands:</p>
+<ul>
+<li>Detach</li>
+<li>SetCamera</li>
+<li>SetColor</li>
+<li>SetTexture</li>
+<li>SetSize (depth must be zero)</li>
+<li>SetSize</li>
+<li>SetTranslation (z component determines the relative Z-ordering of layers)</li>
+<li>SetRotation (must rotate around Z-axis)</li>
+<li>SetScale</li>
+</ul>
 
 
 <table>
@@ -2905,12 +2898,13 @@
 
 
 
- A Scene is the root of a scene-graph, and defines the rendering environment
- (lighting, etc.) for the tree of nodes beneath it.
-
- Supported commands:
- - Add/RemoveLight
- - AddChild
+<p>A Scene is the root of a scene-graph, and defines the rendering environment
+(lighting, etc.) for the tree of nodes beneath it.</p>
+<p>Supported commands:</p>
+<ul>
+<li>Add/RemoveLight</li>
+<li>AddChild</li>
+</ul>
 
 
 <table>
@@ -2929,13 +2923,14 @@
 
 
 
- A Camera is used to render a Scene from a particular viewpoint.  This is
- achieved by setting a Renderer to use the camera.
-
- The following commands may be applied to a Camera:
- - SetCameraTransform
- - SetCameraProjection
- - SetCameraPoseBuffer
+<p>A Camera is used to render a Scene from a particular viewpoint.  This is
+achieved by setting a Renderer to use the camera.</p>
+<p>The following commands may be applied to a Camera:</p>
+<ul>
+<li>SetCameraTransform</li>
+<li>SetCameraProjection</li>
+<li>SetCameraPoseBuffer</li>
+</ul>
 
 
 <table>
@@ -2954,12 +2949,13 @@
 
 
 
- A StereoCamera is a Camera that renders the scene in side-by-side stereo.
-
- Any command which can be applied to a Camera can also be applied to a
- StereoCamera.
- Additional supported commands:
- - SetStereoCameraProjection
+<p>A StereoCamera is a Camera that renders the scene in side-by-side stereo.</p>
+<p>Any command which can be applied to a Camera can also be applied to a
+StereoCamera.
+Additional supported commands:</p>
+<ul>
+<li>SetStereoCameraProjection</li>
+</ul>
 
 
 <table>
@@ -2978,11 +2974,12 @@
 
 
 
- A Renderer renders a Scene via a Camera.
-
- Supported commands:
- - SetCamera
- - SetRendererParam
+<p>A Renderer renders a Scene via a Camera.</p>
+<p>Supported commands:</p>
+<ul>
+<li>SetCamera</li>
+<li>SetRendererParam</li>
+</ul>
 
 
 <table>
@@ -3001,11 +2998,12 @@
 
 
 
- An AmbientLight is a Light that is is assumed to be everywhere in the scene,
- in all directions.
-
- Supported commands:
- - SetLightColor
+<p>An AmbientLight is a Light that is is assumed to be everywhere in the scene,
+in all directions.</p>
+<p>Supported commands:</p>
+<ul>
+<li>SetLightColor</li>
+</ul>
 
 
 <table>
@@ -3024,16 +3022,16 @@
 
 
 
- A DirectionalLight is a Light that is emitted from a point at infinity.
-
- Although the light is directional, the light has some amount of angular
- dispersion (i.e., the light is not fully columnated). For simplicity, we
- assume the dispersion of the light source is symmetric about the light's
- primary direction.
-
- Supported commands:
- - SetLightColor
- - SetLightDirection
+<p>A DirectionalLight is a Light that is emitted from a point at infinity.</p>
+<p>Although the light is directional, the light has some amount of angular
+dispersion (i.e., the light is not fully columnated). For simplicity, we
+assume the dispersion of the light source is symmetric about the light's
+primary direction.</p>
+<p>Supported commands:</p>
+<ul>
+<li>SetLightColor</li>
+<li>SetLightDirection</li>
+</ul>
 
 
 <table>
@@ -3052,15 +3050,16 @@
 
 
 
- A PointLight is a Light that emits light in all directions.  By default, the
- intensity of the light falls off according to the physically based
- "inverse-square law" (see Wikipedia), although it can be adjusted to other
- values for artistic effect.
-
- Supported commands:
- - SetLightColor
- - SetPointLightPosition
- - SetPointLightFalloff
+<p>A PointLight is a Light that emits light in all directions.  By default, the
+intensity of the light falls off according to the physically based
+&quot;inverse-square law&quot; (see Wikipedia), although it can be adjusted to other
+values for artistic effect.</p>
+<p>Supported commands:</p>
+<ul>
+<li>SetLightColor</li>
+<li>SetPointLightPosition</li>
+<li>SetPointLightFalloff</li>
+</ul>
 
 
 <table>
@@ -3079,12 +3078,13 @@
 
 
 
- Simple texture-mapped material.
-
- Supported commands:
- - SetTextureCmd: sets the texture, or it can be left as zero (no texture).
-   The texture can be an Image or ImagePipe.
- - SetColorCmd: sets the color.
+<p>Simple texture-mapped material.</p>
+<p>Supported commands:</p>
+<ul>
+<li>SetTextureCmd: sets the texture, or it can be left as zero (no texture).
+The texture can be an Image or ImagePipe.</li>
+<li>SetColorCmd: sets the color.</li>
+</ul>
 
 
 <table>
@@ -3103,7 +3103,7 @@
 
 
 
- Describes a typed, client-modifiable value.
+<p>Describes a typed, client-modifiable value.</p>
 
 
 <table>
@@ -3129,7 +3129,7 @@
 
 
 
- Rectangle centered at (0,0).
+<p>Rectangle centered at (0,0).</p>
 
 
 <table>
@@ -3155,13 +3155,15 @@
 
 
 
- RoundedRectangle centered at (0,0).  Legal parameter values must satisfy the
- constraint that the flat sides of the rectangle have non-negative length.
- In other words, the following constraints must hold:
-   - top_left_radius + top_right_radius <= width
-   - bottom_left_radius + bottom_right_radius <= width
-   - top_left_radius + bottom_left_radius <= height
-   - top_right_radius + bottom_right_radius <= height
+<p>RoundedRectangle centered at (0,0).  Legal parameter values must satisfy the
+constraint that the flat sides of the rectangle have non-negative length.
+In other words, the following constraints must hold:</p>
+<ul>
+<li>top_left_radius + top_right_radius &lt;= width</li>
+<li>bottom_left_radius + bottom_right_radius &lt;= width</li>
+<li>top_left_radius + bottom_left_radius &lt;= height</li>
+<li>top_right_radius + bottom_right_radius &lt;= height</li>
+</ul>
 
 
 <table>
@@ -3233,8 +3235,8 @@
 
 
 
- A Mesh cannot be rendered until it has been bound to vertex/index buffers;
- see BindMeshBuffersCmd.
+<p>A Mesh cannot be rendered until it has been bound to vertex/index buffers;
+see BindMeshBuffersCmd.</p>
 
 
 <table>
@@ -3246,17 +3248,15 @@
 
 
 
- Token that uniquely identifies an attachment point for a subgraph in the
- global scene graph.  Each `ImportToken` has exactly one corresponding
- `ExportToken`.
-
- A Scenic client can reference contents from another client by creating a
- typed resource using this token.  The other client must also create a
- correspondingly typed resource using the corresponding `ExportToken`.
-
- The exact nature of the inter-client reference depends on the specific
- resources created from the tokens.  For example, creating a `ViewHolder`
- resource from this token allows a client to embed another client's `View`.
+<p>Token that uniquely identifies an attachment point for a subgraph in the
+global scene graph.  Each <code>ImportToken</code> has exactly one corresponding
+<code>ExportToken</code>.</p>
+<p>A Scenic client can reference contents from another client by creating a
+typed resource using this token.  The other client must also create a
+correspondingly typed resource using the corresponding <code>ExportToken</code>.</p>
+<p>The exact nature of the inter-client reference depends on the specific
+resources created from the tokens.  For example, creating a <code>ViewHolder</code>
+resource from this token allows a client to embed another client's <code>View</code>.</p>
 
 
 <table>
@@ -3275,18 +3275,16 @@
 
 
 
- Token that uniquely identifies a root point for a subgraph in the global
- scene graph. Each `ExportToken` has exactly one corresponding `ImportToken`.
-
- A Scenic client can have its contents referenced from another client by
- creating a typed resource using this token.  The other client must also
- create a correspondingly typed resource using the corresponding
- `ImportToken`.
-
- The exact nature of the inter-client reference depends on the specific
- resources created from the tokens.  For example, creating a `View`
- resource from this token allows everything attached to the `View` to be
- embedded in another clients `ViewHolder`.
+<p>Token that uniquely identifies a root point for a subgraph in the global
+scene graph. Each <code>ExportToken</code> has exactly one corresponding <code>ImportToken</code>.</p>
+<p>A Scenic client can have its contents referenced from another client by
+creating a typed resource using this token.  The other client must also
+create a correspondingly typed resource using the corresponding
+<code>ImportToken</code>.</p>
+<p>The exact nature of the inter-client reference depends on the specific
+resources created from the tokens.  For example, creating a <code>View</code>
+resource from this token allows everything attached to the <code>View</code> to be
+embedded in another clients <code>ViewHolder</code>.</p>
 
 
 <table>
@@ -3409,7 +3407,7 @@
             <td>
                 <code>float32[16]</code>
             </td>
-            <td> Column major order.
+            <td><p>Column major order.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3530,8 +3528,8 @@
 
 
 
- Oriented plane described by a normal vector and a distance
- from the origin along that vector.
+<p>Oriented plane described by a normal vector and a distance
+from the origin along that vector.</p>
 
 
 <table>
@@ -3579,7 +3577,7 @@
             <td>
                 <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
-            <td> Point around which rotation and scaling occur.
+            <td><p>Point around which rotation and scaling occur.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3597,10 +3595,10 @@
 
 
 
- A value that is specified explicitly by `value` if `variable_id` is zero,
- or is the value produced by the resource identified by `variable_id`, e.g.
- an animation or expression.  In the latter case, the value produced by the
- resource must be a float32, and `value` is ignored.
+<p>A value that is specified explicitly by <code>value</code> if <code>variable_id</code> is zero,
+or is the value produced by the resource identified by <code>variable_id</code>, e.g.
+an animation or expression.  In the latter case, the value produced by the
+resource must be a float32, and <code>value</code> is ignored.</p>
 
 
 <table>
@@ -3626,10 +3624,10 @@
 
 
 
- A value that is specified explicitly by `value` if `variable_id` is zero,
- or is the value produced by the resource identified by `variable_id`, e.g.
- an animation or expression.  In the latter case, the value produced by the
- resource must be a vec2, and `value` is ignored.
+<p>A value that is specified explicitly by <code>value</code> if <code>variable_id</code> is zero,
+or is the value produced by the resource identified by <code>variable_id</code>, e.g.
+an animation or expression.  In the latter case, the value produced by the
+resource must be a vec2, and <code>value</code> is ignored.</p>
 
 
 <table>
@@ -3655,10 +3653,10 @@
 
 
 
- A value that is specified explicitly by `value` if `variable_id` is zero,
- or is the value produced by the resource identified by `variable_id`, e.g.
- an animation or expression.  In the latter case, the value produced by the
- resource must be a vec3, and `value` is ignored.
+<p>A value that is specified explicitly by <code>value</code> if <code>variable_id</code> is zero,
+or is the value produced by the resource identified by <code>variable_id</code>, e.g.
+an animation or expression.  In the latter case, the value produced by the
+resource must be a vec3, and <code>value</code> is ignored.</p>
 
 
 <table>
@@ -3684,10 +3682,10 @@
 
 
 
- A value that is specified explicitly by `value` if `variable_id` is zero,
- or is the value produced by the resource identified by `variable_id`, e.g.
- an animation or expression.  In the latter case, the value produced by the
- resource must be a vec4, and `value` is ignored.
+<p>A value that is specified explicitly by <code>value</code> if <code>variable_id</code> is zero,
+or is the value produced by the resource identified by <code>variable_id</code>, e.g.
+an animation or expression.  In the latter case, the value produced by the
+resource must be a vec4, and <code>value</code> is ignored.</p>
 
 
 <table>
@@ -3713,10 +3711,10 @@
 
 
 
- A value that is specified explicitly by `value` if `variable_id` is zero,
- or is the value produced by the resource identified by `variable_id`, e.g.
- an animation or expression.  In the latter case, the value produced by the
- resource must be a vec4, and `value` is ignored.
+<p>A value that is specified explicitly by <code>value</code> if <code>variable_id</code> is zero,
+or is the value produced by the resource identified by <code>variable_id</code>, e.g.
+an animation or expression.  In the latter case, the value produced by the
+resource must be a vec4, and <code>value</code> is ignored.</p>
 
 
 <table>
@@ -3742,10 +3740,10 @@
 
 
 
- A value that is specified explicitly by `value` if `variable_id` is zero,
- or is the value produced by the resource identified by `variable_id`, e.g.
- an animation or expression.  In the latter case, the value produced by the
- resource must be a ColorRgb, and `value` is ignored.
+<p>A value that is specified explicitly by <code>value</code> if <code>variable_id</code> is zero,
+or is the value produced by the resource identified by <code>variable_id</code>, e.g.
+an animation or expression.  In the latter case, the value produced by the
+resource must be a ColorRgb, and <code>value</code> is ignored.</p>
 
 
 <table>
@@ -3771,10 +3769,10 @@
 
 
 
- A value that is specified explicitly by `value` if `variable_id` is zero,
- or is the value produced by the resource identified by `variable_id`, e.g.
- an animation or expression.  In the latter case, the value produced by the
- resource must be a ColorRgba, and `value` is ignored.
+<p>A value that is specified explicitly by <code>value</code> if <code>variable_id</code> is zero,
+or is the value produced by the resource identified by <code>variable_id</code>, e.g.
+an animation or expression.  In the latter case, the value produced by the
+resource must be a ColorRgba, and <code>value</code> is ignored.</p>
 
 
 <table>
@@ -3800,10 +3798,10 @@
 
 
 
- A value that is specified explicitly by `value` if `variable_id` is zero,
- or is the value produced by the resource identified by `variable_id`, e.g.
- an animation or expression.  In the latter case, the value produced by the
- resource must be a Quaternion, and `value` is ignored.
+<p>A value that is specified explicitly by <code>value</code> if <code>variable_id</code> is zero,
+or is the value produced by the resource identified by <code>variable_id</code>, e.g.
+an animation or expression.  In the latter case, the value produced by the
+resource must be a Quaternion, and <code>value</code> is ignored.</p>
 
 
 <table>
@@ -3829,8 +3827,8 @@
 
 
 
- Rendering target metrics associated with a node.
- See also `MetricsEvent`.
+<p>Rendering target metrics associated with a node.
+See also <code>MetricsEvent</code>.</p>
 
 
 <table>
@@ -3839,25 +3837,22 @@
             <td>
                 <code>float32</code>
             </td>
-            <td> The ratio between the size of one logical pixel within the node's local
- coordinate system and the size of one physical pixel of the rendering
- target.
-
- This scale factors change in relation to the resolution of the rendering
- target and the scale transformations applied by containing nodes.
- They are always strictly positive and non-zero.
-
- For example, suppose the rendering target is a high resolution display
- with a device pixel ratio of 2.0 meaning that each logical pixel
- within the model corresponds to two physical pixels of the display.
- Assuming no scale transformations affect the node, then its metrics event
- will report a scale factor of 2.0.
-
- Building on this example, if instead the node's parent applies a
- scale transformation of 0.25 to the node, then the node's metrics event
- will report a scale factor of 0.5 indicating that the node should render
- its content at a reduced resolution and level of detail since a smaller
- area of physical pixels (half the size in each dimension) will be rendered.
+            <td><p>The ratio between the size of one logical pixel within the node's local
+coordinate system and the size of one physical pixel of the rendering
+target.</p>
+<p>This scale factors change in relation to the resolution of the rendering
+target and the scale transformations applied by containing nodes.
+They are always strictly positive and non-zero.</p>
+<p>For example, suppose the rendering target is a high resolution display
+with a device pixel ratio of 2.0 meaning that each logical pixel
+within the model corresponds to two physical pixels of the display.
+Assuming no scale transformations affect the node, then its metrics event
+will report a scale factor of 2.0.</p>
+<p>Building on this example, if instead the node's parent applies a
+scale transformation of 0.25 to the node, then the node's metrics event
+will report a scale factor of 0.5 indicating that the node should render
+its content at a reduced resolution and level of detail since a smaller
+area of physical pixels (half the size in each dimension) will be rendered.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3882,9 +3877,9 @@
 
 
 
- Represents an axis-aligned bounding box.  If any of the dimensions has a
- negative extent (e.g. max.x < min.x) then the bounding box is treated as
- empty.
+<p>Represents an axis-aligned bounding box.  If any of the dimensions has a
+negative extent (e.g. max.x &lt; min.x) then the bounding box is treated as
+empty.</p>
 
 
 <table>
@@ -3910,7 +3905,7 @@
 
 
 
- Represents the properties for a View.
+<p>Represents the properties for a View.</p>
 
 
 <table>
@@ -3919,10 +3914,9 @@
             <td>
                 <code><a class='link' href='#BoundingBox'>BoundingBox</a></code>
             </td>
-            <td> The View's bounding box extents can be defined as:
-    { bounding_box.min + inset_from_min, bounding_box.max - inset_from_max }
- Content contained within the View is clipped to this bounding box.
-
+            <td><p>The View's bounding box extents can be defined as:
+{ bounding_box.min + inset_from_min, bounding_box.max - inset_from_max }
+Content contained within the View is clipped to this bounding box.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3930,8 +3924,8 @@
             <td>
                 <code><a class='link' href='#vec3'>vec3</a></code>
             </td>
-            <td> `insets_from_min` and `insets_from_max` specify the distances between the
- view's bounding box and that of its parent.
+            <td><p><code>insets_from_min</code> and <code>insets_from_max</code> specify the distances between the
+view's bounding box and that of its parent.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3946,9 +3940,9 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the View can receive a focus event; default is true.  When
- false, and this View is eligible to receive a focus event, no
- focus/unfocus event is actually sent to any View.
+            <td><p>Whether the View can receive a focus event; default is true.  When
+false, and this View is eligible to receive a focus event, no
+focus/unfocus event is actually sent to any View.</p>
 </td>
             <td>true</td>
         </tr><tr>
@@ -3956,9 +3950,9 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the View allows geometrically underlying Views to receive input;
- default is true. When false, Scenic does not send input events to
- underlying Views.
+            <td><p>Whether the View allows geometrically underlying Views to receive input;
+default is true. When false, Scenic does not send input events to
+underlying Views.</p>
 </td>
             <td>true</td>
         </tr>
@@ -3969,7 +3963,7 @@
 
 
 
- Represents the state of a View in Scenic.
+<p>Represents the state of a View in Scenic.</p>
 
 
 <table>
@@ -3978,8 +3972,8 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the View is rendering. Default is false. Delivered to the View's
- corresponding ViewHolder after the View's first frame render request.
+            <td><p>Whether the View is rendering. Default is false. Delivered to the View's
+corresponding ViewHolder after the View's first frame render request.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3994,27 +3988,27 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#621)*
 
- Set a mesh's indices and vertices.
-
- `mesh_id` refs the Mesh to be updated.
- `index_buffer_id` refs a Buffer that contains the mesh indices.
- `index_format` defines how the index buffer data is to be interpreted.
- `index_offset` number of bytes from the start of the index Buffer.
- `index_count` number of indices.
- `vertex_buffer_id` refs a Buffer that contains the mesh vertices.
- `vertex_format` defines how the vertex buffer data is to be interpreted.
- `vertex_offset` number of bytes from the start of the vertex Buffer.
- `vertex_count` number of vertices.
- `bounding_box` must contain all vertices within the specified range.
-
- The MeshVertexFormat defines which per-vertex attributes are provided by the
- mesh, and the size of each attribute (and therefore the size of each vertex).
- The attributes are ordered within the vertex in the same order that they
- appear within the MeshVertexFormat struct.  For example, if the values are
- kVector3, kNone and kVector2, then:
-   - each vertex has a position and UV-coordinates, but no surface normal.
-   - the 3D position occupies bytes 0-11 (3 dimensions * 4 bytes per float32).
-   - the UV coords occupy bytes 12-19, since no surface normal is provided.
+<p>Set a mesh's indices and vertices.</p>
+<p><code>mesh_id</code> refs the Mesh to be updated.
+<code>index_buffer_id</code> refs a Buffer that contains the mesh indices.
+<code>index_format</code> defines how the index buffer data is to be interpreted.
+<code>index_offset</code> number of bytes from the start of the index Buffer.
+<code>index_count</code> number of indices.
+<code>vertex_buffer_id</code> refs a Buffer that contains the mesh vertices.
+<code>vertex_format</code> defines how the vertex buffer data is to be interpreted.
+<code>vertex_offset</code> number of bytes from the start of the vertex Buffer.
+<code>vertex_count</code> number of vertices.
+<code>bounding_box</code> must contain all vertices within the specified range.</p>
+<p>The MeshVertexFormat defines which per-vertex attributes are provided by the
+mesh, and the size of each attribute (and therefore the size of each vertex).
+The attributes are ordered within the vertex in the same order that they
+appear within the MeshVertexFormat struct.  For example, if the values are
+kVector3, kNone and kVector2, then:</p>
+<ul>
+<li>each vertex has a position and UV-coordinates, but no surface normal.</li>
+<li>the 3D position occupies bytes 0-11 (3 dimensions * 4 bytes per float32).</li>
+<li>the UV coords occupy bytes 12-19, since no surface normal is provided.</li>
+</ul>
 
 
 <table>
@@ -4033,35 +4027,35 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.ui.gfx/renderer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/renderer.fidl#17)*
 
- Represents the shadow algorithm that the `Renderer` should use when lighting
- the scene.
+<p>Represents the shadow algorithm that the <code>Renderer</code> should use when lighting
+the scene.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNSHADOWED</code></td>
             <td><code>0</code></td>
-            <td> No shadows.
+            <td><p>No shadows.</p>
 </td>
         </tr><tr>
             <td><code>SCREEN_SPACE</code></td>
             <td><code>1</code></td>
-            <td> Default.  Screen-space, depth-buffer based shadows; SSDO-ish.
+            <td><p>Default.  Screen-space, depth-buffer based shadows; SSDO-ish.</p>
 </td>
         </tr><tr>
             <td><code>SHADOW_MAP</code></td>
             <td><code>2</code></td>
-            <td> Basic shadow map.
+            <td><p>Basic shadow map.</p>
 </td>
         </tr><tr>
             <td><code>MOMENT_SHADOW_MAP</code></td>
             <td><code>3</code></td>
-            <td> Moment shadow map (see http:///momentsingraphics.de).
+            <td><p>Moment shadow map (see http:///momentsingraphics.de).</p>
 </td>
         </tr><tr>
             <td><code>STENCIL_SHADOW_VOLUME</code></td>
             <td><code>4</code></td>
-            <td> Stencil shadow volume.
+            <td><p>Stencil shadow volume.</p>
 </td>
         </tr></table>
 
@@ -4076,13 +4070,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>WHEN_REQUESTED</code></td>
             <td><code>0</code></td>
-            <td> Render only on when requested (i.e. when something triggers it).
- Default behavior.
+            <td><p>Render only on when requested (i.e. when something triggers it).
+Default behavior.</p>
 </td>
         </tr><tr>
             <td><code>CONTINUOUSLY</code></td>
             <td><code>1</code></td>
-            <td> Render one frame after another regardless of it it's needed.
+            <td><p>Render one frame after another regardless of it it's needed.</p>
 </td>
         </tr></table>
 
@@ -4091,11 +4085,10 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#330)*
 
- Describes an exported resource that is to be imported by an
- ImportResourceCmd.
-
- NOTE: Currently just an enum of importable resource types, but may later be
- expanded to express concepts like "meshes with a particular vertex format".
+<p>Describes an exported resource that is to be imported by an
+ImportResourceCmd.</p>
+<p>NOTE: Currently just an enum of importable resource types, but may later be
+expanded to express concepts like &quot;meshes with a particular vertex format&quot;.</p>
 
 
 <table>
@@ -4160,19 +4153,19 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.ui.gfx/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/types.fidl#169)*
 
- Describes how nodes interact with hit testings.
+<p>Describes how nodes interact with hit testings.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>kDefault</code></td>
             <td><code>0</code></td>
-            <td> Apply hit testing to the node's content, its parts, and its children.
+            <td><p>Apply hit testing to the node's content, its parts, and its children.</p>
 </td>
         </tr><tr>
             <td><code>kSuppress</code></td>
             <td><code>1</code></td>
-            <td> Suppress hit testing of the node and everything it contains.
+            <td><p>Suppress hit testing of the node and everything it contains.</p>
 </td>
         </tr></table>
 
@@ -4185,7 +4178,7 @@ Type: <code>uint32</code>
 ### Command {#Command}
 *Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#10)*
 
- Commands that are used to modify the state of a `Session`.
+<p>Commands that are used to modify the state of a <code>Session</code>.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -4217,21 +4210,21 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#SetTagCmd'>SetTagCmd</a></code>
             </td>
-            <td> Tagging commands.
+            <td><p>Tagging commands.</p>
 </td>
         </tr><tr>
             <td><code>detach</code></td>
             <td>
                 <code><a class='link' href='#DetachCmd'>DetachCmd</a></code>
             </td>
-            <td> Grouping commands.
+            <td><p>Grouping commands.</p>
 </td>
         </tr><tr>
             <td><code>set_translation</code></td>
             <td>
                 <code><a class='link' href='#SetTranslationCmd'>SetTranslationCmd</a></code>
             </td>
-            <td> Spatial commands.
+            <td><p>Spatial commands.</p>
 </td>
         </tr><tr>
             <td><code>set_scale</code></td>
@@ -4274,14 +4267,14 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#AddChildCmd'>AddChildCmd</a></code>
             </td>
-            <td> Node-specific commands.
+            <td><p>Node-specific commands.</p>
 </td>
         </tr><tr>
             <td><code>add_part</code></td>
             <td>
                 <code><a class='link' href='#AddPartCmd'>AddPartCmd</a></code>
             </td>
-            <td> re-parenting?
+            <td><p>re-parenting?</p>
 </td>
         </tr><tr>
             <td><code>detach_children</code></td>
@@ -4330,7 +4323,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#SetCameraCmd'>SetCameraCmd</a></code>
             </td>
-            <td> Camera and lighting commands.
+            <td><p>Camera and lighting commands.</p>
 </td>
         </tr><tr>
             <td><code>set_camera_transform</code></td>
@@ -4403,14 +4396,14 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#BindMeshBuffersCmd'>BindMeshBuffersCmd</a></code>
             </td>
-            <td> Mesh commands.
+            <td><p>Mesh commands.</p>
 </td>
         </tr><tr>
             <td><code>add_layer</code></td>
             <td>
                 <code><a class='link' href='#AddLayerCmd'>AddLayerCmd</a></code>
             </td>
-            <td> Layer and renderer commands.
+            <td><p>Layer and renderer commands.</p>
 </td>
         </tr><tr>
             <td><code>remove_layer</code></td>
@@ -4447,21 +4440,21 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#SetEventMaskCmd'>SetEventMaskCmd</a></code>
             </td>
-            <td> Events.
+            <td><p>Events.</p>
 </td>
         </tr><tr>
             <td><code>set_label</code></td>
             <td>
                 <code><a class='link' href='#SetLabelCmd'>SetLabelCmd</a></code>
             </td>
-            <td> Diagnostic commands.
+            <td><p>Diagnostic commands.</p>
 </td>
         </tr><tr>
             <td><code>set_disable_clipping</code></td>
             <td>
                 <code><a class='link' href='#SetDisableClippingCmd'>SetDisableClippingCmd</a></code>
             </td>
-            <td> Debugging commands.
+            <td><p>Debugging commands.</p>
 </td>
         </tr><tr>
             <td><code>set_import_focus</code></td>
@@ -4540,8 +4533,8 @@ Type: <code>uint32</code>
 ### Event {#Event}
 *Defined in [fuchsia.ui.gfx/events.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/events.fidl#14)*
 
- These are all of the types of events which can be reported by a `Session`.
- Use `SetEventMaskCmd` to enable event delivery for a resource.
+<p>These are all of the types of events which can be reported by a <code>Session</code>.
+Use <code>SetEventMaskCmd</code> to enable event delivery for a resource.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -4549,7 +4542,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#MetricsEvent'>MetricsEvent</a></code>
             </td>
-            <td> Events which are controlled by a mask.
+            <td><p>Events which are controlled by a mask.</p>
 </td>
         </tr><tr>
             <td><code>size_change_hint</code></td>
@@ -4562,7 +4555,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ImportUnboundEvent'>ImportUnboundEvent</a></code>
             </td>
-            <td> Events which are always delivered, regardless of mask.
+            <td><p>Events which are always delivered, regardless of mask.</p>
 </td>
         </tr><tr>
             <td><code>view_connected</code></td>
@@ -4617,8 +4610,8 @@ Type: <code>uint32</code>
 ### RendererParam {#RendererParam}
 *Defined in [fuchsia.ui.gfx/renderer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/renderer.fidl#9)*
 
- These are all of the types of parameters that can be set to configure a
- `Renderer`.
+<p>These are all of the types of parameters that can be set to configure a
+<code>Renderer</code>.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -4644,8 +4637,8 @@ Type: <code>uint32</code>
 ### ResourceArgs {#ResourceArgs}
 *Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#12)*
 
- These are all of the types of resources that can be created within a
- `Session`. Add new fields only to the bottom of the list.
+<p>These are all of the types of resources that can be created within a
+<code>Session</code>. Add new fields only to the bottom of the list.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -4894,7 +4887,7 @@ Type: <code>uint32</code>
             <td>
                 <code>float32</code>
             </td>
-            <td> Degrees of counter-clockwise rotation in the XY plane.
+            <td><p>Degrees of counter-clockwise rotation in the XY plane.</p>
 </td>
         </tr><tr>
             <td><code>quaternion</code></td>
@@ -4913,8 +4906,8 @@ Type: <code>uint32</code>
             <td>
                 <code>uint32</code>
             </td>
-            <td> ID of a value-producing resource (an animation or an expression).
- The type of this value matches the type produced by the named resource.
+            <td><p>ID of a value-producing resource (an animation or an expression).
+The type of this value matches the type produced by the named resource.</p>
 </td>
         </tr></table>
 
@@ -4933,7 +4926,7 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum length for a resource label.
+            <td><p>Maximum length for a resource label.</p>
 </td>
         </tr>
     <tr>
@@ -4942,8 +4935,8 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Reports metrics information.
- This event type is only reported for node resources.
+            <td><p>Reports metrics information.
+This event type is only reported for node resources.</p>
 </td>
         </tr>
     <tr>

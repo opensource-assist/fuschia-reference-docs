@@ -11,8 +11,8 @@
 
 ### AddTileFromURL {#AddTileFromURL}
 
- Instantiates a component by its URL and adds a tile backed by that component's ViewProvider.
- Returns a key for the tile that can be used for resizing or removing the tile, or 0 on failure.
+<p>Instantiates a component by its URL and adds a tile backed by that component's ViewProvider.
+Returns a key for the tile that can be used for resizing or removing the tile, or 0 on failure.</p>
 
 #### Request
 <table>
@@ -47,8 +47,8 @@
 
 ### AddTileFromViewProvider {#AddTileFromViewProvider}
 
- Adds a tile backed by a view from the view provider.
- Returns a key for the tile that can be used for resizing or removing the tile, or 0 on failure.
+<p>Adds a tile backed by a view from the view provider.
+Returns a key for the tile that can be used for resizing or removing the tile, or 0 on failure.</p>
 
 #### Request
 <table>
@@ -78,7 +78,7 @@
 
 ### RemoveTile {#RemoveTile}
 
- Removes the tile with the given key.
+<p>Removes the tile with the given key.</p>
 
 #### Request
 <table>
@@ -94,7 +94,7 @@
 
 ### ListTiles {#ListTiles}
 
- Returns a list of tiles.
+<p>Returns a list of tiles.</p>
 
 #### Request
 <table>
@@ -129,7 +129,7 @@
 
 ### Quit {#Quit}
 
- Asks the tiles component to quit.
+<p>Asks the tiles component to quit.</p>
 
 #### Request
 <table>

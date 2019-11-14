@@ -8,14 +8,14 @@
 ## ServiceConsumer {#ServiceConsumer}
 *Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#14)*
 
- Interfaces applicable to consuming services from other devices
+<p>Interfaces applicable to consuming services from other devices</p>
 
 ### ListPeers {#ListPeers}
 
- Returns a list of all peers that are connected to this Overnet.
- If this list has not been updated since the last call to this method, it waits until
- new data is available.
- Concurrent calls to ListPeers will result in channel closure.
+<p>Returns a list of all peers that are connected to this Overnet.
+If this list has not been updated since the last call to this method, it waits until
+new data is available.
+Concurrent calls to ListPeers will result in channel closure.</p>
 
 #### Request
 <table>
@@ -35,7 +35,7 @@
 
 ### ConnectToService {#ConnectToService}
 
- Connect `chan` to some external service on `node` with name `service_name`.
+<p>Connect <code>chan</code> to some external service on <code>node</code> with name <code>service_name</code>.</p>
 
 #### Request
 <table>
@@ -62,12 +62,12 @@
 ## ServicePublisher {#ServicePublisher}
 *Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#28)*
 
- Interfaces applicable to sharing services with ServiceConsumer's
+<p>Interfaces applicable to sharing services with ServiceConsumer's</p>
 
 ### PublishService {#PublishService}
 
- Register a new service to be exported by Overnet.
- If an existing service has the same `service_name`, it's replaced by this service.
+<p>Register a new service to be exported by Overnet.
+If an existing service has the same <code>service_name</code>, it's replaced by this service.</p>
 
 #### Request
 <table>
@@ -89,11 +89,11 @@
 ## MeshController {#MeshController}
 *Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#37)*
 
- Interfaces applicable to controlling an Overnet mesh
+<p>Interfaces applicable to controlling an Overnet mesh</p>
 
 ### AttachSocketLink {#AttachSocketLink}
 
- Attach a socket as a new link.
+<p>Attach a socket as a new link.</p>
 
 #### Request
 <table>
@@ -115,15 +115,15 @@
 ## Overnet {#Overnet}
 *Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#45)*
 
- Legacy Overnet interface for applications that did not distinguish between ServiceConsumer and
- ServicePublisher
+<p>Legacy Overnet interface for applications that did not distinguish between ServiceConsumer and
+ServicePublisher</p>
 
 ### ListPeers {#ListPeers}
 
- Returns a list of all peers that are connected to this Overnet.
- If this list has not been updated since the last call to this method, it waits until
- new data is available.
- Concurrent calls to ListPeers will result in channel closure.
+<p>Returns a list of all peers that are connected to this Overnet.
+If this list has not been updated since the last call to this method, it waits until
+new data is available.
+Concurrent calls to ListPeers will result in channel closure.</p>
 
 #### Request
 <table>
@@ -143,7 +143,7 @@
 
 ### ConnectToService {#ConnectToService}
 
- Connect `chan` to some external service on `node` with name `service_name`.
+<p>Connect <code>chan</code> to some external service on <code>node</code> with name <code>service_name</code>.</p>
 
 #### Request
 <table>
@@ -169,8 +169,8 @@
 
 ### PublishService {#PublishService}
 
- Register a new service to be exported by Overnet.
- If an existing service has the same `service_name`, it's replaced by this service.
+<p>Register a new service to be exported by Overnet.
+If an existing service has the same <code>service_name</code>, it's replaced by this service.</p>
 
 #### Request
 <table>
@@ -192,12 +192,12 @@
 ## ServiceProvider {#ServiceProvider}
 *Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#51)*
 
- A ServiceProvider is a factory for one service.
+<p>A ServiceProvider is a factory for one service.</p>
 
 ### ConnectToService {#ConnectToService}
 
- Connect `chan` to the service (called in response to Overnet.ConnectToService).
- `info` provides additional data about the connection request.
+<p>Connect <code>chan</code> to the service (called in response to Overnet.ConnectToService).
+<code>info</code> provides additional data about the connection request.</p>
 
 #### Request
 <table>
@@ -225,7 +225,7 @@
 
 
 
- A `Peer` describes one device on the Overnet mesh.
+<p>A <code>Peer</code> describes one device on the Overnet mesh.</p>
 
 
 <table>
@@ -234,7 +234,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.overnet.protocol/'>fuchsia.overnet.protocol</a>/<a class='link' href='../fuchsia.overnet.protocol/#NodeId'>NodeId</a></code>
             </td>
-            <td> The address of the peer on the Overnet mesh.
+            <td><p>The address of the peer on the Overnet mesh.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -242,7 +242,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> A special peer is returned for this device, and is marked with `is_self` true.
+            <td><p>A special peer is returned for this device, and is marked with <code>is_self</code> true.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -250,7 +250,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.overnet.protocol/'>fuchsia.overnet.protocol</a>/<a class='link' href='../fuchsia.overnet.protocol/#PeerDescription'>PeerDescription</a></code>
             </td>
-            <td> A description of the peer (includes, for example, a service list).
+            <td><p>A description of the peer (includes, for example, a service list).</p>
 </td>
             <td>No default</td>
         </tr>
@@ -267,7 +267,7 @@
 
 *Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#68)*
 
- Extra arguments for attaching a socket link to an Overnet mesh.
+<p>Extra arguments for attaching a socket link to an Overnet mesh.</p>
 
 
 <table>
@@ -278,7 +278,7 @@
             <td>
                 <code>string[32]</code>
             </td>
-            <td> A label that might be used for debugging purposes.
+            <td><p>A label that might be used for debugging purposes.</p>
 </td>
         </tr></table>
 
@@ -287,7 +287,7 @@
 
 *Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#74)*
 
- Information provided to a ServiceProvider about an incoming connection.
+<p>Information provided to a ServiceProvider about an incoming connection.</p>
 
 
 <table>
@@ -298,7 +298,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.overnet.protocol/'>fuchsia.overnet.protocol</a>/<a class='link' href='../fuchsia.overnet.protocol/#NodeId'>NodeId</a></code>
             </td>
-            <td> The peer address initiating this connection.
+            <td><p>The peer address initiating this connection.</p>
 </td>
         </tr></table>
 

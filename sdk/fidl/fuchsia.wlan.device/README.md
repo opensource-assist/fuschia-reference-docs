@@ -103,7 +103,7 @@
 ## Connector {#Connector}
 *Defined in [fuchsia.wlan.device/phy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#123)*
 
- This protocol is used to connect to the real Phy protocol underlying this device.
+<p>This protocol is used to connect to the real Phy protocol underlying this device.</p>
 
 ### Connect {#Connect}
 
@@ -456,8 +456,8 @@
 
 
 
- The country code for a target WLAN PHY device.
- alpha2 is ISO 3166-1 code to indicate a country. eg. AF for Afghanistan.
+<p>The country code for a target WLAN PHY device.
+alpha2 is ISO 3166-1 code to indicate a country. eg. AF for Afghanistan.</p>
 
 
 <table>

@@ -11,11 +11,11 @@
 
 ### Register {#Register}
 
- Registers a listener with Scenic which will receive accessibility
- pointer events. These events will be handled by the accessibility
- listener, which will have the chance to either consume or reject them.
- If rejected, they will continue their normal flow. Only one listener can
- be registered.
+<p>Registers a listener with Scenic which will receive accessibility
+pointer events. These events will be handled by the accessibility
+listener, which will have the chance to either consume or reject them.
+If rejected, they will continue their normal flow. Only one listener can
+be registered.</p>
 
 #### Request
 <table>

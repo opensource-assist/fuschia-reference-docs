@@ -2,24 +2,24 @@
 
 # fuchsia.location.namedplace
 
- Protocols and types related to named places. Named places include cities,
- countries, regions, etc. This specifically excludes protocols and types
- related to latitude and longitude.
+<p>Protocols and types related to named places. Named places include cities,
+countries, regions, etc. This specifically excludes protocols and types
+related to latitude and longitude.</p>
 
 ## **PROTOCOLS**
 
 ## RegulatoryRegionConfigurator {#RegulatoryRegionConfigurator}
 *Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location/namedplace.fidl#20)*
 
- The RegulatoryRegionConfigurator protocol provides mechanisms to
- inform Location Services of the inputs that should be used to
- determine the regulatory region whose rules should govern the
- operation of radios on the system.
+<p>The RegulatoryRegionConfigurator protocol provides mechanisms to
+inform Location Services of the inputs that should be used to
+determine the regulatory region whose rules should govern the
+operation of radios on the system.</p>
 
 ### SetRegion {#SetRegion}
 
- Sets the region.
- + request `region` the current regulatory region.
+<p>Sets the region.
++ request <code>region</code> the current regulatory region.</p>
 
 #### Request
 <table>
@@ -36,28 +36,36 @@
 ## RegulatoryRegionWatcher {#RegulatoryRegionWatcher}
 *Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location/namedplace.fidl#30)*
 
- The RegulatoryRegionWatcher protocol provides the mechanism for
- radio subsystems to learn the currently applicable regulatory
- region, and to be notified when that value changes.
+<p>The RegulatoryRegionWatcher protocol provides the mechanism for
+radio subsystems to learn the currently applicable regulatory
+region, and to be notified when that value changes.</p>
 
 ### GetUpdate {#GetUpdate}
 
- Returns the new RegionCode, when it changes.
-
- Notes:
- * The first call returns immediately, if the region is already known.
- * The client is _not_ guaranteed to observe the effects of every call
-   to `SetRegion()`.
- * The client can, however, achieve _eventual_ consistency by always
-   issuing a new request when a request completes.
- * Clients should _not_ issue concurrent requests to this method.
-   * At present, concurrent requests
-     * May yield the same value, or different values.
-     * May complete out-of-order.
-   * In the future, concurrent requests will cause the channel to be
-     closed with `ZX_ERR_BAD_STATE`.
-
- - response `new_region` the current regulatory region.
+<p>Returns the new RegionCode, when it changes.</p>
+<p>Notes:</p>
+<ul>
+<li>The first call returns immediately, if the region is already known.</li>
+<li>The client is <em>not</em> guaranteed to observe the effects of every call
+to <code>SetRegion()</code>.</li>
+<li>The client can, however, achieve <em>eventual</em> consistency by always
+issuing a new request when a request completes.</li>
+<li>Clients should <em>not</em> issue concurrent requests to this method.
+<ul>
+<li>At present, concurrent requests
+<ul>
+<li>May yield the same value, or different values.</li>
+<li>May complete out-of-order.</li>
+</ul>
+</li>
+<li>In the future, concurrent requests will cause the channel to be
+closed with <code>ZX_ERR_BAD_STATE</code>.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>response <code>new_region</code> the current regulatory region.</li>
+</ul>
 
 #### Request
 <table>

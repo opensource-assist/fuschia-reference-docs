@@ -8,12 +8,12 @@
 ## FactoryReset {#FactoryReset}
 *Defined in [fuchsia.recovery/factory_reset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.recovery/factory_reset.fidl#11)*
 
- A protocol for intitiating a factory reset.
+<p>A protocol for intitiating a factory reset.</p>
 
 ### Reset {#Reset}
 
- Request an immediate factory reset. If unsuccessful will return an
- error.
+<p>Request an immediate factory reset. If unsuccessful will return an
+error.</p>
 
 #### Request
 <table>

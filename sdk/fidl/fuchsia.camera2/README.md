@@ -11,13 +11,13 @@
 
 ### OnDeviceAvailable {#OnDeviceAvailable}
 
- Notifies the client when a camera becomes available.  A number of these events will
- be sent when a client first connects to this protocol.
- |device_id| is used to identify the camera.  The device_id should not change throughout
- the lifetime of the camera.
- |last_known_camera| is set to true when the Camera Manager has notified the client
- of all the devices it currently knows about.
- |description| describes the properties of the camera.
+<p>Notifies the client when a camera becomes available.  A number of these events will
+be sent when a client first connects to this protocol.
+|device_id| is used to identify the camera.  The device_id should not change throughout
+the lifetime of the camera.
+|last_known_camera| is set to true when the Camera Manager has notified the client
+of all the devices it currently knows about.
+|description| describes the properties of the camera.</p>
 
 
 
@@ -43,7 +43,7 @@
 
 ### OnDeviceUnavailable {#OnDeviceUnavailable}
 
- Notifies the client when a camera becomes unavailable.
+<p>Notifies the client when a camera becomes unavailable.</p>
 
 
 
@@ -59,9 +59,9 @@
 
 ### OnDeviceMuteChanged {#OnDeviceMuteChanged}
 
- Notifies the client when a camera becomes muted or unmuted.
- |device_id| refers to the device_id from the description of a previous OnDeviceAvailable
- call.
+<p>Notifies the client when a camera becomes muted or unmuted.
+|device_id| refers to the device_id from the description of a previous OnDeviceAvailable
+call.</p>
 
 
 
@@ -82,8 +82,8 @@
 
 ### AcknowledgeDeviceEvent {#AcknowledgeDeviceEvent}
 
- AcknowledgeDeviceEvent must be called after any of the above events before more
- events will be sent.
+<p>AcknowledgeDeviceEvent must be called after any of the above events before more
+events will be sent.</p>
 
 #### Request
 <table>
@@ -94,21 +94,21 @@
 
 ### ConnectToStream {#ConnectToStream}
 
- Connect to a camera stream:
- |device_id| Refers to a specific device_id that has been advertised by OnDeviceAvailable.
- |constraints| contains a set of constraints on the requested stream.  The Camera
- Manager will attempt to find a stream that meets the constraints.  If multiple
- streams match, one of the matching streams will be connected.
- |token| refers to a Sysmem buffer allocation that will be used to pass images using
- the Stream protocol.  The Camera Manager will apply a BufferCollectionContraints
- related to the image format(s), so the client does not need to apply any
- ImageFormatConstraints.
- Sync is assumed to have been called on |token| before it is passed to
- ConnectToStream.
- Since |constraints| may not dictate a specific format, the initial format of images
- on the stream is indicated on the response.
- The connection is considered to be successful once a response has been given, unless
- |stream| is closed.
+<p>Connect to a camera stream:
+|device_id| Refers to a specific device_id that has been advertised by OnDeviceAvailable.
+|constraints| contains a set of constraints on the requested stream.  The Camera
+Manager will attempt to find a stream that meets the constraints.  If multiple
+streams match, one of the matching streams will be connected.
+|token| refers to a Sysmem buffer allocation that will be used to pass images using
+the Stream protocol.  The Camera Manager will apply a BufferCollectionContraints
+related to the image format(s), so the client does not need to apply any
+ImageFormatConstraints.
+Sync is assumed to have been called on |token| before it is passed to
+ConnectToStream.
+Since |constraints| may not dictate a specific format, the initial format of images
+on the stream is indicated on the response.
+The connection is considered to be successful once a response has been given, unless
+|stream| is closed.</p>
 
 #### Request
 <table>
@@ -152,11 +152,11 @@
 
 ### Mute {#Mute}
 
- Mutes a camera.  This is independent from stopping or closing a stream.  A muted
- camera will not produce any more images until
- unmute is called.  You can still connect to streams from a muted camera, but they
- will not produce frames until the camera is unmuted.
- |device_id| refers to the device_id from a previous OnDeviceAvailable call.
+<p>Mutes a camera.  This is independent from stopping or closing a stream.  A muted
+camera will not produce any more images until
+unmute is called.  You can still connect to streams from a muted camera, but they
+will not produce frames until the camera is unmuted.
+|device_id| refers to the device_id from a previous OnDeviceAvailable call.</p>
 
 #### Request
 <table>
@@ -209,8 +209,8 @@
 
 ### Start {#Start}
 
- Control Operations
- Starts the streaming of frames.
+<p>Control Operations
+Starts the streaming of frames.</p>
 
 #### Request
 <table>
@@ -221,7 +221,7 @@
 
 ### Stop {#Stop}
 
- Stops the streaming of frames.
+<p>Stops the streaming of frames.</p>
 
 #### Request
 <table>
@@ -232,7 +232,7 @@
 
 ### ReleaseFrame {#ReleaseFrame}
 
- Unlocks the specified frame, allowing the driver to reuse the memory.
+<p>Unlocks the specified frame, allowing the driver to reuse the memory.</p>
 
 #### Request
 <table>
@@ -248,12 +248,12 @@
 
 ### OnFrameAvailable {#OnFrameAvailable}
 
- Sent by the driver to the client when a frame is available for processing,
- or an error occurred.  The frame is considered read-locked by the client
- after this message.  The client must call ReleaseFrame to release the
- read-lock for a non-error frame, or the consumer will eventually run out of buffers.
- If a frame has an error, the client must call AcknowledgeFrameError before
- another OnFrameAvailable will be called with an error frame.
+<p>Sent by the driver to the client when a frame is available for processing,
+or an error occurred.  The frame is considered read-locked by the client
+after this message.  The client must call ReleaseFrame to release the
+read-lock for a non-error frame, or the consumer will eventually run out of buffers.
+If a frame has an error, the client must call AcknowledgeFrameError before
+another OnFrameAvailable will be called with an error frame.</p>
 
 
 
@@ -269,7 +269,7 @@
 
 ### AcknowledgeFrameError {#AcknowledgeFrameError}
 
- Provides flow control for receiving frame errors. See OnFrameAvailable comment.
+<p>Provides flow control for receiving frame errors. See OnFrameAvailable comment.</p>
 
 #### Request
 <table>
@@ -280,12 +280,12 @@
 
 ### SetRegionOfInterest {#SetRegionOfInterest}
 
- Data operations
- This is used by clients to provide inputs for region of interest
- selection.
- Inputs are the x & y coordinates for the new bounding box.
- For streams which do not support smart framing, this would
- return an error.
+<p>Data operations
+This is used by clients to provide inputs for region of interest
+selection.
+Inputs are the x &amp; y coordinates for the new bounding box.
+For streams which do not support smart framing, this would
+return an error.</p>
 
 #### Request
 <table>
@@ -325,9 +325,9 @@
 
 ### SetImageFormat {#SetImageFormat}
 
- Change the image format of the stream. This is called when clients want
- to dynamically change the resolution of the stream while the streaming is
- is going on.
+<p>Change the image format of the stream. This is called when clients want
+to dynamically change the resolution of the stream while the streaming is
+is going on.</p>
 
 #### Request
 <table>
@@ -352,7 +352,7 @@
 
 ### GetImageFormats {#GetImageFormats}
 
- Get the image formats that this stream supports.
+<p>Get the image formats that this stream supports.</p>
 
 #### Request
 <table>
@@ -379,8 +379,8 @@
 
 
 
- Sent by the driver to the client when a frame is available for processing,
- or an error occurred.
+<p>Sent by the driver to the client when a frame is available for processing,
+or an error occurred.</p>
 
 
 <table>
@@ -389,7 +389,7 @@
             <td>
                 <code><a class='link' href='#FrameStatus'>FrameStatus</a></code>
             </td>
-            <td> Non zero if an error occurred.
+            <td><p>Non zero if an error occurred.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -397,7 +397,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The index of the buffer in the buffer collection.
+            <td><p>The index of the buffer in the buffer collection.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -423,7 +423,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The frame rate is frames_per_sec_numerator / frames_per_sec_denominator.
+            <td><p>The frame rate is frames_per_sec_numerator / frames_per_sec_denominator.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -463,7 +463,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.camera2/stream.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera2/stream.fidl#14)*
 
- Status to be set when a frame is signalled available.
+<p>Status to be set when a frame is signalled available.</p>
 
 
 <table>
@@ -474,14 +474,14 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ERROR_FRAME</code></td>
             <td><code>1</code></td>
-            <td> An error occurred during the production of a frame.
- No data will be available in the data buffer corresponding to this
- notification.
+            <td><p>An error occurred during the production of a frame.
+No data will be available in the data buffer corresponding to this
+notification.</p>
 </td>
         </tr><tr>
             <td><code>ERROR_BUFFER_FULL</code></td>
             <td><code>2</code></td>
-            <td> No space was available in the data buffer, resulting in a dropped frame.
+            <td><p>No space was available in the data buffer, resulting in a dropped frame.</p>
 </td>
         </tr></table>
 
@@ -494,8 +494,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.camera2/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera2/manager.fidl#66)*
 
- These constraints are given to the Camera Manager when requesting a stream.  The
- Camera Manager will use these constraints to match an appropriate stream.
+<p>These constraints are given to the Camera Manager when requesting a stream.  The
+Camera Manager will use these constraints to match an appropriate stream.</p>
 
 
 <table>
@@ -506,8 +506,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#StreamProperties'>StreamProperties</a></code>
             </td>
-            <td> A table that describes the properties of the stream. Any properties specified will
- be considered requirements for matching streams.
+            <td><p>A table that describes the properties of the stream. Any properties specified will
+be considered requirements for matching streams.</p>
 </td>
         </tr></table>
 
@@ -516,7 +516,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.camera2/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera2/manager.fidl#78)*
 
- Identifying information about the device.
+<p>Identifying information about the device.</p>
 
 
 <table>
@@ -527,7 +527,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint16</code>
             </td>
-            <td> Information from physical device enumeration:
+            <td><p>Information from physical device enumeration:</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -563,7 +563,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#DeviceType'>DeviceType</a></code>
             </td>
-            <td> Information about the type of device:
+            <td><p>Information about the type of device:</p>
 </td>
         </tr></table>
 
@@ -589,8 +589,8 @@ Type: <code>uint32</code>
             <td>
                 <code>uint32</code>
             </td>
-            <td> |image_format_index| references the index into the vector of available
- formats supported by the stream.
+            <td><p>|image_format_index| references the index into the vector of available
+formats supported by the stream.</p>
 </td>
         </tr></table>
 
@@ -609,7 +609,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#CameraStreamType'>CameraStreamType</a></code>
             </td>
-            <td> These could be one or more of the above mentioned Stream Types
+            <td><p>These could be one or more of the above mentioned Stream Types</p>
 </td>
         </tr></table>
 
@@ -629,15 +629,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td>MACHINE_LEARNING</td>
             <td>1</td>
-            <td> ML request FR(Full Resolution) stream as well as
- a DS(Down Scaled Resolution) stream for Security Use Case
- which are of fixed resolutions
+            <td><p>ML request FR(Full Resolution) stream as well as
+a DS(Down Scaled Resolution) stream for Security Use Case
+which are of fixed resolutions</p>
 </td>
         </tr><tr>
             <td>MONITORING</td>
             <td>2</td>
-            <td> This is Security Video Stream which could support multiple
- resolutions at runtime.
+            <td><p>This is Security Video Stream which could support multiple
+resolutions at runtime.</p>
 </td>
         </tr><tr>
             <td>FULL_RESOLUTION</td>
@@ -646,13 +646,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td>DOWNSCALED_RESOLUTION</td>
             <td>8</td>
-            <td> ML request a DS stream for Video Conferencing which is fixed resolution
+            <td><p>ML request a DS stream for Video Conferencing which is fixed resolution</p>
 </td>
         </tr><tr>
             <td>VIDEO_CONFERENCE</td>
             <td>16</td>
-            <td> This is Video Conferencing Stream which could support
- multiple resolutions at runtime.
+            <td><p>This is Video Conferencing Stream which could support
+multiple resolutions at runtime.</p>
 </td>
         </tr></table>
 
@@ -667,7 +667,7 @@ Type: <code>uint32</code>
                     <code>256</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td> Maximum number of image formats per stream.
+            <td><p>Maximum number of image formats per stream.</p>
 </td>
         </tr>
     

@@ -11,10 +11,9 @@
 
 ### SealData {#SealData}
 
- Seal data to an encrypted form.
-
- Seal data to an encrypted form. The sealed data can only be unsealed by the same KMS instance
- by using UnsealData. `plain_text` needs to be less than `MAX_DATA_SIZE` bytes.
+<p>Seal data to an encrypted form.</p>
+<p>Seal data to an encrypted form. The sealed data can only be unsealed by the same KMS instance
+by using UnsealData. <code>plain_text</code> needs to be less than <code>MAX_DATA_SIZE</code> bytes.</p>
 
 #### Request
 <table>
@@ -39,9 +38,8 @@
 
 ### UnsealData {#UnsealData}
 
- Unseal sealed data.
-
- Unseal data previously sealed by this KMS instance.
+<p>Unseal sealed data.</p>
+<p>Unseal data previously sealed by this KMS instance.</p>
 
 #### Request
 <table>
@@ -66,12 +64,11 @@
 
 ### GenerateAsymmetricKey {#GenerateAsymmetricKey}
 
- Generate an asymmetric key.
-
- Generate an asymmetric key using `key_name` as the unique name. `key` is the generated
- asymmetric key interface request. If the `key_name` is not unique, you would get
- `KEY_ALREADY_EXISTS`. The generated key can be used to sign data. The algorithm used for
- generating asymmetric key is `ECDSA_SHA512_P521`.
+<p>Generate an asymmetric key.</p>
+<p>Generate an asymmetric key using <code>key_name</code> as the unique name. <code>key</code> is the generated
+asymmetric key interface request. If the <code>key_name</code> is not unique, you would get
+<code>KEY_ALREADY_EXISTS</code>. The generated key can be used to sign data. The algorithm used for
+generating asymmetric key is <code>ECDSA_SHA512_P521</code>.</p>
 
 #### Request
 <table>
@@ -101,11 +98,10 @@
 
 ### GenerateAsymmetricKeyWithAlgorithm {#GenerateAsymmetricKeyWithAlgorithm}
 
- Generate an asymmetric key with a specific algorithm.
-
- Generate an asymmetric key using `key_name` as the unique name and `key_algorithm` as
- algorithm. `key` is the generated asymmetric key interface request. If the `key_name` is not
- unique, you would get `KEY_ALREADY_EXISTS`.
+<p>Generate an asymmetric key with a specific algorithm.</p>
+<p>Generate an asymmetric key using <code>key_name</code> as the unique name and <code>key_algorithm</code> as
+algorithm. <code>key</code> is the generated asymmetric key interface request. If the <code>key_name</code> is not
+unique, you would get <code>KEY_ALREADY_EXISTS</code>.</p>
 
 #### Request
 <table>
@@ -140,12 +136,11 @@
 
 ### ImportAsymmetricPrivateKey {#ImportAsymmetricPrivateKey}
 
- Import an asymmetric private key with a specific algorithm.
-
- Import an asymmetric private key using `key_name` as the unique name, `key_algorithm` as
- algorithm and `data` as key data. `key` is imported asymmetric key interface request. Key
- data should be in asn.1 encoded DER format. If the `key_name` is not unique, you would get
- `KEY_ALREADY_EXISTS`.
+<p>Import an asymmetric private key with a specific algorithm.</p>
+<p>Import an asymmetric private key using <code>key_name</code> as the unique name, <code>key_algorithm</code> as
+algorithm and <code>data</code> as key data. <code>key</code> is imported asymmetric key interface request. Key
+data should be in asn.1 encoded DER format. If the <code>key_name</code> is not unique, you would get
+<code>KEY_ALREADY_EXISTS</code>.</p>
 
 #### Request
 <table>
@@ -185,10 +180,9 @@
 
 ### GetAsymmetricPrivateKey {#GetAsymmetricPrivateKey}
 
- Get an asymmetric private key handle.
-
- Get an asymmetric private key handle using the `key_name`. If such key is not found, would
- return `KEY_NOT_FOUND`.
+<p>Get an asymmetric private key handle.</p>
+<p>Get an asymmetric private key handle using the <code>key_name</code>. If such key is not found, would
+return <code>KEY_NOT_FOUND</code>.</p>
 
 #### Request
 <table>
@@ -218,11 +212,10 @@
 
 ### DeleteKey {#DeleteKey}
 
- Delete a key.
-
- Delete a key for `key_name`.  For all the current handle to the deleted key, they would
- become invalid and all following requests on those handles would return `KEY_NOT_FOUND`, user
- should close the invalid handles once get `KEY_NOT_FOUND` error.
+<p>Delete a key.</p>
+<p>Delete a key for <code>key_name</code>.  For all the current handle to the deleted key, they would
+become invalid and all following requests on those handles would return <code>KEY_NOT_FOUND</code>, user
+should close the invalid handles once get <code>KEY_NOT_FOUND</code> error.</p>
 
 #### Request
 <table>
@@ -251,7 +244,7 @@
 
 ### GetKeyOrigin {#GetKeyOrigin}
 
- Get the key origin (generated/imported).
+<p>Get the key origin (generated/imported).</p>
 
 #### Request
 <table>
@@ -271,7 +264,7 @@
 
 ### GetKeyProvider {#GetKeyProvider}
 
- Get the name for the crypto provider backing up the key.
+<p>Get the name for the crypto provider backing up the key.</p>
 
 #### Request
 <table>
@@ -295,7 +288,7 @@
 
 ### GetKeyOrigin {#GetKeyOrigin}
 
- Get the key origin (generated/imported).
+<p>Get the key origin (generated/imported).</p>
 
 #### Request
 <table>
@@ -315,7 +308,7 @@
 
 ### GetKeyProvider {#GetKeyProvider}
 
- Get the name for the crypto provider backing up the key.
+<p>Get the name for the crypto provider backing up the key.</p>
 
 #### Request
 <table>
@@ -335,7 +328,7 @@
 
 ### Sign {#Sign}
 
- Sign `data` using the current key. `data` needs to be less than `MAX_DATA_SIZE` bytes.
+<p>Sign <code>data</code> using the current key. <code>data</code> needs to be less than <code>MAX_DATA_SIZE</code> bytes.</p>
 
 #### Request
 <table>
@@ -360,7 +353,7 @@
 
 ### GetPublicKey {#GetPublicKey}
 
- Get the DER format public key for the current private key.
+<p>Get the DER format public key for the current private key.</p>
 
 #### Request
 <table>
@@ -380,7 +373,7 @@
 
 ### GetKeyAlgorithm {#GetKeyAlgorithm}
 
- Get the key algorithm.
+<p>Get the key algorithm.</p>
 
 #### Request
 <table>
@@ -404,12 +397,11 @@
 
 ### GetHardwareDerivedKey {#GetHardwareDerivedKey}
 
- Get a hardware key derived key.
-
- Get a key derived from hardware root key using | key_info | as info and the trusted app ID
- as salt. This call is deterministic and always returns the same result if given the same
- | key_info | on the same device and would be different across different devices if they have
- different hardware keys.
+<p>Get a hardware key derived key.</p>
+<p>Get a key derived from hardware root key using | key_info | as info and the trusted app ID
+as salt. This call is deterministic and always returns the same result if given the same
+| key_info | on the same device and would be different across different devices if they have
+different hardware keys.</p>
 
 #### Request
 <table>
@@ -686,27 +678,27 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INTERNAL_ERROR</code></td>
             <td><code>1</code></td>
-            <td> Internal unexpected error.
+            <td><p>Internal unexpected error.</p>
 </td>
         </tr><tr>
             <td><code>KEY_ALREADY_EXISTS</code></td>
             <td><code>2</code></td>
-            <td> When trying to create/import a new key but a key with the same name already exists.
+            <td><p>When trying to create/import a new key but a key with the same name already exists.</p>
 </td>
         </tr><tr>
             <td><code>KEY_NOT_FOUND</code></td>
             <td><code>3</code></td>
-            <td> When the key you are trying to use is not found.
+            <td><p>When the key you are trying to use is not found.</p>
 </td>
         </tr><tr>
             <td><code>PARSE_KEY_ERROR</code></td>
             <td><code>4</code></td>
-            <td> When the key material could not be parsed.
+            <td><p>When the key material could not be parsed.</p>
 </td>
         </tr><tr>
             <td><code>INPUT_TOO_LARGE</code></td>
             <td><code>5</code></td>
-            <td> When the size for input data is larger than `MAX_DATA_SIZE`.
+            <td><p>When the size for input data is larger than <code>MAX_DATA_SIZE</code>.</p>
 </td>
         </tr></table>
 
@@ -767,12 +759,12 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>GENERATED</code></td>
             <td><code>1</code></td>
-            <td> The key was generated in this KMS instance.
+            <td><p>The key was generated in this KMS instance.</p>
 </td>
         </tr><tr>
             <td><code>IMPORTED</code></td>
             <td><code>2</code></td>
-            <td> The key was imported.
+            <td><p>The key was imported.</p>
 </td>
         </tr></table>
 
@@ -787,23 +779,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>MOCK_PROVIDER</code></td>
             <td><code>1</code></td>
-            <td> A mock provider only used for unit testing.
+            <td><p>A mock provider only used for unit testing.</p>
 </td>
         </tr><tr>
             <td><code>SOFTWARE_PROVIDER</code></td>
             <td><code>2</code></td>
-            <td> A software provider that uses rust AesGcm trait for symmetric key operation and mundane for
- asymmetric key operation.
+            <td><p>A software provider that uses rust AesGcm trait for symmetric key operation and mundane for
+asymmetric key operation.</p>
 </td>
         </tr><tr>
             <td><code>SOFTWARE_ASYMMETRIC_ONLY_PROVIDER</code></td>
             <td><code>3</code></td>
-            <td> A software provider that only supports mundane-based asymmetric key operation.
+            <td><p>A software provider that only supports mundane-based asymmetric key operation.</p>
 </td>
         </tr><tr>
             <td><code>OPTEE_PROVIDER</code></td>
             <td><code>4</code></td>
-            <td> A crypto provider based on Keysafe Trusted App in OPTEE.
+            <td><p>A crypto provider based on Keysafe Trusted App in OPTEE.</p>
 </td>
         </tr></table>
 

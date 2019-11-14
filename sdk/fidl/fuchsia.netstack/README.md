@@ -11,9 +11,9 @@
 
 ### GetPortForService {#GetPortForService}
 
- Finds the port number from a given service name and protocol. [service] can be a
- number like "42", or a service name like "http". If [protocol] is UNSPECIFIED,
- the service is checked for TCP first, then UDP.
+<p>Finds the port number from a given service name and protocol. [service] can be a
+number like &quot;42&quot;, or a service name like &quot;http&quot;. If [protocol] is UNSPECIFIED,
+the service is checked for TCP first, then UDP.</p>
 
 #### Request
 <table>
@@ -43,9 +43,9 @@
 
 ### GetAddress {#GetAddress}
 
- Finds the IP address for a given host name and port. This may issue network
- requests via DNS to look up domain names. E.g.
- GetAddress("example.com", 80) -> [{142.42.42.1}]
+<p>Finds the IP address for a given host name and port. This may issue network
+requests via DNS to look up domain names. E.g.
+GetAddress(&quot;example.com&quot;, 80) -&gt; [{142.42.42.1}]</p>
 
 #### Request
 <table>
@@ -80,7 +80,7 @@
 
 ### GetInterfaces {#GetInterfaces}
 
- Returns the list of registered network interfaces.
+<p>Returns the list of registered network interfaces.</p>
 
 #### Request
 <table>
@@ -119,7 +119,7 @@
 
 ### GetRouteTable {#GetRouteTable}
 
- Returns current route table.
+<p>Returns current route table.</p>
 
 #### Request
 <table>
@@ -158,7 +158,7 @@
 
 ### SetInterfaceStatus {#SetInterfaceStatus}
 
- Sets the status (up or down) for the interface with the given nicid.
+<p>Sets the status (up or down) for the interface with the given nicid.</p>
 
 #### Request
 <table>
@@ -179,8 +179,8 @@
 
 ### SetInterfaceAddress {#SetInterfaceAddress}
 
- Sets the address for the interface with the given nicid.
- Masks off addr.PrefixLen bits from addr.Addr to set the subnet.
+<p>Sets the address for the interface with the given nicid.
+Masks off addr.PrefixLen bits from addr.Addr to set the subnet.</p>
 
 #### Request
 <table>
@@ -215,8 +215,8 @@
 
 ### RemoveInterfaceAddress {#RemoveInterfaceAddress}
 
- Removes the address for the interface with the given nicid.
- Masks off addr.PrefixLen bits from addr.Addr to set the subnet.
+<p>Removes the address for the interface with the given nicid.
+Masks off addr.PrefixLen bits from addr.Addr to set the subnet.</p>
 
 #### Request
 <table>
@@ -251,7 +251,7 @@
 
 ### SetInterfaceMetric {#SetInterfaceMetric}
 
- Sets the route metric for the interface with the given nicid.
+<p>Sets the route metric for the interface with the given nicid.</p>
 
 #### Request
 <table>
@@ -281,8 +281,8 @@
 
 ### BridgeInterfaces {#BridgeInterfaces}
 
- Creates a bridge and returns the newly created nicid or an
- error if the creation fails.
+<p>Creates a bridge and returns the newly created nicid or an
+error if the creation fails.</p>
 
 #### Request
 <table>
@@ -375,8 +375,8 @@
 
 ### StartRouteTableTransaction {#StartRouteTableTransaction}
 
- Begin a route transaction for atomically getting and setting the route
- table.  Returns true if a transaction can be started.
+<p>Begin a route transaction for atomically getting and setting the route
+table.  Returns true if a transaction can be started.</p>
 
 #### Request
 <table>
@@ -545,8 +545,8 @@
             <td>
                 <code>string</code>
             </td>
-            <td> An unstable file path corresponding to the interface. Used in watching the creation
- and destruction of the interface, or in accessing the interface using netdump.
+            <td><p>An unstable file path corresponding to the interface. Used in watching the creation
+and destruction of the interface, or in accessing the interface using netdump.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -561,8 +561,8 @@
             <td>
                 <code><a class='link' href='#IpAddressConfig'>IpAddressConfig</a></code>
             </td>
-            <td> Deprecated; to configure a network interface, use SetDhcpClientStatus
- and SetInterfaceAddress instead.
+            <td><p>Deprecated; to configure a network interface, use SetDhcpClientStatus
+and SetInterfaceAddress instead.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -573,7 +573,7 @@
 
 
 
- https://linux.die.net/man/7/netdevice
+<p>https://linux.die.net/man/7/netdevice</p>
 
 
 <table>
@@ -655,7 +655,7 @@
 
 
 
- New version that includes a metric value.
+<p>New version that includes a metric value.</p>
 
 
 <table>
@@ -783,7 +783,7 @@
 
 
 
- New version that includes a metric value.
+<p>New version that includes a metric value.</p>
 
 
 <table>
@@ -969,7 +969,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Flags for NetInterface.flags.
+            <td><p>Flags for NetInterface.flags.</p>
 </td>
         </tr>
     <tr>

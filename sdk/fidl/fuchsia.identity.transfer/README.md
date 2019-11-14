@@ -8,19 +8,18 @@
 ## AccountManagerPeer {#AccountManagerPeer}
 *Defined in [fuchsia.identity.transfer/account_transfer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_transfer.fidl#17)*
 
- The control protocol used by two AccountManager components on different
- devices to exchange information.
-
- Note: this is a sensitive interface and connections should only be created
- between AccountManagers on remotely attested devices.  No components on
- the same device should connect over this protocol.
+<p>The control protocol used by two AccountManager components on different
+devices to exchange information.</p>
+<p>Note: this is a sensitive interface and connections should only be created
+between AccountManagers on remotely attested devices.  No components on
+the same device should connect over this protocol.</p>
 
 ### ReceiveAccount {#ReceiveAccount}
 
- Requests an account transfer.
- `lifetime` The lifetime that the transferred account should have
-   on the target device.
- `account_transfer` The server end of an `AccountTransfer` channel.
+<p>Requests an account transfer.
+<code>lifetime</code> The lifetime that the transferred account should have
+on the target device.
+<code>account_transfer</code> The server end of an <code>AccountTransfer</code> channel.</p>
 
 #### Request
 <table>
@@ -42,24 +41,23 @@
 ## AccountTransfer {#AccountTransfer}
 *Defined in [fuchsia.identity.transfer/account_transfer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_transfer.fidl#37)*
 
- The control channel through which AccountManager components on different
- devices communicate to execute an account transfer.
-
- When an account needs to be transferred, the source device should request
- an `AccountTransfer` connection using the `ReceiveAccount` method on the
- `AccountManagerPeer` exposed by the target device.
- Once the target device is ready, it sends an `OnTransferReady` containing
- a `target_key`.
- The source device should then encrypt the account using the `target_key`
- and complete the transfer with `CompleteAccountTransfer`.
- Once the account transfer is complete, the channel is closed.
+<p>The control channel through which AccountManager components on different
+devices communicate to execute an account transfer.</p>
+<p>When an account needs to be transferred, the source device should request
+an <code>AccountTransfer</code> connection using the <code>ReceiveAccount</code> method on the
+<code>AccountManagerPeer</code> exposed by the target device.
+Once the target device is ready, it sends an <code>OnTransferReady</code> containing
+a <code>target_key</code>.
+The source device should then encrypt the account using the <code>target_key</code>
+and complete the transfer with <code>CompleteAccountTransfer</code>.
+Once the account transfer is complete, the channel is closed.</p>
 
 ### OnTransferReady {#OnTransferReady}
 
- This event is sent once by the target device when it has completed
- preparing to receive an account.  The event contains a `target_key`
- which should be used to encrypt the account data sent through
- `CompleteAccountTransfer`.
+<p>This event is sent once by the target device when it has completed
+preparing to receive an account.  The event contains a <code>target_key</code>
+which should be used to encrypt the account data sent through
+<code>CompleteAccountTransfer</code>.</p>
 
 
 
@@ -75,13 +73,12 @@
 
 ### CompleteAccountTransfer {#CompleteAccountTransfer}
 
- Completes the account transfer by sending the transfered data.
- The data is opaque to the AccountManager binary, and should be
- supplied and encrypted by the account handler on the source device
- using the `target_key` received through `OnTransferReady`.
-
- If the account is already present on the target device this fails
- with UNSUPPORTED_OPERATION.
+<p>Completes the account transfer by sending the transfered data.
+The data is opaque to the AccountManager binary, and should be
+supplied and encrypted by the account handler on the source device
+using the <code>target_key</code> received through <code>OnTransferReady</code>.</p>
+<p>If the account is already present on the target device this fails
+with UNSUPPORTED_OPERATION.</p>
 
 #### Request
 <table>

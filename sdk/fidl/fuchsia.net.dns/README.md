@@ -8,14 +8,14 @@
 ## DnsPolicy {#DnsPolicy}
 *Defined in [fuchsia.net.dns/dns.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.dns/dns.fidl#29)*
 
- This interface is used to interact with the policy layer of the fuchsia
- netstack implementation that is hosted in netcfg.  This interface is
- for use solely by privileged system components such as a 'system setting'
- user interface, and can be used to change system-wide DNS settings.
+<p>This interface is used to interact with the policy layer of the fuchsia
+netstack implementation that is hosted in netcfg.  This interface is
+for use solely by privileged system components such as a 'system setting'
+user interface, and can be used to change system-wide DNS settings.</p>
 
 ### SetDNSConfig {#SetDNSConfig}
 
- Set the DNS servers' IP addresses.
+<p>Set the DNS servers' IP addresses.</p>
 
 #### Request
 <table>
@@ -40,7 +40,7 @@
 
 ### GetDNSConfig {#GetDNSConfig}
 
- Get the DNS servers' IP addresses.
+<p>Get the DNS servers' IP addresses.</p>
 
 #### Request
 <table>
@@ -85,7 +85,7 @@
 
 
 
- Settings for the system-wide DNS behavior.
+<p>Settings for the system-wide DNS behavior.</p>
 
 
 <table>

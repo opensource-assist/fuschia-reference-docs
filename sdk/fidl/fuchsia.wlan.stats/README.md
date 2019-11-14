@@ -129,9 +129,9 @@
 
 
 
- RssiStats count the occurrence of the RSSIs.
- RSSI value r's occurrence is counted in the bin[-r],
- where r is defined in [-128, 0] in dBm.
+<p>RssiStats count the occurrence of the RSSIs.
+RSSI value r's occurrence is counted in the bin[-r],
+where r is defined in [-128, 0] in dBm.</p>
 
 
 <table>

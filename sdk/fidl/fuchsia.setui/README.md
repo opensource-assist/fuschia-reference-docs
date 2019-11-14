@@ -8,18 +8,18 @@
 ## SetUiService {#SetUiService}
 *Defined in [fuchsia.setui/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.setui/service.fidl#30)*
 
- The main interface for UIs to change system settings. Currently, the
- settings are scoped to the device, but will eventually be scoped to the user
- as is applicable.
+<p>The main interface for UIs to change system settings. Currently, the
+settings are scoped to the device, but will eventually be scoped to the user
+as is applicable.</p>
 
 ### Listen {#Listen}
 
- Begins listening to changes to a given settings object. This may cause the
- SetUiService to connect to any applicable device services until all listeners
- for a given type are closed.
- The service will call the listener with the current state immediately on
- initialization.
- DEPRECATED: To be removed in favor of Watch
+<p>Begins listening to changes to a given settings object. This may cause the
+SetUiService to connect to any applicable device services until all listeners
+for a given type are closed.
+The service will call the listener with the current state immediately on
+initialization.
+DEPRECATED: To be removed in favor of Watch</p>
 
 #### Request
 <table>
@@ -40,8 +40,8 @@
 
 ### Watch {#Watch}
 
- Returns immediately on first call. Subsequent calls will be delayed until
- there is an updated value available.
+<p>Returns immediately on first call. Subsequent calls will be delayed until
+there is an updated value available.</p>
 
 #### Request
 <table>
@@ -66,8 +66,8 @@
 
 ### Update {#Update}
 
- Sets the value of a given settings object. Returns once operation
- has completed.
+<p>Sets the value of a given settings object. Returns once operation
+has completed.</p>
 
 #### Request
 <table>
@@ -156,7 +156,7 @@
 ## SettingListener {#SettingListener}
 *Defined in [fuchsia.setui/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.setui/service.fidl#55)*
 
- DEPRECATED: To be removed in favor of Watch
+<p>DEPRECATED: To be removed in favor of Watch</p>
 
 ### Notify {#Notify}
 
@@ -182,7 +182,7 @@
 
 
 
- Configuration for string mutations.
+<p>Configuration for string mutations.</p>
 
 
 <table>
@@ -208,7 +208,7 @@
 
 
 
- Configuration for wireless mutations.
+<p>Configuration for wireless mutations.</p>
 
 
 <table>
@@ -241,7 +241,7 @@
 
 
 
- Configuration for time zone mutation.
+<p>Configuration for time zone mutation.</p>
 
 
 <table>
@@ -260,7 +260,7 @@
 
 
 
- Mutation that replaces the existing list of locales with a new list.
+<p>Mutation that replaces the existing list of locales with a new list.</p>
 
 
 <table>
@@ -269,7 +269,7 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> See IntlSettings.locales for format.
+            <td><p>See IntlSettings.locales for format.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -280,7 +280,7 @@
 
 
 
- Mutation that changes the `HourCycle`.
+<p>Mutation that changes the <code>HourCycle</code>.</p>
 
 
 <table>
@@ -299,7 +299,7 @@
 
 
 
- Mutation that changes the `TemperatureUnit`.
+<p>Mutation that changes the <code>TemperatureUnit</code>.</p>
 
 
 <table>
@@ -405,8 +405,8 @@
             <td>
                 <code><a class='link' href='#TimeZone'>TimeZone</a>?</code>
             </td>
-            <td> The current time zone. Will be absent if no time zone is currently set.
- To update the time zone, set this value.
+            <td><p>The current time zone. Will be absent if no time zone is currently set.
+To update the time zone, set this value.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -414,7 +414,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='#TimeZone'>TimeZone</a>&gt;</code>
             </td>
-            <td> An ordered list of the available time zones.
+            <td><p>An ordered list of the available time zones.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -433,7 +433,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The underlying ID value; shouldn't be displayed to the end user.
+            <td><p>The underlying ID value; shouldn't be displayed to the end user.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -441,7 +441,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The user visible description of the time zone.
+            <td><p>The user visible description of the time zone.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -449,7 +449,7 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> List of sample locations for which the time zone is valid.
+            <td><p>List of sample locations for which the time zone is valid.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -468,7 +468,7 @@
             <td>
                 <code>vector&lt;uint8&gt;</code>
             </td>
-            <td> The associated bssid.
+            <td><p>The associated bssid.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -483,7 +483,7 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The connection strength of the access point. (read-only)
+            <td><p>The connection strength of the access point. (read-only)</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -491,7 +491,7 @@
             <td>
                 <code><a class='link' href='#ConnectionStatus'>ConnectionStatus</a></code>
             </td>
-            <td> The current connection state of the access point.
+            <td><p>The current connection state of the access point.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -510,8 +510,8 @@
             <td>
                 <code>int64</code>
             </td>
-            <td> The underlying ID value; shouldn't be displayed to the end user.
- (internal / read-only)
+            <td><p>The underlying ID value; shouldn't be displayed to the end user.
+(internal / read-only)</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -519,7 +519,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The published identifier for the access point. (read-only)
+            <td><p>The published identifier for the access point. (read-only)</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -527,7 +527,7 @@
             <td>
                 <code><a class='link' href='#WpaAuth'>WpaAuth</a></code>
             </td>
-            <td> The auth configuration for the access point.
+            <td><p>The auth configuration for the access point.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -535,7 +535,7 @@
             <td>
                 <code><a class='link' href='#WpaCipher'>WpaCipher</a></code>
             </td>
-            <td> The cipher configuration for the access point.
+            <td><p>The cipher configuration for the access point.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -561,7 +561,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='#WirelessNetwork'>WirelessNetwork</a>&gt;</code>
             </td>
-            <td> The available access points to connect to.
+            <td><p>The available access points to connect to.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -580,7 +580,7 @@
             <td>
                 <code><a class='link' href='#Reachability'>Reachability</a></code>
             </td>
-            <td> The current level of connection access.
+            <td><p>The current level of connection access.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -591,7 +591,7 @@
 
 
 
- Collection of internationalization-related settings stored in Stash.
+<p>Collection of internationalization-related settings stored in Stash.</p>
 
 
 <table>
@@ -600,11 +600,10 @@
             <td>
                 <code>vector&lt;string&gt;[10]</code>
             </td>
-            <td> An ordered list of the user's preferred locales, encoded as Unicode BCP-47 locale
- identifiers _without extensions_.
- Supports language-Script-REGION-variant.
-
- Examples: "fr", "en-US", "sr-Latn-BA", "sl-nedis"
+            <td><p>An ordered list of the user's preferred locales, encoded as Unicode BCP-47 locale
+identifiers <em>without extensions</em>.
+Supports language-Script-REGION-variant.</p>
+<p>Examples: &quot;fr&quot;, &quot;en-US&quot;, &quot;sr-Latn-BA&quot;, &quot;sl-nedis&quot;</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -612,7 +611,7 @@
             <td>
                 <code><a class='link' href='#HourCycle'>HourCycle</a></code>
             </td>
-            <td> The user's preferred hour cycle, 12 hours or 24 hours.
+            <td><p>The user's preferred hour cycle, 12 hours or 24 hours.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -620,7 +619,7 @@
             <td>
                 <code><a class='link' href='#TemperatureUnit'>TemperatureUnit</a></code>
             </td>
-            <td> The user's preferred temperature unit.
+            <td><p>The user's preferred temperature unit.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -635,7 +634,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.setui/mutations.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.setui/mutations.fidl#8)*
 
- operations supported by string settings.
+<p>operations supported by string settings.</p>
 
 
 <table>
@@ -650,7 +649,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.setui/mutations.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.setui/mutations.fidl#19)*
 
- Operations supported by account settings.
+<p>Operations supported by account settings.</p>
 
 
 <table>
@@ -669,7 +668,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.setui/mutations.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.setui/mutations.fidl#31)*
 
- Operations supported by wireless settings.
+<p>Operations supported by wireless settings.</p>
 
 
 <table>
@@ -754,12 +753,12 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>AUTOLOGIN_GUEST</code></td>
             <td><code>1</code></td>
-            <td> Do not require an account and login always as guest.
+            <td><p>Do not require an account and login always as guest.</p>
 </td>
         </tr><tr>
             <td><code>AUTH_PROVIDER</code></td>
             <td><code>2</code></td>
-            <td> Requires a provisioned account through auth provider.
+            <td><p>Requires a provisioned account through auth provider.</p>
 </td>
         </tr></table>
 
@@ -778,22 +777,22 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>DISCONNECTED</code></td>
             <td><code>1</code></td>
-            <td> The connection is at a resting disconnected state.
+            <td><p>The connection is at a resting disconnected state.</p>
 </td>
         </tr><tr>
             <td><code>CONNECTING</code></td>
             <td><code>2</code></td>
-            <td> The connection is being established.
+            <td><p>The connection is being established.</p>
 </td>
         </tr><tr>
             <td><code>CONNECTED</code></td>
             <td><code>3</code></td>
-            <td> The connection is active.
+            <td><p>The connection is active.</p>
 </td>
         </tr><tr>
             <td><code>DISCONNECTING</code></td>
             <td><code>4</code></td>
-            <td> The connection is in the process of being disconnected.
+            <td><p>The connection is in the process of being disconnected.</p>
 </td>
         </tr></table>
 
@@ -812,12 +811,12 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>UNSECURED</code></td>
             <td><code>1</code></td>
-            <td> The network is open and requires no password.
+            <td><p>The network is open and requires no password.</p>
 </td>
         </tr><tr>
             <td><code>SECURED</code></td>
             <td><code>2</code></td>
-            <td> The network is protected by a password.
+            <td><p>The network is protected by a password.</p>
 </td>
         </tr></table>
 
@@ -912,7 +911,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>WAN</code></td>
             <td><code>1</code></td>
-            <td> we have access to the wide area network.
+            <td><p>we have access to the wide area network.</p>
 </td>
         </tr></table>
 
@@ -927,12 +926,12 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>H12</code></td>
             <td><code>0</code></td>
-            <td> 12-hour clock
+            <td><p>12-hour clock</p>
 </td>
         </tr><tr>
             <td><code>H23</code></td>
             <td><code>1</code></td>
-            <td> 24-hour clock (from 0:00:00 to 23:59:59)
+            <td><p>24-hour clock (from 0:00:00 to 23:59:59)</p>
 </td>
         </tr></table>
 
@@ -963,7 +962,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.setui/mutations.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.setui/mutations.fidl#25)*
 
- Configuration for account mutations.
+<p>Configuration for account mutations.</p>
 
 
 <table>
@@ -999,7 +998,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#LoginOverride'>LoginOverride</a></code>
             </td>
-            <td> If set, indicates a login behavior specified at runtime.
+            <td><p>If set, indicates a login behavior specified at runtime.</p>
 </td>
         </tr></table>
 
@@ -1010,7 +1009,7 @@ Type: <code>uint32</code>
 ### Mutation {#Mutation}
 *Defined in [fuchsia.setui/mutations.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.setui/mutations.fidl#65)*
 
- Container for setting mutations.
+<p>Container for setting mutations.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -1086,29 +1085,29 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#TimeZoneInfo'>TimeZoneInfo</a></code>
             </td>
-            <td> The data returned by the time zone service for getting or setting
- time zones.
+            <td><p>The data returned by the time zone service for getting or setting
+time zones.</p>
 </td>
         </tr><tr>
             <td><code>connectivity</code></td>
             <td>
                 <code><a class='link' href='#ConnectedState'>ConnectedState</a></code>
             </td>
-            <td> The current connected state. (read-only)
+            <td><p>The current connected state. (read-only)</p>
 </td>
         </tr><tr>
             <td><code>wireless</code></td>
             <td>
                 <code><a class='link' href='#WirelessState'>WirelessState</a></code>
             </td>
-            <td> The wireless state (read-only).
+            <td><p>The wireless state (read-only).</p>
 </td>
         </tr><tr>
             <td><code>intl</code></td>
             <td>
                 <code><a class='link' href='#IntlSettings'>IntlSettings</a></code>
             </td>
-            <td> Internationalization settings.
+            <td><p>Internationalization settings.</p>
 </td>
         </tr><tr>
             <td><code>account</code></td>

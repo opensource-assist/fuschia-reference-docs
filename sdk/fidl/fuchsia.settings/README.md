@@ -8,19 +8,21 @@
 ## Accessibility {#Accessibility}
 *Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#11)*
 
- Modify or watch accessibility settings that are persisted.
+<p>Modify or watch accessibility settings that are persisted.</p>
 
 ### Watch {#Watch}
 
- Gets the current value of all accessibility settings. Returns
- immediately on first call; subsequent calls return when any of the
- values change.
-
- - `settings` all current values of the accessibility settings.
- * see <a class='link' href='#AccessibilitySettings'>AccessibilitySettings</a> for their meaning.
-
- This call may fail if AccessibilitySettings are not accessible, possibly because of file
- system errors, not being supported on this product, or general service failures.
+<p>Gets the current value of all accessibility settings. Returns
+immediately on first call; subsequent calls return when any of the
+values change.</p>
+<ul>
+<li><code>settings</code> all current values of the accessibility settings.</li>
+</ul>
+<ul>
+<li>see <a class='link' href='#AccessibilitySettings'>AccessibilitySettings</a> for their meaning.</li>
+</ul>
+<p>This call may fail if AccessibilitySettings are not accessible, possibly because of file
+system errors, not being supported on this product, or general service failures.</p>
 
 #### Request
 <table>
@@ -40,8 +42,8 @@
 
 ### Set {#Set}
 
- Sets [AccessibilitySettings] settings. Any field not explicitly set in the table performs a
- no-op, and will not make any changes.
+<p>Sets [AccessibilitySettings] settings. Any field not explicitly set in the table performs a
+no-op, and will not make any changes.</p>
 
 #### Request
 <table>
@@ -67,12 +69,12 @@
 ## Audio {#Audio}
 *Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#11)*
 
- Settings related to audio.
+<p>Settings related to audio.</p>
 
 ### Watch {#Watch}
 
- Gets the current [AudioSettings]. Returns immediately on first call;
- subsequent calls return when the value changes.
+<p>Gets the current [AudioSettings]. Returns immediately on first call;
+subsequent calls return when the value changes.</p>
 
 #### Request
 <table>
@@ -92,8 +94,8 @@
 
 ### Set {#Set}
 
- Sets audio settings. Any field not explicitly set in the table performs a
- no-op, and will not make any changes.
+<p>Sets audio settings. Any field not explicitly set in the table performs a
+no-op, and will not make any changes.</p>
 
 #### Request
 <table>
@@ -122,11 +124,10 @@
 
 ### Watch {#Watch}
 
- Notifies of a change in information about the device.
-
- On a given connection, the first call will return the current `settings` value while
- subsequent calls will only return the new `settings` value upon a value change. This
- follows the hanging get pattern.
+<p>Notifies of a change in information about the device.</p>
+<p>On a given connection, the first call will return the current <code>settings</code> value while
+subsequent calls will only return the new <code>settings</code> value upon a value change. This
+follows the hanging get pattern.</p>
 
 #### Request
 <table>
@@ -147,12 +148,12 @@
 ## Display {#Display}
 *Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#9)*
 
- Settings related to display
+<p>Settings related to display</p>
 
 ### Watch {#Watch}
 
- Gets the current [DisplaySettings]. Returns immediately on first call;
- subsequent calls return when the value changes.
+<p>Gets the current [DisplaySettings]. Returns immediately on first call;
+subsequent calls return when the value changes.</p>
 
 #### Request
 <table>
@@ -172,9 +173,9 @@
 
 ### WatchLightSensor {#WatchLightSensor}
 
- Obtains the current data from the light sensor. Returns immediately on
- first call; subsequent calls return when the light sensor value changes
-  by a certain amount measured in lux.
+<p>Obtains the current data from the light sensor. Returns immediately on
+first call; subsequent calls return when the light sensor value changes
+by a certain amount measured in lux.</p>
 
 #### Request
 <table>
@@ -199,8 +200,8 @@
 
 ### Set {#Set}
 
- Sets display settings. Any field not explicitly set in the table performs a
- no-op, and will not make any changes.
+<p>Sets display settings. Any field not explicitly set in the table performs a
+no-op, and will not make any changes.</p>
 
 #### Request
 <table>
@@ -226,16 +227,16 @@
 ## DoNotDisturb {#DoNotDisturb}
 *Defined in [fuchsia.settings/do_not_disturb.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/do_not_disturb.fidl#13)*
 
- Modify or watch do-not-disturb (DND) mode. While DND is active, distractions
- created by the device are reduced or eliminated. E.g. bootup is silent,
- incoming calls could be rejected or silent, and notifications could be
- paused, silent, or hidden. High-priority disruptions like alarms can be
- allowed.
+<p>Modify or watch do-not-disturb (DND) mode. While DND is active, distractions
+created by the device are reduced or eliminated. E.g. bootup is silent,
+incoming calls could be rejected or silent, and notifications could be
+paused, silent, or hidden. High-priority disruptions like alarms can be
+allowed.</p>
 
 ### Watch {#Watch}
 
- Gets the current <a class='link' href='#DoNotDisturbSettings'>DoNotDisturbSettings</a>. Returns immediately on first
- call; subsequent calls return when the values change.
+<p>Gets the current <a class='link' href='#DoNotDisturbSettings'>DoNotDisturbSettings</a>. Returns immediately on first
+call; subsequent calls return when the values change.</p>
 
 #### Request
 <table>
@@ -255,8 +256,8 @@
 
 ### Set {#Set}
 
- Sets <a class='link' href='#DoNotDisturbSettings'>DoNotDisturbSettings</a> settings. Any field not explicitly set in
- the table performs a no-op, and will not make any changes.
+<p>Sets <a class='link' href='#DoNotDisturbSettings'>DoNotDisturbSettings</a> settings. Any field not explicitly set in
+the table performs a no-op, and will not make any changes.</p>
 
 #### Request
 <table>
@@ -282,13 +283,13 @@
 ## Intl {#Intl}
 *Defined in [fuchsia.settings/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/intl.fidl#12)*
 
- Settings related to internationalization such as locale, time zone, and
- temperature units.
+<p>Settings related to internationalization such as locale, time zone, and
+temperature units.</p>
 
 ### Watch {#Watch}
 
- Gets the current [IntlSettings]. Returns immediately on first call;
- subsequent calls return when the value changes.
+<p>Gets the current [IntlSettings]. Returns immediately on first call;
+subsequent calls return when the value changes.</p>
 
 #### Request
 <table>
@@ -308,8 +309,8 @@
 
 ### Set {#Set}
 
- Sets [IntlSettings] settings. Any field not explicitly set in the table performs a
- no-op, and will not make any changes.
+<p>Sets [IntlSettings] settings. Any field not explicitly set in the table performs a
+no-op, and will not make any changes.</p>
 
 #### Request
 <table>
@@ -338,11 +339,10 @@
 
 ### Watch {#Watch}
 
- Notifies of a change in privacy settings.
-
- On a given connection, the first call will return the current `settings` value while
- subsequent calls will only return the new `settings` value upon a value change. This
- follows the hanging get pattern.
+<p>Notifies of a change in privacy settings.</p>
+<p>On a given connection, the first call will return the current <code>settings</code> value while
+subsequent calls will only return the new <code>settings</code> value upon a value change. This
+follows the hanging get pattern.</p>
 
 #### Request
 <table>
@@ -362,9 +362,8 @@
 
 ### Set {#Set}
 
- Sets the privacy settings.
-
- Any field not explicitly set in `settings` performs a no-op, and will not make any changes.
+<p>Sets the privacy settings.</p>
+<p>Any field not explicitly set in <code>settings</code> performs a no-op, and will not make any changes.</p>
 
 #### Request
 <table>
@@ -390,12 +389,12 @@
 ## Setup {#Setup}
 *Defined in [fuchsia.settings/setup.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/setup.fidl#9)*
 
- Settings that influence the device's setup behavior.
+<p>Settings that influence the device's setup behavior.</p>
 
 ### Watch {#Watch}
 
- Gets the current [SetupSettings]. Returns immediately on first call;
- subsequent calls return when the value changes.
+<p>Gets the current [SetupSettings]. Returns immediately on first call;
+subsequent calls return when the value changes.</p>
 
 #### Request
 <table>
@@ -415,10 +414,10 @@
 
 ### Set {#Set}
 
- Changes the settings specified in [SetupSettings]. Any field not set in
- the table will not perform any system operation. An error will be
- returned if the provided settings is an invalid change (for example, if
- it is empty).
+<p>Changes the settings specified in [SetupSettings]. Any field not set in
+the table will not perform any system operation. An error will be
+returned if the provided settings is an invalid change (for example, if
+it is empty).</p>
 
 #### Request
 <table>
@@ -444,12 +443,12 @@
 ## System {#System}
 *Defined in [fuchsia.settings/system.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/system.fidl#9)*
 
- Settings related to the general system.
+<p>Settings related to the general system.</p>
 
 ### Watch {#Watch}
 
- Gets the current [SystemSettings]. Returns immediately on first call;
- subsequent calls return when the value changes.
+<p>Gets the current [SystemSettings]. Returns immediately on first call;
+subsequent calls return when the value changes.</p>
 
 #### Request
 <table>
@@ -469,8 +468,8 @@
 
 ### Set {#Set}
 
- Changes the settings specified in [SystemSettings]. Any field not set in the table will
- not perform any system operation.
+<p>Changes the settings specified in [SystemSettings]. Any field not set in the table will
+not perform any system operation.</p>
 
 #### Request
 <table>
@@ -726,23 +725,23 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td> No color blindness.
+            <td><p>No color blindness.</p>
 </td>
         </tr><tr>
             <td><code>PROTANOMALY</code></td>
             <td><code>1</code></td>
-            <td> Red-green color blindness due to reduced sensitivity to red light.
+            <td><p>Red-green color blindness due to reduced sensitivity to red light.</p>
 </td>
         </tr><tr>
             <td><code>DEUTERANOMALY</code></td>
             <td><code>2</code></td>
-            <td> Red-green color blindness due to reduced sensitivity to green light.
+            <td><p>Red-green color blindness due to reduced sensitivity to green light.</p>
 </td>
         </tr><tr>
             <td><code>TRITANOMALY</code></td>
             <td><code>3</code></td>
-            <td> Blue-yellow color blindness. It is due to reduced sensitivity to blue
- light.
+            <td><p>Blue-yellow color blindness. It is due to reduced sensitivity to blue
+light.</p>
 </td>
         </tr></table>
 
@@ -751,7 +750,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#97)*
 
- Font family groups for closed captions, specified by 47 CFR §79.102(k).
+<p>Font family groups for closed captions, specified by 47 CFR §79.102(k).</p>
 
 
 <table>
@@ -794,34 +793,34 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#109)*
 
- Edge style for fonts as specified in 47 CFR §79.103(c)(7)
+<p>Edge style for fonts as specified in 47 CFR §79.103(c)(7)</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td> No border around fonts.
+            <td><p>No border around fonts.</p>
 </td>
         </tr><tr>
             <td><code>DROP_SHADOW</code></td>
             <td><code>1</code></td>
-            <td> A shadow "behind" and slightly offset from each edge.
+            <td><p>A shadow &quot;behind&quot; and slightly offset from each edge.</p>
 </td>
         </tr><tr>
             <td><code>RAISED</code></td>
             <td><code>2</code></td>
-            <td> A bevel that mimics a 3D raised effect.
+            <td><p>A bevel that mimics a 3D raised effect.</p>
 </td>
         </tr><tr>
             <td><code>DEPRESSED</code></td>
             <td><code>3</code></td>
-            <td> A bevel that mimics a 3D depressed effect.
+            <td><p>A bevel that mimics a 3D depressed effect.</p>
 </td>
         </tr><tr>
             <td><code>OUTLINE</code></td>
             <td><code>4</code></td>
-            <td> A plain border around each shapes.
+            <td><p>A plain border around each shapes.</p>
 </td>
         </tr></table>
 
@@ -830,26 +829,21 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#22)*
 
- The source of the volume settings. The volume is set according to the source.
+<p>The source of the volume settings. The volume is set according to the source.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>DEFAULT</code></td>
-            <td><code>0</code></td>
-            <td> The volume is default.
-</td>
-        </tr><tr>
             <td><code>USER</code></td>
-            <td><code>1</code></td>
-            <td> The volume is set by the user. When the |source| in AudioStreamSettings is
- set to this, the audio volume is set to |user_volume|.
+            <td><code>0</code></td>
+            <td><p>The volume is set by the user. When the |source| in AudioStreamSettings is
+set to this, the audio volume is set to |user_volume|.</p>
 </td>
         </tr><tr>
             <td><code>SYSTEM</code></td>
-            <td><code>2</code></td>
-            <td> The system takes control of the volume. This is used when the system constantly
- calculates and changes the volume. The volume is not stored for this source.
+            <td><code>1</code></td>
+            <td><p>The system takes control of the volume. This is used when the system constantly
+calculates and changes the volume. The volume is not stored for this source.</p>
 </td>
         </tr></table>
 
@@ -858,7 +852,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/settings.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/settings.fidl#8)*
 
- Common error code used across different settings.
+<p>Common error code used across different settings.</p>
 
 
 <table>
@@ -877,24 +871,24 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/system.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/system.fidl#26)*
 
- What preferred login behavior has been set.
+<p>What preferred login behavior has been set.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>1</code></td>
-            <td> No override has been set.
+            <td><p>No override has been set.</p>
 </td>
         </tr><tr>
             <td><code>AUTOLOGIN_GUEST</code></td>
             <td><code>2</code></td>
-            <td> Do not require an account and login always as guest.
+            <td><p>Do not require an account and login always as guest.</p>
 </td>
         </tr><tr>
             <td><code>AUTH_PROVIDER</code></td>
             <td><code>3</code></td>
-            <td> Requires a provisioned account through auth provider.
+            <td><p>Requires a provisioned account through auth provider.</p>
 </td>
         </tr></table>
 
@@ -907,7 +901,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#29)*
 
- Supported accessibility settings.
+<p>Supported accessibility settings.</p>
 
 
 <table>
@@ -918,8 +912,8 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> For videos, use an alternative audio track (akin to changing languages)
- that explains what is happening visually while there is no dialogue.
+            <td><p>For videos, use an alternative audio track (akin to changing languages)
+that explains what is happening visually while there is no dialogue.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -927,7 +921,7 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Read aloud elements of the screen selected by the user.
+            <td><p>Read aloud elements of the screen selected by the user.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -935,7 +929,7 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Invert colors on the screen.
+            <td><p>Invert colors on the screen.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -943,7 +937,7 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Interpret triple-tap on the touchscreen as a command to zoom in.
+            <td><p>Interpret triple-tap on the touchscreen as a command to zoom in.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -951,7 +945,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ColorBlindnessType'>ColorBlindnessType</a></code>
             </td>
-            <td> What type of color-blindness, if any, to correct for.
+            <td><p>What type of color-blindness, if any, to correct for.</p>
 </td>
         </tr><tr>
             <td>6</td>
@@ -959,7 +953,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#CaptionsSettings'>CaptionsSettings</a></code>
             </td>
-            <td> What kind of sources get closed captions, and how they look.
+            <td><p>What kind of sources get closed captions, and how they look.</p>
 </td>
         </tr></table>
 
@@ -968,7 +962,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#66)*
 
- What kind of sources get closed captions, and how they look.
+<p>What kind of sources get closed captions, and how they look.</p>
 
 
 <table>
@@ -979,7 +973,7 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Closed captions enabled for media sources of audio.
+            <td><p>Closed captions enabled for media sources of audio.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -987,7 +981,7 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Closed captions enabled for Text-To-Speech sources of audio.
+            <td><p>Closed captions enabled for Text-To-Speech sources of audio.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -995,7 +989,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#CaptionFontStyle'>CaptionFontStyle</a></code>
             </td>
-            <td> Font style and color used for the closed captions text.
+            <td><p>Font style and color used for the closed captions text.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1003,7 +997,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.ui.types/'>fuchsia.ui.types</a>/<a class='link' href='../fuchsia.ui.types/#ColorRgba'>ColorRgba</a></code>
             </td>
-            <td> Border color used around the closed captions window.
+            <td><p>Border color used around the closed captions window.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -1011,7 +1005,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.ui.types/'>fuchsia.ui.types</a>/<a class='link' href='../fuchsia.ui.types/#ColorRgba'>ColorRgba</a></code>
             </td>
-            <td> Background color of the closed captions window.
+            <td><p>Background color of the closed captions window.</p>
 </td>
         </tr></table>
 
@@ -1020,7 +1014,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/accessibility.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/accessibility.fidl#84)*
 
- Font, size, and color of closed captions text.
+<p>Font, size, and color of closed captions text.</p>
 
 
 <table>
@@ -1038,8 +1032,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.ui.types/'>fuchsia.ui.types</a>/<a class='link' href='../fuchsia.ui.types/#ColorRgba'>ColorRgba</a></code>
             </td>
-            <td> 47 CFR §79.103(c)(2) requires at least 3-bit RGB for user override of
- closed-captions color.
+            <td><p>47 CFR §79.103(c)(2) requires at least 3-bit RGB for user override of
+closed-captions color.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1047,9 +1041,9 @@ Type: <code>uint32</code>
             <td>
                 <code>float32</code>
             </td>
-            <td> Size of closed captions text relative to the default captions size. A
- range of [0.5, 2] is guaranteed to be supported (as 47 CFR §79.103(c)(4)
- establishes).
+            <td><p>Size of closed captions text relative to the default captions size. A
+range of [0.5, 2] is guaranteed to be supported (as 47 CFR §79.103(c)(4)
+establishes).</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1063,7 +1057,7 @@ Type: <code>uint32</code>
 ### Volume {#Volume}
 
 
-*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#35)*
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#33)*
 
 
 
@@ -1075,8 +1069,8 @@ Type: <code>uint32</code>
             <td>
                 <code>float32</code>
             </td>
-            <td> The volume level ranged [0.0, 1.0]. The level maps to a dbfs value from a volume
- curve in the setting service.
+            <td><p>The volume level ranged [0.0, 1.0]. The level maps to a dbfs value from a volume
+curve in the setting service.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1084,15 +1078,15 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> True if the volume should be muted. If this is true, then the volume is silent,
- regardless of |level|.
+            <td><p>True if the volume should be muted. If this is true, then the volume is silent,
+regardless of |level|.</p>
 </td>
         </tr></table>
 
 ### AudioStreamSettings {#AudioStreamSettings}
 
 
-*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#45)*
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#43)*
 
 
 
@@ -1104,7 +1098,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.media/'>fuchsia.media</a>/<a class='link' href='../fuchsia.media/#AudioRenderUsage'>AudioRenderUsage</a></code>
             </td>
-            <td> The audio stream which the settings are applying to.
+            <td><p>The audio stream which the settings are applying to.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1112,7 +1106,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#AudioStreamSettingSource'>AudioStreamSettingSource</a></code>
             </td>
-            <td> The volume of |stream| is set according to the volume settings from |source|.
+            <td><p>The volume of |stream| is set according to the volume settings from |source|.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1120,15 +1114,15 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Volume'>Volume</a></code>
             </td>
-            <td> User level volume setting. If the |source| is USER, then the volume is set to
- |user_volume|.
+            <td><p>User level volume setting. If the |source| is USER, then the volume is set to
+|user_volume|.</p>
 </td>
         </tr></table>
 
 ### AudioSettings {#AudioSettings}
 
 
-*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#57)*
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#55)*
 
 
 
@@ -1140,8 +1134,8 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#AudioStreamSettings'>AudioStreamSettings</a>&gt;[5]</code>
             </td>
-            <td> Contains the volume setting for all audio stream settings. There should only be
- one AudioStreamSettings for each fuchsia.media.AudioRenderUsage.
+            <td><p>Contains the volume setting for all audio stream settings. There should only be
+one AudioStreamSettings for each fuchsia.media.AudioRenderUsage.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1149,14 +1143,14 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#AudioInput'>AudioInput</a></code>
             </td>
-            <td> Settings related to the audio input.
+            <td><p>Settings related to the audio input.</p>
 </td>
         </tr></table>
 
 ### AudioInput {#AudioInput}
 
 
-*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#66)*
+*Defined in [fuchsia.settings/audio.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/audio.fidl#64)*
 
 
 
@@ -1168,7 +1162,7 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the audio input is muted. Takes into consideration the hardware state.
+            <td><p>Whether the audio input is muted. Takes into consideration the hardware state.</p>
 </td>
         </tr></table>
 
@@ -1177,7 +1171,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/device.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/device.fidl#18)*
 
- Information about the device.
+<p>Information about the device.</p>
 
 
 <table>
@@ -1188,8 +1182,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string[50]</code>
             </td>
-            <td> The identifier representing the specific build that the device
- is currently running. Read-only field, cannot be set by client.
+            <td><p>The identifier representing the specific build that the device
+is currently running. Read-only field, cannot be set by client.</p>
 </td>
         </tr></table>
 
@@ -1233,7 +1227,7 @@ Type: <code>uint32</code>
             <td>
                 <code>float32</code>
             </td>
-            <td> Brightness from the light sensor measured in lux
+            <td><p>Brightness from the light sensor measured in lux</p>
 </td>
         </tr></table>
 
@@ -1242,7 +1236,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/do_not_disturb.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/do_not_disturb.fidl#24)*
 
- Settings related to do-not-disturb (DND) mode.
+<p>Settings related to do-not-disturb (DND) mode.</p>
 
 
 <table>
@@ -1253,15 +1247,13 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> If true, the device is in do-not-disturb (DND) mode. Change this value
- if you're directly responding to a user-initiated event.
-
- Note that the device could still be in DND mode even if this is set to
- `false`, as <a class='link' href='#night_mode_initiated_do_not_disturb'>night_mode_initiated_do_not_disturb</a> might be `true`. To
- actually disable DND mode, set both fields to `false`.
-
- To know whether DND is enabled, you need to do a boolean OR of both
- fields.
+            <td><p>If true, the device is in do-not-disturb (DND) mode. Change this value
+if you're directly responding to a user-initiated event.</p>
+<p>Note that the device could still be in DND mode even if this is set to
+<code>false</code>, as <a class='link' href='#night_mode_initiated_do_not_disturb'>night_mode_initiated_do_not_disturb</a> might be <code>true</code>. To
+actually disable DND mode, set both fields to <code>false</code>.</p>
+<p>To know whether DND is enabled, you need to do a boolean OR of both
+fields.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1269,16 +1261,14 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> If true, the device is in do-not-disturb (DND) mode. Change this value
- if you're trying to enable or disable DND based on a nightly schedule.
-
- Note that the device could still be in DND mode even if this is set to
- `false`, as <a class='link' href='#user_initiated_do_not_disturb'>user_initiated_do_not_disturb</a> might be `true`. Do not
- set that field to `false` unless you're directly responding to a
- user-initiated event.
-
- To know whether DND is enabled, you need to do a boolean OR of both
- fields.
+            <td><p>If true, the device is in do-not-disturb (DND) mode. Change this value
+if you're trying to enable or disable DND based on a nightly schedule.</p>
+<p>Note that the device could still be in DND mode even if this is set to
+<code>false</code>, as <a class='link' href='#user_initiated_do_not_disturb'>user_initiated_do_not_disturb</a> might be <code>true</code>. Do not
+set that field to <code>false</code> unless you're directly responding to a
+user-initiated event.</p>
+<p>To know whether DND is enabled, you need to do a boolean OR of both
+fields.</p>
 </td>
         </tr></table>
 
@@ -1287,7 +1277,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/intl.fidl#23)*
 
- Collection of internationalization-related settings.
+<p>Collection of internationalization-related settings.</p>
 
 
 <table>
@@ -1298,7 +1288,7 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='../fuchsia.intl/'>fuchsia.intl</a>/<a class='link' href='../fuchsia.intl/#LocaleId'>LocaleId</a>&gt;[10]</code>
             </td>
-            <td> An ordered list of preferred locales.
+            <td><p>An ordered list of preferred locales.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1306,7 +1296,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.intl/'>fuchsia.intl</a>/<a class='link' href='../fuchsia.intl/#TemperatureUnit'>TemperatureUnit</a></code>
             </td>
-            <td> The preferred temperature unit.
+            <td><p>The preferred temperature unit.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1314,7 +1304,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.intl/'>fuchsia.intl</a>/<a class='link' href='../fuchsia.intl/#TimeZoneId'>TimeZoneId</a></code>
             </td>
-            <td> The currently set time zone.
+            <td><p>The currently set time zone.</p>
 </td>
         </tr></table>
 
@@ -1333,8 +1323,8 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Reflects the user consent to have their user data shared with the product owner, e.g., for
- metrics collection and crash reporting.
+            <td><p>Reflects the user consent to have their user data shared with the product owner, e.g., for
+metrics collection and crash reporting.</p>
 </td>
         </tr></table>
 
@@ -1353,8 +1343,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ConfigurationInterfaces'>ConfigurationInterfaces</a></code>
             </td>
-            <td> Specifies the network interfaces that the device can be configured
- over during setup.
+            <td><p>Specifies the network interfaces that the device can be configured
+over during setup.</p>
 </td>
         </tr></table>
 
@@ -1363,7 +1353,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.settings/system.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/system.fidl#20)*
 
- Settings related to the general system.
+<p>Settings related to the general system.</p>
 
 
 <table>
@@ -1374,7 +1364,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#LoginOverride'>LoginOverride</a></code>
             </td>
-            <td> If set, indicates a login behavior specified at runtime.
+            <td><p>If set, indicates a login behavior specified at runtime.</p>
 </td>
         </tr></table>
 

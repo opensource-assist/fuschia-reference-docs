@@ -8,36 +8,32 @@
 ## Control {#Control}
 *Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#26)*
 
- The control plane for a network socket.
-
- Once a socket has been retrieved from a `Provider`, this interface is then used to further
- configure and use the socket. This interface is essentially POSIX. Its implementation must
- support Linux-specific arguments to {Get,Set}SockOpt.
-
- *Warning:* This protocol is not yet ready for direct use by clients. Instead, clients should
- use the BSD sockets API to interact with sockets. We plan to change this protocol substantially
- and clients that couple directly to this protocol will make those changes more difficult.
+<p>The control plane for a network socket.</p>
+<p>Once a socket has been retrieved from a <code>Provider</code>, this interface is then used to further
+configure and use the socket. This interface is essentially POSIX. Its implementation must
+support Linux-specific arguments to {Get,Set}SockOpt.</p>
+<p><em>Warning:</em> This protocol is not yet ready for direct use by clients. Instead, clients should
+use the BSD sockets API to interact with sockets. We plan to change this protocol substantially
+and clients that couple directly to this protocol will make those changes more difficult.</p>
 
 ### Clone {#Clone}
 
- Create another connection to the same remote object.
-
- `flags` may be any of:
-
- - `OPEN_RIGHT_*`
- - `OPEN_FLAG_APPEND`
- - `OPEN_FLAG_NO_REMOTE`
- - `OPEN_FLAG_DESCRIBE`
- - `CLONE_FLAG_SAME_RIGHTS`
-
- All other flags are ignored.
-
- The `OPEN_RIGHT_*` bits in `flags` request corresponding rights over the resulting
- cloned object.
- The cloned object must have rights less than or equal to the original object.
- Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
- `CLONE_FLAG_SAME_RIGHTS`.
+<p>Create another connection to the same remote object.</p>
+<p><code>flags</code> may be any of:</p>
+<ul>
+<li><code>OPEN_RIGHT_*</code></li>
+<li><code>OPEN_FLAG_APPEND</code></li>
+<li><code>OPEN_FLAG_NO_REMOTE</code></li>
+<li><code>OPEN_FLAG_DESCRIBE</code></li>
+<li><code>CLONE_FLAG_SAME_RIGHTS</code></li>
+</ul>
+<p>All other flags are ignored.</p>
+<p>The <code>OPEN_RIGHT_*</code> bits in <code>flags</code> request corresponding rights over the resulting
+cloned object.
+The cloned object must have rights less than or equal to the original object.
+Alternatively, pass <code>CLONE_FLAG_SAME_RIGHTS</code> to inherit the rights on the source connection.
+It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
+<code>CLONE_FLAG_SAME_RIGHTS</code>.</p>
 
 #### Request
 <table>
@@ -58,9 +54,8 @@
 
 ### Close {#Close}
 
- Terminates connection with object.
-
- This method does not require any rights.
+<p>Terminates connection with object.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -80,10 +75,9 @@
 
 ### Describe {#Describe}
 
- Returns extra information about the type of the object.
- If the `Describe` operation fails, the connection is closed.
-
- This method does not require any rights.
+<p>Returns extra information about the type of the object.
+If the <code>Describe</code> operation fails, the connection is closed.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -103,11 +97,10 @@
 
 ### OnOpen {#OnOpen}
 
- An event produced eagerly by a FIDL server if requested by `OPEN_FLAG_DESCRIBE`.
-
- Indicates the success or failure of the open operation, and optionally describes the
- object. If the status is `ZX_OK`, `info` contains descriptive information about the object
- (the same as would be returned by `Describe`).
+<p>An event produced eagerly by a FIDL server if requested by <code>OPEN_FLAG_DESCRIBE</code>.</p>
+<p>Indicates the success or failure of the open operation, and optionally describes the
+object. If the status is <code>ZX_OK</code>, <code>info</code> contains descriptive information about the object
+(the same as would be returned by <code>Describe</code>).</p>
 
 
 
@@ -128,9 +121,8 @@
 
 ### Sync {#Sync}
 
- Synchronizes updates to the node to the underlying media, if it exists.
-
- This method does not require any rights.
+<p>Synchronizes updates to the node to the underlying media, if it exists.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -150,9 +142,8 @@
 
 ### GetAttr {#GetAttr}
 
- Acquires information about the node.
-
- This method does not require any rights.
+<p>Acquires information about the node.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -177,10 +168,9 @@
 
 ### SetAttr {#SetAttr}
 
- Updates information about the node.
- `flags` may be any of `NODE_ATTRIBUTE_FLAG_*`.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Updates information about the node.
+<code>flags</code> may be any of <code>NODE_ATTRIBUTE_FLAG_*</code>.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -210,11 +200,10 @@
 
 ### NodeGetFlags {#NodeGetFlags}
 
- Acquires the `Directory.Open` rights and flags used to access this file.
-
- This method does not require any rights.
- This method has the same functionality as GetFlags for File and is
- meant as an in-progress replacement.
+<p>Acquires the <code>Directory.Open</code> rights and flags used to access this file.</p>
+<p>This method does not require any rights.
+This method has the same functionality as GetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -239,13 +228,14 @@
 
 ### NodeSetFlags {#NodeSetFlags}
 
- Changes the `Directory.Open` flags used to access the file.
- Supported flags which can be turned on / off:
- - `OPEN_FLAG_APPEND`
-
- This method does not require any rights.
- This method has the same functionality as SetFlags for File and is
- meant as an in-progress replacement.
+<p>Changes the <code>Directory.Open</code> flags used to access the file.
+Supported flags which can be turned on / off:</p>
+<ul>
+<li><code>OPEN_FLAG_APPEND</code></li>
+</ul>
+<p>This method does not require any rights.
+This method has the same functionality as SetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -270,7 +260,7 @@
 
 ### Bind {#Bind}
 
- Sets the local address used for the socket.
+<p>Sets the local address used for the socket.</p>
 
 #### Request
 <table>
@@ -295,7 +285,7 @@
 
 ### Connect {#Connect}
 
- Initiates a connection to a remote address.
+<p>Initiates a connection to a remote address.</p>
 
 #### Request
 <table>
@@ -320,8 +310,8 @@
 
 ### Listen {#Listen}
 
- Begins listening for new incoming connections. At most `backlog` connections will be
- buffered.
+<p>Begins listening for new incoming connections. At most <code>backlog</code> connections will be
+buffered.</p>
 
 #### Request
 <table>
@@ -346,7 +336,7 @@
 
 ### Accept {#Accept}
 
- Accepts a buffered incoming connection.
+<p>Accepts a buffered incoming connection.</p>
 
 #### Request
 <table>
@@ -376,7 +366,7 @@
 
 ### GetSockName {#GetSockName}
 
- Retrieves the local socket address.
+<p>Retrieves the local socket address.</p>
 
 #### Request
 <table>
@@ -401,7 +391,7 @@
 
 ### GetPeerName {#GetPeerName}
 
- Retrieves the remote socket address.
+<p>Retrieves the remote socket address.</p>
 
 #### Request
 <table>
@@ -426,7 +416,7 @@
 
 ### SetSockOpt {#SetSockOpt}
 
- Sets the value of a socket option.
+<p>Sets the value of a socket option.</p>
 
 #### Request
 <table>
@@ -461,7 +451,7 @@
 
 ### GetSockOpt {#GetSockOpt}
 
- Retrieves the value of a socket option.
+<p>Retrieves the value of a socket option.</p>
 
 #### Request
 <table>
@@ -497,11 +487,11 @@
 ## Provider {#Provider}
 *Defined in [fuchsia.posix.socket/socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#50)*
 
- Provider implements the POSIX sockets API.
+<p>Provider implements the POSIX sockets API.</p>
 
 ### Socket {#Socket}
 
- Requests a socket with the specified parameters. Values for `code` are defined in errno.h.
+<p>Requests a socket with the specified parameters. Values for <code>code</code> are defined in errno.h.</p>
 
 #### Request
 <table>

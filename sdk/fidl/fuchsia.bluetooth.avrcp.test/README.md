@@ -11,15 +11,15 @@
 
 ### GetControllerForTarget {#GetControllerForTarget}
 
- Returns a test controller client to a remote target service at the peer specified by
- `peer_id`. This client is to be used alongside the primary controller client.
- The test protocol provides additional methods not exposed by primary controller protocol
- that are designed to be used for PTS qualification testing and debugging purposes only.
- WARNING: This test controller can cause breaking side-effects for other controller clients
- connected to this the same peer. Use with caution and avoid having additional primary
- controller clients interacting with the same remote peer while using the test controller.
- TODO (BT-305): change peer_id to fuchsia.bluetooth.PeerId type after BrEdr profile service
- switches.
+<p>Returns a test controller client to a remote target service at the peer specified by
+<code>peer_id</code>. This client is to be used alongside the primary controller client.
+The test protocol provides additional methods not exposed by primary controller protocol
+that are designed to be used for PTS qualification testing and debugging purposes only.
+WARNING: This test controller can cause breaking side-effects for other controller clients
+connected to this the same peer. Use with caution and avoid having additional primary
+controller clients interacting with the same remote peer while using the test controller.
+TODO (BT-305): change peer_id to fuchsia.bluetooth.PeerId type after BrEdr profile service
+switches.</p>
 
 #### Request
 <table>
@@ -49,11 +49,11 @@
 
 ### RegisterIncomingTargetHandler {#RegisterIncomingTargetHandler}
 
- Sets an implementation of target handler that will vend delegates for each incoming
- remote TG -> local CT connections to handle the commands being sent by the remote TG.
- If no target handler is set, a default handler will be used internally that will
- dispatch to the MediaSession service. This should only be used for PTS qualification testing
- and debugging purposes only.
+<p>Sets an implementation of target handler that will vend delegates for each incoming
+remote TG -&gt; local CT connections to handle the commands being sent by the remote TG.
+If no target handler is set, a default handler will be used internally that will
+dispatch to the MediaSession service. This should only be used for PTS qualification testing
+and debugging purposes only.</p>
 
 #### Request
 <table>
@@ -70,15 +70,15 @@
 ## TargetHandler {#TargetHandler}
 *Defined in [fuchsia.bluetooth.avrcp.test/test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp.test/test.fidl#33)*
 
- An implementation of this interface is registered with the TestPeerManager service to handle
- incoming connections.
+<p>An implementation of this interface is registered with the TestPeerManager service to handle
+incoming connections.</p>
 
 ### OnControllerConnected {#OnControllerConnected}
 
- Called when an incoming target is connected. `delegate` should be fulfilled with an
- interface that will be used to handle commands from the connected Controller.
- TODO (BT-305): change peer_id to fuchsia.bluetooth.PeerId type after BrEdr profile service
- switches.
+<p>Called when an incoming target is connected. <code>delegate</code> should be fulfilled with an
+interface that will be used to handle commands from the connected Controller.
+TODO (BT-305): change peer_id to fuchsia.bluetooth.PeerId type after BrEdr profile service
+switches.</p>
 
 #### Request
 <table>
@@ -100,12 +100,12 @@
 ## TargetDelegate {#TargetDelegate}
 *Defined in [fuchsia.bluetooth.avrcp.test/test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp.test/test.fidl#55)*
 
- Returned by an implementer of the TargetHandler interface.
- Handles incoming connection commands by a remote CT device.
+<p>Returned by an implementer of the TargetHandler interface.
+Handles incoming connection commands by a remote CT device.</p>
 
 ### OnCommand {#OnCommand}
 
- Called after Panel key down and up events.
+<p>Called after Panel key down and up events.</p>
 
 #### Request
 <table>
@@ -131,11 +131,11 @@
 ## ControllerExt {#ControllerExt}
 *Defined in [fuchsia.bluetooth.avrcp.test/test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp.test/test.fidl#61)*
 
- Provides additional methods not in `Controller` that are strictly for testing and debug.
+<p>Provides additional methods not in <code>Controller</code> that are strictly for testing and debug.</p>
 
 ### IsConnected {#IsConnected}
 
- Returns whether there is an underlying connection open with the remote device currently.
+<p>Returns whether there is an underlying connection open with the remote device currently.</p>
 
 #### Request
 <table>
@@ -155,9 +155,9 @@
 
 ### GetEventsSupported {#GetEventsSupported}
 
- Queries the target and returns what events are supported for notification.
- Sends GetCapabilties(0x03 (`EVENTS_SUPPORTED`)) command for all events supported by
- the negoitated version of AVRCP.
+<p>Queries the target and returns what events are supported for notification.
+Sends GetCapabilties(0x03 (<code>EVENTS_SUPPORTED</code>)) command for all events supported by
+the negoitated version of AVRCP.</p>
 
 #### Request
 <table>
@@ -177,7 +177,7 @@
 
 ### Connect {#Connect}
 
- Explicitly attempt to connect to the remote peer.
+<p>Explicitly attempt to connect to the remote peer.</p>
 
 #### Request
 <table>
@@ -188,7 +188,7 @@
 
 ### Disconnect {#Disconnect}
 
- Explicitly disconnect any L2CAP channels, if any, to the remote peer.
+<p>Explicitly disconnect any L2CAP channels, if any, to the remote peer.</p>
 
 #### Request
 <table>
@@ -199,9 +199,9 @@
 
 ### SendRawVendorDependentCommand {#SendRawVendorDependentCommand}
 
- Send raw vendor depedent "Control" command packet to a specific PDU on the remote peer.
- Returns the entire response packet including the headers or error if the remote endpoint
- disconnects or does not return a response in set amount of time.
+<p>Send raw vendor depedent &quot;Control&quot; command packet to a specific PDU on the remote peer.
+Returns the entire response packet including the headers or error if the remote endpoint
+disconnects or does not return a response in set amount of time.</p>
 
 #### Request
 <table>
@@ -289,8 +289,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.avrcp.test/test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp.test/test.fidl#43)*
 
- Defined by the AV/C Digital Interface Command Set General Specification and AV/C Panel Subunit
- Specification (http://1394ta.org/specifications/)
+<p>Defined by the AV/C Digital Interface Command Set General Specification and AV/C Panel Subunit
+Specification (http://1394ta.org/specifications/)</p>
 
 
 <table>

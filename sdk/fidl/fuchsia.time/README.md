@@ -8,15 +8,14 @@
 ## DeprecatedNetworkSync {#DeprecatedNetworkSync}
 *Defined in [fuchsia.time/deprecated_network_sync.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/timekeeper/deprecated_network_sync.fidl#12)*
 
- Emits `UtcUpdated` events when the serving program changes the UTC offset tracked by
- `ZX_CLOCK_UTC`.
-
- Do not take this API as a dependency, it will be deleted in the near future.
+<p>Emits <code>UtcUpdated</code> events when the serving program changes the UTC offset tracked by
+<code>ZX_CLOCK_UTC</code>.</p>
+<p>Do not take this API as a dependency, it will be deleted in the near future.</p>
 
 ### UtcUpdated {#UtcUpdated}
 
- Notifies the client that UTC has changed, along with the monotonic clock's value when the
- change was made.
+<p>Notifies the client that UTC has changed, along with the monotonic clock's value when the
+change was made.</p>
 
 
 
@@ -33,13 +32,13 @@
 ## Utc {#Utc}
 *Defined in [fuchsia.time/utc.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/timekeeper/utc.fidl#10)*
 
- Metadata about a device's approximation of UTC time, commonly referred to as "system time."
+<p>Metadata about a device's approximation of UTC time, commonly referred to as &quot;system time.&quot;</p>
 
 ### WatchState {#WatchState}
 
- Notifies clients of updates to the UTC timeline. The first call on a channel returns
- immediately, and subsequent calls on the same channel will return when the state
- has changed.
+<p>Notifies clients of updates to the UTC timeline. The first call on a channel returns
+immediately, and subsequent calls on the same channel will return when the state
+has changed.</p>
 
 #### Request
 <table>
@@ -68,20 +67,20 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.time/utc.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/timekeeper/utc.fidl#26)*
 
- Describes the source from which the current UTC approximation was retrieved.
+<p>Describes the source from which the current UTC approximation was retrieved.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BACKSTOP</code></td>
             <td><code>2</code></td>
-            <td> The clock has been initialized to a known-prior reference time but may be highly inaccurate.
+            <td><p>The clock has been initialized to a known-prior reference time but may be highly inaccurate.</p>
 </td>
         </tr><tr>
             <td><code>EXTERNAL</code></td>
             <td><code>3</code></td>
-            <td> The clock has been initialized from a suitably accurate external time source. For many
- devices the most common external time source is a network time server.
+            <td><p>The clock has been initialized from a suitably accurate external time source. For many
+devices the most common external time source is a network time server.</p>
 </td>
         </tr></table>
 
@@ -94,7 +93,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.time/utc.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/timekeeper/utc.fidl#18)*
 
- Describes the state of the clock.
+<p>Describes the state of the clock.</p>
 
 
 <table>
@@ -105,7 +104,7 @@ Type: <code>uint32</code>
             <td>
                 <code>int64</code>
             </td>
-            <td> The monotonic time at which this `UtcState` was observed.
+            <td><p>The monotonic time at which this <code>UtcState</code> was observed.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -113,7 +112,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#UtcSource'>UtcSource</a></code>
             </td>
-            <td> The source of our current UTC approximation.
+            <td><p>The source of our current UTC approximation.</p>
 </td>
         </tr></table>
 

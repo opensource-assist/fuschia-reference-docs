@@ -8,12 +8,12 @@
 ## Diagnostic {#Diagnostic}
 *Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#127)*
 
- Diagnostic information exported by Overnet peers.
- This interface is additionally exported to the Overnet mesh.
+<p>Diagnostic information exported by Overnet peers.
+This interface is additionally exported to the Overnet mesh.</p>
 
 ### Probe {#Probe}
 
- Probe some basic statistics from this node
+<p>Probe some basic statistics from this node</p>
 
 #### Request
 <table>
@@ -45,7 +45,7 @@
 
 
 
- Identifies a single overnet stream between two processes on the Overnet mesh
+<p>Identifies a single overnet stream between two processes on the Overnet mesh</p>
 
 
 <table>
@@ -64,7 +64,7 @@
 
 
 
- Address of a node on the overlay network.
+<p>Address of a node on the overlay network.</p>
 
 
 <table>
@@ -94,10 +94,12 @@
 
 
 
- Update status of all links starting from a given node
- By bundling all link updates together, we guarantee:
-  - a simple protocol that can deal with updates, additions, and deletions to the link set
-  - no routing decisions based on partial information from any one node
+<p>Update status of all links starting from a given node
+By bundling all link updates together, we guarantee:</p>
+<ul>
+<li>a simple protocol that can deal with updates, additions, and deletions to the link set</li>
+<li>no routing decisions based on partial information from any one node</li>
+</ul>
 
 
 <table>
@@ -106,7 +108,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='#LinkStatus'>LinkStatus</a>&gt;</code>
             </td>
-            <td> Status of all active links originating at the sending node
+            <td><p>Status of all active links originating at the sending node</p>
 </td>
             <td>No default</td>
         </tr>
@@ -117,8 +119,8 @@
 
 
 
- Create a new stream, labelled `stream_id`, to communicate with the
- advertised service `service_name`.
+<p>Create a new stream, labelled <code>stream_id</code>, to communicate with the
+advertised service <code>service_name</code>.</p>
 
 
 <table>
@@ -127,7 +129,7 @@
             <td>
                 <code>string[255]</code>
             </td>
-            <td> Which service to connect to.
+            <td><p>Which service to connect to.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -135,7 +137,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> On which quic stream will this service connection be formed.
+            <td><p>On which quic stream will this service connection be formed.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -143,7 +145,7 @@
             <td>
                 <code><a class='link' href='#ConnectToServiceOptions'>ConnectToServiceOptions</a></code>
             </td>
-            <td> Ancillary options for this connection.
+            <td><p>Ancillary options for this connection.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -154,8 +156,8 @@
 
 
 
- Status packet for a single link. A link is a unidirectional connection between two peers,
- and is owned by the first peer. The target node is identified by `to`.
+<p>Status packet for a single link. A link is a unidirectional connection between two peers,
+and is owned by the first peer. The target node is identified by <code>to</code>.</p>
 
 
 <table>
@@ -164,7 +166,7 @@
             <td>
                 <code><a class='link' href='#NodeId'>NodeId</a></code>
             </td>
-            <td> Link target node.
+            <td><p>Link target node.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -172,9 +174,9 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> An identifier (chosen by the link owner) to label this link.
- The link owner must guarantee that the tuple (to, local_id) is unique for each of it's held
- links.
+            <td><p>An identifier (chosen by the link owner) to label this link.
+The link owner must guarantee that the tuple (to, local_id) is unique for each of it's held
+links.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -182,7 +184,7 @@
             <td>
                 <code><a class='link' href='#LinkMetrics'>LinkMetrics</a></code>
             </td>
-            <td> Metrics associated with this link.
+            <td><p>Metrics associated with this link.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -193,7 +195,7 @@
 
 
 
- A single message proxied from a Zircon channel over an Overnet stream.
+<p>A single message proxied from a Zircon channel over an Overnet stream.</p>
 
 
 <table>
@@ -202,7 +204,7 @@
             <td>
                 <code>vector&lt;uint8&gt;[65536]</code>
             </td>
-            <td> Bytes part of the payload.
+            <td><p>Bytes part of the payload.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -210,7 +212,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='#ZirconHandle'>ZirconHandle</a>&gt;[64]</code>
             </td>
-            <td> Handles part of the payload.
+            <td><p>Handles part of the payload.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -221,7 +223,7 @@
 
 
 
- A proxied channel.
+<p>A proxied channel.</p>
 
 
 <table>
@@ -230,8 +232,8 @@
             <td>
                 <code><a class='link' href='#StreamId'>StreamId</a></code>
             </td>
-            <td> The Overnet proxy stream that was created to carry this channel.
- The protocol over said stream will be a `ZirconChannel`.
+            <td><p>The Overnet proxy stream that was created to carry this channel.
+The protocol over said stream will be a <code>ZirconChannel</code>.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -242,7 +244,7 @@
 
 
 
- A proxied socket.
+<p>A proxied socket.</p>
 
 
 <table>
@@ -251,8 +253,8 @@
             <td>
                 <code><a class='link' href='#StreamId'>StreamId</a></code>
             </td>
-            <td> The Overnet proxy stream that was created to carry this socket.
- The protocol over said stream will be a `ZirconSocket`.
+            <td><p>The Overnet proxy stream that was created to carry this socket.
+The protocol over said stream will be a <code>ZirconSocket</code>.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -260,7 +262,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> Socket options, per `zx_socket_create`.
+            <td><p>Socket options, per <code>zx_socket_create</code>.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -275,24 +277,24 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#74)*
 
- The operating system running a node.
+<p>The operating system running a node.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>FUCHSIA</code></td>
             <td><code>0</code></td>
-            <td> Fuchsia
+            <td><p>Fuchsia</p>
 </td>
         </tr><tr>
             <td><code>LINUX</code></td>
             <td><code>1</code></td>
-            <td> Linux
+            <td><p>Linux</p>
 </td>
         </tr><tr>
             <td><code>MAC</code></td>
             <td><code>2</code></td>
-            <td> MacOS
+            <td><p>MacOS</p>
 </td>
         </tr></table>
 
@@ -301,29 +303,29 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#84)*
 
- The implementation of a node that's running.
+<p>The implementation of a node that's running.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNIT_TEST</code></td>
             <td><code>0</code></td>
-            <td> Some unit test... shouldn't be seen in the wild.
+            <td><p>Some unit test... shouldn't be seen in the wild.</p>
 </td>
         </tr><tr>
             <td><code>OVERNET_STACK</code></td>
             <td><code>1</code></td>
-            <td> The overnetstack daemon on Fuchsia.
+            <td><p>The overnetstack daemon on Fuchsia.</p>
 </td>
         </tr><tr>
             <td><code>ASCENDD</code></td>
             <td><code>2</code></td>
-            <td> The non-Fuchsia routing daemon Ascendd.
+            <td><p>The non-Fuchsia routing daemon Ascendd.</p>
 </td>
         </tr><tr>
             <td><code>HOIST_RUST_CRATE</code></td>
             <td><code>3</code></td>
-            <td> The `hoist` Rust crate embedding Overnet.
+            <td><p>The <code>hoist</code> Rust crate embedding Overnet.</p>
 </td>
         </tr></table>
 
@@ -336,7 +338,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#8)*
 
- Diagnostic data on a single peer connection.
+<p>Diagnostic data on a single peer connection.</p>
 
 
 <table>
@@ -347,7 +349,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#NodeId'>NodeId</a></code>
             </td>
-            <td> Source address.
+            <td><p>Source address.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -355,7 +357,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#NodeId'>NodeId</a></code>
             </td>
-            <td> Destination address.
+            <td><p>Destination address.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -363,7 +365,7 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether this connection is a client.
+            <td><p>Whether this connection is a client.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -371,7 +373,7 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> True if the connection established and ready to send traffic.
+            <td><p>True if the connection established and ready to send traffic.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -379,7 +381,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of packets received.
+            <td><p>Number of packets received.</p>
 </td>
         </tr><tr>
             <td>6</td>
@@ -387,7 +389,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of packets sent.
+            <td><p>Number of packets sent.</p>
 </td>
         </tr><tr>
             <td>7</td>
@@ -395,7 +397,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of packets lost.
+            <td><p>Number of packets lost.</p>
 </td>
         </tr><tr>
             <td>8</td>
@@ -403,7 +405,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Round trip time for the connection in microseconds.
+            <td><p>Round trip time for the connection in microseconds.</p>
 </td>
         </tr><tr>
             <td>9</td>
@@ -411,7 +413,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Current congestion window in bytes.
+            <td><p>Current congestion window in bytes.</p>
 </td>
         </tr><tr>
             <td>10</td>
@@ -419,7 +421,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of overnet messages sent.
+            <td><p>Number of overnet messages sent.</p>
 </td>
         </tr><tr>
             <td>11</td>
@@ -427,7 +429,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of bytes sent due to overnet messages.
+            <td><p>Number of bytes sent due to overnet messages.</p>
 </td>
         </tr><tr>
             <td>12</td>
@@ -435,7 +437,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of connect to service requests.
+            <td><p>Number of connect to service requests.</p>
 </td>
         </tr><tr>
             <td>13</td>
@@ -443,7 +445,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of bytes sent due to connect to service requests.
+            <td><p>Number of bytes sent due to connect to service requests.</p>
 </td>
         </tr><tr>
             <td>14</td>
@@ -451,7 +453,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of node description updates.
+            <td><p>Number of node description updates.</p>
 </td>
         </tr><tr>
             <td>15</td>
@@ -459,7 +461,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of bytes sent due to node description updates.
+            <td><p>Number of bytes sent due to node description updates.</p>
 </td>
         </tr><tr>
             <td>16</td>
@@ -467,7 +469,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of link status updates.
+            <td><p>Number of link status updates.</p>
 </td>
         </tr><tr>
             <td>17</td>
@@ -475,7 +477,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of bytes sent due to link status updates.
+            <td><p>Number of bytes sent due to link status updates.</p>
 </td>
         </tr><tr>
             <td>18</td>
@@ -483,7 +485,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of link status update acknowledgements sent.
+            <td><p>Number of link status update acknowledgements sent.</p>
 </td>
         </tr><tr>
             <td>19</td>
@@ -491,7 +493,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of bytes sent due to link status update acknowledgements.
+            <td><p>Number of bytes sent due to link status update acknowledgements.</p>
 </td>
         </tr></table>
 
@@ -500,7 +502,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#50)*
 
- Diagnostic data on a single link.
+<p>Diagnostic data on a single link.</p>
 
 
 <table>
@@ -511,7 +513,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#NodeId'>NodeId</a></code>
             </td>
-            <td> Source address.
+            <td><p>Source address.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -519,7 +521,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#NodeId'>NodeId</a></code>
             </td>
-            <td> Destination address.
+            <td><p>Destination address.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -527,7 +529,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Source identifier for this link.
+            <td><p>Source identifier for this link.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -535,7 +537,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of packets received.
+            <td><p>Number of packets received.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -543,7 +545,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of packets sent.
+            <td><p>Number of packets sent.</p>
 </td>
         </tr><tr>
             <td>6</td>
@@ -551,7 +553,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of bytes received.
+            <td><p>Number of bytes received.</p>
 </td>
         </tr><tr>
             <td>7</td>
@@ -559,7 +561,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of bytes sent.
+            <td><p>Number of bytes sent.</p>
 </td>
         </tr><tr>
             <td>8</td>
@@ -567,7 +569,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Round trip time for the connection in microseconds.
+            <td><p>Round trip time for the connection in microseconds.</p>
 </td>
         </tr><tr>
             <td>9</td>
@@ -575,7 +577,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of ping requests sent.
+            <td><p>Number of ping requests sent.</p>
 </td>
         </tr><tr>
             <td>10</td>
@@ -583,7 +585,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Number of packets forwarded.
+            <td><p>Number of packets forwarded.</p>
 </td>
         </tr></table>
 
@@ -592,7 +594,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#96)*
 
- Diagnostic data on a single node.
+<p>Diagnostic data on a single node.</p>
 
 
 <table>
@@ -603,8 +605,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#OperatingSystem'>OperatingSystem</a></code>
             </td>
-            <td> A string saying something about what operating system this node is running on
- Currently used: 'fuchsia', 'linux', 'mac'
+            <td><p>A string saying something about what operating system this node is running on
+Currently used: 'fuchsia', 'linux', 'mac'</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -612,7 +614,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Implementation'>Implementation</a></code>
             </td>
-            <td> A string saying something about the runtime environment of a node
+            <td><p>A string saying something about the runtime environment of a node</p>
 </td>
         </tr></table>
 
@@ -621,7 +623,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.overnet.protocol/diagnostic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/diagnostic.fidl#105)*
 
- Composition of results from Diagnostic/Probe.
+<p>Composition of results from Diagnostic/Probe.</p>
 
 
 <table>
@@ -632,7 +634,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#NodeDescription'>NodeDescription</a></code>
             </td>
-            <td> Node description, obtained by probing ProbeSelector.NODE_DESCRIPTION
+            <td><p>Node description, obtained by probing ProbeSelector.NODE_DESCRIPTION</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -640,7 +642,7 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#PeerConnectionDiagnosticInfo'>PeerConnectionDiagnosticInfo</a>&gt;</code>
             </td>
-            <td> Peer connections list, obtained by probing ProbeSelector.PEER_CONNECTIONS
+            <td><p>Peer connections list, obtained by probing ProbeSelector.PEER_CONNECTIONS</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -648,7 +650,7 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#LinkDiagnosticInfo'>LinkDiagnosticInfo</a>&gt;</code>
             </td>
-            <td> Link list, obtained by probing ProbeSelector.LINKS
+            <td><p>Link list, obtained by probing ProbeSelector.LINKS</p>
 </td>
         </tr></table>
 
@@ -657,7 +659,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#52)*
 
- Options for service connection formation.
+<p>Options for service connection formation.</p>
 
 
 <table>
@@ -669,7 +671,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#56)*
 
- Description of a single node.
+<p>Description of a single node.</p>
 
 
 <table>
@@ -680,7 +682,7 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> The set of services published by this node.
+            <td><p>The set of services published by this node.</p>
 </td>
         </tr></table>
 
@@ -689,8 +691,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#63)*
 
- Metrics associated with a link.
- Note that a link is a uni-directional connection between two nodes.
+<p>Metrics associated with a link.
+Note that a link is a uni-directional connection between two nodes.</p>
 
 
 <table>
@@ -701,7 +703,7 @@ Type: <code>uint32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Current round trip time for requests across this link in microseconds.
+            <td><p>Current round trip time for requests across this link in microseconds.</p>
 </td>
         </tr></table>
 
@@ -710,7 +712,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.overnet.protocol/stream_socket.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/stream_socket.fidl#8)*
 
- Introduction packet sent on stream oriented links between Overnet nodes
+<p>Introduction packet sent on stream oriented links between Overnet nodes</p>
 
 
 <table>
@@ -721,7 +723,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[32]</code>
             </td>
-            <td> Protocol identification string; different kinds of streams might choose a different value here
+            <td><p>Protocol identification string; different kinds of streams might choose a different value here</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -729,7 +731,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#NodeId'>NodeId</a></code>
             </td>
-            <td> Overnet NodeId of the sender
+            <td><p>Overnet NodeId of the sender</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -737,7 +739,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string[32]</code>
             </td>
-            <td> Optional label for debugging
+            <td><p>Optional label for debugging</p>
 </td>
         </tr></table>
 
@@ -750,8 +752,8 @@ Type: <code>uint32</code>
 ### PeerMessage {#PeerMessage}
 *Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#12)*
 
- Peer-to-peer protocol between two Overnet nodes.
- Client quic connections send this xunion to servers over quic stream 0.
+<p>Peer-to-peer protocol between two Overnet nodes.
+Client quic connections send this xunion to servers over quic stream 0.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -759,29 +761,29 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ConnectToService'>ConnectToService</a></code>
             </td>
-            <td> Request to create a channel to a service exported by this peer.
+            <td><p>Request to create a channel to a service exported by this peer.</p>
 </td>
         </tr><tr>
             <td><code>update_node_description</code></td>
             <td>
                 <code><a class='link' href='#PeerDescription'>PeerDescription</a></code>
             </td>
-            <td> Update this peers description on the server.
+            <td><p>Update this peers description on the server.</p>
 </td>
         </tr><tr>
             <td><code>update_link_status</code></td>
             <td>
                 <code><a class='link' href='#UpdateLinkStatus'>UpdateLinkStatus</a></code>
             </td>
-            <td> Update information about a link that this peer knows about on the
- remote peer.
+            <td><p>Update information about a link that this peer knows about on the
+remote peer.</p>
 </td>
         </tr></table>
 
 ### PeerReply {#PeerReply}
 *Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#23)*
 
- Reply messages for PeerMessage, where appropriate
+<p>Reply messages for PeerMessage, where appropriate</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -789,15 +791,15 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Empty'>Empty</a></code>
             </td>
-            <td> Acknowledge an UpdateLinkStatus message
+            <td><p>Acknowledge an UpdateLinkStatus message</p>
 </td>
         </tr></table>
 
 ### ZirconHandle {#ZirconHandle}
 *Defined in [fuchsia.overnet.protocol/zircon_proxy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/zircon_proxy.fidl#19)*
 
- A single handle to be proxied.
- Not all Zircon types are supported.
+<p>A single handle to be proxied.
+Not all Zircon types are supported.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -805,14 +807,14 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ChannelHandle'>ChannelHandle</a></code>
             </td>
-            <td> A proxied channel.
+            <td><p>A proxied channel.</p>
 </td>
         </tr><tr>
             <td><code>socket</code></td>
             <td>
                 <code><a class='link' href='#SocketHandle'>SocketHandle</a></code>
             </td>
-            <td> A proxied socket.
+            <td><p>A proxied socket.</p>
 </td>
         </tr></table>
 
@@ -828,17 +830,17 @@ Type: <code>uint64</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td>NODE_DESCRIPTION</td>
             <td>1</td>
-            <td> Request ProbeResult.node_description is present in the result
+            <td><p>Request ProbeResult.node_description is present in the result</p>
 </td>
         </tr><tr>
             <td>PEER_CONNECTIONS</td>
             <td>2</td>
-            <td> Request ProbeResult.peer_connections is present in the result
+            <td><p>Request ProbeResult.peer_connections is present in the result</p>
 </td>
         </tr><tr>
             <td>LINKS</td>
             <td>4</td>
-            <td> Request ProbeResult.links is present in the result
+            <td><p>Request ProbeResult.links is present in the result</p>
 </td>
         </tr></table>
 

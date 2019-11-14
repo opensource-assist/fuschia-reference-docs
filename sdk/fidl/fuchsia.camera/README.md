@@ -8,14 +8,14 @@
 ## Control {#Control}
 *Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#83)*
 
- These are the original interfaces, which are being used for compatibility.
- The names are preserved from the ones in camera.h for porting ease.
+<p>These are the original interfaces, which are being used for compatibility.
+The names are preserved from the ones in camera.h for porting ease.</p>
 
 ### GetFormats {#GetFormats}
 
- Get the available format types for this device
- NOTE: The formats are paginated to `MAX_FORMATS_PER_RESPONSE`, multiple
- GetFormats need to be issued until total_format_count are received
+<p>Get the available format types for this device
+NOTE: The formats are paginated to <code>MAX_FORMATS_PER_RESPONSE</code>, multiple
+GetFormats need to be issued until total_format_count are received</p>
 
 #### Request
 <table>
@@ -50,13 +50,13 @@
 
 ### CreateStream {#CreateStream}
 
- Sent by the client to indicate desired stream characteristics.
- If setting the format is successful, the stream request will be honored.
- The stream token is used to provide additional control over the interface from the
- Camera Manager.  The driver provides the guarantee that:
-     1) If the stream token receives the `PEER_CLOSED` event, the driver will close
-        the stream.
-     2) If the Stream interface is closed, the driver will close the eventpair.
+<p>Sent by the client to indicate desired stream characteristics.
+If setting the format is successful, the stream request will be honored.
+The stream token is used to provide additional control over the interface from the
+Camera Manager.  The driver provides the guarantee that:
+1) If the stream token receives the <code>PEER_CLOSED</code> event, the driver will close
+the stream.
+2) If the Stream interface is closed, the driver will close the eventpair.</p>
 
 #### Request
 <table>
@@ -110,7 +110,7 @@
 
 ### Start {#Start}
 
- Starts the streaming of frames.
+<p>Starts the streaming of frames.</p>
 
 #### Request
 <table>
@@ -121,7 +121,7 @@
 
 ### Stop {#Stop}
 
- Stops the streaming of frames.
+<p>Stops the streaming of frames.</p>
 
 #### Request
 <table>
@@ -132,7 +132,7 @@
 
 ### ReleaseFrame {#ReleaseFrame}
 
- Unlocks the specified frame, allowing the driver to reuse the memory.
+<p>Unlocks the specified frame, allowing the driver to reuse the memory.</p>
 
 #### Request
 <table>
@@ -148,8 +148,8 @@
 
 ### OnFrameAvailable {#OnFrameAvailable}
 
- Sent by the driver to the client when a frame is available for processing,
- or an error occurred.
+<p>Sent by the driver to the client when a frame is available for processing,
+or an error occurred.</p>
 
 
 
@@ -166,17 +166,19 @@
 ## Manager {#Manager}
 *Defined in [fuchsia.camera/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/manager.fidl#45)*
 
- The Camera Manager grants access to individual or sets of cameras
- 1) You request the list of cameras, which gives you camera descriptions
- 2) You request the list of formats available for the camera to which you
-    wish to connect.
- 3) You request a Stream interface using CreateStream.
+<p>The Camera Manager grants access to individual or sets of cameras</p>
+<ol>
+<li>You request the list of cameras, which gives you camera descriptions</li>
+<li>You request the list of formats available for the camera to which you
+wish to connect.</li>
+<li>You request a Stream interface using CreateStream.</li>
+</ol>
 
 ### GetDevices {#GetDevices}
 
- Returns a list of all the video devices that are currently plugged in
- and enumerated.  The camera_id field of the DeviceInfo is used to specify
- a device in GetFormats, GetStream and GetStreamAndBufferCollection.
+<p>Returns a list of all the video devices that are currently plugged in
+and enumerated.  The camera_id field of the DeviceInfo is used to specify
+a device in GetFormats, GetStream and GetStreamAndBufferCollection.</p>
 
 #### Request
 <table>
@@ -196,8 +198,8 @@
 
 ### GetFormats {#GetFormats}
 
- Get all the available formats for a camera.
- `camera_id` is obtained from a DeviceInfo returned by GetDevices.
+<p>Get all the available formats for a camera.
+<code>camera_id</code> is obtained from a DeviceInfo returned by GetDevices.</p>
 
 #### Request
 <table>
@@ -232,10 +234,10 @@
 
 ### CreateStream {#CreateStream}
 
- Create a Stream with the specified access rights.  This may not succeed.
- If it does succeed, the Stream will have the rights indicated.
- `buffer_info` contains a set of buffers to be used with the Stream.
- This is being deprecated - please use CreateStreamV2.
+<p>Create a Stream with the specified access rights.  This may not succeed.
+If it does succeed, the Stream will have the rights indicated.
+<code>buffer_info</code> contains a set of buffers to be used with the Stream.
+This is being deprecated - please use CreateStreamV2.</p>
 
 #### Request
 <table>
@@ -266,9 +268,9 @@
 
 ### CreateStreamV2 {#CreateStreamV2}
 
- Create a Stream with the specified access rights.  This may not succeed.
- If it does succeed, the Stream will have the rights indicated.
- `buffer_info` contains a set of buffers to be used with the Stream.
+<p>Create a Stream with the specified access rights.  This may not succeed.
+If it does succeed, the Stream will have the rights indicated.
+<code>buffer_info</code> contains a set of buffers to be used with the Stream.</p>
 
 #### Request
 <table>
@@ -306,7 +308,7 @@
 
 
 
- Identifying information about the device.
+<p>Identifying information about the device.</p>
 
 
 <table>
@@ -357,8 +359,8 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> The maximum number of stream interfaces that the device can support
- simultaneously.
+            <td><p>The maximum number of stream interfaces that the device can support
+simultaneously.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -394,8 +396,8 @@
 
 
 
- Sent by the driver to the client when a frame is available for processing,
- or an error occurred.
+<p>Sent by the driver to the client when a frame is available for processing,
+or an error occurred.</p>
 
 
 <table>
@@ -404,7 +406,7 @@
             <td>
                 <code><a class='link' href='#FrameStatus'>FrameStatus</a></code>
             </td>
-            <td> Non zero if an error occurred.
+            <td><p>Non zero if an error occurred.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -412,7 +414,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The index of the buffer in the buffer collection.
+            <td><p>The index of the buffer in the buffer collection.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -438,7 +440,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The frame rate is frames_per_sec_numerator / frames_per_sec_denominator.
+            <td><p>The frame rate is frames_per_sec_numerator / frames_per_sec_denominator.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -481,10 +483,10 @@
 
 
 
- A stream that the camera manager can provide.  Video streams reference a
- a camera, but may have additional hardware and bandwidth restrictions
- from and ISP or other processing units.
- This is being deprecated - please use VideoStreamV2 (below).
+<p>A stream that the camera manager can provide.  Video streams reference a
+a camera, but may have additional hardware and bandwidth restrictions
+from and ISP or other processing units.
+This is being deprecated - please use VideoStreamV2 (below).</p>
 
 
 <table>
@@ -493,8 +495,8 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The camera_id corresponds to the camera_id that is given in the DeviceInfo
- received from GetDevices.
+            <td><p>The camera_id corresponds to the camera_id that is given in the DeviceInfo
+received from GetDevices.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -502,9 +504,9 @@
             <td>
                 <code><a class='link' href='#VideoFormat'>VideoFormat</a></code>
             </td>
-            <td> The requested video format.  Note that this is field is necessary to
- set The frame rate, even when calling CreateStream.
- When calling CreateStream, format.format should match buffer_info.format.
+            <td><p>The requested video format.  Note that this is field is necessary to
+set The frame rate, even when calling CreateStream.
+When calling CreateStream, format.format should match buffer_info.format.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -515,12 +517,12 @@
 
 
 
- Preferred version of stream.
- A version of stream that relies on definition of VideoFormat coming out of
- fuchsia.hardware.camera. Streams reference a camera, but may have additional
- hardware and bandwidth restrictions from an ISP or other processing units.
- New code should depend on this as the other version will be deprecated when
- dependencies are removed.
+<p>Preferred version of stream.
+A version of stream that relies on definition of VideoFormat coming out of
+fuchsia.hardware.camera. Streams reference a camera, but may have additional
+hardware and bandwidth restrictions from an ISP or other processing units.
+New code should depend on this as the other version will be deprecated when
+dependencies are removed.</p>
 
 
 <table>
@@ -529,8 +531,8 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The camera_id corresponds to the camera_id that is given in DeviceInfo
- received from GetDevices.
+            <td><p>The camera_id corresponds to the camera_id that is given in DeviceInfo
+received from GetDevices.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -538,9 +540,9 @@
             <td>
                 <code><a class='link' href='#VideoFormat'>VideoFormat</a></code>
             </td>
-            <td> The requested video format. Note that this field is necessary to set the
- frame rate, even when calling CreateStream. When calling CreateStream
- format.format should match buffer_info.format.
+            <td><p>The requested video format. Note that this field is necessary to set the
+frame rate, even when calling CreateStream. When calling CreateStream
+format.format should match buffer_info.format.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -555,7 +557,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#42)*
 
- Status to be set when a frame is signalled available.
+<p>Status to be set when a frame is signalled available.</p>
 
 
 <table>
@@ -566,14 +568,14 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ERROR_FRAME</code></td>
             <td><code>1</code></td>
-            <td> An error occurred during the production of a frame.
- No data will be available in the data buffer corresponding to this
- notification.
+            <td><p>An error occurred during the production of a frame.
+No data will be available in the data buffer corresponding to this
+notification.</p>
 </td>
         </tr><tr>
             <td><code>ERROR_BUFFER_FULL</code></td>
             <td><code>2</code></td>
-            <td> No space was available in the data buffer, resulting in a dropped frame.
+            <td><p>No space was available in the data buffer, resulting in a dropped frame.</p>
 </td>
         </tr></table>
 
@@ -604,9 +606,9 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> A coarse set of capabilities.  This struct is used in the camera description
- to help filter out cameras which will not have the needed capabilities.
- This set of declarations would be the bitfield: CameraOutputCapabilities.
+            <td><p>A coarse set of capabilities.  This struct is used in the camera description
+to help filter out cameras which will not have the needed capabilities.
+This set of declarations would be the bitfield: CameraOutputCapabilities.</p>
 </td>
         </tr>
     <tr>

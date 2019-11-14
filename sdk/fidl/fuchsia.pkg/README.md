@@ -8,20 +8,22 @@
 ## PackageResolverAdmin {#PackageResolverAdmin}
 *Defined in [fuchsia.pkg/admin.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/admin.fidl#9)*
 
- Configures a package resolver.
+<p>Configures a package resolver.</p>
 
 ### SetExperimentState {#SetExperimentState}
 
- Sets an experiment toggle to a specific state (on or off).
-
- Experiment states are not persisted and apply only while the resolver
- is running.
-
- + request `experiment_id` the experiment to enable or disable.
- + request `state` the state the experimnet should be set to.
- * error a zx.status value indicating success or failure.
-     Fails with `ZX_ERR_INVALID_ARGS if the experiment is unknown
-     to the resolver.
+<p>Sets an experiment toggle to a specific state (on or off).</p>
+<p>Experiment states are not persisted and apply only while the resolver
+is running.</p>
+<ul>
+<li>request <code>experiment_id</code> the experiment to enable or disable.</li>
+<li>request <code>state</code> the state the experimnet should be set to.</li>
+</ul>
+<ul>
+<li>error a zx.status value indicating success or failure.
+Fails with `ZX_ERR_INVALID_ARGS if the experiment is unknown
+to the resolver.</li>
+</ul>
 
 #### Request
 <table>
@@ -47,32 +49,33 @@
 ## PackageCache {#PackageCache}
 *Defined in [fuchsia.pkg/cache.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/cache.fidl#15)*
 
- Manages the system package cache.
-
- This interface is intended to be implemented by the package manager component and used by
- package resolver components.
+<p>Manages the system package cache.</p>
+<p>This interface is intended to be implemented by the package manager component and used by
+package resolver components.</p>
 
 ### Get {#Get}
 
- Gets the package directory if it is present on the local system. If it is not, the
- `missing_blobs` iterator will provide all the blobs in the package that are missing from
- the system, and the ability to write those blobs to blobfs. If all the missing blobs are
- downloaded and written to by the client, the `dir` directory will be resolved. This method
- will return `ZX_OK` when the package has been fully resolved, or an error if the client
- closes `needed_blobs` or `dir` handle before the package has been resolved.
-
- Arguments:
- * `meta_far_blob` is the blob info for the package's meta.far.
- * `selectors` are the package selectors (TODO: link to docs).
- * `needed_blobs` is an iterator over all the blobs in the package that
-   are not present on the system.
- * `dir` is an optional request for a directory that will be resolved when the package has
-   been successfully cached.
-
- Return Values:
- * `ZX_OK` if the package was successfully cached.
- * `ZX_ERR_UNAVAILABLE` if the client closed `needed_blobs` or `dir` handles before the
-   all the missing blobs were downloaded to the system.
+<p>Gets the package directory if it is present on the local system. If it is not, the
+<code>missing_blobs</code> iterator will provide all the blobs in the package that are missing from
+the system, and the ability to write those blobs to blobfs. If all the missing blobs are
+downloaded and written to by the client, the <code>dir</code> directory will be resolved. This method
+will return <code>ZX_OK</code> when the package has been fully resolved, or an error if the client
+closes <code>needed_blobs</code> or <code>dir</code> handle before the package has been resolved.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>meta_far_blob</code> is the blob info for the package's meta.far.</li>
+<li><code>selectors</code> are the package selectors (TODO: link to docs).</li>
+<li><code>needed_blobs</code> is an iterator over all the blobs in the package that
+are not present on the system.</li>
+<li><code>dir</code> is an optional request for a directory that will be resolved when the package has
+been successfully cached.</li>
+</ul>
+<p>Return Values:</p>
+<ul>
+<li><code>ZX_OK</code> if the package was successfully cached.</li>
+<li><code>ZX_ERR_UNAVAILABLE</code> if the client closed <code>needed_blobs</code> or <code>dir</code> handles before the
+all the missing blobs were downloaded to the system.</li>
+</ul>
 
 #### Request
 <table>
@@ -112,17 +115,19 @@
 
 ### Open {#Open}
 
- Opens the package, or error out if it is not present on the local system.
-
- Arguments:
- * `meta_far_blob_id` is the blob id for the package's meta.far.
- * `selectors` are the package selectors (TODO: link to docs).
- * `dir` is a request for a directory that will be resolved when the package has been
-   successfully cached.
-
- Return Values:
- * `ZX_OK` if the package was successfully opened.
- * `ZX_ERR_NOT_FOUND` if the package does not exist.
+<p>Opens the package, or error out if it is not present on the local system.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>meta_far_blob_id</code> is the blob id for the package's meta.far.</li>
+<li><code>selectors</code> are the package selectors (TODO: link to docs).</li>
+<li><code>dir</code> is a request for a directory that will be resolved when the package has been
+successfully cached.</li>
+</ul>
+<p>Return Values:</p>
+<ul>
+<li><code>ZX_OK</code> if the package was successfully opened.</li>
+<li><code>ZX_ERR_NOT_FOUND</code> if the package does not exist.</li>
+</ul>
 
 #### Request
 <table>
@@ -158,16 +163,16 @@
 ## NeededBlobs {#NeededBlobs}
 *Defined in [fuchsia.pkg/cache.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/cache.fidl#63)*
 
- The `NeededBlobs` is an abstract interface that is provided by a `PackageCache` to the
- `PackageResolver` to fetch one or more blobs that are not present on the local system for a
- given package.
+<p>The <code>NeededBlobs</code> is an abstract interface that is provided by a <code>PackageCache</code> to the
+<code>PackageResolver</code> to fetch one or more blobs that are not present on the local system for a
+given package.</p>
 
 ### GetMissingBlobs {#GetMissingBlobs}
 
- Returns a vector of blobs that are not present on the system that must be downloaded and
- written to blobfs with the `Open` method before a package can be resolved. This method
- should continue to be called until it returns an empty vector. This signifies all the
- missing blobs have been successfully downloaded.
+<p>Returns a vector of blobs that are not present on the system that must be downloaded and
+written to blobfs with the <code>Open</code> method before a package can be resolved. This method
+should continue to be called until it returns an empty vector. This signifies all the
+missing blobs have been successfully downloaded.</p>
 
 #### Request
 <table>
@@ -187,18 +192,20 @@
 
 ### Open {#Open}
 
- Open a blob for writing.
-
- Arguments:
- * `blob_id` is the blob id describing this blob.
- * `file` resolves to an opened writable file must be truncated to the correct size by the
-   caller.
-
- Return Values:
- * `ZX_OK` if successful.
- * `ZX_ERR_ACCESS_DENIED` if the package does not contain this blob.
- * `ZX_ERR_IO` if there is some other unspecified error during I/O.
- * `ZX_ERR_NO_SPACE` if there is no space available to store the package.
+<p>Open a blob for writing.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>blob_id</code> is the blob id describing this blob.</li>
+<li><code>file</code> resolves to an opened writable file must be truncated to the correct size by the
+caller.</li>
+</ul>
+<p>Return Values:</p>
+<ul>
+<li><code>ZX_OK</code> if successful.</li>
+<li><code>ZX_ERR_ACCESS_DENIED</code> if the package does not contain this blob.</li>
+<li><code>ZX_ERR_IO</code> if there is some other unspecified error during I/O.</li>
+<li><code>ZX_ERR_NO_SPACE</code> if there is no space available to store the package.</li>
+</ul>
 
 #### Request
 <table>
@@ -229,35 +236,38 @@
 ## FontResolver {#FontResolver}
 *Defined in [fuchsia.pkg/font_resolver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/font_resolver.fidl#19)*
 
- Resolves font packages from a registry.
-
- This interface is intended to be implemented by package resolver components, and used
- exclusively by fuchsia.fonts.Provider.
-
- DEPRECATED. This is an interim solution, and will be revisited when Component Framework v2
- becomes available and allows non-component packages and easier directory routing.
+<p>Resolves font packages from a registry.</p>
+<p>This interface is intended to be implemented by package resolver components, and used
+exclusively by fuchsia.fonts.Provider.</p>
+<p>DEPRECATED. This is an interim solution, and will be revisited when Component Framework v2
+becomes available and allows non-component packages and easier directory routing.</p>
 
 ### Resolve {#Resolve}
 
- Populates or updates the cache of a font package, fetching it if it is not present on the
- local system.
-
- + request `package_url` The package URL of a font package.
- + request `update_policy` Freshness and caching policies to be used when the
-   `FontResolver` is fetching packages.
- + request `directory_request` Request for a directory that will be resolved when the package
-   has been successfully cached. The directory should contain a single file, corresponding to
-   the asset filename. The client should retain the directory handle for as long as needed to
-   prevent the package from being evicted from cache.
-
- - response `status` Outcome of the request.
-   * `ZX_OK` if the package was successfully opened.
-   * `ZX_ERR_ACCESS_DENIED` if the resolver does not have permission to fetch a package blob.
-   * `ZX_ERR_IO` if there is some other unspecified error during I/O.
-   * `ZX_ERR_NOT_FOUND` if the font package or a package blob does not exist, or is not known
-     to be a font package.
-   * `ZX_ERR_NO_SPACE` if there is no space available to store the package.
-   * `ZX_ERR_UNAVAILABLE` if the resolver is currently unable to fetch a package blob.
+<p>Populates or updates the cache of a font package, fetching it if it is not present on the
+local system.</p>
+<ul>
+<li>request <code>package_url</code> The package URL of a font package.</li>
+<li>request <code>update_policy</code> Freshness and caching policies to be used when the
+<code>FontResolver</code> is fetching packages.</li>
+<li>request <code>directory_request</code> Request for a directory that will be resolved when the package
+has been successfully cached. The directory should contain a single file, corresponding to
+the asset filename. The client should retain the directory handle for as long as needed to
+prevent the package from being evicted from cache.</li>
+</ul>
+<ul>
+<li>response <code>status</code> Outcome of the request.
+<ul>
+<li><code>ZX_OK</code> if the package was successfully opened.</li>
+<li><code>ZX_ERR_ACCESS_DENIED</code> if the resolver does not have permission to fetch a package blob.</li>
+<li><code>ZX_ERR_IO</code> if there is some other unspecified error during I/O.</li>
+<li><code>ZX_ERR_NOT_FOUND</code> if the font package or a package blob does not exist, or is not known
+to be a font package.</li>
+<li><code>ZX_ERR_NO_SPACE</code> if there is no space available to store the package.</li>
+<li><code>ZX_ERR_UNAVAILABLE</code> if the resolver is currently unable to fetch a package blob.</li>
+</ul>
+</li>
+</ul>
 
 #### Request
 <table>
@@ -293,23 +303,24 @@
 ## RepositoryManager {#RepositoryManager}
 *Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#14)*
 
- Manages package repositories.
-
- This interface is intended to be implemented by package resolver components, and used by
- repository administration tools.
+<p>Manages package repositories.</p>
+<p>This interface is intended to be implemented by package resolver components, and used by
+repository administration tools.</p>
 
 ### Add {#Add}
 
- Add a repository. This will overwrite the repository if it already exists.
-
- Arguments:
- * `repo` is repository to add to the resolver.
-
- Return Values:
- * `ZX_OK` if the repository was added.
- * `ZX_ERR_ACCESS_DENIED` if editing repositories is permanently disabled.
- * `ZX_ERR_ALREADY_EXISTS` if the repository already exists.
- * `ZX_ERR_INVALID_ARGS` if the repository is malformed.
+<p>Add a repository. This will overwrite the repository if it already exists.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>repo</code> is repository to add to the resolver.</li>
+</ul>
+<p>Return Values:</p>
+<ul>
+<li><code>ZX_OK</code> if the repository was added.</li>
+<li><code>ZX_ERR_ACCESS_DENIED</code> if editing repositories is permanently disabled.</li>
+<li><code>ZX_ERR_ALREADY_EXISTS</code> if the repository already exists.</li>
+<li><code>ZX_ERR_INVALID_ARGS</code> if the repository is malformed.</li>
+</ul>
 
 #### Request
 <table>
@@ -334,20 +345,21 @@
 
 ### Remove {#Remove}
 
- Remove a repository.
-
- Removing a repository will prevent future packages from being cached from this repository,
- but in-flight downloads may not be interrupted.
-
- Arguments:
- * `repo_url` is the URL of the repository we want to remove.
-
- Return Values:
- * `ZX_OK` if the repository was removed.
- * `ZX_ERR_ACCESS_DENIED` if editing repositories is permanently disabled or the
-   `repo_url` matches a static repository.
- * `ZX_ERR_INVALID_ARGS` if the `repo_url` is malformed.
- * `ZX_ERR_NOT_FOUND` if the repository does not exist.
+<p>Remove a repository.</p>
+<p>Removing a repository will prevent future packages from being cached from this repository,
+but in-flight downloads may not be interrupted.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>repo_url</code> is the URL of the repository we want to remove.</li>
+</ul>
+<p>Return Values:</p>
+<ul>
+<li><code>ZX_OK</code> if the repository was removed.</li>
+<li><code>ZX_ERR_ACCESS_DENIED</code> if editing repositories is permanently disabled or the
+<code>repo_url</code> matches a static repository.</li>
+<li><code>ZX_ERR_INVALID_ARGS</code> if the <code>repo_url</code> is malformed.</li>
+<li><code>ZX_ERR_NOT_FOUND</code> if the repository does not exist.</li>
+</ul>
 
 #### Request
 <table>
@@ -372,17 +384,19 @@
 
 ### AddMirror {#AddMirror}
 
- Add a mirror to a repository. This will overwrite the mirror if it already exists.
-
- Arguments:
- * `repo_url` is repository that corresponds with this mirror.
- * `mirror_url` is mirror URL to add to the resolver.
-
- Return Values:
- * `ZX_OK` if the mirror was removed.
- * `ZX_ERR_ALREADY_EXISTS` if the mirror for this repository already exists.
- * `ZX_ERR_INVALID_ARGS` if the `repo_url` or the `mirror` is malformed.
- * `ZX_ERR_NOT_FOUND` if the repository does not exist.
+<p>Add a mirror to a repository. This will overwrite the mirror if it already exists.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>repo_url</code> is repository that corresponds with this mirror.</li>
+<li><code>mirror_url</code> is mirror URL to add to the resolver.</li>
+</ul>
+<p>Return Values:</p>
+<ul>
+<li><code>ZX_OK</code> if the mirror was removed.</li>
+<li><code>ZX_ERR_ALREADY_EXISTS</code> if the mirror for this repository already exists.</li>
+<li><code>ZX_ERR_INVALID_ARGS</code> if the <code>repo_url</code> or the <code>mirror</code> is malformed.</li>
+<li><code>ZX_ERR_NOT_FOUND</code> if the repository does not exist.</li>
+</ul>
 
 #### Request
 <table>
@@ -412,19 +426,20 @@
 
 ### RemoveMirror {#RemoveMirror}
 
- Remove a mirror from a repository.
-
- Removing a mirror will prevent future packages from being cached from that mirror, but
- in-flight downloads may not be interrupted.
-
- Arguments:
- * `repo_url` the URL of the mirror's repository.
- * `mirror_url` the URL of the mirror we want to remove.
-
- Return Values:
- * `ZX_OK` if the mirror was removed.
- * `ZX_ERR_INVALID_ARGS` if the `repo_url` or the `mirror_url` is malformed.
- * `ZX_ERR_NOT_FOUND` if the repository or mirror does not exist.
+<p>Remove a mirror from a repository.</p>
+<p>Removing a mirror will prevent future packages from being cached from that mirror, but
+in-flight downloads may not be interrupted.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>repo_url</code> the URL of the mirror's repository.</li>
+<li><code>mirror_url</code> the URL of the mirror we want to remove.</li>
+</ul>
+<p>Return Values:</p>
+<ul>
+<li><code>ZX_OK</code> if the mirror was removed.</li>
+<li><code>ZX_ERR_INVALID_ARGS</code> if the <code>repo_url</code> or the <code>mirror_url</code> is malformed.</li>
+<li><code>ZX_ERR_NOT_FOUND</code> if the repository or mirror does not exist.</li>
+</ul>
 
 #### Request
 <table>
@@ -454,10 +469,9 @@
 
 ### List {#List}
 
- Return an iterator over all repositories.
-
- Arguments:
- `iterator` is a request for an iterator.
+<p>Return an iterator over all repositories.</p>
+<p>Arguments:
+<code>iterator</code> is a request for an iterator.</p>
 
 #### Request
 <table>
@@ -474,15 +488,16 @@
 ## RepositoryIterator {#RepositoryIterator}
 *Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#132)*
 
- The iterator over all the repositories defined in a `PackageResolver`.
+<p>The iterator over all the repositories defined in a <code>PackageResolver</code>.</p>
 
 ### Next {#Next}
 
- Advance the iterator and return the next batch of repositories.
-
- Return Values:
- * a vector of `RepositoryConfig` repositories. Will return an empty vector when there are
-   no more repositories.
+<p>Advance the iterator and return the next batch of repositories.</p>
+<p>Return Values:</p>
+<ul>
+<li>a vector of <code>RepositoryConfig</code> repositories. Will return an empty vector when there are
+no more repositories.</li>
+</ul>
 
 #### Request
 <table>
@@ -503,31 +518,31 @@
 ## PackageResolver {#PackageResolver}
 *Defined in [fuchsia.pkg/resolver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/resolver.fidl#15)*
 
- Resolves packages from a registry.
-
- This interface is intended to be implemented by package resolver components, and used by
- repository administration tools.
+<p>Resolves packages from a registry.</p>
+<p>This interface is intended to be implemented by package resolver components, and used by
+repository administration tools.</p>
 
 ### Resolve {#Resolve}
 
- Populates or updates the cache of a package with the given selectors as specified by the
- update policy.
-
- Ensures that a package is on the local filesystem.
-
- Arguments:
- * `package_url` The package URL for a package (TODO: link to docs).
- * `selectors` are the package selectors (TODO: link to docs).
- * `dir` is a request for a directory that will be resolved when the package has been
-   successfully cached.
-
- Return Values:
- * `ZX_OK` if the package was successfully opened.
- * `ZX_ERR_ACCESS_DENIED` if the resolver does not have permission to fetch a package blob.
- * `ZX_ERR_IO` if there is some other unspecified error during I/O.
- * `ZX_ERR_NOT_FOUND` if the package or a package blob does not exist.
- * `ZX_ERR_NO_SPACE` if there is no space available to store the package.
- * `ZX_ERR_UNAVAILABLE` if the resolver is currently unable to fetch a package blob.
+<p>Populates or updates the cache of a package with the given selectors as specified by the
+update policy.</p>
+<p>Ensures that a package is on the local filesystem.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>package_url</code> The package URL for a package (TODO: link to docs).</li>
+<li><code>selectors</code> are the package selectors (TODO: link to docs).</li>
+<li><code>dir</code> is a request for a directory that will be resolved when the package has been
+successfully cached.</li>
+</ul>
+<p>Return Values:</p>
+<ul>
+<li><code>ZX_OK</code> if the package was successfully opened.</li>
+<li><code>ZX_ERR_ACCESS_DENIED</code> if the resolver does not have permission to fetch a package blob.</li>
+<li><code>ZX_ERR_IO</code> if there is some other unspecified error during I/O.</li>
+<li><code>ZX_ERR_NOT_FOUND</code> if the package or a package blob does not exist.</li>
+<li><code>ZX_ERR_NO_SPACE</code> if there is no space available to store the package.</li>
+<li><code>ZX_ERR_UNAVAILABLE</code> if the resolver is currently unable to fetch a package blob.</li>
+</ul>
 
 #### Request
 <table>
@@ -568,12 +583,12 @@
 ## SystemBlobAdmin {#SystemBlobAdmin}
 *Defined in [fuchsia.pkg/system_blob_admin.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/system_blob_admin.fidl#10)*
 
- Administrates the critical system blobs on the system.
+<p>Administrates the critical system blobs on the system.</p>
 
 ### ReleaseRetainedBlobs {#ReleaseRetainedBlobs}
 
- Allows blobs from old system versions to be garbage collected. The current system blobs
- will not be collected.
+<p>Allows blobs from old system versions to be garbage collected. The current system blobs
+will not be collected.</p>
 
 #### Request
 <table>
@@ -584,17 +599,19 @@
 
 ### RetainBlobs {#RetainBlobs}
 
- Adds the blobs listed in the `retention_index` blob to the retention list. This should be
- called during a system upgrade with the new system blob in order to make sure they are not
- garbage collected before the upgrade completes.
-
- Arguments:
- * `retention_index` is the blob id for a list of blobs to retain.
-
- Return Values:
- * `ZX_OK` if the blobs were successfully retained.
- * `ZX_ERR_IO` if there is some other unspecified error during I/O.
- * `ZX_ERR_NOT_FOUND` if the `retention_index` could not be found on the local system.
+<p>Adds the blobs listed in the <code>retention_index</code> blob to the retention list. This should be
+called during a system upgrade with the new system blob in order to make sure they are not
+garbage collected before the upgrade completes.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>retention_index</code> is the blob id for a list of blobs to retain.</li>
+</ul>
+<p>Return Values:</p>
+<ul>
+<li><code>ZX_OK</code> if the blobs were successfully retained.</li>
+<li><code>ZX_ERR_IO</code> if there is some other unspecified error during I/O.</li>
+<li><code>ZX_ERR_NOT_FOUND</code> if the <code>retention_index</code> could not be found on the local system.</li>
+</ul>
 
 #### Request
 <table>
@@ -626,8 +643,8 @@
 
 
 
- BlobId is a content-addressed merkle root that describes an artifact that is tracked by the
- packaging system.
+<p>BlobId is a content-addressed merkle root that describes an artifact that is tracked by the
+packaging system.</p>
 
 
 <table>
@@ -646,8 +663,8 @@
 
 
 
- BlobInfo is a tuple of the content-addressed merkle root for an artifact, along with that
- artifact's length in bytes.
+<p>BlobInfo is a tuple of the content-addressed merkle root for an artifact, along with that
+artifact's length in bytes.</p>
 
 
 <table>
@@ -673,8 +690,8 @@
 
 
 
- The `UpdatePolicy` provides different policies to be used when the `PackageResolver` is
- fetching packages.
+<p>The <code>UpdatePolicy</code> provides different policies to be used when the <code>PackageResolver</code> is
+fetching packages.</p>
 
 
 <table>
@@ -683,7 +700,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Should the resolver fetch the package if it is not present on the local system.
+            <td><p>Should the resolver fetch the package if it is not present on the local system.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -691,7 +708,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Should the resolver allow old versions of the package to be used.
+            <td><p>Should the resolver allow old versions of the package to be used.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -706,19 +723,19 @@ Type: <code>uint64</code>
 
 *Defined in [fuchsia.pkg/admin.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/admin.fidl#24)*
 
- List of known experiment toggles
+<p>List of known experiment toggles</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LIGHTBULB</code></td>
             <td><code>0</code></td>
-            <td> Does nothing, but visible in inspect.
+            <td><p>Does nothing, but visible in inspect.</p>
 </td>
         </tr><tr>
             <td><code>DOWNLOAD_BLOB</code></td>
             <td><code>1</code></td>
-            <td> Perform blob downloading in the package resolver instead of amber.
+            <td><p>Perform blob downloading in the package resolver instead of amber.</p>
 </td>
         </tr></table>
 
@@ -731,7 +748,7 @@ Type: <code>uint64</code>
 
 *Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#79)*
 
- Describes the configuration necessary to connect to a repository and it's mirrors.
+<p>Describes the configuration necessary to connect to a repository and it's mirrors.</p>
 
 
 <table>
@@ -742,9 +759,8 @@ Type: <code>uint64</code>
             <td>
                 <code>string</code>
             </td>
-            <td> A fuchsia-pkg URL identifying the repository. Required.
-
- Example: fuchsia-pkg://example.com/
+            <td><p>A fuchsia-pkg URL identifying the repository. Required.</p>
+<p>Example: fuchsia-pkg://example.com/</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -752,9 +768,8 @@ Type: <code>uint64</code>
             <td>
                 <code>vector&lt;<a class='link' href='#RepositoryKeyConfig'>RepositoryKeyConfig</a>&gt;</code>
             </td>
-            <td> A vector of public keys. Required.
-
- These keys must match one of the trusted keys known to the system.
+            <td><p>A vector of public keys. Required.</p>
+<p>These keys must match one of the trusted keys known to the system.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -762,7 +777,7 @@ Type: <code>uint64</code>
             <td>
                 <code>vector&lt;<a class='link' href='#MirrorConfig'>MirrorConfig</a>&gt;</code>
             </td>
-            <td> The repository mirrors that serve the package contents. Required.
+            <td><p>The repository mirrors that serve the package contents. Required.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -770,9 +785,8 @@ Type: <code>uint64</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The package URL of the system update package. Optional.
-
- Only used for the fuchsia-pkg://fuchsia.com/ repo.
+            <td><p>The package URL of the system update package. Optional.</p>
+<p>Only used for the fuchsia-pkg://fuchsia.com/ repo.</p>
 </td>
         </tr></table>
 
@@ -781,7 +795,7 @@ Type: <code>uint64</code>
 
 *Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#116)*
 
- Describes the configuration necessary to connect to a mirror.
+<p>Describes the configuration necessary to connect to a mirror.</p>
 
 
 <table>
@@ -792,7 +806,7 @@ Type: <code>uint64</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The base URL of the TUF metadata on this mirror. Required.
+            <td><p>The base URL of the TUF metadata on this mirror. Required.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -800,7 +814,7 @@ Type: <code>uint64</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether or not to automatically monitor the mirror for updates. Required.
+            <td><p>Whether or not to automatically monitor the mirror for updates. Required.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -808,7 +822,7 @@ Type: <code>uint64</code>
             <td>
                 <code><a class='link' href='#RepositoryBlobKey'>RepositoryBlobKey</a></code>
             </td>
-            <td> The private (or symmetric) key used to decrypt blobs fetched from this mirror. Optional.
+            <td><p>The private (or symmetric) key used to decrypt blobs fetched from this mirror. Optional.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -816,8 +830,8 @@ Type: <code>uint64</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The URL where blobs from this mirror should be fetched.  Optional.
- Defaults to `mirror_url + "/blobs"`.
+            <td><p>The URL where blobs from this mirror should be fetched.  Optional.
+Defaults to <code>mirror_url + &quot;/blobs&quot;</code>.</p>
 </td>
         </tr></table>
 
@@ -830,9 +844,8 @@ Type: <code>uint64</code>
 ### RepositoryKeyConfig {#RepositoryKeyConfig}
 *Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#102)*
 
- Describes the keys used by the repository to authenticate it's packages.
-
- The only supported algorithm at the moment is ed25519.
+<p>Describes the keys used by the repository to authenticate it's packages.</p>
+<p>The only supported algorithm at the moment is ed25519.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -840,16 +853,15 @@ Type: <code>uint64</code>
             <td>
                 <code>vector&lt;uint8&gt;</code>
             </td>
-            <td> The raw ed25519 public key as binary data.
+            <td><p>The raw ed25519 public key as binary data.</p>
 </td>
         </tr></table>
 
 ### RepositoryBlobKey {#RepositoryBlobKey}
 *Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#110)*
 
- Describes a key used to decrypt blobs.
-
- The only supported algorithm at the moment is aes.
+<p>Describes a key used to decrypt blobs.</p>
+<p>The only supported algorithm at the moment is aes.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -857,7 +869,7 @@ Type: <code>uint64</code>
             <td>
                 <code>vector&lt;uint8&gt;</code>
             </td>
-            <td> A raw aes key as binary data.
+            <td><p>A raw aes key as binary data.</p>
 </td>
         </tr></table>
 

@@ -2,7 +2,7 @@
 
 # fuchsia.scpi
 
- System Control Power Interface
+<p>System Control Power Interface</p>
 
 ## **PROTOCOLS**
 
@@ -105,7 +105,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> operating point index for big cluster
+            <td><p>operating point index for big cluster</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -113,7 +113,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> operating point index for small cluster
+            <td><p>operating point index for small cluster</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -121,7 +121,7 @@
             <td>
                 <code>float32</code>
             </td>
-            <td> current CPU temperature in degrees Celsius
+            <td><p>current CPU temperature in degrees Celsius</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -129,7 +129,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> current Fan Level
+            <td><p>current Fan Level</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -137,7 +137,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> current CPU utilization
+            <td><p>current CPU utilization</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -145,7 +145,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> current Memory usage
+            <td><p>current Memory usage</p>
 </td>
             <td>No default</td>
         </tr>
@@ -166,39 +166,39 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>OK</code></td>
             <td><code>0</code></td>
-            <td> the call completed successfully
+            <td><p>the call completed successfully</p>
 </td>
         </tr><tr>
             <td><code>ERR_DVFS_INFO</code></td>
             <td><code>1</code></td>
-            <td> failed to get the DVFS operating
- points information
+            <td><p>failed to get the DVFS operating
+points information</p>
 </td>
         </tr><tr>
             <td><code>ERR_DVFS_OPP_IDX</code></td>
             <td><code>2</code></td>
-            <td> failed to get the dvfs opp index
- which is set currently
+            <td><p>failed to get the dvfs opp index
+which is set currently</p>
 </td>
         </tr><tr>
             <td><code>ERR_TEMPERATURE</code></td>
             <td><code>3</code></td>
-            <td> failed to get the temperature
+            <td><p>failed to get the temperature</p>
 </td>
         </tr><tr>
             <td><code>ERR_FAN_LEVEL</code></td>
             <td><code>4</code></td>
-            <td> failed to get the fan level
+            <td><p>failed to get the fan level</p>
 </td>
         </tr><tr>
             <td><code>ERR_CPU_STATS</code></td>
             <td><code>5</code></td>
-            <td> failed to get cpu stats info
+            <td><p>failed to get cpu stats info</p>
 </td>
         </tr><tr>
             <td><code>ERR_MEM_STATS</code></td>
             <td><code>6</code></td>
-            <td> failed to get memory stat info
+            <td><p>failed to get memory stat info</p>
 </td>
         </tr></table>
 

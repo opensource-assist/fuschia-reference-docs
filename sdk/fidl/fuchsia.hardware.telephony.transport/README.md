@@ -11,7 +11,7 @@
 
 ### SetChannel {#SetChannel}
 
- Give a channel handle that transports bi-directional QMI messages
+<p>Give a channel handle that transports bi-directional QMI messages</p>
 
 #### Request
 <table>
@@ -36,8 +36,8 @@
 
 ### SetNetwork {#SetNetwork}
 
- Configure the network used by the transport
- Currently only sets network up/down
+<p>Configure the network used by the transport
+Currently only sets network up/down</p>
 
 #### Request
 <table>
@@ -57,7 +57,7 @@
 
 ### SetSnoopChannel {#SetSnoopChannel}
 
- Pass an interface for QMI message snooping
+<p>Pass an interface for QMI message snooping</p>
 
 #### Request
 <table>

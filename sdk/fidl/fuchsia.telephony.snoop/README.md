@@ -8,7 +8,7 @@
 ## Publisher {#Publisher}
 *Defined in [fuchsia.telephony.snoop/tel-snoop.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-telephony-snoop/tel-snoop.fidl#27)*
 
- Protocol for forwarding messages to Snooper.
+<p>Protocol for forwarding messages to Snooper.</p>
 
 ### SendMessage {#SendMessage}
 
@@ -28,11 +28,11 @@
 ## Snooper {#Snooper}
 *Defined in [fuchsia.telephony.snoop/tel-snoop.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-telephony-snoop/tel-snoop.fidl#33)*
 
- Protocol for forwarding Message from Snooper.
+<p>Protocol for forwarding Message from Snooper.</p>
 
 ### GetDeviceNum {#GetDeviceNum}
 
- Get number of devices that connect to Snooper.
+<p>Get number of devices that connect to Snooper.</p>
 
 #### Request
 <table>
@@ -52,7 +52,7 @@
 
 ### OnMessage {#OnMessage}
 
- Snoop message which receives by Snooper client.
+<p>Snoop message which receives by Snooper client.</p>
 
 
 

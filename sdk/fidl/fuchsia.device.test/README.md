@@ -11,9 +11,9 @@
 
 ### RunTests {#RunTests}
 
- Execute the tests for this device. Returns the status from the test. If
- used as part of the Device protocol then Test output will be streamed to
- the socket set by SetOutputSocket().
+<p>Execute the tests for this device. Returns the status from the test. If
+used as part of the Device protocol then Test output will be streamed to
+the socket set by SetOutputSocket().</p>
 
 #### Request
 <table>
@@ -39,13 +39,13 @@
 ## Device {#Device}
 *Defined in [fuchsia.device.test/test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-test/test.fidl#32)*
 
- Interface for controlling a device created via RootDevice.CreateDevice
+<p>Interface for controlling a device created via RootDevice.CreateDevice</p>
 
 ### RunTests {#RunTests}
 
- Execute the tests for this device. Returns the status from the test. If
- used as part of the Device protocol then Test output will be streamed to
- the socket set by SetOutputSocket().
+<p>Execute the tests for this device. Returns the status from the test. If
+used as part of the Device protocol then Test output will be streamed to
+the socket set by SetOutputSocket().</p>
 
 #### Request
 <table>
@@ -70,7 +70,7 @@
 
 ### SetOutputSocket {#SetOutputSocket}
 
- Set a socket to stream test output to.
+<p>Set a socket to stream test output to.</p>
 
 #### Request
 <table>
@@ -86,7 +86,7 @@
 
 ### SetChannel {#SetChannel}
 
- Set a channel for the test to use in a test-specific manner.
+<p>Set a channel for the test to use in a test-specific manner.</p>
 
 #### Request
 <table>
@@ -102,7 +102,7 @@
 
 ### Destroy {#Destroy}
 
- Unload this device.
+<p>Unload this device.</p>
 
 #### Request
 <table>
@@ -114,14 +114,13 @@
 ## RootDevice {#RootDevice}
 *Defined in [fuchsia.device.test/test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-test/test.fidl#53)*
 
- Interface for creating devices within a devhost.
+<p>Interface for creating devices within a devhost.</p>
 
 ### CreateDevice {#CreateDevice}
 
- Create a device with the given `name` that is a child of this device.
- If `name` contains a trailing ".so", it will be removed.
-
- On success, `path` will be the filesystem path of the new device.
+<p>Create a device with the given <code>name</code> that is a child of this device.
+If <code>name</code> contains a trailing &quot;.so&quot;, it will be removed.</p>
+<p>On success, <code>path</code> will be the filesystem path of the new device.</p>
 
 #### Request
 <table>
@@ -158,7 +157,7 @@
 
 
 
- Returns the result summary of a test run
+<p>Returns the result summary of a test run</p>
 
 
 <table>
@@ -167,7 +166,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> Total number of tests
+            <td><p>Total number of tests</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -175,7 +174,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> Number of successful tests
+            <td><p>Number of successful tests</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -183,7 +182,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> Number of failed tests
+            <td><p>Number of failed tests</p>
 </td>
             <td>No default</td>
         </tr>
@@ -208,7 +207,7 @@
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-test/test.fidl#10">CONTROL_DEVICE</a></td>
             <td><code>/dev/test/test</code></td>
                     <td><code>String</code></td>
-            <td> The path which can be used to open the control device
+            <td><p>The path which can be used to open the control device</p>
 </td>
         </tr>
     <tr>
@@ -217,7 +216,7 @@
                     <code>31</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum device name len.  This value must match `ZX_DEVICE_NAME_MAX`.
+            <td><p>Maximum device name len.  This value must match <code>ZX_DEVICE_NAME_MAX</code>.</p>
 </td>
         </tr>
     <tr>
@@ -226,7 +225,7 @@
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum device path len
+            <td><p>Maximum device path len</p>
 </td>
         </tr>
     

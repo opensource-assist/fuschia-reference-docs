@@ -11,7 +11,7 @@
 
 ### GetProperties {#GetProperties}
 
- Fetch the performance monitor properties of the system.
+<p>Fetch the performance monitor properties of the system.</p>
 
 #### Request
 <table>
@@ -31,10 +31,10 @@
 
 ### Initialize {#Initialize}
 
- Create a trace, allocating the needed trace buffers and other resources.
- "other resources" is basically a catch-all for other things that will
- be needed. This does not include reserving the events, that is done
- later by `StageConfig()`.
+<p>Create a trace, allocating the needed trace buffers and other resources.
+&quot;other resources&quot; is basically a catch-all for other things that will
+be needed. This does not include reserving the events, that is done
+later by <code>StageConfig()</code>.</p>
 
 #### Request
 <table>
@@ -59,10 +59,10 @@
 
 ### Terminate {#Terminate}
 
- Free all trace buffers and any other resources allocated for the trace.
- This is also done when the connection is closed.
- Tracing is first stopped if not already stopped.
- May be called multiple times.
+<p>Free all trace buffers and any other resources allocated for the trace.
+This is also done when the connection is closed.
+Tracing is first stopped if not already stopped.
+May be called multiple times.</p>
 
 #### Request
 <table>
@@ -77,7 +77,7 @@
 
 ### GetAllocation {#GetAllocation}
 
- Return the trace allocation configuration, if there is one.
+<p>Return the trace allocation configuration, if there is one.</p>
 
 #### Request
 <table>
@@ -97,10 +97,10 @@
 
 ### StageConfig {#StageConfig}
 
- Stage performance monitor specification for a cpu.
- Must be called with data collection off and after `Initialize()`.
- Note: This doesn't actually configure the h/w, this just stages
- the values for subsequent use by `Start()`.
+<p>Stage performance monitor specification for a cpu.
+Must be called with data collection off and after <code>Initialize()</code>.
+Note: This doesn't actually configure the h/w, this just stages
+the values for subsequent use by <code>Start()</code>.</p>
 
 #### Request
 <table>
@@ -125,8 +125,8 @@
 
 ### GetConfig {#GetConfig}
 
- Fetch performance monitor specification for a cpu, if it exists.
- Must be called with data collection off and after `StageConfig()`.
+<p>Fetch performance monitor specification for a cpu, if it exists.
+Must be called with data collection off and after <code>StageConfig()</code>.</p>
 
 #### Request
 <table>
@@ -146,9 +146,9 @@
 
 ### GetBufferHandle {#GetBufferHandle}
 
- Return a handle of a trace buffer, if it exists, and if `descriptor`
- is valid.
- `descriptor` is (0, 1, 2, ..., `num_buffers`-1)
+<p>Return a handle of a trace buffer, if it exists, and if <code>descriptor</code>
+is valid.
+<code>descriptor</code> is (0, 1, 2, ..., <code>num_buffers</code>-1)</p>
 
 #### Request
 <table>
@@ -173,9 +173,9 @@
 
 ### Start {#Start}
 
- Turn on data collection.
- Must be called after `Initialize()` + `StageConfig()` and with data
- collection off.
+<p>Turn on data collection.
+Must be called after <code>Initialize()</code> + <code>StageConfig()</code> and with data
+collection off.</p>
 
 #### Request
 <table>
@@ -195,10 +195,10 @@
 
 ### Stop {#Stop}
 
- Turn off data collection.
- May be called any time after `Initialize()` has been called and before
- `Terminate()`. If called at other times the call is ignored.
- May be called multiple times.
+<p>Turn off data collection.
+May be called any time after <code>Initialize()</code> has been called and before
+<code>Terminate()</code>. If called at other times the call is ignored.
+May be called multiple times.</p>
 
 #### Request
 <table>
@@ -253,7 +253,7 @@
 
 
 
- The properties of this system.
+<p>The properties of this system.</p>
 
 
 <table>
@@ -262,7 +262,7 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> S/W API version = `API_VERSION`.
+            <td><p>S/W API version = <code>API_VERSION</code>.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -270,8 +270,8 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> The H/W Performance Monitor version.
- This is the version defined by the architecture.
+            <td><p>The H/W Performance Monitor version.
+This is the version defined by the architecture.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -279,9 +279,9 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> The maximum number of events that can be simultaneously supported.
- The combination of events that can be simultaneously supported is
- architecture/model specific.
+            <td><p>The maximum number of events that can be simultaneously supported.
+The combination of events that can be simultaneously supported is
+architecture/model specific.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -289,9 +289,9 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> The maximum number of fixed events that can be simultaneously
- supported, and their maximum width.
- These values are for informational/display purposes.
+            <td><p>The maximum number of fixed events that can be simultaneously
+supported, and their maximum width.
+These values are for informational/display purposes.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -306,9 +306,9 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> The maximum number of programmable events that can be simultaneously
- supported, and their maximum width.
- These values are for informational/display purposes.
+            <td><p>The maximum number of programmable events that can be simultaneously
+supported, and their maximum width.
+These values are for informational/display purposes.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -323,9 +323,9 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> The maximum number of misc events that can be simultaneously
- supported, and their maximum width.
- These values are for informational/display purposes.
+            <td><p>The maximum number of misc events that can be simultaneously
+supported, and their maximum width.
+These values are for informational/display purposes.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -340,7 +340,7 @@
             <td>
                 <code><a class='link' href='#PropertyFlags'>PropertyFlags</a></code>
             </td>
-            <td> Various flags.
+            <td><p>Various flags.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -359,9 +359,9 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> Event to collect data for.
- The values are architecture specific ids.
- Each event may appear at most once.
+            <td><p>Event to collect data for.
+The values are architecture specific ids.
+Each event may appear at most once.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -369,14 +369,16 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> Sampling rate.
- - If rate is non-zero then when the event gets this many hits data is
-   collected (e.g., pc, time).
-   The rate can be non-zero for counting based events only.
- - If rate is zero then:
-     If there is a timebase event then data for this event is collected
-     when data for the timebase event is collected.
-     Otherwise data for the event is collected once, when tracing stops.
+            <td><p>Sampling rate.</p>
+<ul>
+<li>If rate is non-zero then when the event gets this many hits data is
+collected (e.g., pc, time).
+The rate can be non-zero for counting based events only.</li>
+<li>If rate is zero then:
+If there is a timebase event then data for this event is collected
+when data for the timebase event is collected.
+Otherwise data for the event is collected once, when tracing stops.</li>
+</ul>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -384,7 +386,7 @@
             <td>
                 <code><a class='link' href='#EventConfigFlags'>EventConfigFlags</a></code>
             </td>
-            <td> Flags for the event.
+            <td><p>Flags for the event.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -395,7 +397,7 @@
 
 
 
- Passed to `StageConfig()` to select the data to be collected.
+<p>Passed to <code>StageConfig()</code> to select the data to be collected.</p>
 
 
 <table>
@@ -404,7 +406,7 @@
             <td>
                 <code>[32]</code>
             </td>
-            <td> Events to collect data for.
+            <td><p>Events to collect data for.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -415,9 +417,9 @@
 
 
 
- The allocation configuration for a data collection run.
- This is generally the first call to allocate resources for a trace,
- "trace" is used generically here: == "data collection run".
+<p>The allocation configuration for a data collection run.
+This is generally the first call to allocate resources for a trace,
+&quot;trace&quot; is used generically here: == &quot;data collection run&quot;.</p>
 
 
 <table>
@@ -426,8 +428,8 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The number of buffers to allocate for trace data.
- This must be #cpus for now.
+            <td><p>The number of buffers to allocate for trace data.
+This must be #cpus for now.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -435,8 +437,8 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The size of each buffer in 4K pages.
- Each cpu gets same buffer size.
+            <td><p>The size of each buffer in 4K pages.
+Each cpu gets same buffer size.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -521,7 +523,7 @@ Type: <code>uint64</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td>HAS_LAST_BRANCH</td>
             <td>1</td>
-            <td> The architecture supports LBR records (Last Branch Records).
+            <td><p>The architecture supports LBR records (Last Branch Records).</p>
 </td>
         </tr></table>
 
@@ -533,33 +535,33 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td>COLLECT_OS</td>
             <td>1</td>
-            <td> Collect data when running in kernel mode.
+            <td><p>Collect data when running in kernel mode.</p>
 </td>
         </tr><tr>
             <td>COLLECT_USER</td>
             <td>2</td>
-            <td> Collect data when running in userspace mode.
+            <td><p>Collect data when running in userspace mode.</p>
 </td>
         </tr><tr>
             <td>COLLECT_PC</td>
             <td>4</td>
-            <td> Collect aspace+pc values.
+            <td><p>Collect aspace+pc values.</p>
 </td>
         </tr><tr>
             <td>IS_TIMEBASE</td>
             <td>8</td>
-            <td> If set for an event then the event is used as the "timebase": data
- for events with a zero rate is collected when data for the timebase
- event is collected.
- It is an error to have this set and have the event's rate be zero.
- At most one event may be the timebase event.
+            <td><p>If set for an event then the event is used as the &quot;timebase&quot;: data
+for events with a zero rate is collected when data for the timebase
+event is collected.
+It is an error to have this set and have the event's rate be zero.
+At most one event may be the timebase event.</p>
 </td>
         </tr><tr>
             <td>COLLECT_LAST_BRANCH</td>
             <td>16</td>
-            <td> Collect the available set of last branches.
- Branch data is emitted as LastBranch records.
- This is only available when the underlying system supports it.
+            <td><p>Collect the available set of last branches.
+Branch data is emitted as LastBranch records.
+This is only available when the underlying system supports it.</p>
 </td>
         </tr></table>
 
@@ -582,8 +584,8 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint16</code></td>
-            <td> The maximum number of events we support simultaneously.
- Typically the h/w supports less than this, e.g., 7 or so.
+            <td><p>The maximum number of events we support simultaneously.
+Typically the h/w supports less than this, e.g., 7 or so.</p>
 </td>
         </tr>
     

@@ -8,36 +8,35 @@
 ## ProcedureToken {#ProcedureToken}
 *Defined in [fuchsia.bluetooth.sys/access.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/access.fidl#22)*
 
- Represents an active procedure. The validity of a handle that supports this protocol is tied to
- the activity of the procedure that it is attached to. To elaborate:
-
-   1. Closing a token handle ends the procedure that it is attached to.
-   2. The system closes a token handle to communicate that a procedure was internally terminated.
+<p>Represents an active procedure. The validity of a handle that supports this protocol is tied to
+the activity of the procedure that it is attached to. To elaborate:</p>
+<ol>
+<li>Closing a token handle ends the procedure that it is attached to.</li>
+<li>The system closes a token handle to communicate that a procedure was internally terminated.</li>
+</ol>
 
 ## Access {#Access}
 *Defined in [fuchsia.bluetooth.sys/access.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/access.fidl#33)*
 
- Protocol that abstracts the operational modes and procedures defined in the Bluetooth Generic
- Access Profile (see Core Specification v5.1, Vol 3, Part C).
-
- The procedures under this protocol apply to the system as a whole. The Bluetooth controller that
- plays an active role in these procedures can be managed using the HostWatcher protocol.
-
- The procedures initiated by an Access protocol instance are terminated when the underlying
- channel is closed.
+<p>Protocol that abstracts the operational modes and procedures defined in the Bluetooth Generic
+Access Profile (see Core Specification v5.1, Vol 3, Part C).</p>
+<p>The procedures under this protocol apply to the system as a whole. The Bluetooth controller that
+plays an active role in these procedures can be managed using the HostWatcher protocol.</p>
+<p>The procedures initiated by an Access protocol instance are terminated when the underlying
+channel is closed.</p>
 
 ### SetPairingDelegate {#SetPairingDelegate}
 
- Assign a PairingDelegate to respond to drive pairing procedures. The delegate will be
- configured to use the provided I/O capabilities to determine the pairing method.
-
- Only one PairingDelegate can be registered at a time. Closing a PairingDelegate aborts all
- on-going pairing procedures associated with a delegate and closes the PairingDelegate
- previously assigned for this Access instance.
-
- + request `input` Bluetooth input capability
- + request `output` Bluetooth output capability
- + request `delegate` The client end of a PairingDelegate channel.
+<p>Assign a PairingDelegate to respond to drive pairing procedures. The delegate will be
+configured to use the provided I/O capabilities to determine the pairing method.</p>
+<p>Only one PairingDelegate can be registered at a time. Closing a PairingDelegate aborts all
+on-going pairing procedures associated with a delegate and closes the PairingDelegate
+previously assigned for this Access instance.</p>
+<ul>
+<li>request <code>input</code> Bluetooth input capability</li>
+<li>request <code>output</code> Bluetooth output capability</li>
+<li>request <code>delegate</code> The client end of a PairingDelegate channel.</li>
+</ul>
 
 #### Request
 <table>
@@ -63,10 +62,11 @@
 
 ### SetLocalName {#SetLocalName}
 
- Assign a local name for the Bluetooth system. This name will be visible to nearby peers
- when the system is in discoverable mode and during name discovery procedures.
-
- + request `name` The complete local name to assign to the system.
+<p>Assign a local name for the Bluetooth system. This name will be visible to nearby peers
+when the system is in discoverable mode and during name discovery procedures.</p>
+<ul>
+<li>request <code>name</code> The complete local name to assign to the system.</li>
+</ul>
 
 #### Request
 <table>
@@ -82,10 +82,11 @@
 
 ### SetDeviceClass {#SetDeviceClass}
 
- Set the local device class that will be visible to nearby peers when the system is in
- discoverable mode.
-
- + request `device_class` The device class to assign to the system.
+<p>Set the local device class that will be visible to nearby peers when the system is in
+discoverable mode.</p>
+<ul>
+<li>request <code>device_class</code> The device class to assign to the system.</li>
+</ul>
 
 #### Request
 <table>
@@ -101,13 +102,16 @@
 
 ### MakeDiscoverable {#MakeDiscoverable}
 
- Put the system into the "General Discoverable" mode on the BR/EDR transport. The active
- host will respond to general inquiry (by regularly entering the inquiry scan mode).
-
- + request `token` <a class='link' href='#ProcedureToken'>ProcedureToken</a> that will remain valid while a
-   discoverable mode session is active. NOTE: The system may remain discoverable until all
-   <a class='link' href='#Access'>Access</a> clients drop their tokens.
- * error Reports Error.FAILED if inquiry mode cannot be entered.
+<p>Put the system into the &quot;General Discoverable&quot; mode on the BR/EDR transport. The active
+host will respond to general inquiry (by regularly entering the inquiry scan mode).</p>
+<ul>
+<li>request <code>token</code> <a class='link' href='#ProcedureToken'>ProcedureToken</a> that will remain valid while a
+discoverable mode session is active. NOTE: The system may remain discoverable until all
+<a class='link' href='#Access'>Access</a> clients drop their tokens.</li>
+</ul>
+<ul>
+<li>error Reports Error.FAILED if inquiry mode cannot be entered.</li>
+</ul>
 
 #### Request
 <table>
@@ -132,14 +136,17 @@
 
 ### StartDiscovery {#StartDiscovery}
 
- Start a general discovery procedure. All general discoverable BR/EDR, LE,
- and BR/EDR/LE devices will appear in the peer list, which can be observed by calling
- <a class='link' href='#Access.WatchPeers'>Access.WatchPeers</a>.
-
- + request `token` <a class='link' href='#ProcedureToken'>ProcedureToken</a> that will remain valid while
-   discovery is in progress. NOTE: The radio will continue performing discovery until all
-   <a class='link' href='#Access'>Access</a> drop their tokens.
- * error Reports Error.FAILED if discovery on either transport cannot be initiated.
+<p>Start a general discovery procedure. All general discoverable BR/EDR, LE,
+and BR/EDR/LE devices will appear in the peer list, which can be observed by calling
+<a class='link' href='#Access.WatchPeers'>Access.WatchPeers</a>.</p>
+<ul>
+<li>request <code>token</code> <a class='link' href='#ProcedureToken'>ProcedureToken</a> that will remain valid while
+discovery is in progress. NOTE: The radio will continue performing discovery until all
+<a class='link' href='#Access'>Access</a> drop their tokens.</li>
+</ul>
+<ul>
+<li>error Reports Error.FAILED if discovery on either transport cannot be initiated.</li>
+</ul>
 
 #### Request
 <table>
@@ -164,13 +171,14 @@
 
 ### WatchPeers {#WatchPeers}
 
- Returns a list of all peers (connectable Bluetooth devices) known to the system. The first
- call results in a snapshot of all known peers to be sent immediately in the `updated` return
- paremeter. Subsequent calls receive a response only when one or more entries have been
- added, modified, or removed from the entries reported since the most recent call.
-
- - response `updated` Peers that were added or updated since the last call to WatchPeers().
- - response `removed` Ids of peers that were removed since the last call to WatchPeers().
+<p>Returns a list of all peers (connectable Bluetooth devices) known to the system. The first
+call results in a snapshot of all known peers to be sent immediately in the <code>updated</code> return
+paremeter. Subsequent calls receive a response only when one or more entries have been
+added, modified, or removed from the entries reported since the most recent call.</p>
+<ul>
+<li>response <code>updated</code> Peers that were added or updated since the last call to WatchPeers().</li>
+<li>response <code>removed</code> Ids of peers that were removed since the last call to WatchPeers().</li>
+</ul>
 
 #### Request
 <table>
@@ -195,12 +203,15 @@
 
 ### Connect {#Connect}
 
- Initiate a connection to the peer with the given `id`. This method connects both BR/EDR and
- LE transports depending on the technologies that the peer is known to support.
-
- + request `id` The id of the peer to connect.
- * error Reports `Error.FAILED` if a connection to the peer cannot be initiated.
- * error Reports `Error.PEER_NOT_FOUND` if `id` is not recognized.
+<p>Initiate a connection to the peer with the given <code>id</code>. This method connects both BR/EDR and
+LE transports depending on the technologies that the peer is known to support.</p>
+<ul>
+<li>request <code>id</code> The id of the peer to connect.</li>
+</ul>
+<ul>
+<li>error Reports <code>Error.FAILED</code> if a connection to the peer cannot be initiated.</li>
+<li>error Reports <code>Error.PEER_NOT_FOUND</code> if <code>id</code> is not recognized.</li>
+</ul>
 
 #### Request
 <table>
@@ -225,12 +236,15 @@
 
 ### Disconnect {#Disconnect}
 
- Disconnect all logical links to the peer with the given `id`. This includes LE and
- BR/EDR links that have been initiated using all Access and fuchsia.bluetooth.le protocol
- instances.
-
- + request `id` The id of the peer to disconnect.
- * error Reports `Error.PEER_NOT_FOUND` if `id` is not recognized.
+<p>Disconnect all logical links to the peer with the given <code>id</code>. This includes LE and
+BR/EDR links that have been initiated using all Access and fuchsia.bluetooth.le protocol
+instances.</p>
+<ul>
+<li>request <code>id</code> The id of the peer to disconnect.</li>
+</ul>
+<ul>
+<li>error Reports <code>Error.PEER_NOT_FOUND</code> if <code>id</code> is not recognized.</li>
+</ul>
 
 #### Request
 <table>
@@ -255,11 +269,14 @@
 
 ### Forget {#Forget}
 
- Removes all bonding information and disconnects any existing links with the peer with the
- given `id`.
-
- + request `id` The id of the peer to forget.
- * error Reports `Error.PEER_NOT_FOUND` if `id` is not recognized.
+<p>Removes all bonding information and disconnects any existing links with the peer with the
+given <code>id</code>.</p>
+<ul>
+<li>request <code>id</code> The id of the peer to forget.</li>
+</ul>
+<ul>
+<li>error Reports <code>Error.PEER_NOT_FOUND</code> if <code>id</code> is not recognized.</li>
+</ul>
 
 #### Request
 <table>
@@ -285,22 +302,19 @@
 ## Bootstrap {#Bootstrap}
 *Defined in [fuchsia.bluetooth.sys/bootstrap.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/bootstrap.fidl#23)*
 
- Protocol used to initialize persistent core Bluetooth data. This protocol populates data that
- determine the identity of this device as perceived by other Bluetooth devices.
-
- This protocol can be obtained only before the core Bluetooth host subsystem has generated its
- own identity. Once initial data is committed, this capability becomes unavailable and remains
- unavailable even if new Bluetooth adapters are attached.
-
- Due to the privacy and bonding secrets involved, as well as the capability to make this device
- assume the Bluetooth identity of another device, this protocol should only be exposed to
- privileged components that can vouchsafe the origin of the data.
+<p>Protocol used to initialize persistent core Bluetooth data. This protocol populates data that
+determine the identity of this device as perceived by other Bluetooth devices.</p>
+<p>This protocol can be obtained only before the core Bluetooth host subsystem has generated its
+own identity. Once initial data is committed, this capability becomes unavailable and remains
+unavailable even if new Bluetooth adapters are attached.</p>
+<p>Due to the privacy and bonding secrets involved, as well as the capability to make this device
+assume the Bluetooth identity of another device, this protocol should only be exposed to
+privileged components that can vouchsafe the origin of the data.</p>
 
 ### AddIdentities {#AddIdentities}
 
- Adds identities to be added to the unpopulated Bluetooth stack.
-
- Repeated calls will append identities.
+<p>Adds identities to be added to the unpopulated Bluetooth stack.</p>
+<p>Repeated calls will append identities.</p>
 
 #### Request
 <table>
@@ -316,11 +330,11 @@
 
 ### Commit {#Commit}
 
- Writes all added bootstrapping data to the Bluetooth core stack. The server will close the
- channel regardless of success. Returns without error if successful and the stack will be
- considered initialized even if no bootstrapping data was written. Returns
- INVALID_HOST_IDENTITY if any host or bonded peer data is insufficient or inconsistent, with
- no effect (the client may retry by obtaining another protocol handle).
+<p>Writes all added bootstrapping data to the Bluetooth core stack. The server will close the
+channel regardless of success. Returns without error if successful and the stack will be
+considered initialized even if no bootstrapping data was written. Returns
+INVALID_HOST_IDENTITY if any host or bonded peer data is insufficient or inconsistent, with
+no effect (the client may retry by obtaining another protocol handle).</p>
 
 #### Request
 <table>
@@ -341,12 +355,12 @@
 ## HostWatcher {#HostWatcher}
 *Defined in [fuchsia.bluetooth.sys/host_watcher.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/host_watcher.fidl#45)*
 
- Protocol used to observe and manage the Bluetooth controllers on the system.
+<p>Protocol used to observe and manage the Bluetooth controllers on the system.</p>
 
 ### Watch {#Watch}
 
- Obtain a list of all available Bluetooth controllers and their state. A response is sent
- only if this list has changed since the last time the client has sent this message.
+<p>Obtain a list of all available Bluetooth controllers and their state. A response is sent
+only if this list has changed since the last time the client has sent this message.</p>
 
 #### Request
 <table>
@@ -366,11 +380,12 @@
 
 ### SetActive {#SetActive}
 
- Designates the host with the given `id` as active. All Bluetooth procedures will be routed
- over this host. Any previously assigned active host will be disabled and all of its pending
- procedures will be terminated.
-
- * error This can fail if a host with `id` was not found.
+<p>Designates the host with the given <code>id</code> as active. All Bluetooth procedures will be routed
+over this host. Any previously assigned active host will be disabled and all of its pending
+procedures will be terminated.</p>
+<ul>
+<li>error This can fail if a host with <code>id</code> was not found.</li>
+</ul>
 
 #### Request
 <table>
@@ -399,19 +414,16 @@
 
 ### OnPairingRequest {#OnPairingRequest}
 
- Called to initiate a pairing request. The delegate must respond with “true” or “false” to
- either accept or reject the pairing request. If the pairing method requires a passkey
- this is returned as well.
-
- Any response from this method will be ignored if the OnPairingComplete
- event has already been sent for `peer`.
-
- The `displayed_passkey` parameter should be displayed to the user if `method` equals
- `PairingMethod.PASSKEY_DISPLAY` or `PairingMethod.PASSKEY_COMPARISON`. Otherwise, this parameter
- has no meaning and should be ignored.
-
- The `entered_passkey` parameter only has meaning if `method` equals
- `PairingMethod.PASSKEY_ENTRY`. It will be ignored otherwise.
+<p>Called to initiate a pairing request. The delegate must respond with “true” or “false” to
+either accept or reject the pairing request. If the pairing method requires a passkey
+this is returned as well.</p>
+<p>Any response from this method will be ignored if the OnPairingComplete
+event has already been sent for <code>peer</code>.</p>
+<p>The <code>displayed_passkey</code> parameter should be displayed to the user if <code>method</code> equals
+<code>PairingMethod.PASSKEY_DISPLAY</code> or <code>PairingMethod.PASSKEY_COMPARISON</code>. Otherwise, this parameter
+has no meaning and should be ignored.</p>
+<p>The <code>entered_passkey</code> parameter only has meaning if <code>method</code> equals
+<code>PairingMethod.PASSKEY_ENTRY</code>. It will be ignored otherwise.</p>
 
 #### Request
 <table>
@@ -451,9 +463,9 @@
 
 ### OnPairingComplete {#OnPairingComplete}
 
- Called if the pairing procedure for the device with the given ID is completed.
- This can be due to successful completion or an error (e.g. due to cancellation
- by the peer, a timeout, or disconnection) which is indicated by `success`.
+<p>Called if the pairing procedure for the device with the given ID is completed.
+This can be due to successful completion or an error (e.g. due to cancellation
+by the peer, a timeout, or disconnection) which is indicated by <code>success</code>.</p>
 
 #### Request
 <table>
@@ -474,12 +486,11 @@
 
 ### OnRemoteKeypress {#OnRemoteKeypress}
 
- Called to notify keypresses from the peer device during pairing using
- `PairingMethod.PASSKEY_DISPLAY`.
-
- This event is used to provide key press events to the delegate for a responsive user
- experience as the user types the passkey on the peer device. This event will be called
- once for each key-press.
+<p>Called to notify keypresses from the peer device during pairing using
+<code>PairingMethod.PASSKEY_DISPLAY</code>.</p>
+<p>This event is used to provide key press events to the delegate for a responsive user
+experience as the user types the passkey on the peer device. This event will be called
+once for each key-press.</p>
 
 #### Request
 <table>
@@ -500,8 +511,8 @@
 
 ### OnLocalKeypress {#OnLocalKeypress}
 
- The delegate can send this event to notify the peer of local keypresses
- during pairing using `PairingMethod.PASSKEY_ENTRY`.
+<p>The delegate can send this event to notify the peer of local keypresses
+during pairing using <code>PairingMethod.PASSKEY_ENTRY</code>.</p>
 
 
 
@@ -638,7 +649,7 @@
 
 
 
- Represents a 128-bit secret key.
+<p>Represents a 128-bit secret key.</p>
 
 
 <table>
@@ -657,7 +668,7 @@
 
 
 
- Represents a key that was received from a peer.
+<p>Represents a key that was received from a peer.</p>
 
 
 <table>
@@ -666,7 +677,7 @@
             <td>
                 <code><a class='link' href='#SecurityProperties'>SecurityProperties</a></code>
             </td>
-            <td> The security properties of this link under which this key was received.
+            <td><p>The security properties of this link under which this key was received.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -674,7 +685,7 @@
             <td>
                 <code><a class='link' href='#Key'>Key</a></code>
             </td>
-            <td> The contents of the key.
+            <td><p>The contents of the key.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -685,8 +696,8 @@
 
 
 
- Represents a LE Long-Term peer key used for link encyrption. The |ediv| and |rand|
- fields are zero if distributed using LE Secure Connections pairing.
+<p>Represents a LE Long-Term peer key used for link encyrption. The |ediv| and |rand|
+fields are zero if distributed using LE Secure Connections pairing.</p>
 
 
 <table>
@@ -719,7 +730,7 @@
 
 
 
- The preferred LE connection parameters of the peer.
+<p>The preferred LE connection parameters of the peer.</p>
 
 
 <table>
@@ -762,12 +773,12 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>FAILED</code></td>
             <td><code>1</code></td>
-            <td> Operation could not be performed.
+            <td><p>Operation could not be performed.</p>
 </td>
         </tr><tr>
             <td><code>PEER_NOT_FOUND</code></td>
             <td><code>2</code></td>
-            <td> The peer designated for the operation was not found.
+            <td><p>The peer designated for the operation was not found.</p>
 </td>
         </tr></table>
 
@@ -794,8 +805,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.sys/pairing_delegate.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/pairing_delegate.fidl#11)*
 
- Input and Output Capabilities for pairing exchanges.
- See Volume 3, Part C, Table 5.3 and 5.4
+<p>Input and Output Capabilities for pairing exchanges.
+See Volume 3, Part C, Table 5.3 and 5.4</p>
 
 
 <table>
@@ -836,33 +847,33 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.sys/pairing_delegate.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/pairing_delegate.fidl#24)*
 
- Different types required by the Security Manager for pairing methods.
- Bluetooth SIG has different requirements for different device capabilities.
+<p>Different types required by the Security Manager for pairing methods.
+Bluetooth SIG has different requirements for different device capabilities.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>CONSENT</code></td>
             <td><code>1</code></td>
-            <td> The user is asked to accept or reject pairing.
+            <td><p>The user is asked to accept or reject pairing.</p>
 </td>
         </tr><tr>
             <td><code>PASSKEY_DISPLAY</code></td>
             <td><code>2</code></td>
-            <td> The user is shown a 6-digit numerical passkey which they must enter on the
- peer device.
+            <td><p>The user is shown a 6-digit numerical passkey which they must enter on the
+peer device.</p>
 </td>
         </tr><tr>
             <td><code>PASSKEY_COMPARISON</code></td>
             <td><code>3</code></td>
-            <td> The user is shown a 6-digit numerical passkey which will also shown on the
- peer device. The user must compare the passkeys and accept the pairing if
- the passkeys match.
+            <td><p>The user is shown a 6-digit numerical passkey which will also shown on the
+peer device. The user must compare the passkeys and accept the pairing if
+the passkeys match.</p>
 </td>
         </tr><tr>
             <td><code>PASSKEY_ENTRY</code></td>
             <td><code>4</code></td>
-            <td> The user is asked to enter a 6-digit passkey.
+            <td><p>The user is asked to enter a 6-digit passkey.</p>
 </td>
         </tr></table>
 
@@ -877,22 +888,22 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DIGIT_ENTERED</code></td>
             <td><code>1</code></td>
-            <td> The user has entered a single digit.
+            <td><p>The user has entered a single digit.</p>
 </td>
         </tr><tr>
             <td><code>DIGIT_ERASED</code></td>
             <td><code>2</code></td>
-            <td> The user has erased a single digit.
+            <td><p>The user has erased a single digit.</p>
 </td>
         </tr><tr>
             <td><code>PASSKEY_CLEARED</code></td>
             <td><code>3</code></td>
-            <td> The user has cleared the entire passkey.
+            <td><p>The user has cleared the entire passkey.</p>
 </td>
         </tr><tr>
             <td><code>PASSKEY_ENTERED</code></td>
             <td><code>4</code></td>
-            <td> The user has finished entering the passkey.
+            <td><p>The user has finished entering the passkey.</p>
 </td>
         </tr></table>
 
@@ -927,7 +938,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.sys/host_watcher.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/host_watcher.fidl#11)*
 
- Information about a Bluetooth controller and its associated host-subsystem state.
+<p>Information about a Bluetooth controller and its associated host-subsystem state.</p>
 
 
 <table>
@@ -938,9 +949,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Id'>Id</a></code>
             </td>
-            <td> Uniquely identifies a host on the current system.
-
- This field is always present.
+            <td><p>Uniquely identifies a host on the current system.</p>
+<p>This field is always present.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -948,9 +958,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#TechnologyType'>TechnologyType</a></code>
             </td>
-            <td> The Bluetooth technologies that are supported by this adapter.
-
- This field is always present.
+            <td><p>The Bluetooth technologies that are supported by this adapter.</p>
+<p>This field is always present.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -958,9 +967,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Address'>Address</a></code>
             </td>
-            <td> The identity address.
-
- This field is always present.
+            <td><p>The identity address.</p>
+<p>This field is always present.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -968,8 +976,8 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Indicates whether or not this is the active host. The system has one active host which
- handles all Bluetooth procedures.
+            <td><p>Indicates whether or not this is the active host. The system has one active host which
+handles all Bluetooth procedures.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -977,8 +985,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The local name of this host. This is the name that is visible to other devices when this
- host is in the discoverable mode.
+            <td><p>The local name of this host. This is the name that is visible to other devices when this
+host is in the discoverable mode.</p>
 </td>
         </tr><tr>
             <td>6</td>
@@ -986,8 +994,8 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether or not the local adapter is currently discoverable over BR/EDR and
- LE physical channels.
+            <td><p>Whether or not the local adapter is currently discoverable over BR/EDR and
+LE physical channels.</p>
 </td>
         </tr><tr>
             <td>7</td>
@@ -995,7 +1003,7 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether or not device discovery is currently being performed.
+            <td><p>Whether or not device discovery is currently being performed.</p>
 </td>
         </tr></table>
 
@@ -1014,7 +1022,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Address'>Address</a></code>
             </td>
-            <td> The identity address of the peer.
+            <td><p>The identity address of the peer.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1022,7 +1030,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#LeConnectionParameters'>LeConnectionParameters</a></code>
             </td>
-            <td> The peer's preferred connection parameters, if known.
+            <td><p>The peer's preferred connection parameters, if known.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1030,7 +1038,7 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Uuid'>Uuid</a>&gt;</code>
             </td>
-            <td> Known GATT service UUIDs.
+            <td><p>Known GATT service UUIDs.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1038,7 +1046,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Ltk'>Ltk</a></code>
             </td>
-            <td> The LE long-term key. Present if the link was encrypted.
+            <td><p>The LE long-term key. Present if the link was encrypted.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -1046,7 +1054,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#PeerKey'>PeerKey</a></code>
             </td>
-            <td> Identity Resolving RemoteKey used to generate and resolve random addresses.
+            <td><p>Identity Resolving RemoteKey used to generate and resolve random addresses.</p>
 </td>
         </tr><tr>
             <td>6</td>
@@ -1054,7 +1062,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#PeerKey'>PeerKey</a></code>
             </td>
-            <td> Connection Signature Resolving RemoteKey used for data signing without encryption.
+            <td><p>Connection Signature Resolving RemoteKey used for data signing without encryption.</p>
 </td>
         </tr></table>
 
@@ -1073,7 +1081,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Address'>Address</a></code>
             </td>
-            <td> The public device address of the peer.
+            <td><p>The public device address of the peer.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1081,9 +1089,9 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#ConnectionRole'>ConnectionRole</a></code>
             </td>
-            <td> The peer's preferred piconet role. This is determined by role switch procedures. Paging and
- connecting from a peer does not automatically set this flag. If absent, the peer has not
- expressed a preference.
+            <td><p>The peer's preferred piconet role. This is determined by role switch procedures. Paging and
+connecting from a peer does not automatically set this flag. If absent, the peer has not
+expressed a preference.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1091,7 +1099,7 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Uuid'>Uuid</a>&gt;</code>
             </td>
-            <td> Known service UUIDs obtained from EIR data or SDP.
+            <td><p>Known service UUIDs obtained from EIR data or SDP.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1099,8 +1107,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#PeerKey'>PeerKey</a></code>
             </td>
-            <td> The semi-permanent BR/EDR key. Present if link was paired with Secure
- Simple Pairing or stronger.
+            <td><p>The semi-permanent BR/EDR key. Present if link was paired with Secure
+Simple Pairing or stronger.</p>
 </td>
         </tr></table>
 
@@ -1109,7 +1117,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.sys/identity.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/identity.fidl#85)*
 
- Represents the bonding data for a single peer.
+<p>Represents the bonding data for a single peer.</p>
 
 
 <table>
@@ -1120,7 +1128,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#PeerId'>PeerId</a></code>
             </td>
-            <td> The identifier that uniquely identifies this peer.
+            <td><p>The identifier that uniquely identifies this peer.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1128,7 +1136,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Address'>Address</a></code>
             </td>
-            <td> The local Bluetooth identity address that this bond is associated with.
+            <td><p>The local Bluetooth identity address that this bond is associated with.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1136,7 +1144,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The name of the peer, if known.
+            <td><p>The name of the peer, if known.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1144,7 +1152,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#LeData'>LeData</a></code>
             </td>
-            <td> Bonding data that is present when this peer is paired on the LE transport.
+            <td><p>Bonding data that is present when this peer is paired on the LE transport.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -1152,7 +1160,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#BredrData'>BredrData</a></code>
             </td>
-            <td> Bonding data that is present when this peer is paired on the BR/EDR transport.
+            <td><p>Bonding data that is present when this peer is paired on the BR/EDR transport.</p>
 </td>
         </tr></table>
 
@@ -1161,7 +1169,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.sys/identity.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/identity.fidl#103)*
 
- Represents persistent local host data.
+<p>Represents persistent local host data.</p>
 
 
 <table>
@@ -1172,14 +1180,12 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Key'>Key</a></code>
             </td>
-            <td> The local Identity Resolving Key used by a bt-host device to generate Resolvable Private
- Addresses when privacy is enabled.
-
- May be absent for hosts that do not use LE privacy, or that only use Non-Resolvable Private
- Addresses.
-
- NOTE: This key is distributed to LE peers during pairing procedures. The client must take
- care to assign an IRK that consistent with the local bt-host identity.
+            <td><p>The local Identity Resolving Key used by a bt-host device to generate Resolvable Private
+Addresses when privacy is enabled.</p>
+<p>May be absent for hosts that do not use LE privacy, or that only use Non-Resolvable Private
+Addresses.</p>
+<p>NOTE: This key is distributed to LE peers during pairing procedures. The client must take
+care to assign an IRK that consistent with the local bt-host identity.</p>
 </td>
         </tr></table>
 
@@ -1188,15 +1194,13 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.sys/identity.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/identity.fidl#125)*
 
- Represents the persistent configuration of a single host-subsystem instance. This is used for
- identity presentation (inquiry, inquiry response, and advertisement) and for bonding secrets
- recall (encrypting link data to peers associated with this identity).
-
- Each BR/EDR BD_ADDR and Low Energy public identity address used to bond should have its own
- Identity instance containing corresponding peers.
-
- Each Identity instance that supports LE privacy should have an Identity Resolving Key (IRK) that
- is consistent with that distributed to its bonded peers.
+<p>Represents the persistent configuration of a single host-subsystem instance. This is used for
+identity presentation (inquiry, inquiry response, and advertisement) and for bonding secrets
+recall (encrypting link data to peers associated with this identity).</p>
+<p>Each BR/EDR BD_ADDR and Low Energy public identity address used to bond should have its own
+Identity instance containing corresponding peers.</p>
+<p>Each Identity instance that supports LE privacy should have an Identity Resolving Key (IRK) that
+is consistent with that distributed to its bonded peers.</p>
 
 
 <table>
@@ -1214,7 +1218,7 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#BondingData'>BondingData</a>&gt;</code>
             </td>
-            <td> All bonds that use a public identity address must contain the same local address.
+            <td><p>All bonds that use a public identity address must contain the same local address.</p>
 </td>
         </tr></table>
 
@@ -1223,7 +1227,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.sys/peer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/peer.fidl#16)*
 
- Represents a remote BR/EDR, LE, or dual-mode BR/EDR/LE peer.
+<p>Represents a remote BR/EDR, LE, or dual-mode BR/EDR/LE peer.</p>
 
 
 <table>
@@ -1234,9 +1238,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#PeerId'>PeerId</a></code>
             </td>
-            <td> Uniquely identifies this peer on the current system.
-
- This field is always present.
+            <td><p>Uniquely identifies this peer on the current system.</p>
+<p>This field is always present.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1244,13 +1247,11 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Address'>Address</a></code>
             </td>
-            <td> Bluetooth device address that identifies this peer. Clients
- should display this field to the user when |name| is not available.
-
- This field is always present.
-
- NOTE: Clients should use the `identifier` field to keep track of peers instead of their
- address.
+            <td><p>Bluetooth device address that identifies this peer. Clients
+should display this field to the user when |name| is not available.</p>
+<p>This field is always present.</p>
+<p>NOTE: Clients should use the <code>identifier</code> field to keep track of peers instead of their
+address.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -1258,9 +1259,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#TechnologyType'>TechnologyType</a></code>
             </td>
-            <td> The Bluetooth technologies that are supported by this peer.
-
- This field is always present.
+            <td><p>The Bluetooth technologies that are supported by this peer.</p>
+<p>This field is always present.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1268,9 +1268,8 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether or not a BR/EDR and/or LE connection exists to this peer.
-
- This field is always present.
+            <td><p>Whether or not a BR/EDR and/or LE connection exists to this peer.</p>
+<p>This field is always present.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -1278,9 +1277,8 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether or not this peer is bonded.
-
- This field is always present.
+            <td><p>Whether or not this peer is bonded.</p>
+<p>This field is always present.</p>
 </td>
         </tr><tr>
             <td>6</td>
@@ -1288,7 +1286,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The name of the peer, if known.
+            <td><p>The name of the peer, if known.</p>
 </td>
         </tr><tr>
             <td>7</td>
@@ -1296,8 +1294,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Appearance'>Appearance</a></code>
             </td>
-            <td> The LE appearance property. Present if this peer supports LE and the
- appearance information was obtained over advertising and/or GATT.
+            <td><p>The LE appearance property. Present if this peer supports LE and the
+appearance information was obtained over advertising and/or GATT.</p>
 </td>
         </tr><tr>
             <td>8</td>
@@ -1305,7 +1303,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#DeviceClass'>DeviceClass</a></code>
             </td>
-            <td> The class of device for this device, if known.
+            <td><p>The class of device for this device, if known.</p>
 </td>
         </tr><tr>
             <td>9</td>
@@ -1313,7 +1311,7 @@ Type: <code>uint32</code>
             <td>
                 <code>int8</code>
             </td>
-            <td> The most recently obtained advertising signal strength for this peer. Present if known.
+            <td><p>The most recently obtained advertising signal strength for this peer. Present if known.</p>
 </td>
         </tr><tr>
             <td>10</td>
@@ -1321,7 +1319,7 @@ Type: <code>uint32</code>
             <td>
                 <code>int8</code>
             </td>
-            <td> The most recently obtained transmission power for this peer. Present if known.
+            <td><p>The most recently obtained transmission power for this peer. Present if known.</p>
 </td>
         </tr><tr>
             <td>11</td>
@@ -1329,7 +1327,7 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Uuid'>Uuid</a>&gt;</code>
             </td>
-            <td> The list of service UUIDs known to be available on this peer.
+            <td><p>The list of service UUIDs known to be available on this peer.</p>
 </td>
         </tr></table>
 

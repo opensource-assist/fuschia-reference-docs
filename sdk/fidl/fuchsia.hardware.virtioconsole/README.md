@@ -11,11 +11,11 @@
 
 ### GetChannel {#GetChannel}
 
- This API is temporary.  It exists because devhost multiplexes
- fuchsia.io.File on top of the device connections, and
- fuchsia.hardware.pty.Device composes with that interface.  Once
- the devhost stops the behavior, we can remove this interface and
- have virtio-console just serve fuchsia.hardware.pty.Device directly.
+<p>This API is temporary.  It exists because devhost multiplexes
+fuchsia.io.File on top of the device connections, and
+fuchsia.hardware.pty.Device composes with that interface.  Once
+the devhost stops the behavior, we can remove this interface and
+have virtio-console just serve fuchsia.hardware.pty.Device directly.</p>
 
 #### Request
 <table>

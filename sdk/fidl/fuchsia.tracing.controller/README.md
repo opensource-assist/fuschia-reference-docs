@@ -45,7 +45,7 @@
 
 ### GetProviders {#GetProviders}
 
- Return the set of registered providers.
+<p>Return the set of registered providers.</p>
 
 #### Request
 <table>
@@ -171,7 +171,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#76)*
 
- Provides options for the trace.
+<p>Provides options for the trace.</p>
 
 
 <table>
@@ -182,7 +182,7 @@ Type: <code>uint8</code>
             <td>
                 <code>vector&lt;string&gt;[100]</code>
             </td>
-            <td> The trace categories to record, or an empty array for all.
+            <td><p>The trace categories to record, or an empty array for all.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -190,7 +190,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint32</code>
             </td>
-            <td> Suggested size of trace buffer which each provider should receive.
+            <td><p>Suggested size of trace buffer which each provider should receive.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -198,7 +198,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> Acknowledge start request after at most `start_timeout_milliseconds`.
+            <td><p>Acknowledge start request after at most <code>start_timeout_milliseconds</code>.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -213,7 +213,7 @@ Type: <code>uint8</code>
             <td>
                 <code>vector&lt;<a class='link' href='#ProviderSpec'>ProviderSpec</a>&gt;[100]</code>
             </td>
-            <td> Overrides for particular providers.
+            <td><p>Overrides for particular providers.</p>
 </td>
         </tr></table>
 
@@ -222,7 +222,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.tracing.controller/trace_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#96)*
 
- Result of |GetProviders|.
+<p>Result of |GetProviders|.</p>
 
 
 <table>
@@ -233,7 +233,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint32</code>
             </td>
-            <td> The provider's ID, assigned by trace-manager.
+            <td><p>The provider's ID, assigned by trace-manager.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -241,7 +241,7 @@ Type: <code>uint8</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> The provider's pid.
+            <td><p>The provider's pid.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -249,7 +249,7 @@ Type: <code>uint8</code>
             <td>
                 <code>string[100]</code>
             </td>
-            <td> The name of the provider.
+            <td><p>The name of the provider.</p>
 </td>
         </tr></table>
 
@@ -270,7 +270,7 @@ Type: <code>uint8</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> The maximum number of providers supported.
+            <td><p>The maximum number of providers supported.</p>
 </td>
         </tr>
     <tr>
@@ -279,7 +279,7 @@ Type: <code>uint8</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> The maximum length of a provider's name.
+            <td><p>The maximum length of a provider's name.</p>
 </td>
         </tr>
     <tr>
@@ -288,7 +288,7 @@ Type: <code>uint8</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> The maximum number of categories supported.
+            <td><p>The maximum number of categories supported.</p>
 </td>
         </tr>
     <tr>
@@ -297,7 +297,7 @@ Type: <code>uint8</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> The maximum length of a category name.
+            <td><p>The maximum length of a category name.</p>
 </td>
         </tr>
     

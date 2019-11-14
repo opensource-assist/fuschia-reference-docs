@@ -8,12 +8,12 @@
 ## Administrator {#Administrator}
 *Defined in [fuchsia.device.manager/administrator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#33)*
 
- Provides administration services for the device manager service and the device tree it controls.
+<p>Provides administration services for the device manager service and the device tree it controls.</p>
 
 ### Suspend {#Suspend}
 
- Ask all devices to enter the suspend state indicated by `flags`. Flags should be some
- combination of `DEVICE_SUSPEND_FLAG_*` from the DDK.
+<p>Ask all devices to enter the suspend state indicated by <code>flags</code>. Flags should be some
+combination of <code>DEVICE_SUSPEND_FLAG_*</code> from the DDK.</p>
 
 #### Request
 <table>
@@ -39,16 +39,16 @@
 ## DeviceController {#DeviceController}
 *Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#108)*
 
- Protocol for controlling devices in a devhost process from the devcoordinator
+<p>Protocol for controlling devices in a devhost process from the devcoordinator</p>
 
 ### BindDriver {#BindDriver}
 
- Bind the requested driver to this device.  `driver_path` is informational,
- but all calls to BindDriver/CreateDevice should use the same `driver_path`
- each time they use a `driver` VMO with the same contents. Returns a `status`
- and optionally a channel to the driver's test output. `test_output` will be
- not present unless the driver is configured to run its run_unit_tests hook, in
- which case the other end of the channel will have been passed to the driver.
+<p>Bind the requested driver to this device.  <code>driver_path</code> is informational,
+but all calls to BindDriver/CreateDevice should use the same <code>driver_path</code>
+each time they use a <code>driver</code> VMO with the same contents. Returns a <code>status</code>
+and optionally a channel to the driver's test output. <code>test_output</code> will be
+not present unless the driver is configured to run its run_unit_tests hook, in
+which case the other end of the channel will have been passed to the driver.</p>
 
 #### Request
 <table>
@@ -83,7 +83,7 @@
 
 ### ConnectProxy {#ConnectProxy}
 
- Give this device a channel to its shadow in another process.
+<p>Give this device a channel to its shadow in another process.</p>
 
 #### Request
 <table>
@@ -99,8 +99,8 @@
 
 ### Unbind {#Unbind}
 
- Ask devhost to unbind this device. On success, the remote end of this
- interface channel will close instead of returning a result.
+<p>Ask devhost to unbind this device. On success, the remote end of this
+interface channel will close instead of returning a result.</p>
 
 #### Request
 <table>
@@ -111,9 +111,9 @@
 
 ### CompleteRemoval {#CompleteRemoval}
 
- Ask the devhost to complete the removal of this device, which previously had
- invoked |ScheduleRemove|. This is a special case that can be removed
- once |device_remove| invokes |unbind|.
+<p>Ask the devhost to complete the removal of this device, which previously had
+invoked |ScheduleRemove|. This is a special case that can be removed
+once |device_remove| invokes |unbind|.</p>
 
 #### Request
 <table>
@@ -124,7 +124,7 @@
 
 ### Suspend {#Suspend}
 
- Ask devhost to suspend this device, using the target state indicated by `flags`.
+<p>Ask devhost to suspend this device, using the target state indicated by <code>flags</code>.</p>
 
 #### Request
 <table>
@@ -149,8 +149,8 @@
 
 ### Resume {#Resume}
 
- Ask devhost to resume this device, using the target system state indicated by
- 'target_system_state'.
+<p>Ask devhost to resume this device, using the target system state indicated by
+'target_system_state'.</p>
 
 #### Request
 <table>
@@ -175,8 +175,8 @@
 
 ### CompleteCompatibilityTests {#CompleteCompatibilityTests}
 
- Inform devhost about the compatibility test status when compatibility tests
- fail or complete successfully.
+<p>Inform devhost about the compatibility test status when compatibility tests
+fail or complete successfully.</p>
 
 #### Request
 <table>
@@ -193,13 +193,13 @@
 ## DevhostController {#DevhostController}
 *Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#146)*
 
- Protocol for controlling a devhost process from the devcoordinator
+<p>Protocol for controlling a devhost process from the devcoordinator</p>
 
 ### CreateDeviceStub {#CreateDeviceStub}
 
- Create a device in the devhost that only implements the device protocol
- and claims to support the given `protocol_id`.  This device will communicate
- with the devcoordinator via `rpc`.
+<p>Create a device in the devhost that only implements the device protocol
+and claims to support the given <code>protocol_id</code>.  This device will communicate
+with the devcoordinator via <code>rpc</code>.</p>
 
 #### Request
 <table>
@@ -225,20 +225,17 @@
 
 ### CreateDevice {#CreateDevice}
 
- Create a device in the devhost representing the shadowed half of device
- in another devhost.  This new device will communicate with the devcoordinator
- via `rpc`, and with its other half via `parent_proxy`.
-
- The new device will have the given driver responsible for running its half
- of the driver's cross-process protocol.  It's create() method will be invoked,
- giving it access to `parent_proxy` and `proxy_args`.
-
- parent_proxy, if present, will usually be a channel to the upper half of
- a shadowed device.  The one exception is when this method is used
- to create the Platform Bus, in which case it will be a channel to a
- fuchsia.boot.Items protocol.
-
- `local_device_id` will be a unique value within the device's devhost
+<p>Create a device in the devhost representing the shadowed half of device
+in another devhost.  This new device will communicate with the devcoordinator
+via <code>rpc</code>, and with its other half via <code>parent_proxy</code>.</p>
+<p>The new device will have the given driver responsible for running its half
+of the driver's cross-process protocol.  It's create() method will be invoked,
+giving it access to <code>parent_proxy</code> and <code>proxy_args</code>.</p>
+<p>parent_proxy, if present, will usually be a channel to the upper half of
+a shadowed device.  The one exception is when this method is used
+to create the Platform Bus, in which case it will be a channel to a
+fuchsia.boot.Items protocol.</p>
+<p><code>local_device_id</code> will be a unique value within the device's devhost</p>
 
 #### Request
 <table>
@@ -279,14 +276,13 @@
 
 ### CreateCompositeDevice {#CreateCompositeDevice}
 
- Introduce a composite device that has the given name and properties.
- `components` will be a list of all of the composite's components,
- described using devhost local device ids.  The order of the components
- will match the original composite creation request.  The new device will
- communicate with devcoordinator via `rpc`.
-
- `local_device_id` will be a unique value within the device's devhost, identifying
- the resulting composite device.
+<p>Introduce a composite device that has the given name and properties.
+<code>components</code> will be a list of all of the composite's components,
+described using devhost local device ids.  The order of the components
+will match the original composite creation request.  The new device will
+communicate with devcoordinator via <code>rpc</code>.</p>
+<p><code>local_device_id</code> will be a unique value within the device's devhost, identifying
+the resulting composite device.</p>
 
 #### Request
 <table>
@@ -327,17 +323,17 @@
 ## Coordinator {#Coordinator}
 *Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#185)*
 
- Interface for the devices in devhosts to coordinate with the devcoordinator.
+<p>Interface for the devices in devhosts to coordinate with the devcoordinator.</p>
 
 ### AddDevice {#AddDevice}
 
- Record the addition of a new device that can be communicated with via `rpc`.
- For binding purposes, it is has properties `props`. `name` and `driver_path`
- are informational and used for debugging.  The device will have `protocol_id`
- as its primary protocol id.  `args` should only be used for shadowed devices,
- and will be forwarded to the shadow device. `client_remote`, if present,
- will be passed to the device as an open connection for the client.
- On success, the returned `local_device_id` is the identifier assigned by devmgr.
+<p>Record the addition of a new device that can be communicated with via <code>rpc</code>.
+For binding purposes, it is has properties <code>props</code>. <code>name</code> and <code>driver_path</code>
+are informational and used for debugging.  The device will have <code>protocol_id</code>
+as its primary protocol id.  <code>args</code> should only be used for shadowed devices,
+and will be forwarded to the shadow device. <code>client_remote</code>, if present,
+will be passed to the device as an open connection for the client.
+On success, the returned <code>local_device_id</code> is the identifier assigned by devmgr.</p>
 
 #### Request
 <table>
@@ -397,9 +393,9 @@
 
 ### AddDeviceInvisible {#AddDeviceInvisible}
 
- Behaves as AddDevice, but marks the device as initially invisible.  This means
- that it will not be visible to other devices or the devfs until it is later marked
- visible (via MakeVisible).
+<p>Behaves as AddDevice, but marks the device as initially invisible.  This means
+that it will not be visible to other devices or the devfs until it is later marked
+visible (via MakeVisible).</p>
 
 #### Request
 <table>
@@ -454,9 +450,9 @@
 
 ### ScheduleRemove {#ScheduleRemove}
 
- Requests the devcoordinator schedule the removal of this device,
- and the unbinding of its children.
- If |unbind_self| is true, the unbind hook for this device will also be called.
+<p>Requests the devcoordinator schedule the removal of this device,
+and the unbinding of its children.
+If |unbind_self| is true, the unbind hook for this device will also be called.</p>
 
 #### Request
 <table>
@@ -472,7 +468,7 @@
 
 ### ScheduleUnbindChildren {#ScheduleUnbindChildren}
 
- Requests the devcoordinator schedule the unbinding of this device's children.
+<p>Requests the devcoordinator schedule the unbinding of this device's children.</p>
 
 #### Request
 <table>
@@ -483,7 +479,7 @@
 
 ### UnbindDone {#UnbindDone}
 
- Sent as the response to |Unbind|.
+<p>Sent as the response to |Unbind|.</p>
 
 #### Request
 <table>
@@ -503,7 +499,7 @@
 
 ### RemoveDone {#RemoveDone}
 
- Sent as the response to |CompleteRemoval|.
+<p>Sent as the response to |CompleteRemoval|.</p>
 
 #### Request
 <table>
@@ -523,7 +519,7 @@
 
 ### MakeVisible {#MakeVisible}
 
- Mark this device as visible.
+<p>Mark this device as visible.</p>
 
 #### Request
 <table>
@@ -543,8 +539,8 @@
 
 ### BindDevice {#BindDevice}
 
- Attempt to bind a driver against this device.  If `driver_path` is null,
- this will initiate the driver matching algorithm.
+<p>Attempt to bind a driver against this device.  If <code>driver_path</code> is null,
+this will initiate the driver matching algorithm.</p>
 
 #### Request
 <table>
@@ -569,7 +565,7 @@
 
 ### GetTopologicalPath {#GetTopologicalPath}
 
- Returns the topological path of this device.
+<p>Returns the topological path of this device.</p>
 
 #### Request
 <table>
@@ -589,7 +585,7 @@
 
 ### LoadFirmware {#LoadFirmware}
 
- Requests that the firmware at the given path be loaded and returned.
+<p>Requests that the firmware at the given path be loaded and returned.</p>
 
 #### Request
 <table>
@@ -614,7 +610,7 @@
 
 ### GetMetadata {#GetMetadata}
 
- Retrieve the metadata blob associated with this device and the given key.
+<p>Retrieve the metadata blob associated with this device and the given key.</p>
 
 #### Request
 <table>
@@ -639,7 +635,7 @@
 
 ### GetMetadataSize {#GetMetadataSize}
 
- Retrieve the metadata size associated with this device and the given key.
+<p>Retrieve the metadata size associated with this device and the given key.</p>
 
 #### Request
 <table>
@@ -664,7 +660,7 @@
 
 ### AddMetadata {#AddMetadata}
 
- Add metadata blob associated with this device and the given key.
+<p>Add metadata blob associated with this device and the given key.</p>
 
 #### Request
 <table>
@@ -694,11 +690,11 @@
 
 ### PublishMetadata {#PublishMetadata}
 
- Behaves like AddMetadata, but instead of associating it with the
- requesting device, associates it with the device at `device_path`.  If
- the device at `device_path` is not a child of the requesting device AND
- the requesting device is not running in the sys devhost, then this will
- fail.
+<p>Behaves like AddMetadata, but instead of associating it with the
+requesting device, associates it with the device at <code>device_path</code>.  If
+the device at <code>device_path</code> is not a child of the requesting device AND
+the requesting device is not running in the sys devhost, then this will
+fail.</p>
 
 #### Request
 <table>
@@ -733,9 +729,9 @@
 
 ### AddCompositeDevice {#AddCompositeDevice}
 
- Adds the given composite device.  This causes the devcoordinator to try to match the
- components against the existing device tree, and to monitor all new device additions
- in order to find the components as they are created.
+<p>Adds the given composite device.  This causes the devcoordinator to try to match the
+components against the existing device tree, and to monitor all new device additions
+in order to find the components as they are created.</p>
 
 #### Request
 <table>
@@ -765,9 +761,9 @@
 
 ### DirectoryWatch {#DirectoryWatch}
 
- Watches a directory, receiving events of added messages on the
- watcher request channel.
- See fuchsia.io.Directory for more information.
+<p>Watches a directory, receiving events of added messages on the
+watcher request channel.
+See fuchsia.io.Directory for more information.</p>
 
 #### Request
 <table>
@@ -802,11 +798,11 @@
 
 ### RunCompatibilityTests {#RunCompatibilityTests}
 
- Run Compatibility tests for the driver that binds to this device.
- The hook_wait_time is the time that the driver expects to take for
- each device hook in nanoseconds.
- Returns whether the compatibility tests started, and does not convey
- anything about the status of the test.
+<p>Run Compatibility tests for the driver that binds to this device.
+The hook_wait_time is the time that the driver expects to take for
+each device hook in nanoseconds.
+Returns whether the compatibility tests started, and does not convey
+anything about the status of the test.</p>
 
 #### Request
 <table>
@@ -832,15 +828,14 @@
 ## DebugDumper {#DebugDumper}
 *Defined in [fuchsia.device.manager/debug.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/debug.fidl#15)*
 
- Dumps text debug information.
-
- All methods dump ascii text into a VMO, this allows the caller the flexibility to decide
- how much data they want. Use the returned `written` value to read the data, no string
- termination is guaranteed.
+<p>Dumps text debug information.</p>
+<p>All methods dump ascii text into a VMO, this allows the caller the flexibility to decide
+how much data they want. Use the returned <code>written</code> value to read the data, no string
+termination is guaranteed.</p>
 
 ### DumpTree {#DumpTree}
 
- Print device tree into `output`, returns bytes `written` and bytes `available` to write.
+<p>Print device tree into <code>output</code>, returns bytes <code>written</code> and bytes <code>available</code> to write.</p>
 
 #### Request
 <table>
@@ -875,7 +870,7 @@
 
 ### DumpDrivers {#DumpDrivers}
 
- Print information about all drivers into `output`, returns bytes `written` and bytes `available` to write.
+<p>Print information about all drivers into <code>output</code>, returns bytes <code>written</code> and bytes <code>available</code> to write.</p>
 
 #### Request
 <table>
@@ -910,8 +905,8 @@
 
 ### DumpBindingProperties {#DumpBindingProperties}
 
- Print all devices and their binding properties into `output`, returns bytes `written`
- and bytes `available` to write.
+<p>Print all devices and their binding properties into <code>output</code>, returns bytes <code>written</code>
+and bytes <code>available</code> to write.</p>
 
 #### Request
 <table>
@@ -1175,7 +1170,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> bitfield that encodes the operation and execution conditions
+            <td><p>bitfield that encodes the operation and execution conditions</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1183,7 +1178,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> bitfield that encodes the arguments
+            <td><p>bitfield that encodes the arguments</p>
 </td>
             <td>No default</td>
         </tr>
@@ -1194,7 +1189,7 @@
 
 
 
- A part of a description of a DeviceComponent
+<p>A part of a description of a DeviceComponent</p>
 
 
 <table>
@@ -1220,7 +1215,7 @@
 
 
 
- A piece of a composite device
+<p>A piece of a composite device</p>
 
 
 <table>
@@ -1246,7 +1241,7 @@
 
 
 
- Metadata that can be added to a device
+<p>Metadata that can be added to a device</p>
 
 
 <table>
@@ -1272,7 +1267,7 @@
 
 
 
- Composite device parts and properties
+<p>Composite device parts and properties</p>
 
 
 <table>
@@ -1354,7 +1349,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#97)*
 
- A enum of CompatibilityTestStatus
+<p>A enum of CompatibilityTestStatus</p>
 
 
 <table>
@@ -1693,7 +1688,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td>ALLOW_MULTI_COMPOSITE</td>
             <td>1</td>
-            <td>  Device can be a component in multiple composite devices
+            <td><p>Device can be a component in multiple composite devices</p>
 </td>
         </tr></table>
 
@@ -1708,7 +1703,7 @@ Type: <code>uint32</code>
                     <code>3705405696</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> All available suspend flags
+            <td><p>All available suspend flags</p>
 </td>
         </tr>
     <tr>
@@ -1765,7 +1760,7 @@ Type: <code>uint32</code>
                     <code>31</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> This definition must match `ZX_DEVICE_NAME_MAX` and is checked by a static assert.
+            <td><p>This definition must match <code>ZX_DEVICE_NAME_MAX</code> and is checked by a static assert.</p>
 </td>
         </tr>
     <tr>
@@ -1774,7 +1769,7 @@ Type: <code>uint32</code>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum number of bytes in a path
+            <td><p>Maximum number of bytes in a path</p>
 </td>
         </tr>
     <tr>
@@ -1783,7 +1778,7 @@ Type: <code>uint32</code>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum number of bytes in a device arguments string.
+            <td><p>Maximum number of bytes in a device arguments string.</p>
 </td>
         </tr>
     <tr>
@@ -1792,7 +1787,7 @@ Type: <code>uint32</code>
                     <code>8192</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum number of bytes in a metadata payload
+            <td><p>Maximum number of bytes in a metadata payload</p>
 </td>
         </tr>
     <tr>
@@ -1801,7 +1796,7 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum number of metadata that can be added to a device
+            <td><p>Maximum number of metadata that can be added to a device</p>
 </td>
         </tr>
     <tr>
@@ -1810,7 +1805,7 @@ Type: <code>uint32</code>
                     <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum number of properties that can be attached to a device
+            <td><p>Maximum number of properties that can be attached to a device</p>
 </td>
         </tr>
     <tr>
@@ -1819,7 +1814,7 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum number of components that a composite device can have
+            <td><p>Maximum number of components that a composite device can have</p>
 </td>
         </tr>
     <tr>
@@ -1828,7 +1823,7 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum number of parts that a composite device component can have
+            <td><p>Maximum number of parts that a composite device component can have</p>
 </td>
         </tr>
     <tr>
@@ -1837,7 +1832,7 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum instructions in a match program
+            <td><p>Maximum instructions in a match program</p>
 </td>
         </tr>
     

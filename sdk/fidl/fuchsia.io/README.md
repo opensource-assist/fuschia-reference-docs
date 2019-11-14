@@ -8,28 +8,26 @@
 ## Node {#Node}
 *Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#164)*
 
- Node defines the minimal interface for entities which can be accessed in a filesystem.
+<p>Node defines the minimal interface for entities which can be accessed in a filesystem.</p>
 
 ### Clone {#Clone}
 
- Create another connection to the same remote object.
-
- `flags` may be any of:
-
- - `OPEN_RIGHT_*`
- - `OPEN_FLAG_APPEND`
- - `OPEN_FLAG_NO_REMOTE`
- - `OPEN_FLAG_DESCRIBE`
- - `CLONE_FLAG_SAME_RIGHTS`
-
- All other flags are ignored.
-
- The `OPEN_RIGHT_*` bits in `flags` request corresponding rights over the resulting
- cloned object.
- The cloned object must have rights less than or equal to the original object.
- Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
- `CLONE_FLAG_SAME_RIGHTS`.
+<p>Create another connection to the same remote object.</p>
+<p><code>flags</code> may be any of:</p>
+<ul>
+<li><code>OPEN_RIGHT_*</code></li>
+<li><code>OPEN_FLAG_APPEND</code></li>
+<li><code>OPEN_FLAG_NO_REMOTE</code></li>
+<li><code>OPEN_FLAG_DESCRIBE</code></li>
+<li><code>CLONE_FLAG_SAME_RIGHTS</code></li>
+</ul>
+<p>All other flags are ignored.</p>
+<p>The <code>OPEN_RIGHT_*</code> bits in <code>flags</code> request corresponding rights over the resulting
+cloned object.
+The cloned object must have rights less than or equal to the original object.
+Alternatively, pass <code>CLONE_FLAG_SAME_RIGHTS</code> to inherit the rights on the source connection.
+It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
+<code>CLONE_FLAG_SAME_RIGHTS</code>.</p>
 
 #### Request
 <table>
@@ -50,9 +48,8 @@
 
 ### Close {#Close}
 
- Terminates connection with object.
-
- This method does not require any rights.
+<p>Terminates connection with object.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -72,10 +69,9 @@
 
 ### Describe {#Describe}
 
- Returns extra information about the type of the object.
- If the `Describe` operation fails, the connection is closed.
-
- This method does not require any rights.
+<p>Returns extra information about the type of the object.
+If the <code>Describe</code> operation fails, the connection is closed.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -95,11 +91,10 @@
 
 ### OnOpen {#OnOpen}
 
- An event produced eagerly by a FIDL server if requested by `OPEN_FLAG_DESCRIBE`.
-
- Indicates the success or failure of the open operation, and optionally describes the
- object. If the status is `ZX_OK`, `info` contains descriptive information about the object
- (the same as would be returned by `Describe`).
+<p>An event produced eagerly by a FIDL server if requested by <code>OPEN_FLAG_DESCRIBE</code>.</p>
+<p>Indicates the success or failure of the open operation, and optionally describes the
+object. If the status is <code>ZX_OK</code>, <code>info</code> contains descriptive information about the object
+(the same as would be returned by <code>Describe</code>).</p>
 
 
 
@@ -120,9 +115,8 @@
 
 ### Sync {#Sync}
 
- Synchronizes updates to the node to the underlying media, if it exists.
-
- This method does not require any rights.
+<p>Synchronizes updates to the node to the underlying media, if it exists.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -142,9 +136,8 @@
 
 ### GetAttr {#GetAttr}
 
- Acquires information about the node.
-
- This method does not require any rights.
+<p>Acquires information about the node.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -169,10 +162,9 @@
 
 ### SetAttr {#SetAttr}
 
- Updates information about the node.
- `flags` may be any of `NODE_ATTRIBUTE_FLAG_*`.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Updates information about the node.
+<code>flags</code> may be any of <code>NODE_ATTRIBUTE_FLAG_*</code>.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -202,11 +194,10 @@
 
 ### NodeGetFlags {#NodeGetFlags}
 
- Acquires the `Directory.Open` rights and flags used to access this file.
-
- This method does not require any rights.
- This method has the same functionality as GetFlags for File and is
- meant as an in-progress replacement.
+<p>Acquires the <code>Directory.Open</code> rights and flags used to access this file.</p>
+<p>This method does not require any rights.
+This method has the same functionality as GetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -231,13 +222,14 @@
 
 ### NodeSetFlags {#NodeSetFlags}
 
- Changes the `Directory.Open` flags used to access the file.
- Supported flags which can be turned on / off:
- - `OPEN_FLAG_APPEND`
-
- This method does not require any rights.
- This method has the same functionality as SetFlags for File and is
- meant as an in-progress replacement.
+<p>Changes the <code>Directory.Open</code> flags used to access the file.
+Supported flags which can be turned on / off:</p>
+<ul>
+<li><code>OPEN_FLAG_APPEND</code></li>
+</ul>
+<p>This method does not require any rights.
+This method has the same functionality as SetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -263,28 +255,26 @@
 ## File {#File}
 *Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#317)*
 
- File defines the interface of a node which contains a flat layout of data.
+<p>File defines the interface of a node which contains a flat layout of data.</p>
 
 ### Clone {#Clone}
 
- Create another connection to the same remote object.
-
- `flags` may be any of:
-
- - `OPEN_RIGHT_*`
- - `OPEN_FLAG_APPEND`
- - `OPEN_FLAG_NO_REMOTE`
- - `OPEN_FLAG_DESCRIBE`
- - `CLONE_FLAG_SAME_RIGHTS`
-
- All other flags are ignored.
-
- The `OPEN_RIGHT_*` bits in `flags` request corresponding rights over the resulting
- cloned object.
- The cloned object must have rights less than or equal to the original object.
- Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
- `CLONE_FLAG_SAME_RIGHTS`.
+<p>Create another connection to the same remote object.</p>
+<p><code>flags</code> may be any of:</p>
+<ul>
+<li><code>OPEN_RIGHT_*</code></li>
+<li><code>OPEN_FLAG_APPEND</code></li>
+<li><code>OPEN_FLAG_NO_REMOTE</code></li>
+<li><code>OPEN_FLAG_DESCRIBE</code></li>
+<li><code>CLONE_FLAG_SAME_RIGHTS</code></li>
+</ul>
+<p>All other flags are ignored.</p>
+<p>The <code>OPEN_RIGHT_*</code> bits in <code>flags</code> request corresponding rights over the resulting
+cloned object.
+The cloned object must have rights less than or equal to the original object.
+Alternatively, pass <code>CLONE_FLAG_SAME_RIGHTS</code> to inherit the rights on the source connection.
+It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
+<code>CLONE_FLAG_SAME_RIGHTS</code>.</p>
 
 #### Request
 <table>
@@ -305,9 +295,8 @@
 
 ### Close {#Close}
 
- Terminates connection with object.
-
- This method does not require any rights.
+<p>Terminates connection with object.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -327,10 +316,9 @@
 
 ### Describe {#Describe}
 
- Returns extra information about the type of the object.
- If the `Describe` operation fails, the connection is closed.
-
- This method does not require any rights.
+<p>Returns extra information about the type of the object.
+If the <code>Describe</code> operation fails, the connection is closed.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -350,11 +338,10 @@
 
 ### OnOpen {#OnOpen}
 
- An event produced eagerly by a FIDL server if requested by `OPEN_FLAG_DESCRIBE`.
-
- Indicates the success or failure of the open operation, and optionally describes the
- object. If the status is `ZX_OK`, `info` contains descriptive information about the object
- (the same as would be returned by `Describe`).
+<p>An event produced eagerly by a FIDL server if requested by <code>OPEN_FLAG_DESCRIBE</code>.</p>
+<p>Indicates the success or failure of the open operation, and optionally describes the
+object. If the status is <code>ZX_OK</code>, <code>info</code> contains descriptive information about the object
+(the same as would be returned by <code>Describe</code>).</p>
 
 
 
@@ -375,9 +362,8 @@
 
 ### Sync {#Sync}
 
- Synchronizes updates to the node to the underlying media, if it exists.
-
- This method does not require any rights.
+<p>Synchronizes updates to the node to the underlying media, if it exists.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -397,9 +383,8 @@
 
 ### GetAttr {#GetAttr}
 
- Acquires information about the node.
-
- This method does not require any rights.
+<p>Acquires information about the node.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -424,10 +409,9 @@
 
 ### SetAttr {#SetAttr}
 
- Updates information about the node.
- `flags` may be any of `NODE_ATTRIBUTE_FLAG_*`.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Updates information about the node.
+<code>flags</code> may be any of <code>NODE_ATTRIBUTE_FLAG_*</code>.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -457,11 +441,10 @@
 
 ### NodeGetFlags {#NodeGetFlags}
 
- Acquires the `Directory.Open` rights and flags used to access this file.
-
- This method does not require any rights.
- This method has the same functionality as GetFlags for File and is
- meant as an in-progress replacement.
+<p>Acquires the <code>Directory.Open</code> rights and flags used to access this file.</p>
+<p>This method does not require any rights.
+This method has the same functionality as GetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -486,13 +469,14 @@
 
 ### NodeSetFlags {#NodeSetFlags}
 
- Changes the `Directory.Open` flags used to access the file.
- Supported flags which can be turned on / off:
- - `OPEN_FLAG_APPEND`
-
- This method does not require any rights.
- This method has the same functionality as SetFlags for File and is
- meant as an in-progress replacement.
+<p>Changes the <code>Directory.Open</code> flags used to access the file.
+Supported flags which can be turned on / off:</p>
+<ul>
+<li><code>OPEN_FLAG_APPEND</code></li>
+</ul>
+<p>This method does not require any rights.
+This method has the same functionality as SetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -517,10 +501,9 @@
 
 ### Read {#Read}
 
- Reads `count` bytes at the seek offset.
- The seek offset is moved forward by the number of bytes read.
-
- This method requires following rights: `OPEN_RIGHT_READABLE`.
+<p>Reads <code>count</code> bytes at the seek offset.
+The seek offset is moved forward by the number of bytes read.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_READABLE</code>.</p>
 
 #### Request
 <table>
@@ -550,10 +533,9 @@
 
 ### ReadAt {#ReadAt}
 
- Reads `count` bytes at the provided offset.
- Does not affect the seek offset.
-
- This method requires following rights: `OPEN_RIGHT_READABLE`.
+<p>Reads <code>count</code> bytes at the provided offset.
+Does not affect the seek offset.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_READABLE</code>.</p>
 
 #### Request
 <table>
@@ -588,10 +570,9 @@
 
 ### Write {#Write}
 
- Writes data at the seek offset.
- The seek offset is moved forward by the number of bytes written.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Writes data at the seek offset.
+The seek offset is moved forward by the number of bytes written.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -621,10 +602,9 @@
 
 ### WriteAt {#WriteAt}
 
- Writes data to the provided offset.
- Does not affect the seek offset.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Writes data to the provided offset.
+Does not affect the seek offset.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -659,10 +639,9 @@
 
 ### Seek {#Seek}
 
- Moves the offset at which the next invocation of `Read()` or `Write()` will
- occur.
-
- This method does not require any rights.
+<p>Moves the offset at which the next invocation of <code>Read()</code> or <code>Write()</code> will
+occur.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -697,9 +676,8 @@
 
 ### Truncate {#Truncate}
 
- Shrinks the file size to 'length' bytes.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Shrinks the file size to 'length' bytes.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -724,9 +702,8 @@
 
 ### GetFlags {#GetFlags}
 
- Acquires the `Directory.Open` rights and flags used to access this file.
-
- This method does not require any rights.
+<p>Acquires the <code>Directory.Open</code> rights and flags used to access this file.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -751,11 +728,12 @@
 
 ### SetFlags {#SetFlags}
 
- Changes the `Directory.Open` flags used to access the file.
- Supported flags which can be turned on / off:
- - `OPEN_FLAG_APPEND`
-
- This method does not require any rights.
+<p>Changes the <code>Directory.Open</code> flags used to access the file.
+Supported flags which can be turned on / off:</p>
+<ul>
+<li><code>OPEN_FLAG_APPEND</code></li>
+</ul>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -780,15 +758,14 @@
 
 ### GetBuffer {#GetBuffer}
 
- Acquires a buffer representing this file, if there is one, with the
- requested access rights.
-
- `flags` may be any of `VMO_FLAG_*`.
-
- This method requires following rights:
-
- - `OPEN_RIGHT_WRITABLE` if `flags` includes `VMO_FLAG_WRITE`.
- - `OPEN_RIGHT_READABLE` if `flags` includes `VMO_FLAG_READ` or `VMO_FLAG_EXEC`.
+<p>Acquires a buffer representing this file, if there is one, with the
+requested access rights.</p>
+<p><code>flags</code> may be any of <code>VMO_FLAG_*</code>.</p>
+<p>This method requires following rights:</p>
+<ul>
+<li><code>OPEN_RIGHT_WRITABLE</code> if <code>flags</code> includes <code>VMO_FLAG_WRITE</code>.</li>
+<li><code>OPEN_RIGHT_READABLE</code> if <code>flags</code> includes <code>VMO_FLAG_READ</code> or <code>VMO_FLAG_EXEC</code>.</li>
+</ul>
 
 #### Request
 <table>
@@ -819,10 +796,10 @@
 ## DirectoryWatcher {#DirectoryWatcher}
 *Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#437)*
 
- DirectoryWatcher transmits messages from a filesystem server
- about events happening in the filesystem. Clients can register
- new watchers using the `Directory.Watch` method, where they can
- filter which events they want to receive notifications for.
+<p>DirectoryWatcher transmits messages from a filesystem server
+about events happening in the filesystem. Clients can register
+new watchers using the <code>Directory.Watch</code> method, where they can
+filter which events they want to receive notifications for.</p>
 
 ### OnEvent {#OnEvent}
 
@@ -842,28 +819,26 @@
 ## Directory {#Directory}
 *Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#444)*
 
- Directory defines a node which is capable of containing other Objects.
+<p>Directory defines a node which is capable of containing other Objects.</p>
 
 ### Clone {#Clone}
 
- Create another connection to the same remote object.
-
- `flags` may be any of:
-
- - `OPEN_RIGHT_*`
- - `OPEN_FLAG_APPEND`
- - `OPEN_FLAG_NO_REMOTE`
- - `OPEN_FLAG_DESCRIBE`
- - `CLONE_FLAG_SAME_RIGHTS`
-
- All other flags are ignored.
-
- The `OPEN_RIGHT_*` bits in `flags` request corresponding rights over the resulting
- cloned object.
- The cloned object must have rights less than or equal to the original object.
- Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
- `CLONE_FLAG_SAME_RIGHTS`.
+<p>Create another connection to the same remote object.</p>
+<p><code>flags</code> may be any of:</p>
+<ul>
+<li><code>OPEN_RIGHT_*</code></li>
+<li><code>OPEN_FLAG_APPEND</code></li>
+<li><code>OPEN_FLAG_NO_REMOTE</code></li>
+<li><code>OPEN_FLAG_DESCRIBE</code></li>
+<li><code>CLONE_FLAG_SAME_RIGHTS</code></li>
+</ul>
+<p>All other flags are ignored.</p>
+<p>The <code>OPEN_RIGHT_*</code> bits in <code>flags</code> request corresponding rights over the resulting
+cloned object.
+The cloned object must have rights less than or equal to the original object.
+Alternatively, pass <code>CLONE_FLAG_SAME_RIGHTS</code> to inherit the rights on the source connection.
+It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
+<code>CLONE_FLAG_SAME_RIGHTS</code>.</p>
 
 #### Request
 <table>
@@ -884,9 +859,8 @@
 
 ### Close {#Close}
 
- Terminates connection with object.
-
- This method does not require any rights.
+<p>Terminates connection with object.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -906,10 +880,9 @@
 
 ### Describe {#Describe}
 
- Returns extra information about the type of the object.
- If the `Describe` operation fails, the connection is closed.
-
- This method does not require any rights.
+<p>Returns extra information about the type of the object.
+If the <code>Describe</code> operation fails, the connection is closed.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -929,11 +902,10 @@
 
 ### OnOpen {#OnOpen}
 
- An event produced eagerly by a FIDL server if requested by `OPEN_FLAG_DESCRIBE`.
-
- Indicates the success or failure of the open operation, and optionally describes the
- object. If the status is `ZX_OK`, `info` contains descriptive information about the object
- (the same as would be returned by `Describe`).
+<p>An event produced eagerly by a FIDL server if requested by <code>OPEN_FLAG_DESCRIBE</code>.</p>
+<p>Indicates the success or failure of the open operation, and optionally describes the
+object. If the status is <code>ZX_OK</code>, <code>info</code> contains descriptive information about the object
+(the same as would be returned by <code>Describe</code>).</p>
 
 
 
@@ -954,9 +926,8 @@
 
 ### Sync {#Sync}
 
- Synchronizes updates to the node to the underlying media, if it exists.
-
- This method does not require any rights.
+<p>Synchronizes updates to the node to the underlying media, if it exists.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -976,9 +947,8 @@
 
 ### GetAttr {#GetAttr}
 
- Acquires information about the node.
-
- This method does not require any rights.
+<p>Acquires information about the node.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -1003,10 +973,9 @@
 
 ### SetAttr {#SetAttr}
 
- Updates information about the node.
- `flags` may be any of `NODE_ATTRIBUTE_FLAG_*`.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Updates information about the node.
+<code>flags</code> may be any of <code>NODE_ATTRIBUTE_FLAG_*</code>.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -1036,11 +1005,10 @@
 
 ### NodeGetFlags {#NodeGetFlags}
 
- Acquires the `Directory.Open` rights and flags used to access this file.
-
- This method does not require any rights.
- This method has the same functionality as GetFlags for File and is
- meant as an in-progress replacement.
+<p>Acquires the <code>Directory.Open</code> rights and flags used to access this file.</p>
+<p>This method does not require any rights.
+This method has the same functionality as GetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -1065,13 +1033,14 @@
 
 ### NodeSetFlags {#NodeSetFlags}
 
- Changes the `Directory.Open` flags used to access the file.
- Supported flags which can be turned on / off:
- - `OPEN_FLAG_APPEND`
-
- This method does not require any rights.
- This method has the same functionality as SetFlags for File and is
- meant as an in-progress replacement.
+<p>Changes the <code>Directory.Open</code> flags used to access the file.
+Supported flags which can be turned on / off:</p>
+<ul>
+<li><code>OPEN_FLAG_APPEND</code></li>
+</ul>
+<p>This method does not require any rights.
+This method has the same functionality as SetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -1096,28 +1065,22 @@
 
 ### Open {#Open}
 
- Opens a new object relative to this directory object.
-
- `path` may contain multiple segments, separated by "/" characters,
- and should never be empty; i.e., "" is an invalid path.
-
- `flags` may be any of the `OPEN_FLAG_*` and `OPEN_RIGHT_*` values, bitwise ORed together.
- The `OPEN_FLAG_DESCRIBE` flag may cause an `OnOpen` event to be transmitted
- on the `object` handle, indicating the type of object opened.
-
- If an unknown value is sent for either flags or mode, the connection should
- be closed.
-
- `OPEN_RIGHT_*` flags provided in `flags` will restrict access rights on
- the `object` channel which will be connected to the opened entity.
-
- Rights are never increased. When you open a nested entity within a directory, you may only
- request the same rights as what the directory connection already has, or a subset of those.
- Exceeding those rights causes an access denied error to be transmitted in the
- `OnOpen` event if applicable, and the `object` connection closed.
-
- The caller must specify either one or more of the `OPEN_RIGHT_*` flags, or
- the `OPEN_FLAG_NODE_REFERENCE` flag.
+<p>Opens a new object relative to this directory object.</p>
+<p><code>path</code> may contain multiple segments, separated by &quot;/&quot; characters,
+and should never be empty; i.e., &quot;&quot; is an invalid path.</p>
+<p><code>flags</code> may be any of the <code>OPEN_FLAG_*</code> and <code>OPEN_RIGHT_*</code> values, bitwise ORed together.
+The <code>OPEN_FLAG_DESCRIBE</code> flag may cause an <code>OnOpen</code> event to be transmitted
+on the <code>object</code> handle, indicating the type of object opened.</p>
+<p>If an unknown value is sent for either flags or mode, the connection should
+be closed.</p>
+<p><code>OPEN_RIGHT_*</code> flags provided in <code>flags</code> will restrict access rights on
+the <code>object</code> channel which will be connected to the opened entity.</p>
+<p>Rights are never increased. When you open a nested entity within a directory, you may only
+request the same rights as what the directory connection already has, or a subset of those.
+Exceeding those rights causes an access denied error to be transmitted in the
+<code>OnOpen</code> event if applicable, and the <code>object</code> connection closed.</p>
+<p>The caller must specify either one or more of the <code>OPEN_RIGHT_*</code> flags, or
+the <code>OPEN_FLAG_NODE_REFERENCE</code> flag.</p>
 
 #### Request
 <table>
@@ -1148,33 +1111,27 @@
 
 ### Unlink {#Unlink}
 
- Detaches an object from this directory object.
-
- The underlying object may or may not be deleted after this method
- completes: although the link will be removed from the containing directory,
- objects with multiple references (such as files which are still open)
- will not actually be destroyed until all references are removed.
-
- If a directory is unlinked while it still has an open reference,
- it must become read-only, preventing new entries from being created
- until all references close and the directory is destroyed.
-
- `path` identifies the file which should be detached.
- If `path` contains multiple segments, separated by "/" characters,
- then the directory is traversed, one segment at a time, relative to the
- originally accessed Directory.
-
- Returns:
-   `ZX_ERR_ACCESS_DENIED` if the connection (or the underlying filesystem) does not
-     allow writable access.
-   `ZX_ERR_INVALID_ARGS` if `path` contains ".." segments.
-   `ZX_ERR_NOT_EMPTY` if `path` refers to a non-empty directory.
-   `ZX_ERR_UNAVAILABLE` if `path` refers to a mount point, containing a remote channel.
-   `ZX_ERR_UNAVAILABLE` if `path` is ".".
-
- Other errors may be returned for filesystem-specific reasons.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Detaches an object from this directory object.</p>
+<p>The underlying object may or may not be deleted after this method
+completes: although the link will be removed from the containing directory,
+objects with multiple references (such as files which are still open)
+will not actually be destroyed until all references are removed.</p>
+<p>If a directory is unlinked while it still has an open reference,
+it must become read-only, preventing new entries from being created
+until all references close and the directory is destroyed.</p>
+<p><code>path</code> identifies the file which should be detached.
+If <code>path</code> contains multiple segments, separated by &quot;/&quot; characters,
+then the directory is traversed, one segment at a time, relative to the
+originally accessed Directory.</p>
+<p>Returns:
+<code>ZX_ERR_ACCESS_DENIED</code> if the connection (or the underlying filesystem) does not
+allow writable access.
+<code>ZX_ERR_INVALID_ARGS</code> if <code>path</code> contains &quot;..&quot; segments.
+<code>ZX_ERR_NOT_EMPTY</code> if <code>path</code> refers to a non-empty directory.
+<code>ZX_ERR_UNAVAILABLE</code> if <code>path</code> refers to a mount point, containing a remote channel.
+<code>ZX_ERR_UNAVAILABLE</code> if <code>path</code> is &quot;.&quot;.</p>
+<p>Other errors may be returned for filesystem-specific reasons.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -1199,28 +1156,25 @@
 
 ### ReadDirents {#ReadDirents}
 
- Reads a collection of variably sized dirents into a buffer.
- The number of dirents in a directory may be very large: akin to
- calling read multiple times on a file, directories have a seek
- offset which is updated on subsequent calls to ReadDirents.
-
- These dirents are of the form:
- ```
- struct dirent {
-   // Describes the inode of the entry.
-   uint64 ino;
-   // Describes the length of the dirent name in bytes.
-   uint8 size;
-   // Describes the type of the entry. Aligned with the
-   // POSIX d_type values. Use `DIRENT_TYPE_*` constants.
-   uint8 type;
-   // Unterminated name of entry.
-   char name[0];
- }
- ```
-
- This method does not require any rights, since one could always probe for
- directory contents by triggering name conflicts during file creation.
+<p>Reads a collection of variably sized dirents into a buffer.
+The number of dirents in a directory may be very large: akin to
+calling read multiple times on a file, directories have a seek
+offset which is updated on subsequent calls to ReadDirents.</p>
+<p>These dirents are of the form:</p>
+<pre><code>struct dirent {
+  // Describes the inode of the entry.
+  uint64 ino;
+  // Describes the length of the dirent name in bytes.
+  uint8 size;
+  // Describes the type of the entry. Aligned with the
+  // POSIX d_type values. Use `DIRENT_TYPE_*` constants.
+  uint8 type;
+  // Unterminated name of entry.
+  char name[0];
+}
+</code></pre>
+<p>This method does not require any rights, since one could always probe for
+directory contents by triggering name conflicts during file creation.</p>
 
 #### Request
 <table>
@@ -1250,9 +1204,8 @@
 
 ### Rewind {#Rewind}
 
- Resets the directory seek offset.
-
- This method does not require any rights, similar to ReadDirents.
+<p>Resets the directory seek offset.</p>
+<p>This method does not require any rights, similar to ReadDirents.</p>
 
 #### Request
 <table>
@@ -1272,10 +1225,9 @@
 
 ### GetToken {#GetToken}
 
- Acquires a token to a Directory which can be used to identify
- access to it at a later point in time.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Acquires a token to a Directory which can be used to identify
+access to it at a later point in time.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -1300,14 +1252,12 @@
 
 ### Rename {#Rename}
 
- Renames an object named src to the name dst, in a directory represented by token.
-
- `src/dst` must be resolved object names. Including "/" in any position
- other than the end of the string will return `ZX_ERR_INVALID_ARGS`.
- Returning "/" at the end of either string implies that it must be a
- directory, or else `ZX_ERR_NOT_DIR` should be returned.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Renames an object named src to the name dst, in a directory represented by token.</p>
+<p><code>src/dst</code> must be resolved object names. Including &quot;/&quot; in any position
+other than the end of the string will return <code>ZX_ERR_INVALID_ARGS</code>.
+Returning &quot;/&quot; at the end of either string implies that it must be a
+directory, or else <code>ZX_ERR_NOT_DIR</code> should be returned.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -1342,16 +1292,13 @@
 
 ### Link {#Link}
 
- Creates a link to an object named src by the name dst, within a directory represented by
- token.
-
- `src` must be a resolved object name. Including "/" in the string will
- return `ZX_ERR_INVALID_ARGS`.
-
- `dst` must be a resolved object name. Including "/" in the string will
- return `ZX_ERR_INVALID_ARGS`.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Creates a link to an object named src by the name dst, within a directory represented by
+token.</p>
+<p><code>src</code> must be a resolved object name. Including &quot;/&quot; in the string will
+return <code>ZX_ERR_INVALID_ARGS</code>.</p>
+<p><code>dst</code> must be a resolved object name. Including &quot;/&quot; in the string will
+return <code>ZX_ERR_INVALID_ARGS</code>.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -1386,25 +1333,20 @@
 
 ### Watch {#Watch}
 
- Watches a directory, receiving events of added messages on the
- watcher request channel.
-
- The `watcher` handle will send messages of the form:
- ```
- struct {
-   uint8 event;
-   uint8 len;
-   char name[];
- };
- ```
- Where names are NOT null-terminated.
-
- This API is unstable; in the future, watcher will be a `DirectoryWatcher` client.
-
- Mask specifies a bitmask of events to observe.
- Options must be zero; it is reserved.
-
- This method does not require any rights, similar to ReadDirents.
+<p>Watches a directory, receiving events of added messages on the
+watcher request channel.</p>
+<p>The <code>watcher</code> handle will send messages of the form:</p>
+<pre><code>struct {
+  uint8 event;
+  uint8 len;
+  char name[];
+};
+</code></pre>
+<p>Where names are NOT null-terminated.</p>
+<p>This API is unstable; in the future, watcher will be a <code>DirectoryWatcher</code> client.</p>
+<p>Mask specifies a bitmask of events to observe.
+Options must be zero; it is reserved.</p>
+<p>This method does not require any rights, similar to ReadDirents.</p>
 
 #### Request
 <table>
@@ -1440,29 +1382,27 @@
 ## DirectoryAdmin {#DirectoryAdmin}
 *Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#620)*
 
- DirectoryAdmin defines a directory which is capable of handling
- administrator tasks within the filesystem.
+<p>DirectoryAdmin defines a directory which is capable of handling
+administrator tasks within the filesystem.</p>
 
 ### Clone {#Clone}
 
- Create another connection to the same remote object.
-
- `flags` may be any of:
-
- - `OPEN_RIGHT_*`
- - `OPEN_FLAG_APPEND`
- - `OPEN_FLAG_NO_REMOTE`
- - `OPEN_FLAG_DESCRIBE`
- - `CLONE_FLAG_SAME_RIGHTS`
-
- All other flags are ignored.
-
- The `OPEN_RIGHT_*` bits in `flags` request corresponding rights over the resulting
- cloned object.
- The cloned object must have rights less than or equal to the original object.
- Alternatively, pass `CLONE_FLAG_SAME_RIGHTS` to inherit the rights on the source connection.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with
- `CLONE_FLAG_SAME_RIGHTS`.
+<p>Create another connection to the same remote object.</p>
+<p><code>flags</code> may be any of:</p>
+<ul>
+<li><code>OPEN_RIGHT_*</code></li>
+<li><code>OPEN_FLAG_APPEND</code></li>
+<li><code>OPEN_FLAG_NO_REMOTE</code></li>
+<li><code>OPEN_FLAG_DESCRIBE</code></li>
+<li><code>CLONE_FLAG_SAME_RIGHTS</code></li>
+</ul>
+<p>All other flags are ignored.</p>
+<p>The <code>OPEN_RIGHT_*</code> bits in <code>flags</code> request corresponding rights over the resulting
+cloned object.
+The cloned object must have rights less than or equal to the original object.
+Alternatively, pass <code>CLONE_FLAG_SAME_RIGHTS</code> to inherit the rights on the source connection.
+It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
+<code>CLONE_FLAG_SAME_RIGHTS</code>.</p>
 
 #### Request
 <table>
@@ -1483,9 +1423,8 @@
 
 ### Close {#Close}
 
- Terminates connection with object.
-
- This method does not require any rights.
+<p>Terminates connection with object.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -1505,10 +1444,9 @@
 
 ### Describe {#Describe}
 
- Returns extra information about the type of the object.
- If the `Describe` operation fails, the connection is closed.
-
- This method does not require any rights.
+<p>Returns extra information about the type of the object.
+If the <code>Describe</code> operation fails, the connection is closed.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -1528,11 +1466,10 @@
 
 ### OnOpen {#OnOpen}
 
- An event produced eagerly by a FIDL server if requested by `OPEN_FLAG_DESCRIBE`.
-
- Indicates the success or failure of the open operation, and optionally describes the
- object. If the status is `ZX_OK`, `info` contains descriptive information about the object
- (the same as would be returned by `Describe`).
+<p>An event produced eagerly by a FIDL server if requested by <code>OPEN_FLAG_DESCRIBE</code>.</p>
+<p>Indicates the success or failure of the open operation, and optionally describes the
+object. If the status is <code>ZX_OK</code>, <code>info</code> contains descriptive information about the object
+(the same as would be returned by <code>Describe</code>).</p>
 
 
 
@@ -1553,9 +1490,8 @@
 
 ### Sync {#Sync}
 
- Synchronizes updates to the node to the underlying media, if it exists.
-
- This method does not require any rights.
+<p>Synchronizes updates to the node to the underlying media, if it exists.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -1575,9 +1511,8 @@
 
 ### GetAttr {#GetAttr}
 
- Acquires information about the node.
-
- This method does not require any rights.
+<p>Acquires information about the node.</p>
+<p>This method does not require any rights.</p>
 
 #### Request
 <table>
@@ -1602,10 +1537,9 @@
 
 ### SetAttr {#SetAttr}
 
- Updates information about the node.
- `flags` may be any of `NODE_ATTRIBUTE_FLAG_*`.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Updates information about the node.
+<code>flags</code> may be any of <code>NODE_ATTRIBUTE_FLAG_*</code>.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -1635,11 +1569,10 @@
 
 ### NodeGetFlags {#NodeGetFlags}
 
- Acquires the `Directory.Open` rights and flags used to access this file.
-
- This method does not require any rights.
- This method has the same functionality as GetFlags for File and is
- meant as an in-progress replacement.
+<p>Acquires the <code>Directory.Open</code> rights and flags used to access this file.</p>
+<p>This method does not require any rights.
+This method has the same functionality as GetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -1664,13 +1597,14 @@
 
 ### NodeSetFlags {#NodeSetFlags}
 
- Changes the `Directory.Open` flags used to access the file.
- Supported flags which can be turned on / off:
- - `OPEN_FLAG_APPEND`
-
- This method does not require any rights.
- This method has the same functionality as SetFlags for File and is
- meant as an in-progress replacement.
+<p>Changes the <code>Directory.Open</code> flags used to access the file.
+Supported flags which can be turned on / off:</p>
+<ul>
+<li><code>OPEN_FLAG_APPEND</code></li>
+</ul>
+<p>This method does not require any rights.
+This method has the same functionality as SetFlags for File and is
+meant as an in-progress replacement.</p>
 
 #### Request
 <table>
@@ -1695,28 +1629,22 @@
 
 ### Open {#Open}
 
- Opens a new object relative to this directory object.
-
- `path` may contain multiple segments, separated by "/" characters,
- and should never be empty; i.e., "" is an invalid path.
-
- `flags` may be any of the `OPEN_FLAG_*` and `OPEN_RIGHT_*` values, bitwise ORed together.
- The `OPEN_FLAG_DESCRIBE` flag may cause an `OnOpen` event to be transmitted
- on the `object` handle, indicating the type of object opened.
-
- If an unknown value is sent for either flags or mode, the connection should
- be closed.
-
- `OPEN_RIGHT_*` flags provided in `flags` will restrict access rights on
- the `object` channel which will be connected to the opened entity.
-
- Rights are never increased. When you open a nested entity within a directory, you may only
- request the same rights as what the directory connection already has, or a subset of those.
- Exceeding those rights causes an access denied error to be transmitted in the
- `OnOpen` event if applicable, and the `object` connection closed.
-
- The caller must specify either one or more of the `OPEN_RIGHT_*` flags, or
- the `OPEN_FLAG_NODE_REFERENCE` flag.
+<p>Opens a new object relative to this directory object.</p>
+<p><code>path</code> may contain multiple segments, separated by &quot;/&quot; characters,
+and should never be empty; i.e., &quot;&quot; is an invalid path.</p>
+<p><code>flags</code> may be any of the <code>OPEN_FLAG_*</code> and <code>OPEN_RIGHT_*</code> values, bitwise ORed together.
+The <code>OPEN_FLAG_DESCRIBE</code> flag may cause an <code>OnOpen</code> event to be transmitted
+on the <code>object</code> handle, indicating the type of object opened.</p>
+<p>If an unknown value is sent for either flags or mode, the connection should
+be closed.</p>
+<p><code>OPEN_RIGHT_*</code> flags provided in <code>flags</code> will restrict access rights on
+the <code>object</code> channel which will be connected to the opened entity.</p>
+<p>Rights are never increased. When you open a nested entity within a directory, you may only
+request the same rights as what the directory connection already has, or a subset of those.
+Exceeding those rights causes an access denied error to be transmitted in the
+<code>OnOpen</code> event if applicable, and the <code>object</code> connection closed.</p>
+<p>The caller must specify either one or more of the <code>OPEN_RIGHT_*</code> flags, or
+the <code>OPEN_FLAG_NODE_REFERENCE</code> flag.</p>
 
 #### Request
 <table>
@@ -1747,33 +1675,27 @@
 
 ### Unlink {#Unlink}
 
- Detaches an object from this directory object.
-
- The underlying object may or may not be deleted after this method
- completes: although the link will be removed from the containing directory,
- objects with multiple references (such as files which are still open)
- will not actually be destroyed until all references are removed.
-
- If a directory is unlinked while it still has an open reference,
- it must become read-only, preventing new entries from being created
- until all references close and the directory is destroyed.
-
- `path` identifies the file which should be detached.
- If `path` contains multiple segments, separated by "/" characters,
- then the directory is traversed, one segment at a time, relative to the
- originally accessed Directory.
-
- Returns:
-   `ZX_ERR_ACCESS_DENIED` if the connection (or the underlying filesystem) does not
-     allow writable access.
-   `ZX_ERR_INVALID_ARGS` if `path` contains ".." segments.
-   `ZX_ERR_NOT_EMPTY` if `path` refers to a non-empty directory.
-   `ZX_ERR_UNAVAILABLE` if `path` refers to a mount point, containing a remote channel.
-   `ZX_ERR_UNAVAILABLE` if `path` is ".".
-
- Other errors may be returned for filesystem-specific reasons.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Detaches an object from this directory object.</p>
+<p>The underlying object may or may not be deleted after this method
+completes: although the link will be removed from the containing directory,
+objects with multiple references (such as files which are still open)
+will not actually be destroyed until all references are removed.</p>
+<p>If a directory is unlinked while it still has an open reference,
+it must become read-only, preventing new entries from being created
+until all references close and the directory is destroyed.</p>
+<p><code>path</code> identifies the file which should be detached.
+If <code>path</code> contains multiple segments, separated by &quot;/&quot; characters,
+then the directory is traversed, one segment at a time, relative to the
+originally accessed Directory.</p>
+<p>Returns:
+<code>ZX_ERR_ACCESS_DENIED</code> if the connection (or the underlying filesystem) does not
+allow writable access.
+<code>ZX_ERR_INVALID_ARGS</code> if <code>path</code> contains &quot;..&quot; segments.
+<code>ZX_ERR_NOT_EMPTY</code> if <code>path</code> refers to a non-empty directory.
+<code>ZX_ERR_UNAVAILABLE</code> if <code>path</code> refers to a mount point, containing a remote channel.
+<code>ZX_ERR_UNAVAILABLE</code> if <code>path</code> is &quot;.&quot;.</p>
+<p>Other errors may be returned for filesystem-specific reasons.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -1798,28 +1720,25 @@
 
 ### ReadDirents {#ReadDirents}
 
- Reads a collection of variably sized dirents into a buffer.
- The number of dirents in a directory may be very large: akin to
- calling read multiple times on a file, directories have a seek
- offset which is updated on subsequent calls to ReadDirents.
-
- These dirents are of the form:
- ```
- struct dirent {
-   // Describes the inode of the entry.
-   uint64 ino;
-   // Describes the length of the dirent name in bytes.
-   uint8 size;
-   // Describes the type of the entry. Aligned with the
-   // POSIX d_type values. Use `DIRENT_TYPE_*` constants.
-   uint8 type;
-   // Unterminated name of entry.
-   char name[0];
- }
- ```
-
- This method does not require any rights, since one could always probe for
- directory contents by triggering name conflicts during file creation.
+<p>Reads a collection of variably sized dirents into a buffer.
+The number of dirents in a directory may be very large: akin to
+calling read multiple times on a file, directories have a seek
+offset which is updated on subsequent calls to ReadDirents.</p>
+<p>These dirents are of the form:</p>
+<pre><code>struct dirent {
+  // Describes the inode of the entry.
+  uint64 ino;
+  // Describes the length of the dirent name in bytes.
+  uint8 size;
+  // Describes the type of the entry. Aligned with the
+  // POSIX d_type values. Use `DIRENT_TYPE_*` constants.
+  uint8 type;
+  // Unterminated name of entry.
+  char name[0];
+}
+</code></pre>
+<p>This method does not require any rights, since one could always probe for
+directory contents by triggering name conflicts during file creation.</p>
 
 #### Request
 <table>
@@ -1849,9 +1768,8 @@
 
 ### Rewind {#Rewind}
 
- Resets the directory seek offset.
-
- This method does not require any rights, similar to ReadDirents.
+<p>Resets the directory seek offset.</p>
+<p>This method does not require any rights, similar to ReadDirents.</p>
 
 #### Request
 <table>
@@ -1871,10 +1789,9 @@
 
 ### GetToken {#GetToken}
 
- Acquires a token to a Directory which can be used to identify
- access to it at a later point in time.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Acquires a token to a Directory which can be used to identify
+access to it at a later point in time.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -1899,14 +1816,12 @@
 
 ### Rename {#Rename}
 
- Renames an object named src to the name dst, in a directory represented by token.
-
- `src/dst` must be resolved object names. Including "/" in any position
- other than the end of the string will return `ZX_ERR_INVALID_ARGS`.
- Returning "/" at the end of either string implies that it must be a
- directory, or else `ZX_ERR_NOT_DIR` should be returned.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Renames an object named src to the name dst, in a directory represented by token.</p>
+<p><code>src/dst</code> must be resolved object names. Including &quot;/&quot; in any position
+other than the end of the string will return <code>ZX_ERR_INVALID_ARGS</code>.
+Returning &quot;/&quot; at the end of either string implies that it must be a
+directory, or else <code>ZX_ERR_NOT_DIR</code> should be returned.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -1941,16 +1856,13 @@
 
 ### Link {#Link}
 
- Creates a link to an object named src by the name dst, within a directory represented by
- token.
-
- `src` must be a resolved object name. Including "/" in the string will
- return `ZX_ERR_INVALID_ARGS`.
-
- `dst` must be a resolved object name. Including "/" in the string will
- return `ZX_ERR_INVALID_ARGS`.
-
- This method requires following rights: `OPEN_RIGHT_WRITABLE`.
+<p>Creates a link to an object named src by the name dst, within a directory represented by
+token.</p>
+<p><code>src</code> must be a resolved object name. Including &quot;/&quot; in the string will
+return <code>ZX_ERR_INVALID_ARGS</code>.</p>
+<p><code>dst</code> must be a resolved object name. Including &quot;/&quot; in the string will
+return <code>ZX_ERR_INVALID_ARGS</code>.</p>
+<p>This method requires following rights: <code>OPEN_RIGHT_WRITABLE</code>.</p>
 
 #### Request
 <table>
@@ -1985,25 +1897,20 @@
 
 ### Watch {#Watch}
 
- Watches a directory, receiving events of added messages on the
- watcher request channel.
-
- The `watcher` handle will send messages of the form:
- ```
- struct {
-   uint8 event;
-   uint8 len;
-   char name[];
- };
- ```
- Where names are NOT null-terminated.
-
- This API is unstable; in the future, watcher will be a `DirectoryWatcher` client.
-
- Mask specifies a bitmask of events to observe.
- Options must be zero; it is reserved.
-
- This method does not require any rights, similar to ReadDirents.
+<p>Watches a directory, receiving events of added messages on the
+watcher request channel.</p>
+<p>The <code>watcher</code> handle will send messages of the form:</p>
+<pre><code>struct {
+  uint8 event;
+  uint8 len;
+  char name[];
+};
+</code></pre>
+<p>Where names are NOT null-terminated.</p>
+<p>This API is unstable; in the future, watcher will be a <code>DirectoryWatcher</code> client.</p>
+<p>Mask specifies a bitmask of events to observe.
+Options must be zero; it is reserved.</p>
+<p>This method does not require any rights, similar to ReadDirents.</p>
 
 #### Request
 <table>
@@ -2038,10 +1945,10 @@
 
 ### Mount {#Mount}
 
- Mount a channel representing a remote filesystem onto this directory.
- All future requests to this node will be forwarded to the remote filesystem.
- To re-open a node without forwarding to the remote target, the node
- should be opened with `OPEN_FLAG_NO_REMOTE`.
+<p>Mount a channel representing a remote filesystem onto this directory.
+All future requests to this node will be forwarded to the remote filesystem.
+To re-open a node without forwarding to the remote target, the node
+should be opened with <code>OPEN_FLAG_NO_REMOTE</code>.</p>
 
 #### Request
 <table>
@@ -2066,8 +1973,8 @@
 
 ### MountAndCreate {#MountAndCreate}
 
- Atomically create a directory with a provided path, and mount the
- remote handle to the newly created directory.
+<p>Atomically create a directory with a provided path, and mount the
+remote handle to the newly created directory.</p>
 
 #### Request
 <table>
@@ -2102,8 +2009,8 @@
 
 ### Unmount {#Unmount}
 
- Unmount this filesystem. After this function returns successfully,
- all connections to the filesystem will be terminated.
+<p>Unmount this filesystem. After this function returns successfully,
+all connections to the filesystem will be terminated.</p>
 
 #### Request
 <table>
@@ -2123,8 +2030,8 @@
 
 ### UnmountNode {#UnmountNode}
 
- Detach a node which was previously attached to this directory
- with Mount.
+<p>Detach a node which was previously attached to this directory
+with Mount.</p>
 
 #### Request
 <table>
@@ -2149,7 +2056,7 @@
 
 ### QueryFilesystem {#QueryFilesystem}
 
- Query the filesystem for filesystem-specific information.
+<p>Query the filesystem for filesystem-specific information.</p>
 
 #### Request
 <table>
@@ -2174,7 +2081,7 @@
 
 ### GetDevicePath {#GetDevicePath}
 
- Acquire the path to the device backing this filesystem, if there is one.
+<p>Acquire the path to the device backing this filesystem, if there is one.</p>
 
 #### Request
 <table>
@@ -2206,8 +2113,8 @@
 
 
 
- The default protocol, interface information must be acquired some
- other way.
+<p>The default protocol, interface information must be acquired some
+other way.</p>
 
 
 <table>
@@ -2219,7 +2126,7 @@
 
 
 
- The object may be cast to interface 'File'.
+<p>The object may be cast to interface 'File'.</p>
 
 
 <table>
@@ -2228,12 +2135,11 @@
             <td>
                 <code>handle&lt;event&gt;?</code>
             </td>
-            <td> An optional event which transmits information about an object's readability
- or writability. This event relays information about the underlying object, not
- the capability granted to client: this event may be signalled "readable" on a
- connection that does not have the capability to read.
-
- The "`FILE_SIGNAL_`" values may be observed on this event.
+            <td><p>An optional event which transmits information about an object's readability
+or writability. This event relays information about the underlying object, not
+the capability granted to client: this event may be signalled &quot;readable&quot; on a
+connection that does not have the capability to read.</p>
+<p>The &quot;<code>FILE_SIGNAL_</code>&quot; values may be observed on this event.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -2244,7 +2150,7 @@
 
 
 
- The object may be cast to interface 'Directory'.
+<p>The object may be cast to interface 'Directory'.</p>
 
 
 <table>
@@ -2256,7 +2162,7 @@
 
 
 
- The object is accompanied by a pipe.
+<p>The object is accompanied by a pipe.</p>
 
 
 <table>
@@ -2275,7 +2181,7 @@
 
 
 
- The object is accompanied by a socket.
+<p>The object is accompanied by a socket.</p>
 
 
 <table>
@@ -2294,10 +2200,10 @@
 
 
 
- The object is a file which is represented as an immutable VMO.
- Although a VMO is returned as a part of this structure, this underlying object
- may represent multiple Vmofiles. To identify the logical portion of the VMO
- that represents the single file, an offset and length parameter are also supplied.
+<p>The object is a file which is represented as an immutable VMO.
+Although a VMO is returned as a part of this structure, this underlying object
+may represent multiple Vmofiles. To identify the logical portion of the VMO
+that represents the single file, an offset and length parameter are also supplied.</p>
 
 
 <table>
@@ -2306,7 +2212,7 @@
             <td>
                 <code>handle&lt;vmo&gt;</code>
             </td>
-            <td> The VMO which backs this file.
+            <td><p>The VMO which backs this file.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2314,7 +2220,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The index into `vmo` which represents the first byte of the file.
+            <td><p>The index into <code>vmo</code> which represents the first byte of the file.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2322,7 +2228,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The number of bytes, starting at `offset`, which may be used to represent this file.
+            <td><p>The number of bytes, starting at <code>offset</code>, which may be used to represent this file.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -2333,7 +2239,7 @@
 
 
 
- The object may be cast to interface 'Device'.
+<p>The object may be cast to interface 'Device'.</p>
 
 
 <table>
@@ -2342,9 +2248,8 @@
             <td>
                 <code>handle&lt;eventpair&gt;?</code>
             </td>
-            <td> An optional event which transmits information about a device's state.
-
- The "`DEVICE_SIGNAL_`" values may be observed on this event.
+            <td><p>An optional event which transmits information about a device's state.</p>
+<p>The &quot;<code>DEVICE_SIGNAL_</code>&quot; values may be observed on this event.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -2355,7 +2260,7 @@
 
 
 
- The object may be cast to interface 'Tty'
+<p>The object may be cast to interface 'Tty'</p>
 
 
 <table>
@@ -2374,7 +2279,7 @@
 
 
 
- NodeAttributes defines generic information about a filesystem node.
+<p>NodeAttributes defines generic information about a filesystem node.</p>
 
 
 <table>
@@ -2383,7 +2288,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> Protection bits and node type information describe in 'mode'.
+            <td><p>Protection bits and node type information describe in 'mode'.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2391,7 +2296,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> A filesystem-unique ID.
+            <td><p>A filesystem-unique ID.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2399,7 +2304,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> Node size, in bytes.
+            <td><p>Node size, in bytes.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2407,7 +2312,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> Space needed to store node (possibly larger than size), in bytes.
+            <td><p>Space needed to store node (possibly larger than size), in bytes.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2415,7 +2320,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> Hard link count.
+            <td><p>Hard link count.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2423,7 +2328,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> Time of creation (may be updated manually after creation) in ns since Unix epoch, UTC.
+            <td><p>Time of creation (may be updated manually after creation) in ns since Unix epoch, UTC.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2431,7 +2336,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> Time of last modification in ns since Unix epoch, UTC.
+            <td><p>Time of last modification in ns since Unix epoch, UTC.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -2442,7 +2347,7 @@
 
 
 
- WatchedEvent describes events returned from a DirectoryWatcher.
+<p>WatchedEvent describes events returned from a DirectoryWatcher.</p>
 
 
 <table>
@@ -2483,7 +2388,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The number of data bytes which may be stored in a filesystem.
+            <td><p>The number of data bytes which may be stored in a filesystem.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2491,7 +2396,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The number of data bytes which are in use by the filesystem.
+            <td><p>The number of data bytes which are in use by the filesystem.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2499,7 +2404,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The number of nodes which may be stored in the filesystem.
+            <td><p>The number of nodes which may be stored in the filesystem.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2507,7 +2412,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The number of nodes used by the filesystem.
+            <td><p>The number of nodes used by the filesystem.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2515,8 +2420,8 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The amount of space which may be allocated from the underlying
- volume manager. If unsupported, this will be zero.
+            <td><p>The amount of space which may be allocated from the underlying
+volume manager. If unsupported, this will be zero.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2524,8 +2429,8 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> A unique identifier for this filesystem instance. Will not be preserved
- across reboots.
+            <td><p>A unique identifier for this filesystem instance. Will not be preserved
+across reboots.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2533,7 +2438,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The size of a single filesystem block.
+            <td><p>The size of a single filesystem block.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2541,7 +2446,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The maximum length of a filesystem name.
+            <td><p>The maximum length of a filesystem name.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2549,7 +2454,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> A unique identifier for the type of the underlying filesystem.
+            <td><p>A unique identifier for the type of the underlying filesystem.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2578,24 +2483,24 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#287)*
 
- Update the Seek offset.
+<p>Update the Seek offset.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>START</code></td>
             <td><code>0</code></td>
-            <td> Seek from the start of the file.
+            <td><p>Seek from the start of the file.</p>
 </td>
         </tr><tr>
             <td><code>CURRENT</code></td>
             <td><code>1</code></td>
-            <td> Seek from the current position in the file.
+            <td><p>Seek from the current position in the file.</p>
 </td>
         </tr><tr>
             <td><code>END</code></td>
             <td><code>2</code></td>
-            <td> Seek from the end of the file.
+            <td><p>Seek from the end of the file.</p>
 </td>
         </tr></table>
 
@@ -2608,10 +2513,9 @@ Type: <code>uint32</code>
 ### NodeInfo {#NodeInfo}
 *Defined in [fuchsia.io/io.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#14)*
 
- Describes how the connection to an should be handled, as well as
- how to interpret the optional handle.
-
- Refer to `Node.Describe()` and `Node.OnOpen()` for usage.
+<p>Describes how the connection to an should be handled, as well as
+how to interpret the optional handle.</p>
+<p>Refer to <code>Node.Describe()</code> and <code>Node.OnOpen()</code> for usage.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -2679,7 +2583,7 @@ Type: <code>uint32</code>
                     <code>16777216</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Indicates the file is ready for reading.
+            <td><p>Indicates the file is ready for reading.</p>
 </td>
         </tr>
     <tr>
@@ -2688,7 +2592,7 @@ Type: <code>uint32</code>
                     <code>33554432</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Indicates the file is ready for writing.
+            <td><p>Indicates the file is ready for writing.</p>
 </td>
         </tr>
     <tr>
@@ -2697,7 +2601,7 @@ Type: <code>uint32</code>
                     <code>16777216</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Indicates the device is ready for reading.
+            <td><p>Indicates the device is ready for reading.</p>
 </td>
         </tr>
     <tr>
@@ -2706,7 +2610,7 @@ Type: <code>uint32</code>
                     <code>33554432</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Indicates an out-of-band state transition has occurred.
+            <td><p>Indicates an out-of-band state transition has occurred.</p>
 </td>
         </tr>
     <tr>
@@ -2715,7 +2619,7 @@ Type: <code>uint32</code>
                     <code>67108864</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Indicates the device is ready for writing.
+            <td><p>Indicates the device is ready for writing.</p>
 </td>
         </tr>
     <tr>
@@ -2724,7 +2628,7 @@ Type: <code>uint32</code>
                     <code>134217728</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Indicates the device has encountered an error state.
+            <td><p>Indicates the device has encountered an error state.</p>
 </td>
         </tr>
     <tr>
@@ -2733,7 +2637,7 @@ Type: <code>uint32</code>
                     <code>268435456</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Indicates the device has hung up on the current connection.
+            <td><p>Indicates the device has hung up on the current connection.</p>
 </td>
         </tr>
     <tr>
@@ -2742,7 +2646,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Can read from target object.
+            <td><p>Can read from target object.</p>
 </td>
         </tr>
     <tr>
@@ -2751,7 +2655,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Can write to target object.
+            <td><p>Can write to target object.</p>
 </td>
         </tr>
     <tr>
@@ -2760,7 +2664,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Connection can mount/umount filesystem.
+            <td><p>Connection can mount/umount filesystem.</p>
 </td>
         </tr>
     <tr>
@@ -2769,7 +2673,7 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Connection can map target object executable.
+            <td><p>Connection can map target object executable.</p>
 </td>
         </tr>
     <tr>
@@ -2778,7 +2682,7 @@ Type: <code>uint32</code>
                     <code>65536</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Create the object if it doesn't exist.
+            <td><p>Create the object if it doesn't exist.</p>
 </td>
         </tr>
     <tr>
@@ -2787,7 +2691,7 @@ Type: <code>uint32</code>
                     <code>131072</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> (with Create) Fail if the object already exists.
+            <td><p>(with Create) Fail if the object already exists.</p>
 </td>
         </tr>
     <tr>
@@ -2796,7 +2700,7 @@ Type: <code>uint32</code>
                     <code>262144</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Truncate the object before usage.
+            <td><p>Truncate the object before usage.</p>
 </td>
         </tr>
     <tr>
@@ -2805,8 +2709,8 @@ Type: <code>uint32</code>
                     <code>524288</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Assert that the object to be opened is a directory.
- Return an error if the target object is not a directory.
+            <td><p>Assert that the object to be opened is a directory.
+Return an error if the target object is not a directory.</p>
 </td>
         </tr>
     <tr>
@@ -2815,7 +2719,7 @@ Type: <code>uint32</code>
                     <code>1048576</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Seek to the end of the object before all writes.
+            <td><p>Seek to the end of the object before all writes.</p>
 </td>
         </tr>
     <tr>
@@ -2824,7 +2728,7 @@ Type: <code>uint32</code>
                     <code>2097152</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> If the object is a mount point, open the local directory.
+            <td><p>If the object is a mount point, open the local directory.</p>
 </td>
         </tr>
     <tr>
@@ -2833,16 +2737,18 @@ Type: <code>uint32</code>
                     <code>4194304</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Open a reference to the object, not the object itself.
- It is ONLY valid to pass the following flags together with `OPEN_FLAG_NODE_REFERENCE`:
- - `OPEN_FLAG_DIRECTORY`
- - `OPEN_FLAG_NOT_DIRECTORY`
- - `OPEN_FLAG_DESCRIBE`
- otherwise an error is returned.
- If an object is opened or cloned using this method, the resulting connection does not carry
- any permission flags.
- The resulting node allows a limited set of operations: `GetAttr`, `Clone`, `Close`, `Describe`,
- and, if the node is a file, these extra operations: `GetFlags`, `SetFlags`.
+            <td><p>Open a reference to the object, not the object itself.
+It is ONLY valid to pass the following flags together with <code>OPEN_FLAG_NODE_REFERENCE</code>:</p>
+<ul>
+<li><code>OPEN_FLAG_DIRECTORY</code></li>
+<li><code>OPEN_FLAG_NOT_DIRECTORY</code></li>
+<li><code>OPEN_FLAG_DESCRIBE</code>
+otherwise an error is returned.
+If an object is opened or cloned using this method, the resulting connection does not carry
+any permission flags.
+The resulting node allows a limited set of operations: <code>GetAttr</code>, <code>Clone</code>, <code>Close</code>, <code>Describe</code>,
+and, if the node is a file, these extra operations: <code>GetFlags</code>, <code>SetFlags</code>.</li>
+</ul>
 </td>
         </tr>
     <tr>
@@ -2851,8 +2757,8 @@ Type: <code>uint32</code>
                     <code>46661632</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Binary OR of `OPEN_FLAG_DIRECTORY`, OPEN_FLAG_NOT_DIRECTORY, OPEN_FLAG_DESCRIBE, and
- `OPEN_FLAG_NODE_REFERENCE`. Flags used when opening a node reference must fall within this mask.
+            <td><p>Binary OR of <code>OPEN_FLAG_DIRECTORY</code>, OPEN_FLAG_NOT_DIRECTORY, OPEN_FLAG_DESCRIBE, and
+<code>OPEN_FLAG_NODE_REFERENCE</code>. Flags used when opening a node reference must fall within this mask.</p>
 </td>
         </tr>
     <tr>
@@ -2861,8 +2767,8 @@ Type: <code>uint32</code>
                     <code>8388608</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Requests that an "OnOpen" event is sent to the interface request.
- The event will contain a non-null NodeInfo if the open/clone is successful.
+            <td><p>Requests that an &quot;OnOpen&quot; event is sent to the interface request.
+The event will contain a non-null NodeInfo if the open/clone is successful.</p>
 </td>
         </tr>
     <tr>
@@ -2871,23 +2777,23 @@ Type: <code>uint32</code>
                     <code>16777216</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Specify this flag to request POSIX-compatibility. Currently, it affects permission handling.
- During Open:
- - If the target path is a directory, the rights on the new connection expand to include
-   `OPEN_RIGHT_WRITABLE` if and only if the current connection and all intermediate mount points
-   are writable, and to include `OPEN_RIGHT_EXECUTABLE` if and only if the current connection and
-   all intermediate mount points are executable.
- - Otherwise, this flag is ignored. It is an access denied error to request more rights
-   than those on the current connection, or any intermediate mount points.
-
- If the posix compatibility flag is not specified, opening always uses the requested rights,
- failing the operation with access denied error if requested rights exceeds the rights attached
- to the current connection.
-
- If the requesting connection is read-only and the requested rights are read-only, the flag
- may be ignored by the server, and is not forwarded downstream. This is an implementation detail,
- necessary to enforce hierarchical permissions across mount points, and should have no effect
- on the expected behavior for clients.
+            <td><p>Specify this flag to request POSIX-compatibility. Currently, it affects permission handling.
+During Open:</p>
+<ul>
+<li>If the target path is a directory, the rights on the new connection expand to include
+<code>OPEN_RIGHT_WRITABLE</code> if and only if the current connection and all intermediate mount points
+are writable, and to include <code>OPEN_RIGHT_EXECUTABLE</code> if and only if the current connection and
+all intermediate mount points are executable.</li>
+<li>Otherwise, this flag is ignored. It is an access denied error to request more rights
+than those on the current connection, or any intermediate mount points.</li>
+</ul>
+<p>If the posix compatibility flag is not specified, opening always uses the requested rights,
+failing the operation with access denied error if requested rights exceeds the rights attached
+to the current connection.</p>
+<p>If the requesting connection is read-only and the requested rights are read-only, the flag
+may be ignored by the server, and is not forwarded downstream. This is an implementation detail,
+necessary to enforce hierarchical permissions across mount points, and should have no effect
+on the expected behavior for clients.</p>
 </td>
         </tr>
     <tr>
@@ -2896,8 +2802,8 @@ Type: <code>uint32</code>
                     <code>33554432</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Assert that the object to be opened is not a directory.
- Return an error if the target object is a directory.
+            <td><p>Assert that the object to be opened is not a directory.
+Return an error if the target object is a directory.</p>
 </td>
         </tr>
     <tr>
@@ -2906,9 +2812,9 @@ Type: <code>uint32</code>
                     <code>67108864</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> When used during clone, the new connection inherits the rights on the source connection,
- regardless if it is a file or directory. Otherwise, clone attempts to use the requested rights.
- It is invalid to pass any of the `OPEN_RIGHT_*` flags together with `CLONE_FLAG_SAME_RIGHTS`.
+            <td><p>When used during clone, the new connection inherits the rights on the source connection,
+regardless if it is a file or directory. Otherwise, clone attempts to use the requested rights.
+It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with <code>CLONE_FLAG_SAME_RIGHTS</code>.</p>
 </td>
         </tr>
     <tr>
@@ -2917,10 +2823,10 @@ Type: <code>uint32</code>
                     <code>4095</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Bits reserved for posix protections. Native fuchsia filesystems
- are not required to set bits contained within `MODE_PROTECTION_MASK`,
- but filesystems that wish to do so may refer to sys/stat.h for their
- definitions.
+            <td><p>Bits reserved for posix protections. Native fuchsia filesystems
+are not required to set bits contained within <code>MODE_PROTECTION_MASK</code>,
+but filesystems that wish to do so may refer to sys/stat.h for their
+definitions.</p>
 </td>
         </tr>
     <tr>
@@ -2929,9 +2835,9 @@ Type: <code>uint32</code>
                     <code>1044480</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Bits indicating node type. The canonical mechanism to check
- for a node type is to take 'mode', bitwise AND it with the
- `MODE_TYPE_MASK`, and check exact equality against a mode type.
+            <td><p>Bits indicating node type. The canonical mechanism to check
+for a node type is to take 'mode', bitwise AND it with the
+<code>MODE_TYPE_MASK</code>, and check exact equality against a mode type.</p>
 </td>
         </tr>
     <tr>
@@ -2980,8 +2886,8 @@ Type: <code>uint32</code>
                     <code>8192</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td> The maximal buffer size which can be transmitted for buffered operations.
- This capacity is currently set somewhat arbitrarily.
+            <td><p>The maximal buffer size which can be transmitted for buffered operations.
+This capacity is currently set somewhat arbitrarily.</p>
 </td>
         </tr>
     <tr>
@@ -2990,7 +2896,7 @@ Type: <code>uint32</code>
                     <code>4096</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td> The maximum length, in bytes, of a filesystem string.
+            <td><p>The maximum length, in bytes, of a filesystem string.</p>
 </td>
         </tr>
     <tr>
@@ -2999,7 +2905,7 @@ Type: <code>uint32</code>
                     <code>255</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td> The maximum length, in bytes, of a single filesystem component.
+            <td><p>The maximum length, in bytes, of a single filesystem component.</p>
 </td>
         </tr>
     <tr>
@@ -3008,8 +2914,8 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> The fields of 'attributes' which are used to update the Node are indicated
- by the 'flags' argument.
+            <td><p>The fields of 'attributes' which are used to update the Node are indicated
+by the 'flags' argument.</p>
 </td>
         </tr>
     <tr>
@@ -3026,7 +2932,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Requests that the VMO be readable.
+            <td><p>Requests that the VMO be readable.</p>
 </td>
         </tr>
     <tr>
@@ -3035,7 +2941,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Requests that the VMO be writable.
+            <td><p>Requests that the VMO be writable.</p>
 </td>
         </tr>
     <tr>
@@ -3044,7 +2950,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Requests that the VMO be executable.
+            <td><p>Requests that the VMO be executable.</p>
 </td>
         </tr>
     <tr>
@@ -3053,9 +2959,9 @@ Type: <code>uint32</code>
                     <code>65536</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Require a copy-on-write clone of the underlying VMO.
- The request should fail if the VMO is not cloned.
- May not be supplied with fuchsia_io_`VMO_FLAG_EXACT`.
+            <td><p>Require a copy-on-write clone of the underlying VMO.
+The request should fail if the VMO is not cloned.
+May not be supplied with fuchsia_io_<code>VMO_FLAG_EXACT</code>.</p>
 </td>
         </tr>
     <tr>
@@ -3064,9 +2970,9 @@ Type: <code>uint32</code>
                     <code>131072</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Require an exact (non-cloned) handle to the underlying VMO.
- The request should fail if a handle to the exact VMO is not returned.
- May not be supplied with `VMO_FLAG_PRIVATE`.
+            <td><p>Require an exact (non-cloned) handle to the underlying VMO.
+The request should fail if a handle to the exact VMO is not returned.
+May not be supplied with <code>VMO_FLAG_PRIVATE</code>.</p>
 </td>
         </tr>
     <tr>
@@ -3075,7 +2981,7 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td> A dirent with an unknown type.
+            <td><p>A dirent with an unknown type.</p>
 </td>
         </tr>
     <tr>
@@ -3084,7 +2990,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td> A dirent representing a directory object.
+            <td><p>A dirent representing a directory object.</p>
 </td>
         </tr>
     <tr>
@@ -3093,7 +2999,7 @@ Type: <code>uint32</code>
                     <code>6</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td> A dirent representing a block device object.
+            <td><p>A dirent representing a block device object.</p>
 </td>
         </tr>
     <tr>
@@ -3102,7 +3008,7 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td> A dirent representing a file object.
+            <td><p>A dirent representing a file object.</p>
 </td>
         </tr>
     <tr>
@@ -3111,7 +3017,7 @@ Type: <code>uint32</code>
                     <code>12</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td> A dirent representing a socket object.
+            <td><p>A dirent representing a socket object.</p>
 </td>
         </tr>
     <tr>
@@ -3120,7 +3026,7 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td> A dirent representing a service object.
+            <td><p>A dirent representing a service object.</p>
 </td>
         </tr>
     <tr>
@@ -3129,8 +3035,8 @@ Type: <code>uint32</code>
                     <code>18446744073709551615</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td> Nodes which do not have ino values should return this value
- from Readdir and GetAttr.
+            <td><p>Nodes which do not have ino values should return this value
+from Readdir and GetAttr.</p>
 </td>
         </tr>
     <tr>
@@ -3139,7 +3045,7 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td> Indicates the directory being watched has been deleted.
+            <td><p>Indicates the directory being watched has been deleted.</p>
 </td>
         </tr>
     <tr>
@@ -3148,7 +3054,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td> Indicates a node has been created (either new or moved) into a directory.
+            <td><p>Indicates a node has been created (either new or moved) into a directory.</p>
 </td>
         </tr>
     <tr>
@@ -3157,7 +3063,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td> Identifies a node has been removed (either deleted or moved) from the directory.
+            <td><p>Identifies a node has been removed (either deleted or moved) from the directory.</p>
 </td>
         </tr>
     <tr>
@@ -3166,7 +3072,7 @@ Type: <code>uint32</code>
                     <code>3</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td> Identifies a node already existed in the directory when watching started.
+            <td><p>Identifies a node already existed in the directory when watching started.</p>
 </td>
         </tr>
     <tr>
@@ -3175,7 +3081,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td> Identifies that no more `WATCH_EVENT_EXISTING` events will be sent.
+            <td><p>Identifies that no more <code>WATCH_EVENT_EXISTING</code> events will be sent.</p>
 </td>
         </tr>
     <tr>
@@ -3184,7 +3090,7 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_DELETED`.
+            <td><p>Used by <code>Directory.Watch</code>. Requests transmission of <code>WATCH_EVENT_DELETED</code>.</p>
 </td>
         </tr>
     <tr>
@@ -3193,7 +3099,7 @@ Type: <code>uint32</code>
                     <code>2</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_ADDED`.
+            <td><p>Used by <code>Directory.Watch</code>. Requests transmission of <code>WATCH_EVENT_ADDED</code>.</p>
 </td>
         </tr>
     <tr>
@@ -3202,7 +3108,7 @@ Type: <code>uint32</code>
                     <code>4</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_REMOVED`.
+            <td><p>Used by <code>Directory.Watch</code>. Requests transmission of <code>WATCH_EVENT_REMOVED</code>.</p>
 </td>
         </tr>
     <tr>
@@ -3211,7 +3117,7 @@ Type: <code>uint32</code>
                     <code>8</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_EXISTING`.
+            <td><p>Used by <code>Directory.Watch</code>. Requests transmission of <code>WATCH_EVENT_EXISTING</code>.</p>
 </td>
         </tr>
     <tr>
@@ -3220,7 +3126,7 @@ Type: <code>uint32</code>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by `Directory.Watch`. Requests transmission of `WATCH_EVENT_IDLE`.
+            <td><p>Used by <code>Directory.Watch</code>. Requests transmission of <code>WATCH_EVENT_IDLE</code>.</p>
 </td>
         </tr>
     <tr>
@@ -3229,7 +3135,7 @@ Type: <code>uint32</code>
                     <code>31</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Used by `Directory.Watch`. Requests transmission of all watcher events.
+            <td><p>Used by <code>Directory.Watch</code>. Requests transmission of all watcher events.</p>
 </td>
         </tr>
     <tr>

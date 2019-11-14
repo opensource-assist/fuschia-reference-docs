@@ -8,12 +8,12 @@
 ## FactoryStoreProvider {#FactoryStoreProvider}
 *Defined in [fuchsia.factory/factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.factory/factory.fidl#19)*
 
- This protocol is a base protocol for all providers of factory store
- directories. It exposes a single method to allow clients to establish a
- connection to a directory containing the relevant factory data. All files
- surfaced by a component that implements FactoryStoreProvider (or any
- protocol that depends on it) are expected to be validated for consistency
- before being exposed to clients.
+<p>This protocol is a base protocol for all providers of factory store
+directories. It exposes a single method to allow clients to establish a
+connection to a directory containing the relevant factory data. All files
+surfaced by a component that implements FactoryStoreProvider (or any
+protocol that depends on it) are expected to be validated for consistency
+before being exposed to clients.</p>
 
 ### GetFactoryStore {#GetFactoryStore}
 
@@ -33,9 +33,9 @@
 ## CastCredentialsFactoryStoreProvider {#CastCredentialsFactoryStoreProvider}
 *Defined in [fuchsia.factory/factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.factory/factory.fidl#27)*
 
- This protocol exposes a method to connect to a directory containing
- Cast-specific factory data: public certificates and keys for
- authentication with Cast servers.
+<p>This protocol exposes a method to connect to a directory containing
+Cast-specific factory data: public certificates and keys for
+authentication with Cast servers.</p>
 
 ### GetFactoryStore {#GetFactoryStore}
 
@@ -55,9 +55,9 @@
 ## WidevineFactoryStoreProvider {#WidevineFactoryStoreProvider}
 *Defined in [fuchsia.factory/factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.factory/factory.fidl#35)*
 
- This protocol exposes a method to connect to a directory containing
- Widevine-specific factory data: public certificates and keys for
- authentication with Widevine systems.
+<p>This protocol exposes a method to connect to a directory containing
+Widevine-specific factory data: public certificates and keys for
+authentication with Widevine systems.</p>
 
 ### GetFactoryStore {#GetFactoryStore}
 
@@ -77,9 +77,9 @@
 ## PlayReadyFactoryStoreProvider {#PlayReadyFactoryStoreProvider}
 *Defined in [fuchsia.factory/factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.factory/factory.fidl#43)*
 
- This protocol exposes a method to connect to a directory containing
- PlayReady-specific factory data: public certificates and keys for
- authentication with PlayReady systems.
+<p>This protocol exposes a method to connect to a directory containing
+PlayReady-specific factory data: public certificates and keys for
+authentication with PlayReady systems.</p>
 
 ### GetFactoryStore {#GetFactoryStore}
 
@@ -99,11 +99,11 @@
 ## MiscFactoryStoreProvider {#MiscFactoryStoreProvider}
 *Defined in [fuchsia.factory/factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.factory/factory.fidl#53)*
 
- This protocol exposes a method to connect to a directory containing
- miscellaneous factory data such as tuning/calibration files, region-specific
- audio files, factory process metadata files, and more. Any raw files not
- covered by other FactoryStoreProviders or methods in fuchsia.hwinfo will
- appear here.
+<p>This protocol exposes a method to connect to a directory containing
+miscellaneous factory data such as tuning/calibration files, region-specific
+audio files, factory process metadata files, and more. Any raw files not
+covered by other FactoryStoreProviders or methods in fuchsia.hwinfo will
+appear here.</p>
 
 ### GetFactoryStore {#GetFactoryStore}
 

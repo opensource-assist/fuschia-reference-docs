@@ -8,12 +8,12 @@
 ## Counter {#Counter}
 *Defined in [fuchsia.kernel/kernel-counter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-kernel/kernel-counter.fidl#12)*
 
- Protocol for retrieving kcounter information.
+<p>Protocol for retrieving kcounter information.</p>
 
 ### GetInspectVmo {#GetInspectVmo}
 
- Retrives a VMO containining summarized kcounter data. The vmo returned
- in |buffer| is in "inspect-vmo" format, documented elsewhere.
+<p>Retrives a VMO containining summarized kcounter data. The vmo returned
+in |buffer| is in &quot;inspect-vmo&quot; format, documented elsewhere.</p>
 
 #### Request
 <table>
@@ -38,9 +38,9 @@
 
 ### UpdateInspectVmo {#UpdateInspectVmo}
 
- Request that the previously-returned VMO buffer's data be updated. The
- data may not be updated if it was already recently updated (updates are
- limited to an unspecified rate, but approximately every few seconds).
+<p>Request that the previously-returned VMO buffer's data be updated. The
+data may not be updated if it was already recently updated (updates are
+limited to an unspecified rate, but approximately every few seconds).</p>
 
 #### Request
 <table>
@@ -61,12 +61,12 @@
 ## DebugBroker {#DebugBroker}
 *Defined in [fuchsia.kernel/kernel-debug.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-kernel/kernel-debug.fidl#14)*
 
- Acts on behalf of the caller to interact with privileged debug system calls.
+<p>Acts on behalf of the caller to interact with privileged debug system calls.</p>
 
 ### SendDebugCommand {#SendDebugCommand}
 
- Pass debug command through to the kernel shell.
- Look at zx_debug_send_command syscall handling to find valid values.
+<p>Pass debug command through to the kernel shell.
+Look at zx_debug_send_command syscall handling to find valid values.</p>
 
 #### Request
 <table>
@@ -91,7 +91,7 @@
 
 ### SetTracingEnabled {#SetTracingEnabled}
 
- Sets whether kernel tracing (ktrace) is enabled or disabled.
+<p>Sets whether kernel tracing (ktrace) is enabled or disabled.</p>
 
 #### Request
 <table>
@@ -117,12 +117,12 @@
 ## MexecBroker {#MexecBroker}
 *Defined in [fuchsia.kernel/kernel-mexec.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-kernel/kernel-mexec.fidl#9)*
 
- Acts on behalf of the caller to interact with privileged mexec system call.
+<p>Acts on behalf of the caller to interact with privileged mexec system call.</p>
 
 ### PerformMexec {#PerformMexec}
 
- Perform an mexec with the given kernel and bootdata.
- See ZX-2069 for the thoughts on deprecating mexec.
+<p>Perform an mexec with the given kernel and bootdata.
+See ZX-2069 for the thoughts on deprecating mexec.</p>
 
 #### Request
 <table>
@@ -144,11 +144,11 @@
 ## Stats {#Stats}
 *Defined in [fuchsia.kernel/kernel-stats.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-kernel/kernel-stats.fidl#57)*
 
- Protocol for providing kernel stats. This is roughly a wrapper around zx_object_get_info for
- the ZX_INFO_KMEM_STATS and ZX_INFO_CPU_STATS topics, which today require the very powerful
- 'Root Resource' capability to obtain. Instead of vending out that capability, programs that
- just want stats should use this service instead. If for some reason the protocol fails to
- retrieve stats, which will be an un-recoverable error, it will close the channel.
+<p>Protocol for providing kernel stats. This is roughly a wrapper around zx_object_get_info for
+the ZX_INFO_KMEM_STATS and ZX_INFO_CPU_STATS topics, which today require the very powerful
+'Root Resource' capability to obtain. Instead of vending out that capability, programs that
+just want stats should use this service instead. If for some reason the protocol fails to
+retrieve stats, which will be an un-recoverable error, it will close the channel.</p>
 
 ### GetMemoryStats {#GetMemoryStats}
 
@@ -430,7 +430,7 @@
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum number of bytes in a command string
+            <td><p>Maximum number of bytes in a command string</p>
 </td>
         </tr>
     

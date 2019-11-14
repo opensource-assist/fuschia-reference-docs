@@ -8,12 +8,12 @@
 ## Loader {#Loader}
 *Defined in [fuchsia.scenic.snapshot/loader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scenic.snapshot/loader.fidl#12)*
 
- Snapshot loader exported by `ViewProvider` to load snapshots into views
- created from it.
+<p>Snapshot loader exported by <code>ViewProvider</code> to load snapshots into views
+created from it.</p>
 
 ### Load {#Load}
 
- Load the snapshot from the Vmo buffer payload.
+<p>Load the snapshot from the Vmo buffer payload.</p>
 
 #### Request
 <table>

@@ -84,27 +84,27 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>HR</code></td>
             <td><code>1</code></td>
-            <td> IEEE 802.11b, used for DSSS, HR/DSSS, ERP-DSSS/CCK
+            <td><p>IEEE 802.11b, used for DSSS, HR/DSSS, ERP-DSSS/CCK</p>
 </td>
         </tr><tr>
             <td><code>ERP</code></td>
             <td><code>2</code></td>
-            <td> IEEE 802.11a/g, used for ERP-OFDM
+            <td><p>IEEE 802.11a/g, used for ERP-OFDM</p>
 </td>
         </tr><tr>
             <td><code>HT</code></td>
             <td><code>3</code></td>
-            <td> IEEE 802.11n
+            <td><p>IEEE 802.11n</p>
 </td>
         </tr><tr>
             <td><code>VHT</code></td>
             <td><code>4</code></td>
-            <td> IEEE 802.11ac
+            <td><p>IEEE 802.11ac</p>
 </td>
         </tr><tr>
             <td><code>HEW</code></td>
             <td><code>5</code></td>
-            <td> IEEE 802.11ax
+            <td><p>IEEE 802.11ax</p>
 </td>
         </tr></table>
 
@@ -213,8 +213,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>TEMP_DIRECT_SME_CHANNEL</code></td>
             <td><code>3141592</code></td>
-            <td> Temporary feature flag for incrementally transitioning drivers to use
- SME channel on iface creation.
+            <td><p>Temporary feature flag for incrementally transitioning drivers to use
+SME channel on iface creation.</p>
 </td>
         </tr></table>
 

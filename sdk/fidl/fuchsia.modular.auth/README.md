@@ -12,10 +12,10 @@
 
 
 
- Stores attributes related to an account that is exposed to base shell.
- A list of existing account(s) can be obtained via
- UserProvider.PreviousUsers() and a new account can be added via
- UserProvider.AddAccount().
+<p>Stores attributes related to an account that is exposed to base shell.
+A list of existing account(s) can be obtained via
+UserProvider.PreviousUsers() and a new account can be added via
+UserProvider.AddAccount().</p>
 
 
 <table>
@@ -24,9 +24,9 @@
             <td>
                 <code>string</code>
             </td>
-            <td> A randomly generated identifier that is used to identify this
- account on this device. This is meant to be used by base shell when it
- wants to login as a user who has previously logged in.
+            <td><p>A randomly generated identifier that is used to identify this
+account on this device. This is meant to be used by base shell when it
+wants to login as a user who has previously logged in.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -34,8 +34,8 @@
             <td>
                 <code><a class='link' href='#IdentityProvider'>IdentityProvider</a></code>
             </td>
-            <td> The identity provider that was used to authenticate the user on this
- device.
+            <td><p>The identity provider that was used to authenticate the user on this
+device.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -43,9 +43,9 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Unique identifier configured for the given user at the Identity provider.
- Profile id is fetched from user profile attributes as configured by the
- user at the given identity provider.
+            <td><p>Unique identifier configured for the given user at the Identity provider.
+Profile id is fetched from user profile attributes as configured by the
+user at the given identity provider.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -53,9 +53,9 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The name that is displayed on the base shell while logging in. Display
- name is fetched from user profile attributes as configured by the user at
- the given identity provider.
+            <td><p>The name that is displayed on the base shell while logging in. Display
+name is fetched from user profile attributes as configured by the user at
+the given identity provider.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -63,9 +63,9 @@
             <td>
                 <code>string</code>
             </td>
-            <td> User's profile url that is used by the base shell while logging in.
- Profile url is fetched from user profile attributes as configured by the
- user at the given identity provider.
+            <td><p>User's profile url that is used by the base shell while logging in.
+Profile url is fetched from user profile attributes as configured by the
+user at the given identity provider.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -73,9 +73,9 @@
             <td>
                 <code>string</code>
             </td>
-            <td> User's profile image url that is used by the base shell while logging in.
- Profile image url is fetched from user profile attributes as configured by
- the user at the given identity provider.
+            <td><p>User's profile image url that is used by the base shell while logging in.
+Profile image url is fetched from user profile attributes as configured by
+the user at the given identity provider.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -90,25 +90,25 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular.auth/account.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.auth/account/account.fidl#45)*
 
- The currently supported identity providers. An identity provider provides
- identifiers for users to interact with the system and may provide information
- about the user that is known to the provider.
+<p>The currently supported identity providers. An identity provider provides
+identifiers for users to interact with the system and may provide information
+about the user that is known to the provider.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEV</code></td>
             <td><code>0</code></td>
-            <td> An identity provider that's used for development and testing. If this
- identity provider is chosen, the Framework will continue as if it has
- identified the user. Note that the users that use this id provider would
- not get cloud ledger access (unless done via a side channel).
+            <td><p>An identity provider that's used for development and testing. If this
+identity provider is chosen, the Framework will continue as if it has
+identified the user. Note that the users that use this id provider would
+not get cloud ledger access (unless done via a side channel).</p>
 </td>
         </tr><tr>
             <td><code>GOOGLE</code></td>
             <td><code>1</code></td>
-            <td> Uses Google as the identity provider. Doing this requires a working network
- connection and a web view.
+            <td><p>Uses Google as the identity provider. Doing this requires a working network
+connection and a web view.</p>
 </td>
         </tr></table>
 

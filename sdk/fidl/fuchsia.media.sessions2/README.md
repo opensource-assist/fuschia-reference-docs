@@ -8,11 +8,11 @@
 ## SessionControl {#SessionControl}
 *Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#39)*
 
- A protocol for clients to control sessions and view their status.
+<p>A protocol for clients to control sessions and view their status.</p>
 
 ### Play {#Play}
 
- Plays media.
+<p>Plays media.</p>
 
 #### Request
 <table>
@@ -23,7 +23,7 @@
 
 ### Pause {#Pause}
 
- Pauses playback and retains position in media
+<p>Pauses playback and retains position in media</p>
 
 #### Request
 <table>
@@ -34,7 +34,7 @@
 
 ### Stop {#Stop}
 
- Stops playback. The session should close.
+<p>Stops playback. The session should close.</p>
 
 #### Request
 <table>
@@ -45,9 +45,9 @@
 
 ### Seek {#Seek}
 
- Seeks to a specific position in media. Implementations are free to
- enter an error state if the position is out of bounds. `position`
- is an offset from the beginning of the media.
+<p>Seeks to a specific position in media. Implementations are free to
+enter an error state if the position is out of bounds. <code>position</code>
+is an offset from the beginning of the media.</p>
 
 #### Request
 <table>
@@ -63,7 +63,7 @@
 
 ### SkipForward {#SkipForward}
 
- Skips forward in media by the player's default skip amount.
+<p>Skips forward in media by the player's default skip amount.</p>
 
 #### Request
 <table>
@@ -74,7 +74,7 @@
 
 ### SkipReverse {#SkipReverse}
 
- Skips in reverse in media by the player's default skip amount.
+<p>Skips in reverse in media by the player's default skip amount.</p>
 
 #### Request
 <table>
@@ -85,7 +85,7 @@
 
 ### NextItem {#NextItem}
 
- Changes media to the next item (e.g. next song in playlist).
+<p>Changes media to the next item (e.g. next song in playlist).</p>
 
 #### Request
 <table>
@@ -96,7 +96,7 @@
 
 ### PrevItem {#PrevItem}
 
- Changes media to the previous item.
+<p>Changes media to the previous item.</p>
 
 #### Request
 <table>
@@ -107,8 +107,8 @@
 
 ### SetPlaybackRate {#SetPlaybackRate}
 
- Sets the playback rate of the media. This will not change the
- playback mode.
+<p>Sets the playback rate of the media. This will not change the
+playback mode.</p>
 
 #### Request
 <table>
@@ -124,7 +124,7 @@
 
 ### SetRepeatMode {#SetRepeatMode}
 
- Sets repeat mode to any of the supported repeat modes.
+<p>Sets repeat mode to any of the supported repeat modes.</p>
 
 #### Request
 <table>
@@ -140,7 +140,7 @@
 
 ### SetShuffleMode {#SetShuffleMode}
 
- Sets shuffle mode.
+<p>Sets shuffle mode.</p>
 
 #### Request
 <table>
@@ -156,7 +156,7 @@
 
 ### BindVolumeControl {#BindVolumeControl}
 
- Binds to the session's volume control for control and notifications.
+<p>Binds to the session's volume control for control and notifications.</p>
 
 #### Request
 <table>
@@ -173,16 +173,15 @@
 ## SessionsWatcher {#SessionsWatcher}
 *Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#76)*
 
- `SessionsWatcher` watches the collection of published sessions.
+<p><code>SessionsWatcher</code> watches the collection of published sessions.</p>
 
 ### SessionUpdated {#SessionUpdated}
 
- Called by the registry service when a session is updated. On first connection,
- this will be called as many times as needed to communicate the state of the
- world.
-
- `SessionsWatchers` must reply to acknlowledge receipt of the session info delta.
- Delinquent watchers who do not reply will eventually be disconnected.
+<p>Called by the registry service when a session is updated. On first connection,
+this will be called as many times as needed to communicate the state of the
+world.</p>
+<p><code>SessionsWatchers</code> must reply to acknlowledge receipt of the session info delta.
+Delinquent watchers who do not reply will eventually be disconnected.</p>
 
 #### Request
 <table>
@@ -207,11 +206,10 @@
 
 ### SessionRemoved {#SessionRemoved}
 
- Called by the registry service when a session is removed from the registered
- collection.
-
- `SessionsWatchers` must reply to acknlowledge receipt of the session removal.
- Delinquent watchers who do not reply will eventually be disconnected.
+<p>Called by the registry service when a session is removed from the registered
+collection.</p>
+<p><code>SessionsWatchers</code> must reply to acknlowledge receipt of the session removal.
+Delinquent watchers who do not reply will eventually be disconnected.</p>
 
 #### Request
 <table>
@@ -232,12 +230,12 @@
 ## Discovery {#Discovery}
 *Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#96)*
 
- `Discovery` observes the collection of published media sessions
- and connects clients to them.
+<p><code>Discovery</code> observes the collection of published media sessions
+and connects clients to them.</p>
 
 ### WatchSessions {#WatchSessions}
 
- Connects a session watcher configured with the given options.
+<p>Connects a session watcher configured with the given options.</p>
 
 #### Request
 <table>
@@ -258,8 +256,8 @@
 
 ### ConnectToSession {#ConnectToSession}
 
- Connects to a `SessionControl` for `session_id` if present. Drops the
- given channel otherwise.
+<p>Connects to a <code>SessionControl</code> for <code>session_id</code> if present. Drops the
+given channel otherwise.</p>
 
 #### Request
 <table>
@@ -281,11 +279,11 @@
 ## PlayerControl {#PlayerControl}
 *Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#22)*
 
- Controls for a media player.
+<p>Controls for a media player.</p>
 
 ### Play {#Play}
 
- Plays media.
+<p>Plays media.</p>
 
 #### Request
 <table>
@@ -296,7 +294,7 @@
 
 ### Pause {#Pause}
 
- Pauses playback and retains position in media
+<p>Pauses playback and retains position in media</p>
 
 #### Request
 <table>
@@ -307,7 +305,7 @@
 
 ### Stop {#Stop}
 
- Stops playback. The session should close.
+<p>Stops playback. The session should close.</p>
 
 #### Request
 <table>
@@ -318,9 +316,9 @@
 
 ### Seek {#Seek}
 
- Seeks to a specific position in media. Implementations are free to
- enter an error state if the position is out of bounds. `position`
- is an offset from the beginning of the media.
+<p>Seeks to a specific position in media. Implementations are free to
+enter an error state if the position is out of bounds. <code>position</code>
+is an offset from the beginning of the media.</p>
 
 #### Request
 <table>
@@ -336,7 +334,7 @@
 
 ### SkipForward {#SkipForward}
 
- Skips forward in media by the player's default skip amount.
+<p>Skips forward in media by the player's default skip amount.</p>
 
 #### Request
 <table>
@@ -347,7 +345,7 @@
 
 ### SkipReverse {#SkipReverse}
 
- Skips in reverse in media by the player's default skip amount.
+<p>Skips in reverse in media by the player's default skip amount.</p>
 
 #### Request
 <table>
@@ -358,7 +356,7 @@
 
 ### NextItem {#NextItem}
 
- Changes media to the next item (e.g. next song in playlist).
+<p>Changes media to the next item (e.g. next song in playlist).</p>
 
 #### Request
 <table>
@@ -369,7 +367,7 @@
 
 ### PrevItem {#PrevItem}
 
- Changes media to the previous item.
+<p>Changes media to the previous item.</p>
 
 #### Request
 <table>
@@ -380,8 +378,8 @@
 
 ### SetPlaybackRate {#SetPlaybackRate}
 
- Sets the playback rate of the media. This will not change the
- playback mode.
+<p>Sets the playback rate of the media. This will not change the
+playback mode.</p>
 
 #### Request
 <table>
@@ -397,7 +395,7 @@
 
 ### SetRepeatMode {#SetRepeatMode}
 
- Sets repeat mode to any of the supported repeat modes.
+<p>Sets repeat mode to any of the supported repeat modes.</p>
 
 #### Request
 <table>
@@ -413,7 +411,7 @@
 
 ### SetShuffleMode {#SetShuffleMode}
 
- Sets shuffle mode.
+<p>Sets shuffle mode.</p>
 
 #### Request
 <table>
@@ -429,7 +427,7 @@
 
 ### BindVolumeControl {#BindVolumeControl}
 
- Binds to the session's volume control for control and notifications.
+<p>Binds to the session's volume control for control and notifications.</p>
 
 #### Request
 <table>
@@ -446,13 +444,13 @@
 ## Player {#Player}
 *Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#155)*
 
- `Player` is a handle for a media player. Unsupported commands are
- no-ops.  Consult `PlaybackCapabilities`, sent by to learn which
- commands are supported.
+<p><code>Player</code> is a handle for a media player. Unsupported commands are
+no-ops.  Consult <code>PlaybackCapabilities</code>, sent by to learn which
+commands are supported.</p>
 
 ### Play {#Play}
 
- Plays media.
+<p>Plays media.</p>
 
 #### Request
 <table>
@@ -463,7 +461,7 @@
 
 ### Pause {#Pause}
 
- Pauses playback and retains position in media
+<p>Pauses playback and retains position in media</p>
 
 #### Request
 <table>
@@ -474,7 +472,7 @@
 
 ### Stop {#Stop}
 
- Stops playback. The session should close.
+<p>Stops playback. The session should close.</p>
 
 #### Request
 <table>
@@ -485,9 +483,9 @@
 
 ### Seek {#Seek}
 
- Seeks to a specific position in media. Implementations are free to
- enter an error state if the position is out of bounds. `position`
- is an offset from the beginning of the media.
+<p>Seeks to a specific position in media. Implementations are free to
+enter an error state if the position is out of bounds. <code>position</code>
+is an offset from the beginning of the media.</p>
 
 #### Request
 <table>
@@ -503,7 +501,7 @@
 
 ### SkipForward {#SkipForward}
 
- Skips forward in media by the player's default skip amount.
+<p>Skips forward in media by the player's default skip amount.</p>
 
 #### Request
 <table>
@@ -514,7 +512,7 @@
 
 ### SkipReverse {#SkipReverse}
 
- Skips in reverse in media by the player's default skip amount.
+<p>Skips in reverse in media by the player's default skip amount.</p>
 
 #### Request
 <table>
@@ -525,7 +523,7 @@
 
 ### NextItem {#NextItem}
 
- Changes media to the next item (e.g. next song in playlist).
+<p>Changes media to the next item (e.g. next song in playlist).</p>
 
 #### Request
 <table>
@@ -536,7 +534,7 @@
 
 ### PrevItem {#PrevItem}
 
- Changes media to the previous item.
+<p>Changes media to the previous item.</p>
 
 #### Request
 <table>
@@ -547,8 +545,8 @@
 
 ### SetPlaybackRate {#SetPlaybackRate}
 
- Sets the playback rate of the media. This will not change the
- playback mode.
+<p>Sets the playback rate of the media. This will not change the
+playback mode.</p>
 
 #### Request
 <table>
@@ -564,7 +562,7 @@
 
 ### SetRepeatMode {#SetRepeatMode}
 
- Sets repeat mode to any of the supported repeat modes.
+<p>Sets repeat mode to any of the supported repeat modes.</p>
 
 #### Request
 <table>
@@ -580,7 +578,7 @@
 
 ### SetShuffleMode {#SetShuffleMode}
 
- Sets shuffle mode.
+<p>Sets shuffle mode.</p>
 
 #### Request
 <table>
@@ -596,7 +594,7 @@
 
 ### BindVolumeControl {#BindVolumeControl}
 
- Binds to the session's volume control for control and notifications.
+<p>Binds to the session's volume control for control and notifications.</p>
 
 #### Request
 <table>
@@ -612,8 +610,8 @@
 
 ### WatchInfoChange {#WatchInfoChange}
 
- Leave hanging to receive a response when the player's
- status changes.
+<p>Leave hanging to receive a response when the player's
+status changes.</p>
 
 #### Request
 <table>
@@ -634,8 +632,8 @@
 ## Publisher {#Publisher}
 *Defined in [fuchsia.media.sessions2/publisher.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/publisher.fidl#19)*
 
- `Publisher` publishes media players so they may be discovered and
- controlled by clients who have permission to do so.
+<p><code>Publisher</code> publishes media players so they may be discovered and
+controlled by clients who have permission to do so.</p>
 
 ### PublishPlayer {#PublishPlayer}
 
@@ -657,6 +655,35 @@
 
 
 
+### Publish {#Publish}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>player</code></td>
+            <td>
+                <code><a class='link' href='#Player'>Player</a></code>
+            </td>
+        </tr><tr>
+            <td><code>registration</code></td>
+            <td>
+                <code><a class='link' href='#PlayerRegistration'>PlayerRegistration</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>session_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
 
 
 ## **STRUCTS**
@@ -666,7 +693,7 @@
 
 
 
- A variant of an image at a specific size.
+<p>A variant of an image at a specific size.</p>
 
 
 <table>
@@ -709,13 +736,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ARTWORK</code></td>
             <td><code>0</code></td>
-            <td> Artwork for the playing media.
+            <td><p>Artwork for the playing media.</p>
 </td>
         </tr><tr>
             <td><code>SOURCE_ICON</code></td>
             <td><code>1</code></td>
-            <td> An icon for the source of the playing media (e.g. the player or
- streaming service).
+            <td><p>An icon for the source of the playing media (e.g. the player or
+streaming service).</p>
 </td>
         </tr></table>
 
@@ -724,8 +751,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#55)*
 
- The type of content playing back, which should be set to the largest
- applicable value.
+<p>The type of content playing back, which should be set to the largest
+applicable value.</p>
 
 
 <table>
@@ -760,14 +787,14 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#81)*
 
- State of a media player.
+<p>State of a media player.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>IDLE</code></td>
             <td><code>0</code></td>
-            <td> The initial state of a session if there is no associated media.
+            <td><p>The initial state of a session if there is no associated media.</p>
 </td>
         </tr><tr>
             <td><code>PLAYING</code></td>
@@ -784,7 +811,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>4</code></td>
-            <td> The player cannot recover from this state and will close.
+            <td><p>The player cannot recover from this state and will close.</p>
 </td>
         </tr></table>
 
@@ -807,24 +834,24 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#98)*
 
- Modes of repeating playback of the current media.
+<p>Modes of repeating playback of the current media.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>OFF</code></td>
             <td><code>0</code></td>
-            <td> No repeat.
+            <td><p>No repeat.</p>
 </td>
         </tr><tr>
             <td><code>GROUP</code></td>
             <td><code>1</code></td>
-            <td> Repeat the relevant group of media (e.g. playlist).
+            <td><p>Repeat the relevant group of media (e.g. playlist).</p>
 </td>
         </tr><tr>
             <td><code>SINGLE</code></td>
             <td><code>2</code></td>
-            <td> Repeat the currently playing media.
+            <td><p>Repeat the currently playing media.</p>
 </td>
         </tr></table>
 
@@ -837,10 +864,10 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#17)*
 
- SessionInfoDelta holds a description of a given session. The first
- time a client receives this, it is a state of the world. On successive
- receipts of this table, only the changed fields will be present (this
- property is not recursive; top-level fields if set are snapshots).
+<p>SessionInfoDelta holds a description of a given session. The first
+time a client receives this, it is a state of the world. On successive
+receipts of this table, only the changed fields will be present (this
+property is not recursive; top-level fields if set are snapshots).</p>
 
 
 <table>
@@ -851,9 +878,9 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1000]</code>
             </td>
-            <td> The domain on which the session takes place. A domain identifies a set of
- mutually compatable media targets and sessions; sessions on a domain may
- be played back on targets of the same domain.
+            <td><p>The domain on which the session takes place. A domain identifies a set of
+mutually compatable media targets and sessions; sessions on a domain may
+be played back on targets of the same domain.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -861,10 +888,10 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the entry point for the media into our device network is the local
- machine; this should be true if this is the device streaming from
- a music service, but false if this machine is just receiving an audio stream
- to act as a speaker.
+            <td><p>Whether the entry point for the media into our device network is the local
+machine; this should be true if this is the device streaming from
+a music service, but false if this machine is just receiving an audio stream
+to act as a speaker.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -872,10 +899,10 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> If this is set, the playback is taking place local to the device.
- Playing on the device speaker is local, playing on a remote speaker
- is not. This is only set when the session is playing back; a paused
- session is not active.
+            <td><p>If this is set, the playback is taking place local to the device.
+Playing on the device speaker is local, playing on a remote speaker
+is not. This is only set when the session is playing back; a paused
+session is not active.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -922,7 +949,7 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Watch only the active session. Watches all if not set.
+            <td><p>Watch only the active session. Watches all if not set.</p>
 </td>
         </tr></table>
 
@@ -931,7 +958,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.media.sessions2/images.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/images.fidl#25)*
 
- An image for playing media.
+<p>An image for playing media.</p>
 
 
 <table>
@@ -949,7 +976,7 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#ImageSizeVariant'>ImageSizeVariant</a>&gt;[16]</code>
             </td>
-            <td> Available variants of the image.
+            <td><p>Available variants of the image.</p>
 </td>
         </tr></table>
 
@@ -958,7 +985,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#65)*
 
- Status of a media player.
+<p>Status of a media player.</p>
 
 
 <table>
@@ -969,7 +996,7 @@ Type: <code>uint32</code>
             <td>
                 <code>int64</code>
             </td>
-            <td> Total duration of playing media. Omitted if not known or not applicable.
+            <td><p>Total duration of playing media. Omitted if not known or not applicable.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -984,8 +1011,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='../fuchsia.media/'>fuchsia.media</a>/<a class='link' href='../fuchsia.media/#TimelineFunction'>TimelineFunction</a></code>
             </td>
-            <td> A playback function that describes the position and rate of
- play through the media as a function of `CLOCK_MONOTONIC`.
+            <td><p>A playback function that describes the position and rate of
+play through the media as a function of <code>CLOCK_MONOTONIC</code>.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1007,8 +1034,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ContentType'>ContentType</a></code>
             </td>
-            <td> The type of content playing back. Omitted if it is not a first class
- category.
+            <td><p>The type of content playing back. Omitted if it is not a first class
+category.</p>
 </td>
         </tr><tr>
             <td>7</td>
@@ -1024,8 +1051,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#134)*
 
- `PlaybackCapabilities` enumerates the capabilities of a media player, and
- corresponds to the control commands it can execute.
+<p><code>PlaybackCapabilities</code> enumerates the capabilities of a media player, and
+corresponds to the control commands it can execute.</p>
 
 
 <table>
@@ -1044,8 +1071,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.media.sessions2/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#140)*
 
- When emitted, fields that have changed should be set.
- The first emission to a new client should be a snapshot.
+<p>When emitted, fields that have changed should be set.
+The first emission to a new client should be a snapshot.</p>
 
 
 <table>
@@ -1056,10 +1083,10 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether the entry point for the media into our device network is the
- local machine; this should be true if this is the device streaming
- from a music service, but false or omitted if this machine is just
- receiving an audio stream to act as a speaker.
+            <td><p>Whether the entry point for the media into our device network is the
+local machine; this should be true if this is the device streaming
+from a music service, but false or omitted if this machine is just
+receiving an audio stream to act as a speaker.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -1096,9 +1123,9 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.media.sessions2/publisher.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/publisher.fidl#10)*
 
- All information required by the media session registry service to
- register a player so that clients may observe its status and control
- it.
+<p>All information required by the media session registry service to
+register a player so that clients may observe its status and control
+it.</p>
 
 
 <table>
@@ -1109,8 +1136,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string[1000]</code>
             </td>
-            <td> The domain on which the player exists. Unset if it is the native
- Fuchsia domain.
+            <td><p>The domain on which the player exists. Unset if it is the native
+Fuchsia domain.</p>
 </td>
         </tr></table>
 
@@ -1130,32 +1157,32 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td>PLAY</td>
             <td>1</td>
-            <td> If set, the player can `Play()`.
+            <td><p>If set, the player can <code>Play()</code>.</p>
 </td>
         </tr><tr>
             <td>PAUSE</td>
             <td>4</td>
-            <td> If set, the player can `Pause()`.
+            <td><p>If set, the player can <code>Pause()</code>.</p>
 </td>
         </tr><tr>
             <td>SEEK</td>
             <td>8</td>
-            <td> If set, the player can `Seek()`.
+            <td><p>If set, the player can <code>Seek()</code>.</p>
 </td>
         </tr><tr>
             <td>SKIP_FORWARD</td>
             <td>16</td>
-            <td> If set, the player can `SkipForward()`.
+            <td><p>If set, the player can <code>SkipForward()</code>.</p>
 </td>
         </tr><tr>
             <td>SKIP_REVERSE</td>
             <td>32</td>
-            <td> If set, the player can `SkipReverse()`.
+            <td><p>If set, the player can <code>SkipReverse()</code>.</p>
 </td>
         </tr><tr>
             <td>SHUFFLE</td>
             <td>64</td>
-            <td> If set, the player can shuffle media.
+            <td><p>If set, the player can shuffle media.</p>
 </td>
         </tr><tr>
             <td>CHANGE_TO_NEXT_ITEM</td>
@@ -1168,17 +1195,17 @@ Type: <code>uint32</code>
         </tr><tr>
             <td>HAS_GAIN_CONTROL</td>
             <td>512</td>
-            <td> If set, the player can `BindGainControl()`.
+            <td><p>If set, the player can <code>BindGainControl()</code>.</p>
 </td>
         </tr><tr>
             <td>REPEAT_GROUPS</td>
             <td>1024</td>
-            <td> If set, the player can repeat groups.
+            <td><p>If set, the player can repeat groups.</p>
 </td>
         </tr><tr>
             <td>REPEAT_SINGLE</td>
             <td>2048</td>
-            <td> If set, the player can repeat single media items.
+            <td><p>If set, the player can repeat single media items.</p>
 </td>
         </tr></table>
 

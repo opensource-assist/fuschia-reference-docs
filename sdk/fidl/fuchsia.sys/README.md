@@ -8,21 +8,17 @@
 ## ComponentController {#ComponentController}
 *Defined in [fuchsia.sys/component_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/component_controller.fidl#36)*
 
- An interface for controlling components.
-
- Closing this interface implicitly kills the controlled component unless
- the `Detach` method has been called.
-
- If the component exits, this interface will be closed.
-
- Typically obtained via `Launcher.CreateComponent`.
+<p>An interface for controlling components.</p>
+<p>Closing this interface implicitly kills the controlled component unless
+the <code>Detach</code> method has been called.</p>
+<p>If the component exits, this interface will be closed.</p>
+<p>Typically obtained via <code>Launcher.CreateComponent</code>.</p>
 
 ### Kill {#Kill}
 
- Terminates the component.
-
- This ComponentController connection is closed when the component has
- terminated.
+<p>Terminates the component.</p>
+<p>This ComponentController connection is closed when the component has
+terminated.</p>
 
 #### Request
 <table>
@@ -33,10 +29,9 @@
 
 ### Detach {#Detach}
 
- Decouples the lifetime of the component from this controller.
-
- After calling `Detach`, the component will not be implicitly killed when
- this interface is closed.
+<p>Decouples the lifetime of the component from this controller.</p>
+<p>After calling <code>Detach</code>, the component will not be implicitly killed when
+this interface is closed.</p>
 
 #### Request
 <table>
@@ -47,12 +42,11 @@
 
 ### OnTerminated {#OnTerminated}
 
- Event that is triggered when the component is terminated.
-
- This event provides the return code of the process and reason for
- its termination. The return_code is only valid if the termination
- reason is EXITED. If the termination reason is not EXITED, the
- return code is guaranteed not to be 0.
+<p>Event that is triggered when the component is terminated.</p>
+<p>This event provides the return code of the process and reason for
+its termination. The return_code is only valid if the termination
+reason is EXITED. If the termination reason is not EXITED, the
+return code is guaranteed not to be 0.</p>
 
 
 
@@ -73,10 +67,9 @@
 
 ### OnDirectoryReady {#OnDirectoryReady}
 
- Event that is triggered when the component's output directory is mounted.
-
- This event will not be triggered for every component, only those that
- serve a directory over their `PA_DIRECTORY_REQUEST` handle.
+<p>Event that is triggered when the component's output directory is mounted.</p>
+<p>This event will not be triggered for every component, only those that
+serve a directory over their <code>PA_DIRECTORY_REQUEST</code> handle.</p>
 
 
 
@@ -88,38 +81,32 @@
 ## Environment {#Environment}
 *Defined in [fuchsia.sys/environment.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/environment.fidl#32)*
 
- An interface for managing a set of applications.
-
- Applications run inside environments, which provide ambient services and
- support for their lifecycle.
+<p>An interface for managing a set of applications.</p>
+<p>Applications run inside environments, which provide ambient services and
+support for their lifecycle.</p>
 
 ### CreateNestedEnvironment {#CreateNestedEnvironment}
 
- Creates a new environment nested inside this environment.
-
- When applications are created inside the nested environment using the
- environment's `Launcher`, the environment requests the
- environment services from `host_directory` before passing those services to
- the newly created application in its `StartupInfo`.
-
- The `controller` can be used to control the lifecycle of the created
- environment. Note that by default the environment will be killed
- automatically when the `EnvironmentController`'s interface is closed. You
- can use `EnvironmentController.Detach` to disable this behavior.
-
- `label` defines the new environment's label/name. It must be unique within
- the parent environment (though not globally) and is used for isolating
- separate environments. It can also be used for diagnostic purposes. The
- label will be truncated if it is longer than `kLabelMaxLength`.
-
- `additional_services`, which may be empty, contains a list of services
- that the environment provides, which are hosted by
- `additional_services.host_directory`. If `options.inherit_parent_services`
- is false, `host_directory` must provide a `Loader` service if it wishes to
- allow new components to be loaded in the new environment.
-
- `options` provides additional options, see `EnvironmentOptions` for
- details.
+<p>Creates a new environment nested inside this environment.</p>
+<p>When applications are created inside the nested environment using the
+environment's <code>Launcher</code>, the environment requests the
+environment services from <code>host_directory</code> before passing those services to
+the newly created application in its <code>StartupInfo</code>.</p>
+<p>The <code>controller</code> can be used to control the lifecycle of the created
+environment. Note that by default the environment will be killed
+automatically when the <code>EnvironmentController</code>'s interface is closed. You
+can use <code>EnvironmentController.Detach</code> to disable this behavior.</p>
+<p><code>label</code> defines the new environment's label/name. It must be unique within
+the parent environment (though not globally) and is used for isolating
+separate environments. It can also be used for diagnostic purposes. The
+label will be truncated if it is longer than <code>kLabelMaxLength</code>.</p>
+<p><code>additional_services</code>, which may be empty, contains a list of services
+that the environment provides, which are hosted by
+<code>additional_services.host_directory</code>. If <code>options.inherit_parent_services</code>
+is false, <code>host_directory</code> must provide a <code>Loader</code> service if it wishes to
+allow new components to be loaded in the new environment.</p>
+<p><code>options</code> provides additional options, see <code>EnvironmentOptions</code> for
+details.</p>
 
 #### Request
 <table>
@@ -155,10 +142,9 @@
 
 ### GetLauncher {#GetLauncher}
 
- Gets the Launcher associated with this environment.
-
- Applications created using this application launcher will be given the
- environment services provided by this environment's `host_directory`.
+<p>Gets the Launcher associated with this environment.</p>
+<p>Applications created using this application launcher will be given the
+environment services provided by this environment's <code>host_directory</code>.</p>
 
 #### Request
 <table>
@@ -174,8 +160,8 @@
 
 ### GetServices {#GetServices}
 
- Gets a superset of services provided by this environment's
- `host_directory`.
+<p>Gets a superset of services provided by this environment's
+<code>host_directory</code>.</p>
 
 #### Request
 <table>
@@ -191,8 +177,8 @@
 
 ### GetDirectory {#GetDirectory}
 
- Gets a superset of services provided by this environment's
- `host_directory`.
+<p>Gets a superset of services provided by this environment's
+<code>host_directory</code>.</p>
 
 #### Request
 <table>
@@ -209,22 +195,18 @@
 ## EnvironmentController {#EnvironmentController}
 *Defined in [fuchsia.sys/environment_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/environment_controller.fidl#15)*
 
- An interface for controlling an environment.
-
- Closing this interface implicitly kills the controlled environment unless
- the `Detach` method has been called.
-
- If the environment is destroyed, this interface will be closed.
-
- Typically obtained via `Environment.CreateNestedEnvironment`.
+<p>An interface for controlling an environment.</p>
+<p>Closing this interface implicitly kills the controlled environment unless
+the <code>Detach</code> method has been called.</p>
+<p>If the environment is destroyed, this interface will be closed.</p>
+<p>Typically obtained via <code>Environment.CreateNestedEnvironment</code>.</p>
 
 ### Kill {#Kill}
 
- Terminates the environment.
-
- When an `Environment` is terminated, all applications launched
- in the environment (and in all transitively nested environments) are also
- killed.
+<p>Terminates the environment.</p>
+<p>When an <code>Environment</code> is terminated, all applications launched
+in the environment (and in all transitively nested environments) are also
+killed.</p>
 
 #### Request
 <table>
@@ -239,10 +221,9 @@
 
 ### Detach {#Detach}
 
- Decouples the lifetime of the environment from this controller.
-
- After calling `Detach`, the environment will not be implicitly killed when
- this interface is closed.
+<p>Decouples the lifetime of the environment from this controller.</p>
+<p>After calling <code>Detach</code>, the environment will not be implicitly killed when
+this interface is closed.</p>
 
 #### Request
 <table>
@@ -253,7 +234,7 @@
 
 ### OnCreated {#OnCreated}
 
- Event that is triggered when the environment is created.
+<p>Event that is triggered when the environment is created.</p>
 
 
 
@@ -265,13 +246,13 @@
 ## JobProvider {#JobProvider}
 *Defined in [fuchsia.sys/job_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/job_provider.fidl#11)*
 
- An interface for providing a job handle. Instances of this interface are
- created in the context of an already-identified realm, so there is no need
- to explicitly identify the realm below.
+<p>An interface for providing a job handle. Instances of this interface are
+created in the context of an already-identified realm, so there is no need
+to explicitly identify the realm below.</p>
 
 ### GetJob {#GetJob}
 
- Gets the root job associated with the realm.
+<p>Gets the root job associated with the realm.</p>
 
 #### Request
 <table>
@@ -292,22 +273,19 @@
 ## Launcher {#Launcher}
 *Defined in [fuchsia.sys/launcher.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/launcher.fidl#78)*
 
- An interface for creating component instances.
-
- Typically obtained via `Environment.GetLauncher`.
+<p>An interface for creating component instances.</p>
+<p>Typically obtained via <code>Environment.GetLauncher</code>.</p>
 
 ### CreateComponent {#CreateComponent}
 
- Creates a new instance of the component described by `launch_info`.
-
- The component instance is created in the `Environment`
- associated with this `Launcher`. When creating the component,
- the environment requests the environment services for this component from
- its `EnvironmentHost`.
-
- The `controller` can be used to control the lifecycle of the created
- component instance. If an `ComponentController`'s interface is
- requested, the component instance is killed when the interface is closed.
+<p>Creates a new instance of the component described by <code>launch_info</code>.</p>
+<p>The component instance is created in the <code>Environment</code>
+associated with this <code>Launcher</code>. When creating the component,
+the environment requests the environment services for this component from
+its <code>EnvironmentHost</code>.</p>
+<p>The <code>controller</code> can be used to control the lifecycle of the created
+component instance. If an <code>ComponentController</code>'s interface is
+requested, the component instance is killed when the interface is closed.</p>
 
 #### Request
 <table>
@@ -329,11 +307,11 @@
 ## Loader {#Loader}
 *Defined in [fuchsia.sys/loader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/loader.fidl#9)*
 
- An interface for loading from packages.
+<p>An interface for loading from packages.</p>
 
 ### LoadUrl {#LoadUrl}
 
- LoadUrl a package by url.
+<p>LoadUrl a package by url.</p>
 
 #### Request
 <table>
@@ -359,23 +337,20 @@
 ## Runner {#Runner}
 *Defined in [fuchsia.sys/runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/runner.fidl#64)*
 
- An interface for running components.
-
- Typically exposed by components that provide execution environments for
- particular classes of programs. For example, the Dart virtual machine
- exposes this interface to run Dart programs.
+<p>An interface for running components.</p>
+<p>Typically exposed by components that provide execution environments for
+particular classes of programs. For example, the Dart virtual machine
+exposes this interface to run Dart programs.</p>
 
 ### StartComponent {#StartComponent}
 
- Execute the given component.
-
- Upon startup, the component is to be given the information in
- `startup_info`, but the mechanism by which the component receives that
- information is up to the component runner.
-
- The `controller` interface request typically originates from the
- `Launcher.CreateComponent` message that caused this component to be
- started.
+<p>Execute the given component.</p>
+<p>Upon startup, the component is to be given the information in
+<code>startup_info</code>, but the mechanism by which the component receives that
+information is up to the component runner.</p>
+<p>The <code>controller</code> interface request typically originates from the
+<code>Launcher.CreateComponent</code> message that caused this component to be
+started.</p>
 
 #### Request
 <table>
@@ -402,19 +377,18 @@
 ## ServiceProvider {#ServiceProvider}
 *Defined in [fuchsia.sys/service_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/service_provider.fidl#15)*
 
- An interface through which a client may request services from a host.
- Instances of this interface are created within the context of an
- already-identified client and host pair, so there is no need to explicitly
- identify the client or host in the methods below.
-
- This interface is deprecated.  Services should be published as directory
- entries instead, just like files.
+<p>An interface through which a client may request services from a host.
+Instances of this interface are created within the context of an
+already-identified client and host pair, so there is no need to explicitly
+identify the client or host in the methods below.</p>
+<p>This interface is deprecated.  Services should be published as directory
+entries instead, just like files.</p>
 
 ### ConnectToService {#ConnectToService}
 
- Asks the host to provide the service identified by `service_name` through
- the `channel` endpoint supplied by the caller. If the host is not willing
- or able to provide the requested service, it should close the `channel`.
+<p>Asks the host to provide the service identified by <code>service_name</code> through
+the <code>channel</code> endpoint supplied by the caller. If the host is not willing
+or able to provide the requested service, it should close the <code>channel</code>.</p>
 
 #### Request
 <table>
@@ -450,8 +424,8 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> True if this environment should inherit services provided by the
- parent environment.
+            <td><p>True if this environment should inherit services provided by the
+parent environment.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -459,9 +433,9 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> True if components in this environment will share a runner provided
- by the parent environment. If false, a new runner will be started
- in this environment for components.
+            <td><p>True if components in this environment will share a runner provided
+by the parent environment. If false, a new runner will be started
+in this environment for components.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -469,9 +443,9 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> True if this environment should be killed first in out of memory
- situations by setting the `ZX_PROP_JOB_KILL_ON_OOM` property on this
- environment's job.
+            <td><p>True if this environment should be killed first in out of memory
+situations by setting the <code>ZX_PROP_JOB_KILL_ON_OOM</code> property on this
+environment's job.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -479,8 +453,8 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> True if "persistent" storage requested by components in this environment should not actually
- be persistent, and instead be deleted when this environment is killed.
+            <td><p>True if &quot;persistent&quot; storage requested by components in this environment should not actually
+be persistent, and instead be deleted when this environment is killed.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -499,9 +473,8 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> The mount point for each of the directories below.
-
- For example, ["/pkg", "/svc"].
+            <td><p>The mount point for each of the directories below.</p>
+<p>For example, [&quot;/pkg&quot;, &quot;/svc&quot;].</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -509,7 +482,7 @@
             <td>
                 <code>vector&lt;channel&gt;</code>
             </td>
-            <td> The directories mounted at each path in the namespace.
+            <td><p>The directories mounted at each path in the namespace.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -520,7 +493,7 @@
 
 
 
- An FDIO file descriptor.
+<p>An FDIO file descriptor.</p>
 
 
 <table>
@@ -529,7 +502,7 @@
             <td>
                 <code>int32</code>
             </td>
-            <td> The FDIO types of the handle (e.g., `FA_FDIO_REMOTE`).
+            <td><p>The FDIO types of the handle (e.g., <code>FA_FDIO_REMOTE</code>).</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -551,7 +524,7 @@
             <td>
                 <code>handle&lt;handle&gt;?</code>
             </td>
-            <td> The handles for the file descriptor (e.g., a channel).
+            <td><p>The handles for the file descriptor (e.g., a channel).</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -576,8 +549,8 @@
 
 
 
- Information used to create an instance of a component and obtain
- services from it.
+<p>Information used to create an instance of a component and obtain
+services from it.</p>
 
 
 <table>
@@ -586,11 +559,10 @@
             <td>
                 <code>string[2083]</code>
             </td>
-            <td> The location from which to retrieve this component.
-
- This field will probably be replaced with a stronger notion of identity,
- such as an unforgeable token. This field is included in this iteration to
- ease the transition from the previous component interfaces.
+            <td><p>The location from which to retrieve this component.</p>
+<p>This field will probably be replaced with a stronger notion of identity,
+such as an unforgeable token. This field is included in this iteration to
+ease the transition from the previous component interfaces.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -598,7 +570,7 @@
             <td>
                 <code>vector&lt;string&gt;?</code>
             </td>
-            <td> The arguments to be provided to the component.
+            <td><p>The arguments to be provided to the component.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -606,9 +578,8 @@
             <td>
                 <code><a class='link' href='#FileDescriptor'>FileDescriptor</a>?</code>
             </td>
-            <td> The file descriptor to use for stdout.
-
- If null, the component will use the default stdout for the environment.
+            <td><p>The file descriptor to use for stdout.</p>
+<p>If null, the component will use the default stdout for the environment.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -616,9 +587,8 @@
             <td>
                 <code><a class='link' href='#FileDescriptor'>FileDescriptor</a>?</code>
             </td>
-            <td> The file descriptor to use for stderr.
-
- If null, the component will use the default stderr for the environment.
+            <td><p>The file descriptor to use for stderr.</p>
+<p>If null, the component will use the default stderr for the environment.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -626,9 +596,9 @@
             <td>
                 <code>handle&lt;channel&gt;?</code>
             </td>
-            <td> The interface request for a Directory that is passed through to the
- component and arrives in the component as its `directory_request`
- interface request.
+            <td><p>The interface request for a Directory that is passed through to the
+component and arrives in the component as its <code>directory_request</code>
+interface request.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -636,11 +606,11 @@
             <td>
                 <code><a class='link' href='#FlatNamespace'>FlatNamespace</a>?</code>
             </td>
-            <td> A custom namespace that can be appended to the namespace generated by
- appmgr and provided to this component.
- Adding a mount point at standard paths like 'pkg' or 'svc' will be ignored.
- HACK(alhaad): Adding mount points for deprecated default directories like
- '/data' will override the default.
+            <td><p>A custom namespace that can be appended to the namespace generated by
+appmgr and provided to this component.
+Adding a mount point at standard paths like 'pkg' or 'svc' will be ignored.
+HACK(alhaad): Adding mount points for deprecated default directories like
+'/data' will override the default.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -648,8 +618,8 @@
             <td>
                 <code><a class='link' href='#ServiceList'>ServiceList</a>?</code>
             </td>
-            <td> A list of services to be added to this component's svc namespace. These
- services are in addition to those coming from Environment.
+            <td><p>A list of services to be added to this component's svc namespace. These
+services are in addition to those coming from Environment.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -668,7 +638,7 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> A list of services that can be requested from `provider`.
+            <td><p>A list of services that can be requested from <code>provider</code>.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -676,7 +646,7 @@
             <td>
                 <code><a class='link' href='#ServiceProvider'>ServiceProvider</a>?</code>
             </td>
-            <td> A service provider to get the services listed in `names` from.
+            <td><p>A service provider to get the services listed in <code>names</code> from.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -684,7 +654,7 @@
             <td>
                 <code>handle&lt;channel&gt;?</code>
             </td>
-            <td> A channel to the directory hosting the services in `names`.
+            <td><p>A channel to the directory hosting the services in <code>names</code>.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -695,10 +665,9 @@
 
 
 
- Information given to components at startup.
-
- For ELF binaries, this information is provided in the initialization
- message given to `libc` by `fuchsia.process.Launcher`.
+<p>Information given to components at startup.</p>
+<p>For ELF binaries, this information is provided in the initialization
+message given to <code>libc</code> by <code>fuchsia.process.Launcher</code>.</p>
 
 
 <table>
@@ -707,7 +676,7 @@
             <td>
                 <code><a class='link' href='#LaunchInfo'>LaunchInfo</a></code>
             </td>
-            <td> The launch info for the component to start.
+            <td><p>The launch info for the component to start.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -715,7 +684,7 @@
             <td>
                 <code><a class='link' href='#FlatNamespace'>FlatNamespace</a></code>
             </td>
-            <td> The namespace in which to run the component.
+            <td><p>The namespace in which to run the component.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -723,8 +692,8 @@
             <td>
                 <code>vector&lt;<a class='link' href='#ProgramMetadata'>ProgramMetadata</a>&gt;?</code>
             </td>
-            <td> Key string value string map of the component's program metadata,
- obtained from its component manifest.
+            <td><p>Key string value string map of the component's program metadata,
+obtained from its component manifest.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -735,7 +704,7 @@
 
 
 
- Program information about a component.
+<p>Program information about a component.</p>
 
 
 <table>
@@ -744,8 +713,8 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Key for program metadata pair. E.g. "binary" for an ELF binary
- component, or "data" for a flutter/dart component.
+            <td><p>Key for program metadata pair. E.g. &quot;binary&quot; for an ELF binary
+component, or &quot;data&quot; for a flutter/dart component.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -753,8 +722,8 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Value for program metadata pair. E.g. "bin/app" for a "binary" key, or
- "data/foo" for a flutter/dart component.
+            <td><p>Value for program metadata pair. E.g. &quot;bin/app&quot; for a &quot;binary&quot; key, or
+&quot;data/foo&quot; for a flutter/dart component.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -765,9 +734,8 @@
 
 
 
- A binary representation of a component.
-
- Typically provided to `Runner.StartComponent` when starting a component.
+<p>A binary representation of a component.</p>
+<p>Typically provided to <code>Runner.StartComponent</code> when starting a component.</p>
 
 
 <table>
@@ -776,9 +744,9 @@
             <td>
                 <code><a class='link' href='../fuchsia.mem/'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/#Buffer'>Buffer</a>?</code>
             </td>
-            <td> A read-only binary representation of the component. For example, if the
- component is intended to run in the Dart virtual machine, this data
- might contain a dartx package.
+            <td><p>A read-only binary representation of the component. For example, if the
+component is intended to run in the Dart virtual machine, this data
+might contain a dartx package.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -786,9 +754,9 @@
             <td>
                 <code>handle&lt;channel&gt;?</code>
             </td>
-            <td> A directory containing the contents of the package. For example, if the
- component is stored in pkgfs, this directory will be the pkgfs
- directory containing the package.
+            <td><p>A directory containing the contents of the package. For example, if the
+component is stored in pkgfs, this directory will be the pkgfs
+directory containing the package.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -796,8 +764,8 @@
             <td>
                 <code>string[2083]</code>
             </td>
-            <td> Resolved URL of the component. This is the url specified in
- `startup_info` after following redirects and resolving relative paths.
+            <td><p>Resolved URL of the component. This is the url specified in
+<code>startup_info</code> after following redirects and resolving relative paths.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -818,47 +786,47 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN</code></td>
             <td><code>0</code></td>
-            <td> The channel closed without giving a termination reason.
+            <td><p>The channel closed without giving a termination reason.</p>
 </td>
         </tr><tr>
             <td><code>EXITED</code></td>
             <td><code>1</code></td>
-            <td> Component ran and exited with a given return_code.
+            <td><p>Component ran and exited with a given return_code.</p>
 </td>
         </tr><tr>
             <td><code>URL_INVALID</code></td>
             <td><code>2</code></td>
-            <td> The given URL given to launch was invalid.
+            <td><p>The given URL given to launch was invalid.</p>
 </td>
         </tr><tr>
             <td><code>PACKAGE_NOT_FOUND</code></td>
             <td><code>3</code></td>
-            <td> The requested package could not be found.
+            <td><p>The requested package could not be found.</p>
 </td>
         </tr><tr>
             <td><code>INTERNAL_ERROR</code></td>
             <td><code>4</code></td>
-            <td> An internal error happened during the launch process.
+            <td><p>An internal error happened during the launch process.</p>
 </td>
         </tr><tr>
             <td><code>PROCESS_CREATION_ERROR</code></td>
             <td><code>5</code></td>
-            <td> Process creation failed.
+            <td><p>Process creation failed.</p>
 </td>
         </tr><tr>
             <td><code>RUNNER_FAILED</code></td>
             <td><code>6</code></td>
-            <td> A Runner failed to start.
+            <td><p>A Runner failed to start.</p>
 </td>
         </tr><tr>
             <td><code>RUNNER_TERMINATED</code></td>
             <td><code>7</code></td>
-            <td> A Runner terminated while attempting to run a component.
+            <td><p>A Runner terminated while attempting to run a component.</p>
 </td>
         </tr><tr>
             <td><code>UNSUPPORTED</code></td>
             <td><code>8</code></td>
-            <td> Attempted to use an unsupported feature.
+            <td><p>Attempted to use an unsupported feature.</p>
 </td>
         </tr></table>
 
@@ -881,7 +849,7 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum length for an environment label.
+            <td><p>Maximum length for an environment label.</p>
 </td>
         </tr>
     <tr>

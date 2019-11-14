@@ -8,26 +8,23 @@
 ## Snoop {#Snoop}
 *Defined in [fuchsia.bluetooth.snoop/snooper.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.snoop/snooper.fidl#48)*
 
- Interface to receive packets recorded as received or transmitted for a Bluetooth host.
- Packets are received by the client as datagrams through the fidl channel as `OnPacket`
- events.
+<p>Interface to receive packets recorded as received or transmitted for a Bluetooth host.
+Packets are received by the client as datagrams through the fidl channel as <code>OnPacket</code>
+events.</p>
 
 ### Start {#Start}
 
- Subscribe to receive packets from the server. Packets that have been recorded are sent
- first.
-
- If `follow` is true, the channel stays open and packets are sent to the client as
- the snoop server receives them. If `follow` is false, the channel is closed by the server
- when all recorded packets have been sent.
-
- A `host_device` name may be provided; if so, only events from that host are sent to the client.
- If `host_device` is absent, the client is sent events from all host devices.
-
- Errors:
-   `Start` can only be called once per connection. After the first request, subsequent requests
-   always return an error.
-   `host_device` values that are not recognized by the server return an error.
+<p>Subscribe to receive packets from the server. Packets that have been recorded are sent
+first.</p>
+<p>If <code>follow</code> is true, the channel stays open and packets are sent to the client as
+the snoop server receives them. If <code>follow</code> is false, the channel is closed by the server
+when all recorded packets have been sent.</p>
+<p>A <code>host_device</code> name may be provided; if so, only events from that host are sent to the client.
+If <code>host_device</code> is absent, the client is sent events from all host devices.</p>
+<p>Errors:
+<code>Start</code> can only be called once per connection. After the first request, subsequent requests
+always return an error.
+<code>host_device</code> values that are not recognized by the server return an error.</p>
 
 #### Request
 <table>
@@ -57,8 +54,8 @@
 
 ### OnPacket {#OnPacket}
 
- An event containing a packet that the client has registered interest in receiving and the
- `host_device` which generated the packet.
+<p>An event containing a packet that the client has registered interest in receiving and the
+<code>host_device</code> which generated the packet.</p>
 
 
 
@@ -86,7 +83,7 @@
 
 
 
- Timestamp represents the number of seconds and nanoseconds since the Unix epoch.
+<p>Timestamp represents the number of seconds and nanoseconds since the Unix epoch.</p>
 
 
 <table>
@@ -95,12 +92,11 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> Valid values for `subsec_nanos` can be greater than 10^9-1. Therefore the total
- seconds elapsed since the epoch is defined by the value of `seconds` plus
- `subsec_nanos` / 10^9 - the value of `seconds` alone may not be sufficient.
-
- It is invalid for the carry from `subsec_nanos` to overflow the `seconds` field.
- A client or server should reject such data as malformed.
+            <td><p>Valid values for <code>subsec_nanos</code> can be greater than 10^9-1. Therefore the total
+seconds elapsed since the epoch is defined by the value of <code>seconds</code> plus
+<code>subsec_nanos</code> / 10^9 - the value of <code>seconds</code> alone may not be sufficient.</p>
+<p>It is invalid for the carry from <code>subsec_nanos</code> to overflow the <code>seconds</code> field.
+A client or server should reject such data as malformed.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -126,7 +122,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> true if this packet is sent from the controller to the host.
+            <td><p>true if this packet is sent from the controller to the host.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -141,8 +137,8 @@
             <td>
                 <code><a class='link' href='#Timestamp'>Timestamp</a></code>
             </td>
-            <td> Timestamp that the bt-snoop service received the packet from a snoop channel as measured
- by the host system.
+            <td><p>Timestamp that the bt-snoop service received the packet from a snoop channel as measured
+by the host system.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -150,7 +146,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> Original length of the packet before truncation.
+            <td><p>Original length of the packet before truncation.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -158,7 +154,7 @@
             <td>
                 <code>vector&lt;uint8&gt;</code>
             </td>
-            <td> Payload sent over the HCI.
+            <td><p>Payload sent over the HCI.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -173,24 +169,24 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.snoop/snooper.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.snoop/snooper.fidl#22)*
 
- Messages coming through the Host Controller Interface can be one of three types.
+<p>Messages coming through the Host Controller Interface can be one of three types.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>CMD</code></td>
             <td><code>0</code></td>
-            <td> Command sent from the host to the controller.
+            <td><p>Command sent from the host to the controller.</p>
 </td>
         </tr><tr>
             <td><code>EVENT</code></td>
             <td><code>1</code></td>
-            <td> Event sent from the controller to the host.
+            <td><p>Event sent from the controller to the host.</p>
 </td>
         </tr><tr>
             <td><code>DATA</code></td>
             <td><code>2</code></td>
-            <td> Data sent from the controller to the host.
+            <td><p>Data sent from the controller to the host.</p>
 </td>
         </tr></table>
 

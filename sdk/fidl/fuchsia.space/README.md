@@ -11,7 +11,7 @@
 
 ### Gc {#Gc}
 
- Trigger a garbage collection.
+<p>Trigger a garbage collection.</p>
 
 #### Request
 <table>

@@ -8,11 +8,11 @@
 ## PayloadStream {#PayloadStream}
 *Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#55)*
 
- Protocol for streaming the FVM payload.
+<p>Protocol for streaming the FVM payload.</p>
 
 ### RegisterVmo {#RegisterVmo}
 
- Registers a VMO to stream into.
+<p>Registers a VMO to stream into.</p>
 
 #### Request
 <table>
@@ -37,7 +37,7 @@
 
 ### ReadData {#ReadData}
 
- Reads data into the pre-registered vmo.
+<p>Reads data into the pre-registered vmo.</p>
 
 #### Request
 <table>
@@ -58,22 +58,20 @@
 ## Paver {#Paver}
 *Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#71)*
 
- Protocol for managing boot partitions.
-
- Most of the protocol methods rely on auto-discovery of the storage device
- which will be paved. If the device has no pre-initialized storage devices or
- multiple, the methods will fail. For devices with dynamic partitions (i.e. GPT),
- |InitializePartitionTables| and |WipeVolumes| can be used to control which device is
- paved to.
+<p>Protocol for managing boot partitions.</p>
+<p>Most of the protocol methods rely on auto-discovery of the storage device
+which will be paved. If the device has no pre-initialized storage devices or
+multiple, the methods will fail. For devices with dynamic partitions (i.e. GPT),
+|InitializePartitionTables| and |WipeVolumes| can be used to control which device is
+paved to.</p>
 
 ### InitializeAbr {#InitializeAbr}
 
- Initializes ABR metadata. Should only be called to initialize ABR
- metadata for the first time (i.e. it should not be called every boot),
- or recover from corrupted ABR metadata.
-
- Returns `ZX_ERR_NOT_SUPPORTED` if A/B partition scheme is not supported
- and we always boot from configuration A.
+<p>Initializes ABR metadata. Should only be called to initialize ABR
+metadata for the first time (i.e. it should not be called every boot),
+or recover from corrupted ABR metadata.</p>
+<p>Returns <code>ZX_ERR_NOT_SUPPORTED</code> if A/B partition scheme is not supported
+and we always boot from configuration A.</p>
 
 #### Request
 <table>
@@ -93,10 +91,9 @@
 
 ### QueryActiveConfiguration {#QueryActiveConfiguration}
 
- Queries active configuration.
-
- Returns `ZX_ERR_NOT_SUPPORTED` if A/B partition scheme is not supported
- and we always boot from configuration A.
+<p>Queries active configuration.</p>
+<p>Returns <code>ZX_ERR_NOT_SUPPORTED</code> if A/B partition scheme is not supported
+and we always boot from configuration A.</p>
 
 #### Request
 <table>
@@ -116,9 +113,8 @@
 
 ### QueryConfigurationStatus {#QueryConfigurationStatus}
 
- Queries status of |configuration|.
-
- Returns `ZX_ERR_INVALID_ARGS` if `Configuration.RECOVERY` is passed in via |configuration|.
+<p>Queries status of |configuration|.</p>
+<p>Returns <code>ZX_ERR_INVALID_ARGS</code> if <code>Configuration.RECOVERY</code> is passed in via |configuration|.</p>
 
 #### Request
 <table>
@@ -143,11 +139,10 @@
 
 ### SetConfigurationActive {#SetConfigurationActive}
 
- Updates persistent metadata identifying which configuration should be selected as 'primary'
- for booting purposes. Should only be called after `KERNEL` as well as optional
- `VERIFIED_BOOT_METADATA` assets for specified `configuration` were written successfully.
-
- Returns `ZX_ERR_INVALID_ARGS` if `Configuration.RECOVERY` is passed in via |configuration|.
+<p>Updates persistent metadata identifying which configuration should be selected as 'primary'
+for booting purposes. Should only be called after <code>KERNEL</code> as well as optional
+<code>VERIFIED_BOOT_METADATA</code> assets for specified <code>configuration</code> were written successfully.</p>
+<p>Returns <code>ZX_ERR_INVALID_ARGS</code> if <code>Configuration.RECOVERY</code> is passed in via |configuration|.</p>
 
 #### Request
 <table>
@@ -172,18 +167,18 @@
 
 ### SetConfigurationUnbootable {#SetConfigurationUnbootable}
 
- Updates persistent metadata identifying whether |configuration| is bootable.
- Should only be called in the following situations:
- * Before `KERNEL` as well as optional `VERIFIED_BOOT_METADATA` assets for specified
-   |configuration| are written.
- * After successfully booting from a new configuration and marking it healthy. This method
-   would be then called on the old configuration.
- * After "successfully" booting from a new configuration, but encountering an unrecoverable
-   error during health check. This method would be then called on the new configuration.
-
- If the configuration is unbootable, no action is taken.
-
- Returns `ZX_ERR_INVALID_ARGS` if `Configuration.RECOVERY` is passed in via |configuration|.
+<p>Updates persistent metadata identifying whether |configuration| is bootable.
+Should only be called in the following situations:</p>
+<ul>
+<li>Before <code>KERNEL</code> as well as optional <code>VERIFIED_BOOT_METADATA</code> assets for specified
+|configuration| are written.</li>
+<li>After successfully booting from a new configuration and marking it healthy. This method
+would be then called on the old configuration.</li>
+<li>After &quot;successfully&quot; booting from a new configuration, but encountering an unrecoverable
+error during health check. This method would be then called on the new configuration.</li>
+</ul>
+<p>If the configuration is unbootable, no action is taken.</p>
+<p>Returns <code>ZX_ERR_INVALID_ARGS</code> if <code>Configuration.RECOVERY</code> is passed in via |configuration|.</p>
 
 #### Request
 <table>
@@ -208,12 +203,11 @@
 
 ### SetActiveConfigurationHealthy {#SetActiveConfigurationHealthy}
 
- Updates persistent metadata identifying that active configuration is stable. Used to signal
- "rollback to previous slot" logic is not needed anymore. Meant to be called in subsequent
- boot attempt after `SetActiveConfiguration` was called. Will return error if active
- configuration is currently unbootable.
-
- If the configuration is already marked healthy, no action is taken.
+<p>Updates persistent metadata identifying that active configuration is stable. Used to signal
+&quot;rollback to previous slot&quot; logic is not needed anymore. Meant to be called in subsequent
+boot attempt after <code>SetActiveConfiguration</code> was called. Will return error if active
+configuration is currently unbootable.</p>
+<p>If the configuration is already marked healthy, no action is taken.</p>
 
 #### Request
 <table>
@@ -233,8 +227,8 @@
 
 ### ReadAsset {#ReadAsset}
 
- Reads partition corresponding to |configuration| and |asset| into a
- vmo and returns it.
+<p>Reads partition corresponding to |configuration| and |asset| into a
+vmo and returns it.</p>
 
 #### Request
 <table>
@@ -264,14 +258,12 @@
 
 ### WriteAsset {#WriteAsset}
 
- Writes partition corresponding to `configuration` and `asset` with data from `payload`.
- `payload` may need to be resized to the partition size, so the provided vmo must have
- been created with `ZX_VMO_RESIZABLE` or must be a child VMO that was created with
- `ZX_VMO_CHILD_RESIZABLE`. Will zero out rest of the partition if `payload` is smaller
- than the size of the partition being written.
-
-
- Returns `ZX_ERR_INVALID_ARGS` if `configuration` specifies active configuration.
+<p>Writes partition corresponding to <code>configuration</code> and <code>asset</code> with data from <code>payload</code>.
+<code>payload</code> may need to be resized to the partition size, so the provided vmo must have
+been created with <code>ZX_VMO_RESIZABLE</code> or must be a child VMO that was created with
+<code>ZX_VMO_CHILD_RESIZABLE</code>. Will zero out rest of the partition if <code>payload</code> is smaller
+than the size of the partition being written.</p>
+<p>Returns <code>ZX_ERR_INVALID_ARGS</code> if <code>configuration</code> specifies active configuration.</p>
 
 #### Request
 <table>
@@ -306,8 +298,8 @@
 
 ### WriteVolumes {#WriteVolumes}
 
- Writes FVM with data from streamed via `payload`. This potentially affects all
- configurations.
+<p>Writes FVM with data from streamed via <code>payload</code>. This potentially affects all
+configurations.</p>
 
 #### Request
 <table>
@@ -332,11 +324,10 @@
 
 ### WriteBootloader {#WriteBootloader}
 
- Writes bootloader partition with data from `payload`.
-
- `payload` may need to be resized to the partition size, so the provided vmo must have
- been created with `ZX_VMO_RESIZABLE` or must be a child VMO that was created with
- `ZX_VMO_CHILD_RESIZABLE`.
+<p>Writes bootloader partition with data from <code>payload</code>.</p>
+<p><code>payload</code> may need to be resized to the partition size, so the provided vmo must have
+been created with <code>ZX_VMO_RESIZABLE</code> or must be a child VMO that was created with
+<code>ZX_VMO_CHILD_RESIZABLE</code>.</p>
 
 #### Request
 <table>
@@ -361,7 +352,7 @@
 
 ### WriteDataFile {#WriteDataFile}
 
- Writes /data/`filename` with data from `payload`. Overwrites file if it already exists.
+<p>Writes /data/<code>filename</code> with data from <code>payload</code>. Overwrites file if it already exists.</p>
 
 #### Request
 <table>
@@ -391,18 +382,15 @@
 
 ### WipeVolume {#WipeVolume}
 
- Wipes the FVM partition from the device. Should not be confused with factory reset, which
- is less intrusive.
-
- Notable use cases include recovering from corrupted FVM as well as setting device to a
- "clean" state for automation.
-
- If |block_device| is not provided, the paver will perform a search for the the FVM.
- If multiple block devices have valid GPT, |block_device| can be provided to specify
- which one to target. It assumed that channel backing |block_device| also implements
- `fuchsia.io.Node` for now.
-
- On success, returns a channel to the initialized FVM volume.
+<p>Wipes the FVM partition from the device. Should not be confused with factory reset, which
+is less intrusive.</p>
+<p>Notable use cases include recovering from corrupted FVM as well as setting device to a
+&quot;clean&quot; state for automation.</p>
+<p>If |block_device| is not provided, the paver will perform a search for the the FVM.
+If multiple block devices have valid GPT, |block_device| can be provided to specify
+which one to target. It assumed that channel backing |block_device| also implements
+<code>fuchsia.io.Node</code> for now.</p>
+<p>On success, returns a channel to the initialized FVM volume.</p>
 
 #### Request
 <table>
@@ -427,10 +415,9 @@
 
 ### InitializePartitionTables {#InitializePartitionTables}
 
- Initializes GPT on given block device and then adds an FVM partition.
-
- |gpt_block_device| specifies the block device to use. It assumed that channel
- backing |gpt_block_device| also implements `fuchsia.io.Node` for now.
+<p>Initializes GPT on given block device and then adds an FVM partition.</p>
+<p>|gpt_block_device| specifies the block device to use. It assumed that channel
+backing |gpt_block_device| also implements <code>fuchsia.io.Node</code> for now.</p>
 
 #### Request
 <table>
@@ -455,16 +442,14 @@
 
 ### WipePartitionTables {#WipePartitionTables}
 
- Wipes all entries from the partition table of the specified block device.
- Currently only supported on devices with a GPT.
-
- If |block_device| is not provided, the paver will perform a search for
- the the FVM. If multiple block devices have valid GPT, |block_device| can be provided
- to specify which one to target. It assumed that channel backing
- |block_device| also implements `fuchsia.io.Node` for now.
-
- *WARNING*: This API may destructively remove non-fuchsia maintained partitions from
- the block device.
+<p>Wipes all entries from the partition table of the specified block device.
+Currently only supported on devices with a GPT.</p>
+<p>If |block_device| is not provided, the paver will perform a search for
+the the FVM. If multiple block devices have valid GPT, |block_device| can be provided
+to specify which one to target. It assumed that channel backing
+|block_device| also implements <code>fuchsia.io.Node</code> for now.</p>
+<p><em>WARNING</em>: This API may destructively remove non-fuchsia maintained partitions from
+the block device.</p>
 
 #### Request
 <table>
@@ -576,7 +561,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> Offset into VMO where read data starts.
+            <td><p>Offset into VMO where read data starts.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -584,7 +569,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> Size of read data.
+            <td><p>Size of read data.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -599,7 +584,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#13)*
 
- Describes the version of an asset.
+<p>Describes the version of an asset.</p>
 
 
 <table>
@@ -622,20 +607,20 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#21)*
 
- Describes assets which may be updated. Each asset has 3 versions, each tied to a particular
- configuration.
+<p>Describes assets which may be updated. Each asset has 3 versions, each tied to a particular
+configuration.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>KERNEL</code></td>
             <td><code>1</code></td>
-            <td> Zircon Boot Image (ZBI) containing the kernel image as well as bootfs.
+            <td><p>Zircon Boot Image (ZBI) containing the kernel image as well as bootfs.</p>
 </td>
         </tr><tr>
             <td><code>VERIFIED_BOOT_METADATA</code></td>
             <td><code>2</code></td>
-            <td> Metadata used for verified boot purposes.
+            <td><p>Metadata used for verified boot purposes.</p>
 </td>
         </tr></table>
 
@@ -644,24 +629,24 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#29)*
 
- Set of states configuration may be in.
+<p>Set of states configuration may be in.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>HEALTHY</code></td>
             <td><code>1</code></td>
-            <td> Bootable and health checked.
+            <td><p>Bootable and health checked.</p>
 </td>
         </tr><tr>
             <td><code>PENDING</code></td>
             <td><code>2</code></td>
-            <td> Bootable but not yet marked healthy.
+            <td><p>Bootable but not yet marked healthy.</p>
 </td>
         </tr><tr>
             <td><code>UNBOOTABLE</code></td>
             <td><code>3</code></td>
-            <td> Unbootable.
+            <td><p>Unbootable.</p>
 </td>
         </tr></table>
 
@@ -757,21 +742,21 @@ Type: <code>uint32</code>
             <td>
                 <code>int32</code>
             </td>
-            <td> Error encountered while reading data.
+            <td><p>Error encountered while reading data.</p>
 </td>
         </tr><tr>
             <td><code>eof</code></td>
             <td>
                 <code>bool</code>
             </td>
-            <td> End of file reached.
+            <td><p>End of file reached.</p>
 </td>
         </tr><tr>
             <td><code>info</code></td>
             <td>
                 <code><a class='link' href='#ReadInfo'>ReadInfo</a></code>
             </td>
-            <td> Information about location of successfully read data within pre-registered VMO.
+            <td><p>Information about location of successfully read data within pre-registered VMO.</p>
 </td>
         </tr></table>
 

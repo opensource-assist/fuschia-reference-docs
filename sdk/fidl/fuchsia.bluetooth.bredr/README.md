@@ -8,22 +8,22 @@
 ## Profile {#Profile}
 *Defined in [fuchsia.bluetooth.bredr/profile.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/profile.fidl#25)*
 
- Profile provides Bluetooth services a way to register a service definition,
- making that service discoverable by remote peers.  Registered services will receive
- L2CAP connections made to the services advertised in the definition, and can open
- connections to remote connected devices.  To discover possible connected
- devices, devices should use `AddSearch` to search any remote devices.
+<p>Profile provides Bluetooth services a way to register a service definition,
+making that service discoverable by remote peers.  Registered services will receive
+L2CAP connections made to the services advertised in the definition, and can open
+connections to remote connected devices.  To discover possible connected
+devices, devices should use <code>AddSearch</code> to search any remote devices.</p>
 
 ### AddService {#AddService}
 
- Register a service. This service will be registered and discoverable with
- the Service Discovery Protocol server.
- The `security_level` provided here will be required before a connection is
- established.
- If `devices` is true, connections to the service's channels will create a
- device instead of producing an OnConnected event.
- Returns `status` for success or error.
- If successful, a unique `service_id` is returned to identify this service.
+<p>Register a service. This service will be registered and discoverable with
+the Service Discovery Protocol server.
+The <code>security_level</code> provided here will be required before a connection is
+established.
+If <code>devices</code> is true, connections to the service's channels will create a
+device instead of producing an OnConnected event.
+Returns <code>status</code> for success or error.
+If successful, a unique <code>service_id</code> is returned to identify this service.</p>
 
 #### Request
 <table>
@@ -63,13 +63,13 @@
 
 ### AddSearch {#AddSearch}
 
- Register a search for services on remote devices.  An `OnServiceFound`
- event will be produced each time a device is connected that has a service
- matching `service_uuid` with the additional attributes in `attr_ids`.
- The ProtocolDescriptor should be requested to obtain information to connect to a service.
- If `attr_ids` is empty, all attributes will be requested.
- See the SDP Specification (Core Spec 5.0, Vol 3, Part B, Section 5) and the
- relevant profile specification documents.
+<p>Register a search for services on remote devices.  An <code>OnServiceFound</code>
+event will be produced each time a device is connected that has a service
+matching <code>service_uuid</code> with the additional attributes in <code>attr_ids</code>.
+The ProtocolDescriptor should be requested to obtain information to connect to a service.
+If <code>attr_ids</code> is empty, all attributes will be requested.
+See the SDP Specification (Core Spec 5.0, Vol 3, Part B, Section 5) and the
+relevant profile specification documents.</p>
 
 #### Request
 <table>
@@ -90,7 +90,7 @@
 
 ### RemoveService {#RemoveService}
 
- Removes a previously-registered service, disconnecting all clients.
+<p>Removes a previously-registered service, disconnecting all clients.</p>
 
 #### Request
 <table>
@@ -106,11 +106,11 @@
 
 ### ConnectL2cap {#ConnectL2cap}
 
- Connect a channel to the connected remote device `peer_id` using the
- protocol and channel listed. For L2CAP, dynamic PSMs can be specified.
- See the defined PSMs in `service.fidl`
- Returns the channel after it has been connected. `status` will indicate
- an error if the channel could not be connected.
+<p>Connect a channel to the connected remote device <code>peer_id</code> using the
+protocol and channel listed. For L2CAP, dynamic PSMs can be specified.
+See the defined PSMs in <code>service.fidl</code>
+Returns the channel after it has been connected. <code>status</code> will indicate
+an error if the channel could not be connected.</p>
 
 #### Request
 <table>
@@ -145,11 +145,11 @@
 
 ### OnConnected {#OnConnected}
 
- Produced when a protocol channel is connected for this profile.
- `channel` contains the channel connected to, and information about the
- protocol is provided in `protocol`. All protocols supported internally will
- be handled, for example an RFCOMM socket will be provided instead of an
- L2CAP socket if the services protocol descriptor includes it.
+<p>Produced when a protocol channel is connected for this profile.
+<code>channel</code> contains the channel connected to, and information about the
+protocol is provided in <code>protocol</code>. All protocols supported internally will
+be handled, for example an RFCOMM socket will be provided instead of an
+L2CAP socket if the services protocol descriptor includes it.</p>
 
 
 
@@ -180,12 +180,12 @@
 
 ### OnServiceFound {#OnServiceFound}
 
- Produced when a search this client added finds a matching service on a remote
- device.  `peer_id` is the device the service was found on, and `profile` includes the
- Profile Descriptor which matches the `service_uuid`
- searched for, with the major and minor version reported by the remote device.
- `attributes` contains all attributes retrieved from the remote device.  It may
- include attributes not requested in the search.
+<p>Produced when a search this client added finds a matching service on a remote
+device.  <code>peer_id</code> is the device the service was found on, and <code>profile</code> includes the
+Profile Descriptor which matches the <code>service_uuid</code>
+searched for, with the major and minor version reported by the remote device.
+<code>attributes</code> contains all attributes retrieved from the remote device.  It may
+include attributes not requested in the search.</p>
 
 
 
@@ -250,7 +250,7 @@
 
 
 
- Identifies a communications protocol along with protocol-specific parameters.
+<p>Identifies a communications protocol along with protocol-specific parameters.</p>
 
 
 <table>
@@ -276,7 +276,7 @@
 
 
 
- A description of a profile that this service conforms to.
+<p>A description of a profile that this service conforms to.</p>
 
 
 <table>
@@ -309,7 +309,7 @@
 
 
 
- Human-readable information about a service. Strings are encoded in UTF-8.
+<p>Human-readable information about a service. Strings are encoded in UTF-8.</p>
 
 
 <table>
@@ -318,8 +318,8 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Language that is represented.  Must be two characters long and a valid
- ICO 639:1988 identifier.
+            <td><p>Language that is represented.  Must be two characters long and a valid
+ICO 639:1988 identifier.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -327,7 +327,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> Service name
+            <td><p>Service name</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -335,7 +335,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> A human-readable description
+            <td><p>A human-readable description</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -343,7 +343,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The provider of this service (person or organization)
+            <td><p>The provider of this service (person or organization)</p>
 </td>
             <td>No default</td>
         </tr>
@@ -354,7 +354,7 @@
 
 
 
- A generic attribute, used for protocol information;
+<p>A generic attribute, used for protocol information;</p>
 
 
 <table>
@@ -388,7 +388,7 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> UUIDs of service classes that this service record conforms to.
+            <td><p>UUIDs of service classes that this service record conforms to.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -396,9 +396,9 @@
             <td>
                 <code>vector&lt;<a class='link' href='#ProtocolDescriptor'>ProtocolDescriptor</a>&gt;</code>
             </td>
-            <td> The protocols that can be used to gain access to this service, with their
- protocol-specific identifiers.
- This is ordered from lowest level to highest.
+            <td><p>The protocols that can be used to gain access to this service, with their
+protocol-specific identifiers.
+This is ordered from lowest level to highest.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -406,8 +406,8 @@
             <td>
                 <code>vector&lt;vector&gt;?</code>
             </td>
-            <td> Additional protocol descriptor lists, if the service requires more channels
- in addition to the main service.
+            <td><p>Additional protocol descriptor lists, if the service requires more channels
+in addition to the main service.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -415,7 +415,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='#ProfileDescriptor'>ProfileDescriptor</a>&gt;</code>
             </td>
-            <td> Bluetooth profiles that are supported by this service.
+            <td><p>Bluetooth profiles that are supported by this service.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -423,8 +423,8 @@
             <td>
                 <code>vector&lt;<a class='link' href='#Information'>Information</a>&gt;</code>
             </td>
-            <td> Human-readable service information, in one or more languages.
- The first set of information is considered the primary language.
+            <td><p>Human-readable service information, in one or more languages.
+The first set of information is considered the primary language.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -432,9 +432,9 @@
             <td>
                 <code>vector&lt;<a class='link' href='#Attribute'>Attribute</a>&gt;?</code>
             </td>
-            <td> Additional attributes included in the Service Definition, for specific
- services.
- All of these attributes should have an Attribute ID above 0x0200.
+            <td><p>Additional attributes included in the Service Definition, for specific
+services.
+All of these attributes should have an Attribute ID above 0x0200.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -479,7 +479,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.bredr/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#8)*
 
- A building element in SDP.  Used for various low-level and custom parameters.
+<p>A building element in SDP.  Used for various low-level and custom parameters.</p>
 
 
 <table>
@@ -522,10 +522,10 @@ Type: <code>uint16</code>
 
 *Defined in [fuchsia.bluetooth.bredr/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#39)*
 
- Defined Protocol Identifiers for the Protocol Descriptor
- We intentionally omit deprecated profile identifiers.
- From Bluetooth Assigned Numbers:
- https://www.bluetooth.com/specifications/assigned-numbers/service-discovery
+<p>Defined Protocol Identifiers for the Protocol Descriptor
+We intentionally omit deprecated profile identifiers.
+From Bluetooth Assigned Numbers:
+https://www.bluetooth.com/specifications/assigned-numbers/service-discovery</p>
 
 
 <table>
@@ -592,18 +592,18 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.bredr/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.bredr/service.fidl#85)*
 
- Identifiers that are valid for Bluetooth Classes / Profiles
- We intentionally omit classes and profile IDs that are unsupported, deprecated,
- or reserved for use by Fuchsia Bluetooth.
- From Bluetooth Assigned Numbers for SDP
- https://www.bluetooth.com/specifications/assigned-numbers/service-discovery
+<p>Identifiers that are valid for Bluetooth Classes / Profiles
+We intentionally omit classes and profile IDs that are unsupported, deprecated,
+or reserved for use by Fuchsia Bluetooth.
+From Bluetooth Assigned Numbers for SDP
+https://www.bluetooth.com/specifications/assigned-numbers/service-discovery</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>SerialPort</code></td>
             <td><code>4353</code></td>
-            <td> ServiceDiscoveryService and BrowseGroupDescriptorService used by Fuchsia
+            <td><p>ServiceDiscoveryService and BrowseGroupDescriptorService used by Fuchsia</p>
 </td>
         </tr><tr>
             <td><code>DialupNetworking</code></td>
@@ -620,7 +620,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>Headset</code></td>
             <td><code>4360</code></td>
-            <td> Headset Profile (HSP)
+            <td><p>Headset Profile (HSP)</p>
 </td>
         </tr><tr>
             <td><code>HeadsetAudioGateway</code></td>
@@ -633,7 +633,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>AudioSource</code></td>
             <td><code>4362</code></td>
-            <td> Advanced Audio Distribution Profile (A2DP)
+            <td><p>Advanced Audio Distribution Profile (A2DP)</p>
 </td>
         </tr><tr>
             <td><code>AudioSink</code></td>
@@ -646,7 +646,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>AVRemoteControlTarget</code></td>
             <td><code>4364</code></td>
-            <td> Audio/Video Remote Control Profil (AVRCP)
+            <td><p>Audio/Video Remote Control Profil (AVRCP)</p>
 </td>
         </tr><tr>
             <td><code>AVRemoteControl</code></td>
@@ -659,7 +659,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>PANU</code></td>
             <td><code>4373</code></td>
-            <td> Personal Area Networking (PAN)
+            <td><p>Personal Area Networking (PAN)</p>
 </td>
         </tr><tr>
             <td><code>NAP</code></td>
@@ -672,8 +672,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>Handsfree</code></td>
             <td><code>4382</code></td>
-            <td> Basic Printing and Basic Imaging Profiles omitted (unsupported)
- Hands-Free Profile (HFP)
+            <td><p>Basic Printing and Basic Imaging Profiles omitted (unsupported)
+Hands-Free Profile (HFP)</p>
 </td>
         </tr><tr>
             <td><code>HandsfreeAudioGateway</code></td>
@@ -682,12 +682,12 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>SIM_Access</code></td>
             <td><code>4397</code></td>
-            <td> Human Interface Device and Hardcopy Cable Replacement Profile omitted (unsupported)
+            <td><p>Human Interface Device and Hardcopy Cable Replacement Profile omitted (unsupported)</p>
 </td>
         </tr><tr>
             <td><code>PhonebookPCE</code></td>
             <td><code>4398</code></td>
-            <td> Phonebook Access Profile (PBAP)
+            <td><p>Phonebook Access Profile (PBAP)</p>
 </td>
         </tr><tr>
             <td><code>PhonebookPSE</code></td>
@@ -700,7 +700,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>MessageAccessServer</code></td>
             <td><code>4402</code></td>
-            <td> Message Access Profile (MAP)
+            <td><p>Message Access Profile (MAP)</p>
 </td>
         </tr><tr>
             <td><code>MessageNotificationServer</code></td>
@@ -713,8 +713,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>MPSProfile</code></td>
             <td><code>4410</code></td>
-            <td> GNSS and 3DSP omitted (unsupported)
- Multi-Profile Specification (MPS)
+            <td><p>GNSS and 3DSP omitted (unsupported)
+Multi-Profile Specification (MPS)</p>
 </td>
         </tr><tr>
             <td><code>MPSClass</code></td>
@@ -723,9 +723,9 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>VideoSource</code></td>
             <td><code>4867</code></td>
-            <td> Calendar, Task, and Notes Profile omitted (unsupported)
- Device ID used by Fuchsia
- Video Distribution Profile (VDP)
+            <td><p>Calendar, Task, and Notes Profile omitted (unsupported)
+Device ID used by Fuchsia
+Video Distribution Profile (VDP)</p>
 </td>
         </tr><tr>
             <td><code>VideoSink</code></td>
@@ -738,7 +738,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>HDP</code></td>
             <td><code>5120</code></td>
-            <td> Health Device Profile (HDP)
+            <td><p>Health Device Profile (HDP)</p>
 </td>
         </tr><tr>
             <td><code>HDPSource</code></td>
@@ -814,9 +814,9 @@ Type: <code>uint32</code>
                     <code>1</code>
                 </td>
                 <td><code>int64</code></td>
-            <td> Defined PSMs from the Bluetooth Assigned Numbers
- https://www.bluetooth.com/specifications/assigned-numbers/logical-link-control
- Used in DataElementData for protocol parameters for L2CAP.
+            <td><p>Defined PSMs from the Bluetooth Assigned Numbers
+https://www.bluetooth.com/specifications/assigned-numbers/logical-link-control
+Used in DataElementData for protocol parameters for L2CAP.</p>
 </td>
         </tr>
     <tr>
@@ -929,8 +929,8 @@ Type: <code>uint32</code>
                     <code>0</code>
                 </td>
                 <td><code>uint16</code></td>
-            <td> Universal attribute IDs.
- From the Bluetooth Specification, Version 5, Vol 3, Part B
+            <td><p>Universal attribute IDs.
+From the Bluetooth Specification, Version 5, Vol 3, Part B</p>
 </td>
         </tr>
     <tr>

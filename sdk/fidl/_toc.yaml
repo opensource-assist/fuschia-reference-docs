@@ -131,6 +131,8 @@ toc:
   path: /reference/fidl/fuchsia.intl
 - title: fuchsia.io
   path: /reference/fidl/fuchsia.io
+- title: fuchsia.io2
+  path: /reference/fidl/fuchsia.io2
 - title: fuchsia.kernel
   path: /reference/fidl/fuchsia.kernel
 - title: fuchsia.kms

@@ -138,7 +138,7 @@
 ## LoggerBase {#LoggerBase}
 *Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#207)*
 
- LoggerBase Interface
+<p>LoggerBase Interface</p>
 
 ### LogEvent {#LogEvent}
 
@@ -867,7 +867,7 @@
 ## LoggerSimple {#LoggerSimple}
 *Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#612)*
 
- LoggerSimple Interface
+<p>LoggerSimple Interface</p>
 
 ### LogEvent {#LogEvent}
 
@@ -1429,7 +1429,7 @@
 
 
 
- Logger Interface
+<p>Logger Interface</p>
 
 
 <table>
@@ -1555,7 +1555,7 @@
 
 
 
- SystemProfileUpdater Interface
+<p>SystemProfileUpdater Interface</p>
 
 
 <table>

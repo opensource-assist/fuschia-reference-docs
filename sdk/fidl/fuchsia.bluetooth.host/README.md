@@ -8,13 +8,13 @@
 ## Host {#Host}
 *Defined in [fuchsia.bluetooth.host/host.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/bluetooth/fidl/host.fidl#14)*
 
- Interface for interacting with a Bluetooth host device (bt-host)
+<p>Interface for interacting with a Bluetooth host device (bt-host)</p>
 
 ### RequestLowEnergyCentral {#RequestLowEnergyCentral}
 
- The following methods fulfill a given interface request. bt-host device
- will start processing FIDL messages. If the request cannot be fulfilled,
- the bt-host device will close its end of the given channel.
+<p>The following methods fulfill a given interface request. bt-host device
+will start processing FIDL messages. If the request cannot be fulfilled,
+the bt-host device will close its end of the given channel.</p>
 
 #### Request
 <table>
@@ -75,19 +75,18 @@
 
 ### Close {#Close}
 
- Shuts down the host, ending all active Bluetooth procedures:
-
- * All FIDL interface handles associated with this host are closed and all
-   connections initiated via FIDL clients are severed.
- * All scan, discovery, and advertising procedures are stopped.
- * Bonded devices are cleared and removed from the auto-connect lists.
- * Auto-connected peripherals are disconnected.
-
- This effectively resets the host to its initial state and the host remains
- available for future requests.
-
- The Host will continue to send OnDeviceUpdated events as procedures get
- terminated.
+<p>Shuts down the host, ending all active Bluetooth procedures:</p>
+<ul>
+<li>All FIDL interface handles associated with this host are closed and all
+connections initiated via FIDL clients are severed.</li>
+<li>All scan, discovery, and advertising procedures are stopped.</li>
+<li>Bonded devices are cleared and removed from the auto-connect lists.</li>
+<li>Auto-connected peripherals are disconnected.</li>
+</ul>
+<p>This effectively resets the host to its initial state and the host remains
+available for future requests.</p>
+<p>The Host will continue to send OnDeviceUpdated events as procedures get
+terminated.</p>
 
 #### Request
 <table>
@@ -98,7 +97,7 @@
 
 ### GetInfo {#GetInfo}
 
- Returns information about the Bluetooth adapter managed by this host.
+<p>Returns information about the Bluetooth adapter managed by this host.</p>
 
 #### Request
 <table>
@@ -118,7 +117,7 @@
 
 ### SetLocalData {#SetLocalData}
 
- Assigns local data to this host.
+<p>Assigns local data to this host.</p>
 
 #### Request
 <table>
@@ -134,20 +133,23 @@
 
 ### ListDevices {#ListDevices}
 
- Returns a list of all known connectable devices, included those that are
- currently connected and/or bonded. This list does not include
- non-connectable devices such as LE broadcasters.
-
- Notes:
-
- - When used in the GAP central role (BR/EDR or LE) the listed devices are
- obtained during discovery and connection procedures. While in the
- peripheral role, this will contain devices that have successfully initiated
- connections to this host.
-
- - This list contains connectable devices that are discovered or connected
- via other interfaces obtained using the interface request methods declared
- above.
+<p>Returns a list of all known connectable devices, included those that are
+currently connected and/or bonded. This list does not include
+non-connectable devices such as LE broadcasters.</p>
+<p>Notes:</p>
+<ul>
+<li>
+<p>When used in the GAP central role (BR/EDR or LE) the listed devices are
+obtained during discovery and connection procedures. While in the
+peripheral role, this will contain devices that have successfully initiated
+connections to this host.</p>
+</li>
+<li>
+<p>This list contains connectable devices that are discovered or connected
+via other interfaces obtained using the interface request methods declared
+above.</p>
+</li>
+</ul>
 
 #### Request
 <table>
@@ -167,7 +169,7 @@
 
 ### SetLocalName {#SetLocalName}
 
- Sets the local name for this adapter.
+<p>Sets the local name for this adapter.</p>
 
 #### Request
 <table>
@@ -192,7 +194,7 @@
 
 ### SetDeviceClass {#SetDeviceClass}
 
- Sets the device class for this adapter.
+<p>Sets the device class for this adapter.</p>
 
 #### Request
 <table>
@@ -217,17 +219,14 @@
 
 ### StartDiscovery {#StartDiscovery}
 
- Initiates a general discovery procedure for BR/EDR and LE devices. On success, discovered
- devices will be reported via AdapterDelegate.OnDeviceDiscovered().
-
- On the LE transport, only general-discoverable and connectable peripherals will be reported.
-
- Discovery will continue until it is terminated via StopDiscovery() or if the proxy to the
- Adapter gets disconnected. If the device does not support BR/EDR, only LE
- discovery will be performed.
-
- An OnDeviceUpdated event will be sent when the discovery procedures are
- started.
+<p>Initiates a general discovery procedure for BR/EDR and LE devices. On success, discovered
+devices will be reported via AdapterDelegate.OnDeviceDiscovered().</p>
+<p>On the LE transport, only general-discoverable and connectable peripherals will be reported.</p>
+<p>Discovery will continue until it is terminated via StopDiscovery() or if the proxy to the
+Adapter gets disconnected. If the device does not support BR/EDR, only LE
+discovery will be performed.</p>
+<p>An OnDeviceUpdated event will be sent when the discovery procedures are
+started.</p>
 
 #### Request
 <table>
@@ -247,12 +246,11 @@
 
 ### StopDiscovery {#StopDiscovery}
 
- Terminates discovery if one was started via StartDiscovery(). The AdapterDelegate will stop
- receiving device discovery notifications.
-
- NOTE: If another client is performing discovery (e.g. via its own le.Central interface handle),
- then the system will continue performing device discovery even if this method results in
- success.
+<p>Terminates discovery if one was started via StartDiscovery(). The AdapterDelegate will stop
+receiving device discovery notifications.</p>
+<p>NOTE: If another client is performing discovery (e.g. via its own le.Central interface handle),
+then the system will continue performing device discovery even if this method results in
+success.</p>
 
 #### Request
 <table>
@@ -272,7 +270,7 @@
 
 ### SetConnectable {#SetConnectable}
 
- Sets whether this host should be connectable.
+<p>Sets whether this host should be connectable.</p>
 
 #### Request
 <table>
@@ -297,7 +295,7 @@
 
 ### SetDiscoverable {#SetDiscoverable}
 
- Sets whether this host should be discoverable.
+<p>Sets whether this host should be discoverable.</p>
 
 #### Request
 <table>
@@ -322,24 +320,27 @@
 
 ### Connect {#Connect}
 
- Establish a BR/EDR and/or LE connection to the remote device with identifier `device_id`:
-
-   - If the device is known to support the BR/EDR transport then a logical link over that
-     transport will be established to the device. If the connection attempt is successful,
-     local services registered using "RequestProfile()" will be available to the peer.
-     Traditional services discovered on the peer will be notified to local services
-     asynchronously.
-
-   - If the device is known to support the LE transport then a logical link over that
-     transport will be established to the device. If the connection attempt is successful,
-     GATT services in the local database (populated via RequestGattServer()) will become
-     available to the peer. Similarly, remote GATT services that are discovered on the
-     peer will become available to holders of a gatt.Client capability and to device drivers
-     that can bind to the bt-gatt-svc class of devices.
-
- The result of the procedure will be communicated via `status`. If the remote device
- supports both BR/EDR and LE transports and a link cannot be established over both, then an
- error Status will be returned and neither transport will be connected.
+<p>Establish a BR/EDR and/or LE connection to the remote device with identifier <code>device_id</code>:</p>
+<ul>
+<li>
+<p>If the device is known to support the BR/EDR transport then a logical link over that
+transport will be established to the device. If the connection attempt is successful,
+local services registered using &quot;RequestProfile()&quot; will be available to the peer.
+Traditional services discovered on the peer will be notified to local services
+asynchronously.</p>
+</li>
+<li>
+<p>If the device is known to support the LE transport then a logical link over that
+transport will be established to the device. If the connection attempt is successful,
+GATT services in the local database (populated via RequestGattServer()) will become
+available to the peer. Similarly, remote GATT services that are discovered on the
+peer will become available to holders of a gatt.Client capability and to device drivers
+that can bind to the bt-gatt-svc class of devices.</p>
+</li>
+</ul>
+<p>The result of the procedure will be communicated via <code>status</code>. If the remote device
+supports both BR/EDR and LE transports and a link cannot be established over both, then an
+error Status will be returned and neither transport will be connected.</p>
 
 #### Request
 <table>
@@ -364,12 +365,15 @@
 
 ### Disconnect {#Disconnect}
 
- Terminate all connections (BR/EDR or LE) to the remote peer with identifier `peer_id`.
-
- + request `peer_id` The identifier of the peer to disconnect.
- - response `status` Contains an error if either LE or BR/EDR transport fails to disconnect. Contains
-                     success when both transports are successfully disconnected or if the peer is already
-                     disconnected.
+<p>Terminate all connections (BR/EDR or LE) to the remote peer with identifier <code>peer_id</code>.</p>
+<ul>
+<li>request <code>peer_id</code> The identifier of the peer to disconnect.</li>
+</ul>
+<ul>
+<li>response <code>status</code> Contains an error if either LE or BR/EDR transport fails to disconnect. Contains
+success when both transports are successfully disconnected or if the peer is already
+disconnected.</li>
+</ul>
 
 #### Request
 <table>
@@ -394,13 +398,12 @@
 
 ### Forget {#Forget}
 
- Deletes a peer from the Bluetooth host. If the peer is connected, it will be disconnected,
- then OnDeviceUpdated will be sent. OnDeviceRemoved will be sent. `device_id` will no longer
- refer to any peer, even if a device with the same address(es) is discovered again.
-
- Returns success after no peer exists that's identified by `device_id` (even if it didn't
- exist before Forget), failure if the peer specified by `device_id` could not be
- disconnected or deleted and still exists.
+<p>Deletes a peer from the Bluetooth host. If the peer is connected, it will be disconnected,
+then OnDeviceUpdated will be sent. OnDeviceRemoved will be sent. <code>device_id</code> will no longer
+refer to any peer, even if a device with the same address(es) is discovered again.</p>
+<p>Returns success after no peer exists that's identified by <code>device_id</code> (even if it didn't
+exist before Forget), failure if the peer specified by <code>device_id</code> could not be
+disconnected or deleted and still exists.</p>
 
 #### Request
 <table>
@@ -425,10 +428,10 @@
 
 ### EnableBackgroundScan {#EnableBackgroundScan}
 
- Enable or disable a passive LE background scan. When enabled, the bt-host
- device will continuously perform a passive LE scan in the background when
- no device discovery sessions are active and accept connection requests from
- bonded peripherals.
+<p>Enable or disable a passive LE background scan. When enabled, the bt-host
+device will continuously perform a passive LE scan in the background when
+no device discovery sessions are active and accept connection requests from
+bonded peripherals.</p>
 
 #### Request
 <table>
@@ -444,9 +447,9 @@
 
 ### EnablePrivacy {#EnablePrivacy}
 
- Enable or disable the LE privacy feature. When enabled, the bt-host device will use a private
- device address in all LE procedures. When disabled, the public identity address will be used
- instead (which is the default).
+<p>Enable or disable the LE privacy feature. When enabled, the bt-host device will use a private
+device address in all LE procedures. When disabled, the public identity address will be used
+instead (which is the default).</p>
 
 #### Request
 <table>
@@ -462,10 +465,10 @@
 
 ### SetPairingDelegate {#SetPairingDelegate}
 
- Assigns the pairing delegate that will respond to authentication challenges using the given
- I/O capabilities. Setting a pairing delegate cancels any on-going pairing procedure started
- using a previous delegate. Pairing requests will be rejected if no PairingDelegate has been
- assigned.
+<p>Assigns the pairing delegate that will respond to authentication challenges using the given
+I/O capabilities. Setting a pairing delegate cancels any on-going pairing procedure started
+using a previous delegate. Pairing requests will be rejected if no PairingDelegate has been
+assigned.</p>
 
 #### Request
 <table>
@@ -491,9 +494,9 @@
 
 ### AddBondedDevices {#AddBondedDevices}
 
- Adds existing bonded devices to the host. The host will be configured to automatically connect
- to these devices when they are in range and connectable. Future connections will be encrypted
- using the provided bonding data.
+<p>Adds existing bonded devices to the host. The host will be configured to automatically connect
+to these devices when they are in range and connectable. Future connections will be encrypted
+using the provided bonding data.</p>
 
 #### Request
 <table>
@@ -518,7 +521,7 @@
 
 ### OnAdapterStateChanged {#OnAdapterStateChanged}
 
- Notifies when the adapter state changes.
+<p>Notifies when the adapter state changes.</p>
 
 
 
@@ -534,8 +537,8 @@
 
 ### OnDeviceUpdated {#OnDeviceUpdated}
 
- Events that are sent when a connectable device is added, updated, or
- removed as a result of connection and discovery procedures.
+<p>Events that are sent when a connectable device is added, updated, or
+removed as a result of connection and discovery procedures.</p>
 
 
 
@@ -566,7 +569,7 @@
 
 ### OnNewBondingData {#OnNewBondingData}
 
- Notifies when bonding data for a device has been updated.
+<p>Notifies when bonding data for a device has been updated.</p>
 
 
 

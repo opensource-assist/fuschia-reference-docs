@@ -8,13 +8,14 @@
 ## Provider {#Provider}
 *Defined in [fuchsia.update.channel/channel.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update.channel/channel.fidl#9)*
 
- Information about the state of the update system.
+<p>Information about the state of the update system.</p>
 
 ### GetCurrent {#GetCurrent}
 
- Retrieve the currently active update channel.
-
- - response `channel` the currently active update channel.
+<p>Retrieve the currently active update channel.</p>
+<ul>
+<li>response <code>channel</code> the currently active update channel.</li>
+</ul>
 
 #### Request
 <table>

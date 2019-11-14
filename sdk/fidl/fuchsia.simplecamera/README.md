@@ -8,13 +8,13 @@
 ## SimpleCamera {#SimpleCamera}
 *Defined in [fuchsia.simplecamera/simple_camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.simplecamera/simple_camera.fidl#12)*
 
- Simple camera interface.  This will be deprecated when
- CameraManager replaces it.
+<p>Simple camera interface.  This will be deprecated when
+CameraManager replaces it.</p>
 
 ### ConnectToCamera {#ConnectToCamera}
 
- Connect to a camera using the first enumerated format.
- The device opened will be /dev/class/camera/camera_id
+<p>Connect to a camera using the first enumerated format.
+The device opened will be /dev/class/camera/camera_id</p>
 
 #### Request
 <table>

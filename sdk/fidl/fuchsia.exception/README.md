@@ -8,21 +8,19 @@
 ## Handler {#Handler}
 *Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#12)*
 
- Protocol meant for clients interested in handling exceptions for a
- particular service.
+<p>Protocol meant for clients interested in handling exceptions for a
+particular service.</p>
 
 ### OnException {#OnException}
 
- This exception mirrors closely the information provided by exception
- channels. The design is to have clients of this API behave as closely as
- possible to native exception handlers that are listening to an exception
- channel.
-
- `exception` is an exception handle, which controls the exception's
- lifetime. See exception zircon docs for more information.
-
- `info` represents basic exception information as provided by the
- exception channel.
+<p>This exception mirrors closely the information provided by exception
+channels. The design is to have clients of this API behave as closely as
+possible to native exception handlers that are listening to an exception
+channel.</p>
+<p><code>exception</code> is an exception handle, which controls the exception's
+lifetime. See exception zircon docs for more information.</p>
+<p><code>info</code> represents basic exception information as provided by the
+exception channel.</p>
 
 #### Request
 <table>
@@ -48,16 +46,16 @@
 ## ProcessLimbo {#ProcessLimbo}
 *Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#17)*
 
- Protocol meant for clients interested in obtaining processes that are
- suspended waiting for an exception handler (in limbo). This is the core
- feature that enables Just In Time (JIT) debugging.
+<p>Protocol meant for clients interested in obtaining processes that are
+suspended waiting for an exception handler (in limbo). This is the core
+feature that enables Just In Time (JIT) debugging.</p>
 
 ### WatchActive {#WatchActive}
 
- Watchs for changes determining whether the limbo is currently active,
- using a Hanging Get pattern. An active limbo could be empty (not have
- any processes waiting on an exception). However, an inactive limbo is
- guaranteed to not have any processes waiting in it.
+<p>Watchs for changes determining whether the limbo is currently active,
+using a Hanging Get pattern. An active limbo could be empty (not have
+any processes waiting on an exception). However, an inactive limbo is
+guaranteed to not have any processes waiting in it.</p>
 
 #### Request
 <table>
@@ -77,20 +75,17 @@
 
 ### WatchProcessesWaitingOnException {#WatchProcessesWaitingOnException}
 
- Watch for processes that are waiting on exceptions, using a Hanging Get
- Pattern.
-
- Returns information on all the processes currently waiting on an exception.
- The information provided is intended to correctly identify an exception
- and determine whether the caller wants to actually handle it.
- To retrieve an exception, use the |GetException| call.
-
- Returns ZX_ERR_UNAVAILABLE if limbo is not active.
- Returns ZX_ERR_CANCELED if there was an outstanding call and the limbo
- becomes inactive.
-
- NOTE: The |process| and |thread| handle will only have the ZX_RIGHT_READ
-       right, so no modification will be able to be done on them.
+<p>Watch for processes that are waiting on exceptions, using a Hanging Get
+Pattern.</p>
+<p>Returns information on all the processes currently waiting on an exception.
+The information provided is intended to correctly identify an exception
+and determine whether the caller wants to actually handle it.
+To retrieve an exception, use the |GetException| call.</p>
+<p>Returns ZX_ERR_UNAVAILABLE if limbo is not active.
+Returns ZX_ERR_CANCELED if there was an outstanding call and the limbo
+becomes inactive.</p>
+<p>NOTE: The |process| and |thread| handle will only have the ZX_RIGHT_READ
+right, so no modification will be able to be done on them.</p>
 
 #### Request
 <table>
@@ -110,14 +105,12 @@
 
 ### RetrieveException {#RetrieveException}
 
- Removes the process from limbo and retrieves the exception handle and
- associated metadata from an exception.
-
- Use |ListProcessesWaitingOnException| to choose a |process_koid| from the
- list of available exceptions.
-
- Returns ZX_ERR_NOT_FOUND if the process is not waiting on an exception.
- Returns ZX_ERR_UNAVAILABLE if limbo is not active.
+<p>Removes the process from limbo and retrieves the exception handle and
+associated metadata from an exception.</p>
+<p>Use |ListProcessesWaitingOnException| to choose a |process_koid| from the
+list of available exceptions.</p>
+<p>Returns ZX_ERR_NOT_FOUND if the process is not waiting on an exception.
+Returns ZX_ERR_UNAVAILABLE if limbo is not active.</p>
 
 #### Request
 <table>
@@ -142,9 +135,9 @@
 
 ### ReleaseProcess {#ReleaseProcess}
 
- Removes the process from limbo, releasing the exception. This will make
- it "bubble up" beyond the scope of of this limbo, making it
- unretrievable in the future from here.
+<p>Removes the process from limbo, releasing the exception. This will make
+it &quot;bubble up&quot; beyond the scope of of this limbo, making it
+unretrievable in the future from here.</p>
 
 #### Request
 <table>
@@ -176,8 +169,8 @@
 
 
 
- Basic exception information associated with a particular exception.
- Maps to `zx_exception_info_t`.
+<p>Basic exception information associated with a particular exception.
+Maps to <code>zx_exception_info_t</code>.</p>
 
 
 <table>
@@ -261,10 +254,10 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#62)*
 
- What type of exception was triggered.
- Maps to the types defined in `zx_excp_type_t`.
- If zircon/syscalls/exception.h changes, this needs to be updates as well to
- reflect that.
+<p>What type of exception was triggered.
+Maps to the types defined in <code>zx_excp_type_t</code>.
+If zircon/syscalls/exception.h changes, this needs to be updates as well to
+reflect that.</p>
 
 
 <table>
@@ -319,8 +312,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.exception/handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/handler.fidl#43)*
 
- Generic wrapper over a thread exception. Mirrors closely the information
- given by an exception channel.
+<p>Generic wrapper over a thread exception. Mirrors closely the information
+given by an exception channel.</p>
 
 
 <table>
@@ -360,11 +353,10 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#61)*
 
- Intended to be read only metadada associated with an exception waiting in
- limbo. The handles provided will only have read-only access to the resource,
- so no modification can be done to them.
-
- NOTE: Both |process| and |thread| will be valid if present.
+<p>Intended to be read only metadada associated with an exception waiting in
+limbo. The handles provided will only have read-only access to the resource,
+so no modification can be done to them.</p>
+<p>NOTE: Both |process| and |thread| will be valid if present.</p>
 
 
 <table>
@@ -382,7 +374,7 @@ Type: <code>uint32</code>
             <td>
                 <code>handle&lt;process&gt;</code>
             </td>
-            <td> Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.
+            <td><p>Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -390,9 +382,9 @@ Type: <code>uint32</code>
             <td>
                 <code>handle&lt;thread&gt;</code>
             </td>
-            <td> The thread that generated the exception.
- The process may have other threads that are not reflected here.
- Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.
+            <td><p>The thread that generated the exception.
+The process may have other threads that are not reflected here.
+Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
 </td>
         </tr></table>
 
@@ -472,8 +464,8 @@ Type: <code>uint32</code>
                     <code>32</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td> The maximum amount of exceptions that will be listed at any given time by a
- call to |ListProcessesWaitingOnException|.
+            <td><p>The maximum amount of exceptions that will be listed at any given time by a
+call to |ListProcessesWaitingOnException|.</p>
 </td>
         </tr>
     

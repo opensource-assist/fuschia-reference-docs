@@ -8,7 +8,7 @@
 ## FocusChainListener {#FocusChainListener}
 *Defined in [fuchsia.ui.focus/focus_chain.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.focus/focus_chain.fidl#30)*
 
- A FocusChainListener receives an updated FocusChain when focus changes.
+<p>A FocusChainListener receives an updated FocusChain when focus changes.</p>
 
 ### OnFocusChange {#OnFocusChange}
 
@@ -32,7 +32,7 @@
 ## FocusChainListenerRegistry {#FocusChainListenerRegistry}
 *Defined in [fuchsia.ui.focus/focus_chain.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.focus/focus_chain.fidl#36)*
 
- A FocusChainListenerRegistry allows listening to FocusChain updates.
+<p>A FocusChainListenerRegistry allows listening to FocusChain updates.</p>
 
 ### Register {#Register}
 
@@ -62,22 +62,19 @@
 
 *Defined in [fuchsia.ui.focus/focus_chain.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.focus/focus_chain.fidl#25)*
 
- A FocusChain tracks the status of the View hierarchy as View focus changes.
-
- Description. The `focus_chain` is a vector of ViewRefs in order of
- dominance in the View hierarchy; each pair of elements represents a
- parent-child relationship.  The root View is always present and occupies
- slot 0.  The newly-focused View receives a fuchsia.ui.input.FocusEvent and
- occupies the final slot in the vector.  If a View gets destroyed, a
- FocusChain holder that listens will receive a `ZX_EVENTPAIR_PEER_CLOSED`
- signal on the corresponding ViewRef.
-
- Invalidation. A FocusChain is invalid if one if its ViewRefs is invalid. If
- no View is destroyed, Scenic can still cause invalidation by raising a
- `ZX_USER_SIGNAL_0` on the root ViewRef.
-
- Reception. Only certain components may receive a FocusChain, as it
- captures global information about the scene graph.
+<p>A FocusChain tracks the status of the View hierarchy as View focus changes.</p>
+<p>Description. The <code>focus_chain</code> is a vector of ViewRefs in order of
+dominance in the View hierarchy; each pair of elements represents a
+parent-child relationship.  The root View is always present and occupies
+slot 0.  The newly-focused View receives a fuchsia.ui.input.FocusEvent and
+occupies the final slot in the vector.  If a View gets destroyed, a
+FocusChain holder that listens will receive a <code>ZX_EVENTPAIR_PEER_CLOSED</code>
+signal on the corresponding ViewRef.</p>
+<p>Invalidation. A FocusChain is invalid if one if its ViewRefs is invalid. If
+no View is destroyed, Scenic can still cause invalidation by raising a
+<code>ZX_USER_SIGNAL_0</code> on the root ViewRef.</p>
+<p>Reception. Only certain components may receive a FocusChain, as it
+captures global information about the scene graph.</p>
 
 
 <table>

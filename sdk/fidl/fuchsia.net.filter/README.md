@@ -11,8 +11,8 @@
 
 ### Enable {#Enable}
 
- Enable enables the filter if true is passed.
- It disables the filter if false is passed.
+<p>Enable enables the filter if true is passed.
+It disables the filter if false is passed.</p>
 
 #### Request
 <table>
@@ -37,7 +37,7 @@
 
 ### IsEnabled {#IsEnabled}
 
- IsEnabled returns true if the filter is enabled.
+<p>IsEnabled returns true if the filter is enabled.</p>
 
 #### Request
 <table>
@@ -57,11 +57,10 @@
 
 ### GetRules {#GetRules}
 
- GetRules gets the current rules. They do not include NAT or RDR rules.
- (use GetNatRules or GetRdrRules instead).
-
- GetRules also returns a generation number associated with the current
- rules.
+<p>GetRules gets the current rules. They do not include NAT or RDR rules.
+(use GetNatRules or GetRdrRules instead).</p>
+<p>GetRules also returns a generation number associated with the current
+rules.</p>
 
 #### Request
 <table>
@@ -91,15 +90,13 @@
 
 ### UpdateRules {#UpdateRules}
 
- UpdateRules updates the current rules. It does not update NAT or RDR rules
- (use UpdateNatRules or UpdateRdrRules instead).
-
- UpdateRules takes a generation number that is previously returned from
- GetRules. To successfully update the current rules, the generation number
- passed to UpdateRules needs to be up-to-date.
-
- If somebody else has updated the rules since the previous GetRules, the
- generation number won't match and err_generation_mismatch will be returned.
+<p>UpdateRules updates the current rules. It does not update NAT or RDR rules
+(use UpdateNatRules or UpdateRdrRules instead).</p>
+<p>UpdateRules takes a generation number that is previously returned from
+GetRules. To successfully update the current rules, the generation number
+passed to UpdateRules needs to be up-to-date.</p>
+<p>If somebody else has updated the rules since the previous GetRules, the
+generation number won't match and err_generation_mismatch will be returned.</p>
 
 #### Request
 <table>
@@ -129,10 +126,8 @@
 
 ### GetNatRules {#GetNatRules}
 
- GetNatRules gets the current NAT rules.
-
- It also returns a generation number that can be passed to UpdateNatRules.
-
+<p>GetNatRules gets the current NAT rules.</p>
+<p>It also returns a generation number that can be passed to UpdateNatRules.</p>
 
 #### Request
 <table>
@@ -162,11 +157,10 @@
 
 ### UpdateNatRules {#UpdateNatRules}
 
- UpdateNatRules updates the current NAT rules.
-
- It takes a generation number that is returned from GetNatRules. To
- successfully update the current rules, the generation number passed to
- UpdateNatRules needs to be up-to-date.
+<p>UpdateNatRules updates the current NAT rules.</p>
+<p>It takes a generation number that is returned from GetNatRules. To
+successfully update the current rules, the generation number passed to
+UpdateNatRules needs to be up-to-date.</p>
 
 #### Request
 <table>
@@ -196,9 +190,8 @@
 
 ### GetRdrRules {#GetRdrRules}
 
- GetRdrRules gets the current RDR rules.
-
- It also returns a generation number that can be passed to UpdateRdrRules.
+<p>GetRdrRules gets the current RDR rules.</p>
+<p>It also returns a generation number that can be passed to UpdateRdrRules.</p>
 
 #### Request
 <table>
@@ -228,11 +221,10 @@
 
 ### UpdateRdrRules {#UpdateRdrRules}
 
- UpdateRdrRules updates the previous RDR rules with new rules.
-
- It takes a generation number that is returned from GetRdrRules. To
- successfully update the current rules, the generation number passed to
- UpdateRdrRules needs to be up-to-date.
+<p>UpdateRdrRules updates the previous RDR rules with new rules.</p>
+<p>It takes a generation number that is returned from GetRdrRules. To
+successfully update the current rules, the generation number passed to
+UpdateRdrRules needs to be up-to-date.</p>
 
 #### Request
 <table>
@@ -269,7 +261,7 @@
 
 
 
- PortRange specifies an inclusive range of port numbers.
+<p>PortRange specifies an inclusive range of port numbers.</p>
 
 
 <table>
@@ -295,7 +287,7 @@
 
 
 
- Rule describes the conditions and the action of a rule.
+<p>Rule describes the conditions and the action of a rule.</p>
 
 
 <table>
@@ -318,7 +310,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> If true, no more rules will be tested.
+            <td><p>If true, no more rules will be tested.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -340,7 +332,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> If true, matches any address that is NOT contained in the subnet.
+            <td><p>If true, matches any address that is NOT contained in the subnet.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -362,7 +354,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> If true, matches any address that is NOT contained in the subnet.
+            <td><p>If true, matches any address that is NOT contained in the subnet.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -401,8 +393,8 @@
 
 
 
- NAT is a special rule for Network Address Translation, which rewrites
- the address of an outgoing packet.
+<p>NAT is a special rule for Network Address Translation, which rewrites
+the address of an outgoing packet.</p>
 
 
 <table>
@@ -442,8 +434,8 @@
 
 
 
- RDR is a special rule for Redirector, which forwards an incoming packet
- to a machine inside the firewall.
+<p>RDR is a special rule for Redirector, which forwards an incoming packet
+to a machine inside the firewall.</p>
 
 
 <table>
@@ -501,7 +493,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.net.filter/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/commands.fidl#8)*
 
- Status codes for commands.
+<p>Status codes for commands.</p>
 
 
 <table>
@@ -528,7 +520,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.net.filter/ruleset.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/ruleset.fidl#10)*
 
- Direction is which way (Incoming or Outgoing) a packet is moving in the stack.
+<p>Direction is which way (Incoming or Outgoing) a packet is moving in the stack.</p>
 
 
 <table>
@@ -613,7 +605,7 @@ Type: <code>uint32</code>
                     <code>128</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> The maximum number of rules.
+            <td><p>The maximum number of rules.</p>
 </td>
         </tr>
     

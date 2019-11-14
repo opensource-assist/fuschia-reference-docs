@@ -8,11 +8,11 @@
 ## Control {#Control}
 *Defined in [fuchsia.bluetooth.control/control.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.control/control.fidl#56)*
 
- Primary Bluetooth control service to access bluetooth
+<p>Primary Bluetooth control service to access bluetooth</p>
 
 ### IsBluetoothAvailable {#IsBluetoothAvailable}
 
- Returns whether or not Bluetooth is currently available on the system.
+<p>Returns whether or not Bluetooth is currently available on the system.</p>
 
 #### Request
 <table>
@@ -32,13 +32,12 @@
 
 ### SetPairingDelegate {#SetPairingDelegate}
 
- Registers a delegate to handle pairing requests.
- Indicate the capability type of the PairingDelegate using `in` and `out`.
- If your input/output capability is variable, call this function when it
- changes to update.
- Setting a pairing delegate closes the previously assigned pairing Delegate.
-
- To disable pairing, set `delegate` to null.
+<p>Registers a delegate to handle pairing requests.
+Indicate the capability type of the PairingDelegate using <code>in</code> and <code>out</code>.
+If your input/output capability is variable, call this function when it
+changes to update.
+Setting a pairing delegate closes the previously assigned pairing Delegate.</p>
+<p>To disable pairing, set <code>delegate</code> to null.</p>
 
 #### Request
 <table>
@@ -63,7 +62,7 @@
 
 ### GetAdapters {#GetAdapters}
 
- Returns information about all local adapters that are known to the system.
+<p>Returns information about all local adapters that are known to the system.</p>
 
 #### Request
 <table>
@@ -83,8 +82,8 @@
 
 ### SetActiveAdapter {#SetActiveAdapter}
 
- Sets the local adapter with the given `identifier` to act as the backing
- adapter for all Bluetooth interfaces.
+<p>Sets the local adapter with the given <code>identifier</code> to act as the backing
+adapter for all Bluetooth interfaces.</p>
 
 #### Request
 <table>
@@ -109,7 +108,7 @@
 
 ### GetActiveAdapterInfo {#GetActiveAdapterInfo}
 
- Returns information on the current active adapter, if it exists.
+<p>Returns information on the current active adapter, if it exists.</p>
 
 #### Request
 <table>
@@ -129,13 +128,12 @@
 
 ### RequestDiscovery {#RequestDiscovery}
 
- If `discovery` is true, active discovery is requested.
- When requesting discovery, general discovery for BR/EDR and LE will be
- active and newly discovered devices will be reported via
- RemoteDeviceDelegate.OnDeviceUpdate().
-
- Discovery may be active when not reqested.
- If an error occurs when starting discovery, it is reflected in `status`.
+<p>If <code>discovery</code> is true, active discovery is requested.
+When requesting discovery, general discovery for BR/EDR and LE will be
+active and newly discovered devices will be reported via
+RemoteDeviceDelegate.OnDeviceUpdate().</p>
+<p>Discovery may be active when not reqested.
+If an error occurs when starting discovery, it is reflected in <code>status</code>.</p>
 
 #### Request
 <table>
@@ -160,8 +158,8 @@
 
 ### GetKnownRemoteDevices {#GetKnownRemoteDevices}
 
- Retrieve the set of known remote devices.
- Note: These devices are not guaranteed to still be reachable.
+<p>Retrieve the set of known remote devices.
+Note: These devices are not guaranteed to still be reachable.</p>
 
 #### Request
 <table>
@@ -181,8 +179,8 @@
 
 ### SetName {#SetName}
 
- Sets the public Bluetooth name for this device, or resets to the default
- name if `name` is not present.
+<p>Sets the public Bluetooth name for this device, or resets to the default
+name if <code>name</code> is not present.</p>
 
 #### Request
 <table>
@@ -207,8 +205,8 @@
 
 ### SetDeviceClass {#SetDeviceClass}
 
- Set the Device Class for the active Bluetooth adapter.
- Values are defined in https://www.bluetooth.com/specifications/assigned-numbers/baseband
+<p>Set the Device Class for the active Bluetooth adapter.
+Values are defined in https://www.bluetooth.com/specifications/assigned-numbers/baseband</p>
 
 #### Request
 <table>
@@ -233,7 +231,7 @@
 
 ### SetDiscoverable {#SetDiscoverable}
 
- Set the discoverability of this device.
+<p>Set the discoverability of this device.</p>
 
 #### Request
 <table>
@@ -258,7 +256,7 @@
 
 ### Connect {#Connect}
 
- Attempt to connect to the remote `device_id`.
+<p>Attempt to connect to the remote <code>device_id</code>.</p>
 
 #### Request
 <table>
@@ -283,8 +281,8 @@
 
 ### Disconnect {#Disconnect}
 
- Disconnect a previously-connected device.
- Note: This does not remove a device bond, see Control::Forget.
+<p>Disconnect a previously-connected device.
+Note: This does not remove a device bond, see Control::Forget.</p>
 
 #### Request
 <table>
@@ -309,8 +307,8 @@
 
 ### Forget {#Forget}
 
- Forgets `device_id` completely, removing all bonding information.
- This will disconnect a device if it is connected.
+<p>Forgets <code>device_id</code> completely, removing all bonding information.
+This will disconnect a device if it is connected.</p>
 
 #### Request
 <table>
@@ -335,7 +333,7 @@
 
 ### SetIOCapabilities {#SetIOCapabilities}
 
- Set local IO Capabilities to use during pairing.
+<p>Set local IO Capabilities to use during pairing.</p>
 
 #### Request
 <table>
@@ -356,8 +354,8 @@
 
 ### OnActiveAdapterChanged {#OnActiveAdapterChanged}
 
- Sent when the active adapter has been updated. If `active_adapter` is
- null, then no adapter is currently active.
+<p>Sent when the active adapter has been updated. If <code>active_adapter</code> is
+null, then no adapter is currently active.</p>
 
 
 
@@ -373,7 +371,7 @@
 
 ### OnAdapterUpdated {#OnAdapterUpdated}
 
- Sent when an adapter has been updated.
+<p>Sent when an adapter has been updated.</p>
 
 
 
@@ -389,8 +387,8 @@
 
 ### OnAdapterRemoved {#OnAdapterRemoved}
 
- Sent when an adapter with the given `identifier` has been removed from
- the system.
+<p>Sent when an adapter with the given <code>identifier</code> has been removed from
+the system.</p>
 
 
 
@@ -406,7 +404,7 @@
 
 ### OnDeviceUpdated {#OnDeviceUpdated}
 
- Sent when a peer is updated.
+<p>Sent when a peer is updated.</p>
 
 
 
@@ -422,7 +420,7 @@
 
 ### OnDeviceRemoved {#OnDeviceRemoved}
 
- Sent when a peer is removed.
+<p>Sent when a peer is removed.</p>
 
 
 
@@ -442,12 +440,11 @@
 
 ### OnPairingRequest {#OnPairingRequest}
 
- Called for most pairing requests. The delegate must respond with “true” or “false” to
- either accept or reject the pairing request. If the pairing method requires a passkey
- this is returned as well.
-
- Any response from this method will be ignored if the OnPairingComplete
- event has already been sent for `device`.
+<p>Called for most pairing requests. The delegate must respond with “true” or “false” to
+either accept or reject the pairing request. If the pairing method requires a passkey
+this is returned as well.</p>
+<p>Any response from this method will be ignored if the OnPairingComplete
+event has already been sent for <code>device</code>.</p>
 
 #### Request
 <table>
@@ -487,9 +484,9 @@
 
 ### OnPairingComplete {#OnPairingComplete}
 
- Called if the pairing procedure for the device with the given ID is completed.
- This can be due to successful completion or an error (e.g. due to cancellation
- by the peer, a timeout, or disconnection) which is indicated by `status`.
+<p>Called if the pairing procedure for the device with the given ID is completed.
+This can be due to successful completion or an error (e.g. due to cancellation
+by the peer, a timeout, or disconnection) which is indicated by <code>status</code>.</p>
 
 #### Request
 <table>
@@ -510,12 +507,11 @@
 
 ### OnRemoteKeypress {#OnRemoteKeypress}
 
- Called to notify keypresses from the peer device during pairing using
- PairingMethod.PASSKEY_DISPLAY.
-
- This event is used to provide key press events to the delegate for a responsive user
- experience as the user types the passkey on the peer device. This event will be called
- once for each key-press.
+<p>Called to notify keypresses from the peer device during pairing using
+PairingMethod.PASSKEY_DISPLAY.</p>
+<p>This event is used to provide key press events to the delegate for a responsive user
+experience as the user types the passkey on the peer device. This event will be called
+once for each key-press.</p>
 
 #### Request
 <table>
@@ -536,8 +532,8 @@
 
 ### OnLocalKeypress {#OnLocalKeypress}
 
- The delegate can send this event to notify the peer of local keypresses
- during pairing using PairingMethod.PASSKEY_ENTRY.
+<p>The delegate can send this event to notify the peer of local keypresses
+during pairing using PairingMethod.PASSKEY_ENTRY.</p>
 
 
 
@@ -856,7 +852,7 @@
 
 
 
- Represents persistent local host data.
+<p>Represents persistent local host data.</p>
 
 
 <table>
@@ -865,11 +861,10 @@
             <td>
                 <code><a class='link' href='#LocalKey'>LocalKey</a>?</code>
             </td>
-            <td> The local Identity Resolving Key used by a bt-host device to generate Resolvable Private
- Addresses when privacy is enabled.
-
- NOTE: This key is distributed to LE peers during pairing procedures. The client must take
- care to assign an IRK that consistent with the local bt-host identity.
+            <td><p>The local Identity Resolving Key used by a bt-host device to generate Resolvable Private
+Addresses when privacy is enabled.</p>
+<p>NOTE: This key is distributed to LE peers during pairing procedures. The client must take
+care to assign an IRK that consistent with the local bt-host identity.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -880,8 +875,8 @@
 
 
 
- Bluetooth controller and its associated host-subsystem state that is present
- on the current platform.
+<p>Bluetooth controller and its associated host-subsystem state that is present
+on the current platform.</p>
 
 
 <table>
@@ -890,7 +885,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> UUID that uniquely identifies this adapter on the current system.
+            <td><p>UUID that uniquely identifies this adapter on the current system.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -898,7 +893,7 @@
             <td>
                 <code><a class='link' href='#TechnologyType'>TechnologyType</a></code>
             </td>
-            <td> The Bluetooth technologies that are supported by this adapter.
+            <td><p>The Bluetooth technologies that are supported by this adapter.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -906,7 +901,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Public Bluetooth device address which can be displayed to the user.
+            <td><p>Public Bluetooth device address which can be displayed to the user.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -914,9 +909,9 @@
             <td>
                 <code><a class='link' href='#AdapterState'>AdapterState</a>?</code>
             </td>
-            <td> The current adapter state. This field is only present when an AdapterInfo
- is obtained via the Control and ControlDelegate interfaces. If present,
- all optional members of `state` will also be present.
+            <td><p>The current adapter state. This field is only present when an AdapterInfo
+is obtained via the Control and ControlDelegate interfaces. If present,
+all optional members of <code>state</code> will also be present.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -927,8 +922,8 @@
 
 
 
- Contains static global information about a local Bluetooth adapter,
- including its current state.  Each adapter instance represents a physical
+<p>Contains static global information about a local Bluetooth adapter,
+including its current state.  Each adapter instance represents a physical</p>
 
 
 <table>
@@ -968,8 +963,8 @@
 
 
 
- Device Class represents the Major and Minor Device Class and Service Class of an adapter
- Values are defined in https://www.bluetooth.com/specifications/assigned-numbers/baseband
+<p>Device Class represents the Major and Minor Device Class and Service Class of an adapter
+Values are defined in https://www.bluetooth.com/specifications/assigned-numbers/baseband</p>
 
 
 <table>
@@ -988,7 +983,7 @@
 
 
 
- Represents a remote BR/EDR, LE, or dual-mode BR/EDR/LE device.
+<p>Represents a remote BR/EDR, LE, or dual-mode BR/EDR/LE device.</p>
 
 
 <table>
@@ -997,7 +992,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Uniquely identifies this device on the current system.
+            <td><p>Uniquely identifies this device on the current system.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1005,11 +1000,10 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Bluetooth device address that identifies this remote device. Clients
- should display this field to the user when `name` is not available.
-
- NOTE: Clients should use the `identifier` field to distinguish between
- remote devices instead of using their address.
+            <td><p>Bluetooth device address that identifies this remote device. Clients
+should display this field to the user when <code>name</code> is not available.</p>
+<p>NOTE: Clients should use the <code>identifier</code> field to distinguish between
+remote devices instead of using their address.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1017,7 +1011,7 @@
             <td>
                 <code><a class='link' href='#TechnologyType'>TechnologyType</a></code>
             </td>
-            <td> The Bluetooth technologies that are supported by this device.
+            <td><p>The Bluetooth technologies that are supported by this device.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1025,7 +1019,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The name of the remote device if present or known.
+            <td><p>The name of the remote device if present or known.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1033,8 +1027,8 @@
             <td>
                 <code><a class='link' href='#Appearance'>Appearance</a></code>
             </td>
-            <td> The LE appearance property. Present if this is a LE device and the
- appearance information was obtained over advertising and/or GATT.
+            <td><p>The LE appearance property. Present if this is a LE device and the
+appearance information was obtained over advertising and/or GATT.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1042,7 +1036,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Int8'>Int8</a>?</code>
             </td>
-            <td> The most recently obtained advertising signal strength for this device.
+            <td><p>The most recently obtained advertising signal strength for this device.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1050,7 +1044,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Int8'>Int8</a>?</code>
             </td>
-            <td> The most recently obtained transmission power for this device.
+            <td><p>The most recently obtained transmission power for this device.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1058,8 +1052,8 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether or not a BR/EDR and/or LE connection exists between the local
- adapter and this device.
+            <td><p>Whether or not a BR/EDR and/or LE connection exists between the local
+adapter and this device.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1067,7 +1061,7 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether or not a bond exists between the local adapter and this device.
+            <td><p>Whether or not a bond exists between the local adapter and this device.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1075,7 +1069,7 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> The list of service UUIDs known to be published on this remote device.
+            <td><p>The list of service UUIDs known to be published on this remote device.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -1112,8 +1106,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.control/pairing_delegate.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.control/pairing_delegate.fidl#11)*
 
- Input and Output Capabilities for pairing exchanges.
- See Volume 3, Part C, Table 5.3 and 5.4
+<p>Input and Output Capabilities for pairing exchanges.
+See Volume 3, Part C, Table 5.3 and 5.4</p>
 
 
 <table>
@@ -1154,33 +1148,33 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.control/pairing_delegate.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.control/pairing_delegate.fidl#24)*
 
- Different types required by the Security Manager for pairing methods.
- Bluetooth SIG has different requirements for different device capabilities.
+<p>Different types required by the Security Manager for pairing methods.
+Bluetooth SIG has different requirements for different device capabilities.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>CONSENT</code></td>
             <td><code>0</code></td>
-            <td> The user is asked to accept or reject pairing.
+            <td><p>The user is asked to accept or reject pairing.</p>
 </td>
         </tr><tr>
             <td><code>PASSKEY_DISPLAY</code></td>
             <td><code>1</code></td>
-            <td> The user is shown a 6-digit numerical passkey which they must enter on the
- peer device.
+            <td><p>The user is shown a 6-digit numerical passkey which they must enter on the
+peer device.</p>
 </td>
         </tr><tr>
             <td><code>PASSKEY_COMPARISON</code></td>
             <td><code>2</code></td>
-            <td> The user is shown a 6-digit numerical passkey which will also shown on the
- peer device. The user must compare the passkeys and accept the pairing if
- the passkeys match.
+            <td><p>The user is shown a 6-digit numerical passkey which will also shown on the
+peer device. The user must compare the passkeys and accept the pairing if
+the passkeys match.</p>
 </td>
         </tr><tr>
             <td><code>PASSKEY_ENTRY</code></td>
             <td><code>3</code></td>
-            <td> The user is asked to enter a 6-digit passkey.
+            <td><p>The user is asked to enter a 6-digit passkey.</p>
 </td>
         </tr></table>
 
@@ -1195,22 +1189,22 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DIGIT_ENTERED</code></td>
             <td><code>0</code></td>
-            <td> The user has entered a single digit.
+            <td><p>The user has entered a single digit.</p>
 </td>
         </tr><tr>
             <td><code>DIGIT_ERASED</code></td>
             <td><code>1</code></td>
-            <td> The user has erased a single digit.
+            <td><p>The user has erased a single digit.</p>
 </td>
         </tr><tr>
             <td><code>PASSKEY_CLEARED</code></td>
             <td><code>2</code></td>
-            <td> The user has cleared the entire passkey.
+            <td><p>The user has cleared the entire passkey.</p>
 </td>
         </tr><tr>
             <td><code>PASSKEY_ENTERED</code></td>
             <td><code>3</code></td>
-            <td> The user has finished entering the passkey.
+            <td><p>The user has finished entering the passkey.</p>
 </td>
         </tr></table>
 
@@ -1219,11 +1213,11 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.control/remote_device.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.control/remote_device.fidl#14)*
 
- Possible values for the LE Appearance property which describes the external
- appearance of a
- device at a high level.
- (See the Bluetooth assigned-numbers document:
- https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.gap.appearance.xml)
+<p>Possible values for the LE Appearance property which describes the external
+appearance of a
+device at a high level.
+(See the Bluetooth assigned-numbers document:
+https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.gap.appearance.xml)</p>
 
 
 <table>

@@ -8,7 +8,7 @@
 ## Device {#Device}
 *Defined in [fuchsia.hwinfo/hwinfo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hwinfo/hwinfo.fidl#34)*
 
- Device provides an interface to retrieve device-specific properties.
+<p>Device provides an interface to retrieve device-specific properties.</p>
 
 ### GetInfo {#GetInfo}
 
@@ -32,7 +32,7 @@
 ## Product {#Product}
 *Defined in [fuchsia.hwinfo/hwinfo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hwinfo/hwinfo.fidl#40)*
 
- Product provides an interface to retrieve product-specific properties.
+<p>Product provides an interface to retrieve product-specific properties.</p>
 
 ### GetInfo {#GetInfo}
 
@@ -56,7 +56,7 @@
 ## Board {#Board}
 *Defined in [fuchsia.hwinfo/hwinfo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hwinfo/hwinfo.fidl#46)*
 
- Board provides an interface to retrieve hardware-specific information.
+<p>Board provides an interface to retrieve hardware-specific information.</p>
 
 ### GetInfo {#GetInfo}
 
@@ -90,7 +90,7 @@
 
 *Defined in [fuchsia.hwinfo/hwinfo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hwinfo/hwinfo.fidl#9)*
 
- Collection of properties that is unique per device.
+<p>Collection of properties that is unique per device.</p>
 
 
 <table>
@@ -109,8 +109,8 @@
 
 *Defined in [fuchsia.hwinfo/hwinfo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hwinfo/hwinfo.fidl#15)*
 
- Collection of properties that is shared with other devices within the same
- product line.
+<p>Collection of properties that is shared with other devices within the same
+product line.</p>
 
 
 <table>
@@ -171,8 +171,8 @@
 
 *Defined in [fuchsia.hwinfo/hwinfo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hwinfo/hwinfo.fidl#27)*
 
- Collection of properties that are common among a set of devices based on
- hardware type
+<p>Collection of properties that are common among a set of devices based on
+hardware type</p>
 
 
 <table>

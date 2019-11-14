@@ -224,18 +224,18 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BAND_ANY</code></td>
             <td><code>0</code></td>
-            <td> allows the band to switch depending on device
- operating mode and environment
+            <td><p>allows the band to switch depending on device
+operating mode and environment</p>
 </td>
         </tr><tr>
             <td><code>BAND_2_4GHZ</code></td>
             <td><code>1</code></td>
-            <td> restricted to 2.4ghz bands only
+            <td><p>restricted to 2.4ghz bands only</p>
 </td>
         </tr><tr>
             <td><code>BAND_5GHZ</code></td>
             <td><code>2</code></td>
-            <td> restricted to 5ghz bands only
+            <td><p>restricted to 5ghz bands only</p>
 </td>
         </tr></table>
 
@@ -250,8 +250,8 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>STARTING</code></td>
             <td><code>0</code></td>
-            <td> confirmation that the softap interface will attempt to be
- created (this can take seconds on some devices)
+            <td><p>confirmation that the softap interface will attempt to be
+created (this can take seconds on some devices)</p>
 </td>
         </tr><tr>
             <td><code>UP</code></td>

@@ -8,7 +8,7 @@
 ## DeviceSettingsManager {#DeviceSettingsManager}
 *Defined in [fuchsia.devicesettings/devicesettings.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.devicesettings/devicesettings.fidl#22)*
 
- Manager interface used to manage settings
+<p>Manager interface used to manage settings</p>
 
 ### GetInteger {#GetInteger}
 
@@ -70,7 +70,7 @@
 
 ### SetInteger {#SetInteger}
 
- Returns false on database error and true on success.
+<p>Returns false on database error and true on success.</p>
 
 #### Request
 <table>
@@ -100,7 +100,7 @@
 
 ### SetString {#SetString}
 
- Returns false on database error and true on success.
+<p>Returns false on database error and true on success.</p>
 
 #### Request
 <table>
@@ -130,8 +130,8 @@
 
 ### Watch {#Watch}
 
- Register a watcher to be called when a setting changes
- Returns Status::ok, Status::errInvalidSetting or Status::errUnknown
+<p>Register a watcher to be called when a setting changes
+Returns Status::ok, Status::errInvalidSetting or Status::errUnknown</p>
 
 #### Request
 <table>
@@ -162,7 +162,7 @@
 ## DeviceSettingsWatcher {#DeviceSettingsWatcher}
 *Defined in [fuchsia.devicesettings/devicesettings.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.devicesettings/devicesettings.fidl#39)*
 
- A watcher for device settings changes
+<p>A watcher for device settings changes</p>
 
 ### OnChangeSettings {#OnChangeSettings}
 

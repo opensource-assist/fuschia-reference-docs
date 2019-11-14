@@ -8,7 +8,7 @@
 ## Monitor {#Monitor}
 *Defined in [fuchsia.memory/monitor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.memory/monitor.fidl#8)*
 
- Interface used to register for memory notifications.
+<p>Interface used to register for memory notifications.</p>
 
 ### Watch {#Watch}
 
@@ -28,7 +28,7 @@
 ## Watcher {#Watcher}
 *Defined in [fuchsia.memory/monitor.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.memory/monitor.fidl#47)*
 
- A watcher for memory changes
+<p>A watcher for memory changes</p>
 
 ### OnChange {#OnChange}
 
@@ -62,7 +62,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The total amount of physical memory available to the system.
+            <td><p>The total amount of physical memory available to the system.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -70,7 +70,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The amount of unallocated memory.
+            <td><p>The amount of unallocated memory.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -78,9 +78,9 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The amount of memory reserved by and mapped into the kernel for reasons
- not covered by other fields in this struct. Typically for readonly data
- like the ram disk and kernel image, and for early-boot dynamic memory.
+            <td><p>The amount of memory reserved by and mapped into the kernel for reasons
+not covered by other fields in this struct. Typically for readonly data
+like the ram disk and kernel image, and for early-boot dynamic memory.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -88,7 +88,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The amount of memory allocated to the kernel heap.
+            <td><p>The amount of memory allocated to the kernel heap.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -96,7 +96,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The portion of `total_heap_bytes` that is not in use.
+            <td><p>The portion of <code>total_heap_bytes</code> that is not in use.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -104,9 +104,9 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The amount of memory committed to VMOs, both kernel and user.
- A superset of all userspace memory.
- Does not include certain VMOs that fall under `wired_bytes`.
+            <td><p>The amount of memory committed to VMOs, both kernel and user.
+A superset of all userspace memory.
+Does not include certain VMOs that fall under <code>wired_bytes</code>.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -114,8 +114,8 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The amount of memory used for architecture-specific MMU metadata
- like page tables.
+            <td><p>The amount of memory used for architecture-specific MMU metadata
+like page tables.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -123,7 +123,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The amount of memory in use by IPC.
+            <td><p>The amount of memory in use by IPC.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -131,7 +131,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> Non-free memory that isn't accounted for in any other field.
+            <td><p>Non-free memory that isn't accounted for in any other field.</p>
 </td>
             <td>No default</td>
         </tr>

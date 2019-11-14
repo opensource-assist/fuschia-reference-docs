@@ -8,20 +8,19 @@
 ## Provider {#Provider}
 *Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#179)*
 
- Provider for display controllers.
-
- The driver supports two simultaneous clients - a primary client and a virtcon
- client.
+<p>Provider for display controllers.</p>
+<p>The driver supports two simultaneous clients - a primary client and a virtcon
+client.</p>
 
 ### OpenVirtconController {#OpenVirtconController}
 
- Open a virtcon client. `device` should be a handle to one endpoint of a
- channel that (on success) will become an open connection to a new
- instance of a display client device. A protocol request `controller`
- provides an interface to the Controller for the new device. Closing the
- connection to `device` will also close the `controller` interface. If
- the display device already has a virtcon controller then this method
- will return `ZX_ERR_ALREADY_BOUND`.
+<p>Open a virtcon client. <code>device</code> should be a handle to one endpoint of a
+channel that (on success) will become an open connection to a new
+instance of a display client device. A protocol request <code>controller</code>
+provides an interface to the Controller for the new device. Closing the
+connection to <code>device</code> will also close the <code>controller</code> interface. If
+the display device already has a virtcon controller then this method
+will return <code>ZX_ERR_ALREADY_BOUND</code>.</p>
 
 #### Request
 <table>
@@ -51,13 +50,13 @@
 
 ### OpenController {#OpenController}
 
- Open a primary client. `device` should be a handle to one endpoint of a
- channel that (on success) will become an open connection to a new
- instance of a display client device. A protocol request `controller`
- provides an interface to the Controller for the new device. Closing the
- connection to `device` will also close the `controller` interface. If
- the display device already has a primary controller then this method
- will return `ZX_ERR_ALREADY_BOUND`.
+<p>Open a primary client. <code>device</code> should be a handle to one endpoint of a
+channel that (on success) will become an open connection to a new
+instance of a display client device. A protocol request <code>controller</code>
+provides an interface to the Controller for the new device. Closing the
+connection to <code>device</code> will also close the <code>controller</code> interface. If
+the display device already has a primary controller then this method
+will return <code>ZX_ERR_ALREADY_BOUND</code>.</p>
 
 #### Request
 <table>
@@ -88,20 +87,18 @@
 ## Controller {#Controller}
 *Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#217)*
 
- Interface for accessing the display hardware.
-
- A display configuration can be separated into two parts: the layer layout and
- the layer contents. The layout includes all parts of a configuration other
- than the image handles. The active configuration is composed of the most
- recently applied layout and an active image from each layer - see
- SetLayerImage for details on how the active image is defined. Note the
- requirement that each layer has an active image. Whenever a new active
- configuration is available, it is immediately given to the hardware. This
- allows the layout and each layer's contents to advance independently when
- possible.
-
- Performing illegal actions on the interface will result in the interface
- being closed.
+<p>Interface for accessing the display hardware.</p>
+<p>A display configuration can be separated into two parts: the layer layout and
+the layer contents. The layout includes all parts of a configuration other
+than the image handles. The active configuration is composed of the most
+recently applied layout and an active image from each layer - see
+SetLayerImage for details on how the active image is defined. Note the
+requirement that each layer has an active image. Whenever a new active
+configuration is available, it is immediately given to the hardware. This
+allows the layout and each layer's contents to advance independently when
+possible.</p>
+<p>Performing illegal actions on the interface will result in the interface
+being closed.</p>
 
 ### DisplaysChanged {#DisplaysChanged}
 
@@ -806,12 +803,12 @@
 
 ### ImportImageForCapture {#ImportImageForCapture}
 
- Imports a buffer collection backed VMO into the display controller. The VMO
- will be used by display controller to capture the image being displayed.
- Returns ZX_OK along with an image_id.
- image_id must be used by the client to start capture and/or release
- resources allocated for capture.
- Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture
+<p>Imports a buffer collection backed VMO into the display controller. The VMO
+will be used by display controller to capture the image being displayed.
+Returns ZX_OK along with an image_id.
+image_id must be used by the client to start capture and/or release
+resources allocated for capture.
+Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture</p>
 
 #### Request
 <table>
@@ -846,11 +843,11 @@
 
 ### StartCapture {#StartCapture}
 
- Starts capture. Client must provide a valid signal_event_id and
- image_id. signal_event_id must have been imported into the driver
- using ImportEvent FIDL API. Image_id is the id from ImportImageForCapture.
- The client will get notified once capture is complete via signal_event_id.
- Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture
+<p>Starts capture. Client must provide a valid signal_event_id and
+image_id. signal_event_id must have been imported into the driver
+using ImportEvent FIDL API. Image_id is the id from ImportImageForCapture.
+The client will get notified once capture is complete via signal_event_id.
+Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture</p>
 
 #### Request
 <table>
@@ -880,8 +877,8 @@
 
 ### ReleaseCapture {#ReleaseCapture}
 
- Releases resources allocated for capture.
- Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture
+<p>Releases resources allocated for capture.
+Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture</p>
 
 #### Request
 <table>

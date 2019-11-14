@@ -8,12 +8,12 @@
 ## StateWatcher {#StateWatcher}
 *Defined in [fuchsia.castsetup/cast_setup.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.castsetup/cast_setup.fidl#9)*
 
- Interface that allows watching of changes to the cast setup state.
+<p>Interface that allows watching of changes to the cast setup state.</p>
 
 ### Watch {#Watch}
 
- Will immediately return on first call; subsequent calls will return on
- change.
+<p>Will immediately return on first call; subsequent calls will return on
+change.</p>
 
 #### Request
 <table>
@@ -42,29 +42,29 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.castsetup/cast_setup.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.castsetup/cast_setup.fidl#16)*
 
- Enum of different possible setup states
+<p>Enum of different possible setup states</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>UNKNOWN</code></td>
             <td><code>0</code></td>
-            <td> State is not determined.
+            <td><p>State is not determined.</p>
 </td>
         </tr><tr>
             <td><code>IN_PROGRESS</code></td>
             <td><code>1</code></td>
-            <td> Setup is not complete and is in progress.
+            <td><p>Setup is not complete and is in progress.</p>
 </td>
         </tr><tr>
             <td><code>OFFLINE</code></td>
             <td><code>2</code></td>
-            <td> Configured once but disconnected for now.
+            <td><p>Configured once but disconnected for now.</p>
 </td>
         </tr><tr>
             <td><code>COMPLETE</code></td>
             <td><code>3</code></td>
-            <td> Setup is complete and device is connected.
+            <td><p>Setup is complete and device is connected.</p>
 </td>
         </tr></table>
 

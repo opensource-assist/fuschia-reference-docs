@@ -8,15 +8,15 @@
 ## Emulator {#Emulator}
 *Defined in [fuchsia.hardware.bluetooth/emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-bluetooth/emulator.fidl#10)*
 
- Represents the bt-emulator device protocol. A bt-emulator device is used for configuring and
- publishing fake bt-hci devices.
+<p>Represents the bt-emulator device protocol. A bt-emulator device is used for configuring and
+publishing fake bt-hci devices.</p>
 
 ### Open {#Open}
 
- Opens a fake controller management channel that speaks the
- "//sdk/fidl/fuchsia.bluetooth.test.HciEmulator" protocol.
- Only one channel to this protocol can be open on a given bt-hci-emulator
- device.
+<p>Opens a fake controller management channel that speaks the
+&quot;//sdk/fidl/fuchsia.bluetooth.test.HciEmulator&quot; protocol.
+Only one channel to this protocol can be open on a given bt-hci-emulator
+device.</p>
 
 #### Request
 <table>
@@ -36,9 +36,9 @@
 
 ### OpenCommandChannel {#OpenCommandChannel}
 
- Opens a command/event channel on the provided handle. The zircon channel
- is closed in the event of an error opening the hci channel or if the hci
- channel is already associated with a handle to another zircon channel.
+<p>Opens a command/event channel on the provided handle. The zircon channel
+is closed in the event of an error opening the hci channel or if the hci
+channel is already associated with a handle to another zircon channel.</p>
 
 #### Request
 <table>
@@ -54,9 +54,9 @@
 
 ### OpenAclDataChannel {#OpenAclDataChannel}
 
- Opens a acl data channel on the provided handle. The zircon channel is
- closed in the event of an error opening the hci channel or if the hci
- channel is already associated with a handle to another zircon channel.
+<p>Opens a acl data channel on the provided handle. The zircon channel is
+closed in the event of an error opening the hci channel or if the hci
+channel is already associated with a handle to another zircon channel.</p>
 
 #### Request
 <table>
@@ -72,9 +72,9 @@
 
 ### OpenSnoopChannel {#OpenSnoopChannel}
 
- Opens a snoop channel on the provided handle. The zircon channel is
- closed in the event of an error opening the hci channel or if the hci
- channel is already associated with a handle to another zircon channel.
+<p>Opens a snoop channel on the provided handle. The zircon channel is
+closed in the event of an error opening the hci channel or if the hci
+channel is already associated with a handle to another zircon channel.</p>
 
 #### Request
 <table>
@@ -94,10 +94,10 @@
 
 ### Open {#Open}
 
- Connects to the host driver on the provided handle. The zircon channel
- is closed in the event of an error connecting to the driver. This
- channel speaks the "/src/connectivity/bluetooth/fidl/fuchsia.bluetooth.host.Host"
- protocol.
+<p>Connects to the host driver on the provided handle. The zircon channel
+is closed in the event of an error connecting to the driver. This
+channel speaks the &quot;/src/connectivity/bluetooth/fidl/fuchsia.bluetooth.host.Host&quot;
+protocol.</p>
 
 #### Request
 <table>

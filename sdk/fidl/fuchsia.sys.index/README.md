@@ -8,21 +8,18 @@
 ## ComponentIndex {#ComponentIndex}
 *Defined in [fuchsia.sys.index/index.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_index/fidl/index.fidl#14)*
 
- ComponentIndex provides search and indexing interfaces for components.
+<p>ComponentIndex provides search and indexing interfaces for components.</p>
 
 ### FuzzySearch {#FuzzySearch}
 
- Returns a list of fuchsia-pkg URL components that matches the input
- string based on fuzzy matching.
-
- The input string must be a single alphanumeric word with optional ‘_’
- and ‘-’ characters -- the allowed character set of a component name.
- Additionally, the forward slash ‘/’ is allowed, to match URI path
- segments. Period '.' is also allowed, to match file extensions.
-
- There is no support for globbing.
-
- Returns an empty list if there are no matches, or if needle is empty.
+<p>Returns a list of fuchsia-pkg URL components that matches the input
+string based on fuzzy matching.</p>
+<p>The input string must be a single alphanumeric word with optional ‘_’
+and ‘-’ characters -- the allowed character set of a component name.
+Additionally, the forward slash ‘/’ is allowed, to match URI path
+segments. Period '.' is also allowed, to match file extensions.</p>
+<p>There is no support for globbing.</p>
+<p>Returns an empty list if there are no matches, or if needle is empty.</p>
 
 #### Request
 <table>
@@ -76,7 +73,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.sys.index/index.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_index/fidl/index.fidl#8)*
 
- Errors that the FuzzySearch interface presents.
+<p>Errors that the FuzzySearch interface presents.</p>
 
 
 <table>

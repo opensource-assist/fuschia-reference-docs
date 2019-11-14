@@ -268,6 +268,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.io2/index">fuchsia.io2</a></td>
+    <td> # Library Overview</td>
+</tr>
+<tr>
     <td><a href="fuchsia.kernel/index">fuchsia.kernel</a></td>
     <td></td>
 </tr>

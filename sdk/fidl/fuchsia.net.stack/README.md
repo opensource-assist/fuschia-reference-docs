@@ -11,8 +11,8 @@
 
 ### AddEthernetInterface {#AddEthernetInterface}
 
- Add an Ethernet interface to the network stack. On success, returns the identifier assigned
- by the stack for use in subsequent calls.
+<p>Add an Ethernet interface to the network stack. On success, returns the identifier assigned
+by the stack for use in subsequent calls.</p>
 
 #### Request
 <table>
@@ -42,7 +42,7 @@
 
 ### DelEthernetInterface {#DelEthernetInterface}
 
- Remove an Ethernet interface from the network stack.
+<p>Remove an Ethernet interface from the network stack.</p>
 
 #### Request
 <table>
@@ -67,7 +67,7 @@
 
 ### ListInterfaces {#ListInterfaces}
 
- List all the interfaces available in the network stack.
+<p>List all the interfaces available in the network stack.</p>
 
 #### Request
 <table>
@@ -87,7 +87,7 @@
 
 ### GetInterfaceInfo {#GetInterfaceInfo}
 
- Retrieve info about a specific interface.
+<p>Retrieve info about a specific interface.</p>
 
 #### Request
 <table>
@@ -112,7 +112,7 @@
 
 ### EnableInterface {#EnableInterface}
 
- Enable the interface. Packets may be processed by the stack after this call is processed.
+<p>Enable the interface. Packets may be processed by the stack after this call is processed.</p>
 
 #### Request
 <table>
@@ -137,7 +137,7 @@
 
 ### DisableInterface {#DisableInterface}
 
- Disable the interface. The stack will no longer process packets after this call.
+<p>Disable the interface. The stack will no longer process packets after this call.</p>
 
 #### Request
 <table>
@@ -162,8 +162,8 @@
 
 ### AddInterfaceAddress {#AddInterfaceAddress}
 
- Add an address to the interface. If the interface already has an address of a given type that
- does not allow duplicates, this method will return an error.
+<p>Add an address to the interface. If the interface already has an address of a given type that
+does not allow duplicates, this method will return an error.</p>
 
 #### Request
 <table>
@@ -193,8 +193,8 @@
 
 ### DelInterfaceAddress {#DelInterfaceAddress}
 
- Remove the address from the interface. If the address is not assigned to the interface, an
- error is returned.
+<p>Remove the address from the interface. If the address is not assigned to the interface, an
+error is returned.</p>
 
 #### Request
 <table>
@@ -224,7 +224,7 @@
 
 ### GetForwardingTable {#GetForwardingTable}
 
- List all the entries in the forwarding table for the network stack.
+<p>List all the entries in the forwarding table for the network stack.</p>
 
 #### Request
 <table>
@@ -244,8 +244,8 @@
 
 ### AddForwardingEntry {#AddForwardingEntry}
 
- Add a new entry to the forwarding table. If the table already contains an entry with the same
- subnet, an error is returned. The entry may be deleted using DelForwardingEntry first.
+<p>Add a new entry to the forwarding table. If the table already contains an entry with the same
+subnet, an error is returned. The entry may be deleted using DelForwardingEntry first.</p>
 
 #### Request
 <table>
@@ -270,9 +270,9 @@
 
 ### DelForwardingEntry {#DelForwardingEntry}
 
- Removes the forwarding entry with the given subnet. This will not affect any overlapping
- subnets (superset or subset) so the subnet must exactly match an entry in the forwarding
- table. If no entry for the subnet exists, an error is returned.
+<p>Removes the forwarding entry with the given subnet. This will not affect any overlapping
+subnets (superset or subset) so the subnet must exactly match an entry in the forwarding
+table. If no entry for the subnet exists, an error is returned.</p>
 
 #### Request
 <table>
@@ -297,7 +297,7 @@
 
 ### EnablePacketFilter {#EnablePacketFilter}
 
- Enable the packet filter on a specific interface.
+<p>Enable the packet filter on a specific interface.</p>
 
 #### Request
 <table>
@@ -322,7 +322,7 @@
 
 ### DisablePacketFilter {#DisablePacketFilter}
 
- Disable the packet filter on a specific interface.
+<p>Disable the packet filter on a specific interface.</p>
 
 #### Request
 <table>
@@ -347,7 +347,7 @@
 
 ### EnableIpForwarding {#EnableIpForwarding}
 
- Enable IP Forwarding.
+<p>Enable IP Forwarding.</p>
 
 #### Request
 <table>
@@ -362,7 +362,7 @@
 
 ### DisableIpForwarding {#DisableIpForwarding}
 
- Disable IP Forwarding.
+<p>Disable IP Forwarding.</p>
 
 #### Request
 <table>
@@ -377,7 +377,7 @@
 
 ### OnInterfaceStatusChange {#OnInterfaceStatusChange}
 
- A status change event is triggered whenever an interface's status changes.
+<p>A status change event is triggered whenever an interface's status changes.</p>
 
 
 
@@ -397,8 +397,8 @@
 
 ### SetLogLevel {#SetLogLevel}
 
- Dynamically set a syslog level.
- See syslog/logger.go for level definition.
+<p>Dynamically set a syslog level.
+See syslog/logger.go for level definition.</p>
 
 #### Request
 <table>
@@ -584,7 +584,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#IpAddress'>IpAddress</a></code>
             </td>
-            <td> The IP address of the interface.
+            <td><p>The IP address of the interface.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -592,7 +592,7 @@
             <td>
                 <code>uint8</code>
             </td>
-            <td> The length of the network portion of the interface IP address.
+            <td><p>The length of the network portion of the interface IP address.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -611,9 +611,9 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> An opaque identifier for the interface, assigned by the stack.
- This identifier will never be 0, and will not be reused even if the device is removed and
- subsequently re-added. It is not stable across netstack instances.
+            <td><p>An opaque identifier for the interface, assigned by the stack.
+This identifier will never be 0, and will not be reused even if the device is removed and
+subsequently re-added. It is not stable across netstack instances.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -621,7 +621,7 @@
             <td>
                 <code><a class='link' href='#InterfaceProperties'>InterfaceProperties</a></code>
             </td>
-            <td> All info of an interface except the interface name.
+            <td><p>All info of an interface except the interface name.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -640,7 +640,7 @@
             <td>
                 <code>string[32]</code>
             </td>
-            <td> Human friendly name of the interface. eg. eth001, wlanx35.
+            <td><p>Human friendly name of the interface. eg. eth001, wlanx35.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -648,8 +648,8 @@
             <td>
                 <code>string[255]</code>
             </td>
-            <td> The topological path to the device, representing a stable identifier for the interface
- hardware.
+            <td><p>The topological path to the device, representing a stable identifier for the interface
+hardware.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -657,8 +657,8 @@
             <td>
                 <code>string[255]</code>
             </td>
-            <td> An unstable file path corresponding to the interface. Used in watching the creation
- and destruction of the interface, or in accessing the interface using netdump.
+            <td><p>An unstable file path corresponding to the interface. Used in watching the creation
+and destruction of the interface, or in accessing the interface using netdump.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -666,7 +666,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.hardware.ethernet/'>fuchsia.hardware.ethernet</a>/<a class='link' href='../fuchsia.hardware.ethernet/#MacAddress'>MacAddress</a>?</code>
             </td>
-            <td> The MAC address of the interface, if available.
+            <td><p>The MAC address of the interface, if available.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -674,7 +674,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The maximum transmission unit for the interface in bytes.
+            <td><p>The maximum transmission unit for the interface in bytes.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -682,8 +682,8 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The features present on the interface, as a bitfield. Valid flags are
- fuchsia.hardware.ethernet.`INFO_FEATURE_*`.
+            <td><p>The features present on the interface, as a bitfield. Valid flags are
+fuchsia.hardware.ethernet.<code>INFO_FEATURE_*</code>.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -691,7 +691,7 @@
             <td>
                 <code><a class='link' href='#AdministrativeStatus'>AdministrativeStatus</a></code>
             </td>
-            <td> The administrative status of the interface.
+            <td><p>The administrative status of the interface.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -699,7 +699,7 @@
             <td>
                 <code><a class='link' href='#PhysicalStatus'>PhysicalStatus</a></code>
             </td>
-            <td> The physical link status of the interface.
+            <td><p>The physical link status of the interface.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -707,7 +707,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='#InterfaceAddress'>InterfaceAddress</a>&gt;[255]</code>
             </td>
-            <td> The list of addresses currently assigned to the interface.
+            <td><p>The list of addresses currently assigned to the interface.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -718,7 +718,7 @@
 
 
 
- An entry in the forwarding table for the network stack.
+<p>An entry in the forwarding table for the network stack.</p>
 
 
 <table>
@@ -727,7 +727,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Subnet'>Subnet</a></code>
             </td>
-            <td> The subnet is the key for the entry in the table.
+            <td><p>The subnet is the key for the entry in the table.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -735,7 +735,7 @@
             <td>
                 <code><a class='link' href='#ForwardingDestination'>ForwardingDestination</a></code>
             </td>
-            <td> The destination that will receive the forwarded packet.
+            <td><p>The destination that will receive the forwarded packet.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -754,7 +754,7 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The opaque identifier of the device that had its status change.
+            <td><p>The opaque identifier of the device that had its status change.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -762,7 +762,7 @@
             <td>
                 <code><a class='link' href='#InterfaceStatus'>InterfaceStatus</a></code>
             </td>
-            <td> The new status.
+            <td><p>The new status.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -783,12 +783,12 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ADDED</code></td>
             <td><code>1</code></td>
-            <td> The interface is added.
+            <td><p>The interface is added.</p>
 </td>
         </tr><tr>
             <td><code>REMOVED</code></td>
             <td><code>2</code></td>
-            <td> The interface is removed.
+            <td><p>The interface is removed.</p>
 </td>
         </tr></table>
 
@@ -803,12 +803,12 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DOWN</code></td>
             <td><code>1</code></td>
-            <td> The link is not attached to the medium.
+            <td><p>The link is not attached to the medium.</p>
 </td>
         </tr><tr>
             <td><code>UP</code></td>
             <td><code>2</code></td>
-            <td> The link is attached to the medium.
+            <td><p>The link is attached to the medium.</p>
 </td>
         </tr></table>
 
@@ -823,12 +823,12 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DISABLED</code></td>
             <td><code>1</code></td>
-            <td> The interface is administratively disabled.
+            <td><p>The interface is administratively disabled.</p>
 </td>
         </tr><tr>
             <td><code>ENABLED</code></td>
             <td><code>2</code></td>
-            <td> The interface is administratively enabled.
+            <td><p>The interface is administratively enabled.</p>
 </td>
         </tr></table>
 
@@ -879,9 +879,9 @@ Type: <code>int32</code>
 
 *Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#202)*
 
- Note LogLevelFilter and protocol Log is transient,
- and is planned to be deprecated by logger.fidl's LogLevelFilter.
- This definition is to support syslog/logger.go and Netstack2.
+<p>Note LogLevelFilter and protocol Log is transient,
+and is planned to be deprecated by logger.fidl's LogLevelFilter.
+This definition is to support syslog/logger.go and Netstack2.</p>
 
 
 <table>
@@ -1173,8 +1173,8 @@ Type: <code>int32</code>
 ### ForwardingDestination {#ForwardingDestination}
 *Defined in [fuchsia.net.stack/stack.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#101)*
 
- A ForwardingDestination represents either the device that should transmit a packet or the address
- of the next hop in the route.
+<p>A ForwardingDestination represents either the device that should transmit a packet or the address
+of the next hop in the route.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -1182,14 +1182,14 @@ Type: <code>int32</code>
             <td>
                 <code>uint64</code>
             </td>
-            <td> The opaque identifier of the device to which packets should be forwarded.
+            <td><p>The opaque identifier of the device to which packets should be forwarded.</p>
 </td>
         </tr><tr>
             <td><code>next_hop</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#IpAddress'>IpAddress</a></code>
             </td>
-            <td> The IP address of the next hop, used to look up the next forwarding entry.
+            <td><p>The IP address of the next hop, used to look up the next forwarding entry.</p>
 </td>
         </tr></table>
 

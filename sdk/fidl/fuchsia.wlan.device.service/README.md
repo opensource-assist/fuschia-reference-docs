@@ -561,7 +561,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.wlan.device/'>fuchsia.wlan.device</a>/<a class='link' href='../fuchsia.wlan.device/#MacRole'>MacRole</a></code>
             </td>
-            <td> The role the iface is currently operating in, e.g., client role.
+            <td><p>The role the iface is currently operating in, e.g., client role.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -569,7 +569,7 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> The iface's global ID.
+            <td><p>The iface's global ID.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -577,7 +577,7 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> Iface's PHY ID.
+            <td><p>Iface's PHY ID.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -585,7 +585,7 @@
             <td>
                 <code>uint16</code>
             </td>
-            <td> Local ID assigned by this iface's PHY.
+            <td><p>Local ID assigned by this iface's PHY.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -593,9 +593,9 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The iface's device path.
- Note: This field is deprecated.
- Ifaces will soon have no device path.
+            <td><p>The iface's device path.
+Note: This field is deprecated.
+Ifaces will soon have no device path.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -603,7 +603,7 @@
             <td>
                 <code>uint8[6]</code>
             </td>
-            <td> The iface's MAC.
+            <td><p>The iface's MAC.</p>
 </td>
             <td>No default</td>
         </tr>

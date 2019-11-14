@@ -12,7 +12,7 @@
 
 
 
- Represents a 48-bit Bluetooth Device Address.
+<p>Represents a 48-bit Bluetooth Device Address.</p>
 
 
 <table>
@@ -21,7 +21,7 @@
             <td>
                 <code><a class='link' href='#AddressType'>AddressType</a></code>
             </td>
-            <td> Type of the device address.
+            <td><p>Type of the device address.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -29,7 +29,7 @@
             <td>
                 <code>uint8[6]</code>
             </td>
-            <td> The device address bytes in little-endian order.
+            <td><p>The device address bytes in little-endian order.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -40,13 +40,12 @@
 
 
 
- The "Class of Device/Service" is a variable-format field that defines the category of a
- Bluetooth device. The bitfield is divided into segments called "major service class",
- "major device class", and "minor device class".
-
- No assumptions about the specific functionality or characteristics of any application should be
- based solely on its inclusion within a Major or Minor device class. For more information, see
- https://www.bluetooth.com/specifications/assigned-numbers/baseband.
+<p>The &quot;Class of Device/Service&quot; is a variable-format field that defines the category of a
+Bluetooth device. The bitfield is divided into segments called &quot;major service class&quot;,
+&quot;major device class&quot;, and &quot;minor device class&quot;.</p>
+<p>No assumptions about the specific functionality or characteristics of any application should be
+based solely on its inclusion within a Major or Minor device class. For more information, see
+https://www.bluetooth.com/specifications/assigned-numbers/baseband.</p>
 
 
 <table>
@@ -65,7 +64,7 @@
 
 
 
- Generic 64-bit identifier type.
+<p>Generic 64-bit identifier type.</p>
 
 
 <table>
@@ -84,7 +83,7 @@
 
 
 
- 64-bit unique value used by the system to identify peer devices.
+<p>64-bit unique value used by the system to identify peer devices.</p>
 
 
 <table>
@@ -207,9 +206,9 @@
 
 
 
- Represents a Bluetooth UUID in its 128-bit canonical form. While the Bluetooth standard supports
- 16- and 32-bit short form UUIDs over the wire, the Fuchsia FIDL libraries require all UUIDs to
- be represented in their canonical 128-bit form.
+<p>Represents a Bluetooth UUID in its 128-bit canonical form. While the Bluetooth standard supports
+16- and 32-bit short form UUIDs over the wire, the Fuchsia FIDL libraries require all UUIDs to
+be represented in their canonical 128-bit form.</p>
 
 
 <table>
@@ -218,7 +217,7 @@
             <td>
                 <code>uint8[16]</code>
             </td>
-            <td> The UUID bytes in little-endian order.
+            <td><p>The UUID bytes in little-endian order.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -239,12 +238,12 @@ Type: <code>uint8</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>PUBLIC</code></td>
             <td><code>1</code></td>
-            <td> LE public device address or `BR/EDR` `BD_ADDR`.
+            <td><p>LE public device address or <code>BR/EDR</code> <code>BD_ADDR</code>.</p>
 </td>
         </tr><tr>
             <td><code>RANDOM</code></td>
             <td><code>2</code></td>
-            <td> LE private or static random device address.
+            <td><p>LE private or static random device address.</p>
 </td>
         </tr></table>
 
@@ -253,10 +252,10 @@ Type: <code>uint16</code>
 
 *Defined in [fuchsia.bluetooth/appearance.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/appearance.fidl#11)*
 
- Possible values for the LE Appearance property which describes the external
- appearance of a peer at a high level.
- (See the Bluetooth assigned-numbers document:
- https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.gap.appearance.xml)
+<p>Possible values for the LE Appearance property which describes the external
+appearance of a peer at a high level.
+(See the Bluetooth assigned-numbers document:
+https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.gap.appearance.xml)</p>
 
 
 <table>
@@ -479,23 +478,23 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth/connection_role.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/connection_role.fidl#10)*
 
- Refers to the role of a Bluetooth device (local or peer) in a physical channel piconet. See
- [Bluetooth Vocabulary Guide](/src/connectivity/bluetooth/docs/vocabulary.md) for more
- information.
+<p>Refers to the role of a Bluetooth device (local or peer) in a physical channel piconet. See
+<a href="/src/connectivity/bluetooth/docs/vocabulary.md">Bluetooth Vocabulary Guide</a> for more
+information.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>LEADER</code></td>
             <td><code>1</code></td>
-            <td> The role of the device that defines the piconet physical channel in BR/EDR or the
- "initiating" device in LE.
+            <td><p>The role of the device that defines the piconet physical channel in BR/EDR or the
+&quot;initiating&quot; device in LE.</p>
 </td>
         </tr><tr>
             <td><code>FOLLOWER</code></td>
             <td><code>2</code></td>
-            <td> The role of a device that synchronizes to the piconet physical channel in BR/EDR or the
- "advertising" device in LE.
+            <td><p>The role of a device that synchronizes to the piconet physical channel in BR/EDR or the
+&quot;advertising&quot; device in LE.</p>
 </td>
         </tr></table>
 
@@ -504,8 +503,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth/status.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/status.fidl#10)*
 
- DEPRECATED. Do not use these types in new code. Prefer the "error" syntax, protocol-specific
- enums and zx.status instead.
+<p>DEPRECATED. Do not use these types in new code. Prefer the &quot;error&quot; syntax, protocol-specific
+enums and zx.status instead.</p>
 
 
 <table>
@@ -578,7 +577,7 @@ Type: <code>uint32</code>
                     <code>7936</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Constants for the major device class field. The major device class is defined by bits 12-8.
+            <td><p>Constants for the major device class field. The major device class is defined by bits 12-8.</p>
 </td>
         </tr>
     <tr>

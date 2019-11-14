@@ -11,7 +11,7 @@
 
 ### GetBootProtocol {#GetBootProtocol}
 
- Get the HID boot interface protocol this device supports
+<p>Get the HID boot interface protocol this device supports</p>
 
 #### Request
 <table>
@@ -31,8 +31,8 @@
 
 ### GetDeviceIds {#GetDeviceIds}
 
- Get the Device's IDs. If this is a real HID device, the IDs will come from the device.
- If it is a mock HID decice, the IDs will either be 0's or user defined.
+<p>Get the Device's IDs. If this is a real HID device, the IDs will come from the device.
+If it is a mock HID decice, the IDs will either be 0's or user defined.</p>
 
 #### Request
 <table>
@@ -52,7 +52,7 @@
 
 ### GetReportDescSize {#GetReportDescSize}
 
- Get the size of the report descriptor
+<p>Get the size of the report descriptor</p>
 
 #### Request
 <table>
@@ -72,7 +72,7 @@
 
 ### GetReportDesc {#GetReportDesc}
 
- Get the report descriptor
+<p>Get the report descriptor</p>
 
 #### Request
 <table>
@@ -92,7 +92,7 @@
 
 ### GetNumReports {#GetNumReports}
 
- Get the number of reports in the report descriptor
+<p>Get the number of reports in the report descriptor</p>
 
 #### Request
 <table>
@@ -112,7 +112,7 @@
 
 ### GetReportIds {#GetReportIds}
 
- Get the report ids that are used in the report descriptor
+<p>Get the report ids that are used in the report descriptor</p>
 
 #### Request
 <table>
@@ -132,7 +132,7 @@
 
 ### GetReportSize {#GetReportSize}
 
- Get the size of a single report for the given (type, id) pair.
+<p>Get the size of a single report for the given (type, id) pair.</p>
 
 #### Request
 <table>
@@ -167,7 +167,7 @@
 
 ### GetMaxInputReportSize {#GetMaxInputReportSize}
 
- Get the maximum size of a single input report.
+<p>Get the maximum size of a single input report.</p>
 
 #### Request
 <table>
@@ -187,13 +187,13 @@
 
 ### GetReports {#GetReports}
 
- Receive up to MAX_REPORT_DATA bytes of reports that have been sent from a device.
- This is the interface that is supposed to be used for continuous polling.
- Multiple reports can be returned from this API at a time, it is up to the client
- to do the parsing of the reports with the correct sizes and offset.
- It is guaranteed that only whole reports will be sent.
- If there are no reports, this will return ZX_ERR_SHOULD_WAIT, and the client can
- wait on the event from |GetReportsEvent|.
+<p>Receive up to MAX_REPORT_DATA bytes of reports that have been sent from a device.
+This is the interface that is supposed to be used for continuous polling.
+Multiple reports can be returned from this API at a time, it is up to the client
+to do the parsing of the reports with the correct sizes and offset.
+It is guaranteed that only whole reports will be sent.
+If there are no reports, this will return ZX_ERR_SHOULD_WAIT, and the client can
+wait on the event from |GetReportsEvent|.</p>
 
 #### Request
 <table>
@@ -218,8 +218,8 @@
 
 ### GetReportsEvent {#GetReportsEvent}
 
- Receive an event that will be signalled when there are reports in the
- Device's report FIFO.
+<p>Receive an event that will be signalled when there are reports in the
+Device's report FIFO.</p>
 
 #### Request
 <table>
@@ -244,8 +244,8 @@
 
 ### GetReport {#GetReport}
 
- Get a single report of the given (type, id) pair.  This interface is not intended
- to be used for continuous polling of the reports.
+<p>Get a single report of the given (type, id) pair.  This interface is not intended
+to be used for continuous polling of the reports.</p>
 
 #### Request
 <table>
@@ -280,7 +280,7 @@
 
 ### SetReport {#SetReport}
 
- Set a single report of the given (type, id) pair.
+<p>Set a single report of the given (type, id) pair.</p>
 
 #### Request
 <table>
@@ -315,7 +315,7 @@
 
 ### SetTraceId {#SetTraceId}
 
- Set the trace ID that is used for HID report flow events.
+<p>Set the trace ID that is used for HID report flow events.</p>
 
 #### Request
 <table>
@@ -338,11 +338,11 @@
 
 
 
- DeviceIds lets a clients determine the vendor and product id for a device.
- If the device is real HID device, then the id information
- will come from the device itself. Mock HID devices may assign the
- ids in the driver. If the mock HID driver does not assign ids, zeros
- will be used instead.
+<p>DeviceIds lets a clients determine the vendor and product id for a device.
+If the device is real HID device, then the id information
+will come from the device itself. Mock HID devices may assign the
+ids in the driver. If the mock HID driver does not assign ids, zeros
+will be used instead.</p>
 
 
 <table>

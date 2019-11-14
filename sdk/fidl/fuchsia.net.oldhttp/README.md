@@ -30,9 +30,9 @@
 
 ### Start {#Start}
 
- Loads the given `request`, asynchronously producing `response`. Consult
- `response` to determine if the request resulted in an error, was
- redirected, or has a response body to be consumed.
+<p>Loads the given <code>request</code>, asynchronously producing <code>response</code>. Consult
+<code>response</code> to determine if the request resulted in an error, was
+redirected, or has a response body to be consumed.</p>
 
 #### Request
 <table>
@@ -57,9 +57,9 @@
 
 ### FollowRedirect {#FollowRedirect}
 
- If the request passed to `Start` had `auto_follow_redirects` set to false,
- then upon receiving an URLResponse with a non-NULL `redirect_url` field,
- `FollowRedirect` may be called to load the URL indicated by the redirect.
+<p>If the request passed to <code>Start</code> had <code>auto_follow_redirects</code> set to false,
+then upon receiving an URLResponse with a non-NULL <code>redirect_url</code> field,
+<code>FollowRedirect</code> may be called to load the URL indicated by the redirect.</p>
 
 #### Request
 <table>
@@ -79,7 +79,7 @@
 
 ### QueryStatus {#QueryStatus}
 
- Query status about the URLLoader.
+<p>Query status about the URLLoader.</p>
 
 #### Request
 <table>
@@ -164,8 +164,8 @@
             <td>
                 <code><a class='link' href='#HttpError'>HttpError</a>?</code>
             </td>
-            <td> If the loader has failed due to a network level error, this field will be
- set.
+            <td><p>If the loader has failed due to a network level error, this field will be
+set.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -173,9 +173,9 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Set to true if the URLLoader is still working. Set to false once an error
- is encountered or the response body is completely copied to the response
- body stream.
+            <td><p>Set to true if the URLLoader is still working. Set to false once an error
+is encountered or the response body is completely copied to the response
+body stream.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -194,7 +194,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The URL to load.
+            <td><p>The URL to load.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -202,7 +202,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The HTTP method if applicable.
+            <td><p>The HTTP method if applicable.</p>
 </td>
             <td>GET</td>
         </tr><tr>
@@ -210,7 +210,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='#HttpHeader'>HttpHeader</a>&gt;?</code>
             </td>
-            <td> Additional HTTP request headers.
+            <td><p>Additional HTTP request headers.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -218,9 +218,9 @@
             <td>
                 <code><a class='link' href='#URLBody'>URLBody</a>?</code>
             </td>
-            <td> The payload for the request body. For HTTP requests, the method must be set
- to "POST" or "PUT". If a buffer is used for the body, a Content-Length
- header will automatically be added.
+            <td><p>The payload for the request body. For HTTP requests, the method must be set
+to &quot;POST&quot; or &quot;PUT&quot;. If a buffer is used for the body, a Content-Length
+header will automatically be added.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -228,9 +228,9 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The buffer size of the socket returned in URLResponse's `body` member.
- A value of 0 indicates that the default buffer size should be used.  This
- value is just a suggestion. The URLLoader may choose to ignore this value.
+            <td><p>The buffer size of the socket returned in URLResponse's <code>body</code> member.
+A value of 0 indicates that the default buffer size should be used.  This
+value is just a suggestion. The URLLoader may choose to ignore this value.</p>
 </td>
             <td>0</td>
         </tr><tr>
@@ -238,8 +238,8 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> If set to true, then redirects will be automatically followed. Otherwise,
- when a redirect is encounterd, FollowRedirect must be called to proceed.
+            <td><p>If set to true, then redirects will be automatically followed. Otherwise,
+when a redirect is encounterd, FollowRedirect must be called to proceed.</p>
 </td>
             <td>false</td>
         </tr><tr>
@@ -247,7 +247,7 @@
             <td>
                 <code><a class='link' href='#CacheMode'>CacheMode</a></code>
             </td>
-            <td> The cache behavior for the request.
+            <td><p>The cache behavior for the request.</p>
 </td>
             <td><a class='link' href='#CacheMode.DEFAULT'>CacheMode.DEFAULT</a></td>
         </tr><tr>
@@ -255,7 +255,7 @@
             <td>
                 <code><a class='link' href='#ResponseBodyMode'>ResponseBodyMode</a></code>
             </td>
-            <td> The response body mode.
+            <td><p>The response body mode.</p>
 </td>
             <td><a class='link' href='#ResponseBodyMode.STREAM'>ResponseBodyMode.STREAM</a></td>
         </tr>
@@ -274,7 +274,7 @@
             <td>
                 <code><a class='link' href='#HttpError'>HttpError</a>?</code>
             </td>
-            <td> If the response resulted in a network level error, this field will be set.
+            <td><p>If the response resulted in a network level error, this field will be set.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -282,7 +282,7 @@
             <td>
                 <code><a class='link' href='#URLBody'>URLBody</a>?</code>
             </td>
-            <td> The response body.
+            <td><p>The response body.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -290,7 +290,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The final URL of the response, after redirects have been followed.
+            <td><p>The final URL of the response, after redirects have been followed.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -298,7 +298,7 @@
             <td>
                 <code>uint32</code>
             </td>
-            <td> The HTTP status code. 0 if not applicable.
+            <td><p>The HTTP status code. 0 if not applicable.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -306,7 +306,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The HTTP status line.
+            <td><p>The HTTP status line.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -314,7 +314,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='#HttpHeader'>HttpHeader</a>&gt;?</code>
             </td>
-            <td> The HTTP response headers.
+            <td><p>The HTTP response headers.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -322,7 +322,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The MIME type of the response body.
+            <td><p>The MIME type of the response body.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -330,7 +330,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The character set of the response body.
+            <td><p>The character set of the response body.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -338,9 +338,9 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> These fields are set to non-NULL if this response corresponds to a
- redirect.  Call the `FollowRedirect` method on the URLLoader instance to
- follow this redirect.
+            <td><p>These fields are set to non-NULL if this response corresponds to a
+redirect.  Call the <code>FollowRedirect</code> method on the URLLoader instance to
+follow this redirect.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -369,28 +369,28 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.net.oldhttp/url_request.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.oldhttp/url_request.fidl#8)*
 
- Specify the cache behavior of the request.
+<p>Specify the cache behavior of the request.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEFAULT</code></td>
             <td><code>0</code></td>
-            <td> Default behavior.
+            <td><p>Default behavior.</p>
 </td>
         </tr><tr>
             <td><code>BYPASS_CACHE</code></td>
             <td><code>1</code></td>
-            <td> The HTTP request will bypass the local cache and will have a
- 'Cache-Control: nocache' header added in that causes any proxy servers
- to also not satisfy the request from their cache.  This has the effect
- of forcing a full end-to-end fetch.
+            <td><p>The HTTP request will bypass the local cache and will have a
+'Cache-Control: nocache' header added in that causes any proxy servers
+to also not satisfy the request from their cache.  This has the effect
+of forcing a full end-to-end fetch.</p>
 </td>
         </tr><tr>
             <td><code>ONLY_FROM_CACHE</code></td>
             <td><code>2</code></td>
-            <td> The HTTP request will fail if it cannot serve the requested resource
- from the cache (or some equivalent local store).
+            <td><p>The HTTP request will fail if it cannot serve the requested resource
+from the cache (or some equivalent local store).</p>
 </td>
         </tr></table>
 
@@ -399,26 +399,26 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.net.oldhttp/url_request.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.oldhttp/url_request.fidl#24)*
 
- Specify the mechanism used to return the response body.
+<p>Specify the mechanism used to return the response body.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>BUFFER</code></td>
             <td><code>0</code></td>
-            <td> The complete response body should be returned in the `buffer` field of
- the response body.
+            <td><p>The complete response body should be returned in the <code>buffer</code> field of
+the response body.</p>
 </td>
         </tr><tr>
             <td><code>STREAM</code></td>
             <td><code>1</code></td>
-            <td> The response body should be streamed through the `stream` field of the
- response body.
+            <td><p>The response body should be streamed through the <code>stream</code> field of the
+response body.</p>
 </td>
         </tr><tr>
             <td><code>BUFFER_OR_STREAM</code></td>
             <td><code>2</code></td>
-            <td> The response body may be returned as a buffer or stream.
+            <td><p>The response body may be returned as a buffer or stream.</p>
 </td>
         </tr></table>
 
@@ -438,14 +438,14 @@ Type: <code>uint32</code>
             <td>
                 <code>handle&lt;socket&gt;</code>
             </td>
-            <td> A socket that will contain the streaming request or response body.
+            <td><p>A socket that will contain the streaming request or response body.</p>
 </td>
         </tr><tr>
             <td><code>buffer</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.mem/'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/#Buffer'>Buffer</a></code>
             </td>
-            <td> A shared buffer that will contain the complete request or response body.
+            <td><p>A shared buffer that will contain the complete request or response body.</p>
 </td>
         </tr></table>
 

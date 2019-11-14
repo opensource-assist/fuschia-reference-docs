@@ -8,18 +8,16 @@
 ## PropertyProvider {#PropertyProvider}
 *Defined in [fuchsia.intl/property_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.intl/property_provider.fidl#16)*
 
- Provides internationalization properties.
-
- Components that need to change their behavior in response to the user's internationalization
- profile may request an instance of this service from their namespace, if available. A component
- may choose to pass along the service that it received from its parent to its own children, or to
- override it and apply additional customizations.
-
- See also `fuchsia.ui.views.View`.
+<p>Provides internationalization properties.</p>
+<p>Components that need to change their behavior in response to the user's internationalization
+profile may request an instance of this service from their namespace, if available. A component
+may choose to pass along the service that it received from its parent to its own children, or to
+override it and apply additional customizations.</p>
+<p>See also <code>fuchsia.ui.views.View</code>.</p>
 
 ### GetProfile {#GetProfile}
 
- Gets the user's internationalization profile.
+<p>Gets the user's internationalization profile.</p>
 
 #### Request
 <table>
@@ -39,7 +37,7 @@
 
 ### OnChange {#OnChange}
 
- Indicates that the properties may have changed and the client should query them again.
+<p>Indicates that the properties may have changed and the client should query them again.</p>
 
 
 
@@ -57,10 +55,9 @@
 
 
 
- Typed identifier for a single Locale, which is a set of internationalization-related properties.
-
- Most APIs that consume locales will probably want to accept a vector of locales to account for
- priority.
+<p>Typed identifier for a single Locale, which is a set of internationalization-related properties.</p>
+<p>Most APIs that consume locales will probably want to accept a vector of locales to account for
+priority.</p>
 
 
 <table>
@@ -69,22 +66,19 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Unicode BCP-47 Locale Identifier
- (http://www.unicode.org/reports/tr35/#BCP_47_Conformance).
-
- Must be canonicalized and well-formed. This field should not be populated from arbitrary
- user- or third-party input, but instead generated programmatically.
-
- Includes language, region, script, and variant, plus Unicode extensions (under the "u"
- singleton). Other extensions are allowed but ignored.
-
- Examples:
-   "en-US"
-     American English
-   "fr-u-hc-h12"
-     French, with 12-hour clock
-   "ar-EG-u-fw-mon-nu-latn"
-     Egyptian Arabic with "Latin" numerals and first day of week on Monday
+            <td><p>Unicode BCP-47 Locale Identifier
+(http://www.unicode.org/reports/tr35/#BCP_47_Conformance).</p>
+<p>Must be canonicalized and well-formed. This field should not be populated from arbitrary
+user- or third-party input, but instead generated programmatically.</p>
+<p>Includes language, region, script, and variant, plus Unicode extensions (under the &quot;u&quot;
+singleton). Other extensions are allowed but ignored.</p>
+<p>Examples:
+&quot;en-US&quot;
+American English
+&quot;fr-u-hc-h12&quot;
+French, with 12-hour clock
+&quot;ar-EG-u-fw-mon-nu-latn&quot;
+Egyptian Arabic with &quot;Latin&quot; numerals and first day of week on Monday</p>
 </td>
             <td>No default</td>
         </tr>
@@ -95,7 +89,7 @@
 
 
 
- Typed identifier for a single calendar system. Currently consists only of a calendar ID.
+<p>Typed identifier for a single calendar system. Currently consists only of a calendar ID.</p>
 
 
 <table>
@@ -104,13 +98,12 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Unicode BCP-47 Locale Identifier with an undefined language tag and a single extension
- specifying the calendar ID (from
- https://unicode.org/repos/cldr/trunk/common/bcp47/calendar.xml).
-
- Examples:
-   "und-u-ca-gregory"
-   "und-u-ca-islamic"
+            <td><p>Unicode BCP-47 Locale Identifier with an undefined language tag and a single extension
+specifying the calendar ID (from
+https://unicode.org/repos/cldr/trunk/common/bcp47/calendar.xml).</p>
+<p>Examples:
+&quot;und-u-ca-gregory&quot;
+&quot;und-u-ca-islamic&quot;</p>
 </td>
             <td>No default</td>
         </tr>
@@ -121,7 +114,7 @@
 
 
 
- Typed identifier for a time zone.
+<p>Typed identifier for a time zone.</p>
 
 
 <table>
@@ -130,7 +123,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> Time zone ID from tzdata, e.g. "America/New_York". See https://www.iana.org/time-zones.
+            <td><p>Time zone ID from tzdata, e.g. &quot;America/New_York&quot;. See https://www.iana.org/time-zones.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -145,7 +138,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.intl/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.intl/intl.fidl#57)*
 
- Selection of temperature unit.
+<p>Selection of temperature unit.</p>
 
 
 <table>
@@ -168,7 +161,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.intl/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.intl/intl.fidl#8)*
 
- Typed identifier for a regulatory domain as specified in the IEEE 802.11 standard.
+<p>Typed identifier for a regulatory domain as specified in the IEEE 802.11 standard.</p>
 
 
 <table>
@@ -179,8 +172,8 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> ISO 3166-1 alpha-2, a two-letter code representing a domain of operation.
- (https://www.iso.org/publication/PUB500001.html)
+            <td><p>ISO 3166-1 alpha-2, a two-letter code representing a domain of operation.
+(https://www.iso.org/publication/PUB500001.html)</p>
 </td>
         </tr></table>
 
@@ -189,13 +182,11 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.intl/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.intl/intl.fidl#69)*
 
- A collection of ranked internationalization properties.
-
- There is no implied origin for this information; it might come from a user account, device
- settings, a synthesis of user settings and app-specific overrides, or anywhere else.
-
- Language-independent properties that are supported by Unicode BCP-47 Locale IDs (e.g.
- first-day-of-week, time zone) are denormalized into the locale IDs in `locales`.
+<p>A collection of ranked internationalization properties.</p>
+<p>There is no implied origin for this information; it might come from a user account, device
+settings, a synthesis of user settings and app-specific overrides, or anywhere else.</p>
+<p>Language-independent properties that are supported by Unicode BCP-47 Locale IDs (e.g.
+first-day-of-week, time zone) are denormalized into the locale IDs in <code>locales</code>.</p>
 
 
 <table>
@@ -206,7 +197,7 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#LocaleId'>LocaleId</a>&gt;</code>
             </td>
-            <td> Ranked list of locales (in descending order).
+            <td><p>Ranked list of locales (in descending order).</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -214,9 +205,9 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#CalendarId'>CalendarId</a>&gt;</code>
             </td>
-            <td> Ranked list of calendars (in descending order). The first entry is the primary calendar, and
- will be equal to the calendar indicated in `locales`.
- The list is intended for use by applications that can display multiple calendar systems.
+            <td><p>Ranked list of calendars (in descending order). The first entry is the primary calendar, and
+will be equal to the calendar indicated in <code>locales</code>.
+The list is intended for use by applications that can display multiple calendar systems.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -224,11 +215,11 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#TimeZoneId'>TimeZoneId</a>&gt;</code>
             </td>
-            <td> Ranked list of time zones (in descending order). The first entry is the primary time zone,
- which should be used by default for formatting dates and times; it will be equal to the
- calendar indicated in `locales`.
- The list is intended for use by applications that can display multiple time zones, e.g.
- a world clock.
+            <td><p>Ranked list of time zones (in descending order). The first entry is the primary time zone,
+which should be used by default for formatting dates and times; it will be equal to the
+calendar indicated in <code>locales</code>.
+The list is intended for use by applications that can display multiple time zones, e.g.
+a world clock.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -236,7 +227,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#TemperatureUnit'>TemperatureUnit</a></code>
             </td>
-            <td> Selected temperature unit.
+            <td><p>Selected temperature unit.</p>
 </td>
         </tr></table>
 

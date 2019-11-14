@@ -8,58 +8,51 @@
 ## Agent {#Agent}
 *Defined in [fuchsia.modular/agent.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent.fidl#38)*
 
- An agent is a component whose lifecycle is not tied to any Story.
-
- - An agent is a singleton instance.
- - Components can connect to an Agent using the
-   fuchsia.modular.ComponentContext capability.
- - An agent vends services to components that connect to it over a
-   ServiceProvider.
- - An agent is started when someone wants to connect to it, or when a task it
-   has scheduled has triggered.
-
- This FIDL interface should be implemented by a component that is meant to be
- run as an Agent.
-
- When an agent application implements the `Lifecycle` interface, it can
- receive a signal for when it should stop. An agent may be stopped for the
- following reasons:
-
- (1) All `AgentController` connections associated with this agent are closed.
-
- (2) The system wants to optimize for resources.
-
- Once the framework delivers a `Lifecycle.Terminate()`, the agent application
- may exit itself, or is killed by framework after a timeout.
-
- For more info see:
- - fuchsia.modular.AgentContext and fuchsia.modular.ComponentContext for
-   capabilities an agent has.
- - fuchsia.modular.Lifecycle for how Components get lifecycle events.
+<p>An agent is a component whose lifecycle is not tied to any Story.</p>
+<ul>
+<li>An agent is a singleton instance.</li>
+<li>Components can connect to an Agent using the
+fuchsia.modular.ComponentContext capability.</li>
+<li>An agent vends services to components that connect to it over a
+ServiceProvider.</li>
+<li>An agent is started when someone wants to connect to it, or when a task it
+has scheduled has triggered.</li>
+</ul>
+<p>This FIDL interface should be implemented by a component that is meant to be
+run as an Agent.</p>
+<p>When an agent application implements the <code>Lifecycle</code> interface, it can
+receive a signal for when it should stop. An agent may be stopped for the
+following reasons:</p>
+<p>(1) All <code>AgentController</code> connections associated with this agent are closed.</p>
+<p>(2) The system wants to optimize for resources.</p>
+<p>Once the framework delivers a <code>Lifecycle.Terminate()</code>, the agent application
+may exit itself, or is killed by framework after a timeout.</p>
+<p>For more info see:</p>
+<ul>
+<li>fuchsia.modular.AgentContext and fuchsia.modular.ComponentContext for
+capabilities an agent has.</li>
+<li>fuchsia.modular.Lifecycle for how Components get lifecycle events.</li>
+</ul>
 
 ### Connect {#Connect}
 
- Called when some component tries to connect to this agent. `requestor_url`
- identifies the requesting client. Different client roles are identified differently:
-    * For Module clients in the general case, `requestor_url` will be the name provided at
-      Module create time (ie, in calls to StoryPuppetMaster's StoryCommand.AddMod/mod_name)
-      with :'s escaped (see below for a complete explanation).
-    * For all other clients (Agents and Shells), `requestor_url` is set to the requesting
-      component's URL.
-
- `services` must be connected to an implementation of fuchsia.sys.ServiceProvider offering
- services specific to the requesting client.
-
- Details on module naming: modules are named hierarchically based on what client created
- them. This is called a module path. If created by 1) an agent or 2) an existing module, the
- path is constructed differently.
-
- In the case of (2), the module path is the concatenation of the existing module's path with
- the new module's name, as provided by the parent module. In the case of (1), the module
- path is the concatenation of StoryCommand.AddMod/mod_name and
- StoryCommand.AddMod/surface_relation_parent.
-
- The full path is encoded into `requestor_url` as escape_colons(module_path).join(':').
+<p>Called when some component tries to connect to this agent. <code>requestor_url</code>
+identifies the requesting client. Different client roles are identified differently:
+* For Module clients in the general case, <code>requestor_url</code> will be the name provided at
+Module create time (ie, in calls to StoryPuppetMaster's StoryCommand.AddMod/mod_name)
+with :'s escaped (see below for a complete explanation).
+* For all other clients (Agents and Shells), <code>requestor_url</code> is set to the requesting
+component's URL.</p>
+<p><code>services</code> must be connected to an implementation of fuchsia.sys.ServiceProvider offering
+services specific to the requesting client.</p>
+<p>Details on module naming: modules are named hierarchically based on what client created
+them. This is called a module path. If created by 1) an agent or 2) an existing module, the
+path is constructed differently.</p>
+<p>In the case of (2), the module path is the concatenation of the existing module's path with
+the new module's name, as provided by the parent module. In the case of (1), the module
+path is the concatenation of StoryCommand.AddMod/mod_name and
+StoryCommand.AddMod/surface_relation_parent.</p>
+<p>The full path is encoded into <code>requestor_url</code> as escape_colons(module_path).join(':').</p>
 
 #### Request
 <table>
@@ -81,12 +74,12 @@
 ## AgentContext {#AgentContext}
 *Defined in [fuchsia.modular/agent_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_context.fidl#11)*
 
- An instance of this service is exposed to agents in their namespace.
+<p>An instance of this service is exposed to agents in their namespace.</p>
 
 ### GetComponentContext {#GetComponentContext}
 
- DEPRECATED: ComponentContext is now available in the
- namespace/environment for Modules.
+<p>DEPRECATED: ComponentContext is now available in the
+namespace/environment for Modules.</p>
 
 #### Request
 <table>
@@ -102,9 +95,9 @@
 
 ### GetEntityReferenceFactory {#GetEntityReferenceFactory}
 
- Connects to an EntityReferenceFactory for this Agent. Entity references
- obtained from this EntityReferenceFactory will be resolved back to this
- Agent.
+<p>Connects to an EntityReferenceFactory for this Agent. Entity references
+obtained from this EntityReferenceFactory will be resolved back to this
+Agent.</p>
 
 #### Request
 <table>
@@ -120,7 +113,7 @@
 
 ### GetTokenManager {#GetTokenManager}
 
- The auth token manager this Agent may use for accessing external services.
+<p>The auth token manager this Agent may use for accessing external services.</p>
 
 #### Request
 <table>
@@ -137,22 +130,20 @@
 ## AgentController {#AgentController}
 *Defined in [fuchsia.modular/agent_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/agent/agent_controller/agent_controller.fidl#12)*
 
- This interface is used by the caller of ComponentContext::ConnectToAgent() to
- tell the framework that it is still interested in keeping this Agent running.
-
- The system counts AgentController connections and terminates this Agent if
- the count goes to zero.
+<p>This interface is used by the caller of ComponentContext::ConnectToAgent() to
+tell the framework that it is still interested in keeping this Agent running.</p>
+<p>The system counts AgentController connections and terminates this Agent if
+the count goes to zero.</p>
 
 ## BaseShell {#BaseShell}
 *Defined in [fuchsia.modular/base_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/basemgr/base_shell.fidl#18)*
 
- This interface is implemented by a base shell. Dependencies are passed to it
- in Initialize() on startup. The base shell is also expected to implement
- Lifecycle in order to receive a Terminate() call on teardown.
-
- In one component instance there can only be one BaseShell service instance.
- The ViewOwner request is sent to the separate ViewProvider service. This way,
- the base shell may be implemented as a flutter component.
+<p>This interface is implemented by a base shell. Dependencies are passed to it
+in Initialize() on startup. The base shell is also expected to implement
+Lifecycle in order to receive a Terminate() call on teardown.</p>
+<p>In one component instance there can only be one BaseShell service instance.
+The ViewOwner request is sent to the separate ViewProvider service. This way,
+the base shell may be implemented as a flutter component.</p>
 
 ### Initialize {#Initialize}
 
@@ -176,10 +167,10 @@
 
 ### GetAuthenticationUIContext {#GetAuthenticationUIContext}
 
- This method may be invoked by the basemgr to request an
- AuthenticationUIContext. `request` will then be used to request the base
- shell to show login screen during a UserProvider.AddUser() or if a token
- needs to be refreshed.
+<p>This method may be invoked by the basemgr to request an
+AuthenticationUIContext. <code>request</code> will then be used to request the base
+shell to show login screen during a UserProvider.AddUser() or if a token
+needs to be refreshed.</p>
 
 #### Request
 <table>
@@ -196,14 +187,14 @@
 ## BaseShellContext {#BaseShellContext}
 *Defined in [fuchsia.modular/base_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/basemgr/base_shell.fidl#32)*
 
- This interface allows the `BaseShell` to request capabilities from the
- `Basemgr` in a way that is more explicit about the services that are
- offered than a generic `ServiceProvider`.
+<p>This interface allows the <code>BaseShell</code> to request capabilities from the
+<code>Basemgr</code> in a way that is more explicit about the services that are
+offered than a generic <code>ServiceProvider</code>.</p>
 
 ### GetUserProvider {#GetUserProvider}
 
- Acquires the user provider service, which is used to add/remove/list and
- authenticate users.
+<p>Acquires the user provider service, which is used to add/remove/list and
+authenticate users.</p>
 
 #### Request
 <table>
@@ -219,8 +210,8 @@
 
 ### GetPresentation {#GetPresentation}
 
- Acquires the presentation service, which is assumed to already be
- connected to the presenter.
+<p>Acquires the presentation service, which is assumed to already be
+connected to the presenter.</p>
 
 #### Request
 <table>
@@ -237,24 +228,21 @@
 ## UserProvider {#UserProvider}
 *Defined in [fuchsia.modular/user_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/basemgr/user_provider.fidl#13)*
 
- Given by the `Basemgr` to the `BaseShell` at Initialize() so the
- `BaseShell` can get information about the users of this device from the
- `Basemgr`, and act on the provided information (including extending the
- user database).
+<p>Given by the <code>Basemgr</code> to the <code>BaseShell</code> at Initialize() so the
+<code>BaseShell</code> can get information about the users of this device from the
+<code>Basemgr</code>, and act on the provided information (including extending the
+user database).</p>
 
 ### AddUser {#AddUser}
 
- Adds information of a user that can be used to authenticate her/him to this
- device. Once successfully added, the user can login to the same device via
- Login().
-
- `identity_provider` is the identity provider to use for identification.
-
- `device_name` is what the user wants to name the device. If null or empty
- the device's current hostname will be used.
-
- `account` is NULL if there was an error during identification and
- `error_code` is set.
+<p>Adds information of a user that can be used to authenticate her/him to this
+device. Once successfully added, the user can login to the same device via
+Login().</p>
+<p><code>identity_provider</code> is the identity provider to use for identification.</p>
+<p><code>device_name</code> is what the user wants to name the device. If null or empty
+the device's current hostname will be used.</p>
+<p><code>account</code> is NULL if there was an error during identification and
+<code>error_code</code> is set.</p>
 
 #### Request
 <table>
@@ -284,9 +272,8 @@
 
 ### RemoveUser {#RemoveUser}
 
- Removes information of a user from the local user database.
-
- `account_id` is received from either AddUser() or PreviousUsers().
+<p>Removes information of a user from the local user database.</p>
+<p><code>account_id</code> is received from either AddUser() or PreviousUsers().</p>
 
 #### Request
 <table>
@@ -311,9 +298,9 @@
 
 ### Login {#Login}
 
- Uses the credentials provided in AddUser() to start a user session. This
- would mean syncing with the user's ledger instance and displaying a user
- shell with all of the user's stories.
+<p>Uses the credentials provided in AddUser() to start a user session. This
+would mean syncing with the user's ledger instance and displaying a user
+shell with all of the user's stories.</p>
 
 #### Request
 <table>
@@ -329,7 +316,7 @@
 
 ### Login2 {#Login2}
 
- DEPRECATED: For transitional purposes only.
+<p>DEPRECATED: For transitional purposes only.</p>
 
 #### Request
 <table>
@@ -345,7 +332,7 @@
 
 ### PreviousUsers {#PreviousUsers}
 
- List of all users who have authenticated to this device in the past.
+<p>List of all users who have authenticated to this device in the past.</p>
 
 #### Request
 <table>
@@ -366,12 +353,12 @@
 ## Clipboard {#Clipboard}
 *Defined in [fuchsia.modular/clipboard.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/clipboard/clipboard.fidl#10)*
 
- An interface that provides clients with the ability to store and
- retrieve text.
+<p>An interface that provides clients with the ability to store and
+retrieve text.</p>
 
 ### Push {#Push}
 
- Pushes `text` onto the clipboard.
+<p>Pushes <code>text</code> onto the clipboard.</p>
 
 #### Request
 <table>
@@ -387,8 +374,8 @@
 
 ### Peek {#Peek}
 
- Peeks at the current topmost item on the clipboard and returns
- it, or null if no such item exists.
+<p>Peeks at the current topmost item on the clipboard and returns
+it, or null if no such item exists.</p>
 
 #### Request
 <table>
@@ -409,14 +396,14 @@
 ## ComponentContext {#ComponentContext}
 *Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#14)*
 
- Provided to all component instances in their respective initialization
- information by the framework. For example, a Module gets it from its
- ModuleContext and an Agent gets it from its AgentContext.
+<p>Provided to all component instances in their respective initialization
+information by the framework. For example, a Module gets it from its
+ModuleContext and an Agent gets it from its AgentContext.</p>
 
 ### GetLedger {#GetLedger}
 
- Gets the Ledger associated with this component. This ledger instance is
- unique to this component (nb. not the component instance) under this user.
+<p>Gets the Ledger associated with this component. This ledger instance is
+unique to this component (nb. not the component instance) under this user.</p>
 
 #### Request
 <table>
@@ -432,8 +419,8 @@
 
 ### ConnectToAgent {#ConnectToAgent}
 
- Used to start an agent in the user scope if it isn't already running, and
- connect to it.
+<p>Used to start an agent in the user scope if it isn't already running, and
+connect to it.</p>
 
 #### Request
 <table>
@@ -459,17 +446,18 @@
 
 ### ConnectToAgentService {#ConnectToAgentService}
 
- Connects to an agent that provides the given `request.service_name`, and
- then connects the given `request.channel` to that service.
- `request.agent_controller` must be kept alive until the service is no
- longer required.
-
- If an error is encountered, the `request.channel` will be closed with
- a status code, such as:
-   * `ZX_ERR_NOT_FOUND` -- if a `request.handler` agent URL is not
-     specified, and an agent for the `request.service_name` is not found
-   * `ZX_ERR_PEER_CLOSED` -- if `request.service_name` is not available from
-     the agent (either specified or discovered)
+<p>Connects to an agent that provides the given <code>request.service_name</code>, and
+then connects the given <code>request.channel</code> to that service.
+<code>request.agent_controller</code> must be kept alive until the service is no
+longer required.</p>
+<p>If an error is encountered, the <code>request.channel</code> will be closed with
+a status code, such as:</p>
+<ul>
+<li><code>ZX_ERR_NOT_FOUND</code> -- if a <code>request.handler</code> agent URL is not
+specified, and an agent for the <code>request.service_name</code> is not found</li>
+<li><code>ZX_ERR_PEER_CLOSED</code> -- if <code>request.service_name</code> is not available from
+the agent (either specified or discovered)</li>
+</ul>
 
 #### Request
 <table>
@@ -485,8 +473,8 @@
 
 ### GetEntityResolver {#GetEntityResolver}
 
- Gets the EntityResolver service, which can be used to resolve an entity
- reference to an Entity interface.
+<p>Gets the EntityResolver service, which can be used to resolve an entity
+reference to an Entity interface.</p>
 
 #### Request
 <table>
@@ -503,12 +491,12 @@
 ## Entity {#Entity}
 *Defined in [fuchsia.modular/entity.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/entity/entity.fidl#10)*
 
- A multi-typed data entity.
+<p>A multi-typed data entity.</p>
 
 ### GetTypes {#GetTypes}
 
- Returns the types associated with this entity. Each entry in `types`
- references a well-known content type.
+<p>Returns the types associated with this entity. Each entry in <code>types</code>
+references a well-known content type.</p>
 
 #### Request
 <table>
@@ -528,9 +516,9 @@
 
 ### GetData {#GetData}
 
- Given one of the types returned from `GetTypes()` above, returns
- associated short-form data, or null if the type is absent from
- `GetTypes()`.
+<p>Given one of the types returned from <code>GetTypes()</code> above, returns
+associated short-form data, or null if the type is absent from
+<code>GetTypes()</code>.</p>
 
 #### Request
 <table>
@@ -555,8 +543,8 @@
 
 ### WriteData {#WriteData}
 
- Sets the data for a particular type. This will precipitate an `OnUpdated`
- event with the associated type.
+<p>Sets the data for a particular type. This will precipitate an <code>OnUpdated</code>
+event with the associated type.</p>
 
 #### Request
 <table>
@@ -586,9 +574,9 @@
 
 ### GetReference {#GetReference}
 
- Gets the entity reference for this entity, which can be persisted and
- then later used to locate this entity. These references are weak
- references and are not sufficient to keep the entity alive.
+<p>Gets the entity reference for this entity, which can be persisted and
+then later used to locate this entity. These references are weak
+references and are not sufficient to keep the entity alive.</p>
 
 #### Request
 <table>
@@ -608,10 +596,10 @@
 
 ### Watch {#Watch}
 
- Begins watching for data changes on a particular type. The watcher
- immediately fires `OnUpdated` with the current value for the requested
- type (or null if the type is not present). Closing the `Entity` interface
- does not close the watcher.
+<p>Begins watching for data changes on a particular type. The watcher
+immediately fires <code>OnUpdated</code> with the current value for the requested
+type (or null if the type is not present). Closing the <code>Entity</code> interface
+does not close the watcher.</p>
 
 #### Request
 <table>
@@ -636,11 +624,10 @@
 
 ### OnUpdated {#OnUpdated}
 
- Fires on data updates for a particular type. If the type is initially not
- present, a null `data` pointer is produced. The type may only transition
- from absent to present at most once, as there is no deletion.
-
- No deduplication is performed.
+<p>Fires on data updates for a particular type. If the type is initially not
+present, a null <code>data</code> pointer is produced. The type may only transition
+from absent to present at most once, as there is no deletion.</p>
+<p>No deduplication is performed.</p>
 
 #### Request
 <table>
@@ -657,25 +644,23 @@
 ## EntityProvider {#EntityProvider}
 *Defined in [fuchsia.modular/entity_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/entity/entity_provider.fidl#21)*
 
- EntityProviders (agents) must implement and provide the `EntityProvider`
- service if they create entity references (using `EntityReferenceFactory`).
- This service is used by the framework to provide data for an `Entity`
- interface for an entity. This interface is requested by the framework in
- the agent's *application* outgoing services, and is closed by the framework
- when there are no more `Entity`s that need to be provided.
-
- In the below methods, `cookie` will have been previously passed to
- `EntityReferenceFactory.CreateReference()`, though this may have been in an
- earlier or remote app instance. Entity providers should attempt to resolve
- unfamiliar cookies or else treat the entities as empty and read-only.
+<p>EntityProviders (agents) must implement and provide the <code>EntityProvider</code>
+service if they create entity references (using <code>EntityReferenceFactory</code>).
+This service is used by the framework to provide data for an <code>Entity</code>
+interface for an entity. This interface is requested by the framework in
+the agent's <em>application</em> outgoing services, and is closed by the framework
+when there are no more <code>Entity</code>s that need to be provided.</p>
+<p>In the below methods, <code>cookie</code> will have been previously passed to
+<code>EntityReferenceFactory.CreateReference()</code>, though this may have been in an
+earlier or remote app instance. Entity providers should attempt to resolve
+unfamiliar cookies or else treat the entities as empty and read-only.</p>
 
 ### GetTypes {#GetTypes}
 
- Returns the types associated with the requested entity. Each entry in
- `type` references a well-known content type.
-
- If the cookie cannot be resolved, the provider should produce an empty
- vector.
+<p>Returns the types associated with the requested entity. Each entry in
+<code>type</code> references a well-known content type.</p>
+<p>If the cookie cannot be resolved, the provider should produce an empty
+vector.</p>
 
 #### Request
 <table>
@@ -700,11 +685,10 @@
 
 ### GetData {#GetData}
 
- Given one of the types returned from `GetTypes()` above, returns
- associated short-form data, or null if the type is absent from
- `GetTypes()`.
-
- If the cookie cannot be resolved, the provider should return null.
+<p>Given one of the types returned from <code>GetTypes()</code> above, returns
+associated short-form data, or null if the type is absent from
+<code>GetTypes()</code>.</p>
+<p>If the cookie cannot be resolved, the provider should return null.</p>
 
 #### Request
 <table>
@@ -734,11 +718,10 @@
 
 ### WriteData {#WriteData}
 
- Sets the data for a particular type. This must precipitate an `OnUpdate`
- event with the associated type.
-
- If the cookie cannot be resolved, the provider should no-op with
- `EntityWriteStatus::READ_ONLY`.
+<p>Sets the data for a particular type. This must precipitate an <code>OnUpdate</code>
+event with the associated type.</p>
+<p>If the cookie cannot be resolved, the provider should no-op with
+<code>EntityWriteStatus::READ_ONLY</code>.</p>
 
 #### Request
 <table>
@@ -773,19 +756,16 @@
 
 ### Watch {#Watch}
 
- Begins watching for data changes on a particular type. The watcher must
- immediately fire `OnUpdated` with the current value for the requested
- type (or null if the type is not present).
-
- No deduplication of events should be performed.
-
- At most one update may be in-flight at a time on a particular watcher;
- once a client is ready for another update, it will call the callback. At
- most one update should be queued for dispatch for a particular watcher;
- older updates should be dropped.
-
- If the cookie cannot be resolved, the provider should emit a single event
- with null data.
+<p>Begins watching for data changes on a particular type. The watcher must
+immediately fire <code>OnUpdated</code> with the current value for the requested
+type (or null if the type is not present).</p>
+<p>No deduplication of events should be performed.</p>
+<p>At most one update may be in-flight at a time on a particular watcher;
+once a client is ready for another update, it will call the callback. At
+most one update should be queued for dispatch for a particular watcher;
+older updates should be dropped.</p>
+<p>If the cookie cannot be resolved, the provider should emit a single event
+with null data.</p>
 
 #### Request
 <table>
@@ -812,25 +792,24 @@
 ## EntityReferenceFactory {#EntityReferenceFactory}
 *Defined in [fuchsia.modular/entity_reference_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/entity/entity_reference_factory.fidl#13)*
 
- Agents use this interface to create Entity references that can subsequently
- be dereferenced into an `Entity` interface using `EntityResolver`.
- Agents that create entity references must also expose an `EntityProvider`
- service in their application's outgoing services, so that agents can provide
- data for `Entity`s that they create. This interface is available through an
- agent's `AgentContext`.
+<p>Agents use this interface to create Entity references that can subsequently
+be dereferenced into an <code>Entity</code> interface using <code>EntityResolver</code>.
+Agents that create entity references must also expose an <code>EntityProvider</code>
+service in their application's outgoing services, so that agents can provide
+data for <code>Entity</code>s that they create. This interface is available through an
+agent's <code>AgentContext</code>.</p>
 
 ### CreateReference {#CreateReference}
 
- Agents call this to manufacture a reference for an Entity they will
- provide. Returns an opaque, persistable `entity_reference` that components
- can resolve into an `Entity` interface using `EntityResolver`. When data is
- requested from an `Entity` interface resolved from this `entity_reference`,
- the `cookie` associated with this `entity_reference` will be passed back to
- the `EntityProvider` of the Agent that originally created this reference.
-
- `cookie` should uniquely identify the `Entity` within the scope of the
- calling entity provider. For example, it may be used as the primary key
- value for a database.
+<p>Agents call this to manufacture a reference for an Entity they will
+provide. Returns an opaque, persistable <code>entity_reference</code> that components
+can resolve into an <code>Entity</code> interface using <code>EntityResolver</code>. When data is
+requested from an <code>Entity</code> interface resolved from this <code>entity_reference</code>,
+the <code>cookie</code> associated with this <code>entity_reference</code> will be passed back to
+the <code>EntityProvider</code> of the Agent that originally created this reference.</p>
+<p><code>cookie</code> should uniquely identify the <code>Entity</code> within the scope of the
+calling entity provider. For example, it may be used as the primary key
+value for a database.</p>
 
 #### Request
 <table>
@@ -856,23 +835,22 @@
 ## EntityResolver {#EntityResolver}
 *Defined in [fuchsia.modular/entity_resolver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/entity/entity_resolver.fidl#10)*
 
- This interface is given to all components in their `ComponentContext`. Any
- component can resolve an entity reference into an `Entity`.
+<p>This interface is given to all components in their <code>ComponentContext</code>. Any
+component can resolve an entity reference into an <code>Entity</code>.</p>
 
 ### ResolveEntity {#ResolveEntity}
 
- Finds and binds `entity_request` to an Entity handle for the Entity
- referenced by `entity_reference`. If an error occurs, `entity_request`
- will be closed.
-
- This method is called by any component who wants to use an Entity using an
- entity reference. A component has to get an entity reference (directly or
- indirectly) from an agent, for example through some fidl interface. The
- agent will create an entity reference using EntityReferenceFactory. During
- entity resolution, that agent then provides data for the Entity
- through an EntityProvider service it exposes. Thus, any Agent that wishes
- to use EntityReferenceFactory to dispense entity references through its
- agent services MUST also implement the EntityProvider service.
+<p>Finds and binds <code>entity_request</code> to an Entity handle for the Entity
+referenced by <code>entity_reference</code>. If an error occurs, <code>entity_request</code>
+will be closed.</p>
+<p>This method is called by any component who wants to use an Entity using an
+entity reference. A component has to get an entity reference (directly or
+indirectly) from an agent, for example through some fidl interface. The
+agent will create an entity reference using EntityReferenceFactory. During
+entity resolution, that agent then provides data for the Entity
+through an EntityProvider service it exposes. Thus, any Agent that wishes
+to use EntityReferenceFactory to dispense entity references through its
+agent services MUST also implement the EntityProvider service.</p>
 
 #### Request
 <table>
@@ -894,21 +872,19 @@
 ## IntentHandler {#IntentHandler}
 *Defined in [fuchsia.modular/intent_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/intent/intent_handler.fidl#17)*
 
- The IntentHandler interface is exposed by modules which wish to handle
- intents on the behalf of other modules or agents.
-
- The modular framework expects any module which declares support for intent
- handling in its module manifest to expose IntentHandler in its outgoing
- services.
-
- Any time the framework receives an intent which is to be handled by a specific
- module its `IntentHandler` will be called with the intent it is meant to handle.
+<p>The IntentHandler interface is exposed by modules which wish to handle
+intents on the behalf of other modules or agents.</p>
+<p>The modular framework expects any module which declares support for intent
+handling in its module manifest to expose IntentHandler in its outgoing
+services.</p>
+<p>Any time the framework receives an intent which is to be handled by a specific
+module its <code>IntentHandler</code> will be called with the intent it is meant to handle.</p>
 
 ### HandleIntent {#HandleIntent}
 
- Handles the provided intent. Any links referenced in the intent parameters
- will be in the namespace of the handling component, and can be retrieved via
- `ModuleContext.GetLink`.
+<p>Handles the provided intent. Any links referenced in the intent parameters
+will be in the namespace of the handling component, and can be retrieved via
+<code>ModuleContext.GetLink</code>.</p>
 
 #### Request
 <table>
@@ -925,15 +901,14 @@
 ## Lifecycle {#Lifecycle}
 *Defined in [fuchsia.modular/lifecycle.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/lifecycle/lifecycle.fidl#9)*
 
- An interface implemented by applications that wish to terminate gracefully.
+<p>An interface implemented by applications that wish to terminate gracefully.</p>
 
 ### Terminate {#Terminate}
 
- The client of this application has requested that this application
- terminate gracefully.
-
- If the application does not terminate itself in a timely manner, the client
- may forcibly terminate the application.
+<p>The client of this application has requested that this application
+terminate gracefully.</p>
+<p>If the application does not terminate itself in a timely manner, the client
+may forcibly terminate the application.</p>
 
 #### Request
 <table>
@@ -945,24 +920,22 @@
 ## ModuleContext {#ModuleContext}
 *Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#13)*
 
- This interface is exposed to all Module instances in a story. It allows to
- create Link instances and run more Module instances.
+<p>This interface is exposed to all Module instances in a story. It allows to
+create Link instances and run more Module instances.</p>
 
 ### AddModuleToStory {#AddModuleToStory}
 
- Starts a new Module instance and adds it to the story. The Module to
- execute is identified by the contents of [intent] and the Module instance
- is given a [name] in the scope of the starting Module instance. The view
- for the Module is given to the story shell for display.
-
- Providing a [surface_relation] advises the StoryShell how to layout
- surfaces that the new module creates. If [surface_relation] is null then
- a default relation is used.
-
- If the method is called again with the same [name] by the same Module
- instance, but with different arguments, the existing Module instance is
- restarted with the changed arguments. If the other arguments don't
- change, just an additional ModuleController connection is made.
+<p>Starts a new Module instance and adds it to the story. The Module to
+execute is identified by the contents of [intent] and the Module instance
+is given a [name] in the scope of the starting Module instance. The view
+for the Module is given to the story shell for display.</p>
+<p>Providing a [surface_relation] advises the StoryShell how to layout
+surfaces that the new module creates. If [surface_relation] is null then
+a default relation is used.</p>
+<p>If the method is called again with the same [name] by the same Module
+instance, but with different arguments, the existing Module instance is
+restarted with the changed arguments. If the other arguments don't
+change, just an additional ModuleController connection is made.</p>
 
 #### Request
 <table>
@@ -1002,11 +975,11 @@
 
 ### EmbedModule {#EmbedModule}
 
- Like AddModuleToStory(), but passes a [view_token] explicitly to embed
- the view of the requested Module instance in the view of the requesting
- Module instance, instead of relying on the story shell for display. If a
- Module instance with the same [name] and [intent] is already running,
- [view_token] is destroyed.
+<p>Like AddModuleToStory(), but passes a [view_token] explicitly to embed
+the view of the requested Module instance in the view of the requesting
+Module instance, instead of relying on the story shell for display. If a
+Module instance with the same [name] and [intent] is already running,
+[view_token] is destroyed.</p>
 
 #### Request
 <table>
@@ -1046,9 +1019,9 @@
 
 ### RemoveSelfFromStory {#RemoveSelfFromStory}
 
- When a module calls [RemoveSelfFromStory()] the framework will stop the
- module and remove it from the story. If there are no more running modules
- in the story the story will be deleted.
+<p>When a module calls [RemoveSelfFromStory()] the framework will stop the
+module and remove it from the story. If there are no more running modules
+in the story the story will be deleted.</p>
 
 #### Request
 <table>
@@ -1059,15 +1032,13 @@
 
 ### CreateEntity {#CreateEntity}
 
- Creates a [fuchsia.modular.Entity] with the given [type] and [data]. The
- lifetime of the created entity is tied to the lifetime of the current story,
- but can be dereferenced by modules and agents outside the scope of the story.
-
- [entity_request] will be connected to the created entity, or closed if the
- creation fails.
-
- The returned [reference] is the entity reference for the created entity, or
- null if the entity creation failed.
+<p>Creates a [fuchsia.modular.Entity] with the given [type] and [data]. The
+lifetime of the created entity is tied to the lifetime of the current story,
+but can be dereferenced by modules and agents outside the scope of the story.</p>
+<p>[entity_request] will be connected to the created entity, or closed if the
+creation fails.</p>
+<p>The returned [reference] is the entity reference for the created entity, or
+null if the entity creation failed.</p>
 
 #### Request
 <table>
@@ -1103,22 +1074,21 @@
 ## OngoingActivity {#OngoingActivity}
 *Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#70)*
 
- This interface defines the protocol over which a Module can communicate about
- an ongoing activity to the framework. It is provided to Modules via
- ModuleContext.StartOngoingActivity().
+<p>This interface defines the protocol over which a Module can communicate about
+an ongoing activity to the framework. It is provided to Modules via
+ModuleContext.StartOngoingActivity().</p>
 
 ## ModuleController {#ModuleController}
 *Defined in [fuchsia.modular/module_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_controller.fidl#12)*
 
- This interface is used by the caller of ModuleContext.StartModule() to
- control the started Module instance.
-
- Closing this connection doesn't affect its Module instance; it just
- relinquishes the ability of the caller to control the Module instance.
+<p>This interface is used by the caller of ModuleContext.StartModule() to
+control the started Module instance.</p>
+<p>Closing this connection doesn't affect its Module instance; it just
+relinquishes the ability of the caller to control the Module instance.</p>
 
 ### Focus {#Focus}
 
- Requests that this module become the focused module in the story.
+<p>Requests that this module become the focused module in the story.</p>
 
 #### Request
 <table>
@@ -1129,7 +1099,7 @@
 
 ### Defocus {#Defocus}
 
- Requests that this module be hidden in the story.
+<p>Requests that this module be hidden in the story.</p>
 
 #### Request
 <table>
@@ -1140,11 +1110,10 @@
 
 ### Stop {#Stop}
 
- Requests the Module instance to stop. The running Module component's
- Lifecycle::Terminate() method is called, the instance is shut down and
- state within the framework is cleaned up.
-
- The result callback is called once the Module's runtime has been torn down.
+<p>Requests the Module instance to stop. The running Module component's
+Lifecycle::Terminate() method is called, the instance is shut down and
+state within the framework is cleaned up.</p>
+<p>The result callback is called once the Module's runtime has been torn down.</p>
 
 #### Request
 <table>
@@ -1159,9 +1128,9 @@
 
 ### OnStateChange {#OnStateChange}
 
- Called with the current state when it changes.
- DEPRECATED: Do not use this. ModuleState is a framework-internal concept
- and should not be exposed outside.
+<p>Called with the current state when it changes.
+DEPRECATED: Do not use this. ModuleState is a framework-internal concept
+and should not be exposed outside.</p>
 
 
 
@@ -1181,16 +1150,13 @@
 
 ### FindModules {#FindModules}
 
- Finds Modules (contained in Fuchsia packages) that satisfy the constraints
- specified in `query`. Module resolution is done by matching the requested
- `query.action` and `query.parameter_constraints` (with both names and
- types) against actions and constraints specified in module manifests.
-
- If no results could be found, `response.results` will be empty.
-
- For detailed information on the resolution process, see
- docs/modular/module_resolution.md.
-
+<p>Finds Modules (contained in Fuchsia packages) that satisfy the constraints
+specified in <code>query</code>. Module resolution is done by matching the requested
+<code>query.action</code> and <code>query.parameter_constraints</code> (with both names and
+types) against actions and constraints specified in module manifests.</p>
+<p>If no results could be found, <code>response.results</code> will be empty.</p>
+<p>For detailed information on the resolution process, see
+docs/modular/module_resolution.md.</p>
 
 #### Request
 <table>
@@ -1216,18 +1182,15 @@
 ## FocusController {#FocusController}
 *Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#21)*
 
- This file has interfaces for 2 pieces of information: (1) The story
- that is currently in focus and (2) stories that are visible to the
- user. Names of interfaces follow the usual patterns:
-
- {Focus,VisibleStories}Controller is used by session shell to update
- information whenever changes take place.
-
- FocusProvider is used by maxwell and session shell to
- query and get updates on which story is in focus on which device
- and visible stories on this device.
-
- Implemented by sessionmgr. Given to session shell through its namespace.
+<p>This file has interfaces for 2 pieces of information: (1) The story
+that is currently in focus and (2) stories that are visible to the
+user. Names of interfaces follow the usual patterns:</p>
+<p>{Focus,VisibleStories}Controller is used by session shell to update
+information whenever changes take place.</p>
+<p>FocusProvider is used by maxwell and session shell to
+query and get updates on which story is in focus on which device
+and visible stories on this device.</p>
+<p>Implemented by sessionmgr. Given to session shell through its namespace.</p>
 
 ### Set {#Set}
 
@@ -1262,9 +1225,9 @@
 ## FocusRequestWatcher {#FocusRequestWatcher}
 *Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#30)*
 
- Implemented by session shell. OnFocusRequest() gets called whenever there
- is a new request to change focus on this device. Requests can be
- made via FocusProvider.Request().
+<p>Implemented by session shell. OnFocusRequest() gets called whenever there
+is a new request to change focus on this device. Requests can be
+made via FocusProvider.Request().</p>
 
 ### OnFocusRequest {#OnFocusRequest}
 
@@ -1284,12 +1247,12 @@
 ## FocusProvider {#FocusProvider}
 *Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#37)*
 
- Implemented by sessionmgr. Given to session shell and session agents through
- their namespace. Focus is persisted on the ledger.
+<p>Implemented by sessionmgr. Given to session shell and session agents through
+their namespace. Focus is persisted on the ledger.</p>
 
 ### Query {#Query}
 
- Returns the stories that are focused across all devices.
+<p>Returns the stories that are focused across all devices.</p>
 
 #### Request
 <table>
@@ -1309,7 +1272,7 @@
 
 ### Watch {#Watch}
 
- Watches for change in focus on any of the user's devices.
+<p>Watches for change in focus on any of the user's devices.</p>
 
 #### Request
 <table>
@@ -1325,12 +1288,11 @@
 
 ### Request {#Request}
 
- Requests session shell to change focus on this device. If session shell
- responds to this request, focus shall be taken away from
- previously focused story and an update will be sent on
- FocusWatcher.OnFocusChange(). If `story_id` is NULL, the timeline
- is brought back into focus.
-
+<p>Requests session shell to change focus on this device. If session shell
+responds to this request, focus shall be taken away from
+previously focused story and an update will be sent on
+FocusWatcher.OnFocusChange(). If <code>story_id</code> is NULL, the timeline
+is brought back into focus.</p>
 
 #### Request
 <table>
@@ -1347,8 +1309,8 @@
 ## FocusWatcher {#FocusWatcher}
 *Defined in [fuchsia.modular/focus.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/focus.fidl#57)*
 
- Implemented by anyone who is interested in getting updates when focus
- changes.
+<p>Implemented by anyone who is interested in getting updates when focus
+changes.</p>
 
 ### OnFocusChange {#OnFocusChange}
 
@@ -1368,15 +1330,15 @@
 ## SessionShell {#SessionShell}
 *Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#15)*
 
- This interface is implemented by a session shell and is used by the
- sessionmgr to hand to the session shell views of stories, or to notify that
- the view of a story is about to be closed.
+<p>This interface is implemented by a session shell and is used by the
+sessionmgr to hand to the session shell views of stories, or to notify that
+the view of a story is about to be closed.</p>
 
 ### AttachView {#AttachView}
 
- Displays the given story view. The story this view belongs to is
- identified by `view_id.story_id`.
- DEPRECATED.  For transitional purposes only.
+<p>Displays the given story view. The story this view belongs to is
+identified by <code>view_id.story_id</code>.
+DEPRECATED.  For transitional purposes only.</p>
 
 #### Request
 <table>
@@ -1417,22 +1379,19 @@
 
 ### DetachView {#DetachView}
 
- Instructs the session shell to detach the view identified by `view_id`
- that was previously provided by AttachView() from the UI of the session
- shell. The view will be closed soon after DetachView() returns, or when a
- timeout is reached.
-
- It is customary for the session shell to display a placeholder before a
- view is attached for a given view identifier, or after it was detached.
-
- If the story identified by `view_id.story_id` is about to be deleted, the
- Shell will observe a call to StoryProviderWatcher.OnDelete() sometime
- after DetachView() returns.
-
- If the session for which this session shell is responsible for is being
- terminated, or the session shell is stopped because it's replaced by
- another session shell, DetachView() will *not* be called at all, and the
- shell will rather observe a call to Lifecycle.Terminate().
+<p>Instructs the session shell to detach the view identified by <code>view_id</code>
+that was previously provided by AttachView() from the UI of the session
+shell. The view will be closed soon after DetachView() returns, or when a
+timeout is reached.</p>
+<p>It is customary for the session shell to display a placeholder before a
+view is attached for a given view identifier, or after it was detached.</p>
+<p>If the story identified by <code>view_id.story_id</code> is about to be deleted, the
+Shell will observe a call to StoryProviderWatcher.OnDelete() sometime
+after DetachView() returns.</p>
+<p>If the session for which this session shell is responsible for is being
+terminated, or the session shell is stopped because it's replaced by
+another session shell, DetachView() will <em>not</em> be called at all, and the
+shell will rather observe a call to Lifecycle.Terminate().</p>
 
 #### Request
 <table>
@@ -1453,14 +1412,14 @@
 ## SessionShellContext {#SessionShellContext}
 *Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#57)*
 
- This interface allows a `SessionShell` to request capabilities from its
- creator in a way that is more explicit about the services that are
- offered than a generic `ServiceProvider`.
+<p>This interface allows a <code>SessionShell</code> to request capabilities from its
+creator in a way that is more explicit about the services that are
+offered than a generic <code>ServiceProvider</code>.</p>
 
 ### GetAccount {#GetAccount}
 
- The account associated with the currently logged-in user. It's NULL if
- logged into GUEST mode.
+<p>The account associated with the currently logged-in user. It's NULL if
+logged into GUEST mode.</p>
 
 #### Request
 <table>
@@ -1555,8 +1514,8 @@
 
 ### Logout {#Logout}
 
- Requests logout of the user. This causes the basemgr to tear down the
- `Sessionmgr` instance of the user.
+<p>Requests logout of the user. This causes the basemgr to tear down the
+<code>Sessionmgr</code> instance of the user.</p>
 
 #### Request
 <table>
@@ -1567,7 +1526,7 @@
 
 ### Restart {#Restart}
 
- Restarts the session without logging out the user.
+<p>Restarts the session without logging out the user.</p>
 
 #### Request
 <table>
@@ -1579,18 +1538,17 @@
 ## SessionShellPresentationProvider {#SessionShellPresentationProvider}
 *Defined in [fuchsia.modular/session_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/session/session_shell.fidl#83)*
 
- Session shell provides this service to the framework which may plumb it to
- different subscribers, such as story shell and intelligence provider.
-
- EXPERIMENTAL Service that allows consumers of a given story to get a
- connection to a Presentation, and visual state services provided by the user
- shell. This allows story shell implementations to coordinate event and focus
- handling. An analog mechanism exists between BaseShell and SessionShell.
+<p>Session shell provides this service to the framework which may plumb it to
+different subscribers, such as story shell and intelligence provider.</p>
+<p>EXPERIMENTAL Service that allows consumers of a given story to get a
+connection to a Presentation, and visual state services provided by the user
+shell. This allows story shell implementations to coordinate event and focus
+handling. An analog mechanism exists between BaseShell and SessionShell.</p>
 
 ### GetPresentation {#GetPresentation}
 
- When a StoryShell calls StoryShellContext.GetPresentation(), this request
- arrives here.
+<p>When a StoryShell calls StoryShellContext.GetPresentation(), this request
+arrives here.</p>
 
 #### Request
 <table>
@@ -1611,8 +1569,8 @@
 
 ### WatchVisualState {#WatchVisualState}
 
- When a StoryShell calls StoryShellContext.WatchVisualState(), this request
- arrives here.
+<p>When a StoryShell calls StoryShellContext.WatchVisualState(), this request
+arrives here.</p>
 
 #### Request
 <table>
@@ -1757,11 +1715,10 @@
 
 ### Annotate {#Annotate}
 
- Attach the `annotations` to the story. If the story does not yet exist,
- it will be created.
-
- Existing annotations with the same key will be overwritten, or
- deleted if new value is null.
+<p>Attach the <code>annotations</code> to the story. If the story does not yet exist,
+it will be created.</p>
+<p>Existing annotations with the same key will be overwritten, or
+deleted if new value is null.</p>
 
 #### Request
 <table>
@@ -1786,11 +1743,10 @@
 
 ### AnnotateModule {#AnnotateModule}
 
- Attach the `annotations` to the module with the given `id`.
- The module can be annotated before being added to the story, but if the
- story does not yet exist, AnnotationError.NOT_FOUND is returned.
-
- Existing annotations with the same key will be overwritten.
+<p>Attach the <code>annotations</code> to the module with the given <code>id</code>.
+The module can be annotated before being added to the story, but if the
+story does not yet exist, AnnotationError.NOT_FOUND is returned.</p>
+<p>Existing annotations with the same key will be overwritten.</p>
 
 #### Request
 <table>
@@ -1821,15 +1777,14 @@
 ## StoryController {#StoryController}
 *Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#12)*
 
- Used by the clients of StoryProvider (SessionShell) to interact with a single
- story. Created by StoryProvider.
-
- If `StoryController` is closed, the `StoryState` associated with this story
- does not change.
+<p>Used by the clients of StoryProvider (SessionShell) to interact with a single
+story. Created by StoryProvider.</p>
+<p>If <code>StoryController</code> is closed, the <code>StoryState</code> associated with this story
+does not change.</p>
 
 ### GetInfo {#GetInfo}
 
- Gets information associated with the story.
+<p>Gets information associated with the story.</p>
 
 #### Request
 <table>
@@ -1854,7 +1809,7 @@
 
 ### GetInfo2 {#GetInfo2}
 
- For transition purposes only.
+<p>For transition purposes only.</p>
 
 #### Request
 <table>
@@ -1879,9 +1834,9 @@
 
 ### RequestStart {#RequestStart}
 
- Requests to run the story controlled by this `StoryController` instance.
- When the story starts, if not yet running, the view of the newly started
- story shell will be passed in a call to SessionShell.AttachView().
+<p>Requests to run the story controlled by this <code>StoryController</code> instance.
+When the story starts, if not yet running, the view of the newly started
+story shell will be passed in a call to SessionShell.AttachView().</p>
 
 #### Request
 <table>
@@ -1892,10 +1847,10 @@
 
 ### Stop {#Stop}
 
- Requests to stop the story controlled by this `StoryController`. If Start()
- requests are pending when this request is issued, the request is queued
- until the Start() requests complete. Before stopping the story, a snapshot
- of the story will be taken and saved. Returns when the story is stopped.
+<p>Requests to stop the story controlled by this <code>StoryController</code>. If Start()
+requests are pending when this request is issued, the request is queued
+until the Start() requests complete. Before stopping the story, a snapshot
+of the story will be taken and saved. Returns when the story is stopped.</p>
 
 #### Request
 <table>
@@ -1910,10 +1865,9 @@
 
 ### Watch {#Watch}
 
- Registers a watcher for changes of the story state.
-
- Note that stories can stop themselves at any time and it is advisable
- for the holder of a StoryController to provide a watcher.
+<p>Registers a watcher for changes of the story state.</p>
+<p>Note that stories can stop themselves at any time and it is advisable
+for the holder of a StoryController to provide a watcher.</p>
 
 #### Request
 <table>
@@ -1929,9 +1883,8 @@
 
 ### Annotate {#Annotate}
 
- Attach the `annotations` to the story.
-
- Existing annotations with the same key will be overwritten.
+<p>Attach the <code>annotations</code> to the story.</p>
+<p>Existing annotations with the same key will be overwritten.</p>
 
 #### Request
 <table>
@@ -1957,12 +1910,12 @@
 ## StoryWatcher {#StoryWatcher}
 *Defined in [fuchsia.modular/story_controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_controller.fidl#45)*
 
- Implemented by the client calling StoryController.Watch().
+<p>Implemented by the client calling StoryController.Watch().</p>
 
 ### OnStateChange {#OnStateChange}
 
- Called with the current state right after registration, and subsequently
- when the state changes.
+<p>Called with the current state right after registration, and subsequently
+when the state changes.</p>
 
 #### Request
 <table>
@@ -1978,7 +1931,7 @@
 
 ### OnModuleAdded {#OnModuleAdded}
 
- DEPRECATED
+<p>DEPRECATED</p>
 
 #### Request
 <table>
@@ -1994,7 +1947,7 @@
 
 ### OnModuleFocused {#OnModuleFocused}
 
- DEPRECATED
+<p>DEPRECATED</p>
 
 #### Request
 <table>
@@ -2011,18 +1964,17 @@
 ## StoryProvider {#StoryProvider}
 *Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#14)*
 
- Sessionmgr passes a connection to this service to the SessionShell so it can
- operate on stories for the user. It is also passed to other services that
- monitor or manipulate stories, specifically the maxwell services.
-
- Closing a `StoryProvider` connection has no effect on the state of the
- framework.
+<p>Sessionmgr passes a connection to this service to the SessionShell so it can
+operate on stories for the user. It is also passed to other services that
+monitor or manipulate stories, specifically the maxwell services.</p>
+<p>Closing a <code>StoryProvider</code> connection has no effect on the state of the
+framework.</p>
 
 ### GetStories {#GetStories}
 
- Returns a list of existing stories. If `watcher` is provided, the client will
- be notified of story changes (new stories, deleted stories, runtime
- state changes).
+<p>Returns a list of existing stories. If <code>watcher</code> is provided, the client will
+be notified of story changes (new stories, deleted stories, runtime
+state changes).</p>
 
 #### Request
 <table>
@@ -2047,7 +1999,7 @@
 
 ### GetStories2 {#GetStories2}
 
- For transition purposes only.
+<p>For transition purposes only.</p>
 
 #### Request
 <table>
@@ -2072,8 +2024,8 @@
 
 ### GetStoryInfo {#GetStoryInfo}
 
- Requests detailed information about the given story. If the story doesn't
- exist, returns null.
+<p>Requests detailed information about the given story. If the story doesn't
+exist, returns null.</p>
 
 #### Request
 <table>
@@ -2098,7 +2050,7 @@
 
 ### GetStoryInfo2 {#GetStoryInfo2}
 
- For transition purposes only.
+<p>For transition purposes only.</p>
 
 #### Request
 <table>
@@ -2123,9 +2075,9 @@
 
 ### GetController {#GetController}
 
- Obtains a controller for a previously created story identified by its story
- ID. Obtaining the controller doesn't run it yet. If the story doesn't
- exist, the interface request is closed.
+<p>Obtains a controller for a previously created story identified by its story
+ID. Obtaining the controller doesn't run it yet. If the story doesn't
+exist, the interface request is closed.</p>
 
 #### Request
 <table>
@@ -2146,8 +2098,8 @@
 
 ### Watch {#Watch}
 
- Registers a watcher for changes in the story collection.
- DEPRECATED: In favor of GetStories().
+<p>Registers a watcher for changes in the story collection.
+DEPRECATED: In favor of GetStories().</p>
 
 #### Request
 <table>
@@ -2164,39 +2116,41 @@
 ## StoryProviderWatcher {#StoryProviderWatcher}
 *Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#43)*
 
- Implemented by clients of StoryProvider.
+<p>Implemented by clients of StoryProvider.</p>
 
 ### OnChange {#OnChange}
 
- Called in three different situations:
-
-  * Immediately when a new watcher is registered with one OnChange()
-    invocation with the current infor and state of each story known on the
-    current device.
-
-  * Every time a change to StoryInfo is applied to the record of the story
-    kept on the current device, including a new story created on another
-    device becoming known on this device for the first time.
-
-  * Every time the StoryState of the story changes on this device. The
-    StoryState on another device of a story known on this device is not made
-    known on this device.
-
-  * Every time the StoryVisibilityState of the story changes on this device.
-    The StoryVisibilityState on another device of a story known on this
-    device is not made known on this device.
-
-    I.e. if the story is started or stopped on *another* device, it does
-    *not* cause an OnChange() call on *this* device. Cf. OnDelete() below.
-
- The ID of the story the notifications are about are part of StoryInfo.
-
- `story_state` is STOPPED if the story was just created or just became known
- on this device and was not yet started on the current device. It's RUNNING
- when the story is started on the current device.
-
- `story_visibility_state` is DEFAULT until a mod on the current device
- requests for the visibility state to be changed.
+<p>Called in three different situations:</p>
+<ul>
+<li>
+<p>Immediately when a new watcher is registered with one OnChange()
+invocation with the current infor and state of each story known on the
+current device.</p>
+</li>
+<li>
+<p>Every time a change to StoryInfo is applied to the record of the story
+kept on the current device, including a new story created on another
+device becoming known on this device for the first time.</p>
+</li>
+<li>
+<p>Every time the StoryState of the story changes on this device. The
+StoryState on another device of a story known on this device is not made
+known on this device.</p>
+</li>
+<li>
+<p>Every time the StoryVisibilityState of the story changes on this device.
+The StoryVisibilityState on another device of a story known on this
+device is not made known on this device.</p>
+<p>I.e. if the story is started or stopped on <em>another</em> device, it does
+<em>not</em> cause an OnChange() call on <em>this</em> device. Cf. OnDelete() below.</p>
+</li>
+</ul>
+<p>The ID of the story the notifications are about are part of StoryInfo.</p>
+<p><code>story_state</code> is STOPPED if the story was just created or just became known
+on this device and was not yet started on the current device. It's RUNNING
+when the story is started on the current device.</p>
+<p><code>story_visibility_state</code> is DEFAULT until a mod on the current device
+requests for the visibility state to be changed.</p>
 
 #### Request
 <table>
@@ -2222,7 +2176,7 @@
 
 ### OnChange2 {#OnChange2}
 
- For transition purposes only.
+<p>For transition purposes only.</p>
 
 #### Request
 <table>
@@ -2248,11 +2202,10 @@
 
 ### OnDelete {#OnDelete}
 
- Called when a story record is permanently deleted. The deletion could
- have originated on this or on another device.
-
- If the story is running on this device at the time it is deleted,
- OnChange() will not be called first.
+<p>Called when a story record is permanently deleted. The deletion could
+have originated on this or on another device.</p>
+<p>If the story is running on this device at the time it is deleted,
+OnChange() will not be called first.</p>
 
 #### Request
 <table>
@@ -2269,16 +2222,14 @@
 ## StoryShell {#StoryShell}
 *Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#21)*
 
- This interface is implemented by a story shell. Dependencies are passed to it
- in Initialize() on startup. The story shell is also expected to implement
- Lifecycle in order to receive a Terminate() call on teardown.
-
- In one component instance there can only be one StoryShell service instance.
- The view token is sent to the separate View service. This way, the story
- shell may be implemented as a flutter component.
-
- Teardown may occur via the session shell calling StoryController.Stop(), the
- sessionmgr being terminated, or by the system shutting down.
+<p>This interface is implemented by a story shell. Dependencies are passed to it
+in Initialize() on startup. The story shell is also expected to implement
+Lifecycle in order to receive a Terminate() call on teardown.</p>
+<p>In one component instance there can only be one StoryShell service instance.
+The view token is sent to the separate View service. This way, the story
+shell may be implemented as a flutter component.</p>
+<p>Teardown may occur via the session shell calling StoryController.Stop(), the
+sessionmgr being terminated, or by the system shutting down.</p>
 
 ### Initialize {#Initialize}
 
@@ -2297,12 +2248,12 @@
 
 ### AddSurface {#AddSurface}
 
- Adds a new Surface and its corresponding view to be displayed by the
- StoryShell. More context that allows the story shell to decide how
- to layout will be added later. Also, interface to influence life cycle and
- focus is obviously missing.
- `view_connection` the new view and the associated Surface ID.
- `surface_info` metadata relating to the Surface.
+<p>Adds a new Surface and its corresponding view to be displayed by the
+StoryShell. More context that allows the story shell to decide how
+to layout will be added later. Also, interface to influence life cycle and
+focus is obviously missing.
+<code>view_connection</code> the new view and the associated Surface ID.
+<code>surface_info</code> metadata relating to the Surface.</p>
 
 #### Request
 <table>
@@ -2323,7 +2274,7 @@
 
 ### AddSurface2 {#AddSurface2}
 
- DEPRECATED.  For transition purposes only.
+<p>DEPRECATED.  For transition purposes only.</p>
 
 #### Request
 <table>
@@ -2344,7 +2295,7 @@
 
 ### AddSurface3 {#AddSurface3}
 
- For transition purposes only.
+<p>For transition purposes only.</p>
 
 #### Request
 <table>
@@ -2365,7 +2316,7 @@
 
 ### FocusSurface {#FocusSurface}
 
- Focuses the surface with surface_id, bringing it to the foreground.
+<p>Focuses the surface with surface_id, bringing it to the foreground.</p>
 
 #### Request
 <table>
@@ -2381,7 +2332,7 @@
 
 ### DefocusSurface {#DefocusSurface}
 
- Defocuses the surface with surface_id, dismissing it to the background.
+<p>Defocuses the surface with surface_id, dismissing it to the background.</p>
 
 #### Request
 <table>
@@ -2401,10 +2352,10 @@
 
 ### OnSurfaceFocused {#OnSurfaceFocused}
 
- Notify when a Surface is focused in the story. The focus could be from
- a user interaction or requested by the framework through
- StoryController#FocusModule.
- EXPERIMENTAL
+<p>Notify when a Surface is focused in the story. The focus could be from
+a user interaction or requested by the framework through
+StoryController#FocusModule.
+EXPERIMENTAL</p>
 
 
 
@@ -2420,10 +2371,10 @@
 
 ### RemoveSurface {#RemoveSurface}
 
- Remove the Surface with surface_id from the StoryShell entirely. This is
- final. The Surface is removed from the graph. If necessary, the
- associated Surface is defocused. There is no expectation that
- DefocusSurface is called before this.
+<p>Remove the Surface with surface_id from the StoryShell entirely. This is
+final. The Surface is removed from the graph. If necessary, the
+associated Surface is defocused. There is no expectation that
+DefocusSurface is called before this.</p>
 
 #### Request
 <table>
@@ -2439,14 +2390,13 @@
 
 ### UpdateSurface {#UpdateSurface}
 
- Update the surface
- This is called when the intent is to update the surface metadata in the
- story graph in place. Any fields, except for the surface_id can be
- updated. If no value or null is passed for a field it remains unchanged.
- This includes the `view_holder_token` inside the connection.
-
- E.g called when an intent resolves to a module that is known by the
- caller to already be running, to update associated metadata.
+<p>Update the surface
+This is called when the intent is to update the surface metadata in the
+story graph in place. Any fields, except for the surface_id can be
+updated. If no value or null is passed for a field it remains unchanged.
+This includes the <code>view_holder_token</code> inside the connection.</p>
+<p>E.g called when an intent resolves to a module that is known by the
+caller to already be running, to update associated metadata.</p>
 
 #### Request
 <table>
@@ -2467,7 +2417,7 @@
 
 ### UpdateSurface2 {#UpdateSurface2}
 
- DEPRECATED.  For transition purposes only.
+<p>DEPRECATED.  For transition purposes only.</p>
 
 #### Request
 <table>
@@ -2488,7 +2438,7 @@
 
 ### UpdateSurface3 {#UpdateSurface3}
 
- For transition purposes only.
+<p>For transition purposes only.</p>
 
 #### Request
 <table>
@@ -2510,14 +2460,14 @@
 ## StoryShellContext {#StoryShellContext}
 *Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#135)*
 
- This interface provides the StoryShell instance with everything it needs to
- know or be able to do about the Story. Not much right now, but we expect this
- to increase.
+<p>This interface provides the StoryShell instance with everything it needs to
+know or be able to do about the Story. Not much right now, but we expect this
+to increase.</p>
 
 ### GetPresentation {#GetPresentation}
 
- Requests a Presentation connection from the SessionShell. See
- SessionShellPresenationProvider in session_shell.fidl.
+<p>Requests a Presentation connection from the SessionShell. See
+SessionShellPresenationProvider in session_shell.fidl.</p>
 
 #### Request
 <table>
@@ -2533,7 +2483,7 @@
 
 ### WatchVisualState {#WatchVisualState}
 
- Starts watching Story shell's visual state.
+<p>Starts watching Story shell's visual state.</p>
 
 #### Request
 <table>
@@ -2549,9 +2499,9 @@
 
 ### RequestView {#RequestView}
 
- Requests a view for a Surface.
- Requests that a view for `surface_id` is provided through
- StoryShell.ReconnectView().
+<p>Requests a view for a Surface.
+Requests that a view for <code>surface_id</code> is provided through
+StoryShell.ReconnectView().</p>
 
 #### Request
 <table>
@@ -2568,7 +2518,7 @@
 ## StoryVisualStateWatcher {#StoryVisualStateWatcher}
 *Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#150)*
 
- Implemented by StoryShell to get notified about visual state changes.
+<p>Implemented by StoryShell to get notified about visual state changes.</p>
 
 ### OnVisualStateChange {#OnVisualStateChange}
 
@@ -2588,13 +2538,13 @@
 ## StoryShellFactory {#StoryShellFactory}
 *Defined in [fuchsia.modular/story_shell_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell_factory.fidl#11)*
 
- StoryShellFactory creates or returns an existing `StoryShell` for a particular story.
- This is intended to be implemented by session shells that want to implement
- StoryShell functionality themselves.
+<p>StoryShellFactory creates or returns an existing <code>StoryShell</code> for a particular story.
+This is intended to be implemented by session shells that want to implement
+StoryShell functionality themselves.</p>
 
 ### AttachStory {#AttachStory}
 
- Requests a StoryShell for the story with the given `story_id`.
+<p>Requests a StoryShell for the story with the given <code>story_id</code>.</p>
 
 #### Request
 <table>
@@ -2615,8 +2565,8 @@
 
 ### DetachStory {#DetachStory}
 
- Instructs the session shell to teardown the story shell with the given `story_id`.
- This will be called before the story is stopped.
+<p>Instructs the session shell to teardown the story shell with the given <code>story_id</code>.
+This will be called before the story is stopped.</p>
 
 #### Request
 <table>
@@ -2640,7 +2590,7 @@
 
 ### StartAgents {#StartAgents}
 
- The `ComponentContext` is used to create agents and use message queues.
+<p>The <code>ComponentContext</code> is used to create agents and use message queues.</p>
 
 #### Request
 <table>
@@ -2666,8 +2616,8 @@
 
 ### GetServicesForAgent {#GetServicesForAgent}
 
- A standard set of services provided to all agents at startup,
- along with services particuarly for this agent.
+<p>A standard set of services provided to all agents at startup,
+along with services particuarly for this agent.</p>
 
 #### Request
 <table>
@@ -2699,7 +2649,7 @@
 
 
 
- A user-defined annotation for a story or module.
+<p>A user-defined annotation for a story or module.</p>
 
 
 <table>
@@ -2708,7 +2658,7 @@
             <td>
                 <code>string[256]</code>
             </td>
-            <td> An identfier for this annotation.
+            <td><p>An identfier for this annotation.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2716,7 +2666,7 @@
             <td>
                 <code><a class='link' href='#AnnotationValue'>AnnotationValue</a>?</code>
             </td>
-            <td> The contents of this annotation.
+            <td><p>The contents of this annotation.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -2745,7 +2695,7 @@
 
 
 
- Used to specify arguments to log into a user session.
+<p>Used to specify arguments to log into a user session.</p>
 
 
 <table>
@@ -2754,8 +2704,8 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> `account_id` is received from either AddUser() or PreviousUsers(). It
- can be NULL which means logging-in using incognito mode.
+            <td><p><code>account_id</code> is received from either AddUser() or PreviousUsers(). It
+can be NULL which means logging-in using incognito mode.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -2766,7 +2716,7 @@
 
 
 
- DEPRECATED, for backwards compatibility only
+<p>DEPRECATED, for backwards compatibility only</p>
 
 
 <table>
@@ -2775,8 +2725,8 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> `account_id` is received from either AddUser() or PreviousUsers(). It
- can be NULL which means logging-in in an incognito mode.
+            <td><p><code>account_id</code> is received from either AddUser() or PreviousUsers(). It
+can be NULL which means logging-in in an incognito mode.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -2787,8 +2737,8 @@
 
 
 
- Used to pass around configuration references to apps such as user
- shell, base shell, story shell.
+<p>Used to pass around configuration references to apps such as user
+shell, base shell, story shell.</p>
 
 
 <table>
@@ -2814,8 +2764,8 @@
 
 
 
- The Intent struct is a runtime descriptor for an abstract action to be initiated
- in Fuchsia. For details please see docs/intent.md.
+<p>The Intent struct is a runtime descriptor for an abstract action to be initiated
+in Fuchsia. For details please see docs/intent.md.</p>
 
 
 <table>
@@ -2824,9 +2774,8 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The name of the action represented by this Intent.
-
- This is nullable for backwards compatibility.
+            <td><p>The name of the action represented by this Intent.</p>
+<p>This is nullable for backwards compatibility.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2834,8 +2783,8 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> An explicit handler for the Intent. Specified as the component URL of the
- module.
+            <td><p>An explicit handler for the Intent. Specified as the component URL of the
+module.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2843,7 +2792,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='#IntentParameter'>IntentParameter</a>&gt;?</code>
             </td>
-            <td> The parameters that will be passed to the handler of `action`.
+            <td><p>The parameters that will be passed to the handler of <code>action</code>.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -2854,8 +2803,8 @@
 
 
 
- A struct representing a parameter that is passed to the handler of an Intent's
- Action.
+<p>A struct representing a parameter that is passed to the handler of an Intent's
+Action.</p>
 
 
 <table>
@@ -2864,8 +2813,8 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The name of the parameter. The handler (i.e. selected mod) will be provided
- with the data for this parameter under a link called `name`.
+            <td><p>The name of the parameter. The handler (i.e. selected mod) will be provided
+with the data for this parameter under a link called <code>name</code>.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2873,7 +2822,7 @@
             <td>
                 <code><a class='link' href='#IntentParameterData'>IntentParameterData</a></code>
             </td>
-            <td> The data that will be passed to the intent handler.
+            <td><p>The data that will be passed to the intent handler.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -2884,11 +2833,11 @@
 
 
 
- Addresses a Link within a story. A LinkPath struct should be treated as an
- opaque unique identifier of a link instance.  The `module_path` and
- `link_name` components are leftovers from legacy code and have no external
- meaning.
- TODO(thatguy,lindkvist): Replace this structure with a vector<>. MI4-1021
+<p>Addresses a Link within a story. A LinkPath struct should be treated as an
+opaque unique identifier of a link instance.  The <code>module_path</code> and
+<code>link_name</code> components are leftovers from legacy code and have no external
+meaning.
+TODO(thatguy,lindkvist): Replace this structure with a vector&lt;&gt;. MI4-1021</p>
 
 
 <table>
@@ -2940,9 +2889,9 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> A null [name] is allowed for backwards compatibility with default links.
- TODO(thatguy); When no modules use null link names any more, make this
- required.
+            <td><p>A null [name] is allowed for backwards compatibility with default links.
+TODO(thatguy); When no modules use null link names any more, make this
+required.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2960,7 +2909,7 @@
 
 
 
- Metadata that define the runtime properties of a Module.
+<p>Metadata that define the runtime properties of a Module.</p>
 
 
 <table>
@@ -2969,10 +2918,10 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The relative path from the root of the package where the Module executable
- file can be found.
- TODO(MF-94): Extract a module's URL from its cmx manifest instead of
- here.
+            <td><p>The relative path from the root of the package where the Module executable
+file can be found.
+TODO(MF-94): Extract a module's URL from its cmx manifest instead of
+here.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2980,8 +2929,8 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> A human-readable string that can be used when suggesting this Module.
- DEPRECATED.
+            <td><p>A human-readable string that can be used when suggesting this Module.
+DEPRECATED.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2989,7 +2938,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='#IntentFilter'>IntentFilter</a>&gt;?</code>
             </td>
-            <td> A list of intents that this module is able to handle.
+            <td><p>A list of intents that this module is able to handle.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -2997,7 +2946,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> Identifies the pattern with which to compose this module with others.
+            <td><p>Identifies the pattern with which to compose this module with others.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3005,7 +2954,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> Defines the color of the placeholder widget used while the module loads.
+            <td><p>Defines the color of the placeholder widget used while the module loads.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3016,7 +2965,7 @@
 
 
 
- This struct is used to describe an intent that a module is able to handle.
+<p>This struct is used to describe an intent that a module is able to handle.</p>
 
 
 <table>
@@ -3025,7 +2974,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The action this module is able to handle.
+            <td><p>The action this module is able to handle.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3033,8 +2982,8 @@
             <td>
                 <code>vector&lt;<a class='link' href='#ParameterConstraint'>ParameterConstraint</a>&gt;</code>
             </td>
-            <td> Includes the name and types of entities for the parameters required to
- execute specified [action].
+            <td><p>Includes the name and types of entities for the parameters required to
+execute specified [action].</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3042,7 +2991,7 @@
             <td>
                 <code><a class='link' href='#ActionDisplay'>ActionDisplay</a></code>
             </td>
-            <td> Defines presentation properties for suggestions of this action.
+            <td><p>Defines presentation properties for suggestions of this action.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3068,7 +3017,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The entity type that is valid for this parameter.
+            <td><p>The entity type that is valid for this parameter.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3079,12 +3028,11 @@
 
 
 
- Mirrors the information present in a Intent. Where a Intent is meant to
- interface between Modules and the Framework, this structure is specific to
- the interface between the Framework and the ModuleResolver.
-
- In that role, it has references to structures and concepts that are only
- visible within the abstraction layer of the Framework.
+<p>Mirrors the information present in a Intent. Where a Intent is meant to
+interface between Modules and the Framework, this structure is specific to
+the interface between the Framework and the ModuleResolver.</p>
+<p>In that role, it has references to structures and concepts that are only
+visible within the abstraction layer of the Framework.</p>
 
 
 <table>
@@ -3093,8 +3041,8 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The handler is a module URL; if the handler is specified, the search for
- (action, parameter_constraints) is scoped within the specified handler.
+            <td><p>The handler is a module URL; if the handler is specified, the search for
+(action, parameter_constraints) is scoped within the specified handler.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3177,7 +3125,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The ID of the Module. For now, this is the URL of the Module binary.
+            <td><p>The ID of the Module. For now, this is the URL of the Module binary.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3185,7 +3133,7 @@
             <td>
                 <code><a class='link' href='#ModuleManifest'>ModuleManifest</a>?</code>
             </td>
-            <td> The Module's manifest file (see docs/manifests/module.md).
+            <td><p>The Module's manifest file (see docs/manifests/module.md).</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3196,7 +3144,7 @@
 
 
 
- Specifies the focused story of a device.
+<p>Specifies the focused story of a device.</p>
 
 
 <table>
@@ -3205,7 +3153,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The id of the device.
+            <td><p>The id of the device.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3213,7 +3161,7 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The id of the focused story.  If null, no stories are focused.
+            <td><p>The id of the focused story.  If null, no stories are focused.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3221,8 +3169,8 @@
             <td>
                 <code>uint64</code>
             </td>
-            <td> The time the focused story on the device `device_id` was last
- changed. 0 if no focus has ever been set for device `device_id`.
+            <td><p>The time the focused story on the device <code>device_id</code> was last
+changed. 0 if no focus has ever been set for device <code>device_id</code>.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3233,12 +3181,11 @@
 
 
 
- Identifies a view provided to a session shell. The values of the `story_id`
- field match those used in the `StoryProvider` interface, allowing
- identification of the same story across interfaces.
-
- This is a struct rather than a naked string to allow for future evolution of
- the identifier without changing the `SessionShell` API itself.
+<p>Identifies a view provided to a session shell. The values of the <code>story_id</code>
+field match those used in the <code>StoryProvider</code> interface, allowing
+identification of the same story across interfaces.</p>
+<p>This is a struct rather than a naked string to allow for future evolution of
+the identifier without changing the <code>SessionShell</code> API itself.</p>
 
 
 <table>
@@ -3257,7 +3204,7 @@
 
 
 
- Defines the attributes for a Link when the Link is created.
+<p>Defines the attributes for a Link when the Link is created.</p>
 
 
 <table>
@@ -3266,9 +3213,9 @@
             <td>
                 <code><a class='link' href='../fuchsia.mem/'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/#Buffer'>Buffer</a></code>
             </td>
-            <td> Passed as root_json argument to StoryProvider.CreateStoryWithInfo()
- Link.Set() to set the value in the root link of the new Story's primary
- module.
+            <td><p>Passed as root_json argument to StoryProvider.CreateStoryWithInfo()
+Link.Set() to set the value in the root link of the new Story's primary
+module.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3276,8 +3223,8 @@
             <td>
                 <code><a class='link' href='#LinkAllowedTypes'>LinkAllowedTypes</a>?</code>
             </td>
-            <td> If `allowed_types` is null, the Link contains JSON. No schema validation
- is performed.
+            <td><p>If <code>allowed_types</code> is null, the Link contains JSON. No schema validation
+is performed.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3296,10 +3243,9 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> The Link must contain an Entity (see Link.SetEntity()) that has at least
- one of `allowed_entity_types` in its `Entity.GetTypes()` return value.
-
- If empty, allows any Entity type.
+            <td><p>The Link must contain an Entity (see Link.SetEntity()) that has at least
+one of <code>allowed_entity_types</code> in its <code>Entity.GetTypes()</code> return value.</p>
+<p>If empty, allows any Entity type.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3310,7 +3256,7 @@
 
 
 
- Module parameters are named pointers to link instances.
+<p>Module parameters are named pointers to link instances.</p>
 
 
 <table>
@@ -3319,7 +3265,7 @@
             <td>
                 <code>vector&lt;<a class='link' href='#CreateModuleParameterMapEntry'>CreateModuleParameterMapEntry</a>&gt;?</code>
             </td>
-            <td> Contains instructions to create each name in the parameter map.
+            <td><p>Contains instructions to create each name in the parameter map.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3438,8 +3384,8 @@
 
 
 
- Adds a mod described by `intent` to the story with name `mod_name`. If
- `mod_name` already exists in the story, the mod is updated.
+<p>Adds a mod described by <code>intent</code> to the story with name <code>mod_name</code>. If
+<code>mod_name</code> already exists in the story, the mod is updated.</p>
 
 
 <table>
@@ -3448,16 +3394,13 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> The name of the mod within the story. The mod's name acts as the unique
- ID of the mod, scoped to the story in which it is contained. Since
- AddMod is reused for observation and mod names are vector<string>
- inside the framework, they are vector<string> here as well.
-
- Clients should treat the full vector as a single opaque value.
-
- Clients should provide `mod_name_transitional` instead.
- If both are provided, `mod_name` is ignored.
-
+            <td><p>The name of the mod within the story. The mod's name acts as the unique
+ID of the mod, scoped to the story in which it is contained. Since
+AddMod is reused for observation and mod names are vector<string>
+inside the framework, they are vector<string> here as well.</p>
+<p>Clients should treat the full vector as a single opaque value.</p>
+<p>Clients should provide <code>mod_name_transitional</code> instead.
+If both are provided, <code>mod_name</code> is ignored.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3465,10 +3408,9 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The name of the mod within the story. This should be used instead of
- `mod_name`. If provided, it is equivalent to passing `mod_name` with
- a single item. If both are provided, `mod_name` is ignored.
-
+            <td><p>The name of the mod within the story. This should be used instead of
+<code>mod_name</code>. If provided, it is equivalent to passing <code>mod_name</code> with
+a single item. If both are provided, <code>mod_name</code> is ignored.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3483,8 +3425,8 @@
             <td>
                 <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
             </td>
-            <td> `surface_relation` defines the visual relationship between this mod and the
- mod at `surface_parent_mod_name`.
+            <td><p><code>surface_relation</code> defines the visual relationship between this mod and the
+mod at <code>surface_parent_mod_name</code>.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3502,7 +3444,7 @@
 
 
 
- Removes the mod under `mod_name` from the story.
+<p>Removes the mod under <code>mod_name</code> from the story.</p>
 
 
 <table>
@@ -3511,11 +3453,9 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> The name of the mod within the story.
-
- Clients should provide `mod_name_transitional` instead.
- If both are provided, `mod_name` is ignored.
-
+            <td><p>The name of the mod within the story.</p>
+<p>Clients should provide <code>mod_name_transitional</code> instead.
+If both are provided, <code>mod_name</code> is ignored.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3523,10 +3463,9 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The name of the mod within the story. This should be used instead of
- `mod_name`. If provided, it is equivalent to passing `mod_name` with
- a single item. If both are provided, `mod_name` is ignored.
-
+            <td><p>The name of the mod within the story. This should be used instead of
+<code>mod_name</code>. If provided, it is equivalent to passing <code>mod_name</code> with
+a single item. If both are provided, <code>mod_name</code> is ignored.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3537,7 +3476,7 @@
 
 
 
- Sets the value of link at `path` to `value`.
+<p>Sets the value of link at <code>path</code> to <code>value</code>.</p>
 
 
 <table>
@@ -3563,7 +3502,7 @@
 
 
 
- Instructs the session shell to focus the mod under `mod_name`.
+<p>Instructs the session shell to focus the mod under <code>mod_name</code>.</p>
 
 
 <table>
@@ -3572,11 +3511,9 @@
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> The name of the mod within the story.
-
- Clients should provide `mod_name_transitional` instead.
- If both are provided, `mod_name` is ignored.
-
+            <td><p>The name of the mod within the story.</p>
+<p>Clients should provide <code>mod_name_transitional</code> instead.
+If both are provided, <code>mod_name</code> is ignored.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3584,10 +3521,9 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> The name of the mod within the story. This should be used instead of
- `mod_name`. If provided, it is equivalent to passing `mod_name` with
- a single item. If both are provided, `mod_name` is ignored.
-
+            <td><p>The name of the mod within the story. This should be used instead of
+<code>mod_name</code>. If provided, it is equivalent to passing <code>mod_name</code> with
+a single item. If both are provided, <code>mod_name</code> is ignored.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3598,7 +3534,7 @@
 
 
 
- Updates the kind_of_proto_story option in a story.
+<p>Updates the kind_of_proto_story option in a story.</p>
 
 
 <table>
@@ -3628,7 +3564,7 @@
 
 
 
- Information about a story as provided to the SessionShell.
+<p>Information about a story as provided to the SessionShell.</p>
 
 
 <table>
@@ -3637,8 +3573,8 @@
             <td>
                 <code>string?</code>
             </td>
-            <td> URL of the first module run in this story. This module is free to
- run more modules in the story. Used for display purposes only.
+            <td><p>URL of the first module run in this story. This module is free to
+run more modules in the story. Used for display purposes only.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3646,7 +3582,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The ID of the Story, used to reference it in method arguments.
+            <td><p>The ID of the Story, used to reference it in method arguments.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3654,10 +3590,9 @@
             <td>
                 <code>int64</code>
             </td>
-            <td> Wallclock time when the story was last focused. From
- `ZX_CLOCK_UTC`, thus nanoseconds since UNIX epoch (1970-01-01 00:00 UTC).
-
- A value of zero means the story has never been focused.
+            <td><p>Wallclock time when the story was last focused. From
+<code>ZX_CLOCK_UTC</code>, thus nanoseconds since UNIX epoch (1970-01-01 00:00 UTC).</p>
+<p>A value of zero means the story has never been focused.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3665,8 +3600,8 @@
             <td>
                 <code>vector&lt;<a class='link' href='#StoryInfoExtraEntry'>StoryInfoExtraEntry</a>&gt;?</code>
             </td>
-            <td> Data the SessionShell wants to keep associated with this Story, like
- title, a color, or a display rank.
+            <td><p>Data the SessionShell wants to keep associated with this Story, like
+title, a color, or a display rank.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3710,8 +3645,8 @@
             <td>
                 <code>bool</code>
             </td>
-            <td> Whether or not the story will be hidden on a call to
- StoryProvider#GetStories.
+            <td><p>Whether or not the story will be hidden on a call to
+StoryProvider#GetStories.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3722,7 +3657,7 @@
 
 
 
- A pair mapping a surface ID to a view (via `view_holder_token`).
+<p>A pair mapping a surface ID to a view (via <code>view_holder_token</code>).</p>
 
 
 <table>
@@ -3731,7 +3666,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The ID for the surface
+            <td><p>The ID for the surface</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3739,7 +3674,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.ui.views/'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/#ViewHolderToken'>ViewHolderToken</a></code>
             </td>
-            <td> Token for embedding the new view corresponding to the surface.
+            <td><p>Token for embedding the new view corresponding to the surface.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3750,7 +3685,7 @@
 
 
 
- DEPRECATED, for transition purposes only.
+<p>DEPRECATED, for transition purposes only.</p>
 
 
 <table>
@@ -3759,7 +3694,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The ID for the surface
+            <td><p>The ID for the surface</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3767,7 +3702,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.ui.views/'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/#ViewHolderToken'>ViewHolderToken</a></code>
             </td>
-            <td> Token for embedding the new view corresponding to the surface.
+            <td><p>Token for embedding the new view corresponding to the surface.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3778,7 +3713,7 @@
 
 
 
- Contains metadata for a Surface.
+<p>Contains metadata for a Surface.</p>
 
 
 <table>
@@ -3787,7 +3722,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> ID of the view that is parent of this Surface.
+            <td><p>ID of the view that is parent of this Surface.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3795,8 +3730,8 @@
             <td>
                 <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a>?</code>
             </td>
-            <td> The relationship between the parent Surface and this new Surface. Used
- for layout optimization.
+            <td><p>The relationship between the parent Surface and this new Surface. Used
+for layout optimization.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3804,7 +3739,7 @@
             <td>
                 <code><a class='link' href='#ModuleManifest'>ModuleManifest</a>?</code>
             </td>
-            <td> Information about the module populates the view.
+            <td><p>Information about the module populates the view.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -3812,8 +3747,8 @@
             <td>
                 <code><a class='link' href='#ModuleSource'>ModuleSource</a></code>
             </td>
-            <td> How the Surface was generated. By an action internal to the story or by
- an external action.
+            <td><p>How the Surface was generated. By an action internal to the story or by
+an external action.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -3824,8 +3759,8 @@
 
 
 
- Describes the relationship between two Surfaces.
- Provides information to the StoryShell for layout optimization.
+<p>Describes the relationship between two Surfaces.
+Provides information to the StoryShell for layout optimization.</p>
 
 
 <table>
@@ -3834,7 +3769,7 @@
             <td>
                 <code><a class='link' href='#SurfaceArrangement'>SurfaceArrangement</a></code>
             </td>
-            <td> Advice on arranging these surfaces on the screen together.
+            <td><p>Advice on arranging these surfaces on the screen together.</p>
 </td>
             <td><a class='link' href='#SurfaceArrangement.NONE'>SurfaceArrangement.NONE</a></td>
         </tr><tr>
@@ -3842,7 +3777,7 @@
             <td>
                 <code><a class='link' href='#SurfaceDependency'>SurfaceDependency</a></code>
             </td>
-            <td> Advice for dismissal of surfaces to be linked.
+            <td><p>Advice for dismissal of surfaces to be linked.</p>
 </td>
             <td><a class='link' href='#SurfaceDependency.NONE'>SurfaceDependency.NONE</a></td>
         </tr><tr>
@@ -3850,8 +3785,8 @@
             <td>
                 <code>float32</code>
             </td>
-            <td> Relative emphasis of the child surface, relative to the parent.
- Influences relative areas of surfaces on screen.
+            <td><p>Relative emphasis of the child surface, relative to the parent.
+Influences relative areas of surfaces on screen.</p>
 </td>
             <td>1</td>
         </tr>
@@ -3866,29 +3801,29 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#59)*
 
- Error returned from calls to Annotate().
+<p>Error returned from calls to Annotate().</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>VALUE_TOO_BIG</code></td>
             <td><code>1</code></td>
-            <td> The `AnnotationValue.buffer` size exceeds the maximum length,
- `MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES`.
+            <td><p>The <code>AnnotationValue.buffer</code> size exceeds the maximum length,
+<code>MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES</code>.</p>
 </td>
         </tr><tr>
             <td><code>TOO_MANY_ANNOTATIONS</code></td>
             <td><code>2</code></td>
-            <td> The total number of annotations on the story or module being annotated
- exceeds `MAX_ANNOTATIONS_PER_STORY` or `MAX_ANNOTATIONS_PER_MODULE`.
+            <td><p>The total number of annotations on the story or module being annotated
+exceeds <code>MAX_ANNOTATIONS_PER_STORY</code> or <code>MAX_ANNOTATIONS_PER_MODULE</code>.</p>
 </td>
         </tr><tr>
             <td><code>NOT_FOUND</code></td>
             <td><code>3</code></td>
-            <td> The resource to be annotated was not found and could not be resolved
- by, for example, waiting, or creating the missing resource automatically.
- This error may be returned by StoryPuppetMaster.AnnotateModule(), which
- can wait for a missing Module, but requires the Module's Story exist.
+            <td><p>The resource to be annotated was not found and could not be resolved
+by, for example, waiting, or creating the missing resource automatically.
+This error may be returned by StoryPuppetMaster.AnnotateModule(), which
+can wait for a missing Module, but requires the Module's Story exist.</p>
 </td>
         </tr></table>
 
@@ -3907,12 +3842,12 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>1</code></td>
-            <td> Indicates a failure of the entity provider to write the update.
+            <td><p>Indicates a failure of the entity provider to write the update.</p>
 </td>
         </tr><tr>
             <td><code>READ_ONLY</code></td>
             <td><code>2</code></td>
-            <td> Entity providers are not necessarily required to support entity mutation.
+            <td><p>Entity providers are not necessarily required to support entity mutation.</p>
 </td>
         </tr></table>
 
@@ -3921,7 +3856,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/module_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_context.fidl#62)*
 
- Communicates the status of an Intent to a Module.
+<p>Communicates the status of an Intent to a Module.</p>
 
 
 <table>
@@ -3968,15 +3903,15 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>INTERNAL</code></td>
             <td><code>0</code></td>
-            <td> Module that was added to the story from within the story by another
- module using ModuleContext.AddModuleToStory() or
- ModuleContext.EmbedModule().
+            <td><p>Module that was added to the story from within the story by another
+module using ModuleContext.AddModuleToStory() or
+ModuleContext.EmbedModule().</p>
 </td>
         </tr><tr>
             <td><code>EXTERNAL</code></td>
             <td><code>1</code></td>
-            <td> Module that was added to the story from outside the story using
- PuppetMaster.
+            <td><p>Module that was added to the story from outside the story using
+PuppetMaster.</p>
 </td>
         </tr></table>
 
@@ -3985,39 +3920,38 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/module_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_state.fidl#21)*
 
- State used to notify about state transitions of a Module
- instance. This is very similar to the StoryState, however it's not entirely
- the same and hence a separate type. A module cannot have an INITIAL state,
- because it's started as soon as it is created, and it gets deleted as soon as
- it reaches the STOPPED state, whileas a story can be restarted.
-
- Currently possible state transitions (and the events that cause
- them) are:
-
-            -> RUNNING     ModuleContext.AddModuleToStory() or
-                           ModuleContext.EmbedModule() or
-                           StoryController.AddModule()
-   RUNNING  -> STOPPED     ModuleController.Stop() or StoryController.Stop()
-   RUNNING  -> ERROR       application exits
+<p>State used to notify about state transitions of a Module
+instance. This is very similar to the StoryState, however it's not entirely
+the same and hence a separate type. A module cannot have an INITIAL state,
+because it's started as soon as it is created, and it gets deleted as soon as
+it reaches the STOPPED state, whileas a story can be restarted.</p>
+<p>Currently possible state transitions (and the events that cause
+them) are:</p>
+<pre><code>        -&gt; RUNNING     ModuleContext.AddModuleToStory() or
+                       ModuleContext.EmbedModule() or
+                       StoryController.AddModule()
+</code></pre>
+<p>RUNNING  -&gt; STOPPED     ModuleController.Stop() or StoryController.Stop()
+RUNNING  -&gt; ERROR       application exits</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>RUNNING</code></td>
             <td><code>2</code></td>
-            <td> Module instance was created.
+            <td><p>Module instance was created.</p>
 </td>
         </tr><tr>
             <td><code>STOPPED</code></td>
             <td><code>4</code></td>
-            <td> Module instance is stopped after Module.Stop(). No further transitions are
- to be expected.
+            <td><p>Module instance is stopped after Module.Stop(). No further transitions are
+to be expected.</p>
 </td>
         </tr><tr>
             <td><code>ERROR</code></td>
             <td><code>5</code></td>
-            <td> Connection to the Module instance was closed without Stop() request. No
- further transitions are to be expected.
+            <td><p>Connection to the Module instance was closed without Stop() request. No
+further transitions are to be expected.</p>
 </td>
         </tr></table>
 
@@ -4032,13 +3966,13 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>SUCCESS</code></td>
             <td><code>0</code></td>
-            <td> A search was successfully conducted.
+            <td><p>A search was successfully conducted.</p>
 </td>
         </tr><tr>
             <td><code>UNKNOWN_HANDLER</code></td>
             <td><code>1</code></td>
-            <td> `FindModulesQuery.handler` was specified but the resolver doesn't know
- about it.
+            <td><p><code>FindModulesQuery.handler</code> was specified but the resolver doesn't know
+about it.</p>
 </td>
         </tr></table>
 
@@ -4091,7 +4025,7 @@ Type: <code>int32</code>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>ERR_STORY_ALREADY_CREATED</code></td>
             <td><code>1</code></td>
-            <td> The story cannot be (re)configured because it was already created.
+            <td><p>The story cannot be (re)configured because it was already created.</p>
 </td>
         </tr></table>
 
@@ -4100,7 +4034,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#155)*
 
- Defines the visual state of the Story shell.
+<p>Defines the visual state of the Story shell.</p>
 
 
 <table>
@@ -4123,34 +4057,32 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/story_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_state.fidl#16)*
 
- State of a Story. A story is either running, stopping, or stopped, separately
- on every device of the user. If it's running, it can also be focused, but
- that's tracked in a separate service, cf. FocusProvider in focus.fidl.
-
- Possible state transitions are:
-
-   STOPPED  -> RUNNING
-   RUNNING  -> STOPPING
-   STOPPING -> STOPPED
+<p>State of a Story. A story is either running, stopping, or stopped, separately
+on every device of the user. If it's running, it can also be focused, but
+that's tracked in a separate service, cf. FocusProvider in focus.fidl.</p>
+<p>Possible state transitions are:</p>
+<p>STOPPED  -&gt; RUNNING
+RUNNING  -&gt; STOPPING
+STOPPING -&gt; STOPPED</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>RUNNING</code></td>
             <td><code>1</code></td>
-            <td> Story was started using StoryController.Start().
+            <td><p>Story was started using StoryController.Start().</p>
 </td>
         </tr><tr>
             <td><code>STOPPING</code></td>
             <td><code>2</code></td>
-            <td> Story is in the middle of stopping after StoryController.Stop() was
- called.
+            <td><p>Story is in the middle of stopping after StoryController.Stop() was
+called.</p>
 </td>
         </tr><tr>
             <td><code>STOPPED</code></td>
             <td><code>3</code></td>
-            <td> Story was not yet run, or Story was stopped after StoryController.Stop()
- was called.
+            <td><p>Story was not yet run, or Story was stopped after StoryController.Stop()
+was called.</p>
 </td>
         </tr></table>
 
@@ -4159,28 +4091,27 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/story_visibility_state.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_visibility_state.fidl#17)*
 
- Visibility state of a Story within the session shell.
- This state describes how a story should be displayed within the session shell,
- regardless of whether the story is in focus or not. Focus state and
- visibility state are orthogonal concepts.
- E.g A story can be out-of-focus and be in IMMERSIVE state at the same time
- if a user was playing a video, exits, then re-enters the story. The
- expectation in this scenario is that the story is in IMMERSIVE state upon
- re-enter.
-
- All state transitions are possible.
+<p>Visibility state of a Story within the session shell.
+This state describes how a story should be displayed within the session shell,
+regardless of whether the story is in focus or not. Focus state and
+visibility state are orthogonal concepts.
+E.g A story can be out-of-focus and be in IMMERSIVE state at the same time
+if a user was playing a video, exits, then re-enters the story. The
+expectation in this scenario is that the story is in IMMERSIVE state upon
+re-enter.</p>
+<p>All state transitions are possible.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>DEFAULT</code></td>
             <td><code>1</code></td>
-            <td> Default state for a story.
+            <td><p>Default state for a story.</p>
 </td>
         </tr><tr>
             <td><code>IMMERSIVE</code></td>
             <td><code>2</code></td>
-            <td> Full-screen user experience, e.g. playing a video.
+            <td><p>Full-screen user experience, e.g. playing a video.</p>
 </td>
         </tr></table>
 
@@ -4189,32 +4120,32 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/surface.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/surface/surface.fidl#24)*
 
- Expresses arrangement type.
+<p>Expresses arrangement type.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td> No arrangement specified.
+            <td><p>No arrangement specified.</p>
 </td>
         </tr><tr>
             <td><code>COPRESENT</code></td>
             <td><code>1</code></td>
-            <td> Desire to present simultaneously.
+            <td><p>Desire to present simultaneously.</p>
 </td>
         </tr><tr>
             <td><code>SEQUENTIAL</code></td>
             <td><code>2</code></td>
-            <td> The parent prefers to not be presented simultaneously with its child.
- (The child may still become part of a simultaneous presentation depending
- on the relationships between it and subsequently added surfaces).
+            <td><p>The parent prefers to not be presented simultaneously with its child.
+(The child may still become part of a simultaneous presentation depending
+on the relationships between it and subsequently added surfaces).</p>
 </td>
         </tr><tr>
             <td><code>ONTOP</code></td>
             <td><code>3</code></td>
-            <td> Place this surface on top of and obscuring the parent surface. This is a
- complete replacement, not a modal or inset presentation.
+            <td><p>Place this surface on top of and obscuring the parent surface. This is a
+complete replacement, not a modal or inset presentation.</p>
 </td>
         </tr></table>
 
@@ -4223,20 +4154,20 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/surface.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/surface/surface.fidl#42)*
 
- Links surface dismissal.
+<p>Links surface dismissal.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>NONE</code></td>
             <td><code>0</code></td>
-            <td> No dependency specified.
+            <td><p>No dependency specified.</p>
 </td>
         </tr><tr>
             <td><code>DEPENDENT</code></td>
             <td><code>1</code></td>
-            <td> Child is dependent on parent.
- If parent is dismissed, child is dismissed as well.
+            <td><p>Child is dependent on parent.
+If parent is dismissed, child is dismissed as well.</p>
 </td>
         </tr></table>
 
@@ -4249,7 +4180,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#45)*
 
- Used by ComponentContext.ConnectToAgentService
+<p>Used by ComponentContext.ConnectToAgentService</p>
 
 
 <table>
@@ -4260,7 +4191,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The name of the requested service.
+            <td><p>The name of the requested service.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -4268,7 +4199,7 @@ Type: <code>uint32</code>
             <td>
                 <code>handle&lt;channel&gt;</code>
             </td>
-            <td> The channel that will be used to communicate with the requested service.
+            <td><p>The channel that will be used to communicate with the requested service.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -4276,9 +4207,9 @@ Type: <code>uint32</code>
             <td>
                 <code>string[2083]</code>
             </td>
-            <td> The component URL of the Agent that is to provide the specified service.
- If no handler is specified, the framework will perform resolution to
- find an appropriate handler.
+            <td><p>The component URL of the Agent that is to provide the specified service.
+If no handler is specified, the framework will perform resolution to
+find an appropriate handler.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -4286,7 +4217,7 @@ Type: <code>uint32</code>
             <td>
                 <code>request&lt;<a class='link' href='#AgentController'>AgentController</a>&gt;</code>
             </td>
-            <td> The AgentController that keeps the agent alive.
+            <td><p>The AgentController that keeps the agent alive.</p>
 </td>
         </tr></table>
 
@@ -4295,7 +4226,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/module_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_data.fidl#8)*
 
- Information about a Module instance in a story.
+<p>Information about a Module instance in a story.</p>
 
 
 <table>
@@ -4306,7 +4237,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The URL of the Module binary.
+            <td><p>The URL of the Module binary.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -4314,9 +4245,9 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> The named path leading up to this Module instance. The last name in this
- array is the name by which the Module was started by the parent Module
- instance calling StartModule().
+            <td><p>The named path leading up to this Module instance. The last name in this
+array is the name by which the Module was started by the parent Module
+instance calling StartModule().</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -4324,7 +4255,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ModuleParameterMap'>ModuleParameterMap</a></code>
             </td>
-            <td> Contains the mapping of Mod parameter name to Link instances for this mod.
+            <td><p>Contains the mapping of Mod parameter name to Link instances for this mod.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -4332,9 +4263,9 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ModuleSource'>ModuleSource</a></code>
             </td>
-            <td> The way in which this Module instance was first started in the story,
- either by request from another Module instance (INTERNAL) or by request
- from outside the story (i.e. by suggestion from an agent - EXTERNAL).
+            <td><p>The way in which this Module instance was first started in the story,
+either by request from another Module instance (INTERNAL) or by request
+from outside the story (i.e. by suggestion from an agent - EXTERNAL).</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -4342,10 +4273,10 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
             </td>
-            <td> The `surface_relation` that was used to start this Module instance with.
- The same is used when re-inflating the Module instance when the story is
- resumed. A SurfaceRelation value of null represents an embedded Module
- instance (started by EmbedModule()) that is not managed by the story shell.
+            <td><p>The <code>surface_relation</code> that was used to start this Module instance with.
+The same is used when re-inflating the Module instance when the story is
+resumed. A SurfaceRelation value of null represents an embedded Module
+instance (started by EmbedModule()) that is not managed by the story shell.</p>
 </td>
         </tr><tr>
             <td>6</td>
@@ -4353,8 +4284,8 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> True if this module was removed from its story either through
- ModuleController.Stop() or ModuleContext.RemoveSelfFromStory().
+            <td><p>True if this module was removed from its story either through
+ModuleController.Stop() or ModuleContext.RemoveSelfFromStory().</p>
 </td>
         </tr><tr>
             <td>7</td>
@@ -4362,13 +4293,12 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#Intent'>Intent</a></code>
             </td>
-            <td> The intent that was issued to start add this Module instance to the story.
- Some Module instances may have been added not by an Intent, for example as
- the initial module of a story. For those the field may be null.
-
- TODO(thatguy,mesch): This field should now always be set, so make it
- required once the framework is cleaned up enough to guarantee this
- statement.
+            <td><p>The intent that was issued to start add this Module instance to the story.
+Some Module instances may have been added not by an Intent, for example as
+the initial module of a story. For those the field may be null.</p>
+<p>TODO(thatguy,mesch): This field should now always be set, so make it
+required once the framework is cleaned up enough to guarantee this
+statement.</p>
 </td>
         </tr><tr>
             <td>8</td>
@@ -4376,9 +4306,9 @@ Type: <code>uint32</code>
             <td>
                 <code>bool</code>
             </td>
-            <td> If true, this module was started by a parent module using
- ModuleContext.EmbedModule(), and its view is not managed by the
- StoryShell.
+            <td><p>If true, this module was started by a parent module using
+ModuleContext.EmbedModule(), and its view is not managed by the
+StoryShell.</p>
 </td>
         </tr><tr>
             <td>9</td>
@@ -4386,9 +4316,8 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[100]</code>
             </td>
-            <td> Collection of user-defined key-value attributes that describe this surface (module).
-
- The `Annotation.value` field of each `Annotation` is always set.
+            <td><p>Collection of user-defined key-value attributes that describe this surface (module).</p>
+<p>The <code>Annotation.value</code> field of each <code>Annotation</code> is always set.</p>
 </td>
         </tr></table>
 
@@ -4397,7 +4326,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/module_manifest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_manifest.fidl#49)*
 
- Defines how a suggestion of an action will be presented.
+<p>Defines how a suggestion of an action will be presented.</p>
 
 
 <table>
@@ -4408,9 +4337,9 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#DisplayInfo'>DisplayInfo</a></code>
             </td>
-            <td> Defines presentation fields for a suggestion. The string fields might be
- templated and will be filled from data in `parameter_mapping`.
- For example: "Listen to $artistName"
+            <td><p>Defines presentation fields for a suggestion. The string fields might be
+templated and will be filled from data in <code>parameter_mapping</code>.
+For example: &quot;Listen to $artistName&quot;</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -4418,10 +4347,10 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#ParameterMapping'>ParameterMapping</a>&gt;</code>
             </td>
-            <td> Fields to be replaced in the given `display_info` templated strings.
- In the example above, we would map name=artistName to the intent field
- artist.name where artist is the intent parameter name and name a field
- of it.
+            <td><p>Fields to be replaced in the given <code>display_info</code> templated strings.
+In the example above, we would map name=artistName to the intent field
+artist.name where artist is the intent parameter name and name a field
+of it.</p>
 </td>
         </tr></table>
 
@@ -4430,7 +4359,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/module_manifest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_manifest.fidl#63)*
 
- Presentation information about the suggestion.
+<p>Presentation information about the suggestion.</p>
 
 
 <table>
@@ -4441,7 +4370,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The title of the suggestion.
+            <td><p>The title of the suggestion.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -4449,7 +4378,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> A subtitle for the suggestion.
+            <td><p>A subtitle for the suggestion.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -4457,7 +4386,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> A url from which to fetch the icon of the suggestion.
+            <td><p>A url from which to fetch the icon of the suggestion.</p>
 </td>
         </tr></table>
 
@@ -4466,7 +4395,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/module_manifest.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/module/module_manifest.fidl#75)*
 
- Defines pairs that will be replaced in the DisplayInfo.
+<p>Defines pairs that will be replaced in the DisplayInfo.</p>
 
 
 <table>
@@ -4477,7 +4406,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The name of the variable to be replaced in the template.
+            <td><p>The name of the variable to be replaced in the template.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -4485,10 +4414,10 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The path in the intent parameter to get that name.
- `PARAMETER_PROPERTY` = string | string . `PARAMETER_PROPERTY`
- The first string in the dot-separated string is the name of the intent
- parameter and the following are nested subfields.
+            <td><p>The path in the intent parameter to get that name.
+<code>PARAMETER_PROPERTY</code> = string | string . <code>PARAMETER_PROPERTY</code>
+The first string in the dot-separated string is the name of the intent
+parameter and the following are nested subfields.</p>
 </td>
         </tr></table>
 
@@ -4497,8 +4426,8 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/story_info.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_info.fidl#30)*
 
- Information about a story as provided to the SessionShell.
- For transition purposes only.
+<p>Information about a story as provided to the SessionShell.
+For transition purposes only.</p>
 
 
 <table>
@@ -4509,7 +4438,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> The ID of the Story, used to reference it in method arguments.
+            <td><p>The ID of the Story, used to reference it in method arguments.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -4517,10 +4446,9 @@ Type: <code>uint32</code>
             <td>
                 <code>int64</code>
             </td>
-            <td> Wallclock time when the story was last focused. From
- ZX_CLOCK_UTC, thus nanoseconds since UNIX epoch (1970-01-01 00:00 UTC).
-
- A value of zero means the story has never been focused.
+            <td><p>Wallclock time when the story was last focused. From
+ZX_CLOCK_UTC, thus nanoseconds since UNIX epoch (1970-01-01 00:00 UTC).</p>
+<p>A value of zero means the story has never been focused.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -4528,10 +4456,9 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[100]</code>
             </td>
-            <td> Collection of user-defined key-value attributes that describe
- this story.
-
- The `Annotation.value` field of each `Annotation` is always set.
+            <td><p>Collection of user-defined key-value attributes that describe
+this story.</p>
+<p>The <code>Annotation.value</code> field of each <code>Annotation</code> is always set.</p>
 </td>
         </tr></table>
 
@@ -4540,7 +4467,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.modular/story_shell.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_shell.fidl#111)*
 
- Contains metadata for a Surface.
+<p>Contains metadata for a Surface.</p>
 
 
 <table>
@@ -4551,7 +4478,7 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> ID of the view that is parent of this Surface.
+            <td><p>ID of the view that is parent of this Surface.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -4559,8 +4486,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#SurfaceRelation'>SurfaceRelation</a></code>
             </td>
-            <td> The relationship between the parent Surface and this new Surface. Used
- for layout optimization.
+            <td><p>The relationship between the parent Surface and this new Surface. Used
+for layout optimization.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -4568,7 +4495,7 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ModuleManifest'>ModuleManifest</a></code>
             </td>
-            <td> Information about the module populates the view.
+            <td><p>Information about the module populates the view.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -4576,8 +4503,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#ModuleSource'>ModuleSource</a></code>
             </td>
-            <td> How the Surface was generated. By an action internal to the story or by
- an external action.
+            <td><p>How the Surface was generated. By an action internal to the story or by
+an external action.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -4585,9 +4512,8 @@ Type: <code>uint32</code>
             <td>
                 <code>vector&lt;<a class='link' href='#Annotation'>Annotation</a>&gt;[100]</code>
             </td>
-            <td> Collection of user-defined key-value attributes that describe this surface (module).
-
- The `Annotation.value` field of each `Annotation` is always set.
+            <td><p>Collection of user-defined key-value attributes that describe this surface (module).</p>
+<p>The <code>Annotation.value</code> field of each <code>Annotation</code> is always set.</p>
 </td>
         </tr></table>
 
@@ -4605,35 +4531,33 @@ Type: <code>uint32</code>
             <td>
                 <code>string</code>
             </td>
-            <td> Set this if you already have an Entity reference at runtime.
- Entity.getTypes() will be used to set the constraints for this noun during
- resolution.
+            <td><p>Set this if you already have an Entity reference at runtime.
+Entity.getTypes() will be used to set the constraints for this noun during
+resolution.</p>
 </td>
         </tr><tr>
             <td><code>json</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.mem/'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/#Buffer'>Buffer</a></code>
             </td>
-            <td> Set this if you have structured JSON data. Values typically are a JSON
- object with a "@type" attribute and other associated data.  TODO(thatguy):
- We need to decide if we want to keep this in place, or deprecate this
- eventually and move entirely to using Entity references.
-
- DEPRECATED: Use `entity_reference`.
+            <td><p>Set this if you have structured JSON data. Values typically are a JSON
+object with a &quot;@type&quot; attribute and other associated data.  TODO(thatguy):
+We need to decide if we want to keep this in place, or deprecate this
+eventually and move entirely to using Entity references.</p>
+<p>DEPRECATED: Use <code>entity_reference</code>.</p>
 </td>
         </tr><tr>
             <td><code>entity_type</code></td>
             <td>
                 <code>vector&lt;string&gt;</code>
             </td>
-            <td> Set this if you want to explicitly define this noun's allowed types. This
- is also useful in the cases where the noun has a 'direction' of type
- 'output', and you wish to set the allowable output types from the Module
- (see docs/modular/manifests/action_template.md for a definition of
- 'direction').
-
- Only one entry in `entity_type` must match the constraint specified by
- the Module for the constraint to be considered satisfied.
+            <td><p>Set this if you want to explicitly define this noun's allowed types. This
+is also useful in the cases where the noun has a 'direction' of type
+'output', and you wish to set the allowable output types from the Module
+(see docs/modular/manifests/action_template.md for a definition of
+'direction').</p>
+<p>Only one entry in <code>entity_type</code> must match the constraint specified by
+the Module for the constraint to be considered satisfied.</p>
 </td>
         </tr></table>
 
@@ -4647,8 +4571,8 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#LinkPath'>LinkPath</a></code>
             </td>
-            <td> Instructs parameter map initialization to either use an existing Link
- (`link_path` is set) or create a new Link (`create_link` is set).
+            <td><p>Instructs parameter map initialization to either use an existing Link
+(<code>link_path</code> is set) or create a new Link (<code>create_link</code> is set).</p>
 </td>
         </tr><tr>
             <td><code>create_link</code></td>
@@ -4718,14 +4642,13 @@ Type: <code>uint32</code>
 ### StoryCommand {#StoryCommand}
 *Defined in [fuchsia.modular/story_command.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_command.fidl#17)*
 
- StoryCommands are POD structures that describe the set of operations that
- can be performed on a story by components outside the modular framework. All commands are:
-
-   (1) Scoped to a single story
-   (2) Idempotent: issuing the same command twice yields the same result
-   (3) Symmetrical with observation: the same structures are used to describe
-       operations to watchers of a story (through SessionWatcher) as are used
-       to control a story.
+<p>StoryCommands are POD structures that describe the set of operations that
+can be performed on a story by components outside the modular framework. All commands are:</p>
+<p>(1) Scoped to a single story
+(2) Idempotent: issuing the same command twice yields the same result
+(3) Symmetrical with observation: the same structures are used to describe
+operations to watchers of a story (through SessionWatcher) as are used
+to control a story.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -4733,44 +4656,44 @@ Type: <code>uint32</code>
             <td>
                 <code><a class='link' href='#SetFocusState'>SetFocusState</a></code>
             </td>
-            <td> Sets the focus state of the story to `set_focus_state.focused`.
+            <td><p>Sets the focus state of the story to <code>set_focus_state.focused</code>.</p>
 </td>
         </tr><tr>
             <td><code>add_mod</code></td>
             <td>
                 <code><a class='link' href='#AddMod'>AddMod</a></code>
             </td>
-            <td> Adds a Mod.
+            <td><p>Adds a Mod.</p>
 </td>
         </tr><tr>
             <td><code>remove_mod</code></td>
             <td>
                 <code><a class='link' href='#RemoveMod'>RemoveMod</a></code>
             </td>
-            <td> Removes an existing Mod.
+            <td><p>Removes an existing Mod.</p>
 </td>
         </tr><tr>
             <td><code>set_link_value</code></td>
             <td>
                 <code><a class='link' href='#SetLinkValue'>SetLinkValue</a></code>
             </td>
-            <td> Sets the value of a Link.
- DEPRECATED. This command is a no-op.
+            <td><p>Sets the value of a Link.
+DEPRECATED. This command is a no-op.</p>
 </td>
         </tr><tr>
             <td><code>focus_mod</code></td>
             <td>
                 <code><a class='link' href='#FocusMod'>FocusMod</a></code>
             </td>
-            <td> Brings focus to a mod.
+            <td><p>Brings focus to a mod.</p>
 </td>
         </tr><tr>
             <td><code>set_kind_of_proto_story_option</code></td>
             <td>
                 <code><a class='link' href='#SetKindOfProtoStoryOption'>SetKindOfProtoStoryOption</a></code>
             </td>
-            <td> Updates the kind_of_proto_story option in a story.
- DEPRECATED. This command is a no-op.
+            <td><p>Updates the kind_of_proto_story option in a story.
+DEPRECATED. This command is a no-op.</p>
 </td>
         </tr></table>
 
@@ -4800,13 +4723,11 @@ Type: <code>uint32</code>
 ### AnnotationValue {#AnnotationValue}
 *Defined in [fuchsia.modular/annotation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#52)*
 
- The value of a <a class='link' href='#Annotation'>Annotation</a>.
-
- The actual field used depends on the type of annotation, which is
- user-defined, and not enforced by the framework.
-
- The size of `buffer` is limited to
- `MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES` bytes.
+<p>The value of a <a class='link' href='#Annotation'>Annotation</a>.</p>
+<p>The actual field used depends on the type of annotation, which is
+user-defined, and not enforced by the framework.</p>
+<p>The size of <code>buffer</code> is limited to
+<code>MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES</code> bytes.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -4842,7 +4763,7 @@ Type: <code>uint32</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum number of annotations on a single story.
+            <td><p>Maximum number of annotations on a single story.</p>
 </td>
         </tr>
     <tr>
@@ -4851,7 +4772,7 @@ Type: <code>uint32</code>
                     <code>100</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum number of annotations on a single module.
+            <td><p>Maximum number of annotations on a single module.</p>
 </td>
         </tr>
     <tr>
@@ -4860,9 +4781,9 @@ Type: <code>uint32</code>
                     <code>50</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum number of annotations that can be passed to either method
- Annotate() AnnotateModule() in fuchsia.modular protocols that support
- annotations.
+            <td><p>Maximum number of annotations that can be passed to either method
+Annotate() AnnotateModule() in fuchsia.modular protocols that support
+annotations.</p>
 </td>
         </tr>
     <tr>
@@ -4871,7 +4792,7 @@ Type: <code>uint32</code>
                     <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum length of <a class='link' href='#AnnotationKey'>AnnotationKey</a>.
+            <td><p>Maximum length of <a class='link' href='#AnnotationKey'>AnnotationKey</a>.</p>
 </td>
         </tr>
     <tr>
@@ -4880,8 +4801,8 @@ Type: <code>uint32</code>
                     <code>1024</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum length of <a class='link' href='#AnnotationValue'>AnnotationValue</a> fields:
- `text` and `bytes`.
+            <td><p>Maximum length of <a class='link' href='#AnnotationValue'>AnnotationValue</a> fields:
+<code>text</code> and <code>bytes</code>.</p>
 </td>
         </tr>
     <tr>
@@ -4890,10 +4811,9 @@ Type: <code>uint32</code>
                     <code>102400</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td> Maximum length of the <a class='link' href='#AnnotationValue.buffer'>AnnotationValue.buffer</a> field, in
- bytes.
-
- Does not apply to other fields; see <a class='link' href='#MAX_ANNOTATION_VALUE_LENGTH'>MAX_ANNOTATION_VALUE_LENGTH</a>.
+            <td><p>Maximum length of the <a class='link' href='#AnnotationValue.buffer'>AnnotationValue.buffer</a> field, in
+bytes.</p>
+<p>Does not apply to other fields; see <a class='link' href='#MAX_ANNOTATION_VALUE_LENGTH'>MAX_ANNOTATION_VALUE_LENGTH</a>.</p>
 </td>
         </tr>
     

@@ -8,28 +8,24 @@
 ## Device {#Device}
 *Defined in [fuchsia.hardware.ethernet/ethernet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#72)*
 
- Operation
-
- Packets are transmitted by writing data into the IO buffer and writing
- a FifoEntry referencing that data (offset + length) into the tx fifo.
- When the driver is done accessing the data, a FifoEntry with the same
- cookie value (opaque to the driver) will be readable from the tx fifo.
-
- Packets are received by writing a FifoEntry referencing an available
- buffer (offset + length) in the IO buffer.  When a packet is received,
- a FifoEntry with the same cookie value (opaque to the driver) will be
- readable from the rx fifo.  The offset field will be the same as was
- sent.  The length field will reflect the actual size of the received
- packet.  The flags field will indicate success or a specific failure
- condition.
-
- IMPORTANT: The driver *will not* buffer response messages.  It is the
- client's responsibility to ensure that there is space in the reply side
- of each fifo for each outstanding tx or rx request.  The fifo sizes
- are returned along with the fifo handles from GetFifos().
-
- See //zircon/system/public/zircon/device/ethernet.h for fifo entry layout
- and request / response message bits.
+<p>Operation</p>
+<p>Packets are transmitted by writing data into the IO buffer and writing
+a FifoEntry referencing that data (offset + length) into the tx fifo.
+When the driver is done accessing the data, a FifoEntry with the same
+cookie value (opaque to the driver) will be readable from the tx fifo.</p>
+<p>Packets are received by writing a FifoEntry referencing an available
+buffer (offset + length) in the IO buffer.  When a packet is received,
+a FifoEntry with the same cookie value (opaque to the driver) will be
+readable from the rx fifo.  The offset field will be the same as was
+sent.  The length field will reflect the actual size of the received
+packet.  The flags field will indicate success or a specific failure
+condition.</p>
+<p>IMPORTANT: The driver <em>will not</em> buffer response messages.  It is the
+client's responsibility to ensure that there is space in the reply side
+of each fifo for each outstanding tx or rx request.  The fifo sizes
+are returned along with the fifo handles from GetFifos().</p>
+<p>See //zircon/system/public/zircon/device/ethernet.h for fifo entry layout
+and request / response message bits.</p>
 
 ### GetInfo {#GetInfo}
 

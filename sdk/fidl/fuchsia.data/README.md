@@ -12,7 +12,7 @@
 
 
 
- A vector is a sequence of values.
+<p>A vector is a sequence of values.</p>
 
 
 <table>
@@ -31,8 +31,8 @@
 
 
 
- A dictionary is a sequence of key/value pairs.
- Keys must be unique and sorted in lexicographically increasing order.
+<p>A dictionary is a sequence of key/value pairs.
+Keys must be unique and sorted in lexicographically increasing order.</p>
 
 
 <table>
@@ -51,7 +51,7 @@
 
 
 
- A key/value pair in a `Dictionary`.
+<p>A key/value pair in a <code>Dictionary</code>.</p>
 
 
 <table>
@@ -83,7 +83,7 @@
 ### Value {#Value}
 *Defined in [fuchsia.data/data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.data/data.fidl#8)*
 
- A value is a boolean, integer, float, string, vector, or dictionary.
+<p>A value is a boolean, integer, float, string, vector, or dictionary.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>

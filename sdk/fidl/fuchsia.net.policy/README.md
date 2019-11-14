@@ -11,7 +11,7 @@
 
 ### GetInterfaceInfo {#GetInterfaceInfo}
 
- Retrieve info about an interface.
+<p>Retrieve info about an interface.</p>
 
 #### Request
 <table>
@@ -31,9 +31,9 @@
 
 ### SetInterfaceStatus {#SetInterfaceStatus}
 
- Set the administrative status for an interfance.
- If enabled, the interface starts processing packets.
- If disabled, the interface stops processing packets.
+<p>Set the administrative status for an interfance.
+If enabled, the interface starts processing packets.
+If disabled, the interface stops processing packets.</p>
 
 #### Request
 <table>
@@ -58,9 +58,9 @@
 
 ### SetDHCPClientStatus {#SetDHCPClientStatus}
 
- Set DHCP client status for a specific interface.
- If enabled, the interface acquires a dynamic IP address through DHCP server.
- If disabled, the interface uses the assigned static IP address.
+<p>Set DHCP client status for a specific interface.
+If enabled, the interface acquires a dynamic IP address through DHCP server.
+If disabled, the interface uses the assigned static IP address.</p>
 
 #### Request
 <table>
@@ -85,7 +85,7 @@
 
 ### SetName {#SetName}
 
- Set a name for an interface.
+<p>Set a name for an interface.</p>
 
 #### Request
 <table>
@@ -126,11 +126,11 @@
 ## StandardInterfaceController {#StandardInterfaceController}
 *Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#52)*
 
- Controller of physical and virtual interfaces.
+<p>Controller of physical and virtual interfaces.</p>
 
 ### GetInterfaceInfo {#GetInterfaceInfo}
 
- Retrieve info about an interface.
+<p>Retrieve info about an interface.</p>
 
 #### Request
 <table>
@@ -150,9 +150,9 @@
 
 ### SetInterfaceStatus {#SetInterfaceStatus}
 
- Set the administrative status for an interfance.
- If enabled, the interface starts processing packets.
- If disabled, the interface stops processing packets.
+<p>Set the administrative status for an interfance.
+If enabled, the interface starts processing packets.
+If disabled, the interface stops processing packets.</p>
 
 #### Request
 <table>
@@ -177,9 +177,9 @@
 
 ### SetDHCPClientStatus {#SetDHCPClientStatus}
 
- Set DHCP client status for a specific interface.
- If enabled, the interface acquires a dynamic IP address through DHCP server.
- If disabled, the interface uses the assigned static IP address.
+<p>Set DHCP client status for a specific interface.
+If enabled, the interface acquires a dynamic IP address through DHCP server.
+If disabled, the interface uses the assigned static IP address.</p>
 
 #### Request
 <table>
@@ -204,7 +204,7 @@
 
 ### SetName {#SetName}
 
- Set a name for an interface.
+<p>Set a name for an interface.</p>
 
 #### Request
 <table>
@@ -245,11 +245,11 @@
 ## BridgeInterfaceController {#BridgeInterfaceController}
 *Defined in [fuchsia.net.policy/policy.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.policy/policy.fidl#57)*
 
- Controller of  bridging interfaces.
+<p>Controller of  bridging interfaces.</p>
 
 ### GetInterfaceInfo {#GetInterfaceInfo}
 
- Retrieve info about an interface.
+<p>Retrieve info about an interface.</p>
 
 #### Request
 <table>
@@ -269,9 +269,9 @@
 
 ### SetInterfaceStatus {#SetInterfaceStatus}
 
- Set the administrative status for an interfance.
- If enabled, the interface starts processing packets.
- If disabled, the interface stops processing packets.
+<p>Set the administrative status for an interfance.
+If enabled, the interface starts processing packets.
+If disabled, the interface stops processing packets.</p>
 
 #### Request
 <table>
@@ -296,9 +296,9 @@
 
 ### SetDHCPClientStatus {#SetDHCPClientStatus}
 
- Set DHCP client status for a specific interface.
- If enabled, the interface acquires a dynamic IP address through DHCP server.
- If disabled, the interface uses the assigned static IP address.
+<p>Set DHCP client status for a specific interface.
+If enabled, the interface acquires a dynamic IP address through DHCP server.
+If disabled, the interface uses the assigned static IP address.</p>
 
 #### Request
 <table>
@@ -323,7 +323,7 @@
 
 ### SetName {#SetName}
 
- Set a name for an interface.
+<p>Set a name for an interface.</p>
 
 #### Request
 <table>
@@ -367,7 +367,7 @@
 
 ### ListInterfaces {#ListInterfaces}
 
- Retrieve info of all the interfaces.
+<p>Retrieve info of all the interfaces.</p>
 
 #### Request
 <table>
@@ -392,7 +392,7 @@
 
 ### GetInterfaceInfo {#GetInterfaceInfo}
 
- Retrieve info of a specific interface.
+<p>Retrieve info of a specific interface.</p>
 
 #### Request
 <table>
@@ -446,7 +446,7 @@
 
 ### AddInterface {#AddInterface}
 
- Add virtual interfaces.
+<p>Add virtual interfaces.</p>
 
 #### Request
 <table>
@@ -476,7 +476,7 @@
 
 ### CreateBridge {#CreateBridge}
 
- Create bridging interface.
+<p>Create bridging interface.</p>
 
 #### Request
 <table>
@@ -546,7 +546,7 @@
 
 
 
- Event for interface name update.
+<p>Event for interface name update.</p>
 
 
 <table>
@@ -555,7 +555,7 @@
             <td>
                 <code>string</code>
             </td>
-            <td> The new name.
+            <td><p>The new name.</p>
 </td>
             <td>No default</td>
         </tr>
@@ -582,7 +582,7 @@
             <td>
                 <code><a class='link' href='../fuchsia.net.stack/'>fuchsia.net.stack</a>/<a class='link' href='../fuchsia.net.stack/#InterfaceStatus'>InterfaceStatus</a></code>
             </td>
-            <td> InterfaceStatus event is triggered whenever an interface's status is changed.
+            <td><p>InterfaceStatus event is triggered whenever an interface's status is changed.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -590,7 +590,7 @@
             <td>
                 <code><a class='link' href='#InterfaceNameUpdate'>InterfaceNameUpdate</a></code>
             </td>
-            <td> InterfaceNameUpdate event is triggered whenever an interface's name is changed.
+            <td><p>InterfaceNameUpdate event is triggered whenever an interface's name is changed.</p>
 </td>
         </tr></table>
 

@@ -8,12 +8,12 @@
 ## DeviceListenerRegistry {#DeviceListenerRegistry}
 *Defined in [fuchsia.ui.policy/device_listener.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/device_listener.fidl#9)*
 
- Service for exposing state and events of devices, such as media buttons.
+<p>Service for exposing state and events of devices, such as media buttons.</p>
 
 ### RegisterMediaButtonsListener {#RegisterMediaButtonsListener}
 
- Registers a listener to receive media button related events, such as
- changes from volume buttons and mute switches.
+<p>Registers a listener to receive media button related events, such as
+changes from volume buttons and mute switches.</p>
 
 #### Request
 <table>
@@ -30,8 +30,8 @@
 ## KeyboardCaptureListenerHACK {#KeyboardCaptureListenerHACK}
 *Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#11)*
 
- `Presentation.CaptureKeyboardEvent` will consume this listener interface and
- call `OnEvent` when the registered keyboard event occurs.
+<p><code>Presentation.CaptureKeyboardEvent</code> will consume this listener interface and
+call <code>OnEvent</code> when the registered keyboard event occurs.</p>
 
 ### OnEvent {#OnEvent}
 
@@ -51,8 +51,8 @@
 ## PointerCaptureListenerHACK {#PointerCaptureListenerHACK}
 *Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#17)*
 
- `Presentation.CapturePointerEvent` will consume this listener interface and
- call `OnEvent` when a pointer event occurs.
+<p><code>Presentation.CapturePointerEvent</code> will consume this listener interface and
+call <code>OnEvent</code> when a pointer event occurs.</p>
 
 ### OnPointerEvent {#OnPointerEvent}
 
@@ -72,8 +72,8 @@
 ## MediaButtonsListener {#MediaButtonsListener}
 *Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#23)*
 
- `Presentation.RegisterMediaButtonsListener` will consume this listener interface
- and call `OnMediaButtonsEvent` when the registered media buttons event occurs.
+<p><code>Presentation.RegisterMediaButtonsListener</code> will consume this listener interface
+and call <code>OnMediaButtonsEvent</code> when the registered media buttons event occurs.</p>
 
 ### OnMediaButtonsEvent {#OnMediaButtonsEvent}
 
@@ -93,16 +93,16 @@
 ## Presentation {#Presentation}
 *Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#30)*
 
- Allows clients of Presenter.Present() to control a presentation.
- Experimental.
+<p>Allows clients of Presenter.Present() to control a presentation.
+Experimental.</p>
 
 ### CaptureKeyboardEventHACK {#CaptureKeyboardEventHACK}
 
- This call exists so that base shell can capture hotkeys and do special
- things with it (e.g., switch a session shell). Phase and modifiers are always
- matched, and valid (non-zero) code points are matched. If there is no
- valid code point, the filter will match against the hid usage value.
- The full KeyboardEvent is supplied to `listener`'s OnEvent.
+<p>This call exists so that base shell can capture hotkeys and do special
+things with it (e.g., switch a session shell). Phase and modifiers are always
+matched, and valid (non-zero) code points are matched. If there is no
+valid code point, the filter will match against the hid usage value.
+The full KeyboardEvent is supplied to <code>listener</code>'s OnEvent.</p>
 
 #### Request
 <table>
@@ -123,7 +123,7 @@
 
 ### CapturePointerEventsHACK {#CapturePointerEventsHACK}
 
- This call exists so that base shell can capture pointer events.
+<p>This call exists so that base shell can capture pointer events.</p>
 
 #### Request
 <table>
@@ -139,7 +139,7 @@
 
 ### RegisterMediaButtonsListener {#RegisterMediaButtonsListener}
 
- Registers a listener for media buttons events.
+<p>Registers a listener for media buttons events.</p>
 
 #### Request
 <table>
@@ -155,8 +155,8 @@
 
 ### InjectPointerEventHACK {#InjectPointerEventHACK}
 
- EXPERIMENTAL. Inject pointer events into input stream. This WILL go
- away. Used exclusively by Session Shells to test focus navigation.
+<p>EXPERIMENTAL. Inject pointer events into input stream. This WILL go
+away. Used exclusively by Session Shells to test focus navigation.</p>
 
 #### Request
 <table>
@@ -173,10 +173,10 @@
 ## PresentationModeListener {#PresentationModeListener}
 *Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#70)*
 
- Tell client that the screen mode has changed, according to sensors.
- N.B. There can be a race where the actual mode continues to change, after
- the listener has been notified. The client must call GetPresentationMode(),
- which will return the latest detected mode.
+<p>Tell client that the screen mode has changed, according to sensors.
+N.B. There can be a race where the actual mode continues to change, after
+the listener has been notified. The client must call GetPresentationMode(),
+which will return the latest detected mode.</p>
 
 ### OnModeChanged {#OnModeChanged}
 
@@ -191,14 +191,14 @@
 ## Presenter {#Presenter}
 *Defined in [fuchsia.ui.policy/presenter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presenter.fidl#14)*
 
- The Presenter service provides a way for applications to ask that a view be
- added to a view tree, leaving any window management concerns up to the
- discretion of the presenter implementation.
+<p>The Presenter service provides a way for applications to ask that a view be
+added to a view tree, leaving any window management concerns up to the
+discretion of the presenter implementation.</p>
 
 ### PresentView {#PresentView}
 
- Request that the View's contents be displayed on the screen as a
- `Presentation`.
+<p>Request that the View's contents be displayed on the screen as a
+<code>Presentation</code>.</p>
 
 #### Request
 <table>
@@ -219,9 +219,9 @@
 
 ### HACK_SetRendererParams {#HACK_SetRendererParams}
 
- Sets new default renderer params and forces them on for the duration of the
- presenter's lifetime. Only applies to any subsequent calls to Present().
- Used for testing.
+<p>Sets new default renderer params and forces them on for the duration of the
+presenter's lifetime. Only applies to any subsequent calls to Present().
+Used for testing.</p>
 
 #### Request
 <table>
@@ -251,7 +251,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.ui.policy/display_usage.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/display_usage.fidl#8)*
 
- Describes the intended usage of the display.
+<p>Describes the intended usage of the display.</p>
 
 
 <table>
@@ -262,27 +262,27 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>kHandheld</code></td>
             <td><code>1</code></td>
-            <td> Display is held in one or both hands.
+            <td><p>Display is held in one or both hands.</p>
 </td>
         </tr><tr>
             <td><code>kClose</code></td>
             <td><code>2</code></td>
-            <td> Display is used well within arm's reach.
+            <td><p>Display is used well within arm's reach.</p>
 </td>
         </tr><tr>
             <td><code>kNear</code></td>
             <td><code>3</code></td>
-            <td> Display is used at arm's reach.
+            <td><p>Display is used at arm's reach.</p>
 </td>
         </tr><tr>
             <td><code>kMidrange</code></td>
             <td><code>4</code></td>
-            <td> Display is used beyond arm's reach.
+            <td><p>Display is used beyond arm's reach.</p>
 </td>
         </tr><tr>
             <td><code>kFar</code></td>
             <td><code>5</code></td>
-            <td> Display is used well beyond arm's reach.
+            <td><p>Display is used well beyond arm's reach.</p>
 </td>
         </tr></table>
 
@@ -291,9 +291,9 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#59)*
 
- Screen modes that can be detected via sensor data.
- N.B. We use accelerometers to measure gravity when at rest, so detection is
- limited to earth-relative orientations.
+<p>Screen modes that can be detected via sensor data.
+N.B. We use accelerometers to measure gravity when at rest, so detection is
+limited to earth-relative orientations.</p>
 
 
 <table>

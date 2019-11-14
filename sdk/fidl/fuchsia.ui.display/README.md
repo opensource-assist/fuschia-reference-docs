@@ -8,12 +8,12 @@
 ## DisplayListener {#DisplayListener}
 *Defined in [fuchsia.ui.display/display_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.display/display_manager.fidl#42)*
 
- Display Listener protocol implemented by clients.
+<p>Display Listener protocol implemented by clients.</p>
 
 ### OnDisplayAdded {#OnDisplayAdded}
 
- Called when displays are added. This method will also be called when
- the listener is registered for any connected displays.
+<p>Called when displays are added. This method will also be called when
+the listener is registered for any connected displays.</p>
 
 #### Request
 <table>
@@ -29,7 +29,7 @@
 
 ### OnDisplayRemoved {#OnDisplayRemoved}
 
- Called when displays are removed.
+<p>Called when displays are removed.</p>
 
 #### Request
 <table>
@@ -45,11 +45,10 @@
 
 ### OnDisplayOwnershipChanged {#OnDisplayOwnershipChanged}
 
- Called when the client gains or loses ownership of the displays.
-
- New clients should assume they do not have ownership of the display
- until informed otherwise by this method. Ownership can be lost and
- gained more than once.
+<p>Called when the client gains or loses ownership of the displays.</p>
+<p>New clients should assume they do not have ownership of the display
+until informed otherwise by this method. Ownership can be lost and
+gained more than once.</p>
 
 #### Request
 <table>
@@ -71,10 +70,10 @@
 ## DisplayManager {#DisplayManager}
 *Defined in [fuchsia.ui.display/display_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.display/display_manager.fidl#63)*
 
- |DisplayManager| is a service that informs the client of new or removed
- displays and allows changing of display configuration. Every display is
- associated with a DisplayRef which can also be used as a parameter to other
- apis (e.g. Scenic).
+<p>|DisplayManager| is a service that informs the client of new or removed
+displays and allows changing of display configuration. Every display is
+associated with a DisplayRef which can also be used as a parameter to other
+apis (e.g. Scenic).</p>
 
 ### AddDisplayListener {#AddDisplayListener}
 
@@ -100,10 +99,10 @@
 
 
 
- Unique identifier for a display.
- Also serves as a capability, enabling the owner to perform certain
- operations on displays in the DisplayManager protocol and other protocols
- (like Scenic).
+<p>Unique identifier for a display.
+Also serves as a capability, enabling the owner to perform certain
+operations on displays in the DisplayManager protocol and other protocols
+(like Scenic).</p>
 
 
 <table>

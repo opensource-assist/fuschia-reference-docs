@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## MLME {#MLME}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#603)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#607)*
 
 
 ### StartScan {#StartScan}
@@ -725,9 +725,9 @@
         </tr></table>
 
 ## Connector {#Connector}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#708)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#712)*
 
- This protocol is used to connect to the interface's underlying MLME.
+<p>This protocol is used to connect to the interface's underlying MLME.</p>
 
 ### Connect {#Connect}
 
@@ -991,8 +991,8 @@
             <td>
                 <code>vector&lt;uint8&gt;?</code>
             </td>
-            <td> All vendor info elements present in the beacon frame. E.g. this may include a WPA1 IE.
- This slice should be a valid chain of IEs including IE headers for each element.
+            <td><p>All vendor info elements present in the beacon frame. E.g. this may include a WPA1 IE.
+This slice should be a valid chain of IEs including IE headers for each element.</p>
 </td>
             <td>No default</td>
         </tr><tr>
@@ -1647,6 +1647,13 @@
             <td></td>
             <td>No default</td>
         </tr><tr>
+            <td><code>rates</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[12]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
             <td><code>country</code></td>
             <td>
                 <code><a class='link' href='#Country'>Country</a></code>
@@ -1685,7 +1692,7 @@
 </table>
 
 ### StartConfirm {#StartConfirm}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#477)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#481)*
 
 
 
@@ -1703,7 +1710,7 @@
 </table>
 
 ### StopRequest {#StopRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#483)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#487)*
 
 
 
@@ -1721,7 +1728,7 @@
 </table>
 
 ### StopConfirm {#StopConfirm}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#493)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#497)*
 
 
 
@@ -1739,7 +1746,7 @@
 </table>
 
 ### SetKeyDescriptor {#SetKeyDescriptor}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#506)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#510)*
 
 
 
@@ -1799,7 +1806,7 @@
 </table>
 
 ### SetKeysRequest {#SetKeysRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#517)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#521)*
 
 
 
@@ -1817,7 +1824,7 @@
 </table>
 
 ### DeleteKeyDescriptor {#DeleteKeyDescriptor}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#523)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#527)*
 
 
 
@@ -1849,7 +1856,7 @@
 </table>
 
 ### DeleteKeysRequest {#DeleteKeysRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#529)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#533)*
 
 
 
@@ -1867,7 +1874,7 @@
 </table>
 
 ### EapolRequest {#EapolRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#535)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#539)*
 
 
 
@@ -1899,7 +1906,7 @@
 </table>
 
 ### EapolConfirm {#EapolConfirm}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#549)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#553)*
 
 
 
@@ -1917,7 +1924,7 @@
 </table>
 
 ### MeshConfiguration {#MeshConfiguration}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#554)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#558)*
 
 
 
@@ -1977,7 +1984,7 @@
 </table>
 
 ### MeshPeeringCommon {#MeshPeeringCommon}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#565)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#569)*
 
 
 
@@ -2058,7 +2065,7 @@
 </table>
 
 ### MeshPeeringOpenAction {#MeshPeeringOpenAction}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#579)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#583)*
 
 
 
@@ -2076,7 +2083,7 @@
 </table>
 
 ### MeshPeeringConfirmAction {#MeshPeeringConfirmAction}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#584)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#588)*
 
 
 
@@ -2108,7 +2115,7 @@
 </table>
 
 ### MeshPeeringParams {#MeshPeeringParams}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#590)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#594)*
 
 
 
@@ -2140,7 +2147,7 @@
 </table>
 
 ### GetMeshPathTableRequest {#GetMeshPathTableRequest}
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#597)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#601)*
 
 
 
@@ -2941,7 +2948,7 @@ Type: <code>uint32</code>
 ### StartResultCodes {#StartResultCodes}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#469)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#473)*
 
 
 
@@ -2971,7 +2978,7 @@ Type: <code>uint32</code>
 ### StopResultCodes {#StopResultCodes}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#487)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#491)*
 
 
 
@@ -2993,7 +3000,7 @@ Type: <code>uint32</code>
 ### KeyType {#KeyType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#499)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#503)*
 
 
 
@@ -3019,7 +3026,7 @@ Type: <code>uint32</code>
 ### EapolResultCodes {#EapolResultCodes}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#543)*
+*Defined in [fuchsia.wlan.mlme/wlan_mlme.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#547)*
 
 
 

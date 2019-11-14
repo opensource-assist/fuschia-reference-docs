@@ -8,8 +8,8 @@
 ## ListIterator {#ListIterator}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#55)*
 
- The iterator returned when a series of keys are being listed. Returns an
- empty vector when there are no more remaining ListItems.
+<p>The iterator returned when a series of keys are being listed. Returns an
+empty vector when there are no more remaining ListItems.</p>
 
 ### GetNext {#GetNext}
 
@@ -33,8 +33,8 @@
 ## GetIterator {#GetIterator}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#61)*
 
- The iterator returned when a series of keys are being read. Returns an
- empty vector when there are no more remaining KeyValues.
+<p>The iterator returned when a series of keys are being read. Returns an
+empty vector when there are no more remaining KeyValues.</p>
 
 ### GetNext {#GetNext}
 
@@ -58,11 +58,11 @@
 ## StoreAccessor {#StoreAccessor}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#66)*
 
- The interface returned when a new accessor is created.
+<p>The interface returned when a new accessor is created.</p>
 
 ### GetValue {#GetValue}
 
- Gets a single value from the store.
+<p>Gets a single value from the store.</p>
 
 #### Request
 <table>
@@ -87,8 +87,8 @@
 
 ### SetValue {#SetValue}
 
- Sets a single value in the store. Overwrites existing values. Commit()
- must be called for this change to take effect.
+<p>Sets a single value in the store. Overwrites existing values. Commit()
+must be called for this change to take effect.</p>
 
 #### Request
 <table>
@@ -109,8 +109,8 @@
 
 ### DeleteValue {#DeleteValue}
 
- Deletes a single value in the store. Does nothing if the value doesn't
- exist. Commit() must be called for this change to take effect.
+<p>Deletes a single value in the store. Does nothing if the value doesn't
+exist. Commit() must be called for this change to take effect.</p>
 
 #### Request
 <table>
@@ -126,7 +126,7 @@
 
 ### ListPrefix {#ListPrefix}
 
- Lists all keys under a given prefix.
+<p>Lists all keys under a given prefix.</p>
 
 #### Request
 <table>
@@ -147,7 +147,7 @@
 
 ### GetPrefix {#GetPrefix}
 
- Reads the values of all keys under a given prefix.
+<p>Reads the values of all keys under a given prefix.</p>
 
 #### Request
 <table>
@@ -168,7 +168,7 @@
 
 ### DeletePrefix {#DeletePrefix}
 
- Deletes the all keys under a given prefix.
+<p>Deletes the all keys under a given prefix.</p>
 
 #### Request
 <table>
@@ -184,8 +184,8 @@
 
 ### Commit {#Commit}
 
- Atomically causes all of the state modifications that happened in this
- accessor to take place.
+<p>Atomically causes all of the state modifications that happened in this
+accessor to take place.</p>
 
 #### Request
 <table>
@@ -196,11 +196,11 @@
 
 ### Flush {#Flush}
 
- Atomically causes all of the state modifications that happened
- in this accessor to take place, returning only when those
- modifications were written to disk.
- This operation is equivalent to Commit.
- Returns a FlushError if this operations could not be committed.
+<p>Atomically causes all of the state modifications that happened
+in this accessor to take place, returning only when those
+modifications were written to disk.
+This operation is equivalent to Commit.
+Returns a FlushError if this operations could not be committed.</p>
 
 #### Request
 <table>
@@ -221,14 +221,14 @@
 ## Store {#Store}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#101)*
 
- Interface used to interact with a given client's key/value store
+<p>Interface used to interact with a given client's key/value store</p>
 
 ### Identify {#Identify}
 
- Identify should be called at the beginning of a connection to identify
- which client service's store is to be accessed. In the future this will
- be deprecated in favor of component monikers, and each client will only
- be able to access its own store.
+<p>Identify should be called at the beginning of a connection to identify
+which client service's store is to be accessed. In the future this will
+be deprecated in favor of component monikers, and each client will only
+be able to access its own store.</p>
 
 #### Request
 <table>
@@ -244,8 +244,8 @@
 
 ### CreateAccessor {#CreateAccessor}
 
- Creates a accessor for interacting with the store. The resulting
- interface can be used to inspect and modify the state of the store.
+<p>Creates a accessor for interacting with the store. The resulting
+interface can be used to inspect and modify the state of the store.</p>
 
 #### Request
 <table>
@@ -267,15 +267,15 @@
 ## SecureStore {#SecureStore}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#116)*
 
- Interface used to interact with a given client's key/value store. The bytes
- type is disabled in this store.
+<p>Interface used to interact with a given client's key/value store. The bytes
+type is disabled in this store.</p>
 
 ### Identify {#Identify}
 
- Identify should be called at the beginning of a connection to identify
- which client service's store is to be accessed. In the future this will
- be deprecated in favor of component monikers, and each client will only
- be able to access its own store.
+<p>Identify should be called at the beginning of a connection to identify
+which client service's store is to be accessed. In the future this will
+be deprecated in favor of component monikers, and each client will only
+be able to access its own store.</p>
 
 #### Request
 <table>
@@ -291,8 +291,8 @@
 
 ### CreateAccessor {#CreateAccessor}
 
- Creates a accessor for interacting with the store. The resulting
- interface can be used to inspect and modify the state of the store.
+<p>Creates a accessor for interacting with the store. The resulting
+interface can be used to inspect and modify the state of the store.</p>
 
 #### Request
 <table>
@@ -331,7 +331,7 @@
 
 
 
- ListItem is returned when a series of keys are being listed.
+<p>ListItem is returned when a series of keys are being listed.</p>
 
 
 <table>
@@ -357,8 +357,8 @@
 
 
 
- KeyValue is used when a series of keys are being read, or the default state
- for the store is being set.
+<p>KeyValue is used when a series of keys are being read, or the default state
+for the store is being set.</p>
 
 
 <table>
@@ -388,7 +388,7 @@ Type: <code>uint8</code>
 
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#13)*
 
- ValueType encodes a type for a field in the store
+<p>ValueType encodes a type for a field in the store</p>
 
 
 <table>
@@ -460,7 +460,7 @@ Type: <code>uint32</code>
 ### Value {#Value}
 *Defined in [fuchsia.stash/stash.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#35)*
 
- Value holds a value for a given key.
+<p>Value holds a value for a given key.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -510,8 +510,8 @@ Type: <code>uint32</code>
                     <code>12000</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td> Strings over 12 kb will be tossed. This number is chosen arbitrarily, if you
- think it should be higher just ask.
+            <td><p>Strings over 12 kb will be tossed. This number is chosen arbitrarily, if you
+think it should be higher just ask.</p>
 </td>
         </tr>
     <tr>
