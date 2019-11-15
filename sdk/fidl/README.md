@@ -231,7 +231,8 @@
 </tr>
 <tr>
     <td><a href="fuchsia.identity.account/index">fuchsia.identity.account</a></td>
-    <td></td>
+    <td> Defines the protocols used to interface with the core Fuchsia identity
+ system.</td>
 </tr>
 <tr>
     <td><a href="fuchsia.identity.internal/index">fuchsia.identity.internal</a></td>
@@ -240,8 +241,7 @@
 <tr>
     <td><a href="fuchsia.identity.keys/index">fuchsia.identity.keys</a></td>
     <td> Defines protocols to manage and access key material that is consistent
- across all devices provisioned with a particular identity.
-</td>
+ across all devices provisioned with a particular identity.</td>
 </tr>
 <tr>
     <td><a href="fuchsia.identity.prototype/index">fuchsia.identity.prototype</a></td>
@@ -253,6 +253,14 @@
 </tr>
 <tr>
     <td><a href="fuchsia.images/index">fuchsia.images</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.input.report/index">fuchsia.input.report</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.inspect/index">fuchsia.inspect</a></td>
     <td></td>
 </tr>
 <tr>

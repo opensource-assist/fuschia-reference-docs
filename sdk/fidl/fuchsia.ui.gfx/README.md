@@ -120,7 +120,7 @@ unregistered, and may be reused to create a new resource.</p>
         </tr>
 </table>
 
-### ExportResourceCmd {#ExportResourceCmd}
+### ExportResourceCmdDeprecated {#ExportResourceCmdDeprecated}
 *Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#129)*
 
 
@@ -152,7 +152,7 @@ so.</p>
         </tr>
 </table>
 
-### ImportResourceCmd {#ImportResourceCmd}
+### ImportResourceCmdDeprecated {#ImportResourceCmdDeprecated}
 *Defined in [fuchsia.ui.gfx/commands.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/commands.fidl#156)*
 
 
@@ -4196,13 +4196,13 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>export_resource</code></td>
             <td>
-                <code><a class='link' href='#ExportResourceCmd'>ExportResourceCmd</a></code>
+                <code><a class='link' href='#ExportResourceCmdDeprecated'>ExportResourceCmdDeprecated</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td><code>import_resource</code></td>
             <td>
-                <code><a class='link' href='#ImportResourceCmd'>ImportResourceCmd</a></code>
+                <code><a class='link' href='#ImportResourceCmdDeprecated'>ImportResourceCmdDeprecated</a></code>
             </td>
             <td></td>
         </tr><tr>

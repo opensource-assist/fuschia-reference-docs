@@ -148,26 +148,6 @@ This may not complete before it returns.</p>
             </td>
         </tr></table>
 
-### GetTopologicalPathNew {#GetTopologicalPathNew}
-
-<p>Return the topological path for this device</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>result</code></td>
-            <td>
-                <code><a class='link' href='#Controller_GetTopologicalPathNew_Result'>Controller_GetTopologicalPathNew_Result</a></code>
-            </td>
-        </tr></table>
-
 ### GetEventHandle {#GetEventHandle}
 
 <p>Get an event for monitoring device conditions (see <code>DEVICE_SIGNAL_*</code> constants)</p>
@@ -615,24 +595,6 @@ On failure, the out_state will have the state that the device can go into.</p>
         </tr>
 </table>
 
-### Controller_GetTopologicalPathNew_Response {#Controller_GetTopologicalPathNew_Response}
-*generated*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>path</code></td>
-            <td>
-                <code>string[1024]</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### Controller_GetDevicePowerCaps_Response {#Controller_GetDevicePowerCaps_Response}
 *generated*
 
@@ -978,25 +940,6 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Controller_GetTopologicalPath_Response'>Controller_GetTopologicalPath_Response</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>err</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### Controller_GetTopologicalPathNew_Result {#Controller_GetTopologicalPathNew_Result}
-*generated*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>response</code></td>
-            <td>
-                <code><a class='link' href='#Controller_GetTopologicalPathNew_Response'>Controller_GetTopologicalPathNew_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

@@ -44,7 +44,7 @@ exception channel.</p>
     </table>
 
 ## ProcessLimbo {#ProcessLimbo}
-*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#17)*
+*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#20)*
 
 <p>Protocol meant for clients interested in obtaining processes that are
 suspended waiting for an exception handler (in limbo). This is the core
@@ -160,6 +160,95 @@ unretrievable in the future from here.</p>
             </td>
         </tr></table>
 
+### AppendFilters {#AppendFilters}
+
+<p>Adds filters to the limbo. Filters determine what processes the limbo
+will store when receiving an exception. Repeated filters will be
+ignored. Filters work by &quot;filtering out&quot; processes. It means that if a
+filter matches, that process won't get included.</p>
+<p>Filters work by substring matching. This means that a process name has
+to have the filter as a substring in order to match it. Example:</p>
+<p>Filter = &quot;dev&quot;.
+Process = &quot;process&quot; won't match.
+Process = &quot;devcoordinator&quot; will match.</p>
+<p>Adding filters is transactional: either all of them go in, or none at
+all. The maximum amount of filters is determined by
+|MAX_FILTERS_PER_CALL|. If the maximum is exceeded, ZX_ERR_NO_RESOURCES
+is returned.</p>
+<p>Changing filters have no effect on processes that are currently waiting
+on an exception, but rather which future processes that will remain in
+the limbo.</p>
+<p>Returns ZX_ERR_UNAVAILABLE if limbo is not active.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>filters</code></td>
+            <td>
+                <code>vector&lt;string&gt;[32]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#ProcessLimbo_AppendFilters_Result'>ProcessLimbo_AppendFilters_Result</a></code>
+            </td>
+        </tr></table>
+
+### RemoveFilters {#RemoveFilters}
+
+<p>Removes filters to the limbo. Any filters that are not currently present
+on the limbo will be ignored.</p>
+<p>Returns ZX_ERR_UNAVAILABLE if limbo is not active.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>filters</code></td>
+            <td>
+                <code>vector&lt;string&gt;[32]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#ProcessLimbo_RemoveFilters_Result'>ProcessLimbo_RemoveFilters_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetFilters {#GetFilters}
+
+<p>Returns filters that are currently active within the limbo. If the limbo
+is inactive, it will return an empty vector.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>filters</code></td>
+            <td>
+                <code>vector&lt;string&gt;[32]</code>
+            </td>
+        </tr></table>
+
 
 
 ## **STRUCTS**
@@ -235,6 +324,28 @@ Maps to <code>zx_exception_info_t</code>.</p>
 </table>
 
 ### ProcessLimbo_ReleaseProcess_Response {#ProcessLimbo_ReleaseProcess_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### ProcessLimbo_AppendFilters_Response {#ProcessLimbo_AppendFilters_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### ProcessLimbo_RemoveFilters_Response {#ProcessLimbo_RemoveFilters_Response}
 *generated*
 
 
@@ -351,7 +462,7 @@ given by an exception channel.</p>
 ### ProcessExceptionMetadata {#ProcessExceptionMetadata}
 
 
-*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#61)*
+*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#98)*
 
 <p>Intended to be read only metadada associated with an exception waiting in
 limbo. The handles provided will only have read-only access to the resource,
@@ -449,6 +560,44 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
             <td></td>
         </tr></table>
 
+### ProcessLimbo_AppendFilters_Result {#ProcessLimbo_AppendFilters_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#ProcessLimbo_AppendFilters_Response'>ProcessLimbo_AppendFilters_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### ProcessLimbo_RemoveFilters_Result {#ProcessLimbo_RemoveFilters_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#ProcessLimbo_RemoveFilters_Response'>ProcessLimbo_RemoveFilters_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
 
 
 
@@ -467,6 +616,22 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
             <td><p>The maximum amount of exceptions that will be listed at any given time by a
 call to |ListProcessesWaitingOnException|.</p>
 </td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#13">MAX_FILTER_LENGTH</a></td>
+            <td>
+                    <code>32</code>
+                </td>
+                <td><code>uint64</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#14">MAX_FILTERS_PER_CALL</a></td>
+            <td>
+                    <code>32</code>
+                </td>
+                <td><code>uint64</code></td>
+            <td></td>
         </tr>
     
 </table>

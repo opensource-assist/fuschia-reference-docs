@@ -125,6 +125,10 @@ toc:
   path: /reference/fidl/fuchsia.identity.transfer
 - title: fuchsia.images
   path: /reference/fidl/fuchsia.images
+- title: fuchsia.input.report
+  path: /reference/fidl/fuchsia.input.report
+- title: fuchsia.inspect
+  path: /reference/fidl/fuchsia.inspect
 - title: fuchsia.inspect.deprecated
   path: /reference/fidl/fuchsia.inspect.deprecated
 - title: fuchsia.intl

@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Provider {#Provider}
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#179)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#181)*
 
 <p>Provider for display controllers.</p>
 <p>The driver supports two simultaneous clients - a primary client and a virtcon
@@ -85,7 +85,7 @@ will return <code>ZX_ERR_ALREADY_BOUND</code>.</p>
         </tr></table>
 
 ## Controller {#Controller}
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#217)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#219)*
 
 <p>Interface for accessing the display hardware.</p>
 <p>A display configuration can be separated into two parts: the layer layout and
@@ -801,6 +801,26 @@ being closed.</p>
             </td>
         </tr></table>
 
+### IsCaptureSupported {#IsCaptureSupported}
+
+<p>Returns true if Capture is supported on the platform.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Controller_IsCaptureSupported_Result'>Controller_IsCaptureSupported_Result</a></code>
+            </td>
+        </tr></table>
+
 ### ImportImageForCapture {#ImportImageForCapture}
 
 <p>Imports a buffer collection backed VMO into the display controller. The VMO
@@ -904,6 +924,24 @@ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture</p>
 
 
 ## **STRUCTS**
+
+### Controller_IsCaptureSupported_Response {#Controller_IsCaptureSupported_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>supported</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
 
 ### Controller_ImportImageForCapture_Response {#Controller_ImportImageForCapture_Response}
 *generated*
@@ -1148,7 +1186,7 @@ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture</p>
 </table>
 
 ### Frame {#Frame}
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#117)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#119)*
 
 
 
@@ -1187,7 +1225,7 @@ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture</p>
 </table>
 
 ### ClientCompositionOp {#ClientCompositionOp}
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#168)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#170)*
 
 
 
@@ -1247,7 +1285,7 @@ Type: <code>uint8</code>
 ### Transform {#Transform}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#97)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#99)*
 
 
 
@@ -1289,7 +1327,7 @@ Type: <code>uint8</code>
 ### AlphaMode {#AlphaMode}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#108)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#110)*
 
 
 
@@ -1311,7 +1349,7 @@ Type: <code>uint8</code>
 ### ClientCompositionOpcode {#ClientCompositionOpcode}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#126)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#128)*
 
 
 
@@ -1353,7 +1391,7 @@ Type: <code>uint8</code>
 ### ConfigResult {#ConfigResult}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#154)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#156)*
 
 
 
@@ -1385,6 +1423,25 @@ Type: <code>uint32</code>
 
 
 ## **UNIONS**
+
+### Controller_IsCaptureSupported_Result {#Controller_IsCaptureSupported_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Controller_IsCaptureSupported_Response'>Controller_IsCaptureSupported_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
 
 ### Controller_ImportImageForCapture_Result {#Controller_ImportImageForCapture_Result}
 *generated*
@@ -1480,6 +1537,14 @@ Type: <code>uint32</code>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#94">typeSimple</a></td>
             <td>
                     <code>0</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#96">typeCapture</a></td>
+            <td>
+                    <code>10</code>
                 </td>
                 <td><code>uint32</code></td>
             <td></td>

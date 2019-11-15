@@ -4,11 +4,16 @@
 
 <p>Defines protocols to manage and access key material that is consistent
 across all devices provisioned with a particular identity.</p>
+<p>Acheiving consistency implies synchonization between devices and this
+synchronization is not instantaneous. For some implementations
+synchronization may take many minutes, or even longer when devices are
+offline. The library provides information about the progress of the
+sychronization.</p>
 
 ## **PROTOCOLS**
 
 ## KeyManager {#KeyManager}
-*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#163)*
+*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#169)*
 
 <p><code>KeyManager</code> provides access to key material that is consistent across all
 devices provisioned with the identity that the <code>KeyManager</code> was acquired
@@ -256,7 +261,7 @@ be successfully committed.</p>
         </tr></table>
 
 ## KeySet {#KeySet}
-*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#363)*
+*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#369)*
 
 <p><code>KeySet</code> provides access to a set of keys that is consistent across devices
 provisioned with the identity that it applies to.</p>
@@ -814,7 +819,7 @@ made, or zero if no <code>MarkId</code> calls have been made.</p>
 ### Error {#Error}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#24)*
+*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#30)*
 
 <p>Specifies the reason that a <code>fuchsia.identity.keys</code> method failed.</p>
 
@@ -868,7 +873,7 @@ frozen state.</p>
 ### SynchronizationState {#SynchronizationState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#118)*
+*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#124)*
 
 <p>Summarizes the sychronization between the device's local state and the
 master definition for some item (such as a <code>KeySingleton</code> or <code>KeySet</code>) in an
@@ -989,7 +994,7 @@ state if committing the deletion fails.</p>
 ### KeySingletonProperties {#KeySingletonProperties}
 
 
-*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#271)*
+*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#277)*
 
 <p>Specifies the properties of a <code>KeySingleton</code>. These properties are provided
 when the <code>KeySingleton</code> is created and do not change during its lifetime.</p>
@@ -1042,7 +1047,7 @@ must be between one and MAX_KEY_LEN inclusive.</p>
 ### KeySetProperties {#KeySetProperties}
 
 
-*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#296)*
+*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#302)*
 
 <p>Specifies the properties of a <code>KeySet</code>. These properties are provided when
 the <code>KeySet</code> is created and do not change during its lifetime.</p>
@@ -1416,7 +1421,7 @@ with access to the identity is remotely revoked.
 ## **XUNIONS**
 
 ### Key {#Key}
-*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#263)*
+*Defined in [fuchsia.identity.keys/key_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#269)*
 
 <p>Defines the key material in a <code>KeySingleton</code> or each member of a <code>KeySet</code>.</p>
 <p>Note: Currently all keys are defined as fixed length arrays of random data
@@ -1442,7 +1447,7 @@ in a future version of the API.</p>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#12">MAX_NAME_LEN</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#18">MAX_NAME_LEN</a></td>
             <td>
                     <code>128</code>
                 </td>
@@ -1451,7 +1456,7 @@ in a future version of the API.</p>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#14">MAX_METADATA_LEN</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#20">MAX_METADATA_LEN</a></td>
             <td>
                     <code>128</code>
                 </td>
@@ -1460,7 +1465,7 @@ in a future version of the API.</p>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#16">MAX_KEY_LEN</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#22">MAX_KEY_LEN</a></td>
             <td>
                     <code>64</code>
                 </td>
@@ -1469,7 +1474,7 @@ in a future version of the API.</p>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#19">MAX_KEYSET_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#25">MAX_KEYSET_SIZE</a></td>
             <td>
                     <code>64</code>
                 </td>
@@ -1478,7 +1483,7 @@ in a future version of the API.</p>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#21">TWICE_MAX_KEYSET_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#27">TWICE_MAX_KEYSET_SIZE</a></td>
             <td>
                     <code>128</code>
                 </td>

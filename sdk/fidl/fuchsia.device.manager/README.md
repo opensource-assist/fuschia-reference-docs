@@ -108,6 +108,15 @@ interface channel will close instead of returning a result.</p>
     </table>
 
 
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#DeviceController_Unbind_Result'>DeviceController_Unbind_Result</a></code>
+            </td>
+        </tr></table>
 
 ### CompleteRemoval {#CompleteRemoval}
 
@@ -121,6 +130,15 @@ once |device_remove| invokes |unbind|.</p>
     </table>
 
 
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#DeviceController_CompleteRemoval_Result'>DeviceController_CompleteRemoval_Result</a></code>
+            </td>
+        </tr></table>
 
 ### Suspend {#Suspend}
 
@@ -199,15 +217,20 @@ fail or complete successfully.</p>
 
 <p>Create a device in the devhost that only implements the device protocol
 and claims to support the given <code>protocol_id</code>.  This device will communicate
-with the devcoordinator via <code>rpc</code>.</p>
+with the devcoordinator via <code>coordinator</code>. Implements DeviceController on device_controller_rpc</p>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>rpc</code></td>
+            <td><code>coordinator_rpc</code></td>
             <td>
-                <code>handle&lt;channel&gt;</code>
+                <code><a class='link' href='#Coordinator'>Coordinator</a></code>
+            </td>
+        </tr><tr>
+            <td><code>device_controller_rpc</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#DeviceController'>DeviceController</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>protocol_id</code></td>
@@ -241,9 +264,14 @@ fuchsia.boot.Items protocol.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>rpc</code></td>
+            <td><code>coordinator_rpc</code></td>
             <td>
-                <code>handle&lt;channel&gt;</code>
+                <code><a class='link' href='#Coordinator'>Coordinator</a></code>
+            </td>
+        </tr><tr>
+            <td><code>device_controller_rpc</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#DeviceController'>DeviceController</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>driver_path</code></td>
@@ -288,9 +316,14 @@ the resulting composite device.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>rpc</code></td>
+            <td><code>coordinator_rpc</code></td>
             <td>
-                <code>handle&lt;channel&gt;</code>
+                <code><a class='link' href='#Coordinator'>Coordinator</a></code>
+            </td>
+        </tr><tr>
+            <td><code>device_controller_rpc</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#DeviceController'>DeviceController</a>&gt;</code>
             </td>
         </tr><tr>
             <td><code>components</code></td>
@@ -339,9 +372,14 @@ On success, the returned <code>local_device_id</code> is the identifier assigned
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>rpc</code></td>
+            <td><code>coordinator</code></td>
             <td>
-                <code>handle&lt;channel&gt;</code>
+                <code>request&lt;<a class='link' href='#Coordinator'>Coordinator</a>&gt;</code>
+            </td>
+        </tr><tr>
+            <td><code>device_controller</code></td>
+            <td>
+                <code><a class='link' href='#DeviceController'>DeviceController</a></code>
             </td>
         </tr><tr>
             <td><code>props</code></td>
@@ -401,9 +439,14 @@ visible (via MakeVisible).</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>rpc</code></td>
+            <td><code>coordinator</code></td>
             <td>
-                <code>handle&lt;channel&gt;</code>
+                <code>request&lt;<a class='link' href='#Coordinator'>Coordinator</a>&gt;</code>
+            </td>
+        </tr><tr>
+            <td><code>device_controller</code></td>
+            <td>
+                <code><a class='link' href='#DeviceController'>DeviceController</a></code>
             </td>
         </tr><tr>
             <td><code>props</code></td>
@@ -476,46 +519,6 @@ If |unbind_self| is true, the unbind hook for this device will also be called.</
     </table>
 
 
-
-### UnbindDone {#UnbindDone}
-
-<p>Sent as the response to |Unbind|.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>result</code></td>
-            <td>
-                <code><a class='link' href='#Coordinator_UnbindDone_Result'>Coordinator_UnbindDone_Result</a></code>
-            </td>
-        </tr></table>
-
-### RemoveDone {#RemoveDone}
-
-<p>Sent as the response to |CompleteRemoval|.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>result</code></td>
-            <td>
-                <code><a class='link' href='#Coordinator_RemoveDone_Result'>Coordinator_RemoveDone_Result</a></code>
-            </td>
-        </tr></table>
 
 ### MakeVisible {#MakeVisible}
 
@@ -943,6 +946,28 @@ and bytes <code>available</code> to write.</p>
 
 ## **STRUCTS**
 
+### DeviceController_Unbind_Response {#DeviceController_Unbind_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### DeviceController_CompleteRemoval_Response {#DeviceController_CompleteRemoval_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### Coordinator_AddDevice_Response {#Coordinator_AddDevice_Response}
 *generated*
 
@@ -977,28 +1002,6 @@ and bytes <code>available</code> to write.</p>
             <td></td>
             <td>No default</td>
         </tr>
-</table>
-
-### Coordinator_UnbindDone_Response {#Coordinator_UnbindDone_Response}
-*generated*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
-</table>
-
-### Coordinator_RemoveDone_Response {#Coordinator_RemoveDone_Response}
-*generated*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
 ### Coordinator_MakeVisible_Response {#Coordinator_MakeVisible_Response}
@@ -1389,6 +1392,44 @@ Type: <code>uint32</code>
 
 ## **UNIONS**
 
+### DeviceController_Unbind_Result {#DeviceController_Unbind_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#DeviceController_Unbind_Response'>DeviceController_Unbind_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### DeviceController_CompleteRemoval_Result {#DeviceController_CompleteRemoval_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#DeviceController_CompleteRemoval_Response'>DeviceController_CompleteRemoval_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### Coordinator_AddDevice_Result {#Coordinator_AddDevice_Result}
 *generated*
 
@@ -1417,44 +1458,6 @@ Type: <code>uint32</code>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Coordinator_AddDeviceInvisible_Response'>Coordinator_AddDeviceInvisible_Response</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>err</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### Coordinator_UnbindDone_Result {#Coordinator_UnbindDone_Result}
-*generated*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>response</code></td>
-            <td>
-                <code><a class='link' href='#Coordinator_UnbindDone_Response'>Coordinator_UnbindDone_Response</a></code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>err</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### Coordinator_RemoveDone_Result {#Coordinator_RemoveDone_Result}
-*generated*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>response</code></td>
-            <td>
-                <code><a class='link' href='#Coordinator_RemoveDone_Response'>Coordinator_RemoveDone_Response</a></code>
             </td>
             <td></td>
         </tr><tr>

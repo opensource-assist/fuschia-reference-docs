@@ -2,6 +2,15 @@
 
 # fuchsia.identity.account
 
+<p>Defines the protocols used to interface with the core Fuchsia identity
+system.</p>
+<p>Clients may use these protocols to access, maintain, and authenticate the
+Fuchsia accounts and personae defined by the identity system.</p>
+<p>The entry point is the discoverable <code>AccountManager</code> protocol. This provides
+access to all accounts of the device and should only be accessible to a
+small number of privileged clients. <code>AccountManager</code> may be used to acquire
+less powerful <code>Account</code> and <code>Persona</code> handles that may then be passed to
+other parts of the system.</p>
 
 ## **PROTOCOLS**
 

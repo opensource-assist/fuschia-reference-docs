@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## DeviceListenerRegistry {#DeviceListenerRegistry}
-*Defined in [fuchsia.ui.policy/device_listener.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/device_listener.fidl#9)*
+*Defined in [fuchsia.ui.policy/device_listener.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/device_listener.fidl#11)*
 
 <p>Service for exposing state and events of devices, such as media buttons.</p>
 
@@ -22,6 +22,28 @@ changes from volume buttons and mute switches.</p>
             <td><code>listener</code></td>
             <td>
                 <code><a class='link' href='#MediaButtonsListener'>MediaButtonsListener</a></code>
+            </td>
+        </tr></table>
+
+
+
+## MediaButtonsListener {#MediaButtonsListener}
+*Defined in [fuchsia.ui.policy/device_listener.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/device_listener.fidl#20)*
+
+<p>A listener for media buttons events. <code>DeviceListenerRegistry.RegisterMediaButtonsListener</code>
+will consume this listener interface and call <code>OnMediaButtonsEvent</code> when the
+registered media buttons event occurs.</p>
+
+### OnMediaButtonsEvent {#OnMediaButtonsEvent}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>event</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.ui.input/'>fuchsia.ui.input</a>/<a class='link' href='../fuchsia.ui.input/#MediaButtonsEvent'>MediaButtonsEvent</a></code>
             </td>
         </tr></table>
 
@@ -69,29 +91,8 @@ call <code>OnEvent</code> when a pointer event occurs.</p>
 
 
 
-## MediaButtonsListener {#MediaButtonsListener}
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#23)*
-
-<p><code>Presentation.RegisterMediaButtonsListener</code> will consume this listener interface
-and call <code>OnMediaButtonsEvent</code> when the registered media buttons event occurs.</p>
-
-### OnMediaButtonsEvent {#OnMediaButtonsEvent}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>event</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.input/'>fuchsia.ui.input</a>/<a class='link' href='../fuchsia.ui.input/#MediaButtonsEvent'>MediaButtonsEvent</a></code>
-            </td>
-        </tr></table>
-
-
-
 ## Presentation {#Presentation}
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#30)*
+*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#24)*
 
 <p>Allows clients of Presenter.Present() to control a presentation.
 Experimental.</p>
@@ -137,22 +138,6 @@ The full KeyboardEvent is supplied to <code>listener</code>'s OnEvent.</p>
 
 
 
-### RegisterMediaButtonsListener {#RegisterMediaButtonsListener}
-
-<p>Registers a listener for media buttons events.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>listener</code></td>
-            <td>
-                <code><a class='link' href='#MediaButtonsListener'>MediaButtonsListener</a></code>
-            </td>
-        </tr></table>
-
-
-
 ### InjectPointerEventHACK {#InjectPointerEventHACK}
 
 <p>EXPERIMENTAL. Inject pointer events into input stream. This WILL go
@@ -171,7 +156,7 @@ away. Used exclusively by Session Shells to test focus navigation.</p>
 
 
 ## PresentationModeListener {#PresentationModeListener}
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#70)*
+*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#61)*
 
 <p>Tell client that the screen mode has changed, according to sensors.
 N.B. There can be a race where the actual mode continues to change, after
@@ -289,7 +274,7 @@ Type: <code>uint32</code>
 ### PresentationMode {#PresentationMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#59)*
+*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#50)*
 
 <p>Screen modes that can be detected via sensor data.
 N.B. We use accelerometers to measure gravity when at rest, so detection is
