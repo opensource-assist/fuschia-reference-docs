@@ -554,6 +554,114 @@ AudioCapturer is bound.</p>
             </td>
         </tr></table>
 
+## AudioConsumer {#AudioConsumer}
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#8)*
+
+
+### CreateStreamSink {#CreateStreamSink}
+
+<p>Creates a stream sink for the consumer with the indicated properties. <code>session_id</code> is the
+identifier of the media session for which audio is to be rendered.</p>
+<p>Multiple stream sinks may be acquired using this method, but they are intended to be used
+sequentially rather than concurrently. The first stream sink that's created using this
+method is used as the sole source of packets incoming to the logical consumer until that
+stream sink is closed or the <code>EndOfStream</code> method is called on that sink. At that point,
+the second stream sink is used, and so on.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>session_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>buffers</code></td>
+            <td>
+                <code>vector&lt;vmo&gt;[16]</code>
+            </td>
+        </tr><tr>
+            <td><code>stream_type</code></td>
+            <td>
+                <code><a class='link' href='#AudioStreamType'>AudioStreamType</a></code>
+            </td>
+        </tr><tr>
+            <td><code>compression</code></td>
+            <td>
+                <code><a class='link' href='#Compression'>Compression</a>?</code>
+            </td>
+        </tr><tr>
+            <td><code>stream_sink_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#StreamSink'>StreamSink</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+### OnEndOfStream {#OnEndOfStream}
+
+<p>Indicates that the last packet prior to the end of the stream has been rendered.</p>
+
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+### Start {#Start}
+
+<p>Starts rendering as indicated by <code>flags</code>. Rendering starts as soon as possible after this
+method is called. The actual start time will be reflected in the updated status.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>flags</code></td>
+            <td>
+                <code><a class='link' href='#AudioConsumerStartFlags'>AudioConsumerStartFlags</a></code>
+            </td>
+        </tr></table>
+
+
+
+### Stop {#Stop}
+
+<p>Stops rendering as soon as possible after this method is called. The actual stop time will
+be reflected in the updated status.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+
+### WatchStatus {#WatchStatus}
+
+<p>Gets the current status of the consumer using the long get pattern. The consumer responds
+to this method when the status changes - initially with respect to the initial status value
+and thereafter with respect to the previously-reported status value.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code><a class='link' href='#AudioConsumerStatus'>AudioConsumerStatus</a></code>
+            </td>
+        </tr></table>
+
 ## AudioCore {#AudioCore}
 *Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#82)*
 
@@ -2919,6 +3027,50 @@ events will eventually be disconnected.</p>
 
 ## **STRUCTS**
 
+### AudioConsumerStatus {#AudioConsumerStatus}
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#58)*
+
+
+
+<p>Represents the status of the consumer. Initial status has null <code>error</code> and
+<code>presentation_timeline</code> values.</p>
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>error</code></td>
+            <td>
+                <code><a class='link' href='#AudioConsumerError'>AudioConsumerError</a>?</code>
+            </td>
+            <td><p>If not null, indicates an error condition currently in effect.</p>
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>presentation_timeline</code></td>
+            <td>
+                <code><a class='link' href='#TimelineFunction'>TimelineFunction</a>?</code>
+            </td>
+            <td><p>If not null, indicates the current relationship between the presentation timeline
+and local monotonic clock, both in nanosecond units.</p>
+<p>'Presentation timeline' refers to the <code>pts</code> (presentation timestamp) values on the packets.
+This timeline function can be used to determine the local monotonic clock time that a
+packet will be presented based on that packet's <code>pts</code> value.</p>
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Void {#Void}
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#71)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### AudioGainInfo {#AudioGainInfo}
 *Defined in [fuchsia.media/audio_device_enumerator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#11)*
 
@@ -3603,8 +3755,39 @@ stream.</p>
         </tr>
 </table>
 
+### Compression {#Compression}
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#66)*
+
+
+
+<p>Describes the compression applied to a stream. This type can be used in conjunction with
+<code>AudioStreamType</code> or <code>VideoStreamType</code> to represent a medium-specific compressed type.</p>
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>type</code></td>
+            <td>
+                <code>string[256]</code>
+            </td>
+            <td><p>The type of compression applied to the stream. This is generally one of the <em><em>ENCODING</em></em>
+values, though <code>AUDIO_ENCODING_LPCM</code> and <code>VIDEO_ENCODING_UNCOMPRESSED</code> must not be used,
+because those encodings are regarded as uncompressed.</p>
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>parameters</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[8192]?</code>
+            </td>
+            <td><p>Type-specific, opaque ‘out-of-band’ parameters describing the compression of the stream.</p>
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### AudioStreamType {#AudioStreamType}
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#67)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#83)*
 
 
 
@@ -3637,7 +3820,7 @@ stream.</p>
 </table>
 
 ### VideoStreamType {#VideoStreamType}
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#93)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#109)*
 
 
 
@@ -3718,7 +3901,7 @@ displayed.</p>
 </table>
 
 ### TextStreamType {#TextStreamType}
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#129)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#145)*
 
 
 
@@ -3730,7 +3913,7 @@ displayed.</p>
 </table>
 
 ### SubpictureStreamType {#SubpictureStreamType}
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#137)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#153)*
 
 
 
@@ -4278,7 +4461,7 @@ Type: <code>uint32</code>
 ### AudioSampleFormat {#AudioSampleFormat}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#75)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#91)*
 
 <p>Enumerates the supported audio sample formats.</p>
 
@@ -4309,7 +4492,7 @@ Type: <code>uint32</code>
 ### ColorSpace {#ColorSpace}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#117)*
+*Defined in [fuchsia.media/stream_type.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#133)*
 
 
 
@@ -5607,6 +5790,20 @@ mute the volume of all streams with this usage.</p>
 
 ## **UNIONS**
 
+### AudioConsumerError {#AudioConsumerError}
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#75)*
+
+<p>Represents a <code>AudioConsumer</code> error condition.</p>
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>place_holder</code></td>
+            <td>
+                <code><a class='link' href='#Void'>Void</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### Usage {#Usage}
 *Defined in [fuchsia.media/audio_core.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#76)*
 
@@ -5937,6 +6134,28 @@ formats.</p>
         </tr></table>
 
 
+
+## **BITS**
+
+### AudioConsumerStartFlags {#AudioConsumerStartFlags}
+Type: <code>uint32</code>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td>LOW_LATENCY</td>
+            <td>1</td>
+            <td><p>Indicates that latency should be kept as low as possible.</p>
+</td>
+        </tr><tr>
+            <td>SUPPLY_DRIVEN</td>
+            <td>2</td>
+            <td><p>Indicates that the timing of packet delivery is determined by an external process rather
+than being demand-based. When this flag is set, the service should expect underflow or
+overflow due to a mismatch between packet arrival rate and presentation rate. When this
+flag is not set, packets arrive on demand.</p>
+</td>
+        </tr></table>
 
 
 
@@ -6357,50 +6576,56 @@ only intended to be plausible for some clients, not all clients.</p>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#54">VIDEO_ENCODING_H263</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#52">AUDIO_ENCODING_OPUS</a></td>
+            <td><code>fuchsia.media.opus</code></td>
+                    <td><code>String</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#55">VIDEO_ENCODING_H263</a></td>
             <td><code>fuchsia.media.h263</code></td>
                     <td><code>String</code></td>
             <td><p>Video encodings.</p>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#55">VIDEO_ENCODING_H264</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#56">VIDEO_ENCODING_H264</a></td>
             <td><code>fuchsia.media.h264</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#56">VIDEO_ENCODING_MPEG4</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#57">VIDEO_ENCODING_MPEG4</a></td>
             <td><code>fuchsia.media.mpeg4</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#57">VIDEO_ENCODING_THEORA</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#58">VIDEO_ENCODING_THEORA</a></td>
             <td><code>fuchsia.media.theora</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#58">VIDEO_ENCODING_UNCOMPRESSED</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#59">VIDEO_ENCODING_UNCOMPRESSED</a></td>
             <td><code>fuchsia.media.uncompressed_video</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#59">VIDEO_ENCODING_VP3</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#60">VIDEO_ENCODING_VP3</a></td>
             <td><code>fuchsia.media.vp3</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#60">VIDEO_ENCODING_VP8</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#61">VIDEO_ENCODING_VP8</a></td>
             <td><code>fuchsia.media.vp8</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#61">VIDEO_ENCODING_VP9</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#62">VIDEO_ENCODING_VP9</a></td>
             <td><code>fuchsia.media.vp9</code></td>
                     <td><code>String</code></td>
             <td></td>
