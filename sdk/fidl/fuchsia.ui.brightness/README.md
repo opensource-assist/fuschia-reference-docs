@@ -26,7 +26,7 @@ SetManualBrightness will turn it off.</p>
 
 <p>Requests the current auto-brightness mode.
 This call implements the Hanging Get protocol as detailed in
-https://fuchsia.googlesource.com/fuchsia/+/master/docs/development/api/fidl.md#delay-responses-using-hanging-gets</p>
+https://fuchsia.dev/fuchsia-src/development/api/fidl.md#delay-responses-using-hanging-gets</p>
 
 #### Request
 <table>
@@ -68,7 +68,7 @@ Value is in the range 0.0 to 1.0 representing min to max.</p>
 This result is valid for both manual and auto-brightness modes and is typically used
 to show the current brightness on a slider.
 This call implements the Hanging Get protocol as detailed in
-https://fuchsia.googlesource.com/fuchsia/+/master/docs/development/api/fidl.md#delay-responses-using-hanging-gets</p>
+https://fuchsia.dev/fuchsia-src/development/api/fidl.md#delay-responses-using-hanging-gets</p>
 
 #### Request
 <table>
@@ -149,6 +149,34 @@ screen's color adjustment matrix.</p>
 
 
 
+## ColorTint {#ColorTint}
+*Defined in [fuchsia.ui.brightness/color_tint.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_tint.fidl#10)*
+
+
+### CalculateColorTint {#CalculateColorTint}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>request</code></td>
+            <td>
+                <code><a class='link' href='#SensorInfo'>SensorInfo</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>reply</code></td>
+            <td>
+                <code><a class='link' href='#TargetColorTint'>TargetColorTint</a></code>
+            </td>
+        </tr></table>
+
 
 
 ## **STRUCTS**
@@ -225,6 +253,119 @@ They should be ordered in increasing ambient_lux</p>
 to apply color adjustment.
 This field may be omitted to disable color adjustment.</p>
 </td>
+        </tr></table>
+
+### SensorInfo {#SensorInfo}
+
+
+*Defined in [fuchsia.ui.brightness/color_tint.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_tint.fidl#17)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>red</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>green</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>blue</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>clear</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>color_temperature</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>lux</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TargetColorTint {#TargetColorTint}
+
+
+*Defined in [fuchsia.ui.brightness/color_tint.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_tint.fidl#36)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>red</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>green</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>blue</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>lux</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>color_temperature</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>brightness_with_color_match</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>7</td>
+            <td><code>brightness_without_color_match</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+            <td></td>
         </tr></table>
 
 

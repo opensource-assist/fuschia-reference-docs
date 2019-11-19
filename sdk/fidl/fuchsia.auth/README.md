@@ -436,38 +436,6 @@ request, if successful. Otherwise, an error status is returned.</p>
             </td>
         </tr></table>
 
-## AuthProviderFactory {#AuthProviderFactory}
-*Defined in [fuchsia.auth/auth_provider_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.auth/auth_provider_factory.fidl#11)*
-
-<p>AuthProviderFactory creates an Auth Provider that talks to a particular
-backend OAuth service such as Google, Facebook, or Twitter that can generate
-tokens as defined by <code>auth_provider.fidl</code>.</p>
-
-### GetAuthProvider {#GetAuthProvider}
-
-<p>Creates an auth provider instance for the given OAuth provider.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>auth_provider</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#AuthProvider'>AuthProvider</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code><a class='link' href='#AuthProviderStatus'>AuthProviderStatus</a></code>
-            </td>
-        </tr></table>
-
 ## AuthenticationContextProvider {#AuthenticationContextProvider}
 *Defined in [fuchsia.auth/token_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.auth/token_manager.fidl#95)*
 

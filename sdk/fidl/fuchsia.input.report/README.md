@@ -430,6 +430,54 @@ stylus reports, so it will have both a TouchDescriptor and a StylusDescriptor).<
             <td><p>When |touch| is present the device has a touch device.
 (E.g: Touchscreen, touchpad).</p>
 </td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>keyboard</code></td>
+            <td>
+                <code><a class='link' href='#KeyboardDescriptor'>KeyboardDescriptor</a></code>
+            </td>
+            <td><p>When |keyboard| is present the device has a keyboard.</p>
+</td>
+        </tr></table>
+
+### KeyboardDescriptor {#KeyboardDescriptor}
+
+
+*Defined in [fuchsia.input.report/keyboard.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/keyboard.fidl#19)*
+
+<p>The capabilities of a keyboard device.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>keys</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='../fuchsia.ui.input2/'>fuchsia.ui.input2</a>/<a class='link' href='../fuchsia.ui.input2/#Key'>Key</a>&gt;[150]</code>
+            </td>
+            <td><p>The list of keys that this keyboard contains.</p>
+</td>
+        </tr></table>
+
+### KeyboardReport {#KeyboardReport}
+
+
+*Defined in [fuchsia.input.report/keyboard.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/keyboard.fidl#25)*
+
+<p>A single report created by a keyboard device.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>pressed_keys</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='../fuchsia.ui.input2/'>fuchsia.ui.input2</a>/<a class='link' href='../fuchsia.ui.input2/#Key'>Key</a>&gt;[15]</code>
+            </td>
+            <td><p>The list of keys that are currently pressed down.</p>
+</td>
         </tr></table>
 
 ### MouseDescriptor {#MouseDescriptor}
@@ -580,6 +628,14 @@ converting it to absolute movement.</p>
                 <code><a class='link' href='#TouchReport'>TouchReport</a></code>
             </td>
             <td><p>|touch| is the report generated if the device contains a touch device.</p>
+</td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>keyboard</code></td>
+            <td>
+                <code><a class='link' href='#KeyboardReport'>KeyboardReport</a></code>
+            </td>
+            <td><p>|keyboard| is the report generated if the device contains a keyboard.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -833,6 +889,27 @@ and they should be in the same units as <code>position_x</code> and <code>positi
                 </td>
                 <td><code>uint32</code></td>
             <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/keyboard.fidl#11">KEYBOARD_MAX_NUM_KEYS</a></td>
+            <td>
+                    <code>150</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td><p>A hardcoded number of max keys. This should be increased in the future
+if we ever see keyboards with more keys.</p>
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/keyboard.fidl#16">KEYBOARD_MAX_PRESSED_KEYS</a></td>
+            <td>
+                    <code>15</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td><p>A hardcoded number of the maximum keys that can be pressed at a time.
+This should be increased in the future if we see keyboards that can
+handle more pressed keys.</p>
+</td>
         </tr>
     <tr>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/mouse.fidl#9">MOUSE_MAX_NUM_BUTTONS</a></td>
