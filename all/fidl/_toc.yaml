@@ -305,6 +305,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.tee
 - title: fuchsia.hardware.telephony.transport
   path: /reference/fidl/fuchsia.hardware.telephony.transport
+- title: fuchsia.hardware.thermal
+  path: /reference/fidl/fuchsia.hardware.thermal
 - title: fuchsia.hardware.usb.peripheral
   path: /reference/fidl/fuchsia.hardware.usb.peripheral
 - title: fuchsia.hardware.usb.virtual.bus
@@ -485,6 +487,8 @@ toc:
   path: /reference/fidl/fuchsia.space
 - title: fuchsia.stash
   path: /reference/fidl/fuchsia.stash
+- title: fuchsia.storage.ext4server
+  path: /reference/fidl/fuchsia.storage.ext4server
 - title: fuchsia.storage.metrics
   path: /reference/fidl/fuchsia.storage.metrics
 - title: fuchsia.sys
@@ -527,6 +531,8 @@ toc:
   path: /reference/fidl/fuchsia.testing.appmgr
 - title: fuchsia.testing.chrealm
   path: /reference/fidl/fuchsia.testing.chrealm
+- title: fuchsia.testing.modular
+  path: /reference/fidl/fuchsia.testing.modular
 - title: fuchsia.testing.runner
   path: /reference/fidl/fuchsia.testing.runner
 - title: fuchsia.time

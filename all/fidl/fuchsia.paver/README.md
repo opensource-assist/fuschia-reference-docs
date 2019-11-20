@@ -208,6 +208,7 @@ error during health check. This method would be then called on the new configura
 boot attempt after <code>SetActiveConfiguration</code> was called. Will return error if active
 configuration is currently unbootable.</p>
 <p>If the configuration is already marked healthy, no action is taken.</p>
+<p>Returns <code>ZX_ERR_NOT_SUPPORTED</code> if A/B partition scheme is not supported.</p>
 
 #### Request
 <table>

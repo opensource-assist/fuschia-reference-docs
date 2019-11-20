@@ -95,7 +95,7 @@ this API to pre-apply the rules, then passing the result to
 URL. See <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>.</li>
 </ul>
 <p><a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>:
-https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/package_url.md</p>
+https://fuchsia.dev/fuchsia-src/concepts/storage/package_url</p>
 
 #### Request
 <table>
@@ -168,7 +168,7 @@ API will prioritize it over other rules.</p>
 URL. See <a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>.</li>
 </ul>
 <p><a class='link' href='#fuchsia-pkg URL'>fuchsia-pkg URL</a>:
-https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/package_url.md</p>
+https://fuchsia.dev/fuchsia-src/concepts/storage/package_url</p>
 
 #### Request
 <table>

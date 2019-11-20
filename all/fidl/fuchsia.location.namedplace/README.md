@@ -18,8 +18,29 @@ operation of radios on the system.</p>
 
 ### SetRegion {#SetRegion}
 
-<p>Sets the region.
-+ request <code>region</code> the current regulatory region.</p>
+<p>Sets the region.</p>
+<p>Clients should take care that their calls to this API arrive in a
+well-defined order. For example, when using Zircon channels as the
+underlying transport, the code below may not behave as intended.</p>
+<pre><code>// DANGER: The service may receive &quot;BB&quot; before &quot;AA&quot;.
+service1 = Open(RegulatoryRegionConfigurator);
+service1.SetRegion(&quot;AA&quot;);
+service1.Close();
+service2 = Open(RegulatoryRegionConfigurator);
+service2.SetRegion(&quot;BB&quot;);
+service2.Close();
+</code></pre>
+<p>A client can avoid this problem by holding a single channel open to
+the service, for the lifetime of the client.</p>
+<pre><code>// We use a single channel to ensure that calls arrive in a
+// well-defined order.
+service = Open(RegulatoryRegionConfigurator);
+service1.SetRegion(&quot;AA&quot;);
+service2.SetRegion(&quot;BB&quot;);
+</code></pre>
+<ul>
+<li>request <code>region</code> the current regulatory region.</li>
+</ul>
 
 #### Request
 <table>
@@ -34,7 +55,7 @@ operation of radios on the system.</p>
 
 
 ## RegulatoryRegionWatcher {#RegulatoryRegionWatcher}
-*Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location/namedplace.fidl#30)*
+*Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location/namedplace.fidl#56)*
 
 <p>The RegulatoryRegionWatcher protocol provides the mechanism for
 radio subsystems to learn the currently applicable regulatory

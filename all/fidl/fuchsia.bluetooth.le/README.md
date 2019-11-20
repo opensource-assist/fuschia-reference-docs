@@ -223,14 +223,14 @@ available.</p>
 services and establish L2CAP channels.</p>
 
 ## AdvertisingHandle {#AdvertisingHandle}
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#79)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#77)*
 
 <p>Capability that is valid for the duration of advertising. The caller can close the handle to
 stop advertising. If the system internally stops advertising for any reason, the handle will be
 closed to communicate this to the client.</p>
 
 ## Peripheral {#Peripheral}
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#83)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#81)*
 
 
 ### StartAdvertising {#StartAdvertising}
@@ -310,142 +310,6 @@ indicate that the connection to the peer has been lost.</p>
             <td><code>connection</code></td>
             <td>
                 <code><a class='link' href='#Connection'>Connection</a></code>
-            </td>
-        </tr></table>
-
-### StartAdvertisingDeprecated {#StartAdvertisingDeprecated}
-
-<p>[[DEPRECATED]]</p>
-<p>Starts sending advertisements based on the given parameters.
-  - <code>advertising_data</code>: The advertising data that should be included in the payload.
-  - <code>scan_result</code>: The scan result that will be returned when the advertisement is
-                   scanned.  Setting this will mark the advertisement set as scannable.
-  - <code>connectable</code>: when true, this advertisement will be marked as connectable.
-NOTE: connections can be made to a GATT server even if this is not set.
-  - <code>interval_ms</code>: The requested interval to advertise this set at in milliseconds.
-                minimum 20, maximum 10,000,000 (almost 3 hours). A reasonable
-default is 1 second (1000).
-  - <code>anonymous</code>: if true, the address of this device will not be included</p>
-<p>If the <code>tx_power_level</code> is set in either AdvertisingData, it will be replaced with
-the actual TX Power level reported by the adapter, or included in the extended header
-of the Advertising PDU to save advertising space.</p>
-<p>If <code>scan_result</code> and <code>advertising_data</code> are both set, legacy advertising will be used,
-which limits the size of the advertising data.</p>
-<p>This request will fail if:
-  - The <code>service_uuids</code> field of <code>advertising_data</code> contains a UUID that does not match
-    a GATT service that was previously registered by this application;
-  - If the provided advertising data cannot fit within the advertising payload MTU that
-    is supported on the current platform and parameters.
-  - If <code>anonymous</code> advertising is requested but the controller cannot support it.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>advertising_data</code></td>
-            <td>
-                <code><a class='link' href='#AdvertisingDataDeprecated'>AdvertisingDataDeprecated</a></code>
-            </td>
-        </tr><tr>
-            <td><code>scan_result</code></td>
-            <td>
-                <code><a class='link' href='#AdvertisingDataDeprecated'>AdvertisingDataDeprecated</a>?</code>
-            </td>
-        </tr><tr>
-            <td><code>connectable</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr><tr>
-            <td><code>interval_ms</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>anonymous</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>advertisement_id</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr></table>
-
-### StopAdvertisingDeprecated {#StopAdvertisingDeprecated}
-
-<p>[[DEPRECATED]]</p>
-<p>Stop an advertising session that was previously started by this application.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>advertisement_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Status'>Status</a></code>
-            </td>
-        </tr></table>
-
-### OnCentralConnected {#OnCentralConnected}
-
-<p>[[DEPRECATED]]</p>
-<p>Called when a remote central device has connected to a connectable advertisement.</p>
-
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>advertisement_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>central</code></td>
-            <td>
-                <code><a class='link' href='#RemoteDevice'>RemoteDevice</a></code>
-            </td>
-        </tr></table>
-
-### OnCentralDisconnected {#OnCentralDisconnected}
-
-<p>[[DEPRECATED]]</p>
-<p>Called when a remote central previously connected to this application is disconnected.</p>
-
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>device_id</code></td>
-            <td>
-                <code>string</code>
             </td>
         </tr></table>
 
@@ -775,7 +639,7 @@ loss calculation;</li>
 ### PeripheralError {#PeripheralError}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#9)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#7)*
 
 
 
@@ -816,7 +680,7 @@ parameters.</p>
 ### AdvertisingModeHint {#AdvertisingModeHint}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#37)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#35)*
 
 <p>A client can indicate the transmission rate of advertising packets by specifying a mode. The
 mode provides a hint to the system when configuring the controller with advertising interval and
@@ -980,7 +844,7 @@ peripherals.</p>
 ### AdvertisingParameters {#AdvertisingParameters}
 
 
-*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#53)*
+*Defined in [fuchsia.bluetooth.le/peripheral.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.le/peripheral.fidl#51)*
 
 <p>Represents the parameters for configuring advertisements.</p>
 

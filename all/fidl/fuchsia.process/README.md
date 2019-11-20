@@ -125,8 +125,7 @@ in <code>ProcessStartData</code> to actually start the process.</p>
 
 <p>Adds the given names to the namespace for the process.</p>
 <p>The paths in the namespace must be non-overlapping. See
-<a href="https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/namespaces.md">https://fuchsia.googlesource.com/fuchsia/+/master/docs/the-book/namespaces.md</a>
-for details.</p>
+<a href="https://fuchsia.dev/fuchsia-src/concepts/framework/namespaces">https://fuchsia.dev/fuchsia-src/concepts/framework/namespaces</a> for details.</p>
 <p>Calling this method multiple times concatenates the names.</p>
 
 #### Request
@@ -348,7 +347,7 @@ their intended use by the new process as namespace entries.</p>
                 <code>handle&lt;vmar&gt;</code>
             </td>
             <td><p>The vmar object that was created when the process was created.</p>
-<p>See <a href="https://fuchsia.googlesource.com/fuchsia/+/master/docs/zircon/syscalls/process_create.md">https://fuchsia.googlesource.com/fuchsia/+/master/docs/zircon/syscalls/process_create.md</a>.</p>
+<p>See <a href="https://fuchsia.dev/fuchsia-src/reference/syscalls/process_create.md">https://fuchsia.dev/fuchsia-src/reference/syscalls/process_create.md</a>.</p>
 </td>
             <td>No default</td>
         </tr><tr>

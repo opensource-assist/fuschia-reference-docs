@@ -614,6 +614,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.hardware.thermal/index">fuchsia.hardware.thermal</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.hardware.usb.peripheral/index">fuchsia.hardware.usb.peripheral</a></td>
     <td></td>
 </tr>
@@ -980,6 +984,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.storage.ext4server/index">fuchsia.storage.ext4server</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.storage.metrics/index">fuchsia.storage.metrics</a></td>
     <td></td>
 </tr>
@@ -1061,6 +1069,10 @@
 </tr>
 <tr>
     <td><a href="fuchsia.testing.chrealm/index">fuchsia.testing.chrealm</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.testing.modular/index">fuchsia.testing.modular</a></td>
     <td></td>
 </tr>
 <tr>

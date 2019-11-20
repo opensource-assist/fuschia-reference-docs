@@ -14,7 +14,7 @@
 
 <p>Requests a buffer containing cast config data.
 This call implements the Hanging Get protocol as detailed in
-https://fuchsia.googlesource.com/fuchsia/+/master/docs/development/api/fidl.md#delay-responses-using-hanging-gets</p>
+https://fuchsia.dev/fuchsia-src/development/api/fidl.md#delay-responses-using-hanging-gets</p>
 <p>All error cases are terminal, clients should not retry on error.</p>
 
 #### Request
