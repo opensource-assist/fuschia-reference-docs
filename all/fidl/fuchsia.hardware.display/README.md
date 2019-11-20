@@ -641,64 +641,6 @@ being closed.</p>
             </td>
         </tr></table>
 
-### ComputeLinearImageStride {#ComputeLinearImageStride}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>width</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr><tr>
-            <td><code>pixel_format</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>stride</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-        </tr></table>
-
-### AllocateVmo {#AllocateVmo}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>size</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>res</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>vmo</code></td>
-            <td>
-                <code>handle&lt;vmo&gt;?</code>
-            </td>
-        </tr></table>
-
 ### ImportBufferCollection {#ImportBufferCollection}
 
 

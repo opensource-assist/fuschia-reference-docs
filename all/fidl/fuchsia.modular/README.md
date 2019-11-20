@@ -350,49 +350,6 @@ shell with all of the user's stories.</p>
             </td>
         </tr></table>
 
-## Clipboard {#Clipboard}
-*Defined in [fuchsia.modular/clipboard.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/clipboard/clipboard.fidl#10)*
-
-<p>An interface that provides clients with the ability to store and
-retrieve text.</p>
-
-### Push {#Push}
-
-<p>Pushes <code>text</code> onto the clipboard.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>text</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
-
-
-### Peek {#Peek}
-
-<p>Peeks at the current topmost item on the clipboard and returns
-it, or null if no such item exists.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>text</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr></table>
-
 ## ComponentContext {#ComponentContext}
 *Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#14)*
 

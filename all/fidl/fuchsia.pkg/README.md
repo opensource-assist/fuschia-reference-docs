@@ -737,6 +737,11 @@ Type: <code>uint64</code>
             <td><code>1</code></td>
             <td><p>Perform blob downloading in the package resolver instead of amber.</p>
 </td>
+        </tr><tr>
+            <td><code>RUST_TUF</code></td>
+            <td><code>2</code></td>
+            <td><p>Resolve package merkle roots using rust-tuf instead of amber.</p>
+</td>
         </tr></table>
 
 
