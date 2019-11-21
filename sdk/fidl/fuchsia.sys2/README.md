@@ -1892,7 +1892,7 @@ content, and relevant metadata.</p>
             </td>
             <td><p>The resolved URL of the component.
 This is the canonical URL obtained by the component resolver after
-after following redirects and resolving relative paths.</p>
+following redirects and resolving relative paths.</p>
 </td>
         </tr><tr>
             <td>2</td>

@@ -520,6 +520,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.test.breakpoints/index">fuchsia.test.breakpoints</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.time/index">fuchsia.time</a></td>
     <td></td>
 </tr>

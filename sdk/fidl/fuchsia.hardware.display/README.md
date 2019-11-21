@@ -215,6 +215,12 @@ being closed.</p>
 
 ### ImportEvent {#ImportEvent}
 
+<p>Imports an event into the driver and associates it with the given id.</p>
+<p>It is illegal for id to be equal to invalidId, and it is undefined to
+import one event with two different ids or to import two different events
+with the same id (note that ids map well to koids).</p>
+<p>If a client is reusing events, they must clear the signal
+before referencing the id again.</p>
 
 #### Request
 <table>
@@ -235,6 +241,11 @@ being closed.</p>
 
 ### ReleaseEvent {#ReleaseEvent}
 
+<p>Releases the event imported with the given id.</p>
+<p>If any images are currently using the given event, the event
+will still be waited up or signaled as appropriate before its
+resources are released. It is an error to reuse an ID while the
+active config has references to it.</p>
 
 #### Request
 <table>

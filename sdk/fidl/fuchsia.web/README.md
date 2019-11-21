@@ -37,7 +37,7 @@ service.</li>
 
 
 ## Context {#Context}
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#145)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#149)*
 
 <p>Manages browsing state (e.g. LocalStorage, cookies, etc) associated with a set of
 <a class='link' href='#fuchsia.web.Frame'>fuchsia.web.Frame</a>.</p>
@@ -312,6 +312,31 @@ the token to <a class='link' href='../fuchsia.ui.gfx.ViewHolderArgs/'>fuchsia.ui
                 <code><a class='link' href='../fuchsia.ui.views/'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/#ViewToken'>ViewToken</a></code>
             </td>
         </tr></table>
+
+
+
+### EnableHeadlessRendering {#EnableHeadlessRendering}
+
+<p>Enables headless rendering of the Frame.
+This is used when content depends on layout and/or animation events firing normally.
+May only be used on a Context created with the <code>HEADLESS</code> feature flag.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+
+### DisableHeadlessRendering {#DisableHeadlessRendering}
+
+<p>Stops headless rendering of the Frame.
+May only be used on a Context created with the <code>HEADLESS</code> feature flag.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
 
 
 
@@ -648,7 +673,7 @@ will be closed with <code>ERR_BAD_STATE</code>.</li>
     </table>
 
 ## MessagePort {#MessagePort}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#199)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#210)*
 
 <p>Represents one end of an HTML5 MessageChannel. Can be used to send and exchange Messages with
 the peered MessagePort in the Frame's script context. The port is destroyed when either end of
@@ -709,7 +734,7 @@ on the sender's side and bounded by its available resources.</p>
         </tr></table>
 
 ## PopupFrameCreationListener {#PopupFrameCreationListener}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#225)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#236)*
 
 
 ### OnPopupFrameCreated {#OnPopupFrameCreated}
@@ -1201,7 +1226,7 @@ dashes.</p>
 ### CreateContextParams {#CreateContextParams}
 
 
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#87)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#91)*
 
 
 
@@ -1312,7 +1337,7 @@ Example value: <code>{&quot;http://a.com&quot;, &quot;http://b.com&quot;}</code>
 ### CreateFrameParams {#CreateFrameParams}
 
 
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#171)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#175)*
 
 
 
@@ -1395,7 +1420,7 @@ Example value: <code>{&quot;http://a.com&quot;, &quot;http://b.com&quot;}</code>
 ### WebMessage {#WebMessage}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#175)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#186)*
 
 
 
@@ -1432,7 +1457,7 @@ client.</p>
 ### PopupFrameCreationInfo {#PopupFrameCreationInfo}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#216)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#227)*
 
 <p>Specifies additional information about a newly created popup frame.</p>
 
@@ -1865,7 +1890,7 @@ per <a href="https://tools.ietf.org/html/rfc7230#section-3.2">RFC 7230 section  
 ## **XUNIONS**
 
 ### OutgoingTransferable {#OutgoingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#188)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#199)*
 
 
 <table>
@@ -1878,7 +1903,7 @@ per <a href="https://tools.ietf.org/html/rfc7230#section-3.2">RFC 7230 section  
         </tr></table>
 
 ### IncomingTransferable {#IncomingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#192)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#203)*
 
 
 <table>
@@ -1976,6 +2001,12 @@ Requires the <a class='link' href='#HARDWARE_VIDEO_DECODER'>HARDWARE_VIDEO_DECOD
             <td>32</td>
             <td><p>Enables Widevine CDM modules for EME API. <code>VULKAN</code> feature must be enabled as well.
 Requires <a class='link' href='#fuchsia.media.drm.Widevine'>fuchsia.media.drm.Widevine</a> service.</p>
+</td>
+        </tr><tr>
+            <td>HEADLESS</td>
+            <td>64</td>
+            <td><p>Allows embedders to render web content without graphical output or Scenic.
+Not compatible with the <a class='link' href='#VULKAN'>VULKAN</a> flag.</p>
 </td>
         </tr></table>
 

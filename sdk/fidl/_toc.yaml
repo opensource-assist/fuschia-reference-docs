@@ -255,6 +255,8 @@ toc:
   path: /reference/fidl/fuchsia.telephony.snoop
 - title: fuchsia.test
   path: /reference/fidl/fuchsia.test
+- title: fuchsia.test.breakpoints
+  path: /reference/fidl/fuchsia.test.breakpoints
 - title: fuchsia.time
   path: /reference/fidl/fuchsia.time
 - title: fuchsia.timezone
