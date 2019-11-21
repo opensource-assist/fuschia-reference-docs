@@ -155,24 +155,6 @@ away. Used exclusively by Session Shells to test focus navigation.</p>
 
 
 
-## PresentationModeListener {#PresentationModeListener}
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#61)*
-
-<p>Tell client that the screen mode has changed, according to sensors.
-N.B. There can be a race where the actual mode continues to change, after
-the listener has been notified. The client must call GetPresentationMode(),
-which will return the latest detected mode.</p>
-
-### OnModeChanged {#OnModeChanged}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
 ## Presenter {#Presenter}
 *Defined in [fuchsia.ui.policy/presenter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presenter.fidl#14)*
 
@@ -269,35 +251,6 @@ Type: <code>uint32</code>
             <td><code>5</code></td>
             <td><p>Display is used well beyond arm's reach.</p>
 </td>
-        </tr></table>
-
-### PresentationMode {#PresentationMode}
-Type: <code>uint32</code>
-
-*Defined in [fuchsia.ui.policy/presentation.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.policy/presentation.fidl#50)*
-
-<p>Screen modes that can be detected via sensor data.
-N.B. We use accelerometers to measure gravity when at rest, so detection is
-limited to earth-relative orientations.</p>
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>CLOSED</code></td>
-            <td><code>0</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>LAPTOP</code></td>
-            <td><code>1</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>TABLET</code></td>
-            <td><code>2</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>TENT</code></td>
-            <td><code>3</code></td>
-            <td></td>
         </tr></table>
 
 
