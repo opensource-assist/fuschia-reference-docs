@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Breakpoints {#Breakpoints}
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#59)*
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#63)*
 
 <p>A protocol used in testing by a component instance to block the
 component manager until specific events occur.</p>
@@ -60,9 +60,9 @@ allowed to proceed until resumed explicitly by calling Resume().</p>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
-### WaitUntilCapabilityUse {#WaitUntilCapabilityUse}
+### WaitUntilUseCapability {#WaitUntilUseCapability}
 
-<p>Blocks until a CapabilityUse invocation matching the specified component
+<p>Blocks until a UseCapability invocation matching the specified component
 and capability path. All other invocations are ignored.</p>
 <p>Note: The component manager is blocked after this call and will not be
 allowed to proceed until resumed explicitly by calling Resume().</p>
@@ -121,27 +121,34 @@ the same meaning.</p>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>STOP_INSTANCE</code></td>
+            <td><code>START_INSTANCE</code></td>
             <td><code>0</code></td>
+            <td><p>An instance was bound to successfully.
+This instance is now running.</p>
+</td>
+        </tr><tr>
+            <td><code>STOP_INSTANCE</code></td>
+            <td><code>1</code></td>
             <td><p>An instance was stopped successfully.
 This event must occur before PostDestroyInstance.</p>
 </td>
         </tr><tr>
             <td><code>PRE_DESTROY_INSTANCE</code></td>
-            <td><code>1</code></td>
+            <td><code>2</code></td>
             <td><p>The component subtree rooted at this instance is about to be destroyed.
 The instance may have been stopped by this point.
-This event must occur before PostDestroyInstance.</p>
+This event must occur before PostDestroyInstance.
+TODO(fxb/39417): Ensure the instance is stopped before this event.</p>
 </td>
         </tr><tr>
             <td><code>POST_DESTROY_INSTANCE</code></td>
-            <td><code>2</code></td>
+            <td><code>3</code></td>
             <td><p>The component subtree rooted at this instance has been destroyed.
 All instances under this subtree have been stopped by this point.</p>
 </td>
         </tr><tr>
-            <td><code>CAPABILITY_USE</code></td>
-            <td><code>3</code></td>
+            <td><code>USE_CAPABILITY</code></td>
+            <td><code>4</code></td>
             <td><p>A capability has been requested for use by the component.
 A component uses a capability by creating a channel and providing
 the server end of the channel to the component manager for routing

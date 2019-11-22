@@ -2210,6 +2210,24 @@
         </tr>
 </table>
 
+### ReverseOrdinalUnionStruct {#ReverseOrdinalUnionStruct}
+*Defined in [conformance/union.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/union.test.fidl#31)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>u</code></td>
+            <td>
+                <code><a class='link' href='#ReverseOrdinalUnion'>ReverseOrdinalUnion</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Int64Struct {#Int64Struct}
 *Defined in [conformance/xunion.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/xunion.test.fidl#9)*
 
@@ -2959,6 +2977,37 @@
             <td><code>x</code></td>
             <td>
                 <code>uint32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### ReverseOrdinalUnion {#ReverseOrdinalUnion}
+*Defined in [conformance/union.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/union.test.fidl#24)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>z</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>y</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>x</code></td>
+            <td>
+                <code>int64</code>
             </td>
             <td></td>
         </tr></table>

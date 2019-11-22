@@ -233,7 +233,7 @@ further calls are made on the watcher after this is called.</p>
 
 
 ## PageCloud {#PageCloud}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#222)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#291)*
 
 <p>Handler for cloud sync of a single page.</p>
 <p>Implementation of this class manages a <em>commit log</em>, which is an append-only
@@ -461,8 +461,55 @@ this commit should be downloaded using GetObject.</p>
             </td>
         </tr></table>
 
+### UpdateClock {#UpdateClock}
+
+<p>Sends our clock to the cloud. The cloud will update its clock from it.
+For each DeviceEntry inside a clock, the update rules are the following:
+When a DeviceEntry is received and the state is:</p>
+<ul>
+<li>empty, then the Entry is unconditionnaly stored</li>
+<li>clock, then each clock entry are updated if the generation is strictly
+superior to the one stored and the commit pointed by the entry is known.</li>
+<li>tombstone, then nothing happens
+when a regular tombstone is received and the state is:</li>
+<li>empty, then the tombstone is stored</li>
+<li>clock, then the clock is dropped and tombstone is stored</li>
+<li>tombstone, then nothing happens
+The cloud should never receive a deletion tombstone. However, clients should apply these
+rules when a deletion tombstone is received. If the state is:</li>
+<li>empty, then nothing happens</li>
+<li>clock, the record is cleared, including the PageDeviceIdentifier.</li>
+<li>tombstone, the record is cleared, including the PageDeviceIdentifier.</li>
+</ul>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>clock</code></td>
+            <td>
+                <code><a class='link' href='#ClockPack'>ClockPack</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code><a class='link' href='#Status'>Status</a></code>
+            </td>
+        </tr><tr>
+            <td><code>new_clock</code></td>
+            <td>
+                <code><a class='link' href='#ClockPack'>ClockPack</a>?</code>
+            </td>
+        </tr></table>
+
 ## PageCloudWatcher {#PageCloudWatcher}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#283)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#370)*
 
 <p>Watcher for push notifications from cloud sync of a single page.</p>
 
@@ -678,6 +725,26 @@ a PageCloud instance.</p>
         </tr>
 </table>
 
+### ClockPack {#ClockPack}
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#276)*
+
+
+
+<p>Contains a Buffer containing the FIDL serialization of Clocks.
+We use a buffer to as the number of devices interested in a page is not bounded.</p>
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>buffer</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.mem/'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/#Buffer'>Buffer</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 
 
 ## **ENUMS**
@@ -884,6 +951,114 @@ field. The cloud provider may always omit this field in diffs.</p>
 </td>
         </tr></table>
 
+### ClockEntry {#ClockEntry}
+
+
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#233)*
+
+<p>ClockEntry uniquely identifies a commit, as a way to indicate the state of the page on a device.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>commit_id</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[128]</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>generation</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td><p>Generation of the commit referred by <code>commit_id</code>.</p>
+</td>
+        </tr></table>
+
+### TombstoneEntry {#TombstoneEntry}
+
+
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#240)*
+
+<p>Tombstone entry for a device clock.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
+
+### DeletionEntry {#DeletionEntry}
+
+
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#244)*
+
+<p>Deletion request for a device clock.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
+
+### DeviceClock {#DeviceClock}
+
+
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#258)*
+
+<p>Clock for a single device, active or inactive.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>fingerprint</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[32]</code>
+            </td>
+            <td><p>Fingerprint of the device. It should match the fingerprint of the device in <code>DeviceSet</code>.</p>
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>counter</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td><p>Counter for the device. This counter increases between two local instances attached to the 
+same page on the same device. It is defined by the device only and only used for clocks.</p>
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>device_entry</code></td>
+            <td>
+                <code><a class='link' href='#DeviceEntry'>DeviceEntry</a></code>
+            </td>
+            <td><p>Local state of the device pointed by <code>device_id</code> as known by the clock owner.</p>
+</td>
+        </tr></table>
+
+### Clock {#Clock}
+
+
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#269)*
+
+<p>Full clock, representing the state of the device fleet for a given page.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>devices</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#DeviceClock'>DeviceClock</a>&gt;</code>
+            </td>
+            <td><p>State of each device. The order is not significant.</p>
+</td>
+        </tr></table>
+
 
 
 
@@ -911,6 +1086,32 @@ field. The cloud provider may always omit this field in diffs.</p>
             <td><p>The state is the content of a page at the commit with the given
 identifier.</p>
 </td>
+        </tr></table>
+
+### DeviceEntry {#DeviceEntry}
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#248)*
+
+<p>DeviceEntry contains clock entries for an active device.</p>
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>local_entry</code></td>
+            <td>
+                <code><a class='link' href='#ClockEntry'>ClockEntry</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>tombstone_entry</code></td>
+            <td>
+                <code><a class='link' href='#TombstoneEntry'>TombstoneEntry</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>deletion_entry</code></td>
+            <td>
+                <code><a class='link' href='#DeletionEntry'>DeletionEntry</a></code>
+            </td>
+            <td></td>
         </tr></table>
 
 

@@ -6,9 +6,8 @@
 ## **PROTOCOLS**
 
 ## AddressSpaceDevice {#AddressSpaceDevice}
-*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#11)*
+*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#39)*
 
-<p>Interface for the Goldfish address space driver allocating memory blocks.</p>
 
 ### AllocateBlock {#AllocateBlock}
 
@@ -65,6 +64,175 @@
             <td><code>res</code></td>
             <td>
                 <code>int32</code>
+            </td>
+        </tr></table>
+
+### OpenChildDriver {#OpenChildDriver}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>type</code></td>
+            <td>
+                <code><a class='link' href='#AddressSpaceChildDriverType'>AddressSpaceChildDriverType</a></code>
+            </td>
+        </tr><tr>
+            <td><code>req</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#AddressSpaceChildDriver'>AddressSpaceChildDriver</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+## AddressSpaceChildDriver {#AddressSpaceChildDriver}
+*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#85)*
+
+
+### AllocateBlock {#AllocateBlock}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>size</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>res</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>paddr</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>vmo</code></td>
+            <td>
+                <code>handle&lt;vmo&gt;?</code>
+            </td>
+        </tr></table>
+
+### DeallocateBlock {#DeallocateBlock}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>paddr</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>res</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+### ClaimSharedBlock {#ClaimSharedBlock}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>offset</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>size</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>res</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>vmo</code></td>
+            <td>
+                <code>handle&lt;vmo&gt;?</code>
+            </td>
+        </tr></table>
+
+### UnclaimSharedBlock {#UnclaimSharedBlock}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>offset</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>res</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+### Ping {#Ping}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>ping</code></td>
+            <td>
+                <code><a class='link' href='#AddressSpaceChildDriverPingMessage'>AddressSpaceChildDriverPingMessage</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>res</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>ping</code></td>
+            <td>
+                <code><a class='link' href='#AddressSpaceChildDriverPingMessage'>AddressSpaceChildDriverPingMessage</a></code>
             </td>
         </tr></table>
 
@@ -367,9 +535,94 @@ Returns <code>ZX_ERR_SHOULD_WAIT</code> if pipe device is not readable.</p>
 
 
 
+## **STRUCTS**
+
+### AddressSpaceChildDriverPingMessage {#AddressSpaceChildDriverPingMessage}
+*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#74)*
+
+
+
+<p>After opening the child driver, the client and hardware communicate via a
+child driver-specific protocol, with notifications driven by
+Ping(), each of which writes and reads messages to the hardware
+that follow this AddressSpaceChildDriverPingMessage struct.
+Each child driver type will have its own semantics for each field.
+It's common for child drivers to refer to offset/size plus a metadata
+field. We also provide extra data fields for other use cases in
+particular child drivers.</p>
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>offset</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>size</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>metadata</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>data0</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>data1</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>data2</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>data3</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 
 
 ## **ENUMS**
+
+### AddressSpaceChildDriverType {#AddressSpaceChildDriverType}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#11)*
+
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>DEFAULT</code></td>
+            <td><code>0</code></td>
+            <td><p>The DEFAULT child driver type is for graphics.</p>
+</td>
+        </tr></table>
 
 ### ColorBufferFormatType {#ColorBufferFormatType}
 Type: <code>uint32</code>

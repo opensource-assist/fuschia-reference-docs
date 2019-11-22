@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## DeviceWatcher {#DeviceWatcher}
-*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#73)*
+*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#68)*
 
 
 ### OnPhyAdded {#OnPhyAdded}
@@ -70,7 +70,7 @@
         </tr></table>
 
 ## DeviceService {#DeviceService}
-*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#81)*
+*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#76)*
 
 
 ### ListPhys {#ListPhys}
@@ -538,18 +538,11 @@
             </td>
             <td></td>
             <td>No default</td>
-        </tr><tr>
-            <td><code>path</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td></td>
-            <td>No default</td>
         </tr>
 </table>
 
 ### QueryIfaceResponse {#QueryIfaceResponse}
-*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#34)*
+*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#33)*
 
 
 
@@ -589,16 +582,6 @@
 </td>
             <td>No default</td>
         </tr><tr>
-            <td><code>dev_path</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td><p>The iface's device path.
-Note: This field is deprecated.
-Ifaces will soon have no device path.</p>
-</td>
-            <td>No default</td>
-        </tr><tr>
             <td><code>mac_addr</code></td>
             <td>
                 <code>uint8[6]</code>
@@ -610,7 +593,7 @@ Ifaces will soon have no device path.</p>
 </table>
 
 ### ListIfacesResponse {#ListIfacesResponse}
-*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#51)*
+*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#46)*
 
 
 
@@ -628,7 +611,7 @@ Ifaces will soon have no device path.</p>
 </table>
 
 ### CreateIfaceRequest {#CreateIfaceRequest}
-*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#55)*
+*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#50)*
 
 
 
@@ -653,7 +636,7 @@ Ifaces will soon have no device path.</p>
 </table>
 
 ### CreateIfaceResponse {#CreateIfaceResponse}
-*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#60)*
+*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#55)*
 
 
 
@@ -671,7 +654,7 @@ Ifaces will soon have no device path.</p>
 </table>
 
 ### DestroyIfaceRequest {#DestroyIfaceRequest}
-*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#64)*
+*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#59)*
 
 
 
@@ -689,7 +672,7 @@ Ifaces will soon have no device path.</p>
 </table>
 
 ### SetCountryRequest {#SetCountryRequest}
-*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#68)*
+*Defined in [fuchsia.wlan.device.service/service.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/service.fidl#63)*
 
 
 
