@@ -73,9 +73,7 @@ terminate.</li>
 ### CreateAccount {#CreateAccount}
 
 <p>Creates a completely new Fuchsia account.</p>
-<p><code>context</code> An <code>AccountHandlerContext</code> that can supply account and
-authentication services and contextual state.
-<code>id</code> The new account's local identifier.</p>
+<p><code>id</code> The new account's local identifier.</p>
 <p>Fails with FAILED_PRECONDITION if the AccountHandler is not in the <code>Uninitialized</code>
 state.</p>
 
@@ -83,11 +81,6 @@ state.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>context</code></td>
-            <td>
-                <code><a class='link' href='#AccountHandlerContext'>AccountHandlerContext</a></code>
-            </td>
-        </tr><tr>
             <td><code>id</code></td>
             <td>
                 <code>uint64</code>
@@ -109,9 +102,7 @@ state.</p>
 
 <p>Loads information about a Fuchsia account that was previously provisioned
 on the current device.</p>
-<p><code>context</code> An <code>AccountHandlerContext</code> that can supply account and
-authentication services and contextual state.
-<code>id</code> The account's local identifier.</p>
+<p><code>id</code> The account's local identifier.</p>
 <p>Fails with FAILED_PRECONDITION if the AccountHandler is not in the <code>Uninitialized</code>
 state.</p>
 
@@ -119,11 +110,6 @@ state.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>context</code></td>
-            <td>
-                <code><a class='link' href='#AccountHandlerContext'>AccountHandlerContext</a></code>
-            </td>
-        </tr><tr>
             <td><code>id</code></td>
             <td>
                 <code>uint64</code>
@@ -225,9 +211,7 @@ the account to disk if the account is persistent and makes it available
 for use.</p>
 <p>Moves the AccountHandler from the <code>Transferred</code> state to the
 <code>Initialized</code> state.</p>
-<p><code>context</code> An <code>AccountHandlerContext</code> that can supply account and
-authentication services and contextual state.
-<code>id</code> The account's local identifier.</p>
+<p><code>id</code> The account's local identifier.</p>
 <p>Fails with FAILED_PRECONDITION if the AccountHandler is not in the <code>Transferred</code>
 state.</p>
 
@@ -235,11 +219,6 @@ state.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>context</code></td>
-            <td>
-                <code><a class='link' href='#AccountHandlerContext'>AccountHandlerContext</a></code>
-            </td>
-        </tr><tr>
             <td><code>id</code></td>
             <td>
                 <code>uint64</code>
@@ -439,14 +418,12 @@ component if it hasn't already exited.</p>
 
 
 ## AccountHandlerContext {#AccountHandlerContext}
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#262)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#252)*
 
 <p>An interface that supplies the account and authentication services that
 an AccountHandler needs to perform its role in the system.</p>
-<p>In the v2 Component architecture this service will be supplied into the
-namespace of AccountHandler by the component that launches it (i.e. the
-AccountManager).  Until then an AccountHandlerContext is supplied explicitly
-in the initialization calls on the AccountHandlerControl interface.</p>
+<p>This service is supplied into the namespace of AccountHandler by the
+component that launches it (i.e. the AccountManager).</p>
 
 ### GetAuthProvider {#GetAuthProvider}
 
@@ -637,7 +614,7 @@ set in an AuthProviderConfig.auth_provider_type
 ### AccountData {#AccountData}
 
 
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#275)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#265)*
 
 <p>Contents of an account, used for serialization during account transfer.</p>
 

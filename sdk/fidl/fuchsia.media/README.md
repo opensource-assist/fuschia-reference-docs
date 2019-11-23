@@ -555,7 +555,7 @@ AudioCapturer is bound.</p>
         </tr></table>
 
 ## AudioConsumer {#AudioConsumer}
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#8)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#11)*
 
 
 ### CreateStreamSink {#CreateStreamSink}
@@ -613,8 +613,26 @@ the second stream sink is used, and so on.</p>
 
 ### Start {#Start}
 
-<p>Starts rendering as indicated by <code>flags</code>. Rendering starts as soon as possible after this
-method is called. The actual start time will be reflected in the updated status.</p>
+<p>Starts rendering as indicated by <code>flags</code>.</p>
+<p><code>media_time</code> indicates the packet timestamp that corresponds to <code>reference_time</code>.
+Typically, this is the timestamp of the first packet that will be
+rendered. If packets will be supplied with no timestamps, this value
+should be <code>NO_TIMESTAMP</code>.  Passing a <code>media_time</code> value of
+<code>NO_TIMESTAMP</code> chooses the default media time, established as follows:
+1. When starting for the first time, the default media time is the
+timestamp on the first packet sent to the stream sink.
+2. When resuming after stop, the default media time is the media
+time at which the stream stopped.</p>
+<p><code>reference_time</code> is the monotonic system time at which rendering should
+be started. For supply-driven sources, this must be the time at which
+the first packet was (or will be) sent plus a lead time, which must be
+in the range indicated in the <code>AudioConsumerStatus</code>. For demand-driven
+sources, the client must ensure that the lead time requirement is met at
+the start time.  Passing the default value of 0 for <code>reference_time</code>
+causes the consumer to choose a start time based on the availability of
+packets, the lead time requirements, and whether <code>LOW_LATENCY</code> has been
+specified.</p>
+<p>The actual start time will be reflected in the updated status.</p>
 
 #### Request
 <table>
@@ -623,6 +641,16 @@ method is called. The actual start time will be reflected in the updated status.
             <td><code>flags</code></td>
             <td>
                 <code><a class='link' href='#AudioConsumerStartFlags'>AudioConsumerStartFlags</a></code>
+            </td>
+        </tr><tr>
+            <td><code>reference_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr><tr>
+            <td><code>media_time</code></td>
+            <td>
+                <code>int64</code>
             </td>
         </tr></table>
 
@@ -637,6 +665,40 @@ be reflected in the updated status.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
+
+
+
+### SetRate {#SetRate}
+
+<p>Requests to change the playback rate of the renderer. 1.0 means normal
+playback. Negative rates are not supported. The new rate will be
+reflected in the updated status.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>rate</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+        </tr></table>
+
+
+
+### BindVolumeControl {#BindVolumeControl}
+
+<p>Binds to this <code>AudioConsumer</code> volume control for control and notifications.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>volume_control_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.media.audio/'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/#VolumeControl'>VolumeControl</a>&gt;</code>
+            </td>
+        </tr></table>
 
 
 
@@ -3027,41 +3089,8 @@ events will eventually be disconnected.</p>
 
 ## **STRUCTS**
 
-### AudioConsumerStatus {#AudioConsumerStatus}
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#58)*
-
-
-
-<p>Represents the status of the consumer. Initial status has null <code>error</code> and
-<code>presentation_timeline</code> values.</p>
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>error</code></td>
-            <td>
-                <code><a class='link' href='#AudioConsumerError'>AudioConsumerError</a>?</code>
-            </td>
-            <td><p>If not null, indicates an error condition currently in effect.</p>
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>presentation_timeline</code></td>
-            <td>
-                <code><a class='link' href='#TimelineFunction'>TimelineFunction</a>?</code>
-            </td>
-            <td><p>If not null, indicates the current relationship between the presentation timeline
-and local monotonic clock, both in nanosecond units.</p>
-<p>'Presentation timeline' refers to the <code>pts</code> (presentation timestamp) values on the packets.
-This timeline function can be used to determine the local monotonic clock time that a
-packet will be presented based on that packet's <code>pts</code> value.</p>
-</td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### Void {#Void}
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#71)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#119)*
 
 
 
@@ -4523,6 +4552,61 @@ Type: <code>uint32</code>
 
 ## **TABLES**
 
+### AudioConsumerStatus {#AudioConsumerStatus}
+
+
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#94)*
+
+<p>Represents the status of the consumer. In the initial status, <code>error</code> and
+<code>presentation_timeline</code> are absent. The lead time fields are always present.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>error</code></td>
+            <td>
+                <code><a class='link' href='#AudioConsumerError'>AudioConsumerError</a></code>
+            </td>
+            <td><p>If present, indicates an error condition currently in effect. Absent if no error.</p>
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>presentation_timeline</code></td>
+            <td>
+                <code><a class='link' href='#TimelineFunction'>TimelineFunction</a></code>
+            </td>
+            <td><p>If present, indicates the current relationship between the presentation timeline
+and local monotonic clock, both in nanosecond units. Absent initially.</p>
+<p>'Presentation timeline' refers to the <code>pts</code> (presentation timestamp) values on the packets.
+This timeline function can be used to determine the local monotonic clock time that a
+packet will be presented based on that packet's <code>pts</code> value.</p>
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>min_lead_time</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td><p>Indicates the minimum lead time in nanoseconds supported by this
+<code>AudioConsumer</code>.  Or in other words, how small of a gap between the
+<code>media_time</code> provided to <code>AudioConsumer.Start</code> and the pts on the first
+packet can be. Values outside this range will be clipped.</p>
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>max_lead_time</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td><p>Indicates the maximum lead time in nanoseconds supported by this
+<code>AudioConsumer</code>.  Or in other words, how large of a gap between the
+<code>media_time</code> provided to <code>AudioConsumer.Start</code> and the pts on the first
+packet can be. Values outside this range will be clipped.</p>
+</td>
+        </tr></table>
+
 ### EncryptedFormat {#EncryptedFormat}
 
 
@@ -5791,7 +5875,7 @@ mute the volume of all streams with this usage.</p>
 ## **UNIONS**
 
 ### AudioConsumerError {#AudioConsumerError}
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#75)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#123)*
 
 <p>Represents a <code>AudioConsumer</code> error condition.</p>
 

@@ -194,7 +194,7 @@
         </tr></table>
 
 ## LoggerBase {#LoggerBase}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#247)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#249)*
 
 <p>LoggerBase Interface</p>
 
@@ -501,7 +501,7 @@
         </tr></table>
 
 ## Logger {#Logger}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#582)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#584)*
 
 
 ### LogEvent {#LogEvent}
@@ -923,7 +923,7 @@
         </tr></table>
 
 ## LoggerSimple {#LoggerSimple}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#652)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#654)*
 
 <p>LoggerSimple Interface</p>
 
@@ -1274,7 +1274,7 @@
         </tr></table>
 
 ## SystemDataUpdater {#SystemDataUpdater}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#687)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#689)*
 
 
 ### SetExperimentState {#SetExperimentState}
@@ -1483,7 +1483,7 @@
 </table>
 
 ### CustomEventValue {#CustomEventValue}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#488)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#490)*
 
 
 
@@ -1509,7 +1509,7 @@
 </table>
 
 ### HistogramBucket {#HistogramBucket}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#505)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#507)*
 
 
 
@@ -1534,7 +1534,7 @@
 </table>
 
 ### CountEvent {#CountEvent}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#516)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#518)*
 
 
 
@@ -1559,7 +1559,7 @@
 </table>
 
 ### Event {#Event}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#526)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#528)*
 
 
 
@@ -1570,7 +1570,7 @@
 </table>
 
 ### CobaltEvent {#CobaltEvent}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#558)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#560)*
 
 
 
@@ -1609,7 +1609,7 @@
 </table>
 
 ### Experiment {#Experiment}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#676)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#678)*
 
 
 
@@ -1701,7 +1701,7 @@ Type: <code>int32</code>
 ## **UNIONS**
 
 ### Value {#Value}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#497)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#499)*
 
 
 <table>
@@ -1732,7 +1732,7 @@ Type: <code>int32</code>
         </tr></table>
 
 ### EventPayload {#EventPayload}
-*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#530)*
+*Defined in [fuchsia.cobalt/cobalt.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#532)*
 
 
 <table>

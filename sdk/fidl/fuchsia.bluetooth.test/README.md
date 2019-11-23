@@ -66,9 +66,8 @@ procedure is acknowledged with an empty response.</p>
 <a href="/docs/development/api/fidl.md#delay-responses-using-hanging-gets">hanging get pattern</a>.
 Notifies the most recent controller connection state if there has been a change since the
 last time this method was called.</p>
-<p>Only one call to this method can be outstanding at a given time. The
-<a class='link' href='#Peer'>Peer</a> channel will be closed if a call is received when one is
-already pending.</p>
+<p>Multiple calls to this method can be outstanding at a given time. All calls will resolve in
+a response as soon as there is a change to the connection state.</p>
 
 #### Request
 <table>
@@ -87,7 +86,7 @@ already pending.</p>
         </tr></table>
 
 ## HciEmulator {#HciEmulator}
-*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#135)*
+*Defined in [fuchsia.bluetooth.test/hci_emulator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/hci_emulator.fidl#134)*
 
 <p>Protocol used to emulate a Bluetooth controller that supports the standard Bluetooth HCI.</p>
 
@@ -201,9 +200,8 @@ requests.</p>
 <p>Returns the most recent set of state transitions for the link layer LE scan procedure. This
 method returns when there has been a state change since the last invocation of this method
 by this client.</p>
-<p>Only one call to this method can be outstanding at a given time. The
-<a class='link' href='#HciEmulator'>HciEmulator</a> channel will be closed if a call received when one is
-already pending.
+<p>Multiple calls to this method can be outstanding at a given time. All calls will resolve in
+a response as soon as there is a change to the scan state.
 (see <a href="//docs/development/api/fidl.md#delay-responses-using-hanging-gets">hanging get pattern</a>)</p>
 
 #### Request

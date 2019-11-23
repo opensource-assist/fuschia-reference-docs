@@ -1144,7 +1144,7 @@ that is currently in focus and (2) stories that are visible to the
 user. Names of interfaces follow the usual patterns:</p>
 <p>{Focus,VisibleStories}Controller is used by session shell to update
 information whenever changes take place.</p>
-<p>FocusProvider is used by maxwell and session shell to
+<p>FocusProvider is used by session shell to
 query and get updates on which story is in focus on which device
 and visible stories on this device.</p>
 <p>Implemented by sessionmgr. Given to session shell through its namespace.</p>
@@ -1919,11 +1919,10 @@ when the state changes.</p>
 
 
 ## StoryProvider {#StoryProvider}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#14)*
+*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#13)*
 
 <p>Sessionmgr passes a connection to this service to the SessionShell so it can
-operate on stories for the user. It is also passed to other services that
-monitor or manipulate stories, specifically the maxwell services.</p>
+operate on stories for the user.</p>
 <p>Closing a <code>StoryProvider</code> connection has no effect on the state of the
 framework.</p>
 
@@ -2071,7 +2070,7 @@ DEPRECATED: In favor of GetStories().</p>
 
 
 ## StoryProviderWatcher {#StoryProviderWatcher}
-*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#43)*
+*Defined in [fuchsia.modular/story_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/story_provider.fidl#42)*
 
 <p>Implemented by clients of StoryProvider.</p>
 
@@ -2543,32 +2542,6 @@ This will be called before the story is stopped.</p>
 
 ## UserIntelligenceProvider {#UserIntelligenceProvider}
 *Defined in [fuchsia.modular/user_intelligence_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/user_intelligence/user_intelligence_provider.fidl#9)*
-
-
-### StartAgents {#StartAgents}
-
-<p>The <code>ComponentContext</code> is used to create agents and use message queues.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>user_intelligence_context</code></td>
-            <td>
-                <code><a class='link' href='#ComponentContext'>ComponentContext</a></code>
-            </td>
-        </tr><tr>
-            <td><code>session_agents</code></td>
-            <td>
-                <code>vector&lt;string&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>startup_agents</code></td>
-            <td>
-                <code>vector&lt;string&gt;</code>
-            </td>
-        </tr></table>
-
 
 
 ### GetServicesForAgent {#GetServicesForAgent}
