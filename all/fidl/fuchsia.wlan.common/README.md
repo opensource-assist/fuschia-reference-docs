@@ -216,6 +216,12 @@ Type: <code>uint32</code>
             <td><p>Temporary feature flag for incrementally transitioning drivers to use
 SME channel on iface creation.</p>
 </td>
+        </tr><tr>
+            <td><code>TEMP_SOFTMAC</code></td>
+            <td><code>2718281828</code></td>
+            <td><p>Temporary feature flag for driver to indicate this iface a SoftMAC device.
+TODO(41640): Remove this flag once FullMAC drivers no longer use SME.</p>
+</td>
         </tr></table>
 
 

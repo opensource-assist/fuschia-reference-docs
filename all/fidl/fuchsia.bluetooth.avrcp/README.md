@@ -75,8 +75,34 @@ be returned.</p>
             </td>
         </tr></table>
 
+### RegisterTargetHandler {#RegisterTargetHandler}
+
+<p>Sets an implementation of target handler that will vend delegates for each incoming
+remote TG -&gt; local CT connections to handle the commands being sent by the remote TG.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>handler</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler'>TargetHandler</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#PeerManager_RegisterTargetHandler_Result'>PeerManager_RegisterTargetHandler_Result</a></code>
+            </td>
+        </tr></table>
+
 ## AbsoluteVolumeHandler {#AbsoluteVolumeHandler}
-*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#92)*
+*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#32)*
 
 <p>Handler for absolute volume requests from a remote peer. See AVRCP v 1.6.2 section 6.13.2.
 Absolute volume is represented as a percentage using one byte with the most significant bit
@@ -153,7 +179,7 @@ function, otherwise it should only return when the volume has been changed.</p>
         </tr></table>
 
 ## Controller {#Controller}
-*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#111)*
+*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#51)*
 
 <p>Client wrapper for local controller (CT) -&gt; remote target (TG) AVCTP connections between devices.
 A client is high level construct and does not represent a connection with a device.
@@ -428,6 +454,249 @@ notifications.</p>
             </td>
         </tr></table>
 
+## TargetHandler {#TargetHandler}
+*Defined in [fuchsia.bluetooth.avrcp/target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/target.fidl#9)*
+
+<p>Client wrapper for the local target.
+A client is a high level construct and does not represent a connection with a device.</p>
+
+### GetEventsSupported {#GetEventsSupported}
+
+<p>Returns the event notification ids that are supported by the TG.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_GetEventsSupported_Result'>TargetHandler_GetEventsSupported_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetMediaAttributes {#GetMediaAttributes}
+
+<p>Returns the currently playing media attributes.
+May send either the GetElementAttributes or GetItemAttributes command depending on what
+is supported.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_GetMediaAttributes_Result'>TargetHandler_GetMediaAttributes_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetPlayStatus {#GetPlayStatus}
+
+<p>Returns the status of the currently playing media.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_GetPlayStatus_Result'>TargetHandler_GetPlayStatus_Result</a></code>
+            </td>
+        </tr></table>
+
+### SendCommand {#SendCommand}
+
+<p>Send an AV\C passthrough key command.
+If <code>key_pressed</code>, then the AV\C passthrough command shall be interpreted as a key
+press down event. Otherwise, the command shall be interpreted as a key release event.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>command</code></td>
+            <td>
+                <code><a class='link' href='#AvcPanelCommand'>AvcPanelCommand</a></code>
+            </td>
+        </tr><tr>
+            <td><code>pressed</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_SendCommand_Result'>TargetHandler_SendCommand_Result</a></code>
+            </td>
+        </tr></table>
+
+### ListPlayerApplicationSettingAttributes {#ListPlayerApplicationSettingAttributes}
+
+<p>Request the target device to provide all the target supported player application
+setting attributes.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_ListPlayerApplicationSettingAttributes_Result'>TargetHandler_ListPlayerApplicationSettingAttributes_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetPlayerApplicationSettings {#GetPlayerApplicationSettings}
+
+<p>Returns currently set player application setting values for the <code>attribute_ids</code>.
+If no <code>attribute_ids</code> are provided, this method will query the TG for all valid
+attribute ID's, and return the currently set player application setting values.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>attribute_ids</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#PlayerApplicationSettingAttributeId'>PlayerApplicationSettingAttributeId</a>&gt;[131]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_GetPlayerApplicationSettings_Result'>TargetHandler_GetPlayerApplicationSettings_Result</a></code>
+            </td>
+        </tr></table>
+
+### SetPlayerApplicationSettings {#SetPlayerApplicationSettings}
+
+<p>Sets the player application settings specified by <code>requested_settings</code>. Only
+settings specified in the input <code>requested_settings</code> will be overwritten.
+Returns the actual settings that were set.
+Settings provided in the <code>requested_settings</code> that are unsupported or unknown
+will not be set; and <code>SetPlayerApplicationSettings</code> will not return an error.
+Instead, the returned <code>set_settings</code> will include only the settings that were
+successfully set on the remote target.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>requested_settings</code></td>
+            <td>
+                <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_SetPlayerApplicationSettings_Result'>TargetHandler_SetPlayerApplicationSettings_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetNotification {#GetNotification}
+
+<p>Returns the current value for the notification specified by <code>event_id</code>.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>event_id</code></td>
+            <td>
+                <code><a class='link' href='#NotificationEvent'>NotificationEvent</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_GetNotification_Result'>TargetHandler_GetNotification_Result</a></code>
+            </td>
+        </tr></table>
+
+### WatchNotification {#WatchNotification}
+
+<p>Returns the changed value of the notification specified by 'event_id'.
+A changed value refers to any value that is different than the input parameter
+<code>current</code> Notification value.
+<code>WatchNotification</code> will not respond until the Notification value associated
+with <code>event_id</code> has changed from the <code>current</code> Notification.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>event_id</code></td>
+            <td>
+                <code><a class='link' href='#NotificationEvent'>NotificationEvent</a></code>
+            </td>
+        </tr><tr>
+            <td><code>current</code></td>
+            <td>
+                <code><a class='link' href='#Notification'>Notification</a></code>
+            </td>
+        </tr><tr>
+            <td><code>pos_change_interval</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_WatchNotification_Result'>TargetHandler_WatchNotification_Result</a></code>
+            </td>
+        </tr></table>
+
 
 
 ## **STRUCTS**
@@ -444,6 +713,17 @@ notifications.</p>
 </table>
 
 ### PeerManager_SetAbsoluteVolumeHandler_Response {#PeerManager_SetAbsoluteVolumeHandler_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### PeerManager_RegisterTargetHandler_Response {#PeerManager_RegisterTargetHandler_Response}
 *generated*
 
 
@@ -577,8 +857,163 @@ notifications.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
+### TargetHandler_GetEventsSupported_Response {#TargetHandler_GetEventsSupported_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>notification_ids</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#NotificationEvent'>NotificationEvent</a>&gt;[255]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TargetHandler_GetMediaAttributes_Response {#TargetHandler_GetMediaAttributes_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>attributes</code></td>
+            <td>
+                <code><a class='link' href='#MediaAttributes'>MediaAttributes</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TargetHandler_GetPlayStatus_Response {#TargetHandler_GetPlayStatus_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>play_status</code></td>
+            <td>
+                <code><a class='link' href='#PlayStatus'>PlayStatus</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TargetHandler_SendCommand_Response {#TargetHandler_SendCommand_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### TargetHandler_ListPlayerApplicationSettingAttributes_Response {#TargetHandler_ListPlayerApplicationSettingAttributes_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>attributes</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#PlayerApplicationSettingAttributeId'>PlayerApplicationSettingAttributeId</a>&gt;[131]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TargetHandler_GetPlayerApplicationSettings_Response {#TargetHandler_GetPlayerApplicationSettings_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>current_settings</code></td>
+            <td>
+                <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TargetHandler_SetPlayerApplicationSettings_Response {#TargetHandler_SetPlayerApplicationSettings_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>set_settings</code></td>
+            <td>
+                <code><a class='link' href='#PlayerApplicationSettings'>PlayerApplicationSettings</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TargetHandler_GetNotification_Response {#TargetHandler_GetNotification_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>current_value</code></td>
+            <td>
+                <code><a class='link' href='#Notification'>Notification</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TargetHandler_WatchNotification_Response {#TargetHandler_WatchNotification_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>new_value</code></td>
+            <td>
+                <code><a class='link' href='#Notification'>Notification</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### CustomAttributeValue {#CustomAttributeValue}
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#128)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#218)*
 
 
 
@@ -604,7 +1039,7 @@ notifications.</p>
 </table>
 
 ### MediaAttributes {#MediaAttributes}
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#169)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#259)*
 
 
 
@@ -673,7 +1108,7 @@ Type: <code>uint32</code>
 
 *Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#12)*
 
-<p>Status codes for commands sent as the controller</p>
+<p>Status codes for commands sent as the controller.</p>
 
 
 <table>
@@ -723,10 +1158,74 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
-### TargetEvent {#TargetEvent}
+### TargetPassthroughError {#TargetPassthroughError}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#27)*
+
+<p>Status codes for passthrough responses received from the target.</p>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>COMMAND_NOT_IMPLEMENTED</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>COMMAND_REJECTED</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr></table>
+
+### TargetAvcError {#TargetAvcError}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#35)*
+
+<p>Status codes for AVRCP specific AV/C commands.
+Defined in AVRCP 1.6.2 section 6.15.3, Table 6.49.
+Style note: named exactly as they are in Table 6.49 with the &quot;REJECTED_&quot; prefix.</p>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>REJECTED_INVALID_COMMAND</code></td>
+            <td><code>0</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>REJECTED_INVALID_PARAMETER</code></td>
+            <td><code>1</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>REJECTED_PARAMETER_CONTENT_ERROR</code></td>
+            <td><code>2</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>REJECTED_INTERNAL_ERROR</code></td>
+            <td><code>3</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>REJECTED_UID_CHANGED</code></td>
+            <td><code>5</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>REJECTED_INVALID_PLAYER_ID</code></td>
+            <td><code>11</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>REJECTED_NO_AVAILABLE_PLAYERS</code></td>
+            <td><code>15</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>REJECTED_ADDRESSED_PLAYER_CHANGED</code></td>
+            <td><code>16</code></td>
+            <td></td>
+        </tr></table>
+
+### NotificationEvent {#NotificationEvent}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#28)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#53)*
 
 <p>Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification) and Appendix H.
 Style note: named exactly as they are in the specification with the &quot;EVENT_&quot; prefix.</p>
@@ -762,7 +1261,7 @@ Style note: named exactly as they are in the specification with the &quot;EVENT_
             <td><code>7</code></td>
             <td></td>
         </tr><tr>
-            <td><code>PLAYER_APPLICATION_SETTINGS_CHANGED</code></td>
+            <td><code>PLAYER_APPLICATION_SETTING_CHANGED</code></td>
             <td><code>8</code></td>
             <td></td>
         </tr><tr>
@@ -790,7 +1289,7 @@ Style note: named exactly as they are in the specification with the &quot;EVENT_
 ### SystemStatus {#SystemStatus}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#46)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#136)*
 
 <p>Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
 Format for <code>EVENT_SYSTEM_STATUS_CHANGED</code>.</p>
@@ -814,7 +1313,7 @@ Format for <code>EVENT_SYSTEM_STATUS_CHANGED</code>.</p>
 ### PlaybackStatus {#PlaybackStatus}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#54)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#144)*
 
 <p>Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
 Format for <code>EVENT_PLAYBACK_STATUS_CHANGED</code>.</p>
@@ -850,7 +1349,7 @@ Format for <code>EVENT_PLAYBACK_STATUS_CHANGED</code>.</p>
 ### BatteryStatus {#BatteryStatus}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#66)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#156)*
 
 <p>Defined by AVRCP 1.6.2 section 6.7.2 (RegisterNotification).
 Format for <code>EVENT_BATT_STATUS_CHANGED</code>.
@@ -887,7 +1386,7 @@ Same encoding also defined by 6.5.8 (InformBatteryStatusOfCT).</p>
 ### RepeatStatusMode {#RepeatStatusMode}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#76)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#166)*
 
 <p>Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
 
@@ -918,7 +1417,7 @@ Type: <code>uint8</code>
 ### ShuffleMode {#ShuffleMode}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#85)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#175)*
 
 <p>Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
 
@@ -945,7 +1444,7 @@ Type: <code>uint8</code>
 ### ScanMode {#ScanMode}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#93)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#183)*
 
 <p>Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
 
@@ -972,7 +1471,7 @@ Type: <code>uint8</code>
 ### Equalizer {#Equalizer}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#101)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#191)*
 
 <p>Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
 
@@ -991,7 +1490,7 @@ Type: <code>uint8</code>
 ### PlayerApplicationSettingAttributeId {#PlayerApplicationSettingAttributeId}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#120)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#210)*
 
 <p>0x80 - 0xFF is reserved for custom player application settings.
 Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
@@ -1019,7 +1518,7 @@ Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
 ### AvcPanelCommand {#AvcPanelCommand}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#197)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#287)*
 
 <p>Defined by AV\C Panel specification.</p>
 
@@ -1270,9 +1769,10 @@ Type: <code>uint8</code>
 ### Notification {#Notification}
 
 
-*Defined in [fuchsia.bluetooth.avrcp/controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/controller.fidl#59)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#105)*
 
-<p>Event data from incoming target notifications.</p>
+<p>Event data from incoming target notifications.
+Defined by AVRCP 1.6.2 Sec 6.7.2.</p>
 
 
 <table>
@@ -1354,7 +1854,7 @@ Type: <code>uint8</code>
 ### CustomPlayerApplicationSetting {#CustomPlayerApplicationSetting}
 
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#135)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#225)*
 
 <p>Specification allowed player application settings.
 Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
@@ -1400,7 +1900,7 @@ defined in AVRCP 1.6.2 Appendix F.</p>
 ### PlayerApplicationSettings {#PlayerApplicationSettings}
 
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#151)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#241)*
 
 <p>Defined by AVRCP 1.6.2 Appendix F (player application settings).</p>
 
@@ -1452,7 +1952,7 @@ defined in AVRCP 1.6.2 Appendix F.</p>
 ### PlayStatus {#PlayStatus}
 
 
-*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#182)*
+*Defined in [fuchsia.bluetooth.avrcp/types.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#272)*
 
 <p>Status of currently playing media on the TG.
 Defined by AVRCP 1.6.2 section 6.7.1, Table 6.29.</p>
@@ -1521,6 +2021,25 @@ Mandatory, the TG must respond with a PlaybackStatus.</p>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#PeerManager_SetAbsoluteVolumeHandler_Response'>PeerManager_SetAbsoluteVolumeHandler_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### PeerManager_RegisterTargetHandler_Result {#PeerManager_RegisterTargetHandler_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#PeerManager_RegisterTargetHandler_Response'>PeerManager_RegisterTargetHandler_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1683,6 +2202,177 @@ Mandatory, the TG must respond with a PlaybackStatus.</p>
             <td></td>
         </tr></table>
 
+### TargetHandler_GetEventsSupported_Result {#TargetHandler_GetEventsSupported_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_GetEventsSupported_Response'>TargetHandler_GetEventsSupported_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#TargetAvcError'>TargetAvcError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TargetHandler_GetMediaAttributes_Result {#TargetHandler_GetMediaAttributes_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_GetMediaAttributes_Response'>TargetHandler_GetMediaAttributes_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#TargetAvcError'>TargetAvcError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TargetHandler_GetPlayStatus_Result {#TargetHandler_GetPlayStatus_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_GetPlayStatus_Response'>TargetHandler_GetPlayStatus_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#TargetAvcError'>TargetAvcError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TargetHandler_SendCommand_Result {#TargetHandler_SendCommand_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_SendCommand_Response'>TargetHandler_SendCommand_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#TargetPassthroughError'>TargetPassthroughError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TargetHandler_ListPlayerApplicationSettingAttributes_Result {#TargetHandler_ListPlayerApplicationSettingAttributes_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_ListPlayerApplicationSettingAttributes_Response'>TargetHandler_ListPlayerApplicationSettingAttributes_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#TargetAvcError'>TargetAvcError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TargetHandler_GetPlayerApplicationSettings_Result {#TargetHandler_GetPlayerApplicationSettings_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_GetPlayerApplicationSettings_Response'>TargetHandler_GetPlayerApplicationSettings_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#TargetAvcError'>TargetAvcError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TargetHandler_SetPlayerApplicationSettings_Result {#TargetHandler_SetPlayerApplicationSettings_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_SetPlayerApplicationSettings_Response'>TargetHandler_SetPlayerApplicationSettings_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#TargetAvcError'>TargetAvcError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TargetHandler_GetNotification_Result {#TargetHandler_GetNotification_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_GetNotification_Response'>TargetHandler_GetNotification_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#TargetAvcError'>TargetAvcError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TargetHandler_WatchNotification_Result {#TargetHandler_WatchNotification_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TargetHandler_WatchNotification_Response'>TargetHandler_WatchNotification_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#TargetAvcError'>TargetAvcError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 
 
 
@@ -1747,7 +2437,18 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#108">MAX_CUSTOM_ATTRIBUTES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#49">MAX_NOTIFICATIONS</a></td>
+            <td>
+                    <code>255</code>
+                </td>
+                <td><code>uint8</code></td>
+            <td><p>The maximum number of Notification Event IDs that can be supported by the TG.
+0x0E to 0xFF are reserved for future use.
+Defined by AVRCP 1.6.2 Appendix H.</p>
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#198">MAX_CUSTOM_ATTRIBUTES</a></td>
             <td>
                     <code>127</code>
                 </td>
@@ -1757,7 +2458,7 @@ Defined by AVRCP 1.6.2 Appendix F.</p>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#112">MAX_ATTRIBUTE_VALUES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#202">MAX_ATTRIBUTE_VALUES</a></td>
             <td>
                     <code>255</code>
                 </td>
@@ -1767,7 +2468,7 @@ Defined by AVRCP 1.6.2 Sec 6.5.2</p>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#116">MAX_ATTRIBUTES</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#206">MAX_ATTRIBUTES</a></td>
             <td>
                     <code>131</code>
                 </td>

@@ -98,7 +98,7 @@ not contain BGRA data if <code>success</code> is false.</p>
         </tr></table>
 
 ## Session {#Session}
-*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#13)*
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#53)*
 
 <p>Client use Sessions to interact with a Scenic instance by enqueuing commands
 that create or modify resources.</p>
@@ -250,54 +250,16 @@ frame.</p>
 <p>Clients may only use one of Present/Present2 per Session.
 Switching between both is an error that will result in the Session being
 closed.</p>
-<p>SCHEDULING PRESENTATIONS</p>
-<p>|requested_presentation_time| specifies the time on or after which the
-client would like the enqueued operations to take visible effect
-(light up pixels on the screen), expressed in nanoseconds in the
-<code>CLOCK_MONOTONIC</code> timebase.</p>
-<p>Using a |requested_presentation_time| in the present or past (such as 0)
-schedules enqueued operations to take visible effect as soon as
-possible, during the next frame to be prepared. Requested presentation
-times must be monotonically increasing.</p>
-<p>Using a |requested_presentation_time| in the future schedules the enqueued
-operations to take visible effect as closely as possible to or after
-the stated time, but no earlier.</p>
-<p>Each rendered frame has a target presentation time. This is when Scenic
-aims to have the frame presented to the user. Before rendering a frame,
-the scene manager applies all enqueued operations associated with all
-prior calls to Present2 whose |requested_presentation_time| is on or
-before the frame's target presentation time.</p>
-<p>SYNCHRONIZATION</p>
-<p>Scenic will wait until all of a session's |acquire_fences| are ready
-before it will execute the presented commands.</p>
-<p>|release_fences| is the list of events that will be signalled by Scenic when
-the following Present2 call's |acquire_fences| has been signalled, and
-the updated session state has been fully committed: future frames will be
-rendered using this state, and all frames generated using previous session
-states have been fully-rendered and presented to the display.</p>
+<p>See |Present2Args| documentation above for more detailed information on
+what arguments are passed in and their role.</p>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>requested_presentation_time</code></td>
+            <td><code>args</code></td>
             <td>
-                <code>int64</code>
-            </td>
-        </tr><tr>
-            <td><code>acquire_fences</code></td>
-            <td>
-                <code>vector&lt;event&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>release_fences</code></td>
-            <td>
-                <code>vector&lt;event&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>requested_prediction_span</code></td>
-            <td>
-                <code>int64</code>
+                <code><a class='link' href='#Present2Args'>Present2Args</a></code>
             </td>
         </tr></table>
 
@@ -379,7 +341,7 @@ output in things such as logging and trace events.</p>
 
 
 ## SessionListener {#SessionListener}
-*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#208)*
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#216)*
 
 <p>Listens for events which occur within the session.</p>
 
@@ -454,6 +416,74 @@ Use <code>SetEventMaskCmd</code> to enable event delivery for a resource.</p>
 
 
 
+
+## **TABLES**
+
+### Present2Args {#Present2Args}
+
+
+*Defined in [fuchsia.ui.scenic/session.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/session.fidl#12)*
+
+<p>Arguments passed into Present2(). Note that every argument is mandatory.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>requested_presentation_time</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td><p>|requested_presentation_time| specifies the time on or after which the
+client would like the enqueued operations to take visible effect
+(light up pixels on the screen), expressed in nanoseconds in the
+<code>CLOCK_MONOTONIC</code> timebase.</p>
+<p>Using a |requested_presentation_time| in the present or past (such as 0)
+schedules enqueued operations to take visible effect as soon as
+possible, during the next frame to be prepared. Requested presentation
+times must be monotonically increasing.</p>
+<p>Using a |requested_presentation_time| in the future schedules the enqueued
+operations to take visible effect as closely as possible to or after
+the stated time, but no earlier.</p>
+<p>Each rendered frame has a target presentation time. This is when Scenic
+aims to have the frame presented to the user. Before rendering a frame,
+the scene manager applies all enqueued operations associated with all
+prior calls to Present2 whose |requested_presentation_time| is on or
+before the frame's target presentation time.</p>
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>acquire_fences</code></td>
+            <td>
+                <code>vector&lt;event&gt;</code>
+            </td>
+            <td><p>Scenic will wait until all of a session's |acquire_fences| are ready
+before it will execute the presented commands.</p>
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>release_fences</code></td>
+            <td>
+                <code>vector&lt;event&gt;</code>
+            </td>
+            <td><p>|release_fences| is the list of events that will be signalled by Scenic when
+the following Present2 call's |acquire_fences| has been signalled, and
+the updated session state has been fully committed: future frames will be
+rendered using this state, and all frames generated using previous session
+states have been fully-rendered and presented to the display.</p>
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>requested_prediction_span</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td><p>|requested_prediction_span| is the amount of time into the future Scenic
+will provide predictions for. A span of 0 is guaranteed to provide at
+least one future time.</p>
+</td>
+        </tr></table>
 
 
 

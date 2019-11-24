@@ -47,89 +47,8 @@ switches.</p>
             </td>
         </tr></table>
 
-### RegisterIncomingTargetHandler {#RegisterIncomingTargetHandler}
-
-<p>Sets an implementation of target handler that will vend delegates for each incoming
-remote TG -&gt; local CT connections to handle the commands being sent by the remote TG.
-If no target handler is set, a default handler will be used internally that will
-dispatch to the MediaSession service. This should only be used for PTS qualification testing
-and debugging purposes only.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>handler</code></td>
-            <td>
-                <code><a class='link' href='#TargetHandler'>TargetHandler</a></code>
-            </td>
-        </tr></table>
-
-
-
-## TargetHandler {#TargetHandler}
-*Defined in [fuchsia.bluetooth.avrcp.test/test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp.test/test.fidl#33)*
-
-<p>An implementation of this interface is registered with the TestPeerManager service to handle
-incoming connections.</p>
-
-### OnControllerConnected {#OnControllerConnected}
-
-<p>Called when an incoming target is connected. <code>delegate</code> should be fulfilled with an
-interface that will be used to handle commands from the connected Controller.
-TODO (BT-305): change peer_id to fuchsia.bluetooth.PeerId type after BrEdr profile service
-switches.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>peer_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>delegate</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#TargetDelegate'>TargetDelegate</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-## TargetDelegate {#TargetDelegate}
-*Defined in [fuchsia.bluetooth.avrcp.test/test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp.test/test.fidl#55)*
-
-<p>Returned by an implementer of the TargetHandler interface.
-Handles incoming connection commands by a remote CT device.</p>
-
-### OnCommand {#OnCommand}
-
-<p>Called after Panel key down and up events.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>command</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.bluetooth.avrcp/'>fuchsia.bluetooth.avrcp</a>/<a class='link' href='../fuchsia.bluetooth.avrcp/#AvcPanelCommand'>AvcPanelCommand</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>code</code></td>
-            <td>
-                <code><a class='link' href='#ResponseCode'>ResponseCode</a></code>
-            </td>
-        </tr></table>
-
 ## ControllerExt {#ControllerExt}
-*Defined in [fuchsia.bluetooth.avrcp.test/test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp.test/test.fidl#61)*
+*Defined in [fuchsia.bluetooth.avrcp.test/test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp.test/test.fidl#25)*
 
 <p>Provides additional methods not in <code>Controller</code> that are strictly for testing and debug.</p>
 
@@ -255,7 +174,7 @@ disconnects or does not return a response in set amount of time.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>events_supported</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.avrcp/'>fuchsia.bluetooth.avrcp</a>/<a class='link' href='../fuchsia.bluetooth.avrcp/#TargetEvent'>TargetEvent</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='../fuchsia.bluetooth.avrcp/'>fuchsia.bluetooth.avrcp</a>/<a class='link' href='../fuchsia.bluetooth.avrcp/#NotificationEvent'>NotificationEvent</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -281,48 +200,6 @@ disconnects or does not return a response in set amount of time.</p>
 </table>
 
 
-
-## **ENUMS**
-
-### ResponseCode {#ResponseCode}
-Type: <code>uint32</code>
-
-*Defined in [fuchsia.bluetooth.avrcp.test/test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp.test/test.fidl#43)*
-
-<p>Defined by the AV/C Digital Interface Command Set General Specification and AV/C Panel Subunit
-Specification (http://1394ta.org/specifications/)</p>
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>NOT_IMPLEMENTED</code></td>
-            <td><code>8</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>ACCEPTED</code></td>
-            <td><code>9</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>REJECTED</code></td>
-            <td><code>10</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>IN_TRANSITION</code></td>
-            <td><code>11</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>IMPLEMENTED_STABLE</code></td>
-            <td><code>12</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>CHANGED</code></td>
-            <td><code>13</code></td>
-            <td></td>
-        </tr><tr>
-            <td><code>INTERIM</code></td>
-            <td><code>15</code></td>
-            <td></td>
-        </tr></table>
 
 
 

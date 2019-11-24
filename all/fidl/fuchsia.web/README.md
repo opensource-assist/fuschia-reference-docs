@@ -37,7 +37,7 @@ service.</li>
 
 
 ## Context {#Context}
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#149)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#150)*
 
 <p>Manages browsing state (e.g. LocalStorage, cookies, etc) associated with a set of
 <a class='link' href='#fuchsia.web.Frame'>fuchsia.web.Frame</a>.</p>
@@ -672,8 +672,27 @@ will be closed with <code>ERR_BAD_STATE</code>.</li>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
+### SetMediaSessionId {#SetMediaSessionId}
+
+<p>Sets <code>session_id</code> to pass to the <a class='link' href='#fuchsia.media.AudioConsumer'>fuchsia.media.AudioConsumer</a> when playing audio. The
+specified value is not applied retroactively to audio streams that were started before this
+message is processed. If the caller needs to ensure the value is applied to all streams it
+should call this method before <a class='link' href='../fuchsia.web.Frame/'>fuchsia.web.Frame</a>/<a class='link' href='../fuchsia.web.Frame/#GetNavigationController'>GetNavigationController</a>.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>session_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+
 ## MessagePort {#MessagePort}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#210)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#217)*
 
 <p>Represents one end of an HTML5 MessageChannel. Can be used to send and exchange Messages with
 the peered MessagePort in the Frame's script context. The port is destroyed when either end of
@@ -734,7 +753,7 @@ on the sender's side and bounded by its available resources.</p>
         </tr></table>
 
 ## PopupFrameCreationListener {#PopupFrameCreationListener}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#236)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#243)*
 
 
 ### OnPopupFrameCreated {#OnPopupFrameCreated}
@@ -1226,7 +1245,7 @@ dashes.</p>
 ### CreateContextParams {#CreateContextParams}
 
 
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#91)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#92)*
 
 
 
@@ -1337,7 +1356,7 @@ Example value: <code>{&quot;http://a.com&quot;, &quot;http://b.com&quot;}</code>
 ### CreateFrameParams {#CreateFrameParams}
 
 
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#175)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#176)*
 
 
 
@@ -1420,7 +1439,7 @@ Example value: <code>{&quot;http://a.com&quot;, &quot;http://b.com&quot;}</code>
 ### WebMessage {#WebMessage}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#186)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#193)*
 
 
 
@@ -1457,7 +1476,7 @@ client.</p>
 ### PopupFrameCreationInfo {#PopupFrameCreationInfo}
 
 
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#227)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#234)*
 
 <p>Specifies additional information about a newly created popup frame.</p>
 
@@ -1890,7 +1909,7 @@ per <a href="https://tools.ietf.org/html/rfc7230#section-3.2">RFC 7230 section  
 ## **XUNIONS**
 
 ### OutgoingTransferable {#OutgoingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#199)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#206)*
 
 
 <table>
@@ -1903,7 +1922,7 @@ per <a href="https://tools.ietf.org/html/rfc7230#section-3.2">RFC 7230 section  
         </tr></table>
 
 ### IncomingTransferable {#IncomingTransferable}
-*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#203)*
+*Defined in [fuchsia.web/frame.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/frame.fidl#210)*
 
 
 <table>
@@ -1972,7 +1991,8 @@ Type: <code>uint64</code>
         </tr><tr>
             <td>AUDIO</td>
             <td>2</td>
-            <td><p>Enables audio input and output. Requires <a class='link' href='#fuchsia.media.Audio'>fuchsia.media.Audio</a> service.</p>
+            <td><p>Enables audio input and output. Requires <a class='link' href='#fuchsia.media.Audio'>fuchsia.media.Audio</a> and
+<a class='link' href='#fuchsia.media.AudioConsumer'>fuchsia.media.AudioConsumer</a> service.</p>
 </td>
         </tr><tr>
             <td>VULKAN</td>

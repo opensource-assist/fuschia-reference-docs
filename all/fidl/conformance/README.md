@@ -991,6 +991,24 @@
         </tr>
 </table>
 
+### StructOfReverseOrdinalTable {#StructOfReverseOrdinalTable}
+*Defined in [conformance/tables.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/tables.test.fidl#41)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>table</code></td>
+            <td>
+                <code><a class='link' href='#ReverseOrdinalTable'>ReverseOrdinalTable</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### StructSize16Align8 {#StructSize16Align8}
 *Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#20)*
 
@@ -2476,6 +2494,45 @@
             <td><code>baz</code></td>
             <td>
                 <code>vector&lt;uint8&gt;</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### ReverseOrdinalTable {#ReverseOrdinalTable}
+
+
+*Defined in [conformance/tables.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/tables.test.fidl#34)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>4</td>
+            <td><code>x</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>3</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>y</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>1</td>
+            <td><code>z</code></td>
+            <td>
+                <code>int64</code>
             </td>
             <td></td>
         </tr></table>

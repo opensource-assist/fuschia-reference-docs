@@ -26,8 +26,8 @@ Type: <code>uint32</code>
             <td><code>FROM_ENVIRONMENT</code></td>
             <td><code>2</code></td>
             <td><p>Use a cloud provider available in the incoming namespace, rather than
-initializing and instance within sessionmgr. This can be used by Voila to
-inject a custom cloud provider.</p>
+initializing and instance within sessionmgr. This can be used to inject
+a custom cloud provider.</p>
 </td>
         </tr><tr>
             <td><code>NONE</code></td>
