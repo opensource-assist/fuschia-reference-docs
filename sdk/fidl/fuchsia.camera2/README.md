@@ -552,13 +552,6 @@ be considered requirements for matching streams.</p>
             <td></td>
         </tr><tr>
             <td>5</td>
-            <td><code>serial_number</code></td>
-            <td>
-                <code>string[255]</code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td>6</td>
             <td><code>type</code></td>
             <td>
                 <code><a class='link' href='#DeviceType'>DeviceType</a></code>

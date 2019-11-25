@@ -97,6 +97,26 @@ which case the other end of the channel will have been passed to the driver.</p>
 
 
 
+### Init {#Init}
+
+<p>Ask devhost to call the device init hook.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
 ### Unbind {#Unbind}
 
 <p>Ask devhost to unbind this device. On success, the remote end of this
@@ -209,7 +229,7 @@ fail or complete successfully.</p>
 
 
 ## DevhostController {#DevhostController}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#146)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#149)*
 
 <p>Protocol for controlling a devhost process from the devcoordinator</p>
 
@@ -354,7 +374,7 @@ the resulting composite device.</p>
         </tr></table>
 
 ## Coordinator {#Coordinator}
-*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#185)*
+*Defined in [fuchsia.device.manager/coordinator.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#188)*
 
 <p>Interface for the devices in devhosts to coordinate with the devcoordinator.</p>
 

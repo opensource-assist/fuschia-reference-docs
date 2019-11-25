@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Control {#Control}
-*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#83)*
+*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#82)*
 
 <p>These are the original interfaces, which are being used for compatibility.
 The names are preserved from the ones in camera.h for porting ease.</p>
@@ -105,7 +105,7 @@ the stream.
         </tr></table>
 
 ## Stream {#Stream}
-*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#104)*
+*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#103)*
 
 
 ### Start {#Start}
@@ -348,13 +348,6 @@ If it does succeed, the Stream will have the rights indicated.
             <td></td>
             <td>No default</td>
         </tr><tr>
-            <td><code>serial_number</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
             <td><code>max_stream_count</code></td>
             <td>
                 <code>uint16</code>
@@ -374,7 +367,7 @@ simultaneously.</p>
 </table>
 
 ### Metadata {#Metadata}
-*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#53)*
+*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#52)*
 
 
 
@@ -392,7 +385,7 @@ simultaneously.</p>
 </table>
 
 ### FrameAvailableEvent {#FrameAvailableEvent}
-*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#59)*
+*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#58)*
 
 
 
@@ -428,7 +421,7 @@ or an error occurred.</p>
 </table>
 
 ### FrameRate {#FrameRate}
-*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#69)*
+*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#68)*
 
 
 
@@ -454,7 +447,7 @@ or an error occurred.</p>
 </table>
 
 ### VideoFormat {#VideoFormat}
-*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#75)*
+*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#74)*
 
 
 
@@ -555,7 +548,7 @@ format.format should match buffer_info.format.</p>
 ### FrameStatus {#FrameStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#42)*
+*Defined in [fuchsia.camera/camera.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#41)*
 
 <p>Status to be set when a frame is signalled available.</p>
 
