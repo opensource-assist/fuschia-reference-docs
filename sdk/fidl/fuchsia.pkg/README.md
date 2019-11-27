@@ -580,60 +580,6 @@ successfully cached.</li>
             </td>
         </tr></table>
 
-## SystemBlobAdmin {#SystemBlobAdmin}
-*Defined in [fuchsia.pkg/system_blob_admin.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/system_blob_admin.fidl#10)*
-
-<p>Administrates the critical system blobs on the system.</p>
-
-### ReleaseRetainedBlobs {#ReleaseRetainedBlobs}
-
-<p>Allows blobs from old system versions to be garbage collected. The current system blobs
-will not be collected.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-
-### RetainBlobs {#RetainBlobs}
-
-<p>Adds the blobs listed in the <code>retention_index</code> blob to the retention list. This should be
-called during a system upgrade with the new system blob in order to make sure they are not
-garbage collected before the upgrade completes.</p>
-<p>Arguments:</p>
-<ul>
-<li><code>retention_index</code> is the blob id for a list of blobs to retain.</li>
-</ul>
-<p>Return Values:</p>
-<ul>
-<li><code>ZX_OK</code> if the blobs were successfully retained.</li>
-<li><code>ZX_ERR_IO</code> if there is some other unspecified error during I/O.</li>
-<li><code>ZX_ERR_NOT_FOUND</code> if the <code>retention_index</code> could not be found on the local system.</li>
-</ul>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>retention_index</code></td>
-            <td>
-                <code><a class='link' href='#BlobId'>BlobId</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr></table>
-
 
 
 ## **STRUCTS**

@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## AccountHandlerControl {#AccountHandlerControl}
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#78)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#81)*
 
 <p>The control channel for an AccountHandler component.</p>
 <p>This interface is intended only for use by the AccountManager component that
@@ -73,7 +73,12 @@ terminate.</li>
 ### CreateAccount {#CreateAccount}
 
 <p>Creates a completely new Fuchsia account.</p>
-<p><code>id</code> The new account's local identifier.</p>
+<p><code>account_id</code> The new account's local identifier.
+<code>auth_mechanism_id</code> An <code>AuthMechanismId</code> for a storage
+unlock-capable authentication mechanism. If
+provided, a single enrollment of that
+mechanism will be created for storage
+unlock.</p>
 <p>Fails with FAILED_PRECONDITION if the AccountHandler is not in the <code>Uninitialized</code>
 state.</p>
 
@@ -81,9 +86,14 @@ state.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>id</code></td>
+            <td><code>account_id</code></td>
             <td>
                 <code>uint64</code>
+            </td>
+        </tr><tr>
+            <td><code>auth_mechanism_id</code></td>
+            <td>
+                <code>string[2083]?</code>
             </td>
         </tr></table>
 
@@ -418,7 +428,7 @@ component if it hasn't already exited.</p>
 
 
 ## AccountHandlerContext {#AccountHandlerContext}
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#252)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#261)*
 
 <p>An interface that supplies the account and authentication services that
 an AccountHandler needs to perform its role in the system.</p>
@@ -427,8 +437,9 @@ component that launches it (i.e. the AccountManager).</p>
 
 ### GetAuthProvider {#GetAuthProvider}
 
-<p>Connects an interface to a particular AuthProvider, launching it if
-necessary.</p>
+<p>Connects to the <code>AuthProvider</code> implementation for a particular service
+provider, launching it if necessary.  This method will soon be removed
+along with the <code>AuthProvider</code> protocol.</p>
 <p><code>auth_provider_type</code> An OAuth identity provider matching a configuration
 set in an AuthProviderConfig.auth_provider_type
 <code>auth_provider</code> The server end of an <code>AuthProvider</code> channel</p>
@@ -456,6 +467,110 @@ set in an AuthProviderConfig.auth_provider_type
             <td><code>result</code></td>
             <td>
                 <code><a class='link' href='#AccountHandlerContext_GetAuthProvider_Result'>AccountHandlerContext_GetAuthProvider_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetOauth {#GetOauth}
+
+<p>Connects to the <code>Oauth</code> implementation for a particular service provider,
+launching it if necessary.</p>
+<p><code>auth_provider_type</code> An OAuth identity provider matching a configuration
+set in an AuthProviderConfig.auth_provider_type
+<code>oauth</code> The server end of an <code>Oauth</code> channel</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>auth_provider_type</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>oauth</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.identity.external/'>fuchsia.identity.external</a>/<a class='link' href='../fuchsia.identity.external/#Oauth'>Oauth</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerContext_GetOauth_Result'>AccountHandlerContext_GetOauth_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetOpenIdConnect {#GetOpenIdConnect}
+
+<p>Connects to the <code>OpenIdConnect</code> implementation for a particular service
+provider, launching it if necessary.</p>
+<p><code>auth_provider_type</code> An OpenID Connect identity provider matching a
+configuration set in an
+AuthProviderConfig.auth_provider_type
+<code>open_id_connect</code> The server end of an <code>OpenIDConnect</code> channel</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>auth_provider_type</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>open_id_connect</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.identity.external/'>fuchsia.identity.external</a>/<a class='link' href='../fuchsia.identity.external/#OpenIdConnect'>OpenIdConnect</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerContext_GetOpenIdConnect_Result'>AccountHandlerContext_GetOpenIdConnect_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetOauthOpenIdConnect {#GetOauthOpenIdConnect}
+
+<p>Connects to the <code>OauthOpenIdConnect</code> implementation for a particular
+service provider, launching it if necessary.</p>
+<p><code>auth_provider_type</code> An OpenID Connect identity provider matching a
+configuration set in an
+AuthProviderConfig.auth_provider_type
+<code>oauth_open_id_connect</code> The server end of an <code>OauthOpenIDConnect</code> channel</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>auth_provider_type</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>oauth_open_id_connect</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.identity.external/'>fuchsia.identity.external</a>/<a class='link' href='../fuchsia.identity.external/#OauthOpenIdConnect'>OauthOpenIdConnect</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerContext_GetOauthOpenIdConnect_Result'>AccountHandlerContext_GetOauthOpenIdConnect_Result</a></code>
             </td>
         </tr></table>
 
@@ -605,6 +720,39 @@ set in an AuthProviderConfig.auth_provider_type
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
+### AccountHandlerContext_GetOauth_Response {#AccountHandlerContext_GetOauth_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### AccountHandlerContext_GetOpenIdConnect_Response {#AccountHandlerContext_GetOpenIdConnect_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### AccountHandlerContext_GetOauthOpenIdConnect_Response {#AccountHandlerContext_GetOauthOpenIdConnect_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 
 
 
@@ -614,7 +762,7 @@ set in an AuthProviderConfig.auth_provider_type
 ### AccountData {#AccountData}
 
 
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#265)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#308)*
 
 <p>Contents of an account, used for serialization during account transfer.</p>
 
@@ -844,6 +992,63 @@ set in an AuthProviderConfig.auth_provider_type
             <td></td>
         </tr></table>
 
+### AccountHandlerContext_GetOauth_Result {#AccountHandlerContext_GetOauth_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerContext_GetOauth_Response'>AccountHandlerContext_GetOauth_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.identity.account/'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### AccountHandlerContext_GetOpenIdConnect_Result {#AccountHandlerContext_GetOpenIdConnect_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerContext_GetOpenIdConnect_Response'>AccountHandlerContext_GetOpenIdConnect_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.identity.account/'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### AccountHandlerContext_GetOauthOpenIdConnect_Result {#AccountHandlerContext_GetOauthOpenIdConnect_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AccountHandlerContext_GetOauthOpenIdConnect_Response'>AccountHandlerContext_GetOauthOpenIdConnect_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.identity.account/'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 
 
 
@@ -854,7 +1059,7 @@ set in an AuthProviderConfig.auth_provider_type
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#11">HASH_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#12">HASH_SIZE</a></td>
             <td>
                     <code>32</code>
                 </td>
@@ -862,7 +1067,7 @@ set in an AuthProviderConfig.auth_provider_type
             <td></td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#12">HASH_SALT_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#13">HASH_SALT_SIZE</a></td>
             <td>
                     <code>32</code>
                 </td>
