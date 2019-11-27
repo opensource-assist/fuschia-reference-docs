@@ -351,14 +351,14 @@ toc:
   path: /reference/fidl/fuchsia.ledger
 - title: fuchsia.ledger.cloud
   path: /reference/fidl/fuchsia.ledger.cloud
-- title: fuchsia.ledger.cloud.firestore
-  path: /reference/fidl/fuchsia.ledger.cloud.firestore
 - title: fuchsia.ledger.cloud.test
   path: /reference/fidl/fuchsia.ledger.cloud.test
 - title: fuchsia.ledger.internal
   path: /reference/fidl/fuchsia.ledger.internal
 - title: fuchsia.ledger.syncabletest
   path: /reference/fidl/fuchsia.ledger.syncabletest
+- title: fuchsia.ledger.testing
+  path: /reference/fidl/fuchsia.ledger.testing
 - title: fuchsia.location.namedplace
   path: /reference/fidl/fuchsia.location.namedplace
 - title: fuchsia.logger

@@ -68,7 +68,7 @@ Type: <code>uint32</code>
 ### SimpleTable {#SimpleTable}
 
 
-*Defined in [fuchsia.example.fostr/fostr.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fostr/test/fuchsia.example.fostr/fostr.test.fidl#30)*
+*Defined in [fuchsia.example.fostr/fostr.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fostr/test/fuchsia.example.fostr/fostr.test.fidl#32)*
 
 
 
@@ -109,7 +109,7 @@ Type: <code>uint32</code>
 ## **UNIONS**
 
 ### MyUnion {#MyUnion}
-*Defined in [fuchsia.example.fostr/fostr.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fostr/test/fuchsia.example.fostr/fostr.test.fidl#25)*
+*Defined in [fuchsia.example.fostr/fostr.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fostr/test/fuchsia.example.fostr/fostr.test.fidl#26)*
 
 
 <table>
@@ -123,6 +123,12 @@ Type: <code>uint32</code>
             <td><code>b</code></td>
             <td>
                 <code>bool</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code></code></td>
+            <td>
+                <code></code>
             </td>
             <td></td>
         </tr></table>
@@ -146,6 +152,12 @@ Type: <code>uint32</code>
             <td><code>b</code></td>
             <td>
                 <code>bool</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code></code></td>
+            <td>
+                <code></code>
             </td>
             <td></td>
         </tr></table>

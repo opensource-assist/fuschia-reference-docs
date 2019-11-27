@@ -5,16 +5,18 @@
 
 ## **PROTOCOLS**
 
-## Breakpoints {#Breakpoints}
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#63)*
+## BreakpointSystem {#BreakpointSystem}
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#62)*
 
-<p>A protocol used in testing by a component instance to block the
-component manager until specific events occur.</p>
+<p>Registers breakpoints in component manager.</p>
 
 ### Register {#Register}
 
-<p>Register breakpoints for the given EventTypes.
-Must be called exactly once before Expect or Resume.</p>
+<p>Registers breakpoints for the given EventTypes.
+Returns a BreakpointInvocationReceiver which can be used
+to expect the registered types.</p>
+<p>If component manager is in debug mode, the first call to this
+method implicitly starts component manager's execution.</p>
 
 #### Request
 <table>
@@ -24,6 +26,11 @@ Must be called exactly once before Expect or Resume.</p>
             <td>
                 <code>vector&lt;<a class='link' href='#EventType'>EventType</a>&gt;[3]</code>
             </td>
+        </tr><tr>
+            <td><code>server_end</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#InvocationReceiver'>InvocationReceiver</a>&gt;</code>
+            </td>
         </tr></table>
 
 
@@ -32,12 +39,17 @@ Must be called exactly once before Expect or Resume.</p>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
+## InvocationReceiver {#InvocationReceiver}
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#73)*
+
+<p>Receives invocations for registered events in component manager.</p>
+
 ### Expect {#Expect}
 
 <p>Blocks until the next invocation of a breakpoint occurs and verifies
-that the EventType and component list are as expected.</p>
+that the EventType and component are as expected.</p>
 <p>Note: The component manager is blocked after this call and will not be
-allowed to proceed until resumed explicitly by calling Resume().</p>
+allowed to proceed until resumed explicitly via the Invocation object.</p>
 
 #### Request
 <table>
@@ -52,6 +64,39 @@ allowed to proceed until resumed explicitly by calling Resume().</p>
             <td>
                 <code>vector&lt;string&gt;[10]</code>
             </td>
+        </tr><tr>
+            <td><code>server_end</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#Invocation'>Invocation</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+### ExpectType {#ExpectType}
+
+<p>Blocks until the next invocation of a breakpoint occurs and verifies
+that the EventType is as expected.</p>
+<p>Note: The component manager is blocked after this call and will not be
+allowed to proceed until resumed explicitly via the Invocation object.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>event_type</code></td>
+            <td>
+                <code><a class='link' href='#EventType'>EventType</a></code>
+            </td>
+        </tr><tr>
+            <td><code>server_end</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#Invocation'>Invocation</a>&gt;</code>
+            </td>
         </tr></table>
 
 
@@ -65,7 +110,7 @@ allowed to proceed until resumed explicitly by calling Resume().</p>
 <p>Blocks until a UseCapability invocation matching the specified component
 and capability path. All other invocations are ignored.</p>
 <p>Note: The component manager is blocked after this call and will not be
-allowed to proceed until resumed explicitly by calling Resume().</p>
+allowed to proceed until resumed explicitly via the Invocation object.</p>
 
 #### Request
 <table>
@@ -80,6 +125,11 @@ allowed to proceed until resumed explicitly by calling Resume().</p>
             <td>
                 <code>string[50]</code>
             </td>
+        </tr><tr>
+            <td><code>server_end</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#Invocation'>Invocation</a>&gt;</code>
+            </td>
         </tr></table>
 
 
@@ -88,9 +138,14 @@ allowed to proceed until resumed explicitly by calling Resume().</p>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
+## Invocation {#Invocation}
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#97)*
+
+<p>A single invocation of a breakpoint in component manager.</p>
+
 ### Resume {#Resume}
 
-<p>Resume the component manager from the last expected invocation.</p>
+<p>Resume/unblock the component manager from this invocation.</p>
 
 #### Request
 <table>

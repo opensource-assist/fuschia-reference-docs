@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## TreeNameIterator {#TreeNameIterator}
-*Defined in [fuchsia.inspect/tree.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/tree.fidl#39)*
+*Defined in [fuchsia.inspect/tree.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/tree.fidl#23)*
 
 <p>Iterator protocol for listing the names of children of a particular Tree.</p>
 
@@ -33,13 +33,27 @@ Implementors may eagerly close the channel after sending the last batch.</p>
         </tr></table>
 
 ## Tree {#Tree}
-*Defined in [fuchsia.inspect/tree.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/tree.fidl#49)*
+*Defined in [fuchsia.inspect/tree.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/tree.fidl#43)*
 
 <p>The Tree protocol represents a hierarchy of Inspect VMOs.</p>
+<p>Link values stored in an Inspect file contain references to new
+named files that contain a continuation of the data for the overall
+hierarchy. Protocol Tree allows clients to request these named files so
+long as the hosting component is still alive.</p>
+<p>Connecting to a particular tree keeps the content for that Tree resident
+in memory. Clients are recommended to traverse the trees in depth-first
+order to reduce memory usage. Serving components are free to deny
+connections to avoid unbounded memory usage.</p>
 
 ### GetContent {#GetContent}
 
 <p>Get the content for the Inspect VMO backing this tree.</p>
+<p>So long as the Tree connection is still maintained, the contents
+of the tree are guaranteed to still be live. Once the connection is
+lost, the serving component is free to clear the contents of returned
+shared buffers.</p>
+<p>Serving components may return different buffers to GetContent
+requests for the same Tree.</p>
 
 #### Request
 <table>
@@ -57,9 +71,11 @@ Implementors may eagerly close the channel after sending the last batch.</p>
             </td>
         </tr></table>
 
-### ListChildrenNames {#ListChildrenNames}
+### ListChildNames {#ListChildNames}
 
 <p>Iterate over the names of Trees that are children of this Tree.</p>
+<p>The underlying list of children may change in between calls to
+ListChildNames and OpenChild.</p>
 
 #### Request
 <table>
@@ -99,32 +115,6 @@ Implementors may eagerly close the channel after sending the last batch.</p>
 
 
 
-## **ENUMS**
-
-### TreeState {#TreeState}
-Type: <code>uint32</code>
-
-*Defined in [fuchsia.inspect/tree.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/tree.fidl#27)*
-
-<p>The state of the buffer returned in a TreeContent.</p>
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>IN_USE</code></td>
-            <td><code>1</code></td>
-            <td><p>The VMO backing the buffer is still in use. Clients must interpret
-the whole buffer accoring to the Inspect format reading algorithm.</p>
-</td>
-        </tr><tr>
-            <td><code>COMPLETE</code></td>
-            <td><code>2</code></td>
-            <td><p>The VMO backing the buffer is complete, and will not be modified further.
-Clients may read the buffer without performing the whole
-consistency algorithm, but they should still be wary of the input.</p>
-</td>
-        </tr></table>
-
 
 
 ## **TABLES**
@@ -146,15 +136,6 @@ consistency algorithm, but they should still be wary of the input.</p>
                 <code><a class='link' href='../fuchsia.mem/'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/#Buffer'>Buffer</a></code>
             </td>
             <td><p>Buffer containing the bytes of a tree in Inspect format.</p>
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>state</code></td>
-            <td>
-                <code><a class='link' href='#TreeState'>TreeState</a></code>
-            </td>
-            <td><p>Describes the current state of the buffer, which informs the
-reader how to interpet it (see below).</p>
 </td>
         </tr></table>
 

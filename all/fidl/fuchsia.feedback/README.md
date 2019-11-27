@@ -250,6 +250,14 @@ returned in other encodings if need arises.</p>
             <td><p>The name of the program that crashed, e.g., the process or component's name.</p>
 </td>
         </tr><tr>
+            <td>6</td>
+            <td><code>program_uptime</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td><p>How long the program was running before it crashed.</p>
+</td>
+        </tr><tr>
             <td>2</td>
             <td><code>specific_report</code></td>
             <td>
@@ -292,7 +300,7 @@ server causing a crash in a high-level UI widget.</p>
 ### GenericCrashReport {#GenericCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#61)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#64)*
 
 <p>Represents a generic crash report.</p>
 
@@ -316,7 +324,7 @@ asked the same request.</p>
 ### NativeCrashReport {#NativeCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#72)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#75)*
 
 <p>Represents a crash report for a native exception out of which the client has built a minidump.</p>
 
@@ -336,7 +344,7 @@ asked the same request.</p>
 ### RuntimeCrashReport {#RuntimeCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#78)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#81)*
 
 <p>Represents a crash report for a runtime exception, applicable to most languages.</p>
 
@@ -456,7 +464,7 @@ could be a ZIP archive bundling a vector of Attachment objects.</p>
 ## **XUNIONS**
 
 ### SpecificCrashReport {#SpecificCrashReport}
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#49)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#52)*
 
 <p>Represents a specific crash report.</p>
 <p>Add a new member when the server needs to special case how it handles certain annotations and

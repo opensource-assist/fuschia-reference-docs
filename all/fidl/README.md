@@ -1,5 +1,8 @@
 [TOC]
 
+<devsite-filter>
+<input type="text" placeholder="Type a keyword here to find a FIDL">
+
 <table>
 <tr><th>Name</th><th>Description</th></tr>
 <tr>
@@ -708,10 +711,6 @@
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.ledger.cloud.firestore/index">fuchsia.ledger.cloud.firestore</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.ledger.cloud.test/index">fuchsia.ledger.cloud.test</a></td>
     <td></td>
 </tr>
@@ -721,6 +720,10 @@
 </tr>
 <tr>
     <td><a href="fuchsia.ledger.syncabletest/index">fuchsia.ledger.syncabletest</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.ledger.testing/index">fuchsia.ledger.testing</a></td>
     <td></td>
 </tr>
 <tr>
@@ -1373,5 +1376,7 @@
     <td></td>
 </tr>
 </table>
+
+</devsite-filter>
 
 Generated with fidldoc v0.0.4

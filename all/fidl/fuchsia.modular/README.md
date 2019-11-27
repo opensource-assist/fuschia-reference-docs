@@ -351,28 +351,11 @@ shell with all of the user's stories.</p>
         </tr></table>
 
 ## ComponentContext {#ComponentContext}
-*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#14)*
+*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#13)*
 
 <p>Provided to all component instances in their respective initialization
 information by the framework. For example, a Module gets it from its
 ModuleContext and an Agent gets it from its AgentContext.</p>
-
-### GetLedger {#GetLedger}
-
-<p>Gets the Ledger associated with this component. This ledger instance is
-unique to this component (nb. not the component instance) under this user.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.ledger/'>fuchsia.ledger</a>/<a class='link' href='../fuchsia.ledger/#Ledger'>Ledger</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
 
 ### ConnectToAgent {#ConnectToAgent}
 
@@ -4108,7 +4091,7 @@ If parent is dismissed, child is dismissed as well.</p>
 ### AgentServiceRequest {#AgentServiceRequest}
 
 
-*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#45)*
+*Defined in [fuchsia.modular/component_context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/component/component_context.fidl#40)*
 
 <p>Used by ComponentContext.ConnectToAgentService</p>
 

@@ -57,6 +57,30 @@
             </td>
         </tr></table>
 
+### GetBoardRevision {#GetBoardRevision}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr><tr>
+            <td><code>revision</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+        </tr></table>
+
 ### GetInterruptControllerInfo {#GetInterruptControllerInfo}
 
 

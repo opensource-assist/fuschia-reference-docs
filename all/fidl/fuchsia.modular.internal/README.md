@@ -109,11 +109,6 @@ tries to access won't be available.</p>
                 <code>bool</code>
             </td>
         </tr><tr>
-            <td><code>ledger_token_manager</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.auth/'>fuchsia.auth</a>/<a class='link' href='../fuchsia.auth/#TokenManager'>TokenManager</a>?</code>
-            </td>
-        </tr><tr>
             <td><code>agent_token_manager</code></td>
             <td>
                 <code><a class='link' href='../fuchsia.auth/'>fuchsia.auth</a>/<a class='link' href='../fuchsia.auth/#TokenManager'>TokenManager</a>?</code>
@@ -152,7 +147,7 @@ tries to access won't be available.</p>
     </table>
 
 ## SessionContext {#SessionContext}
-*Defined in [fuchsia.modular.internal/sessionmgr.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.internal/sessionmgr.fidl#40)*
+*Defined in [fuchsia.modular.internal/sessionmgr.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.internal/sessionmgr.fidl#39)*
 
 <p>This interface is provided by basemgr to <code>Sessionmgr</code>.</p>
 

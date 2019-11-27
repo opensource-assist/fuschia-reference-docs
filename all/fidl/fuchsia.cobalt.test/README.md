@@ -14,10 +14,10 @@ clients of cobalt are logging events as expected.</p>
 ### WatchLogs {#WatchLogs}
 
 <p>Returns the <em>first</em> N events that were logged for the logger with the
-given <code>project_name</code> and a <code>more</code> flag indicating whether there were
+given <code>project_id</code> and a <code>more</code> flag indicating whether there were
 more than N events logged. There is no way to retrieve events logged
 after the first N events.</p>
-<p>Returns an error if a Logger for the given <code>project_name</code> has not been
+<p>Returns an error if a Logger for the given <code>project_id</code> has not been
 created through a request to the LoggerFactory protocol.</p>
 <p>Repeated calls to WatchLogs for a given LogMethod will block until new
 events are logged with that method, enabling tests to synchronize
@@ -27,9 +27,9 @@ without sleeps or timeouts.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>project_name</code></td>
+            <td><code>project_id</code></td>
             <td>
-                <code>string[64]</code>
+                <code>uint32</code>
             </td>
         </tr><tr>
             <td><code>method</code></td>
@@ -52,18 +52,18 @@ without sleeps or timeouts.</p>
 ### ResetLogger {#ResetLogger}
 
 <p>Clear all logged events by logging <code>method</code> for the logger with the
-given <code>project_name</code>.</p>
-<p>This is a no-op if a logger for the given <code>project_name</code> does not exist.
-Notably, it does <em>not</em> create a new logger with <code>project_name</code> if one
+given <code>project_id</code>.</p>
+<p>This is a no-op if a logger for the given <code>project_id</code> does not exist.
+Notably, it does <em>not</em> create a new logger with <code>project_id</code> if one
 does not already exist.</p>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>project_name</code></td>
+            <td><code>project_id</code></td>
             <td>
-                <code>string[64]</code>
+                <code>uint32</code>
             </td>
         </tr><tr>
             <td><code>method</code></td>
