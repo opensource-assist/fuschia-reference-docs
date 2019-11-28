@@ -76,7 +76,8 @@ account given the provided scenario.</p>
 ### GetAccount {#GetAccount}
 
 <p>Connects a channel to read properties of and perform operations on
-one account.</p>
+one account. If the account is locked, an interactive authentication
+attempt will be invoked as part of this call.</p>
 <p><code>id</code> The account's identifier as returned by GetAccountIds()
 <code>context_provider</code> An <code>AuthenticationContextProvider</code> capable of
 supplying UI contexts used for interactive
@@ -192,14 +193,20 @@ of the credentials may have been deleted.</p>
 to a service provider (such as Google). If the service provider account
 is not already a recovery account for any Fuchsia account, a new Fuchsia
 account will be created with its recovery account set to the service
-provider account.</p>
+provider account. If a storage unlock-capable authentication mechanism
+is provided, a single enrollment will be created of that mecahnism.</p>
 <p><code>auth_context_provider</code> An <code>AuthenticationContextProvider</code> capable of
 supplying UI contexts used for interactive
 authentication
 <code>auth_provider_type</code> A unique identifier for an installed <code>AuthProvider</code>
 that should be used to authenticate with the
 service provider
-<code>lifetime</code> The lifetime of the account</p>
+<code>lifetime</code> The lifetime of the account
+<code>auth_mechanism_id</code> An <code>AuthMechanismId</code> for a storage
+unlock-capable authentication mechanism. If
+provided, a single enrollment of that
+mechanism will be created for storage
+unlock.</p>
 <p>Returns: <code>account_id</code> The identifier of the newly added account</p>
 
 #### Request
@@ -220,6 +227,11 @@ service provider
             <td>
                 <code><a class='link' href='#Lifetime'>Lifetime</a></code>
             </td>
+        </tr><tr>
+            <td><code>auth_mechanism_id</code></td>
+            <td>
+                <code>string[2083]?</code>
+            </td>
         </tr></table>
 
 
@@ -235,8 +247,15 @@ service provider
 
 ### ProvisionNewAccount {#ProvisionNewAccount}
 
-<p>Adds a new, initially empty, Fuchsia account to the current device.</p>
-<p><code>lifetime</code> The lifetime of the account</p>
+<p>Adds a new, initially empty, Fuchsia account to the current device. If a
+storage unlock-capable authentication mechanism is provided, a single
+enrollment will be created of that mecahnism.</p>
+<p><code>lifetime</code> The lifetime of the account
+<code>auth_mechanism_id</code> An <code>AuthMechanismId</code> for a storage
+unlock-capable authentication mechanism. If
+provided, a single enrollment of that
+mechanism will be created for storage
+unlock.</p>
 <p>Returns: <code>account_id</code> The identifier of the newly added account</p>
 
 #### Request
@@ -246,6 +265,11 @@ service provider
             <td><code>lifetime</code></td>
             <td>
                 <code><a class='link' href='#Lifetime'>Lifetime</a></code>
+            </td>
+        </tr><tr>
+            <td><code>auth_mechanism_id</code></td>
+            <td>
+                <code>string[2083]?</code>
             </td>
         </tr></table>
 
@@ -260,8 +284,28 @@ service provider
             </td>
         </tr></table>
 
+### GetAuthenticationMechanisms {#GetAuthenticationMechanisms}
+
+<p>Returns all available authentication mechanisms.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#AccountManager_GetAuthenticationMechanisms_Result'>AccountManager_GetAuthenticationMechanisms_Result</a></code>
+            </td>
+        </tr></table>
+
 ## AccountListener {#AccountListener}
-*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#157)*
+*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#180)*
 
 <p>A protocol to receive events when the set of accounts on a device or the
 authentication states of these accounts change.</p>
@@ -757,8 +801,105 @@ provisioned on the current device using TokenManager.</p>
             </td>
         </tr></table>
 
+### GetAuthMechanismEnrollments {#GetAuthMechanismEnrollments}
+
+<p>Returns all authentication mechanism enrollments.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Account_GetAuthMechanismEnrollments_Result'>Account_GetAuthMechanismEnrollments_Result</a></code>
+            </td>
+        </tr></table>
+
+### CreateAuthMechanismEnrollment {#CreateAuthMechanismEnrollment}
+
+<p>Create a new enrollment of the provided authentication mechanism,
+and add it to the account.</p>
+<p><code>auth_mechanism_id</code> The identifier of the authentication mechanism to
+use for the enrollment.</p>
+<p>Returns: The <code>AuthMechanismEnrollmentId</code> of the created enrollment.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>auth_mechanism_id</code></td>
+            <td>
+                <code>string[2083]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Account_CreateAuthMechanismEnrollment_Result'>Account_CreateAuthMechanismEnrollment_Result</a></code>
+            </td>
+        </tr></table>
+
+### RemoveAuthMechanismEnrollment {#RemoveAuthMechanismEnrollment}
+
+<p>Remove an authentication mechanism enrollment for the account.</p>
+<p><code>enrollment_id</code> The id of the enrollment to remove.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>enrollment_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Account_RemoveAuthMechanismEnrollment_Result'>Account_RemoveAuthMechanismEnrollment_Result</a></code>
+            </td>
+        </tr></table>
+
+### Lock {#Lock}
+
+<p>Lock an account. After a successful call, all Account and Persona
+channels for this account will be terminated. If storage unlock is not
+enabled for the account, a FailedPrecondition error is returned.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Account_Lock_Result'>Account_Lock_Result</a></code>
+            </td>
+        </tr></table>
+
 ## Persona {#Persona}
-*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#130)*
+*Defined in [fuchsia.identity.account/auth_target.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/auth_target.fidl#164)*
 
 <p>A protocol that exposes basic information about a Fuchsia persona and access
 to the authentication tokens that are visible through it.</p>
@@ -1026,8 +1167,26 @@ their own keys.
         </tr>
 </table>
 
+### AccountManager_GetAuthenticationMechanisms_Response {#AccountManager_GetAuthenticationMechanisms_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>auth_mechanisms</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#AuthMechanismProperties'>AuthMechanismProperties</a>&gt;[16]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### AccountAuthState {#AccountAuthState}
-*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#105)*
+*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#128)*
 
 
 
@@ -1055,7 +1214,7 @@ their own keys.
 </table>
 
 ### InitialAccountState {#InitialAccountState}
-*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#114)*
+*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#137)*
 
 
 
@@ -1085,7 +1244,7 @@ created.</p>
 </table>
 
 ### AccountListenerOptions {#AccountListenerOptions}
-*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#126)*
+*Defined in [fuchsia.identity.account/account_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/account_manager.fidl#149)*
 
 
 
@@ -1351,6 +1510,64 @@ be reported.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
+### Account_GetAuthMechanismEnrollments_Response {#Account_GetAuthMechanismEnrollments_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>enrollments</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#AuthMechanismEnrollmentMetadata'>AuthMechanismEnrollmentMetadata</a>&gt;[32]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Account_CreateAuthMechanismEnrollment_Response {#Account_CreateAuthMechanismEnrollment_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>enrollment_id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Account_RemoveAuthMechanismEnrollment_Response {#Account_RemoveAuthMechanismEnrollment_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### Account_Lock_Response {#Account_Lock_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### Persona_GetTokenManager_Response {#Persona_GetTokenManager_Response}
 *generated*
 
@@ -1371,6 +1588,63 @@ be reported.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### AuthMechanismProperties {#AuthMechanismProperties}
+*Defined in [fuchsia.identity.account/common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#118)*
+
+
+
+<p>Properties describing the authentication mechanism.</p>
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>id</code></td>
+            <td>
+                <code>string[2083]</code>
+            </td>
+            <td><p>A unique identifier for the authentication mechanism.</p>
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>storage_unlock</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td><p>If true, the authentication mechanism can be used for storage unlock.</p>
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### AuthMechanismEnrollmentMetadata {#AuthMechanismEnrollmentMetadata}
+*Defined in [fuchsia.identity.account/common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#133)*
+
+
+
+<p>Metadata about an enrollment, such as a human readable name.</p>
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>id</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td><p>A unique identifier associated with the enrollment.</p>
+</td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>name</code></td>
+            <td>
+                <code>string[128]</code>
+            </td>
+            <td><p>A short text describing the enrollment, e.g. &quot;right thumb&quot; for a
+fingerprint authenticator.</p>
+</td>
+            <td>No default</td>
+        </tr>
 </table>
 
 
@@ -1514,7 +1788,7 @@ be said to be actively using it.</p>
 ### Lifetime {#Lifetime}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.identity.account/common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#27)*
+*Defined in [fuchsia.identity.account/common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#36)*
 
 <p>Provides an upper bound to how long a Fuchsia account can live on the
 current device.</p>
@@ -1537,7 +1811,7 @@ was created in.</p>
 ### Error {#Error}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.identity.account/common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#56)*
+*Defined in [fuchsia.identity.account/common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#65)*
 
 <p>Specifies the reason that a fuchsia.identity.account method failed.</p>
 
@@ -1722,6 +1996,25 @@ has been corrected before the retry.</p>
             <td></td>
         </tr></table>
 
+### AccountManager_GetAuthenticationMechanisms_Result {#AccountManager_GetAuthenticationMechanisms_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#AccountManager_GetAuthenticationMechanisms_Response'>AccountManager_GetAuthenticationMechanisms_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### AuthTarget_GetAuthState_Result {#AuthTarget_GetAuthState_Result}
 *generated*
 
@@ -1836,6 +2129,82 @@ has been corrected before the retry.</p>
             <td></td>
         </tr></table>
 
+### Account_GetAuthMechanismEnrollments_Result {#Account_GetAuthMechanismEnrollments_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Account_GetAuthMechanismEnrollments_Response'>Account_GetAuthMechanismEnrollments_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Account_CreateAuthMechanismEnrollment_Result {#Account_CreateAuthMechanismEnrollment_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Account_CreateAuthMechanismEnrollment_Response'>Account_CreateAuthMechanismEnrollment_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Account_RemoveAuthMechanismEnrollment_Result {#Account_RemoveAuthMechanismEnrollment_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Account_RemoveAuthMechanismEnrollment_Response'>Account_RemoveAuthMechanismEnrollment_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Account_Lock_Result {#Account_Lock_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Account_Lock_Response'>Account_Lock_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### Persona_GetTokenManager_Result {#Persona_GetTokenManager_Result}
 *generated*
 
@@ -1884,7 +2253,7 @@ has been corrected before the retry.</p>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#9">MAX_ACCOUNTS_PER_DEVICE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#10">MAX_ACCOUNTS_PER_DEVICE</a></td>
             <td>
                     <code>128</code>
                 </td>
@@ -1894,7 +2263,7 @@ provisioned on a device. This number may be increased in the future.</p>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#13">MAX_PERSONAE_PER_ACCOUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#14">MAX_PERSONAE_PER_ACCOUNT</a></td>
             <td>
                     <code>128</code>
                 </td>
@@ -1904,7 +2273,7 @@ Fuchsia account. This number may be increased in the future.</p>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#17">MAX_ID_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#18">MAX_ID_SIZE</a></td>
             <td>
                     <code>256</code>
                 </td>
@@ -1914,7 +2283,7 @@ in bytes.</p>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#20">MAX_NAME_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#21">MAX_NAME_SIZE</a></td>
             <td>
                     <code>128</code>
                 </td>
@@ -1923,12 +2292,32 @@ in bytes.</p>
 </td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#23">MAX_AUTH_PROVIDER_TYPE_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#24">MAX_AUTH_PROVIDER_TYPE_SIZE</a></td>
             <td>
                     <code>128</code>
                 </td>
                 <td><code>uint32</code></td>
             <td><p>The maximum length of an (UTF-8 encoded) auth provider type, in bytes.</p>
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#28">MAX_AUTH_MECHANISMS</a></td>
+            <td>
+                    <code>16</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td><p>The maximum number of authentication mechanisms that can be registered
+for a device.</p>
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#32">MAX_AUTH_MECHANISM_ENROLLMENTS</a></td>
+            <td>
+                    <code>32</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td><p>The maximum number of authentication mechanism enrollments that may be
+simultaneously defined within a Fuchsia account.</p>
 </td>
         </tr>
     

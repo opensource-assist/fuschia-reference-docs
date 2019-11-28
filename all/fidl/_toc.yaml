@@ -319,12 +319,16 @@ toc:
   path: /reference/fidl/fuchsia.hwinfo
 - title: fuchsia.identity.account
   path: /reference/fidl/fuchsia.identity.account
+- title: fuchsia.identity.external
+  path: /reference/fidl/fuchsia.identity.external
 - title: fuchsia.identity.internal
   path: /reference/fidl/fuchsia.identity.internal
 - title: fuchsia.identity.keys
   path: /reference/fidl/fuchsia.identity.keys
 - title: fuchsia.identity.prototype
   path: /reference/fidl/fuchsia.identity.prototype
+- title: fuchsia.identity.tokens
+  path: /reference/fidl/fuchsia.identity.tokens
 - title: fuchsia.identity.transfer
   path: /reference/fidl/fuchsia.identity.transfer
 - title: fuchsia.images

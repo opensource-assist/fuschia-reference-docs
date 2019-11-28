@@ -646,6 +646,11 @@
  system.</td>
 </tr>
 <tr>
+    <td><a href="fuchsia.identity.external/index">fuchsia.identity.external</a></td>
+    <td> Defines the protocols used to interface with non-Fuchsia forms of identity,
+ such as OAuth and OpenID identity providers.</td>
+</tr>
+<tr>
     <td><a href="fuchsia.identity.internal/index">fuchsia.identity.internal</a></td>
     <td></td>
 </tr>
@@ -657,6 +662,12 @@
 <tr>
     <td><a href="fuchsia.identity.prototype/index">fuchsia.identity.prototype</a></td>
     <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.identity.tokens/index">fuchsia.identity.tokens</a></td>
+    <td> Defines the data types and protocols used to request user authorization
+ tokens and identity information from service providers and identity
+ providers.</td>
 </tr>
 <tr>
     <td><a href="fuchsia.identity.transfer/index">fuchsia.identity.transfer</a></td>

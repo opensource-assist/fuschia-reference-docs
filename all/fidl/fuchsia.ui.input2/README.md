@@ -751,6 +751,12 @@ Corresponds to USB HID page 0x0007 usage 0x00e6</p>
 Corresponds to USB HID page 0x0007 usage 0x00e7</p>
 </td>
         </tr><tr>
+            <td><code>MENU</code></td>
+            <td><code>89</code></td>
+            <td><p>Keyboard Menu
+Corresponds to USB HID page 0x0007 usage 0x0076</p>
+</td>
+        </tr><tr>
             <td><code>NUM_LOCK</code></td>
             <td><code>512</code></td>
             <td><p>Keypad Num Lock and Clear
@@ -852,6 +858,10 @@ Corresponds to USB HID page 0x0007 usage 0x0062</p>
             <td><p>Keypad . and Delete
 Corresponds to USB HID page 0x0007 usage 0x0063</p>
 </td>
+        </tr><tr>
+            <td><code>KEYPAD_EQUALS</code></td>
+            <td><code>529</code></td>
+            <td></td>
         </tr><tr>
             <td><code>MEDIA_MUTE</code></td>
             <td><code>768</code></td>
