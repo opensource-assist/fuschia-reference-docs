@@ -1,10 +1,12 @@
 [TOC]
 
+<div>
 <devsite-filter>
 <input type="text" placeholder="Type a keyword here to find a FIDL">
 
 <table>
-<tr><th>Name</th><th>Description</th></tr>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody class="list">
 <tr>
     <td><a href="fidl.examples.echo/index">fidl.examples.echo</a></td>
     <td></td>
@@ -697,8 +699,10 @@
     <td><a href="fuchsia.wlan.tap/index">fuchsia.wlan.tap</a></td>
     <td></td>
 </tr>
+</tbody>
 </table>
 
 </devsite-filter>
+</div>
 
 Generated with fidldoc v0.0.4
