@@ -443,7 +443,7 @@ or an error occurred.</p>
 ### DeviceType {#DeviceType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.camera2/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera2/manager.fidl#72)*
+*Defined in [fuchsia.camera2/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera2/manager.fidl#76)*
 
 
 
@@ -509,12 +509,21 @@ Camera Manager will use these constraints to match an appropriate stream.</p>
             <td><p>A table that describes the properties of the stream. Any properties specified will
 be considered requirements for matching streams.</p>
 </td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>format_index</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td><p>If specified, the stream will be created using this index for the initial format index.
+If unspecified, the first stream format will be used.</p>
+</td>
         </tr></table>
 
 ### DeviceInfo {#DeviceInfo}
 
 
-*Defined in [fuchsia.camera2/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera2/manager.fidl#78)*
+*Defined in [fuchsia.camera2/manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera2/manager.fidl#82)*
 
 <p>Identifying information about the device.</p>
 

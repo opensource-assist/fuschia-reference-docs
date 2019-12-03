@@ -234,7 +234,7 @@ returned in other encodings if need arises.</p>
 ### CrashReport {#CrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#21)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#26)*
 
 <p>Represents a crash report.</p>
 
@@ -300,7 +300,7 @@ server causing a crash in a high-level UI widget.</p>
 ### GenericCrashReport {#GenericCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#64)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#71)*
 
 <p>Represents a generic crash report.</p>
 
@@ -324,7 +324,7 @@ asked the same request.</p>
 ### NativeCrashReport {#NativeCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#75)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#82)*
 
 <p>Represents a crash report for a native exception out of which the client has built a minidump.</p>
 
@@ -344,7 +344,7 @@ asked the same request.</p>
 ### RuntimeCrashReport {#RuntimeCrashReport}
 
 
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#81)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#91)*
 
 <p>Represents a crash report for a runtime exception, applicable to most languages.</p>
 
@@ -464,7 +464,7 @@ could be a ZIP archive bundling a vector of Attachment objects.</p>
 ## **XUNIONS**
 
 ### SpecificCrashReport {#SpecificCrashReport}
-*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#52)*
+*Defined in [fuchsia.feedback/crash_reporter.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#57)*
 
 <p>Represents a specific crash report.</p>
 <p>Add a new member when the server needs to special case how it handles certain annotations and
@@ -497,4 +497,66 @@ attachments for a given type of crashes, e.g., a <code>RuntimeCrashReport</code>
 
 
 
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#20">MAX_PROGRAM_NAME_LENGTH</a></td>
+            <td>
+                    <code>1024</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#21">MAX_NUM_ANNOTATIONS</a></td>
+            <td>
+                    <code>32</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#22">MAX_NUM_ATTACHMENTS</a></td>
+            <td>
+                    <code>16</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#23">MAX_EVENT_ID_LENGTH</a></td>
+            <td>
+                    <code>128</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#68">MAX_CRASH_SIGNATURE_LENGTH</a></td>
+            <td>
+                    <code>128</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#87">MAX_EXCEPTION_TYPE_LENGTH</a></td>
+            <td>
+                    <code>128</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#88">MAX_EXCEPTION_MESSAGE_LENGTH</a></td>
+            <td>
+                    <code>1024</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    
+</table>
 
