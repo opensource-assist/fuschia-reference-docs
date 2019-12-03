@@ -96,8 +96,30 @@ authentication with PlayReady systems.</p>
 
 
 
+## WeaveFactoryStoreProvider {#WeaveFactoryStoreProvider}
+*Defined in [fuchsia.factory/factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.factory/factory.fidl#51)*
+
+<p>This protocol  exposes a method to connect to a directory containing
+Weave-specific factory data: public certificates, signing keys, and
+identity files for interoperation with a Weave-based home-area-network.</p>
+
+### GetFactoryStore {#GetFactoryStore}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>dir</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.io/'>fuchsia.io</a>/<a class='link' href='../fuchsia.io/#Directory'>Directory</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
 ## MiscFactoryStoreProvider {#MiscFactoryStoreProvider}
-*Defined in [fuchsia.factory/factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.factory/factory.fidl#53)*
+*Defined in [fuchsia.factory/factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.factory/factory.fidl#61)*
 
 <p>This protocol exposes a method to connect to a directory containing
 miscellaneous factory data such as tuning/calibration files, region-specific

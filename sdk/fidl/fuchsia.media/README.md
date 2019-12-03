@@ -554,19 +554,16 @@ AudioCapturer is bound.</p>
             </td>
         </tr></table>
 
-## AudioConsumer {#AudioConsumer}
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#11)*
+## SessionAudioConsumerFactory {#SessionAudioConsumerFactory}
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#12)*
 
+<p>Interface for creating audio consumers bound to a session</p>
 
-### CreateStreamSink {#CreateStreamSink}
+### CreateAudioConsumer {#CreateAudioConsumer}
 
-<p>Creates a stream sink for the consumer with the indicated properties. <code>session_id</code> is the
-identifier of the media session for which audio is to be rendered.</p>
-<p>Multiple stream sinks may be acquired using this method, but they are intended to be used
-sequentially rather than concurrently. The first stream sink that's created using this
-method is used as the sole source of packets incoming to the logical consumer until that
-stream sink is closed or the <code>EndOfStream</code> method is called on that sink. At that point,
-the second stream sink is used, and so on.</p>
+<p>Creates an <code>AudioConsumer</code> which is an interface for playing audio bound
+to a particular session. <code>session_id</code> is the identifier of the media session
+for which audio is to be rendered.</p>
 
 #### Request
 <table>
@@ -577,6 +574,32 @@ the second stream sink is used, and so on.</p>
                 <code>uint64</code>
             </td>
         </tr><tr>
+            <td><code>audio_consumer_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#AudioConsumer'>AudioConsumer</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+## AudioConsumer {#AudioConsumer}
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#23)*
+
+<p>Interface for playing and controlling audio</p>
+
+### CreateStreamSink {#CreateStreamSink}
+
+<p>Creates a <code>StreamSink</code> for the consumer with the indicated properties.</p>
+<p>Multiple stream sinks may be acquired using this method, but they are intended to be used
+sequentially rather than concurrently. The first stream sink that's created using this
+method is used as the sole source of packets incoming to the logical consumer until that
+stream sink is closed or the <code>EndOfStream</code> method is called on that sink. At that point,
+the second stream sink is used, and so on.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
             <td><code>buffers</code></td>
             <td>
                 <code>vector&lt;vmo&gt;[16]</code>
@@ -3090,7 +3113,7 @@ events will eventually be disconnected.</p>
 ## **STRUCTS**
 
 ### Void {#Void}
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#119)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#126)*
 
 
 
@@ -4555,7 +4578,7 @@ Type: <code>uint32</code>
 ### AudioConsumerStatus {#AudioConsumerStatus}
 
 
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#94)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#101)*
 
 <p>Represents the status of the consumer. In the initial status, <code>error</code> and
 <code>presentation_timeline</code> are absent. The lead time fields are always present.</p>
@@ -5875,7 +5898,7 @@ mute the volume of all streams with this usage.</p>
 ## **UNIONS**
 
 ### AudioConsumerError {#AudioConsumerError}
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#123)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#130)*
 
 <p>Represents a <code>AudioConsumer</code> error condition.</p>
 
