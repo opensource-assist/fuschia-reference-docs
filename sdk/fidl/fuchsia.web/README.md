@@ -37,7 +37,7 @@ service.</li>
 
 
 ## Context {#Context}
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#150)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#151)*
 
 <p>Manages browsing state (e.g. LocalStorage, cookies, etc) associated with a set of
 <a class='link' href='#fuchsia.web.Frame'>fuchsia.web.Frame</a>.</p>
@@ -1260,6 +1260,7 @@ dashes.</p>
             <td><p>Service directory to be used by the context. The following services must be present in the
 directory:</p>
 <ul>
+<li><a class='link' href='#fuchsia.accessibility.semantics.SemanticsManager'>fuchsia.accessibility.semantics.SemanticsManager</a></li>
 <li><a class='link' href='#fuchsia.deprecatedtimezone.Timezone'>fuchsia.deprecatedtimezone.Timezone</a></li>
 <li><a class='link' href='#fuchsia.device.NameProvider'>fuchsia.device.NameProvider</a></li>
 <li><a class='link' href='#fuchsia.fonts.Provider'>fuchsia.fonts.Provider</a></li>
@@ -1356,7 +1357,7 @@ Example value: <code>{&quot;http://a.com&quot;, &quot;http://b.com&quot;}</code>
 ### CreateFrameParams {#CreateFrameParams}
 
 
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#176)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#177)*
 
 
 
