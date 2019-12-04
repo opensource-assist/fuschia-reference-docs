@@ -261,8 +261,6 @@ toc:
   path: /reference/fidl/fuchsia.test.breakpoints
 - title: fuchsia.time
   path: /reference/fidl/fuchsia.time
-- title: fuchsia.timezone
-  path: /reference/fidl/fuchsia.timezone
 - title: fuchsia.tracing.controller
   path: /reference/fidl/fuchsia.tracing.controller
 - title: fuchsia.tracing.provider

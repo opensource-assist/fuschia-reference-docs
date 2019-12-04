@@ -540,10 +540,6 @@
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.timezone/index">fuchsia.timezone</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.tracing.controller/index">fuchsia.tracing.controller</a></td>
     <td></td>
 </tr>

@@ -1206,7 +1206,7 @@ framework.</p>
 </td>
         </tr></table>
 
-### ExposeLegacyServiceDecl {#ExposeLegacyServiceDecl}
+### ExposeServiceProtocolDecl {#ExposeServiceProtocolDecl}
 
 
 *Defined in [fuchsia.sys2/expose_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/expose_decl.fidl#49)*
@@ -1412,7 +1412,7 @@ https://fuchsia.dev/fuchsia-src/glossary#service</p>
 </td>
         </tr></table>
 
-### OfferLegacyServiceDecl {#OfferLegacyServiceDecl}
+### OfferServiceProtocolDecl {#OfferServiceProtocolDecl}
 
 
 *Defined in [fuchsia.sys2/offer_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/offer_decl.fidl#51)*
@@ -1727,7 +1727,7 @@ namespace.</p>
 </td>
         </tr></table>
 
-### UseLegacyServiceDecl {#UseLegacyServiceDecl}
+### UseServiceProtocolDecl {#UseServiceProtocolDecl}
 
 
 *Defined in [fuchsia.sys2/use_decl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/use_decl.fidl#47)*
@@ -2228,9 +2228,9 @@ For example, a legacy service exposed by the component at runtime.</p>
             </td>
             <td></td>
         </tr><tr>
-            <td><code>legacy_service</code></td>
+            <td><code>service_protocol</code></td>
             <td>
-                <code><a class='link' href='#ExposeLegacyServiceDecl'>ExposeLegacyServiceDecl</a></code>
+                <code><a class='link' href='#ExposeServiceProtocolDecl'>ExposeServiceProtocolDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -2262,9 +2262,9 @@ itself, or one of its other children.</p>
             </td>
             <td></td>
         </tr><tr>
-            <td><code>legacy_service</code></td>
+            <td><code>service_protocol</code></td>
             <td>
-                <code><a class='link' href='#OfferLegacyServiceDecl'>OfferLegacyServiceDecl</a></code>
+                <code><a class='link' href='#OfferServiceProtocolDecl'>OfferServiceProtocolDecl</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -2346,9 +2346,9 @@ component's environment.</p>
             </td>
             <td></td>
         </tr><tr>
-            <td><code>legacy_service</code></td>
+            <td><code>service_protocol</code></td>
             <td>
-                <code><a class='link' href='#UseLegacyServiceDecl'>UseLegacyServiceDecl</a></code>
+                <code><a class='link' href='#UseServiceProtocolDecl'>UseServiceProtocolDecl</a></code>
             </td>
             <td></td>
         </tr><tr>

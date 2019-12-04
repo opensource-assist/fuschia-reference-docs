@@ -181,7 +181,7 @@ Attachments are larger objects, e.g., log files. They may be binary or text data
 </table>
 
 ### Screenshot {#Screenshot}
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#57)*
+*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#55)*
 
 
 
@@ -213,7 +213,7 @@ Attachments are larger objects, e.g., log files. They may be binary or text data
 ### ImageEncoding {#ImageEncoding}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#52)*
+*Defined in [fuchsia.feedback/data_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/data_provider.fidl#50)*
 
 <p>The encoding used for the image.</p>
 <p>Today, only PNG is supported, but in the future the screenshot could be
@@ -399,14 +399,6 @@ that clients can directly forward to the servers.</p>
             <td><p>A vector of key-value string pairs. Keys are guaranteed to be unique.</p>
 </td>
         </tr><tr>
-            <td>2</td>
-            <td><code>attachments</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#Attachment'>Attachment</a>&gt;[16]</code>
-            </td>
-            <td><p>A vector of key-value string-to-VMO pairs. Keys are guaranteed to be unique.</p>
-</td>
-        </tr><tr>
             <td>3</td>
             <td><code>attachment_bundle</code></td>
             <td>
@@ -415,6 +407,13 @@ that clients can directly forward to the servers.</p>
             <td><p>A bundle of Attachments objects stored as an Attachment itself, e.g., it
 could be a ZIP archive bundling a vector of Attachment objects.</p>
 </td>
+        </tr><tr>
+            <td>2</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
         </tr></table>
 
 
