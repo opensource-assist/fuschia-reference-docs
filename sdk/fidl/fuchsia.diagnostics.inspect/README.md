@@ -183,7 +183,7 @@ failed.</li>
 </table>
 
 ### Selector {#Selector}
-*Defined in [fuchsia.diagnostics.inspect/selector.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics.inspect/selector.fidl#60)*
+*Defined in [fuchsia.diagnostics.inspect/selector.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics.inspect/selector.fidl#28)*
 
 
 
@@ -262,7 +262,7 @@ of the reader service.</p>
 ### TreeSelector {#TreeSelector}
 
 
-*Defined in [fuchsia.diagnostics.inspect/selector.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics.inspect/selector.fidl#45)*
+*Defined in [fuchsia.diagnostics.inspect/selector.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics.inspect/selector.fidl#13)*
 
 <p>TreeSelector represents a selection request on a nested structure where each
 nested node has properties that can be retrieved. The node_path specifies which
@@ -276,14 +276,14 @@ look for on the matched nodes.</p>
             <td>1</td>
             <td><code>node_path</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.diagnostics/'>fuchsia.diagnostics</a>/<a class='link' href='../fuchsia.diagnostics/#PathSelectionNode'>PathSelectionNode</a>&gt;[1024]</code>
+                <code>vector&lt;<a class='link' href='../fuchsia.diagnostics/'>fuchsia.diagnostics</a>/<a class='link' href='../fuchsia.diagnostics/#StringSelector'>StringSelector</a>&gt;[1024]</code>
             </td>
             <td></td>
         </tr><tr>
             <td>2</td>
             <td><code>target_properties</code></td>
             <td>
-                <code><a class='link' href='#PropertySelector'>PropertySelector</a></code>
+                <code><a class='link' href='../fuchsia.diagnostics/'>fuchsia.diagnostics</a>/<a class='link' href='../fuchsia.diagnostics/#StringSelector'>StringSelector</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -384,25 +384,6 @@ data that it has access to, returning a potential subset, but
 not a superset of what would be returned by selection using only the
 system configuration.</p>
 </td>
-        </tr></table>
-
-### PropertySelector {#PropertySelector}
-*Defined in [fuchsia.diagnostics.inspect/selector.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics.inspect/selector.fidl#36)*
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
-            <td><code>string_pattern</code></td>
-            <td>
-                <code>string[1024]</code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td><code>wildcard</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td></td>
         </tr></table>
 
 
