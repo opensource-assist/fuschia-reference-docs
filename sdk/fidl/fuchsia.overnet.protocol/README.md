@@ -860,3 +860,16 @@ Type: <code>uint64</code>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/labels.fidl#18">LinkId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td><p>Node-local link label</p>
+</td>
+        </tr></table>
+

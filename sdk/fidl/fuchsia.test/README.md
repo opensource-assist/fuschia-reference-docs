@@ -215,3 +215,16 @@ code.</p>
 
 
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.test/suite.fidl#8">Name</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>Name of a test case.</p>
+</td>
+        </tr></table>
+

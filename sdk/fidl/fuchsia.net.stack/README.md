@@ -1199,3 +1199,34 @@ of the next hop in the route.</p>
 
 
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#11">interface_address_list</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>A list of IP addresses for an interface.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#14">device_path</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>A path to a device node.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#17">interface_list</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>A list of interface descriptors.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#20">interface_name</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>An alias that may be used to refer to an interface.</p>
+</td>
+        </tr></table>
+

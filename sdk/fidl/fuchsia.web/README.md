@@ -2087,3 +2087,35 @@ Not compatible with the <a class='link' href='#VULKAN'>VULKAN</a> flag.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#9">Url</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_URL_LENGTH'>MAX_URL_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#13">UrlSchemeName</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_URL_SCHEME_NAME_LENGTH'>MAX_URL_SCHEME_NAME_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#17">UrlHostName</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_HOST_LENGTH'>MAX_HOST_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#21">UrlSchemeAndHostName</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_SCHEME_AND_HOST_LENGTH'>MAX_SCHEME_AND_HOST_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#7">CookieName</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr></table>
+

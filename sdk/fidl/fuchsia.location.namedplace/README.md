@@ -118,3 +118,18 @@ closed with <code>ZX_ERR_BAD_STATE</code>.</li>
 
 
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location/namedplace.fidl#13">RegionCode</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>Represents a regulatory region. These values should generally be chosen
+from <a href="https://en.wikipedia.org/wiki/ISO_3166-2">ISO 3166-2</a> codes. However,
+some radios may support extensions beyond the set of ISO 3166-2 codes.</p>
+</td>
+        </tr></table>
+

@@ -1474,3 +1474,16 @@ appearance information was obtained over advertising and/or GATT.</p>
 
 
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/identity.fidl#30">LocalKey</a></td>
+            <td>
+                <code>fuchsia.bluetooth.sys/Key</code></td>
+            <td><p>Represents a locally generated key that is distributed across one or more bonds.</p>
+</td>
+        </tr></table>
+

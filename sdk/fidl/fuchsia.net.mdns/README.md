@@ -543,3 +543,35 @@ a conflicting instance.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#16">host_name</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#24">service_name</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#29">instance_name</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#34">subtype_name</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#39">txt_string</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr></table>
+

@@ -6740,3 +6740,26 @@ only intended to be plausible for some clients, not all clients.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#345">KeyId</a></td>
+            <td>
+                <code>vector</code>[<code><a class='link' href='#MAX_KEY_ID_SIZE'>MAX_KEY_ID_SIZE</a></code>]</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#346">InitVector</a></td>
+            <td>
+                <code>vector</code>[<code><a class='link' href='#MAX_INIT_VECTOR_SIZE'>MAX_INIT_VECTOR_SIZE</a></code>]</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#77">CompressionType</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>An identifier for compression types.</p>
+</td>
+        </tr></table>
+

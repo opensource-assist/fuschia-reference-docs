@@ -1222,3 +1222,30 @@ Type: <code>uint32</code>
 
 
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#11">SessionId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/images.fidl#7">Url</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#18">Domain</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>A domain identifies the ecosystem in which the session takes place.</p>
+<p>Domains should take the form of</p>
+<pre><code>`domain://&lt;unique name for protocol&gt;.version`
+</code></pre>
+<p>The <code>|</code> symbol is reserved and should not be used in a domain string.</p>
+</td>
+        </tr></table>
+

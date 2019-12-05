@@ -1077,3 +1077,26 @@ AuthProviderConfig.auth_provider_type
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#14">GlobalIdHash</a></td>
+            <td>
+                <code>array</code>[<code><a class='link' href='#HASH_SIZE'>HASH_SIZE</a></code>]</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#15">HashSalt</a></td>
+            <td>
+                <code>array</code>[<code><a class='link' href='#HASH_SALT_SIZE'>HASH_SALT_SIZE</a></code>]</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#314">EncryptedAccountData</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>Encrypted form of AccountData.</p>
+</td>
+        </tr></table>
+

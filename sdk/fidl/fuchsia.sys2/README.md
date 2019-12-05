@@ -2485,3 +2485,30 @@ number of nanoseconds since the system was powered on.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/types.fidl#7">child_name</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_CHILD_NAME_LENGTH'>MAX_CHILD_NAME_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/types.fidl#8">collection_name</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_COLLECTION_NAME_LENGTH'>MAX_COLLECTION_NAME_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/types.fidl#9">runner_name</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_RUNNER_NAME_LENGTH'>MAX_RUNNER_NAME_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#10">WorkId</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_WORK_ID_LENGTH'>MAX_WORK_ID_LENGTH</a></code>]</td>
+            <td></td>
+        </tr></table>
+

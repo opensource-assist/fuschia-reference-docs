@@ -1027,3 +1027,15 @@ matches the requested style exactly.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#7">Weight</a></td>
+            <td>
+                <code>uint16</code></td>
+            <td></td>
+        </tr></table>
+

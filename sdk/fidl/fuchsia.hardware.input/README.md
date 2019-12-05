@@ -466,3 +466,15 @@ Type: <code>uint8</code>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#9">ReportId</a></td>
+            <td>
+                <code>uint8</code></td>
+            <td></td>
+        </tr></table>
+

@@ -3625,3 +3625,91 @@ byte vectors.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/file.fidl#17">Transfer</a></td>
+            <td>
+                <code>vector</code>[<code><a class='link' href='#MAX_TRANSFER_SIZE'>MAX_TRANSFER_SIZE</a></code>]</td>
+            <td><p>The byte vector type used for read/write operations.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/io2.fidl#22">Name</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_NAME_LENGTH'>MAX_NAME_LENGTH</a></code>]</td>
+            <td><p>The type for the name of a node, i.e. a single path component.
+E.g. <code>foo</code></p>
+<h2>Invariants</h2>
+<p>A valid node name must meet the following criteria:</p>
+<ul>
+<li>It cannot be longer than <a class='link' href='#MAX_NAME_LENGTH'>MAX_NAME_LENGTH</a>.</li>
+<li>It cannot be empty.</li>
+<li>It cannot be &quot;..&quot; (dot-dot).</li>
+<li>It cannot be &quot;.&quot; (single dot).</li>
+<li>It cannot contain &quot;/&quot;.</li>
+<li>It cannot contain embedded NUL.</li>
+</ul>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/io2.fidl#43">Path</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_PATH_LENGTH'>MAX_PATH_LENGTH</a></code>]</td>
+            <td><p>A path is a string of one or more components, separated by &quot;/&quot;.
+E.g. <code>foo/bar/baz</code></p>
+<h2>Invariants</h2>
+<p>A valid path must meet the following criteria:</p>
+<ul>
+<li>It cannot be empty.</li>
+<li>It cannot be longer than <a class='link' href='#MAX_PATH_LENGTH'>MAX_PATH_LENGTH</a>.</li>
+<li>It cannot have a leading &quot;/&quot;.</li>
+<li>It cannot have a trailing &quot;/&quot;.</li>
+<li>Each component must be a valid <a class='link' href='#Name'>Name</a>.</li>
+</ul>
+<p>Paths should be transformed into their canonical forms at client side.
+For example, a client should convert <code>&quot;foo/bar/.././baz/&quot;</code> to <code>&quot;foo/baz&quot;</code>
+before using it as a path.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/io2.fidl#50">Token</a></td>
+            <td>
+                <code>handle</code></td>
+            <td><p>The type to identify a connection to a node.
+It represents a capability: a reference to a node with associated rights.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/rights-abilities.fidl#74">Rights</a></td>
+            <td>
+                <code>fuchsia.io2/Operations</code></td>
+            <td><p>Rights are properties specific to a connection. They limit which operations
+are allowed on a connection.</p>
+<p>Invoking an operation without the corresponding right results in a
+<code>ZX_ERR_ACCESS_DENIED</code> error.</p>
+<p>Right Aliases - Useful constants for commonly used collections of rights.
+Currently FIDL doesn't support expressions on assignment so these cannot
+be defined. They are left here as documentation.</p>
+<p>&quot;r*&quot; a collection of rights to read from a directory.
+const Rights R_STAR_DIR = CONNECT | ENUMERATE | TRAVERSE |
+READ_BYTES | GET_ATTRIBUTES;</p>
+<p>&quot;w*&quot; a collection of rights to write to a directory.
+const Rights W_STAR_DIR = CONNECT | ENUMERATE | TRAVERSE |
+MODIFY_DIRECTORY | WRITE_BYTES |
+UPDATE_ATTRIBUTES;</p>
+<p>&quot;x*&quot; a collection of rights to execute from a directory.
+const Rights X_STAR_DIR = CONNECT | ENUMERATE | TRAVERSE | EXECUTE;</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/rights-abilities.fidl#83">Abilities</a></td>
+            <td>
+                <code>fuchsia.io2/Operations</code></td>
+            <td><p>Abilities are properties intrinsic to a node. They specify which operations
+are supported by it.</p>
+<p>Invoking an operation without corresponding support in the node results in a
+<code>ZX_ERR_NOT_SUPPORTED</code> error.
+Note that if both the access denied and the not supported error conditions
+apply, the access denied case takes precedence.</p>
+</td>
+        </tr></table>
+

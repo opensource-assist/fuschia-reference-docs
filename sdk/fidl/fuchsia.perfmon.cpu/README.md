@@ -591,3 +591,20 @@ Typically the h/w supports less than this, e.g., 7 or so.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-perfmon-cpu/perfmon.fidl#10">EventRate</a></td>
+            <td>
+                <code>uint32</code></td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-perfmon-cpu/perfmon.fidl#19">EventId</a></td>
+            <td>
+                <code>uint16</code></td>
+            <td></td>
+        </tr></table>
+

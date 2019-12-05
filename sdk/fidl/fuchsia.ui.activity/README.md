@@ -329,3 +329,15 @@ clamshell-format device.</p>
 
 
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.activity/tracker.fidl#9">OngoingActivityId</a></td>
+            <td>
+                <code>uint32</code></td>
+            <td></td>
+        </tr></table>
+

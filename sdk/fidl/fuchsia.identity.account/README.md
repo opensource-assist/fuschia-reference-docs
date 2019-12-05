@@ -2323,3 +2323,54 @@ simultaneously defined within a Fuchsia account.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#47">GlobalAccountId</a></td>
+            <td>
+                <code>vector</code>[<code><a class='link' href='#MAX_ID_SIZE'>MAX_ID_SIZE</a></code>]</td>
+            <td><p>A globally unique identifier for a Fuchsia account that is constant across
+the devices that the account is provisioned on. Identifiers are not human
+readable.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#54">LocalAccountId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td><p>A unique identifier for a Fuchsia account on the current device. If the
+account is removed and re-added it will receive a different LocalAccountId.
+The same account will have different LocalAccountIds on different devices
+and a particular LocalAccountId value may refer to different accounts on
+different devices.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#62">LocalPersonaId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td><p>A unique identifier for a Persona of a Fuchsia account on the current
+device. If the account is removed and re-added its personae will receive
+different LocalPersonaIds. A particular LocalPersonaId value may refer to
+different personae and/or different accounts on different devices. The
+LocalAccountId for an account cannot be derived from the LocalPersonaId of
+its personae.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#115">AuthMechanismId</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>A fuchsia component URI pointing to a component containing an authentication
+mechanism. It acts as a unique, stable identifier representing an
+authentication mechanism.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#130">AuthMechanismEnrollmentId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td><p>An identifier for an enrollment of an authentication mechanism. It is
+unique within an account and an authentication mechanism.</p>
+</td>
+        </tr></table>
+

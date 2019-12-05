@@ -1861,3 +1861,20 @@ Type: <code>uint32</code>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#15">DeviceProperty</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td></td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#28">LocalDeviceId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td></td>
+        </tr></table>
+

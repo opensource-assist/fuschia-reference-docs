@@ -207,3 +207,15 @@ operations on displays in the DisplayManager protocol and other protocols
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.display/display_manager.fidl#25">DisplayIdentifier</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#IDENTIFIER_MAX_LEN'>IDENTIFIER_MAX_LEN</a></code>]</td>
+            <td></td>
+        </tr></table>
+

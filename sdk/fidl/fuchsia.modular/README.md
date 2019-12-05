@@ -4732,3 +4732,16 @@ bytes.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#43">AnnotationKey</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_ANNOTATION_KEY_LENGTH'>MAX_ANNOTATION_KEY_LENGTH</a></code>]</td>
+            <td><p>An identifier for an <a class='link' href='#Annotation'>Annotation</a>.</p>
+</td>
+        </tr></table>
+

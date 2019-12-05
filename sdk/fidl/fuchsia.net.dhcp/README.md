@@ -1676,3 +1676,38 @@ Type: <code>uint8</code>
 
 
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.dhcp/options.fidl#11">Duration</a></td>
+            <td>
+                <code>uint32</code></td>
+            <td><p>A DHCP duration value, in seconds. As specified in
+https://tools.ietf.org/html/rfc2131#section-3.3, DHCP duration values are
+relative times.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.dhcp/options.fidl#16">Addresses</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>A list of IP addresses. The vector bounds of this list are MAX_OPTION_LEN /
+len(Ipv4Address), where MAX_OPTION_LEN is the maximum byte length of a value
+for a DHCP option as defined in https://tools.ietf.org/html/rfc2132#section-2:
+&quot;All other options are variable-length with a length octet following the tag octet.&quot;</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.dhcp/options.fidl#24">AsciiString</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>An ASCII string with a length limit of 255. All DHCP Option values must have
+a length that can fit in an octet, cf. &quot;All other options are variable-length with a length octet following the tag octet.&quot;
+from https://tools.ietf.org/html/rfc2132#section-2. Similarly all DHCP Option
+string values must be limited to the ASCII character set. Should non-ASCII
+characters be sent in a <code>AsciiString</code> to Server, Server will close the channel to
+the client.</p>
+</td>
+        </tr></table>
+

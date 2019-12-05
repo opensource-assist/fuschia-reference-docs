@@ -3290,3 +3290,15 @@ Type: <code>uint32</code>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#55">CapabilityInfo</a></td>
+            <td>
+                <code>uint16</code></td>
+            <td></td>
+        </tr></table>
+

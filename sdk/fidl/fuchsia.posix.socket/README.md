@@ -543,3 +543,23 @@ buffered.</p>
 
 
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#10">sockaddr</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>Chosen to match <code>sizeof(struct sockaddr_storage)</code>.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#15">sockopt</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>Chosen to be large enough to hold whatever we might want to cram in it. So long as we support
+socket options, we don't have a good sense of what we might want to send as payload.</p>
+</td>
+        </tr></table>
+

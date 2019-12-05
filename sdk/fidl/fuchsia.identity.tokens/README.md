@@ -220,3 +220,36 @@ We reserve the right to increase this value in future.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#13">AccountId</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_ACCOUNT_ID_SIZE'>MAX_ACCOUNT_ID_SIZE</a></code>]</td>
+            <td><p>An identifier for the account that a token is issued against, as specified
+by the authorization server. Account identifiers are guaranteed to be unique
+within an auth provider type.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#20">ClientId</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_CLIENT_ID_SIZE'>MAX_CLIENT_ID_SIZE</a></code>]</td>
+            <td><p>An OAuth client ID string.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#27">Scope</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_SCOPE_SIZE'>MAX_SCOPE_SIZE</a></code>]</td>
+            <td><p>An OAuth scope string.</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#38">Audience</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_AUDIENCE_SIZE'>MAX_AUDIENCE_SIZE</a></code>]</td>
+            <td><p>An OpenID audience string.</p>
+</td>
+        </tr></table>
+

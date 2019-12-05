@@ -171,3 +171,15 @@ ListChildNames and OpenChild.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/tree.fidl#14">TreeName</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_TREE_NAME_LENGTH'>MAX_TREE_NAME_LENGTH</a></code>]</td>
+            <td></td>
+        </tr></table>
+

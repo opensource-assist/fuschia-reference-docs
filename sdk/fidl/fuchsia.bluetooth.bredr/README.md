@@ -1016,3 +1016,5 @@ From the Bluetooth Specification, Version 5, Vol 3, Part B</p>
     
 </table>
 
+
+

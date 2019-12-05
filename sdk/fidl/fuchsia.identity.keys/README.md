@@ -1494,3 +1494,15 @@ in a future version of the API.</p>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#15">KeyId</a></td>
+            <td>
+                <code>uint32</code></td>
+            <td></td>
+        </tr></table>
+

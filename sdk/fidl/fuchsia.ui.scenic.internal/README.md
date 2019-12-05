@@ -583,3 +583,23 @@ LayoutInfo.</p>
 
 
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#78">TransformId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td><p>A user-defined identifier for a particular transform. See CreateTransform() and
+ReleaseTransform() for more information. </p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#81">LinkId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td><p>A user-defined identifier for a particular Link. See CreateLink() for more information.</p>
+</td>
+        </tr></table>
+

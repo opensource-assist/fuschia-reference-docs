@@ -1435,3 +1435,18 @@ Type: <code>uint32</code>
     
 </table>
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/events.fidl#41">PhysicalKey</a></td>
+            <td>
+                <code>fuchsia.ui.input2/Key</code></td>
+            <td><p>Direct key mapping from hardware code (USB HID).</p>
+<p>Example:
+Key.Q for USB HID page 0x0007 usage 0x0014</p>
+</td>
+        </tr></table>
+

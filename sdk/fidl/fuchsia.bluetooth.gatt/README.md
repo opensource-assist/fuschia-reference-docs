@@ -1129,3 +1129,5 @@ GATT procedures that are allowed for a particular characteristic.</p>
     
 </table>
 
+
+

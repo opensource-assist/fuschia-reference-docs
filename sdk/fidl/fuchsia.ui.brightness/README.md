@@ -376,3 +376,22 @@ This field may be omitted to disable color adjustment.</p>
 
 
 
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/brightness.fidl#9">brightness</a></td>
+            <td>
+                <code>float32</code></td>
+            <td><p>A normalized relative brightness adjustment in the range
+0.0 (off/minimum) to 1.0 (maximum).</p>
+</td>
+        </tr><tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_tint.fidl#7">kelvin</a></td>
+            <td>
+                <code>float32</code></td>
+            <td></td>
+        </tr></table>
+
