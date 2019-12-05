@@ -6,9 +6,10 @@
 ## **PROTOCOLS**
 
 ## SessionControl {#SessionControl}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#39)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#41)*
 
 <p>A protocol for clients to control sessions and view their status.</p>
+<p>The channel will close if the backing player is removed.</p>
 
 ### Play {#Play}
 
@@ -171,7 +172,7 @@ playback mode.</p>
 
 
 ## SessionsWatcher {#SessionsWatcher}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#76)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#83)*
 
 <p><code>SessionsWatcher</code> watches the collection of published sessions.</p>
 
@@ -180,7 +181,7 @@ playback mode.</p>
 <p>Called by the registry service when a session is updated. On first connection,
 this will be called as many times as needed to communicate the state of the
 world.</p>
-<p><code>SessionsWatchers</code> must reply to acknlowledge receipt of the session info delta.
+<p><code>SessionsWatcher</code> must reply to acknowledge receipt of the session info delta.
 Delinquent watchers who do not reply will eventually be disconnected.</p>
 
 #### Request
@@ -208,7 +209,7 @@ Delinquent watchers who do not reply will eventually be disconnected.</p>
 
 <p>Called by the registry service when a session is removed from the registered
 collection.</p>
-<p><code>SessionsWatchers</code> must reply to acknlowledge receipt of the session removal.
+<p><code>SessionsWatcher</code> must reply to acknlowledge receipt of the session removal.
 Delinquent watchers who do not reply will eventually be disconnected.</p>
 
 #### Request
@@ -228,7 +229,7 @@ Delinquent watchers who do not reply will eventually be disconnected.</p>
     </table>
 
 ## Discovery {#Discovery}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#96)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#103)*
 
 <p><code>Discovery</code> observes the collection of published media sessions
 and connects clients to them.</p>
@@ -937,8 +938,10 @@ session is not active.</p>
 ### WatchOptions {#WatchOptions}
 
 
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#70)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#75)*
 
+<p>Options that specify which sessions are watched when watching the collection.</p>
+<p>The watched set is the set of sessions which satisfies all options.</p>
 
 
 <table>
@@ -950,6 +953,14 @@ session is not active.</p>
                 <code>bool</code>
             </td>
             <td><p>Watch only the active session. Watches all if not set.</p>
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>allowed_sessions</code></td>
+            <td>
+                <code>vector&lt;uint64&gt;[1000]</code>
+            </td>
+            <td><p>Watch only sessions with these allowlisted ids. Watches all if not set.</p>
 </td>
         </tr></table>
 

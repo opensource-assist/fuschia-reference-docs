@@ -221,8 +221,6 @@ toc:
   path: /reference/fidl/fuchsia.developer.tiles
 - title: fuchsia.device
   path: /reference/fidl/fuchsia.device
-- title: fuchsia.device.display
-  path: /reference/fidl/fuchsia.device.display
 - title: fuchsia.device.manager
   path: /reference/fidl/fuchsia.device.manager
 - title: fuchsia.device.mock
@@ -255,6 +253,8 @@ toc:
   path: /reference/fidl/fuchsia.exception
 - title: fuchsia.factory
   path: /reference/fidl/fuchsia.factory
+- title: fuchsia.factory.camera
+  path: /reference/fidl/fuchsia.factory.camera
 - title: fuchsia.feedback
   path: /reference/fidl/fuchsia.feedback
 - title: fuchsia.fibonacci
@@ -529,6 +529,8 @@ toc:
   path: /reference/fidl/fuchsia.test.echos
 - title: fuchsia.test.hub
   path: /reference/fidl/fuchsia.test.hub
+- title: fuchsia.test.manager
+  path: /reference/fidl/fuchsia.test.manager
 - title: fuchsia.test.workscheduler
   path: /reference/fidl/fuchsia.test.workscheduler
 - title: fuchsia.testing.appmgr
@@ -541,8 +543,6 @@ toc:
   path: /reference/fidl/fuchsia.testing.runner
 - title: fuchsia.time
   path: /reference/fidl/fuchsia.time
-- title: fuchsia.timezone
-  path: /reference/fidl/fuchsia.timezone
 - title: fuchsia.tracing.controller
   path: /reference/fidl/fuchsia.tracing.controller
 - title: fuchsia.tracing.kernel

@@ -1,10 +1,12 @@
 [TOC]
 
+<div>
 <devsite-filter>
 <input type="text" placeholder="Type a keyword here to find a FIDL">
 
 <table>
-<tr><th>Name</th><th>Description</th></tr>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody class="list">
 <tr>
     <td><a href="conformance/index">conformance</a></td>
     <td></td>
@@ -446,10 +448,6 @@
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.device.display/index">fuchsia.device.display</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.device.manager/index">fuchsia.device.manager</a></td>
     <td></td>
 </tr>
@@ -511,6 +509,10 @@
 </tr>
 <tr>
     <td><a href="fuchsia.factory/index">fuchsia.factory</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.factory.camera/index">fuchsia.factory.camera</a></td>
     <td></td>
 </tr>
 <tr>
@@ -1074,6 +1076,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.test.manager/index">fuchsia.test.manager</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.test.workscheduler/index">fuchsia.test.workscheduler</a></td>
     <td></td>
 </tr>
@@ -1095,10 +1101,6 @@
 </tr>
 <tr>
     <td><a href="fuchsia.time/index">fuchsia.time</a></td>
-    <td></td>
-</tr>
-<tr>
-    <td><a href="fuchsia.timezone/index">fuchsia.timezone</a></td>
     <td></td>
 </tr>
 <tr>
@@ -1386,8 +1388,10 @@
     <td><a href="transformerintegration.test/index">transformerintegration.test</a></td>
     <td></td>
 </tr>
+</tbody>
 </table>
 
 </devsite-filter>
+</div>
 
 Generated with fidldoc v0.0.4
