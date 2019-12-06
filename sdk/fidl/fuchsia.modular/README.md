@@ -2523,36 +2523,6 @@ This will be called before the story is stopped.</p>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
-## UserIntelligenceProvider {#UserIntelligenceProvider}
-*Defined in [fuchsia.modular/user_intelligence_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/user_intelligence/user_intelligence_provider.fidl#9)*
-
-
-### GetServicesForAgent {#GetServicesForAgent}
-
-<p>A standard set of services provided to all agents at startup,
-along with services particuarly for this agent.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>agent_url</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>service_list</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.sys/'>fuchsia.sys</a>/<a class='link' href='../fuchsia.sys/#ServiceList'>ServiceList</a></code>
-            </td>
-        </tr></table>
-
 
 
 ## **STRUCTS**
