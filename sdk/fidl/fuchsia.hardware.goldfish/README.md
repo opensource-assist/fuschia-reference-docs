@@ -9,64 +9,6 @@
 *Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#39)*
 
 
-### AllocateBlock {#AllocateBlock}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>size</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>res</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>paddr</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>vmo</code></td>
-            <td>
-                <code>handle&lt;vmo&gt;?</code>
-            </td>
-        </tr></table>
-
-### DeallocateBlock {#DeallocateBlock}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>paddr</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>res</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr></table>
-
 ### OpenChildDriver {#OpenChildDriver}
 
 
@@ -88,7 +30,7 @@
 
 
 ## AddressSpaceChildDriver {#AddressSpaceChildDriver}
-*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#85)*
+*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#75)*
 
 
 ### AllocateBlock {#AllocateBlock}
@@ -538,7 +480,7 @@ Returns <code>ZX_ERR_SHOULD_WAIT</code> if pipe device is not readable.</p>
 ## **STRUCTS**
 
 ### AddressSpaceChildDriverPingMessage {#AddressSpaceChildDriverPingMessage}
-*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#74)*
+*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#64)*
 
 
 
