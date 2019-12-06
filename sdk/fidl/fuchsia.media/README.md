@@ -3708,8 +3708,40 @@ zero-padded to make a full batch for encoding.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
+### AacTransportLatm {#AacTransportLatm}
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#500)*
+
+
+
+<p>AAC inside LATM</p>
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>mux_config_present</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td><p>Whether MuxConfiguration stream element is present</p>
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### AacTransportAdts {#AacTransportAdts}
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#506)*
+
+
+
+<p>AAC inside ADTS</p>
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### AacConstantBitRate {#AacConstantBitRate}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#508)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#520)*
 
 
 
@@ -3728,7 +3760,7 @@ zero-padded to make a full batch for encoding.</p>
 </table>
 
 ### AacEncoderSettings {#AacEncoderSettings}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#535)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#547)*
 
 
 
@@ -4447,7 +4479,7 @@ Type: <code>uint32</code>
 ### AacChannelMode {#AacChannelMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#503)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#515)*
 
 
 
@@ -4465,7 +4497,7 @@ Type: <code>uint32</code>
 ### AacVariableBitRate {#AacVariableBitRate}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#517)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#529)*
 
 <p>Variable bit rate modes. The actual resulting bitrate
 varies based on input signal and other encoding settings.</p>
@@ -4498,7 +4530,7 @@ varies based on input signal and other encoding settings.</p>
 ### AacAudioObjectType {#AacAudioObjectType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#530)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#542)*
 
 
 
@@ -4771,7 +4803,7 @@ Currently, there is no additional format details for decrypted output.</p>
 ### FormatDetails {#FormatDetails}
 
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#574)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#586)*
 
 <p>FormatDetails</p>
 <p>This describes/details the format on input or output of a StreamProcessor
@@ -6068,7 +6100,7 @@ permit fairly fast random access to image data.</p>
         </tr></table>
 
 ### AacBitRate {#AacBitRate}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#525)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#537)*
 
 
 <table>
@@ -6181,7 +6213,7 @@ only indirectly represented here.</p>
         </tr></table>
 
 ### AacTransport {#AacTransport}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#499)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#509)*
 
 
 <table>
@@ -6191,10 +6223,22 @@ only indirectly represented here.</p>
                 <code><a class='link' href='#AacTransportRaw'>AacTransportRaw</a></code>
             </td>
             <td></td>
+        </tr><tr>
+            <td><code>latm</code></td>
+            <td>
+                <code><a class='link' href='#AacTransportLatm'>AacTransportLatm</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>adts</code></td>
+            <td>
+                <code><a class='link' href='#AacTransportAdts'>AacTransportAdts</a></code>
+            </td>
+            <td></td>
         </tr></table>
 
 ### EncoderSettings {#EncoderSettings}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#544)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#556)*
 
 <p>Settings for encoders that tell them how to encode raw
 formats.</p>
