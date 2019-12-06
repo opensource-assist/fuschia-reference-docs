@@ -9,7 +9,7 @@ related to latitude and longitude.</p>
 ## **PROTOCOLS**
 
 ## RegulatoryRegionConfigurator {#RegulatoryRegionConfigurator}
-*Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location/namedplace.fidl#20)*
+*Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location.namedplace/namedplace.fidl#20)*
 
 <p>The RegulatoryRegionConfigurator protocol provides mechanisms to
 inform Location Services of the inputs that should be used to
@@ -55,7 +55,7 @@ service2.SetRegion(&quot;BB&quot;);
 
 
 ## RegulatoryRegionWatcher {#RegulatoryRegionWatcher}
-*Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location/namedplace.fidl#56)*
+*Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location.namedplace/namedplace.fidl#56)*
 
 <p>The RegulatoryRegionWatcher protocol provides the mechanism for
 radio subsystems to learn the currently applicable regulatory
@@ -124,7 +124,7 @@ closed with <code>ZX_ERR_BAD_STATE</code>.</li>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location/namedplace.fidl#13">RegionCode</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location.namedplace/namedplace.fidl#13">RegionCode</a></td>
             <td>
                 <code>string</code></td>
             <td><p>Represents a regulatory region. These values should generally be chosen
