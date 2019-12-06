@@ -10,9 +10,9 @@
 
 <p>Registers breakpoints in component manager.</p>
 
-### Register {#Register}
+### SetBreakpoints {#SetBreakpoints}
 
-<p>Registers breakpoints for the given EventTypes.
+<p>Sets breakpoints on the given EventTypes.
 Returns a BreakpointInvocationReceiver which can be used
 to expect the registered types.</p>
 
@@ -107,7 +107,7 @@ allowed to proceed until resumed explicitly via the Handler.</p>
 <p>Allows injecting capabilities over FIDL.
 Used by RouteFrameworkCapability and RouteBuiltinCapability</p>
 
-### Route {#Route}
+### SetProvider {#SetProvider}
 
 <p>Inject a CapabilityProvider in response to a routing event.</p>
 
