@@ -103,6 +103,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.goldfish
 - title: fuchsia.hardware.input
   path: /reference/fidl/fuchsia.hardware.input
+- title: fuchsia.hardware.power.statecontrol
+  path: /reference/fidl/fuchsia.hardware.power.statecontrol
 - title: fuchsia.hardware.pty
   path: /reference/fidl/fuchsia.hardware.pty
 - title: fuchsia.hardware.rtc
