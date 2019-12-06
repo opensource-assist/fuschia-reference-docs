@@ -36,7 +36,7 @@
         </tr></table>
 
 ## Timezone {#Timezone}
-*Defined in [fuchsia.deprecatedtimezone/deprecated_time_zone.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.deprecatedtimezone/deprecated_time_zone.fidl#14)*
+*Defined in [fuchsia.deprecatedtimezone/deprecated_time_zone.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.deprecatedtimezone/deprecated_time_zone.fidl#18)*
 
 
 ### GetTimezoneOffsetMinutes {#GetTimezoneOffsetMinutes}
@@ -133,7 +133,7 @@ non-zero DST offset when appropriate.</p>
 
 
 ## TimezoneWatcher {#TimezoneWatcher}
-*Defined in [fuchsia.deprecatedtimezone/deprecated_time_zone.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.deprecatedtimezone/deprecated_time_zone.fidl#31)*
+*Defined in [fuchsia.deprecatedtimezone/deprecated_time_zone.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.deprecatedtimezone/deprecated_time_zone.fidl#35)*
 
 
 ### OnTimezoneOffsetChange {#OnTimezoneOffsetChange}
