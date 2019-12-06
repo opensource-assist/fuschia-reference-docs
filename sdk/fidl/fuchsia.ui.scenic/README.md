@@ -5,6 +5,65 @@
 
 ## **PROTOCOLS**
 
+## PointerCaptureListener {#PointerCaptureListener}
+*Defined in [fuchsia.ui.scenic/pointer_capture.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/pointer_capture.fidl#11)*
+
+<p>A method of obtaining global pointer events, regardless of view focus.</p>
+
+### OnPointerEvent {#OnPointerEvent}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>event</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.ui.input/'>fuchsia.ui.input</a>/<a class='link' href='../fuchsia.ui.input/#PointerEvent'>PointerEvent</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+## PointerCaptureListenerRegistry {#PointerCaptureListenerRegistry}
+*Defined in [fuchsia.ui.scenic/pointer_capture.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/pointer_capture.fidl#17)*
+
+<p>Injects a listener protocol, along with a ViewRef that defines the coordinate space of the captured pointer events.</p>
+
+### RegisterListener {#RegisterListener}
+
+<p>This protocol will be subsumed by gesture disambiguation.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>listener</code></td>
+            <td>
+                <code><a class='link' href='#PointerCaptureListener'>PointerCaptureListener</a></code>
+            </td>
+        </tr><tr>
+            <td><code>view_ref</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.ui.views/'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/#ViewRef'>ViewRef</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>success</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
 ## Scenic {#Scenic}
 *Defined in [fuchsia.ui.scenic/scenic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#18)*
 
