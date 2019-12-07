@@ -146,7 +146,7 @@ follows the hanging get pattern.</p>
         </tr></table>
 
 ## Display {#Display}
-*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#9)*
+*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#11)*
 
 <p>Settings related to display</p>
 
@@ -1190,7 +1190,7 @@ is currently running. Read-only field, cannot be set by client.</p>
 ### DisplaySettings {#DisplaySettings}
 
 
-*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#24)*
+*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#26)*
 
 
 
@@ -1215,7 +1215,7 @@ is currently running. Read-only field, cannot be set by client.</p>
 ### LightSensorData {#LightSensorData}
 
 
-*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#29)*
+*Defined in [fuchsia.settings/display.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.settings/display.fidl#31)*
 
 
 
@@ -1227,7 +1227,15 @@ is currently running. Read-only field, cannot be set by client.</p>
             <td>
                 <code>float32</code>
             </td>
-            <td><p>Brightness from the light sensor measured in lux</p>
+            <td><p>Brightness from the light sensor measured in lux.</p>
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>color</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.ui.types/'>fuchsia.ui.types</a>/<a class='link' href='../fuchsia.ui.types/#ColorRgb'>ColorRgb</a></code>
+            </td>
+            <td><p>Color measured by light sensor in rgb.</p>
 </td>
         </tr></table>
 
