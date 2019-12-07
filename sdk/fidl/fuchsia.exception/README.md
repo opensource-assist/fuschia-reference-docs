@@ -44,18 +44,48 @@ exception channel.</p>
     </table>
 
 ## ProcessLimbo {#ProcessLimbo}
-*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#20)*
+*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#26)*
 
 <p>Protocol meant for clients interested in obtaining processes that are
 suspended waiting for an exception handler (in limbo). This is the core
 feature that enables Just In Time (JIT) debugging.</p>
+<p>An example usage of this API would be having a debugger listen on limbo for
+new processes. Then another component (eg. a CLI tool) could activate the
+limbo, meaning that the system is now ready to capture crashing processes.
+As the debugger got a notification that the limbo is now active, it can
+correctly handle newly excepted processes and do its normal workflow.</p>
+
+### SetActive {#SetActive}
+
+<p>Set the active state of the limbo. Will trigger the |WatchActive| event
+if there was a change, meaning that any listening components will receive
+a notification. This includes the caller of |SetActive|.</p>
+<p>When a limbo is inactive, there will not be any processes waiting on it,
+meaning that any waiting processes will be freed upon deactivating the
+limbo.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>active</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
 
 ### WatchActive {#WatchActive}
 
 <p>Watchs for changes determining whether the limbo is currently active,
 using a Hanging Get pattern. An active limbo could be empty (not have
-any processes waiting on an exception). However, an inactive limbo is
-guaranteed to not have any processes waiting in it.</p>
+any processes waiting on an exception).
+When a limbo is inactive, there will not be any processes waiting on it.</p>
 
 #### Request
 <table>
@@ -462,7 +492,7 @@ given by an exception channel.</p>
 ### ProcessExceptionMetadata {#ProcessExceptionMetadata}
 
 
-*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#98)*
+*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#113)*
 
 <p>Intended to be read only metadada associated with an exception waiting in
 limbo. The handles provided will only have read-only access to the resource,
