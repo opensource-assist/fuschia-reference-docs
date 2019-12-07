@@ -73,8 +73,7 @@ terminate.</li>
 ### CreateAccount {#CreateAccount}
 
 <p>Creates a completely new Fuchsia account.</p>
-<p><code>account_id</code> The new account's local identifier.
-<code>auth_mechanism_id</code> An <code>AuthMechanismId</code> for a storage
+<p><code>auth_mechanism_id</code> An <code>AuthMechanismId</code> for a storage
 unlock-capable authentication mechanism. If
 provided, a single enrollment of that
 mechanism will be created for storage
@@ -86,11 +85,6 @@ state.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>account_id</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
             <td><code>auth_mechanism_id</code></td>
             <td>
                 <code>string[2083]?</code>
@@ -112,19 +106,13 @@ state.</p>
 
 <p>Loads information about a Fuchsia account that was previously provisioned
 on the current device.</p>
-<p><code>id</code> The account's local identifier.</p>
 <p>Fails with FAILED_PRECONDITION if the AccountHandler is not in the <code>Uninitialized</code>
 state.</p>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>id</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr></table>
+    </table>
 
 
 #### Response
@@ -221,19 +209,13 @@ the account to disk if the account is persistent and makes it available
 for use.</p>
 <p>Moves the AccountHandler from the <code>Transferred</code> state to the
 <code>Initialized</code> state.</p>
-<p><code>id</code> The account's local identifier.</p>
 <p>Fails with FAILED_PRECONDITION if the AccountHandler is not in the <code>Transferred</code>
 state.</p>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>id</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr></table>
+    </table>
 
 
 #### Response
@@ -428,7 +410,7 @@ component if it hasn't already exited.</p>
 
 
 ## AccountHandlerContext {#AccountHandlerContext}
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#261)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#253)*
 
 <p>An interface that supplies the account and authentication services that
 an AccountHandler needs to perform its role in the system.</p>
@@ -762,7 +744,7 @@ AuthProviderConfig.auth_provider_type
 ### AccountData {#AccountData}
 
 
-*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#308)*
+*Defined in [fuchsia.identity.internal/account_handler.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#300)*
 
 <p>Contents of an account, used for serialization during account transfer.</p>
 
@@ -1093,7 +1075,7 @@ AuthProviderConfig.auth_provider_type
                 <code>array</code>[<code><a class='link' href='#HASH_SALT_SIZE'>HASH_SALT_SIZE</a></code>]</td>
             <td></td>
         </tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#314">EncryptedAccountData</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#306">EncryptedAccountData</a></td>
             <td>
                 <code>vector</code></td>
             <td><p>Encrypted form of AccountData.</p>
