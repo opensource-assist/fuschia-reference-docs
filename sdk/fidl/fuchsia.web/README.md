@@ -1993,7 +1993,7 @@ Type: <code>uint64</code>
             <td>AUDIO</td>
             <td>2</td>
             <td><p>Enables audio input and output. Requires <a class='link' href='#fuchsia.media.Audio'>fuchsia.media.Audio</a> and
-<a class='link' href='#fuchsia.media.AudioConsumer'>fuchsia.media.AudioConsumer</a> service.</p>
+<a class='link' href='#fuchsia.media.SessionAudioConsumerFactory'>fuchsia.media.SessionAudioConsumerFactory</a> service.</p>
 </td>
         </tr><tr>
             <td>VULKAN</td>
