@@ -153,6 +153,8 @@ toc:
   path: /reference/fidl/fuchsia.location.namedplace
 - title: fuchsia.logger
   path: /reference/fidl/fuchsia.logger
+- title: fuchsia.lowpan
+  path: /reference/fidl/fuchsia.lowpan
 - title: fuchsia.math
   path: /reference/fidl/fuchsia.math
 - title: fuchsia.media

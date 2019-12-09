@@ -323,6 +323,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.lowpan/index">fuchsia.lowpan</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.math/index">fuchsia.math</a></td>
     <td></td>
 </tr>
