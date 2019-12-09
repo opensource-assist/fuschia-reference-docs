@@ -195,6 +195,29 @@ requests.</p>
             </td>
         </tr></table>
 
+### WatchControllerParameters {#WatchControllerParameters}
+
+<p>Returns the current controller parameter state. If the parameters have not changed since the
+last time this message was received, then this method does not return until there is a
+change.
+(see <a href="//docs/development/api/fidl.md#delay-responses-using-hanging-gets">hanging get pattern</a>)</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>parameters</code></td>
+            <td>
+                <code><a class='link' href='#ControllerParameters'>ControllerParameters</a></code>
+            </td>
+        </tr></table>
+
 ### WatchLeScanStates {#WatchLeScanStates}
 
 <p>Returns the most recent set of state transitions for the link layer LE scan procedure. This
@@ -332,6 +355,42 @@ already pending.
 
 
 ## **ENUMS**
+
+### LegacyAdvertisingType {#LegacyAdvertisingType}
+Type: <code>uint8</code>
+
+*Defined in [fuchsia.bluetooth.test/controller_states.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/controller_states.fidl#31)*
+
+<p>LE legacy advertising types from Bluetooth Core Specification 5.1 Vol 2, Part E, Section 7.8.5.</p>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>ADV_IND</code></td>
+            <td><code>0</code></td>
+            <td><p>Connectable and scannable.</p>
+</td>
+        </tr><tr>
+            <td><code>ADV_DIRECT_IND</code></td>
+            <td><code>1</code></td>
+            <td><p>Connectable, high-duty cycle, directed.</p>
+</td>
+        </tr><tr>
+            <td><code>ADV_SCAN_IND</code></td>
+            <td><code>2</code></td>
+            <td><p>Scannable, undirected.</p>
+</td>
+        </tr><tr>
+            <td><code>ADV_NONCONN_IND</code></td>
+            <td><code>3</code></td>
+            <td><p>Non-connectable, undirected</p>
+</td>
+        </tr><tr>
+            <td><code>SCAN_RSP</code></td>
+            <td><code>4</code></td>
+            <td><p>Scan response</p>
+</td>
+        </tr></table>
 
 ### EmulatorError {#EmulatorError}
 Type: <code>uint32</code>
@@ -702,45 +761,171 @@ values are taken from Bluetooth Core Specification v5.1, Vol 2, Part D.</p>
             <td></td>
         </tr></table>
 
-### LegacyAdvertisingType {#LegacyAdvertisingType}
-Type: <code>uint8</code>
-
-*Defined in [fuchsia.bluetooth.test/le_procedures.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#13)*
-
-<p>LE legacy advertising types from Bluetooth Core Specification 5.1 Vol 2, Part E, Section 7.8.5.</p>
-
-
-<table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>ADV_IND</code></td>
-            <td><code>0</code></td>
-            <td><p>Connectable and scannable.</p>
-</td>
-        </tr><tr>
-            <td><code>ADV_DIRECT_IND</code></td>
-            <td><code>1</code></td>
-            <td><p>Connectable, high-duty cycle, directed.</p>
-</td>
-        </tr><tr>
-            <td><code>ADV_SCAN_IND</code></td>
-            <td><code>2</code></td>
-            <td><p>Scannable, undirected.</p>
-</td>
-        </tr><tr>
-            <td><code>ADV_NONCONN_IND</code></td>
-            <td><code>3</code></td>
-            <td><p>Non-connectable, undirected</p>
-</td>
-        </tr><tr>
-            <td><code>SCAN_RSP</code></td>
-            <td><code>4</code></td>
-            <td><p>Scan response</p>
-</td>
-        </tr></table>
-
 
 
 ## **TABLES**
+
+### ControllerParameters {#ControllerParameters}
+
+
+*Defined in [fuchsia.bluetooth.test/controller_states.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/controller_states.fidl#20)*
+
+<p>Contains Bluetooth controller &amp; baseband parameters that are writable by the host but don't
+fall under a particular procedural category (as are those defined below).</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>local_name</code></td>
+            <td>
+                <code>string[248]</code>
+            </td>
+            <td><p>The local name used for the Link Layer name discovery procedure. This parameter only applies
+for the BR/EDR transport. In LE, the local name is provided as an advertising parameter and
+via GATT.</p>
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>device_class</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#DeviceClass'>DeviceClass</a></code>
+            </td>
+            <td><p>The local &quot;Class of Device&quot; used during the BR/EDR inquiry procedure.</p>
+</td>
+        </tr></table>
+
+### LegacyAdvertisingState {#LegacyAdvertisingState}
+
+
+*Defined in [fuchsia.bluetooth.test/controller_states.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/controller_states.fidl#49)*
+
+<p>Controller parameters for legacy advertising.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>enabled</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td><p>True if advertising has been enabled using the HCI_LE_Set_Advertising_Enable command.
+This field is always present.</p>
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>type</code></td>
+            <td>
+                <code><a class='link' href='#LegacyAdvertisingType'>LegacyAdvertisingType</a></code>
+            </td>
+            <td><p>The most recently configured advertising type. This field is always present. Defaults to
+<a class='link' href='#LegacyAdvertisingType.ADV_IND'>LegacyAdvertisingType.ADV_IND</a>.</p>
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>address_type</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#AddressType'>AddressType</a></code>
+            </td>
+            <td><p>The LE address type being used for advertising. This field is always present. Defaults to
+<a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#AddressType.PUBLIC'>AddressType.PUBLIC</a>.</p>
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>interval_min</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td><p>The host-specified advertising interval range parameters. Present only if configured.</p>
+</td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>interval_max</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>advertising_data</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[31]</code>
+            </td>
+            <td><p>Any configured advertising and scan response data. Present only if either field is non-zero.</p>
+</td>
+        </tr><tr>
+            <td>7</td>
+            <td><code>scan_response</code></td>
+            <td>
+                <code>vector&lt;uint8&gt;[31]</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### LeScanState {#LeScanState}
+
+
+*Defined in [fuchsia.bluetooth.test/controller_states.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/controller_states.fidl#73)*
+
+<p>Represents the LE scan state. The fields are present if scan parameters have been
+configured.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>enabled</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td><p>True if a scan is enabled.</p>
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>active</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td><p>True if an active scan is enabled. Otherwise the scan is passive.</p>
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>interval</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td><p>The scan interval and window parameters. These are defined in Bluetooth controller
+&quot;timeslices&quot; where 1 slice = 0.625 ms. Valid values range from 0x4 (2.5 ms) to 0x4000 (10.24
+ms).</p>
+</td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>window</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>filter_duplicates</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td><p>True if duplicate filtering has been enabled.</p>
+</td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>address_type</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#AddressType'>AddressType</a></code>
+            </td>
+            <td><p>The type of local device address used.</p>
+</td>
+        </tr></table>
 
 ### EmulatorSettings {#EmulatorSettings}
 
@@ -883,137 +1068,6 @@ connection requests if not connectable.</p>
 </td>
         </tr></table>
 
-### LegacyAdvertisingState {#LegacyAdvertisingState}
-
-
-*Defined in [fuchsia.bluetooth.test/le_procedures.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#31)*
-
-<p>Controller parameters for legacy advertising.</p>
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>enabled</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td><p>True if advertising has been enabled using the HCI_LE_Set_Advertising_Enable command.
-This field is always present.</p>
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>type</code></td>
-            <td>
-                <code><a class='link' href='#LegacyAdvertisingType'>LegacyAdvertisingType</a></code>
-            </td>
-            <td><p>The most recently configured advertising type. This field is always present. Defaults to
-<a class='link' href='#LegacyAdvertisingType.ADV_IND'>LegacyAdvertisingType.ADV_IND</a>.</p>
-</td>
-        </tr><tr>
-            <td>3</td>
-            <td><code>address_type</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#AddressType'>AddressType</a></code>
-            </td>
-            <td><p>The LE address type being used for advertising. This field is always present. Defaults to
-<a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#AddressType.PUBLIC'>AddressType.PUBLIC</a>.</p>
-</td>
-        </tr><tr>
-            <td>4</td>
-            <td><code>interval_min</code></td>
-            <td>
-                <code>uint16</code>
-            </td>
-            <td><p>The host-specified advertising interval range parameters. Present only if configured.</p>
-</td>
-        </tr><tr>
-            <td>5</td>
-            <td><code>interval_max</code></td>
-            <td>
-                <code>uint16</code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td>6</td>
-            <td><code>advertising_data</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[31]</code>
-            </td>
-            <td><p>Any configured advertising and scan response data. Present only if either field is non-zero.</p>
-</td>
-        </tr><tr>
-            <td>7</td>
-            <td><code>scan_response</code></td>
-            <td>
-                <code>vector&lt;uint8&gt;[31]</code>
-            </td>
-            <td></td>
-        </tr></table>
-
-### LeScanState {#LeScanState}
-
-
-*Defined in [fuchsia.bluetooth.test/le_procedures.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#55)*
-
-<p>Represents the LE scan state. The fields are present if scan parameters have been
-configured.</p>
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>enabled</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td><p>True if a scan is enabled.</p>
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>active</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td><p>True if an active scan is enabled. Otherwise the scan is passive.</p>
-</td>
-        </tr><tr>
-            <td>3</td>
-            <td><code>interval</code></td>
-            <td>
-                <code>uint16</code>
-            </td>
-            <td><p>The scan interval and window parameters. These are defined in Bluetooth controller
-&quot;timeslices&quot; where 1 slice = 0.625 ms. Valid values range from 0x4 (2.5 ms) to 0x4000 (10.24
-ms).</p>
-</td>
-        </tr><tr>
-            <td>4</td>
-            <td><code>window</code></td>
-            <td>
-                <code>uint16</code>
-            </td>
-            <td></td>
-        </tr><tr>
-            <td>5</td>
-            <td><code>filter_duplicates</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-            <td><p>True if duplicate filtering has been enabled.</p>
-</td>
-        </tr><tr>
-            <td>6</td>
-            <td><code>address_type</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#AddressType'>AddressType</a></code>
-            </td>
-            <td><p>The type of local device address used.</p>
-</td>
-        </tr></table>
-
 
 
 ## **UNIONS**
@@ -1085,15 +1139,27 @@ ms).</p>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#9">MAX_LEGACY_ADVERTISING_DATA_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/controller_states.fidl#11">MAX_LOCAL_NAME_LENGTH</a></td>
+            <td>
+                    <code>248</code>
+                </td>
+                <td><code>uint8</code></td>
+            <td><p>The maximum size (in bytes) of a local name assigned using the HCI_Write_Local_Name command
+(see Core Specification v5.1, Vol 2, Part E, 7.3.11).</p>
+</td>
+        </tr>
+    <tr>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/controller_states.fidl#15">MAX_LEGACY_ADVERTISING_DATA_LENGTH</a></td>
             <td>
                     <code>31</code>
                 </td>
                 <td><code>uint8</code></td>
-            <td></td>
+            <td><p>Advertising data MTUs for legacy (4.x) and extended (5.x) advertising PDU types
+(see Core Specification v5.1, Vol 2, Part E, sections 7.3.11 &amp; 7.8.54).</p>
+</td>
         </tr>
     <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/le_procedures.fidl#10">MAX_EXTENDED_ADVERTISING_DATA_LENGTH</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/controller_states.fidl#16">MAX_EXTENDED_ADVERTISING_DATA_LENGTH</a></td>
             <td>
                     <code>251</code>
                 </td>
