@@ -1209,7 +1209,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### Appearance {#Appearance}
-Type: <code>uint32</code>
+Type: <code>uint16</code>
 
 *Defined in [fuchsia.bluetooth.control/remote_device.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.control/remote_device.fidl#14)*
 
