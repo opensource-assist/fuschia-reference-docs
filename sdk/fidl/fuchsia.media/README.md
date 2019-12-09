@@ -1760,8 +1760,8 @@ need to be skipped in order to present the packet at the scheduled time.</p>
 
 ### SetUsage {#SetUsage}
 
-<p>Sets the usage of the render stream.  This may be changed on the fly, but
-packets in flight may be affected by the new usage.</p>
+<p>Sets the usage of the render stream. This must be called before a call to
+|SetPcmStreamType|.</p>
 
 #### Request
 <table>
