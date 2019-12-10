@@ -1261,18 +1261,18 @@ dashes.</p>
 directory:</p>
 <ul>
 <li><a class='link' href='#fuchsia.accessibility.semantics.SemanticsManager'>fuchsia.accessibility.semantics.SemanticsManager</a></li>
-<li><a class='link' href='#fuchsia.deprecatedtimezone.Timezone'>fuchsia.deprecatedtimezone.Timezone</a></li>
 <li><a class='link' href='#fuchsia.device.NameProvider'>fuchsia.device.NameProvider</a></li>
 <li><a class='link' href='#fuchsia.fonts.Provider'>fuchsia.fonts.Provider</a></li>
+<li><a class='link' href='#fuchsia.intl.PropertyProvider'>fuchsia.intl.PropertyProvider</a></li>
 <li><a class='link' href='#fuchsia.logger.LogSink'>fuchsia.logger.LogSink</a></li>
 <li><a class='link' href='#fuchsia.process.Launcher'>fuchsia.process.Launcher</a></li>
 </ul>
 <p>The following services must be present in order to present web content in a Scenic view
 using <a class='link' href='../fuchsia.web.Frame/'>fuchsia.web.Frame</a>/<a class='link' href='../fuchsia.web.Frame/#CreateView'>CreateView</a>:</p>
 <ul>
-<li><a class='link' href='#fuchsia.ui.scenic.Scenic'>fuchsia.ui.scenic.Scenic</a></li>
 <li><a class='link' href='#fuchsia.ui.input.ImeService'>fuchsia.ui.input.ImeService</a></li>
 <li><a class='link' href='#fuchsia.ui.input.ImeVisibilityService'>fuchsia.ui.input.ImeVisibilityService</a></li>
+<li><a class='link' href='#fuchsia.ui.scenic.Scenic'>fuchsia.ui.scenic.Scenic</a></li>
 </ul>
 </td>
         </tr><tr>

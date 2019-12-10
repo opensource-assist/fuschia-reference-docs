@@ -86,6 +86,46 @@ https://fuchsia.dev/fuchsia-src/development/api/fidl.md#delay-responses-using-ha
             </td>
         </tr></table>
 
+### SetAutoBrightnessOffset {#SetAutoBrightnessOffset}
+
+<p>Sets the brightness offset.
+This will change the built-in brightness curve by the factor of the offset.
+The offset is in the range of -1.0 to 1.0.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>offset</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+        </tr></table>
+
+
+
+### WatchAutoBrightnessOffset {#WatchAutoBrightnessOffset}
+
+<p>Gets the current auto brightness offset.
+This call implements the Hanging Get protocol as detailed in
+https://fuchsia.dev/fuchsia-src/development/api/fidl.md#delay-responses-using-hanging-gets</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>offset</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+        </tr></table>
+
 ### SetBrightnessTable {#SetBrightnessTable}
 
 <p>Sets the brightness curve as a set of points.
@@ -182,7 +222,7 @@ screen's color adjustment matrix.</p>
 ## **STRUCTS**
 
 ### BrightnessPoint {#BrightnessPoint}
-*Defined in [fuchsia.ui.brightness/brightness.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/brightness.fidl#42)*
+*Defined in [fuchsia.ui.brightness/brightness.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/brightness.fidl#51)*
 
 
 
@@ -208,7 +248,7 @@ screen's color adjustment matrix.</p>
 </table>
 
 ### BrightnessTable {#BrightnessTable}
-*Defined in [fuchsia.ui.brightness/brightness.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/brightness.fidl#49)*
+*Defined in [fuchsia.ui.brightness/brightness.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/brightness.fidl#58)*
 
 
 
