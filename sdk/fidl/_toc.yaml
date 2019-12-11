@@ -89,6 +89,8 @@ toc:
   path: /reference/fidl/fuchsia.gpu.magma
 - title: fuchsia.hardware.audio
   path: /reference/fidl/fuchsia.hardware.audio
+- title: fuchsia.hardware.backlight
+  path: /reference/fidl/fuchsia.hardware.backlight
 - title: fuchsia.hardware.block
   path: /reference/fidl/fuchsia.hardware.block
 - title: fuchsia.hardware.block.partition

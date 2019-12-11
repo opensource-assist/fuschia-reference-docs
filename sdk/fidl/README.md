@@ -184,6 +184,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.hardware.backlight/index">fuchsia.hardware.backlight</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.hardware.block/index">fuchsia.hardware.block</a></td>
     <td></td>
 </tr>
