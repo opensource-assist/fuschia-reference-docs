@@ -492,10 +492,6 @@
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.simplecamera/index">fuchsia.simplecamera</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.space/index">fuchsia.space</a></td>
     <td></td>
 </tr>

@@ -486,7 +486,7 @@ in-flight downloads may not be interrupted.</p>
 
 
 ## RepositoryIterator {#RepositoryIterator}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#132)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#146)*
 
 <p>The iterator over all the repositories defined in a <code>PackageResolver</code>.</p>
 
@@ -714,7 +714,8 @@ Type: <code>uint64</code>
             <td>
                 <code>vector&lt;<a class='link' href='#RepositoryKeyConfig'>RepositoryKeyConfig</a>&gt;</code>
             </td>
-            <td><p>A vector of public keys. Required.</p>
+            <td><p>A vector of public keys that have signed the initial trusted root
+metadata. Required.</p>
 <p>These keys must match one of the trusted keys known to the system.</p>
 </td>
         </tr><tr>
@@ -734,12 +735,28 @@ Type: <code>uint64</code>
             <td><p>The package URL of the system update package. Optional.</p>
 <p>Only used for the fuchsia-pkg://fuchsia.com/ repo.</p>
 </td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>root_version</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td><p>The initial trusted root metadata version. Optional, defaulting to 1.</p>
+<p>This value describes the initial root metadata version the resolver will
+fetch to initialize trust, once it's signatures has been verified by the
+<code>root_keys</code>. It will then walk the chain of N+1, N+2, and etc to the
+latest version before the resolver fetches any targets.</p>
+<p>It is recommended that this <code>root_version</code> number and <code>root_keys </code> are
+kept reasonably in sync with the most recent published version of the
+root metadata, as that avoids the risk of an old and unused root key
+being used to compromise resolvers during the trust initialization.</p>
+</td>
         </tr></table>
 
 ### MirrorConfig {#MirrorConfig}
 
 
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#116)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#130)*
 
 <p>Describes the configuration necessary to connect to a mirror.</p>
 
@@ -788,7 +805,7 @@ Defaults to <code>mirror_url + &quot;/blobs&quot;</code>.</p>
 ## **XUNIONS**
 
 ### RepositoryKeyConfig {#RepositoryKeyConfig}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#102)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#116)*
 
 <p>Describes the keys used by the repository to authenticate it's packages.</p>
 <p>The only supported algorithm at the moment is ed25519.</p>
@@ -804,7 +821,7 @@ Defaults to <code>mirror_url + &quot;/blobs&quot;</code>.</p>
         </tr></table>
 
 ### RepositoryBlobKey {#RepositoryBlobKey}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#110)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#124)*
 
 <p>Describes a key used to decrypt blobs.</p>
 <p>The only supported algorithm at the moment is aes.</p>
