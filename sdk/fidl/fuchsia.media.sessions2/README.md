@@ -171,8 +171,30 @@ playback mode.</p>
 
 
 
+### WatchStatus {#WatchStatus}
+
+<p>Watches the session status. Leave a request hanging to receive a reply when
+the session status changes. The first request will be answered immediately with
+the current state.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>session_info_delta</code></td>
+            <td>
+                <code><a class='link' href='#SessionInfoDelta'>SessionInfoDelta</a></code>
+            </td>
+        </tr></table>
+
 ## SessionsWatcher {#SessionsWatcher}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#83)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#87)*
 
 <p><code>SessionsWatcher</code> watches the collection of published sessions.</p>
 
@@ -229,7 +251,7 @@ Delinquent watchers who do not reply will eventually be disconnected.</p>
     </table>
 
 ## Discovery {#Discovery}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#103)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#107)*
 
 <p><code>Discovery</code> observes the collection of published media sessions
 and connects clients to them.</p>
@@ -938,7 +960,7 @@ session is not active.</p>
 ### WatchOptions {#WatchOptions}
 
 
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#75)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#79)*
 
 <p>Options that specify which sessions are watched when watching the collection.</p>
 <p>The watched set is the set of sessions which satisfies all options.</p>
