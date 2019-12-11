@@ -379,7 +379,7 @@ satisfied, perhaps due to hardware limitations.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>buffer_collection_info</code></td>
@@ -406,7 +406,7 @@ if WaitForBuffersAllocated would block.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -478,7 +478,7 @@ instead.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>buffer_info</code></td>
@@ -577,7 +577,7 @@ initialized and contains no meaningful information.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>buffer_collection_info</code></td>
@@ -616,7 +616,7 @@ perhaps due to hardware limitations.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>buffer_info</code></td>
@@ -701,7 +701,7 @@ to the returned VMO or any associated child VMO being used.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>vmo</code></td>
@@ -748,7 +748,7 @@ the heap can get the vmo's koid for the heap's mapping.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>id</code></td>
@@ -2362,7 +2362,7 @@ insufficiently-defined combos).</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2381,7 +2381,7 @@ insufficiently-defined combos).</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2395,7 +2395,7 @@ insufficiently-defined combos).</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="FORMAT_MODIFIER_NONE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#16">FORMAT_MODIFIER_NONE</a></td>
             <td>
                     <code>0</code>
@@ -2403,7 +2403,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_VENDOR_NONE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#18">FORMAT_MODIFIER_VENDOR_NONE</a></td>
             <td>
                     <code>0</code>
@@ -2411,7 +2411,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_VENDOR_INTEL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#19">FORMAT_MODIFIER_VENDOR_INTEL</a></td>
             <td>
                     <code>72057594037927936</code>
@@ -2419,7 +2419,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_VENDOR_AMD">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#20">FORMAT_MODIFIER_VENDOR_AMD</a></td>
             <td>
                     <code>144115188075855872</code>
@@ -2427,7 +2427,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_VENDOR_NVIDIA">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#21">FORMAT_MODIFIER_VENDOR_NVIDIA</a></td>
             <td>
                     <code>216172782113783808</code>
@@ -2435,7 +2435,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_VENDOR_SAMSUNG">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#22">FORMAT_MODIFIER_VENDOR_SAMSUNG</a></td>
             <td>
                     <code>288230376151711744</code>
@@ -2443,7 +2443,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_VENDOR_QCOM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#23">FORMAT_MODIFIER_VENDOR_QCOM</a></td>
             <td>
                     <code>360287970189639680</code>
@@ -2451,7 +2451,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_VENDOR_VIVANTE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#24">FORMAT_MODIFIER_VENDOR_VIVANTE</a></td>
             <td>
                     <code>432345564227567616</code>
@@ -2459,7 +2459,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_VENDOR_BROADCOM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#25">FORMAT_MODIFIER_VENDOR_BROADCOM</a></td>
             <td>
                     <code>504403158265495552</code>
@@ -2467,7 +2467,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_VENDOR_ARM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#26">FORMAT_MODIFIER_VENDOR_ARM</a></td>
             <td>
                     <code>576460752303423488</code>
@@ -2475,7 +2475,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_VALUE_RESERVED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#28">FORMAT_MODIFIER_VALUE_RESERVED</a></td>
             <td>
                     <code>72057594037927935</code>
@@ -2483,7 +2483,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_INVALID">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#30">FORMAT_MODIFIER_INVALID</a></td>
             <td>
                     <code><a class='link' href='#FORMAT_MODIFIER_VALUE_RESERVED'>FORMAT_MODIFIER_VALUE_RESERVED</a></code>
@@ -2491,7 +2491,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_LINEAR">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#32">FORMAT_MODIFIER_LINEAR</a></td>
             <td>
                     <code>0</code>
@@ -2499,7 +2499,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_INTEL_I915_X_TILED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#39">FORMAT_MODIFIER_INTEL_I915_X_TILED</a></td>
             <td>
                     <code>72057594037927937</code>
@@ -2507,7 +2507,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_INTEL_I915_Y_TILED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#40">FORMAT_MODIFIER_INTEL_I915_Y_TILED</a></td>
             <td>
                     <code>72057594037927938</code>
@@ -2515,7 +2515,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_INTEL_I915_YF_TILED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#41">FORMAT_MODIFIER_INTEL_I915_YF_TILED</a></td>
             <td>
                     <code>72057594037927939</code>
@@ -2523,7 +2523,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_ARM_AFBC_16x16">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#56">FORMAT_MODIFIER_ARM_AFBC_16x16</a></td>
             <td>
                     <code>576460752303423489</code>
@@ -2531,7 +2531,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FORMAT_MODIFIER_ARM_AFBC_32x8">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/format_modifier.fidl#57">FORMAT_MODIFIER_ARM_AFBC_32x8</a></td>
             <td>
                     <code>576460752303423490</code>
@@ -2539,7 +2539,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_HEAPS_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/secure_mem.fidl#101">MAX_HEAPS_COUNT</a></td>
             <td>
                     <code>32</code>
@@ -2547,7 +2547,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="noneUsage">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#21">noneUsage</a></td>
             <td>
                     <code>1</code>
@@ -2555,7 +2555,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="cpuUsageRead">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#25">cpuUsageRead</a></td>
             <td>
                     <code>1</code>
@@ -2563,7 +2563,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="cpuUsageReadOften">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#26">cpuUsageReadOften</a></td>
             <td>
                     <code>2</code>
@@ -2571,7 +2571,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="cpuUsageWrite">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#27">cpuUsageWrite</a></td>
             <td>
                     <code>4</code>
@@ -2579,7 +2579,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="cpuUsageWriteOften">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#28">cpuUsageWriteOften</a></td>
             <td>
                     <code>8</code>
@@ -2587,7 +2587,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="vulkanUsageTransferSrc">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#32">vulkanUsageTransferSrc</a></td>
             <td>
                     <code>1</code>
@@ -2595,7 +2595,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="vulkanUsageTransferDst">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#33">vulkanUsageTransferDst</a></td>
             <td>
                     <code>2</code>
@@ -2603,7 +2603,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="vulkanUsageSampled">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#34">vulkanUsageSampled</a></td>
             <td>
                     <code>4</code>
@@ -2611,7 +2611,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="vulkanUsageStorage">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#35">vulkanUsageStorage</a></td>
             <td>
                     <code>8</code>
@@ -2619,7 +2619,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="vulkanUsageColorAttachment">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#36">vulkanUsageColorAttachment</a></td>
             <td>
                     <code>16</code>
@@ -2627,7 +2627,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="vulkanUsageStencilAttachment">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#37">vulkanUsageStencilAttachment</a></td>
             <td>
                     <code>32</code>
@@ -2635,7 +2635,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="vulkanUsageTransientAttachment">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#38">vulkanUsageTransientAttachment</a></td>
             <td>
                     <code>64</code>
@@ -2643,7 +2643,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="vulkanUsageInputAttachment">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#39">vulkanUsageInputAttachment</a></td>
             <td>
                     <code>128</code>
@@ -2651,7 +2651,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="displayUsageLayer">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#42">displayUsageLayer</a></td>
             <td>
                     <code>1</code>
@@ -2659,7 +2659,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="displayUsageCursor">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#43">displayUsageCursor</a></td>
             <td>
                     <code>2</code>
@@ -2667,7 +2667,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="videoUsageHwDecoder">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#47">videoUsageHwDecoder</a></td>
             <td>
                     <code>1</code>
@@ -2675,7 +2675,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="videoUsageHwEncoder">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#48">videoUsageHwEncoder</a></td>
             <td>
                     <code>2</code>
@@ -2683,7 +2683,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="videoUsageHwProtected">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#51">videoUsageHwProtected</a></td>
             <td>
                     <code>4</code>
@@ -2691,7 +2691,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="videoUsageCapture">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#52">videoUsageCapture</a></td>
             <td>
                     <code>8</code>
@@ -2699,7 +2699,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="videoUsageDecryptorOutput">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#65">videoUsageDecryptorOutput</a></td>
             <td>
                     <code>16</code>
@@ -2707,7 +2707,7 @@ insufficiently-defined combos).</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="videoUsageHwDecoderInternal">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-sysmem/usages.fidl#69">videoUsageHwDecoderInternal</a></td>
             <td>
                     <code>32</code>

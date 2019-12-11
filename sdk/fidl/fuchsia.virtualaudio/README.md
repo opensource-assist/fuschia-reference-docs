@@ -316,7 +316,7 @@ is activated, this value is returned by the driver in response to an
     <tr>
             <td><code>external_delay</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -427,7 +427,7 @@ the <code>-&gt;OnDefaultDeviceChanged()</code> event.</p>
     <tr>
             <td><code>plug_change_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>plugged</code></td>
@@ -527,7 +527,7 @@ ring buffer has been returned (i.e., before an
         </tr><tr>
             <td><code>external_delay</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -558,7 +558,7 @@ ring buffer has been returned (i.e., before an
         </tr><tr>
             <td><code>external_delay</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -713,7 +713,7 @@ streaming. This can only occur after a device is fully configured
     <tr>
             <td><code>start_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr></table>
 
@@ -733,7 +733,7 @@ position will re-begin at 0, if the device is again Started.</p>
     <tr>
             <td><code>stop_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>ring_position</code></td>
@@ -761,7 +761,7 @@ device has not yet Started streaming, then zero will always be returned.</p>
     <tr>
             <td><code>monotonic_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>ring_position</code></td>
@@ -790,7 +790,7 @@ that corresponds with that ring buffer position.</p>
     <tr>
             <td><code>monotonic_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>ring_position</code></td>
@@ -818,7 +818,7 @@ default. This, in turn, is exposed to clients by the
     <tr>
             <td><code>plug_change_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>plugged</code></td>
@@ -1015,7 +1015,7 @@ is activated, this value is returned by the driver in response to an
     <tr>
             <td><code>external_delay</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -1126,7 +1126,7 @@ the <code>-&gt;OnDefaultDeviceChanged()</code> event.</p>
     <tr>
             <td><code>plug_change_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>plugged</code></td>
@@ -1226,7 +1226,7 @@ ring buffer has been returned (i.e., before an
         </tr><tr>
             <td><code>external_delay</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -1257,7 +1257,7 @@ ring buffer has been returned (i.e., before an
         </tr><tr>
             <td><code>external_delay</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -1412,7 +1412,7 @@ streaming. This can only occur after a device is fully configured
     <tr>
             <td><code>start_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr></table>
 
@@ -1432,7 +1432,7 @@ position will re-begin at 0, if the device is again Started.</p>
     <tr>
             <td><code>stop_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>ring_position</code></td>
@@ -1460,7 +1460,7 @@ device has not yet Started streaming, then zero will always be returned.</p>
     <tr>
             <td><code>monotonic_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>ring_position</code></td>
@@ -1489,7 +1489,7 @@ that corresponds with that ring buffer position.</p>
     <tr>
             <td><code>monotonic_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>ring_position</code></td>
@@ -1517,7 +1517,7 @@ default. This, in turn, is exposed to clients by the
     <tr>
             <td><code>plug_change_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>plugged</code></td>
@@ -1714,7 +1714,7 @@ is activated, this value is returned by the driver in response to an
     <tr>
             <td><code>external_delay</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -1825,7 +1825,7 @@ the <code>-&gt;OnDefaultDeviceChanged()</code> event.</p>
     <tr>
             <td><code>plug_change_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>plugged</code></td>
@@ -1925,7 +1925,7 @@ ring buffer has been returned (i.e., before an
         </tr><tr>
             <td><code>external_delay</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -1956,7 +1956,7 @@ ring buffer has been returned (i.e., before an
         </tr><tr>
             <td><code>external_delay</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -2111,7 +2111,7 @@ streaming. This can only occur after a device is fully configured
     <tr>
             <td><code>start_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr></table>
 
@@ -2131,7 +2131,7 @@ position will re-begin at 0, if the device is again Started.</p>
     <tr>
             <td><code>stop_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>ring_position</code></td>
@@ -2159,7 +2159,7 @@ device has not yet Started streaming, then zero will always be returned.</p>
     <tr>
             <td><code>monotonic_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>ring_position</code></td>
@@ -2188,7 +2188,7 @@ that corresponds with that ring buffer position.</p>
     <tr>
             <td><code>monotonic_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>ring_position</code></td>
@@ -2216,7 +2216,7 @@ default. This, in turn, is exposed to clients by the
     <tr>
             <td><code>plug_change_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>plugged</code></td>
@@ -2415,7 +2415,7 @@ is activated, this value is returned by the driver in response to an
     <tr>
             <td><code>external_delay</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -2526,7 +2526,7 @@ the <code>-&gt;OnDefaultDeviceChanged()</code> event.</p>
     <tr>
             <td><code>plug_change_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>plugged</code></td>

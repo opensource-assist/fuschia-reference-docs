@@ -201,7 +201,7 @@
         </tr><tr>
             <td><code>time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -283,7 +283,7 @@ Type: <code>int8</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_TAGS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#18">MAX_TAGS</a></td>
             <td>
                     <code>5</code>
@@ -291,7 +291,7 @@ Type: <code>int8</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_TAG_LEN_BYTES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#21">MAX_TAG_LEN_BYTES</a></td>
             <td>
                     <code>63</code>
@@ -299,7 +299,7 @@ Type: <code>int8</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_TAGS_PER_LOG_MESSAGE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#45">MAX_TAGS_PER_LOG_MESSAGE</a></td>
             <td>
                     <code>5</code>
@@ -307,7 +307,7 @@ Type: <code>int8</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_DATAGRAM_LEN_BYTES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#50">MAX_DATAGRAM_LEN_BYTES</a></td>
             <td>
                     <code>2032</code>
@@ -315,7 +315,7 @@ Type: <code>int8</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_LOG_MANY_SIZE_BYTES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-logger/logger.fidl#89">MAX_LOG_MANY_SIZE_BYTES</a></td>
             <td>
                     <code>16384</code>

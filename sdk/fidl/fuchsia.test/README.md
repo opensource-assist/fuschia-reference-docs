@@ -21,7 +21,7 @@ the primary log stream used by this test case.</p>
     <tr>
             <td><code>name</code></td>
             <td>
-                <code>string[512]</code>
+                <code><a class='link' href='#Name'>Name</a></code>
             </td>
         </tr><tr>
             <td><code>primary_log</code></td>
@@ -43,7 +43,7 @@ available.</p>
     <tr>
             <td><code>name</code></td>
             <td>
-                <code>string[512]</code>
+                <code><a class='link' href='#Name'>Name</a></code>
             </td>
         </tr><tr>
             <td><code>outcome</code></td>
@@ -149,7 +149,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>name</code></td>
             <td>
-                <code>string[512]</code>
+                <code><a class='link' href='#Name'>Name</a></code>
             </td>
             <td><p>Used to show human readable results.</p>
 </td>
@@ -220,7 +220,7 @@ code.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="Name">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.test/suite.fidl#8">Name</a></td>
             <td>
                 <code>string</code></td>

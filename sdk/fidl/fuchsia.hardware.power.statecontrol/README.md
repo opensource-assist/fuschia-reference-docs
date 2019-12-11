@@ -114,7 +114,7 @@ Type: <code>uint8</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -128,7 +128,7 @@ Type: <code>uint8</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="SUSPEND_FLAG_REBOOT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-power-statecontrol/admin.fidl#12">SUSPEND_FLAG_REBOOT</a></td>
             <td>
                     <code>3705405696</code>
@@ -137,7 +137,7 @@ Type: <code>uint8</code>
             <td><p>All available suspend flags.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="SUSPEND_FLAG_REBOOT_BOOTLOADER">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-power-statecontrol/admin.fidl#13">SUSPEND_FLAG_REBOOT_BOOTLOADER</a></td>
             <td>
                     <code>3705405697</code>
@@ -145,7 +145,7 @@ Type: <code>uint8</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SUSPEND_FLAG_REBOOT_RECOVERY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-power-statecontrol/admin.fidl#14">SUSPEND_FLAG_REBOOT_RECOVERY</a></td>
             <td>
                     <code>3705405698</code>
@@ -153,7 +153,7 @@ Type: <code>uint8</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SUSPEND_FLAG_POWEROFF">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-power-statecontrol/admin.fidl#15">SUSPEND_FLAG_POWEROFF</a></td>
             <td>
                     <code>3705405952</code>
@@ -161,7 +161,7 @@ Type: <code>uint8</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SUSPEND_FLAG_MEXEC">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-power-statecontrol/admin.fidl#16">SUSPEND_FLAG_MEXEC</a></td>
             <td>
                     <code>3705406208</code>
@@ -169,7 +169,7 @@ Type: <code>uint8</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SUSPEND_FLAG_SUSPEND_RAM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-power-statecontrol/admin.fidl#17">SUSPEND_FLAG_SUSPEND_RAM</a></td>
             <td>
                     <code>3705406464</code>
@@ -177,7 +177,7 @@ Type: <code>uint8</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_SYSTEM_POWER_STATES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-power-statecontrol/admin.fidl#31">MAX_SYSTEM_POWER_STATES</a></td>
             <td>
                     <code>7</code>

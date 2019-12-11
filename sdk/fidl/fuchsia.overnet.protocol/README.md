@@ -172,7 +172,7 @@ and is owned by the first peer. The target node is identified by <code>to</code>
         </tr><tr>
             <td><code>local_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LinkId'>LinkId</a></code>
             </td>
             <td><p>An identifier (chosen by the link owner) to label this link.
 The link owner must guarantee that the tuple (to, local_id) is unique for each of it's held
@@ -875,7 +875,7 @@ Type: <code>uint64</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_SERVICE_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#8">MAX_SERVICE_NAME_LENGTH</a></td>
             <td>
                     <code>255</code>
@@ -891,7 +891,7 @@ Type: <code>uint64</code>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="LinkId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/labels.fidl#18">LinkId</a></td>
             <td>
                 <code>uint64</code></td>

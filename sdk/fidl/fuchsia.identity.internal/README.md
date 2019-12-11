@@ -87,7 +87,7 @@ state.</p>
     <tr>
             <td><code>auth_mechanism_id</code></td>
             <td>
-                <code>string[2083]?</code>
+                <code><a class='link' href='../fuchsia.identity.account/'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/#AuthMechanismId'>AuthMechanismId</a></code>
             </td>
         </tr></table>
 
@@ -186,7 +186,7 @@ using <code>EncryptAccountData</code>.</p>
     <tr>
             <td><code>encrypted_account_data</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[16000]</code>
+                <code><a class='link' href='#EncryptedAccountData'>EncryptedAccountData</a></code>
             </td>
         </tr></table>
 
@@ -381,7 +381,7 @@ states.</p>
     <tr>
             <td><code>salt</code></td>
             <td>
-                <code>uint8[32]</code>
+                <code><a class='link' href='#HashSalt'>HashSalt</a></code>
             </td>
         </tr></table>
 
@@ -626,7 +626,7 @@ AuthProviderConfig.auth_provider_type
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>encrypted_account_data</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[16000]</code>
+                <code><a class='link' href='#EncryptedAccountData'>EncryptedAccountData</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -684,7 +684,7 @@ AuthProviderConfig.auth_provider_type
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>id_hash</code></td>
             <td>
-                <code>uint8[32]</code>
+                <code><a class='link' href='#GlobalIdHash'>GlobalIdHash</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -755,7 +755,7 @@ AuthProviderConfig.auth_provider_type
             <td>1</td>
             <td><code>global_id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='../fuchsia.identity.account/'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/#GlobalAccountId'>GlobalAccountId</a></code>
             </td>
             <td><p>A globally unique identifier for the account.</p>
 </td>
@@ -1040,7 +1040,7 @@ AuthProviderConfig.auth_provider_type
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="HASH_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#12">HASH_SIZE</a></td>
             <td>
                     <code>32</code>
@@ -1048,7 +1048,7 @@ AuthProviderConfig.auth_provider_type
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="HASH_SALT_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#13">HASH_SALT_SIZE</a></td>
             <td>
                     <code>32</code>
@@ -1064,17 +1064,17 @@ AuthProviderConfig.auth_provider_type
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="GlobalIdHash">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#14">GlobalIdHash</a></td>
             <td>
                 <code>array</code>[<code><a class='link' href='#HASH_SIZE'>HASH_SIZE</a></code>]</td>
             <td></td>
-        </tr><tr>
+        </tr><tr id="HashSalt">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#15">HashSalt</a></td>
             <td>
                 <code>array</code>[<code><a class='link' href='#HASH_SALT_SIZE'>HASH_SALT_SIZE</a></code>]</td>
             <td></td>
-        </tr><tr>
+        </tr><tr id="EncryptedAccountData">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/identity/fidl/account_handler.fidl#306">EncryptedAccountData</a></td>
             <td>
                 <code>vector</code></td>

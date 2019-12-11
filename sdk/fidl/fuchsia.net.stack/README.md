@@ -20,7 +20,7 @@ by the stack for use in subsequent calls.</p>
     <tr>
             <td><code>topological_path</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#device_path'>device_path</a></code>
             </td>
         </tr><tr>
             <td><code>device</code></td>
@@ -81,7 +81,7 @@ by the stack for use in subsequent calls.</p>
     <tr>
             <td><code>ifs</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#InterfaceInfo'>InterfaceInfo</a>&gt;[255]</code>
+                <code><a class='link' href='#interface_list'>interface_list</a></code>
             </td>
         </tr></table>
 
@@ -638,7 +638,7 @@ subsequently re-added. It is not stable across netstack instances.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>name</code></td>
             <td>
-                <code>string[32]</code>
+                <code><a class='link' href='#interface_name'>interface_name</a></code>
             </td>
             <td><p>Human friendly name of the interface. eg. eth001, wlanx35.</p>
 </td>
@@ -646,7 +646,7 @@ subsequently re-added. It is not stable across netstack instances.</p>
         </tr><tr>
             <td><code>topopath</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#device_path'>device_path</a></code>
             </td>
             <td><p>The topological path to the device, representing a stable identifier for the interface
 hardware.</p>
@@ -655,7 +655,7 @@ hardware.</p>
         </tr><tr>
             <td><code>filepath</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#device_path'>device_path</a></code>
             </td>
             <td><p>An unstable file path corresponding to the interface. Used in watching the creation
 and destruction of the interface, or in accessing the interface using netdump.</p>
@@ -705,7 +705,7 @@ fuchsia.hardware.ethernet.<code>INFO_FEATURE_*</code>.</p>
         </tr><tr>
             <td><code>addresses</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#InterfaceAddress'>InterfaceAddress</a>&gt;[255]</code>
+                <code><a class='link' href='#interface_address_list'>interface_address_list</a></code>
             </td>
             <td><p>The list of addresses currently assigned to the interface.</p>
 </td>
@@ -1204,25 +1204,25 @@ of the next hop in the route.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="interface_address_list">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#11">interface_address_list</a></td>
             <td>
                 <code>vector</code></td>
             <td><p>A list of IP addresses for an interface.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="device_path">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#14">device_path</a></td>
             <td>
                 <code>string</code></td>
             <td><p>A path to a device node.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="interface_list">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#17">interface_list</a></td>
             <td>
                 <code>vector</code></td>
             <td><p>A list of interface descriptors.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="interface_name">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.stack/stack.fidl#20">interface_name</a></td>
             <td>
                 <code>string</code></td>

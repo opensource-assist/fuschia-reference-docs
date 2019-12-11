@@ -19,7 +19,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>timestamp</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>The monotonic time at which the record was generated.</p>
 </td>
@@ -116,7 +116,7 @@
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_ARGS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/diagnostics/streams/record.fidl#11">MAX_ARGS</a></td>
             <td>
                     <code>15</code>
@@ -126,7 +126,7 @@
 <p>https://fuchsia.dev/fuchsia-src/development/tracing/trace-format#arguments</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_ARG_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/diagnostics/streams/record.fidl#15">MAX_ARG_NAME_LENGTH</a></td>
             <td>
                     <code>256</code>
@@ -136,7 +136,7 @@
 to be used repeatedly, many times.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_TEXT_ARG_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/diagnostics/streams/record.fidl#18">MAX_TEXT_ARG_LENGTH</a></td>
             <td>
                     <code>32768</code>

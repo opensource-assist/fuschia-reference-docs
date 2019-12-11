@@ -215,7 +215,7 @@ which is set currently</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_DVFS_OPPS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.scpi/scpi.fidl#8">MAX_DVFS_OPPS</a></td>
             <td>
                     <code>16</code>

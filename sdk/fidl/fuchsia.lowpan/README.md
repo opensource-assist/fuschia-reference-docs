@@ -710,7 +710,7 @@ or the last device registered if no interface name is given.</p>
     <tr>
             <td><code>name</code></td>
             <td>
-                <code>string[32]?</code>
+                <code><a class='link' href='#interface_name'>interface_name</a></code>
             </td>
         </tr><tr>
             <td><code>device</code></td>
@@ -762,7 +762,7 @@ or the last device registered if no interface name is given.</p>
     <tr>
             <td><code>name</code></td>
             <td>
-                <code>string[32]</code>
+                <code><a class='link' href='#interface_name'>interface_name</a></code>
             </td>
         </tr></table>
 
@@ -778,7 +778,7 @@ or the last device registered if no interface name is given.</p>
     <tr>
             <td><code>name</code></td>
             <td>
-                <code>string[32]</code>
+                <code><a class='link' href='#interface_name'>interface_name</a></code>
             </td>
         </tr></table>
 
@@ -799,7 +799,7 @@ for the device is returned.</p>
     <tr>
             <td><code>name</code></td>
             <td>
-                <code>string[32]?</code>
+                <code><a class='link' href='#interface_name'>interface_name</a></code>
             </td>
         </tr><tr>
             <td><code>device</code></td>
@@ -1196,7 +1196,7 @@ the network.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>name</code></td>
             <td>
-                <code>string[32]</code>
+                <code><a class='link' href='#interface_name'>interface_name</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1785,7 +1785,7 @@ is a 16-byte value.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="BEACON_INFO_FLAG_CAN_ASSIST">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/beacon_info.fidl#7">BEACON_INFO_FLAG_CAN_ASSIST</a></td>
             <td>
                     <code>1</code>
@@ -1793,7 +1793,7 @@ is a 16-byte value.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="LQI_UNSPECIFIED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/const.fidl#7">LQI_UNSPECIFIED</a></td>
             <td>
                     <code>0</code>
@@ -1801,7 +1801,7 @@ is a 16-byte value.</p>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="RSSI_UNSPECIFIED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/const.fidl#8">RSSI_UNSPECIFIED</a></td>
             <td>
                     <code>-128</code>
@@ -1809,7 +1809,7 @@ is a 16-byte value.</p>
                 <td><code>int8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="CHANNEL_UNSPECIFIED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/const.fidl#9">CHANNEL_UNSPECIFIED</a></td>
             <td>
                     <code>65535</code>
@@ -1817,7 +1817,7 @@ is a 16-byte value.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_CHANNELS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/const.fidl#11">MAX_CHANNELS</a></td>
             <td>
                     <code>100</code>
@@ -1825,7 +1825,7 @@ is a 16-byte value.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_NET_TYPE_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/const.fidl#12">MAX_NET_TYPE_LEN</a></td>
             <td>
                     <code>64</code>
@@ -1833,7 +1833,7 @@ is a 16-byte value.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_STREAM_SET_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/const.fidl#13">MAX_STREAM_SET_SIZE</a></td>
             <td>
                     <code>32</code>
@@ -1841,31 +1841,31 @@ is a 16-byte value.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="NET_TYPE_THREAD_1_X">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/const.fidl#15">NET_TYPE_THREAD_1_X</a></td>
             <td><code>org.threadgroup.std.thread.1</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="NET_TYPE_ZIGBEE_IP_1_X">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/const.fidl#16">NET_TYPE_ZIGBEE_IP_1_X</a></td>
             <td><code>org.zigbee.std.zigbee-ip.1</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="NET_TYPE_UNKNOWN_802_15_4_PID">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/const.fidl#17">NET_TYPE_UNKNOWN_802_15_4_PID</a></td>
             <td><code>fuchsia.lowpan.net_type.802.15.4.pid</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="NET_TYPE_RAW_6LOWPAN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/const.fidl#18">NET_TYPE_RAW_6LOWPAN</a></td>
             <td><code>fuchsia.lowpan.net_type.6lowpan</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_LOWPAN_DEVICES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/service.fidl#9">MAX_LOWPAN_DEVICES</a></td>
             <td>
                     <code>8</code>
@@ -1881,7 +1881,7 @@ is a 16-byte value.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="interface_name">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.lowpan/service.fidl#7">interface_name</a></td>
             <td>
                 <code>string</code></td>

@@ -69,7 +69,7 @@ It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -110,7 +110,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -136,7 +136,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -157,7 +157,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>attributes</code></td>
@@ -194,7 +194,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -217,7 +217,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -254,7 +254,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -268,7 +268,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#sockaddr'>sockaddr</a></code>
             </td>
         </tr></table>
 
@@ -293,7 +293,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#sockaddr'>sockaddr</a></code>
             </td>
         </tr></table>
 
@@ -385,7 +385,7 @@ buffered.</p>
         </tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#sockaddr'>sockaddr</a></code>
             </td>
         </tr></table>
 
@@ -410,7 +410,7 @@ buffered.</p>
         </tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#sockaddr'>sockaddr</a></code>
             </td>
         </tr></table>
 
@@ -434,7 +434,7 @@ buffered.</p>
         </tr><tr>
             <td><code>optval</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[900]</code>
+                <code><a class='link' href='#sockopt'>sockopt</a></code>
             </td>
         </tr></table>
 
@@ -480,7 +480,7 @@ buffered.</p>
         </tr><tr>
             <td><code>optval</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[900]</code>
+                <code><a class='link' href='#sockopt'>sockopt</a></code>
             </td>
         </tr></table>
 
@@ -548,13 +548,13 @@ buffered.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="sockaddr">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#10">sockaddr</a></td>
             <td>
                 <code>vector</code></td>
             <td><p>Chosen to match <code>sizeof(struct sockaddr_storage)</code>.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="sockopt">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-posix-socket/socket.fidl#15">sockopt</a></td>
             <td>
                 <code>vector</code></td>

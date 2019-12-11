@@ -1138,7 +1138,7 @@ connection requests if not connectable.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_LOCAL_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/controller_states.fidl#11">MAX_LOCAL_NAME_LENGTH</a></td>
             <td>
                     <code>248</code>
@@ -1148,7 +1148,7 @@ connection requests if not connectable.</p>
 (see Core Specification v5.1, Vol 2, Part E, 7.3.11).</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_LEGACY_ADVERTISING_DATA_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/controller_states.fidl#15">MAX_LEGACY_ADVERTISING_DATA_LENGTH</a></td>
             <td>
                     <code>31</code>
@@ -1158,7 +1158,7 @@ connection requests if not connectable.</p>
 (see Core Specification v5.1, Vol 2, Part E, sections 7.3.11 &amp; 7.8.54).</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_EXTENDED_ADVERTISING_DATA_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.test/controller_states.fidl#16">MAX_EXTENDED_ADVERTISING_DATA_LENGTH</a></td>
             <td>
                     <code>251</code>

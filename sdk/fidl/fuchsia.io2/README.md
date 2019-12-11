@@ -575,7 +575,7 @@ what is allowed.</li>
     <tr>
             <td><code>path</code></td>
             <td>
-                <code>string[4095]</code>
+                <code><a class='link' href='#Path'>Path</a></code>
             </td>
         </tr><tr>
             <td><code>mode</code></td>
@@ -632,7 +632,7 @@ containing a remote channel.</li>
     <tr>
             <td><code>path</code></td>
             <td>
-                <code>string[4095]</code>
+                <code><a class='link' href='#Path'>Path</a></code>
             </td>
         </tr></table>
 
@@ -692,17 +692,17 @@ connection, and the connection identified by <code>dst_parent_token</code>:</p>
     <tr>
             <td><code>src</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#Name'>Name</a></code>
             </td>
         </tr><tr>
             <td><code>dst_parent_token</code></td>
             <td>
-                <code>handle&lt;handle&gt;</code>
+                <code><a class='link' href='#Token'>Token</a></code>
             </td>
         </tr><tr>
             <td><code>dst</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#Name'>Name</a></code>
             </td>
         </tr></table>
 
@@ -747,17 +747,17 @@ connection, and the connection identified by <code>dst_parent_token</code>:</p>
     <tr>
             <td><code>src</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#Name'>Name</a></code>
             </td>
         </tr><tr>
             <td><code>dst_parent_token</code></td>
             <td>
-                <code>handle&lt;handle&gt;</code>
+                <code><a class='link' href='#Token'>Token</a></code>
             </td>
         </tr><tr>
             <td><code>dst</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#Name'>Name</a></code>
             </td>
         </tr></table>
 
@@ -1142,7 +1142,7 @@ is still updated if in append mode.</li>
     <tr>
             <td><code>data</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
+                <code><a class='link' href='#Transfer'>Transfer</a></code>
             </td>
         </tr></table>
 
@@ -1229,7 +1229,7 @@ ensuring write access without mutating the file.</li>
     <tr>
             <td><code>data</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
+                <code><a class='link' href='#Transfer'>Transfer</a></code>
             </td>
         </tr><tr>
             <td><code>offset</code></td>
@@ -2109,7 +2109,7 @@ between operations.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>data</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
+                <code><a class='link' href='#Transfer'>Transfer</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2145,7 +2145,7 @@ between operations.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>data</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[8192]</code>
+                <code><a class='link' href='#Transfer'>Transfer</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2210,7 +2210,7 @@ between operations.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>token</code></td>
             <td>
-                <code>handle&lt;handle&gt;</code>
+                <code><a class='link' href='#Token'>Token</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2355,7 +2355,7 @@ negotiation. Provides auxiliary handles if applicable.</p>
             <td>2</td>
             <td><code>rights</code></td>
             <td>
-                <code><a class='link' href='#Operations'>Operations</a></code>
+                <code><a class='link' href='#Rights'>Rights</a></code>
             </td>
             <td><p>Information about the rights possessed by the current connection.
 Note: <code>rights</code> limits the set of operations allowed on the connection,
@@ -2433,7 +2433,7 @@ the resulting protocol is unspecified.</p>
             <td>3</td>
             <td><code>rights</code></td>
             <td>
-                <code><a class='link' href='#Operations'>Operations</a></code>
+                <code><a class='link' href='#Rights'>Rights</a></code>
             </td>
             <td><p>Requests the specified rights on the new connection. If absent, inherits
 the same rights as the source connection.</p>
@@ -2567,7 +2567,7 @@ connection speaks the <a class='link' href='#Debuglog'>Debuglog</a> protocol.</p
             <td>1</td>
             <td><code>name</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#Name'>Name</a></code>
             </td>
             <td><p>Name of the entry.</p>
 </td>
@@ -2583,7 +2583,7 @@ connection speaks the <a class='link' href='#Debuglog'>Debuglog</a> protocol.</p
             <td>3</td>
             <td><code>abilities</code></td>
             <td>
-                <code><a class='link' href='#Operations'>Operations</a></code>
+                <code><a class='link' href='#Abilities'>Abilities</a></code>
             </td>
             <td><p>Describes the kinds of operations supported by the entry.</p>
 </td>
@@ -2717,7 +2717,7 @@ which is conveyed via <code>representation</code>.</p>
             <td>2</td>
             <td><code>abilities</code></td>
             <td>
-                <code><a class='link' href='#Operations'>Operations</a></code>
+                <code><a class='link' href='#Abilities'>Abilities</a></code>
             </td>
             <td><p>Describes the kinds of operations supported by the node.
 Note: This is distinct from the rights used at connection time.</p>
@@ -2837,7 +2837,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2856,7 +2856,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2875,7 +2875,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2894,7 +2894,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2913,7 +2913,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2932,7 +2932,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2951,7 +2951,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2970,7 +2970,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2989,7 +2989,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -3008,7 +3008,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -3027,7 +3027,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -3046,7 +3046,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -3065,7 +3065,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -3084,7 +3084,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -3103,7 +3103,7 @@ node connection.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -3221,7 +3221,7 @@ directory.</p>
         </tr><tr>
             <td><code>removed</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#Name'>Name</a></code>
             </td>
             <td><p>Indicates a node has been removed (either deleted or moved) from the
 directory.</p>
@@ -3584,7 +3584,7 @@ contents by triggering name conflicts during node creation.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_DIRECTORY_BATCH_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/directory-entry.fidl#20">MAX_DIRECTORY_BATCH_SIZE</a></td>
             <td>
                     <code>8192</code>
@@ -3594,7 +3594,7 @@ contents by triggering name conflicts during node creation.</p>
 in a batch by a hanging-get pattern.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_TRANSFER_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/file.fidl#14">MAX_TRANSFER_SIZE</a></td>
             <td>
                     <code>8192</code>
@@ -3604,7 +3604,7 @@ in a batch by a hanging-get pattern.</p>
 byte vectors.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/io2.fidl#25">MAX_NAME_LENGTH</a></td>
             <td>
                     <code>255</code>
@@ -3613,7 +3613,7 @@ byte vectors.</p>
             <td><p>The maximum length, in bytes, of a single filesystem component.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_PATH_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/io2.fidl#46">MAX_PATH_LENGTH</a></td>
             <td>
                     <code>4095</code>
@@ -3630,13 +3630,13 @@ byte vectors.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="Transfer">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/file.fidl#17">Transfer</a></td>
             <td>
                 <code>vector</code>[<code><a class='link' href='#MAX_TRANSFER_SIZE'>MAX_TRANSFER_SIZE</a></code>]</td>
             <td><p>The byte vector type used for read/write operations.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="Name">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/io2.fidl#22">Name</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_NAME_LENGTH'>MAX_NAME_LENGTH</a></code>]</td>
@@ -3653,7 +3653,7 @@ E.g. <code>foo</code></p>
 <li>It cannot contain embedded NUL.</li>
 </ul>
 </td>
-        </tr><tr>
+        </tr><tr id="Path">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/io2.fidl#43">Path</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_PATH_LENGTH'>MAX_PATH_LENGTH</a></code>]</td>
@@ -3672,14 +3672,14 @@ E.g. <code>foo/bar/baz</code></p>
 For example, a client should convert <code>&quot;foo/bar/.././baz/&quot;</code> to <code>&quot;foo/baz&quot;</code>
 before using it as a path.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="Token">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/io2.fidl#50">Token</a></td>
             <td>
                 <code>handle</code></td>
             <td><p>The type to identify a connection to a node.
 It represents a capability: a reference to a node with associated rights.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="Rights">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/rights-abilities.fidl#74">Rights</a></td>
             <td>
                 <code>fuchsia.io2/Operations</code></td>
@@ -3700,7 +3700,7 @@ UPDATE_ATTRIBUTES;</p>
 <p>&quot;x*&quot; a collection of rights to execute from a directory.
 const Rights X_STAR_DIR = CONNECT | ENUMERATE | TRAVERSE | EXECUTE;</p>
 </td>
-        </tr><tr>
+        </tr><tr id="Abilities">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io2/rights-abilities.fidl#83">Abilities</a></td>
             <td>
                 <code>fuchsia.io2/Operations</code></td>

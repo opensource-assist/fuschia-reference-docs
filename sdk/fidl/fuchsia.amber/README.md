@@ -283,7 +283,7 @@ permanently fail.</p>
         </tr><tr>
             <td><code>error</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>blob_merkle</code></td>
@@ -325,7 +325,7 @@ the global GetUpdateComplete, above.</p>
     <tr>
             <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -394,7 +394,7 @@ provided variant. Does not install the package or fetch any blobs.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>message</code></td>
@@ -447,7 +447,7 @@ Only one event will be sent before the channel is closed.</p>
     <tr>
             <td><code>result</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>message</code></td>

@@ -367,7 +367,7 @@ displayed at a given |presentation_time|, they should aim to have all
     <tr>
             <td><code>requested_prediction_span</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -492,7 +492,7 @@ Use <code>SetEventMaskCmd</code> to enable event delivery for a resource.</p>
             <td>1</td>
             <td><code>requested_presentation_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>|requested_presentation_time| specifies the time on or after which the
 client would like the enqueued operations to take visible effect
@@ -536,7 +536,7 @@ states have been fully-rendered and presented to the display.</p>
             <td>4</td>
             <td><code>requested_prediction_span</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>|requested_prediction_span| is the amount of time into the future Scenic
 will provide predictions for. A span of 0 is guaranteed to provide at
@@ -613,7 +613,7 @@ least one future time.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="displayOwnedSignal">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#37">displayOwnedSignal</a></td>
             <td>
                     <code>33554432</code>
@@ -621,7 +621,7 @@ least one future time.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="displayNotOwnedSignal">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#38">displayNotOwnedSignal</a></td>
             <td>
                     <code>16777216</code>

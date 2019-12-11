@@ -319,7 +319,7 @@ requested, the component instance is killed when the interface is closed.</p>
     <tr>
             <td><code>url</code></td>
             <td>
-                <code>string[2083]</code>
+                <code><a class='link' href='#component_url'>component_url</a></code>
             </td>
         </tr></table>
 
@@ -557,7 +557,7 @@ services from it.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>url</code></td>
             <td>
-                <code>string[2083]</code>
+                <code><a class='link' href='#component_url'>component_url</a></code>
             </td>
             <td><p>The location from which to retrieve this component.</p>
 <p>This field will probably be replaced with a stronger notion of identity,
@@ -762,7 +762,7 @@ directory containing the package.</p>
         </tr><tr>
             <td><code>resolved_url</code></td>
             <td>
-                <code>string[2083]</code>
+                <code><a class='link' href='#component_url'>component_url</a></code>
             </td>
             <td><p>Resolved URL of the component. This is the url specified in
 <code>startup_info</code> after following redirects and resolving relative paths.</p>
@@ -843,7 +843,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="kLabelMaxLength">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/environment.fidl#8">kLabelMaxLength</a></td>
             <td>
                     <code>32</code>
@@ -852,7 +852,7 @@ Type: <code>uint32</code>
             <td><p>Maximum length for an environment label.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_URL_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/types.fidl#11">MAX_URL_LENGTH</a></td>
             <td>
                     <code>2083</code>
@@ -868,7 +868,7 @@ Type: <code>uint32</code>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="component_url">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys/types.fidl#9">component_url</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_URL_LENGTH'>MAX_URL_LENGTH</a></code>]</td>

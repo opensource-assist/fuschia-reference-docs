@@ -284,7 +284,7 @@ where r is defined in [-128, 0] in dBm.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="RSSI_BINS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.stats/wlan_stats.fidl#29">RSSI_BINS</a></td>
             <td>
                     <code>129</code>

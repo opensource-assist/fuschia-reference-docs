@@ -820,7 +820,7 @@ characters are treated as special, or carry special syntax.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAXIMUM_RAW_SELECTOR_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#11">MAXIMUM_RAW_SELECTOR_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -830,7 +830,7 @@ characters are treated as special, or carry special syntax.</p>
 canonical selectors we've ecountered.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAXIMUM_STRING_SELECTOR_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/selector.fidl#8">MAXIMUM_STRING_SELECTOR_LENGTH</a></td>
             <td>
                     <code>100</code>
@@ -838,7 +838,7 @@ canonical selectors we've ecountered.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAXIMUM_MONIKER_SEGMENTS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/selector.fidl#12">MAXIMUM_MONIKER_SEGMENTS</a></td>
             <td>
                     <code>25</code>
@@ -846,7 +846,7 @@ canonical selectors we've ecountered.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAXIMUM_DATA_HIERARCHY_DEPTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/selector.fidl#16">MAXIMUM_DATA_HIERARCHY_DEPTH</a></td>
             <td>
                     <code>100</code>

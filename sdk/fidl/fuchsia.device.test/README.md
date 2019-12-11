@@ -27,7 +27,7 @@ the socket set by SetOutputSocket().</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>report</code></td>
@@ -59,7 +59,7 @@ the socket set by SetOutputSocket().</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>report</code></td>
@@ -139,7 +139,7 @@ If <code>name</code> contains a trailing &quot;.so&quot;, it will be removed.</p
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>path</code></td>
@@ -203,14 +203,14 @@ If <code>name</code> contains a trailing &quot;.so&quot;, it will be removed.</p
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="CONTROL_DEVICE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-test/test.fidl#10">CONTROL_DEVICE</a></td>
             <td><code>/dev/test/test</code></td>
                     <td><code>String</code></td>
             <td><p>The path which can be used to open the control device</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_DEVICE_NAME_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-test/test.fidl#46">MAX_DEVICE_NAME_LEN</a></td>
             <td>
                     <code>31</code>
@@ -219,7 +219,7 @@ If <code>name</code> contains a trailing &quot;.so&quot;, it will be removed.</p
             <td><p>Maximum device name len.  This value must match <code>ZX_DEVICE_NAME_MAX</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_DEVICE_PATH_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-test/test.fidl#49">MAX_DEVICE_PATH_LEN</a></td>
             <td>
                     <code>1024</code>

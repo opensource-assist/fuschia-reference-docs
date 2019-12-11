@@ -63,7 +63,7 @@ It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -104,7 +104,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -130,7 +130,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -151,7 +151,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>attributes</code></td>
@@ -188,7 +188,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -211,7 +211,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -248,7 +248,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -310,7 +310,7 @@ It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -351,7 +351,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -377,7 +377,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -398,7 +398,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>attributes</code></td>
@@ -435,7 +435,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -458,7 +458,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -495,7 +495,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -522,7 +522,7 @@ The seek offset is moved forward by the number of bytes read.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>data</code></td>
@@ -559,7 +559,7 @@ Does not affect the seek offset.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>data</code></td>
@@ -591,7 +591,7 @@ The seek offset is moved forward by the number of bytes written.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>actual</code></td>
@@ -628,7 +628,7 @@ Does not affect the seek offset.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>actual</code></td>
@@ -665,7 +665,7 @@ occur.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>offset</code></td>
@@ -696,7 +696,7 @@ occur.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -717,7 +717,7 @@ occur.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -752,7 +752,7 @@ Supported flags which can be turned on / off:</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -784,7 +784,7 @@ requested access rights.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>buffer</code></td>
@@ -874,7 +874,7 @@ It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -915,7 +915,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -941,7 +941,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -962,7 +962,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>attributes</code></td>
@@ -999,7 +999,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1022,7 +1022,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -1059,7 +1059,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1150,7 +1150,7 @@ allow writable access.
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1193,7 +1193,7 @@ directory contents by triggering name conflicts during file creation.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>dirents</code></td>
@@ -1219,7 +1219,7 @@ directory contents by triggering name conflicts during file creation.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1241,7 +1241,7 @@ access to it at a later point in time.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>token</code></td>
@@ -1286,7 +1286,7 @@ directory, or else <code>ZX_ERR_NOT_DIR</code> should be returned.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1327,7 +1327,7 @@ return <code>ZX_ERR_INVALID_ARGS</code>.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1375,7 +1375,7 @@ Options must be zero; it is reserved.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1438,7 +1438,7 @@ It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1479,7 +1479,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -1505,7 +1505,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1526,7 +1526,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>attributes</code></td>
@@ -1563,7 +1563,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1586,7 +1586,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -1623,7 +1623,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1714,7 +1714,7 @@ allow writable access.
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1757,7 +1757,7 @@ directory contents by triggering name conflicts during file creation.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>dirents</code></td>
@@ -1783,7 +1783,7 @@ directory contents by triggering name conflicts during file creation.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1805,7 +1805,7 @@ access to it at a later point in time.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>token</code></td>
@@ -1850,7 +1850,7 @@ directory, or else <code>ZX_ERR_NOT_DIR</code> should be returned.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1891,7 +1891,7 @@ return <code>ZX_ERR_INVALID_ARGS</code>.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1939,7 +1939,7 @@ Options must be zero; it is reserved.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -1967,7 +1967,7 @@ should be opened with <code>OPEN_FLAG_NO_REMOTE</code>.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -2003,7 +2003,7 @@ remote handle to the newly created directory.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -2024,7 +2024,7 @@ all connections to the filesystem will be terminated.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -2045,7 +2045,7 @@ with Mount.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>remote</code></td>
@@ -2070,7 +2070,7 @@ with Mount.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -2095,7 +2095,7 @@ with Mount.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>path</code></td>
@@ -2577,7 +2577,7 @@ how to interpret the optional handle.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="FILE_SIGNAL_READABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#31">FILE_SIGNAL_READABLE</a></td>
             <td>
                     <code>16777216</code>
@@ -2586,7 +2586,7 @@ how to interpret the optional handle.</p>
             <td><p>Indicates the file is ready for reading.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="FILE_SIGNAL_WRITABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#33">FILE_SIGNAL_WRITABLE</a></td>
             <td>
                     <code>33554432</code>
@@ -2595,7 +2595,7 @@ how to interpret the optional handle.</p>
             <td><p>Indicates the file is ready for writing.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_SIGNAL_READABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#74">DEVICE_SIGNAL_READABLE</a></td>
             <td>
                     <code>16777216</code>
@@ -2604,7 +2604,7 @@ how to interpret the optional handle.</p>
             <td><p>Indicates the device is ready for reading.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_SIGNAL_OOB">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#76">DEVICE_SIGNAL_OOB</a></td>
             <td>
                     <code>33554432</code>
@@ -2613,7 +2613,7 @@ how to interpret the optional handle.</p>
             <td><p>Indicates an out-of-band state transition has occurred.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_SIGNAL_WRITABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#78">DEVICE_SIGNAL_WRITABLE</a></td>
             <td>
                     <code>67108864</code>
@@ -2622,7 +2622,7 @@ how to interpret the optional handle.</p>
             <td><p>Indicates the device is ready for writing.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_SIGNAL_ERROR">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#80">DEVICE_SIGNAL_ERROR</a></td>
             <td>
                     <code>134217728</code>
@@ -2631,7 +2631,7 @@ how to interpret the optional handle.</p>
             <td><p>Indicates the device has encountered an error state.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_SIGNAL_HANGUP">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#82">DEVICE_SIGNAL_HANGUP</a></td>
             <td>
                     <code>268435456</code>
@@ -2640,7 +2640,7 @@ how to interpret the optional handle.</p>
             <td><p>Indicates the device has hung up on the current connection.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_RIGHT_READABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#98">OPEN_RIGHT_READABLE</a></td>
             <td>
                     <code>1</code>
@@ -2649,7 +2649,7 @@ how to interpret the optional handle.</p>
             <td><p>Can read from target object.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_RIGHT_WRITABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#100">OPEN_RIGHT_WRITABLE</a></td>
             <td>
                     <code>2</code>
@@ -2658,7 +2658,7 @@ how to interpret the optional handle.</p>
             <td><p>Can write to target object.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_RIGHT_ADMIN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#102">OPEN_RIGHT_ADMIN</a></td>
             <td>
                     <code>4</code>
@@ -2667,7 +2667,7 @@ how to interpret the optional handle.</p>
             <td><p>Connection can mount/umount filesystem.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_RIGHT_EXECUTABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#104">OPEN_RIGHT_EXECUTABLE</a></td>
             <td>
                     <code>8</code>
@@ -2676,7 +2676,7 @@ how to interpret the optional handle.</p>
             <td><p>Connection can map target object executable.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_FLAG_CREATE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#107">OPEN_FLAG_CREATE</a></td>
             <td>
                     <code>65536</code>
@@ -2685,7 +2685,7 @@ how to interpret the optional handle.</p>
             <td><p>Create the object if it doesn't exist.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_FLAG_CREATE_IF_ABSENT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#109">OPEN_FLAG_CREATE_IF_ABSENT</a></td>
             <td>
                     <code>131072</code>
@@ -2694,7 +2694,7 @@ how to interpret the optional handle.</p>
             <td><p>(with Create) Fail if the object already exists.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_FLAG_TRUNCATE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#111">OPEN_FLAG_TRUNCATE</a></td>
             <td>
                     <code>262144</code>
@@ -2703,7 +2703,7 @@ how to interpret the optional handle.</p>
             <td><p>Truncate the object before usage.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_FLAG_DIRECTORY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#114">OPEN_FLAG_DIRECTORY</a></td>
             <td>
                     <code>524288</code>
@@ -2713,7 +2713,7 @@ how to interpret the optional handle.</p>
 Return an error if the target object is not a directory.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_FLAG_APPEND">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#116">OPEN_FLAG_APPEND</a></td>
             <td>
                     <code>1048576</code>
@@ -2722,7 +2722,7 @@ Return an error if the target object is not a directory.</p>
             <td><p>Seek to the end of the object before all writes.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_FLAG_NO_REMOTE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#118">OPEN_FLAG_NO_REMOTE</a></td>
             <td>
                     <code>2097152</code>
@@ -2731,7 +2731,7 @@ Return an error if the target object is not a directory.</p>
             <td><p>If the object is a mount point, open the local directory.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_FLAG_NODE_REFERENCE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#129">OPEN_FLAG_NODE_REFERENCE</a></td>
             <td>
                     <code>4194304</code>
@@ -2751,7 +2751,7 @@ and, if the node is a file, these extra operations: <code>GetFlags</code>, <code
 </ul>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_FLAGS_ALLOWED_WITH_NODE_REFERENCE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#132">OPEN_FLAGS_ALLOWED_WITH_NODE_REFERENCE</a></td>
             <td>
                     <code>46661632</code>
@@ -2761,7 +2761,7 @@ and, if the node is a file, these extra operations: <code>GetFlags</code>, <code
 <code>OPEN_FLAG_NODE_REFERENCE</code>. Flags used when opening a node reference must fall within this mask.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_FLAG_DESCRIBE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#135">OPEN_FLAG_DESCRIBE</a></td>
             <td>
                     <code>8388608</code>
@@ -2771,7 +2771,7 @@ and, if the node is a file, these extra operations: <code>GetFlags</code>, <code
 The event will contain a non-null NodeInfo if the open/clone is successful.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_FLAG_POSIX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#153">OPEN_FLAG_POSIX</a></td>
             <td>
                     <code>16777216</code>
@@ -2796,7 +2796,7 @@ necessary to enforce hierarchical permissions across mount points, and should ha
 on the expected behavior for clients.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPEN_FLAG_NOT_DIRECTORY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#156">OPEN_FLAG_NOT_DIRECTORY</a></td>
             <td>
                     <code>33554432</code>
@@ -2806,7 +2806,7 @@ on the expected behavior for clients.</p>
 Return an error if the target object is a directory.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="CLONE_FLAG_SAME_RIGHTS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#160">CLONE_FLAG_SAME_RIGHTS</a></td>
             <td>
                     <code>67108864</code>
@@ -2817,7 +2817,7 @@ regardless if it is a file or directory. Otherwise, clone attempts to use the re
 It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with <code>CLONE_FLAG_SAME_RIGHTS</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MODE_PROTECTION_MASK">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#242">MODE_PROTECTION_MASK</a></td>
             <td>
                     <code>4095</code>
@@ -2829,7 +2829,7 @@ but filesystems that wish to do so may refer to sys/stat.h for their
 definitions.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MODE_TYPE_MASK">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#246">MODE_TYPE_MASK</a></td>
             <td>
                     <code>1044480</code>
@@ -2840,7 +2840,7 @@ for a node type is to take 'mode', bitwise AND it with the
 <code>MODE_TYPE_MASK</code>, and check exact equality against a mode type.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MODE_TYPE_DIRECTORY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#247">MODE_TYPE_DIRECTORY</a></td>
             <td>
                     <code>16384</code>
@@ -2848,7 +2848,7 @@ for a node type is to take 'mode', bitwise AND it with the
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MODE_TYPE_BLOCK_DEVICE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#248">MODE_TYPE_BLOCK_DEVICE</a></td>
             <td>
                     <code>24576</code>
@@ -2856,7 +2856,7 @@ for a node type is to take 'mode', bitwise AND it with the
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MODE_TYPE_FILE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#249">MODE_TYPE_FILE</a></td>
             <td>
                     <code>32768</code>
@@ -2864,7 +2864,7 @@ for a node type is to take 'mode', bitwise AND it with the
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MODE_TYPE_SOCKET">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#250">MODE_TYPE_SOCKET</a></td>
             <td>
                     <code>49152</code>
@@ -2872,7 +2872,7 @@ for a node type is to take 'mode', bitwise AND it with the
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MODE_TYPE_SERVICE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#251">MODE_TYPE_SERVICE</a></td>
             <td>
                     <code>65536</code>
@@ -2880,7 +2880,7 @@ for a node type is to take 'mode', bitwise AND it with the
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_BUF">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#273">MAX_BUF</a></td>
             <td>
                     <code>8192</code>
@@ -2890,7 +2890,7 @@ for a node type is to take 'mode', bitwise AND it with the
 This capacity is currently set somewhat arbitrarily.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_PATH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#277">MAX_PATH</a></td>
             <td>
                     <code>4096</code>
@@ -2899,7 +2899,7 @@ This capacity is currently set somewhat arbitrarily.</p>
             <td><p>The maximum length, in bytes, of a filesystem string.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_FILENAME">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#279">MAX_FILENAME</a></td>
             <td>
                     <code>255</code>
@@ -2908,7 +2908,7 @@ This capacity is currently set somewhat arbitrarily.</p>
             <td><p>The maximum length, in bytes, of a single filesystem component.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="NODE_ATTRIBUTE_FLAG_CREATION_TIME">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#283">NODE_ATTRIBUTE_FLAG_CREATION_TIME</a></td>
             <td>
                     <code>1</code>
@@ -2918,7 +2918,7 @@ This capacity is currently set somewhat arbitrarily.</p>
 by the 'flags' argument.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="NODE_ATTRIBUTE_FLAG_MODIFICATION_TIME">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#284">NODE_ATTRIBUTE_FLAG_MODIFICATION_TIME</a></td>
             <td>
                     <code>2</code>
@@ -2926,7 +2926,7 @@ by the 'flags' argument.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="VMO_FLAG_READ">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#297">VMO_FLAG_READ</a></td>
             <td>
                     <code>1</code>
@@ -2935,7 +2935,7 @@ by the 'flags' argument.</p>
             <td><p>Requests that the VMO be readable.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="VMO_FLAG_WRITE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#300">VMO_FLAG_WRITE</a></td>
             <td>
                     <code>2</code>
@@ -2944,7 +2944,7 @@ by the 'flags' argument.</p>
             <td><p>Requests that the VMO be writable.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="VMO_FLAG_EXEC">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#303">VMO_FLAG_EXEC</a></td>
             <td>
                     <code>4</code>
@@ -2953,7 +2953,7 @@ by the 'flags' argument.</p>
             <td><p>Requests that the VMO be executable.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="VMO_FLAG_PRIVATE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#308">VMO_FLAG_PRIVATE</a></td>
             <td>
                     <code>65536</code>
@@ -2964,7 +2964,7 @@ The request should fail if the VMO is not cloned.
 May not be supplied with fuchsia_io_<code>VMO_FLAG_EXACT</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="VMO_FLAG_EXACT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#313">VMO_FLAG_EXACT</a></td>
             <td>
                     <code>131072</code>
@@ -2975,7 +2975,7 @@ The request should fail if a handle to the exact VMO is not returned.
 May not be supplied with <code>VMO_FLAG_PRIVATE</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DIRENT_TYPE_UNKNOWN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#383">DIRENT_TYPE_UNKNOWN</a></td>
             <td>
                     <code>0</code>
@@ -2984,7 +2984,7 @@ May not be supplied with <code>VMO_FLAG_PRIVATE</code>.</p>
             <td><p>A dirent with an unknown type.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DIRENT_TYPE_DIRECTORY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#385">DIRENT_TYPE_DIRECTORY</a></td>
             <td>
                     <code>4</code>
@@ -2993,7 +2993,7 @@ May not be supplied with <code>VMO_FLAG_PRIVATE</code>.</p>
             <td><p>A dirent representing a directory object.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DIRENT_TYPE_BLOCK_DEVICE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#387">DIRENT_TYPE_BLOCK_DEVICE</a></td>
             <td>
                     <code>6</code>
@@ -3002,7 +3002,7 @@ May not be supplied with <code>VMO_FLAG_PRIVATE</code>.</p>
             <td><p>A dirent representing a block device object.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DIRENT_TYPE_FILE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#389">DIRENT_TYPE_FILE</a></td>
             <td>
                     <code>8</code>
@@ -3011,7 +3011,7 @@ May not be supplied with <code>VMO_FLAG_PRIVATE</code>.</p>
             <td><p>A dirent representing a file object.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DIRENT_TYPE_SOCKET">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#391">DIRENT_TYPE_SOCKET</a></td>
             <td>
                     <code>12</code>
@@ -3020,7 +3020,7 @@ May not be supplied with <code>VMO_FLAG_PRIVATE</code>.</p>
             <td><p>A dirent representing a socket object.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DIRENT_TYPE_SERVICE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#393">DIRENT_TYPE_SERVICE</a></td>
             <td>
                     <code>16</code>
@@ -3029,7 +3029,7 @@ May not be supplied with <code>VMO_FLAG_PRIVATE</code>.</p>
             <td><p>A dirent representing a service object.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="INO_UNKNOWN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#397">INO_UNKNOWN</a></td>
             <td>
                     <code>18446744073709551615</code>
@@ -3039,7 +3039,7 @@ May not be supplied with <code>VMO_FLAG_PRIVATE</code>.</p>
 from Readdir and GetAttr.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WATCH_EVENT_DELETED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#400">WATCH_EVENT_DELETED</a></td>
             <td>
                     <code>0</code>
@@ -3048,7 +3048,7 @@ from Readdir and GetAttr.</p>
             <td><p>Indicates the directory being watched has been deleted.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WATCH_EVENT_ADDED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#402">WATCH_EVENT_ADDED</a></td>
             <td>
                     <code>1</code>
@@ -3057,7 +3057,7 @@ from Readdir and GetAttr.</p>
             <td><p>Indicates a node has been created (either new or moved) into a directory.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WATCH_EVENT_REMOVED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#404">WATCH_EVENT_REMOVED</a></td>
             <td>
                     <code>2</code>
@@ -3066,7 +3066,7 @@ from Readdir and GetAttr.</p>
             <td><p>Identifies a node has been removed (either deleted or moved) from the directory.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WATCH_EVENT_EXISTING">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#406">WATCH_EVENT_EXISTING</a></td>
             <td>
                     <code>3</code>
@@ -3075,7 +3075,7 @@ from Readdir and GetAttr.</p>
             <td><p>Identifies a node already existed in the directory when watching started.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WATCH_EVENT_IDLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#408">WATCH_EVENT_IDLE</a></td>
             <td>
                     <code>4</code>
@@ -3084,7 +3084,7 @@ from Readdir and GetAttr.</p>
             <td><p>Identifies that no more <code>WATCH_EVENT_EXISTING</code> events will be sent.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WATCH_MASK_DELETED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#411">WATCH_MASK_DELETED</a></td>
             <td>
                     <code>1</code>
@@ -3093,7 +3093,7 @@ from Readdir and GetAttr.</p>
             <td><p>Used by <code>Directory.Watch</code>. Requests transmission of <code>WATCH_EVENT_DELETED</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WATCH_MASK_ADDED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#413">WATCH_MASK_ADDED</a></td>
             <td>
                     <code>2</code>
@@ -3102,7 +3102,7 @@ from Readdir and GetAttr.</p>
             <td><p>Used by <code>Directory.Watch</code>. Requests transmission of <code>WATCH_EVENT_ADDED</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WATCH_MASK_REMOVED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#415">WATCH_MASK_REMOVED</a></td>
             <td>
                     <code>4</code>
@@ -3111,7 +3111,7 @@ from Readdir and GetAttr.</p>
             <td><p>Used by <code>Directory.Watch</code>. Requests transmission of <code>WATCH_EVENT_REMOVED</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WATCH_MASK_EXISTING">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#417">WATCH_MASK_EXISTING</a></td>
             <td>
                     <code>8</code>
@@ -3120,7 +3120,7 @@ from Readdir and GetAttr.</p>
             <td><p>Used by <code>Directory.Watch</code>. Requests transmission of <code>WATCH_EVENT_EXISTING</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WATCH_MASK_IDLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#419">WATCH_MASK_IDLE</a></td>
             <td>
                     <code>16</code>
@@ -3129,7 +3129,7 @@ from Readdir and GetAttr.</p>
             <td><p>Used by <code>Directory.Watch</code>. Requests transmission of <code>WATCH_EVENT_IDLE</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WATCH_MASK_ALL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#421">WATCH_MASK_ALL</a></td>
             <td>
                     <code>31</code>
@@ -3138,7 +3138,7 @@ from Readdir and GetAttr.</p>
             <td><p>Used by <code>Directory.Watch</code>. Requests transmission of all watcher events.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MOUNT_CREATE_FLAG_REPLACE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#585">MOUNT_CREATE_FLAG_REPLACE</a></td>
             <td>
                     <code>1</code>
@@ -3146,7 +3146,7 @@ from Readdir and GetAttr.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_FS_NAME_BUFFER">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-io/io.fidl#587">MAX_FS_NAME_BUFFER</a></td>
             <td>
                     <code>32</code>

@@ -239,7 +239,7 @@ Type: <code>uint8</code>
             <td>2</td>
             <td><code>pid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
             <td><p>The provider's pid.</p>
 </td>
@@ -264,7 +264,7 @@ Type: <code>uint8</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_NUM_PROVIDERS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#10">MAX_NUM_PROVIDERS</a></td>
             <td>
                     <code>100</code>
@@ -273,7 +273,7 @@ Type: <code>uint8</code>
             <td><p>The maximum number of providers supported.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_PROVIDER_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#13">MAX_PROVIDER_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
@@ -282,7 +282,7 @@ Type: <code>uint8</code>
             <td><p>The maximum length of a provider's name.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_NUM_CATEGORIES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#16">MAX_NUM_CATEGORIES</a></td>
             <td>
                     <code>100</code>
@@ -291,7 +291,7 @@ Type: <code>uint8</code>
             <td><p>The maximum number of categories supported.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_CATEGORY_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.tracing.controller/trace_controller.fidl#19">MAX_CATEGORY_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>

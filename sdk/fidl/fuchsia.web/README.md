@@ -147,12 +147,12 @@ complete cookies, while deletions are expressed as cookies with no <code>value</
     <tr>
             <td><code>url</code></td>
             <td>
-                <code>string[65536]?</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
         </tr><tr>
             <td><code>name</code></td>
             <td>
-                <code>string?</code>
+                <code><a class='link' href='#CookieName'>CookieName</a></code>
             </td>
         </tr><tr>
             <td><code>changes</code></td>
@@ -174,12 +174,12 @@ complete cookies, while deletions are expressed as cookies with no <code>value</
     <tr>
             <td><code>url</code></td>
             <td>
-                <code>string[65536]?</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
         </tr><tr>
             <td><code>name</code></td>
             <td>
-                <code>string?</code>
+                <code><a class='link' href='#CookieName'>CookieName</a></code>
             </td>
         </tr><tr>
             <td><code>cookies</code></td>
@@ -541,7 +541,7 @@ section 9.4.3 for more details on how the target origin policy is applied.</p>
     <tr>
             <td><code>target_origin</code></td>
             <td>
-                <code>string[65536]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
         </tr><tr>
             <td><code>message</code></td>
@@ -840,7 +840,7 @@ is invalid.</li>
     <tr>
             <td><code>url</code></td>
             <td>
-                <code>string[65536]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
         </tr><tr>
             <td><code>params</code></td>
@@ -1388,7 +1388,7 @@ Example value: <code>{&quot;http://a.com&quot;, &quot;http://b.com&quot;}</code>
             <td>1</td>
             <td><code>name</code></td>
             <td>
-                <code>string</code>
+                <code><a class='link' href='#CookieName'>CookieName</a></code>
             </td>
             <td><p>The name of the cookie. An arbitrary string defined by the website.</p>
 </td>
@@ -1488,7 +1488,7 @@ client.</p>
             <td>1</td>
             <td><code>initial_url</code></td>
             <td>
-                <code>string[65536]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
             <td><p>The URL to which the popup frame was initially navigated.</p>
 </td>
@@ -1527,7 +1527,7 @@ was triggered.</p>
             <td>2</td>
             <td><code>referrer_url</code></td>
             <td>
-                <code>string[65536]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
             <td><p>The URL that linked to the resource being requested.</p>
 </td>
@@ -1565,7 +1565,7 @@ available otherwise. For example, autoplay will work only when this flag is set 
             <td>1</td>
             <td><code>url</code></td>
             <td>
-                <code>string[65536]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
             <td><p>The page's URL.</p>
 </td>
@@ -1693,7 +1693,7 @@ per <a href="https://tools.ietf.org/html/rfc7230#section-3.2">RFC 7230 section  
             <td>1</td>
             <td><code>query_pattern</code></td>
             <td>
-                <code>string[65536]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1724,14 +1724,14 @@ per <a href="https://tools.ietf.org/html/rfc7230#section-3.2">RFC 7230 section  
             <td>1</td>
             <td><code>pattern</code></td>
             <td>
-                <code>string[65536]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>2</td>
             <td><code>substitution</code></td>
             <td>
-                <code>string[65536]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1756,14 +1756,14 @@ per <a href="https://tools.ietf.org/html/rfc7230#section-3.2">RFC 7230 section  
             <td>1</td>
             <td><code>url_ends_with</code></td>
             <td>
-                <code>string[65536]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>2</td>
             <td><code>new_url</code></td>
             <td>
-                <code>string[65536]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2036,7 +2036,7 @@ Not compatible with the <a class='link' href='#VULKAN'>VULKAN</a> flag.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_URL_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#8">MAX_URL_LENGTH</a></td>
             <td>
                     <code>65536</code>
@@ -2044,7 +2044,7 @@ Not compatible with the <a class='link' href='#VULKAN'>VULKAN</a> flag.</p>
                 <td><code>int32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_URL_SCHEME_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#12">MAX_URL_SCHEME_NAME_LENGTH</a></td>
             <td>
                     <code>255</code>
@@ -2052,7 +2052,7 @@ Not compatible with the <a class='link' href='#VULKAN'>VULKAN</a> flag.</p>
                 <td><code>int32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_HOST_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#16">MAX_HOST_LENGTH</a></td>
             <td>
                     <code>255</code>
@@ -2060,7 +2060,7 @@ Not compatible with the <a class='link' href='#VULKAN'>VULKAN</a> flag.</p>
                 <td><code>int32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_SCHEME_AND_HOST_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#20">MAX_SCHEME_AND_HOST_LENGTH</a></td>
             <td>
                     <code>513</code>
@@ -2068,7 +2068,7 @@ Not compatible with the <a class='link' href='#VULKAN'>VULKAN</a> flag.</p>
                 <td><code>int32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_HEADERS_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#24">MAX_HEADERS_COUNT</a></td>
             <td>
                     <code>4096</code>
@@ -2076,7 +2076,7 @@ Not compatible with the <a class='link' href='#VULKAN'>VULKAN</a> flag.</p>
                 <td><code>int32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_RULE_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#27">MAX_RULE_COUNT</a></td>
             <td>
                     <code>4096</code>
@@ -2092,27 +2092,27 @@ Not compatible with the <a class='link' href='#VULKAN'>VULKAN</a> flag.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="Url">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#9">Url</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_URL_LENGTH'>MAX_URL_LENGTH</a></code>]</td>
             <td></td>
-        </tr><tr>
+        </tr><tr id="UrlSchemeName">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#13">UrlSchemeName</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_URL_SCHEME_NAME_LENGTH'>MAX_URL_SCHEME_NAME_LENGTH</a></code>]</td>
             <td></td>
-        </tr><tr>
+        </tr><tr id="UrlHostName">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#17">UrlHostName</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_HOST_LENGTH'>MAX_HOST_LENGTH</a></code>]</td>
             <td></td>
-        </tr><tr>
+        </tr><tr id="UrlSchemeAndHostName">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/constants.fidl#21">UrlSchemeAndHostName</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_SCHEME_AND_HOST_LENGTH'>MAX_SCHEME_AND_HOST_LENGTH</a></code>]</td>
             <td></td>
-        </tr><tr>
+        </tr><tr id="CookieName">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/cookie.fidl#7">CookieName</a></td>
             <td>
                 <code>string</code></td>

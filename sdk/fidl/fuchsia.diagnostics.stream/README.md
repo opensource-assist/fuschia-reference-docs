@@ -55,7 +55,7 @@ does not intend to write further records.</p>
     <tr>
             <td><code>buffer</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr></table>
 
@@ -71,7 +71,7 @@ be re-sent via <code>OnBufferInit</code> after they're zeroed.</p>
     <tr>
             <td><code>buffer</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr></table>
 

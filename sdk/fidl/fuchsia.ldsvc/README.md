@@ -39,7 +39,7 @@
     <tr>
             <td><code>rv</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>object</code></td>
@@ -68,7 +68,7 @@
     <tr>
             <td><code>rv</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -92,7 +92,7 @@
     <tr>
             <td><code>rv</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 

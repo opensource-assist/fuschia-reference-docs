@@ -148,7 +148,7 @@ Returns ZX_ERR_UNAVAILABLE if limbo is not active.</p>
     <tr>
             <td><code>process_koid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr></table>
 
@@ -175,7 +175,7 @@ unretrievable in the future from here.</p>
     <tr>
             <td><code>process_koid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr></table>
 
@@ -296,14 +296,14 @@ Maps to <code>zx_exception_info_t</code>.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>process_koid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>thread_koid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -547,7 +547,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -566,7 +566,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -585,7 +585,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -604,7 +604,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -623,7 +623,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -637,7 +637,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_EXCEPTIONS_PER_CALL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#11">MAX_EXCEPTIONS_PER_CALL</a></td>
             <td>
                     <code>32</code>
@@ -647,7 +647,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
 call to |ListProcessesWaitingOnException|.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_FILTER_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#13">MAX_FILTER_LENGTH</a></td>
             <td>
                     <code>32</code>
@@ -655,7 +655,7 @@ call to |ListProcessesWaitingOnException|.</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_FILTERS_PER_CALL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#14">MAX_FILTERS_PER_CALL</a></td>
             <td>
                     <code>32</code>

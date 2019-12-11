@@ -175,7 +175,7 @@ will not produce frames until the camera is unmuted.
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -199,7 +199,7 @@ will not produce frames until the camera is unmuted.
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -319,7 +319,7 @@ return an error.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -346,7 +346,7 @@ is going on.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -663,7 +663,7 @@ multiple resolutions at runtime.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_IMAGE_FORMATS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera2/stream.fidl#11">MAX_IMAGE_FORMATS</a></td>
             <td>
                     <code>256</code>

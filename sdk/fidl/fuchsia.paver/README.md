@@ -31,7 +31,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -85,7 +85,7 @@ and we always boot from configuration A.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -161,7 +161,7 @@ for booting purposes. Should only be called after <code>KERNEL</code> as well as
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -197,7 +197,7 @@ error during health check. This method would be then called on the new configura
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -222,7 +222,7 @@ configuration is currently unbootable.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -293,7 +293,7 @@ than the size of the partition being written.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -319,7 +319,7 @@ configurations.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -347,7 +347,7 @@ been created with <code>ZX_VMO_RESIZABLE</code> or must be a child VMO that was 
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -377,7 +377,7 @@ been created with <code>ZX_VMO_RESIZABLE</code> or must be a child VMO that was 
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -437,7 +437,7 @@ backing |gpt_block_device| also implements <code>fuchsia.io.Node</code> for now.
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -469,7 +469,7 @@ the block device.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -560,7 +560,7 @@ the block device.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>offset</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#off'>off</a></code>
             </td>
             <td><p>Offset into VMO where read data starts.</p>
 </td>
@@ -671,7 +671,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -690,7 +690,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -709,7 +709,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -728,7 +728,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -741,7 +741,7 @@ Type: <code>uint32</code>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td><p>Error encountered while reading data.</p>
 </td>

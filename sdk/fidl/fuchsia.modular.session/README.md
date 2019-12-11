@@ -388,7 +388,7 @@ session shell, story shell, and agents.</p>
             <td>2</td>
             <td><code>agent_url</code></td>
             <td>
-                <code>string[2083]</code>
+                <code><a class='link' href='../fuchsia.sys/'>fuchsia.sys</a>/<a class='link' href='../fuchsia.sys/#component_url'>component_url</a></code>
             </td>
             <td><p>The fuchsia component url for agent.</p>
 </td>

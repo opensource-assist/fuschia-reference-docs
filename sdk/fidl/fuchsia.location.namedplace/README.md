@@ -48,7 +48,7 @@ service2.SetRegion(&quot;BB&quot;);
     <tr>
             <td><code>region</code></td>
             <td>
-                <code>string[2]</code>
+                <code><a class='link' href='#RegionCode'>RegionCode</a></code>
             </td>
         </tr></table>
 
@@ -100,7 +100,7 @@ closed with <code>ZX_ERR_BAD_STATE</code>.</li>
     <tr>
             <td><code>new_region</code></td>
             <td>
-                <code>string[2]</code>
+                <code><a class='link' href='#RegionCode'>RegionCode</a></code>
             </td>
         </tr></table>
 
@@ -123,7 +123,7 @@ closed with <code>ZX_ERR_BAD_STATE</code>.</li>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="RegionCode">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location.namedplace/namedplace.fidl#13">RegionCode</a></td>
             <td>
                 <code>string</code></td>

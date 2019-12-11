@@ -384,7 +384,7 @@ notifications.</p>
     <tr>
             <td><code>timestamp</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>notification</code></td>
@@ -2007,7 +2007,7 @@ Mandatory, the TG must respond with a PlaybackStatus.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2026,7 +2026,7 @@ Mandatory, the TG must respond with a PlaybackStatus.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2045,7 +2045,7 @@ Mandatory, the TG must respond with a PlaybackStatus.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2436,7 +2436,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_NOTIFICATIONS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#49">MAX_NOTIFICATIONS</a></td>
             <td>
                     <code>255</code>
@@ -2447,7 +2447,7 @@ Type: <code>uint32</code>
 Defined by AVRCP 1.6.2 Appendix H.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_CUSTOM_ATTRIBUTES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#198">MAX_CUSTOM_ATTRIBUTES</a></td>
             <td>
                     <code>127</code>
@@ -2457,7 +2457,7 @@ Defined by AVRCP 1.6.2 Appendix H.</p>
 Defined by AVRCP 1.6.2 Appendix F.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_ATTRIBUTE_VALUES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#202">MAX_ATTRIBUTE_VALUES</a></td>
             <td>
                     <code>255</code>
@@ -2467,7 +2467,7 @@ Defined by AVRCP 1.6.2 Appendix F.</p>
 Defined by AVRCP 1.6.2 Sec 6.5.2</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_ATTRIBUTES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avrcp/types.fidl#206">MAX_ATTRIBUTES</a></td>
             <td>
                     <code>131</code>

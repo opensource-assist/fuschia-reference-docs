@@ -56,7 +56,7 @@ Value is in the range 0.0 to 1.0 representing min to max.</p>
     <tr>
             <td><code>value</code></td>
             <td>
-                <code>float32</code>
+                <code><a class='link' href='#brightness'>brightness</a></code>
             </td>
         </tr></table>
 
@@ -82,7 +82,7 @@ https://fuchsia.dev/fuchsia-src/development/api/fidl.md#delay-responses-using-ha
     <tr>
             <td><code>value</code></td>
             <td>
-                <code>float32</code>
+                <code><a class='link' href='#brightness'>brightness</a></code>
             </td>
         </tr></table>
 
@@ -336,7 +336,7 @@ This field may be omitted to disable color adjustment.</p>
             <td>5</td>
             <td><code>color_temperature</code></td>
             <td>
-                <code>float32</code>
+                <code><a class='link' href='#kelvin'>kelvin</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -389,7 +389,7 @@ This field may be omitted to disable color adjustment.</p>
             <td>5</td>
             <td><code>color_temperature</code></td>
             <td>
-                <code>float32</code>
+                <code><a class='link' href='#kelvin'>kelvin</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -421,14 +421,14 @@ This field may be omitted to disable color adjustment.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="brightness">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/brightness.fidl#9">brightness</a></td>
             <td>
                 <code>float32</code></td>
             <td><p>A normalized relative brightness adjustment in the range
 0.0 (off/minimum) to 1.0 (maximum).</p>
 </td>
-        </tr><tr>
+        </tr><tr id="kelvin">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_tint.fidl#7">kelvin</a></td>
             <td>
                 <code>float32</code></td>

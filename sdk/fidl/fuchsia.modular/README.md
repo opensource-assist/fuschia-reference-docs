@@ -2539,7 +2539,7 @@ This will be called before the story is stopped.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>key</code></td>
             <td>
-                <code>string[256]</code>
+                <code><a class='link' href='#AnnotationKey'>AnnotationKey</a></code>
             </td>
             <td><p>An identfier for this annotation.</p>
 </td>
@@ -4088,7 +4088,7 @@ If parent is dismissed, child is dismissed as well.</p>
             <td>3</td>
             <td><code>handler</code></td>
             <td>
-                <code>string[2083]</code>
+                <code><a class='link' href='../fuchsia.sys/'>fuchsia.sys</a>/<a class='link' href='../fuchsia.sys/#component_url'>component_url</a></code>
             </td>
             <td><p>The component URL of the Agent that is to provide the specified service.
 If no handler is specified, the framework will perform resolution to
@@ -4640,7 +4640,7 @@ user-defined, and not enforced by the framework.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_ANNOTATIONS_PER_STORY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#19">MAX_ANNOTATIONS_PER_STORY</a></td>
             <td>
                     <code>100</code>
@@ -4649,7 +4649,7 @@ user-defined, and not enforced by the framework.</p>
             <td><p>Maximum number of annotations on a single story.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_ANNOTATIONS_PER_MODULE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#22">MAX_ANNOTATIONS_PER_MODULE</a></td>
             <td>
                     <code>100</code>
@@ -4658,7 +4658,7 @@ user-defined, and not enforced by the framework.</p>
             <td><p>Maximum number of annotations on a single module.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_ANNOTATIONS_PER_UPDATE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#27">MAX_ANNOTATIONS_PER_UPDATE</a></td>
             <td>
                     <code>50</code>
@@ -4669,7 +4669,7 @@ Annotate() AnnotateModule() in fuchsia.modular protocols that support
 annotations.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_ANNOTATION_KEY_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#30">MAX_ANNOTATION_KEY_LENGTH</a></td>
             <td>
                     <code>256</code>
@@ -4678,7 +4678,7 @@ annotations.</p>
             <td><p>Maximum length of <a class='link' href='#AnnotationKey'>AnnotationKey</a>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_ANNOTATION_VALUE_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#34">MAX_ANNOTATION_VALUE_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -4688,7 +4688,7 @@ annotations.</p>
 <code>text</code> and <code>bytes</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#40">MAX_ANNOTATION_VALUE_BUFFER_LENGTH_BYTES</a></td>
             <td>
                     <code>102400</code>
@@ -4707,7 +4707,7 @@ bytes.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="AnnotationKey">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/annotation/annotation.fidl#43">AnnotationKey</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_ANNOTATION_KEY_LENGTH'>MAX_ANNOTATION_KEY_LENGTH</a></code>]</td>

@@ -38,7 +38,7 @@ defined in <code>fuchsia.id.external</code>.</p>
             <td>2</td>
             <td><code>account_id</code></td>
             <td>
-                <code>string[1024]</code>
+                <code><a class='link' href='#AccountId'>AccountId</a></code>
             </td>
             <td><p>A unique identifier for the account that the token refers to, as
 specified by the authorization server.</p>
@@ -67,7 +67,7 @@ specified by the authorization server.</p>
             <td>2</td>
             <td><code>expiry_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>The time on <code>ZX_CLOCK_UTC</code> at which the token will expire. If the field is
 absent the token does not have a fixed expiry time.</p>
@@ -96,7 +96,7 @@ absent the token does not have a fixed expiry time.</p>
             <td>2</td>
             <td><code>expiry_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>The time on <code>ZX_CLOCK_UTC</code> at which the token will expire. If the field is
 absent the token does not have a fixed expiry time.</p>
@@ -158,7 +158,7 @@ absent the token does not have a fixed expiry time.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_ACCOUNT_ID_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#8">MAX_ACCOUNT_ID_SIZE</a></td>
             <td>
                     <code>1024</code>
@@ -167,7 +167,7 @@ absent the token does not have a fixed expiry time.</p>
             <td><p>The maximum length of an account ID string, in bytes.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_CLIENT_ID_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#17">MAX_CLIENT_ID_SIZE</a></td>
             <td>
                     <code>1024</code>
@@ -177,7 +177,7 @@ absent the token does not have a fixed expiry time.</p>
 We reserve the right to increase this size in future.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_SCOPE_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#24">MAX_SCOPE_SIZE</a></td>
             <td>
                     <code>1024</code>
@@ -187,7 +187,7 @@ We reserve the right to increase this size in future.</p>
 We reserve the right to increase this size in future.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_SCOPE_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#31">MAX_SCOPE_COUNT</a></td>
             <td>
                     <code>128</code>
@@ -197,7 +197,7 @@ We reserve the right to increase this size in future.</p>
 We reserve the right to increase this value in future.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_AUDIENCE_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#35">MAX_AUDIENCE_SIZE</a></td>
             <td>
                     <code>1024</code>
@@ -207,7 +207,7 @@ We reserve the right to increase this value in future.</p>
 We reserve the right to increase this size in future.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_AUDIENCE_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#42">MAX_AUDIENCE_COUNT</a></td>
             <td>
                     <code>16</code>
@@ -225,7 +225,7 @@ We reserve the right to increase this value in future.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="AccountId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#13">AccountId</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_ACCOUNT_ID_SIZE'>MAX_ACCOUNT_ID_SIZE</a></code>]</td>
@@ -233,19 +233,19 @@ We reserve the right to increase this value in future.</p>
 by the authorization server. Account identifiers are guaranteed to be unique
 within an auth provider type.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="ClientId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#20">ClientId</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_CLIENT_ID_SIZE'>MAX_CLIENT_ID_SIZE</a></code>]</td>
             <td><p>An OAuth client ID string.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="Scope">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#27">Scope</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_SCOPE_SIZE'>MAX_SCOPE_SIZE</a></code>]</td>
             <td><p>An OAuth scope string.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="Audience">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#38">Audience</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_AUDIENCE_SIZE'>MAX_AUDIENCE_SIZE</a></code>]</td>

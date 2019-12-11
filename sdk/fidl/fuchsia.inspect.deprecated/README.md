@@ -223,7 +223,7 @@
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_KEY_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#10">MAX_KEY_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -231,7 +231,7 @@
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_VALUE_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#11">MAX_VALUE_LENGTH</a></td>
             <td>
                     <code>16384</code>
@@ -239,7 +239,7 @@
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_VALUE_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#12">MAX_VALUE_COUNT</a></td>
             <td>
                     <code>256</code>
@@ -247,7 +247,7 @@
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_CHILDREN_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect-deprecated/inspect.fidl#13">MAX_CHILDREN_COUNT</a></td>
             <td>
                     <code>256</code>

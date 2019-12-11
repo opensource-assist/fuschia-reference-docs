@@ -590,7 +590,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_PICONET_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avdtp/types.fidl#9">MAX_PICONET_SIZE</a></td>
             <td>
                     <code>8</code>

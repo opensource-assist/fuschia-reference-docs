@@ -961,7 +961,7 @@
         </tr><tr>
             <td><code>cap</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#CapabilityInfo'>CapabilityInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1389,7 +1389,7 @@ This slice should be a valid chain of IEs including IE headers for each element.
         </tr><tr>
             <td><code>cap_info</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#CapabilityInfo'>CapabilityInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2309,7 +2309,7 @@ This slice should be a valid chain of IEs including IE headers for each element.
         </tr><tr>
             <td><code>cap</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#CapabilityInfo'>CapabilityInfo</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -3215,7 +3215,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="HT_CAP_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#58">HT_CAP_LEN</a></td>
             <td>
                     <code>26</code>
@@ -3223,7 +3223,7 @@ Type: <code>uint32</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="HT_OP_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#60">HT_OP_LEN</a></td>
             <td>
                     <code>22</code>
@@ -3231,7 +3231,7 @@ Type: <code>uint32</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="VHT_CAP_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#62">VHT_CAP_LEN</a></td>
             <td>
                     <code>12</code>
@@ -3239,7 +3239,7 @@ Type: <code>uint32</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="VHT_OP_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#64">VHT_OP_LEN</a></td>
             <td>
                     <code>5</code>
@@ -3247,7 +3247,7 @@ Type: <code>uint32</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="RATES_MAX_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#71">RATES_MAX_LEN</a></td>
             <td>
                     <code>22</code>
@@ -3255,7 +3255,7 @@ Type: <code>uint32</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="countryEnvironAll">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#430">countryEnvironAll</a></td>
             <td>
                     <code>32</code>
@@ -3263,7 +3263,7 @@ Type: <code>uint32</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="countryEnvironOutdoor">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#431">countryEnvironOutdoor</a></td>
             <td>
                     <code>79</code>
@@ -3271,7 +3271,7 @@ Type: <code>uint32</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="countryEnvironIndoor">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#432">countryEnvironIndoor</a></td>
             <td>
                     <code>73</code>
@@ -3279,7 +3279,7 @@ Type: <code>uint32</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="countryEnvironNonCountry">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#433">countryEnvironNonCountry</a></td>
             <td>
                     <code>88</code>
@@ -3295,7 +3295,7 @@ Type: <code>uint32</code>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="CapabilityInfo">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.wlan.mlme/wlan_mlme.fidl#55">CapabilityInfo</a></td>
             <td>
                 <code>uint16</code></td>

@@ -813,7 +813,7 @@ VkImportMemoryFuchsiaHandleInfoKHR wrapped in a VkMemoryAllocateInfo.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_ACQUIRE_RELEASE_FENCE_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.images/image_pipe2.fidl#10">MAX_ACQUIRE_RELEASE_FENCE_COUNT</a></td>
             <td>
                     <code>16</code>

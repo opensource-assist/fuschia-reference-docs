@@ -56,7 +56,7 @@ current factory reset state.</p>
             <td>1</td>
             <td><code>scheduled_reset_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>The time of when factory reset is scheduled to be triggered when a
 countdown for factory reset is in progress with respect to the monotonic

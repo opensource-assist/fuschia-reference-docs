@@ -90,7 +90,7 @@ authentication on this account
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
         </tr><tr>
             <td><code>context_provider</code></td>
@@ -167,7 +167,7 @@ of the credentials may have been deleted.</p>
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
         </tr><tr>
             <td><code>force</code></td>
@@ -230,7 +230,7 @@ unlock.</p>
         </tr><tr>
             <td><code>auth_mechanism_id</code></td>
             <td>
-                <code>string[2083]?</code>
+                <code><a class='link' href='#AuthMechanismId'>AuthMechanismId</a></code>
             </td>
         </tr></table>
 
@@ -269,7 +269,7 @@ unlock.</p>
         </tr><tr>
             <td><code>auth_mechanism_id</code></td>
             <td>
-                <code>string[2083]?</code>
+                <code><a class='link' href='#AuthMechanismId'>AuthMechanismId</a></code>
             </td>
         </tr></table>
 
@@ -377,7 +377,7 @@ set when creating the AccountListener.</p>
     <tr>
             <td><code>account_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
         </tr></table>
 
@@ -729,7 +729,7 @@ one of the personae for the account.</p>
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalPersonaId'>LocalPersonaId</a></code>
             </td>
         </tr><tr>
             <td><code>persona</code></td>
@@ -835,7 +835,7 @@ use for the enrollment.</p>
     <tr>
             <td><code>auth_mechanism_id</code></td>
             <td>
-                <code>string[2083]</code>
+                <code><a class='link' href='#AuthMechanismId'>AuthMechanismId</a></code>
             </td>
         </tr></table>
 
@@ -861,7 +861,7 @@ use for the enrollment.</p>
     <tr>
             <td><code>enrollment_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#AuthMechanismEnrollmentId'>AuthMechanismEnrollmentId</a></code>
             </td>
         </tr></table>
 
@@ -1018,7 +1018,7 @@ tokens that they created.
     <tr>
             <td><code>application_url</code></td>
             <td>
-                <code>string[2083]</code>
+                <code><a class='link' href='../fuchsia.sys/'>fuchsia.sys</a>/<a class='link' href='../fuchsia.sys/#component_url'>component_url</a></code>
             </td>
         </tr><tr>
             <td><code>token_manager</code></td>
@@ -1056,7 +1056,7 @@ their own keys.
     <tr>
             <td><code>application_url</code></td>
             <td>
-                <code>string[2083]</code>
+                <code><a class='link' href='../fuchsia.sys/'>fuchsia.sys</a>/<a class='link' href='../fuchsia.sys/#component_url'>component_url</a></code>
             </td>
         </tr><tr>
             <td><code>key_manager</code></td>
@@ -1142,7 +1142,7 @@ their own keys.
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>account_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1160,7 +1160,7 @@ their own keys.
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>account_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1197,7 +1197,7 @@ their own keys.
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>account_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
             <td><p>A unique identifier for the Fuchsia account on the current device.</p>
 </td>
@@ -1225,7 +1225,7 @@ their own keys.
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>account_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalAccountId'>LocalAccountId</a></code>
             </td>
             <td><p>A unique identifier for the Fuchsia account on the current device.</p>
 </td>
@@ -1463,7 +1463,7 @@ be reported.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalPersonaId'>LocalPersonaId</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1539,7 +1539,7 @@ be reported.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>enrollment_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#AuthMechanismEnrollmentId'>AuthMechanismEnrollmentId</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1602,7 +1602,7 @@ be reported.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>id</code></td>
             <td>
-                <code>string[2083]</code>
+                <code><a class='link' href='#AuthMechanismId'>AuthMechanismId</a></code>
             </td>
             <td><p>A unique identifier for the authentication mechanism.</p>
 </td>
@@ -1630,7 +1630,7 @@ be reported.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#AuthMechanismEnrollmentId'>AuthMechanismEnrollmentId</a></code>
             </td>
             <td><p>A unique identifier associated with the enrollment.</p>
 </td>
@@ -2252,7 +2252,7 @@ has been corrected before the retry.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_ACCOUNTS_PER_DEVICE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#10">MAX_ACCOUNTS_PER_DEVICE</a></td>
             <td>
                     <code>128</code>
@@ -2262,7 +2262,7 @@ has been corrected before the retry.</p>
 provisioned on a device. This number may be increased in the future.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_PERSONAE_PER_ACCOUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#14">MAX_PERSONAE_PER_ACCOUNT</a></td>
             <td>
                     <code>128</code>
@@ -2272,7 +2272,7 @@ provisioned on a device. This number may be increased in the future.</p>
 Fuchsia account. This number may be increased in the future.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_ID_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#18">MAX_ID_SIZE</a></td>
             <td>
                     <code>256</code>
@@ -2282,7 +2282,7 @@ Fuchsia account. This number may be increased in the future.</p>
 in bytes.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_NAME_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#21">MAX_NAME_SIZE</a></td>
             <td>
                     <code>128</code>
@@ -2291,7 +2291,7 @@ in bytes.</p>
             <td><p>The maximum length of the (UTF-8 encoded) human readable names, in bytes.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_AUTH_PROVIDER_TYPE_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#24">MAX_AUTH_PROVIDER_TYPE_SIZE</a></td>
             <td>
                     <code>128</code>
@@ -2300,7 +2300,7 @@ in bytes.</p>
             <td><p>The maximum length of an (UTF-8 encoded) auth provider type, in bytes.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_AUTH_MECHANISMS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#28">MAX_AUTH_MECHANISMS</a></td>
             <td>
                     <code>16</code>
@@ -2310,7 +2310,7 @@ in bytes.</p>
 for a device.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_AUTH_MECHANISM_ENROLLMENTS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#32">MAX_AUTH_MECHANISM_ENROLLMENTS</a></td>
             <td>
                     <code>32</code>
@@ -2328,7 +2328,7 @@ simultaneously defined within a Fuchsia account.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="GlobalAccountId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#47">GlobalAccountId</a></td>
             <td>
                 <code>vector</code>[<code><a class='link' href='#MAX_ID_SIZE'>MAX_ID_SIZE</a></code>]</td>
@@ -2336,7 +2336,7 @@ simultaneously defined within a Fuchsia account.</p>
 the devices that the account is provisioned on. Identifiers are not human
 readable.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="LocalAccountId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#54">LocalAccountId</a></td>
             <td>
                 <code>uint64</code></td>
@@ -2346,7 +2346,7 @@ The same account will have different LocalAccountIds on different devices
 and a particular LocalAccountId value may refer to different accounts on
 different devices.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="LocalPersonaId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#62">LocalPersonaId</a></td>
             <td>
                 <code>uint64</code></td>
@@ -2357,7 +2357,7 @@ different personae and/or different accounts on different devices. The
 LocalAccountId for an account cannot be derived from the LocalPersonaId of
 its personae.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="AuthMechanismId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#115">AuthMechanismId</a></td>
             <td>
                 <code>string</code></td>
@@ -2365,7 +2365,7 @@ its personae.</p>
 mechanism. It acts as a unique, stable identifier representing an
 authentication mechanism.</p>
 </td>
-        </tr><tr>
+        </tr><tr id="AuthMechanismEnrollmentId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.account/common.fidl#130">AuthMechanismEnrollmentId</a></td>
             <td>
                 <code>uint64</code></td>

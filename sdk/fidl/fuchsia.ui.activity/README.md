@@ -84,7 +84,7 @@ not receive new state until this acknowledgement is done.</p>
         </tr><tr>
             <td><code>transition_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr></table>
 
@@ -116,7 +116,7 @@ evidence to set the system's activity state.</p>
         </tr><tr>
             <td><code>event_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr></table>
 
@@ -140,7 +140,7 @@ to EndOngoingActivity.
         </tr><tr>
             <td><code>start_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr></table>
 
@@ -151,7 +151,7 @@ to EndOngoingActivity.
     <tr>
             <td><code>activity_id</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#OngoingActivityId'>OngoingActivityId</a></code>
             </td>
         </tr></table>
 
@@ -167,12 +167,12 @@ to EndOngoingActivity.
     <tr>
             <td><code>activity_id</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#OngoingActivityId'>OngoingActivityId</a></code>
             </td>
         </tr><tr>
             <td><code>end_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr></table>
 
@@ -334,7 +334,7 @@ clamshell-format device.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="OngoingActivityId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.activity/tracker.fidl#9">OngoingActivityId</a></td>
             <td>
                 <code>uint32</code></td>

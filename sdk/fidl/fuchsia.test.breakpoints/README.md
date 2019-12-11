@@ -361,7 +361,7 @@ and RouteBuiltinCapability events</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_NUM_EVENT_TYPES_RECEIVED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#9">MAX_NUM_EVENT_TYPES_RECEIVED</a></td>
             <td>
                     <code>9</code>
@@ -371,7 +371,7 @@ and RouteBuiltinCapability events</p>
 This capacity should match the actual number of event types.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_MONIKER_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#12">MAX_MONIKER_LENGTH</a></td>
             <td>
                     <code>100</code>
@@ -380,7 +380,7 @@ This capacity should match the actual number of event types.</p>
             <td><p>The maximum string length of a component moniker.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_CAPABILITY_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#16">MAX_CAPABILITY_LENGTH</a></td>
             <td>
                     <code>50</code>

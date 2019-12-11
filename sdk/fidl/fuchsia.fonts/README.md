@@ -841,7 +841,7 @@ whitespace and capitalization.</p>
             <td>2</td>
             <td><code>weight</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#Weight'>Weight</a></code>
             </td>
             <td><p>Weight or thickness of the glyphs. Allowed values are integers in the range [1, 1000], but
 most real-world font families only support some integer multiples of 100:
@@ -893,7 +893,7 @@ requested &quot;semi-bold&quot; weight, or &quot;oblique&quot; for a requested &
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="REQUEST_FLAG_NO_FALLBACK">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/font_provider.fidl#26">REQUEST_FLAG_NO_FALLBACK</a></td>
             <td>
                     <code>1</code>
@@ -905,7 +905,7 @@ there is no requested font family or if it doesn't contain requested
 character.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="REQUEST_FLAG_EXACT_MATCH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/font_provider.fidl#31">REQUEST_FLAG_EXACT_MATCH</a></td>
             <td>
                     <code>2</code>
@@ -916,7 +916,7 @@ Disables approximate style matching. The service will only return font that
 matches the requested style exactly.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_FAMILY_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#11">MAX_FAMILY_NAME_LENGTH</a></td>
             <td>
                     <code>128</code>
@@ -925,7 +925,7 @@ matches the requested style exactly.</p>
             <td><p>The maximum length of a font family name.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_FACE_QUERY_CODE_POINTS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#14">MAX_FACE_QUERY_CODE_POINTS</a></td>
             <td>
                     <code>128</code>
@@ -934,7 +934,7 @@ matches the requested style exactly.</p>
             <td><p>The maximum number of code points allowed in a typeface query.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_FACE_QUERY_LANGUAGES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#17">MAX_FACE_QUERY_LANGUAGES</a></td>
             <td>
                     <code>8</code>
@@ -943,7 +943,7 @@ matches the requested style exactly.</p>
             <td><p>The maximum number of preferred languages allowed in a typeface query.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_FAMILY_STYLES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/provider.fidl#20">MAX_FAMILY_STYLES</a></td>
             <td>
                     <code>300</code>
@@ -952,7 +952,7 @@ matches the requested style exactly.</p>
             <td><p>The maximum number of styles that will be returned for a font family.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="WEIGHT_THIN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#10">WEIGHT_THIN</a></td>
             <td>
                     <code>100</code>
@@ -960,7 +960,7 @@ matches the requested style exactly.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="WEIGHT_EXTRA_LIGHT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#11">WEIGHT_EXTRA_LIGHT</a></td>
             <td>
                     <code>200</code>
@@ -968,7 +968,7 @@ matches the requested style exactly.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="WEIGHT_LIGHT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#12">WEIGHT_LIGHT</a></td>
             <td>
                     <code>300</code>
@@ -976,7 +976,7 @@ matches the requested style exactly.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="WEIGHT_NORMAL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#13">WEIGHT_NORMAL</a></td>
             <td>
                     <code>400</code>
@@ -984,7 +984,7 @@ matches the requested style exactly.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="WEIGHT_MEDIUM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#14">WEIGHT_MEDIUM</a></td>
             <td>
                     <code>500</code>
@@ -992,7 +992,7 @@ matches the requested style exactly.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="WEIGHT_SEMI_BOLD">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#15">WEIGHT_SEMI_BOLD</a></td>
             <td>
                     <code>600</code>
@@ -1000,7 +1000,7 @@ matches the requested style exactly.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="WEIGHT_BOLD">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#16">WEIGHT_BOLD</a></td>
             <td>
                     <code>700</code>
@@ -1008,7 +1008,7 @@ matches the requested style exactly.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="WEIGHT_EXTRA_BOLD">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#17">WEIGHT_EXTRA_BOLD</a></td>
             <td>
                     <code>800</code>
@@ -1016,7 +1016,7 @@ matches the requested style exactly.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="WEIGHT_BLACK">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#18">WEIGHT_BLACK</a></td>
             <td>
                     <code>900</code>
@@ -1032,7 +1032,7 @@ matches the requested style exactly.</p>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="Weight">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts/styles.fidl#7">Weight</a></td>
             <td>
                 <code>uint16</code></td>

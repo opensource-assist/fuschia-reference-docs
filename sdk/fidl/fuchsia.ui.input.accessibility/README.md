@@ -185,7 +185,7 @@ native display.</p>
             <td>7</td>
             <td><code>viewref_koid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
             <td><p>The viewref koid of the top most view hit for this pointer event.
 This field is set to <code>ZX_KOID_INVALID</code> when there is no view hit and

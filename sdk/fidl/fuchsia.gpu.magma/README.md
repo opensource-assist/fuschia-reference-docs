@@ -146,7 +146,7 @@
     <tr>
             <td><code>buffer_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr></table>
 
@@ -183,7 +183,7 @@
     <tr>
             <td><code>object_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr><tr>
             <td><code>object_type</code></td>
@@ -320,7 +320,7 @@ specify how the GPU can access the buffer.</p>
     <tr>
             <td><code>buffer_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr><tr>
             <td><code>gpu_va</code></td>
@@ -357,7 +357,7 @@ Buffers will also be implicitly unmapped when released.</p>
     <tr>
             <td><code>buffer_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr><tr>
             <td><code>gpu_va</code></td>
@@ -379,7 +379,7 @@ buffer are backed by physical memory.</p>
     <tr>
             <td><code>buffer_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr><tr>
             <td><code>page_offset</code></td>
@@ -410,7 +410,7 @@ buffer are backed by physical memory.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>buffer</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -471,7 +471,7 @@ buffer are backed by physical memory.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="kReceiveBufferSize">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.gpu.magma/magma.fidl#28">kReceiveBufferSize</a></td>
             <td>
                     <code>2048</code>

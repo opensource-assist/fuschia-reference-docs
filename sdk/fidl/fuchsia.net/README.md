@@ -417,7 +417,7 @@ Type: <code>uint8</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_HOSTNAME_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-net/namelookup.fidl#38">MAX_HOSTNAME_SIZE</a></td>
             <td>
                     <code>255</code>

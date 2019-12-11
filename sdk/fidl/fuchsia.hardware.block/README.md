@@ -24,7 +24,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -53,7 +53,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>stats</code></td>
@@ -77,7 +77,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>fifo</code></td>
@@ -106,7 +106,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>vmoid</code></td>
@@ -130,7 +130,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -149,7 +149,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -172,7 +172,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -312,7 +312,7 @@
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="FLAG_READONLY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#10">FLAG_READONLY</a></td>
             <td>
                     <code>1</code>
@@ -320,7 +320,7 @@
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FLAG_REMOVABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#13">FLAG_REMOVABLE</a></td>
             <td>
                     <code>2</code>
@@ -328,7 +328,7 @@
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FLAG_BOOTPART">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#16">FLAG_BOOTPART</a></td>
             <td>
                     <code>4</code>
@@ -336,7 +336,7 @@
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="FLAG_TRIM_SUPPORT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#19">FLAG_TRIM_SUPPORT</a></td>
             <td>
                     <code>8</code>
@@ -344,7 +344,7 @@
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_TRANSFER_UNBOUNDED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#23">MAX_TRANSFER_UNBOUNDED</a></td>
             <td>
                     <code>4294967295</code>
@@ -352,7 +352,7 @@
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="VMOID_INVALID">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-block/block.fidl#75">VMOID_INVALID</a></td>
             <td>
                     <code>0</code>

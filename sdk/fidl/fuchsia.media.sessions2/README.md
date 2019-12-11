@@ -56,7 +56,7 @@ is an offset from the beginning of the media.</p>
     <tr>
             <td><code>position</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -190,7 +190,7 @@ Delinquent watchers who do not reply will eventually be disconnected.</p>
     <tr>
             <td><code>session_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#SessionId'>SessionId</a></code>
             </td>
         </tr><tr>
             <td><code>session_info_delta</code></td>
@@ -218,7 +218,7 @@ Delinquent watchers who do not reply will eventually be disconnected.</p>
     <tr>
             <td><code>session_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#SessionId'>SessionId</a></code>
             </td>
         </tr></table>
 
@@ -266,7 +266,7 @@ given channel otherwise.</p>
     <tr>
             <td><code>session_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#SessionId'>SessionId</a></code>
             </td>
         </tr><tr>
             <td><code>session_control_request</code></td>
@@ -327,7 +327,7 @@ is an offset from the beginning of the media.</p>
     <tr>
             <td><code>position</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -494,7 +494,7 @@ is an offset from the beginning of the media.</p>
     <tr>
             <td><code>position</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -681,7 +681,7 @@ controlled by clients who have permission to do so.</p>
     <tr>
             <td><code>session_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#SessionId'>SessionId</a></code>
             </td>
         </tr></table>
 
@@ -701,7 +701,7 @@ controlled by clients who have permission to do so.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>url</code></td>
             <td>
-                <code>string[1000]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -877,7 +877,7 @@ property is not recursive; top-level fields if set are snapshots).</p>
             <td>1</td>
             <td><code>domain</code></td>
             <td>
-                <code>string[1000]</code>
+                <code><a class='link' href='#Domain'>Domain</a></code>
             </td>
             <td><p>The domain on which the session takes place. A domain identifies a set of
 mutually compatable media targets and sessions; sessions on a domain may
@@ -1005,7 +1005,7 @@ session is not active.</p>
             <td>1</td>
             <td><code>duration</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>Total duration of playing media. Omitted if not known or not applicable.</p>
 </td>
@@ -1145,7 +1145,7 @@ it.</p>
             <td>1</td>
             <td><code>domain</code></td>
             <td>
-                <code>string[1000]</code>
+                <code><a class='link' href='#Domain'>Domain</a></code>
             </td>
             <td><p>The domain on which the player exists. Unset if it is the native
 Fuchsia domain.</p>
@@ -1227,17 +1227,17 @@ Type: <code>uint32</code>
 ## **TYPE ALIASES**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="SessionId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#11">SessionId</a></td>
             <td>
                 <code>uint64</code></td>
             <td></td>
-        </tr><tr>
+        </tr><tr id="Url">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/images.fidl#7">Url</a></td>
             <td>
                 <code>string</code></td>
             <td></td>
-        </tr><tr>
+        </tr><tr id="Domain">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#18">Domain</a></td>
             <td>
                 <code>string</code></td>

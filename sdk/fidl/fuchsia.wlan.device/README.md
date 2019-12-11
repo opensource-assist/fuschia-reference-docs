@@ -566,7 +566,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_NUM_RATES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/lib/wlan/fidl/phy.fidl#51">MAX_NUM_RATES</a></td>
             <td>
                     <code>12</code>

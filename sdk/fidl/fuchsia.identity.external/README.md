@@ -425,7 +425,7 @@ not sufficiently powerful to complete the requested exchange.</p>
             <td>1</td>
             <td><code>account_id</code></td>
             <td>
-                <code>string[1024]</code>
+                <code><a class='link' href='../fuchsia.identity.tokens/'>fuchsia.identity.tokens</a>/<a class='link' href='../fuchsia.identity.tokens/#AccountId'>AccountId</a></code>
             </td>
             <td><p>The account to create the token for, if known. If omitted, the user will
 be prompted to specify an account.</p>
@@ -464,7 +464,7 @@ Access Token.</p>
             <td>2</td>
             <td><code>client_id</code></td>
             <td>
-                <code>string[1024]</code>
+                <code><a class='link' href='../fuchsia.identity.tokens/'>fuchsia.identity.tokens</a>/<a class='link' href='../fuchsia.identity.tokens/#ClientId'>ClientId</a></code>
             </td>
             <td><p>The OAuth ClientID for the component requesting the token. If absent, a
 default ClientID defined by the implementation will be used.</p>

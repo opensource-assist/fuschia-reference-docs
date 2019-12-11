@@ -70,7 +70,7 @@ It is invalid to pass any of the <code>OPEN_RIGHT_*</code> flags together with
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -111,7 +111,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -137,7 +137,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -158,7 +158,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>attributes</code></td>
@@ -195,7 +195,7 @@ object. If the status is <code>ZX_OK</code>, <code>info</code> contains descript
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -218,7 +218,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -255,7 +255,7 @@ meant as an in-progress replacement.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -282,7 +282,7 @@ The seek offset is moved forward by the number of bytes read.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>data</code></td>
@@ -319,7 +319,7 @@ Does not affect the seek offset.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>data</code></td>
@@ -351,7 +351,7 @@ The seek offset is moved forward by the number of bytes written.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>actual</code></td>
@@ -388,7 +388,7 @@ Does not affect the seek offset.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>actual</code></td>
@@ -425,7 +425,7 @@ occur.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>offset</code></td>
@@ -456,7 +456,7 @@ occur.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -477,7 +477,7 @@ occur.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -512,7 +512,7 @@ Supported flags which can be turned on / off:</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -544,7 +544,7 @@ requested access rights.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>buffer</code></td>
@@ -587,7 +587,7 @@ Otherwise the status code from <code>device_add</code> is passed on.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -618,7 +618,7 @@ Otherwise the status code from <code>device_add</code> is passed on.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>features</code></td>
@@ -643,7 +643,7 @@ Otherwise the status code from <code>device_add</code> is passed on.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>size</code></td>
@@ -675,7 +675,7 @@ Reads will simply block on non-active PTYs.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -695,7 +695,7 @@ Reads will simply block on non-active PTYs.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>events</code></td>
@@ -726,7 +726,7 @@ Reads will simply block on non-active PTYs.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -774,7 +774,7 @@ Reads will simply block on non-active PTYs.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="FEATURE_RAW">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#21">FEATURE_RAW</a></td>
             <td>
                     <code>1</code>
@@ -784,7 +784,7 @@ Reads will simply block on non-active PTYs.</p>
 Instead the character is read from the read() input path.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="EVENT_HANGUP">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#29">EVENT_HANGUP</a></td>
             <td>
                     <code>1</code>
@@ -793,7 +793,7 @@ Instead the character is read from the read() input path.</p>
             <td><p>The terminal has no active client.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="EVENT_INTERRUPT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#31">EVENT_INTERRUPT</a></td>
             <td>
                     <code>2</code>
@@ -802,7 +802,7 @@ Instead the character is read from the read() input path.</p>
             <td><p>The terminal received a ^C control character.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="EVENT_SUSPEND">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#33">EVENT_SUSPEND</a></td>
             <td>
                     <code>4</code>
@@ -811,7 +811,7 @@ Instead the character is read from the read() input path.</p>
             <td><p>The terminal received a ^Z control character.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="EVENT_MASK">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#35">EVENT_MASK</a></td>
             <td>
                     <code>7</code>
@@ -820,7 +820,7 @@ Instead the character is read from the read() input path.</p>
             <td><p>All events</p>
 </td>
         </tr>
-    <tr>
+    <tr id="SIGNAL_EVENT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-pty/pty.fidl#38">SIGNAL_EVENT</a></td>
             <td>
                     <code>33554432</code>

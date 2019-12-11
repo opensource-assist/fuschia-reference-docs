@@ -55,7 +55,7 @@ OnFramePresented() event.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>actual_presentation_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>The time the frame was presented to the user. This value was captured
 after the fact, differentiating it from the |presentation_time|s
@@ -103,7 +103,7 @@ the |CLOCK_MONOTONIC| timebase.</p>
             <td>1</td>
             <td><code>latch_point</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>The time where Scenic processes all pending updates to its scene graph
 and render a new frame. Clients should aim to have all  commands sent
@@ -115,7 +115,7 @@ is guaranteed to be less than |presentation_time|.</p>
             <td>2</td>
             <td><code>presentation_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>The time in which the enqueued operations submitted before |latch_point|
 take visible effect. This time is usually but not necessarily vsync.</p>
@@ -137,7 +137,7 @@ take visible effect. This time is usually but not necessarily vsync.</p>
             <td>1</td>
             <td><code>present_received_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>The time Scenic receives the Present2 call.</p>
 </td>
@@ -145,7 +145,7 @@ take visible effect. This time is usually but not necessarily vsync.</p>
             <td>2</td>
             <td><code>latched_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>The time Scenic latched the Present2 call to. This is guaranteed to be
 greater than the |present_received_time|.</p>

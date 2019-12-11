@@ -1789,7 +1789,7 @@ Type: <code>int32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_BYTES_PER_EVENT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#41">MAX_BYTES_PER_EVENT</a></td>
             <td>
                     <code>102400</code>
@@ -1797,7 +1797,7 @@ Type: <code>int32</code>
                 <td><code>int64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_HISTOGRAM_BUCKETS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#44">MAX_HISTOGRAM_BUCKETS</a></td>
             <td>
                     <code>500</code>
@@ -1805,7 +1805,7 @@ Type: <code>int32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_BATCHED_EVENTS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#48">MAX_BATCHED_EVENTS</a></td>
             <td>
                     <code>64</code>
@@ -1813,7 +1813,7 @@ Type: <code>int32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_COMPONENT_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#51">MAX_COMPONENT_LENGTH</a></td>
             <td>
                     <code>64</code>
@@ -1821,7 +1821,7 @@ Type: <code>int32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_PROJECT_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#54">MAX_PROJECT_NAME_LENGTH</a></td>
             <td>
                     <code>64</code>
@@ -1829,7 +1829,7 @@ Type: <code>int32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_TIMER_ID_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#57">MAX_TIMER_ID_LENGTH</a></td>
             <td>
                     <code>64</code>
@@ -1837,7 +1837,7 @@ Type: <code>int32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_STRING_EVENT_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#60">MAX_STRING_EVENT_SIZE</a></td>
             <td>
                     <code>256</code>
@@ -1845,7 +1845,7 @@ Type: <code>int32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_EVENT_CODE_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#63">MAX_EVENT_CODE_COUNT</a></td>
             <td>
                     <code>5</code>
@@ -1853,7 +1853,7 @@ Type: <code>int32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_CHANNEL_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-cobalt/cobalt.fidl#66">MAX_CHANNEL_NAME_LENGTH</a></td>
             <td>
                     <code>256</code>
