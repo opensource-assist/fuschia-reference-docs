@@ -560,7 +560,7 @@ a number of nanoseconds between dispatching batches of work.</p>
 </table>
 
 ### SelfRef {#SelfRef}
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#22)*
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#23)*
 
 
 
@@ -572,7 +572,7 @@ a number of nanoseconds between dispatching batches of work.</p>
 </table>
 
 ### ChildRef {#ChildRef}
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#25)*
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#27)*
 
 
 
@@ -604,7 +604,7 @@ a component declaration. Optional.</p>
 </table>
 
 ### CollectionRef {#CollectionRef}
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#37)*
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#39)*
 
 
 
@@ -623,7 +623,7 @@ a component declaration. Optional.</p>
 </table>
 
 ### StorageRef {#StorageRef}
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#42)*
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#44)*
 
 
 
@@ -642,7 +642,7 @@ a component declaration. Optional.</p>
 </table>
 
 ### FrameworkRef {#FrameworkRef}
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#47)*
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#49)*
 
 
 
