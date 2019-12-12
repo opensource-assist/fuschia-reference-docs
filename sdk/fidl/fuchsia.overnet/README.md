@@ -93,7 +93,7 @@ If an existing service has the same <code>service_name</code>, it's replaced by 
 
 ### AttachSocketLink {#AttachSocketLink}
 
-<p>Attach a socket as a new link.</p>
+<p>Attach a socket as a new link. Bad socket options will result in the channel being closed.</p>
 
 #### Request
 <table>
@@ -280,12 +280,23 @@ If an existing service has the same <code>service_name</code>, it's replaced by 
             </td>
             <td><p>A label that might be used for debugging purposes.</p>
 </td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>bytes_per_second</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td><p>How many bytes per second are transferable on this link (used to tune error recovery).
+If unset, error recovery will be disabled.
+If set, must not be 0, or else the receiving MeshController service will close the channel
+(as discussed in that protocol's documentation).</p>
+</td>
         </tr></table>
 
 ### ConnectionInfo {#ConnectionInfo}
 
 
-*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#74)*
+*Defined in [fuchsia.overnet/overnet.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet/overnet.fidl#79)*
 
 <p>Information provided to a ServiceProvider about an incoming connection.</p>
 
