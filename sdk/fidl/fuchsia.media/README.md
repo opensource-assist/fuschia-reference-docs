@@ -595,6 +595,9 @@ sequentially rather than concurrently. The first stream sink that's created usin
 method is used as the sole source of packets incoming to the logical consumer until that
 stream sink is closed or the <code>EndOfStream</code> method is called on that sink. At that point,
 the second stream sink is used, and so on.</p>
+<p>If an unsupported compression type is supplied, the
+<code>stream_sink_request</code> request will be closed with an epitaph value of
+<code>ZX_ERR_INVALID_ARGS</code></p>
 
 #### Request
 <table>
@@ -3123,7 +3126,7 @@ events will eventually be disconnected.</p>
 ## **STRUCTS**
 
 ### Void {#Void}
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#126)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#130)*
 
 
 
@@ -4620,7 +4623,7 @@ Type: <code>uint32</code>
 ### AudioConsumerStatus {#AudioConsumerStatus}
 
 
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#101)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#105)*
 
 <p>Represents the status of the consumer. In the initial status, <code>error</code> and
 <code>presentation_timeline</code> are absent. The lead time fields are always present.</p>
@@ -5940,7 +5943,7 @@ mute the volume of all streams with this usage.</p>
 ## **UNIONS**
 
 ### AudioConsumerError {#AudioConsumerError}
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#130)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#134)*
 
 <p>Represents a <code>AudioConsumer</code> error condition.</p>
 
