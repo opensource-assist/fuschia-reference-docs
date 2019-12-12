@@ -486,7 +486,7 @@ in-flight downloads may not be interrupted.</p>
 
 
 ## RepositoryIterator {#RepositoryIterator}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#146)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#151)*
 
 <p>The iterator over all the repositories defined in a <code>PackageResolver</code>.</p>
 
@@ -751,12 +751,22 @@ kept reasonably in sync with the most recent published version of the
 root metadata, as that avoids the risk of an old and unused root key
 being used to compromise resolvers during the trust initialization.</p>
 </td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>root_threshold</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td><p>The number of <code>root_keys</code> that need to have signed the root metadata for it
+to be considered trusted. This value must be greater than or equal to 1.
+Optional, defaulting to 1.</p>
+</td>
         </tr></table>
 
 ### MirrorConfig {#MirrorConfig}
 
 
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#130)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#135)*
 
 <p>Describes the configuration necessary to connect to a mirror.</p>
 
@@ -805,7 +815,7 @@ Defaults to <code>mirror_url + &quot;/blobs&quot;</code>.</p>
 ## **XUNIONS**
 
 ### RepositoryKeyConfig {#RepositoryKeyConfig}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#116)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#121)*
 
 <p>Describes the keys used by the repository to authenticate it's packages.</p>
 <p>The only supported algorithm at the moment is ed25519.</p>
@@ -821,7 +831,7 @@ Defaults to <code>mirror_url + &quot;/blobs&quot;</code>.</p>
         </tr></table>
 
 ### RepositoryBlobKey {#RepositoryBlobKey}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#124)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#129)*
 
 <p>Describes a key used to decrypt blobs.</p>
 <p>The only supported algorithm at the moment is aes.</p>
