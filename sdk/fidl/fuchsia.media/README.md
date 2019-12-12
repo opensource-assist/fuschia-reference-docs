@@ -1365,18 +1365,17 @@ and not yet released.</p>
 
 
 
-### SetPcmStreamType {#SetPcmStreamType}
+### BindGainControl {#BindGainControl}
 
-<p>Sets the type of the stream to be delivered by the client. Using this
-method implies that the stream encoding is <code>AUDIO_ENCODING_LPCM</code>.</p>
+<p>Binds to the gain control for this AudioRenderer.</p>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>type</code></td>
+            <td><code>gain_control_request</code></td>
             <td>
-                <code><a class='link' href='#AudioStreamType'>AudioStreamType</a></code>
+                <code>request&lt;<a class='link' href='../fuchsia.media.audio/'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/#GainControl'>GainControl</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1484,6 +1483,117 @@ a CT of 0.</p>
         </tr></table>
 
 
+
+### SetUsage {#SetUsage}
+
+<p>Sets the usage of the render stream. This must be called before a call to
+|SetPcmStreamType|.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>usage</code></td>
+            <td>
+                <code><a class='link' href='#AudioRenderUsage'>AudioRenderUsage</a></code>
+            </td>
+        </tr></table>
+
+
+
+### SetPcmStreamType {#SetPcmStreamType}
+
+<p>Sets the type of the stream to be delivered by the client. Using this
+method implies that the stream encoding is <code>AUDIO_ENCODING_LPCM</code>.</p>
+<p>This must be called before |Play| or |PlayNoReply|. After a call to
+|SetPcmStreamType|, the client must then send an |AddPayloadBuffer|
+request, followed by the various |StreamSink| methods (ex: |SendPacket|/
+|SendPacketNoReply|, etc).</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>type</code></td>
+            <td>
+                <code><a class='link' href='#AudioStreamType'>AudioStreamType</a></code>
+            </td>
+        </tr></table>
+
+
+
+### EnableMinLeadTimeEvents {#EnableMinLeadTimeEvents}
+
+<p>Enable or disable notifications about changes to the minimum clock lead
+time (in nanoseconds) for this AudioRenderer. Calling this method with
+'enabled' set to true will trigger an immediate <code>OnMinLeadTimeChanged</code>
+event with the current minimum lead time for the AudioRenderer. If the
+value changes, an <code>OnMinLeadTimeChanged</code> event will be raised with the
+new value. This behavior will continue until the user calls
+<code>EnableMinLeadTimeEvents(false)</code>.</p>
+<p>The minimum clock lead time is the amount of time ahead of the reference
+clock's understanding of &quot;now&quot; that packets needs to arrive (relative to
+the playback clock transformation) in order for the mixer to be able to
+mix packet. For example...</p>
+<p>++ Let the PTS of packet X be P(X)
+++ Let the function which transforms PTS -&gt; RefClock be R(p) (this
+function is determined by the call to Play(...)
+++ Let the minimum lead time be MLT</p>
+<p>If R(P(X)) &lt; RefClock.Now() + MLT
+Then the packet is late, and some (or all) of the packet's payload will
+need to be skipped in order to present the packet at the scheduled time.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>enabled</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+
+
+### OnMinLeadTimeChanged {#OnMinLeadTimeChanged}
+
+
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>min_lead_time_nsec</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr></table>
+
+### GetMinLeadTime {#GetMinLeadTime}
+
+<p>While it is possible to call |GetMinLeadTime| before |SetPcmStreamType|,
+there's little reason to do so. This is because lead time is a function
+of format/rate, so lead time will be recalculated after |SetPcmStreamType|.
+If min lead time events are enabled before |SetPcmStreamType| (with
+|EnableMinLeadTimeEvents(true)|), then an event will be generated in
+response to |SetPcmStreamType|.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>min_lead_time_nsec</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr></table>
 
 ### Play {#Play}
 
@@ -1672,106 +1782,6 @@ established (if requested).</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
-
-
-
-### EnableMinLeadTimeEvents {#EnableMinLeadTimeEvents}
-
-<p>Enable or disable notifications about changes to the minimum clock lead
-time (in nanoseconds) for this AudioRenderer. Calling this method with
-'enabled' set to true will trigger an immediate <code>OnMinLeadTimeChanged</code>
-event with the current minimum lead time for the AudioRenderer. If the
-value changes, an <code>OnMinLeadTimeChanged</code> event will be raised with the
-new value. This behavior will continue until the user calls
-<code>EnableMinLeadTimeEvents(false)</code>.</p>
-<p>The minimum clock lead time is the amount of time ahead of the reference
-clock's understanding of &quot;now&quot; that packets needs to arrive (relative to
-the playback clock transformation) in order for the mixer to be able to
-mix packet. For example...</p>
-<p>++ Let the PTS of packet X be P(X)
-++ Let the function which transforms PTS -&gt; RefClock be R(p) (this
-function is determined by the call to Play(...)
-++ Let the minimum lead time be MLT</p>
-<p>If R(P(X)) &lt; RefClock.Now() + MLT
-Then the packet is late, and some (or all) of the packet's payload will
-need to be skipped in order to present the packet at the scheduled time.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>enabled</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-
-
-### OnMinLeadTimeChanged {#OnMinLeadTimeChanged}
-
-
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>min_lead_time_nsec</code></td>
-            <td>
-                <code>int64</code>
-            </td>
-        </tr></table>
-
-### GetMinLeadTime {#GetMinLeadTime}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>min_lead_time_nsec</code></td>
-            <td>
-                <code>int64</code>
-            </td>
-        </tr></table>
-
-### BindGainControl {#BindGainControl}
-
-<p>Binds to the gain control for this AudioRenderer.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>gain_control_request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.audio/'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/#GainControl'>GainControl</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### SetUsage {#SetUsage}
-
-<p>Sets the usage of the render stream. This must be called before a call to
-|SetPcmStreamType|.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>usage</code></td>
-            <td>
-                <code><a class='link' href='#AudioRenderUsage'>AudioRenderUsage</a></code>
-            </td>
-        </tr></table>
 
 
 
