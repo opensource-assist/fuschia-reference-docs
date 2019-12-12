@@ -71,8 +71,6 @@ toc:
   path: /reference/fidl/fuchsia.devicesettings
 - title: fuchsia.diagnostics
   path: /reference/fidl/fuchsia.diagnostics
-- title: fuchsia.diagnostics.inspect
-  path: /reference/fidl/fuchsia.diagnostics.inspect
 - title: fuchsia.diagnostics.stream
   path: /reference/fidl/fuchsia.diagnostics.stream
 - title: fuchsia.diagnostics.streaming

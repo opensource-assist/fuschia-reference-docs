@@ -148,10 +148,6 @@
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.diagnostics.inspect/index">fuchsia.diagnostics.inspect</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.diagnostics.stream/index">fuchsia.diagnostics.stream</a></td>
     <td></td>
 </tr>

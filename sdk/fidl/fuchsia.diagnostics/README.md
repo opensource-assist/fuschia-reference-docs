@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Archive {#Archive}
-*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#64)*
+*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#68)*
 
 <p>Outer protocol for interacting with the different diagnostics data sources.</p>
 
@@ -144,7 +144,7 @@ value indicating that the provided selectors failed to verify.</li>
         </tr></table>
 
 ## Reader {#Reader}
-*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#117)*
+*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#121)*
 
 <p>A protocol to access data from a particular data source.</p>
 
@@ -231,7 +231,7 @@ streaming server provides streamed results.</li>
 
 
 ## Stream {#Stream}
-*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#166)*
+*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#170)*
 
 <p>Protocol offering an API for batch-retrieving all newly updated diagnostics data sincee
 the last call.</p>
@@ -281,7 +281,7 @@ connection for the stream data.</li>
         </tr></table>
 
 ## BatchIterator {#BatchIterator}
-*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#193)*
+*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#197)*
 
 <p>Conceptually, a directory iterator, where each element in the iterator is a single
 complete file that can be concatenated with other results.</p>
@@ -396,7 +396,7 @@ FormattedDataHierarchies.</li>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>batch</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#FormattedContent'>FormattedContent</a>&gt;</code>
+                <code>vector&lt;<a class='link' href='#FormattedContent'>FormattedContent</a>&gt;[64]</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -466,7 +466,7 @@ Schema specifications.</p>
 ### AccessorError {#AccessorError}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#14)*
+*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#18)*
 
 <p>Enum describing the potential fail-states of the Accessor service.</p>
 
@@ -481,7 +481,7 @@ Type: <code>uint32</code>
 ### ReaderError {#ReaderError}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#23)*
+*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#27)*
 
 <p>Enum describing the potential fail-states of the Accessor service due to issues
 reading the data.</p>
@@ -497,7 +497,7 @@ reading the data.</p>
 ### StreamMode {#StreamMode}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#150)*
+*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#154)*
 
 <p>Enum specifying the modes by which a user can connect to and stream diagnostics metrics.</p>
 
@@ -719,7 +719,7 @@ will select the entire subtree of all nodes selected by the node_path.</p>
 ## **XUNIONS**
 
 ### SelectorArgument {#SelectorArgument}
-*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#31)*
+*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#35)*
 
 <p>Argument used for Archive selectors, can be either the pre-parsed
 fidl struct or string representation.</p>
@@ -749,7 +749,7 @@ TODO(4601): Link to in-tree documentation for raw selector strings.</p>
         </tr></table>
 
 ### FormattedContent {#FormattedContent}
-*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#48)*
+*Defined in [fuchsia.diagnostics/reader.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#52)*
 
 <p>A fidl union containing a complete hierarchy of structured diagnostics
 data, such that the content can be parsed into a file by itself.</p>
@@ -828,6 +828,16 @@ characters are treated as special, or carry special syntax.</p>
                 <td><code>uint16</code></td>
             <td><p>The size bound of 1024 is a reasonably low size restriction that meets most
 canonical selectors we've ecountered.</p>
+</td>
+        </tr>
+    <tr id="MAXIMUM_ENTRIES_PER_BATCH">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.diagnostics/reader.fidl#15">MAXIMUM_ENTRIES_PER_BATCH</a></td>
+            <td>
+                    <code>64</code>
+                </td>
+                <td><code>uint16</code></td>
+            <td><p>The size 64 was chosen because entries in batches are handles to
+VMOs and there is a limit of 64 handles per fidl message.</p>
 </td>
         </tr>
     <tr id="MAXIMUM_STRING_SELECTOR_LENGTH">
