@@ -237,6 +237,8 @@ toc:
   path: /reference/fidl/fuchsia.settings
 - title: fuchsia.setui
   path: /reference/fidl/fuchsia.setui
+- title: fuchsia.simplecamera
+  path: /reference/fidl/fuchsia.simplecamera
 - title: fuchsia.space
   path: /reference/fidl/fuchsia.space
 - title: fuchsia.stash
