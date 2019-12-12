@@ -689,6 +689,60 @@ token.</p>
             </td>
         </tr></table>
 
+### GetFirebaseToken {#GetFirebaseToken}
+
+<p>Returns a Firebase token from an auth provider for the given account and
+Fuchsia component, and Firebase client. The component's OAuth configuration
+is supplied in <code>app_config</code>, the Firebase client is supplied in
+<code>firebase_api_key</code>, and <code>user_profile_id</code> is a unique account identifier
+returned by the Authorize() or ListProfileIds() calls.</p>
+<p>This api invokes firebase auth's VerifyAssertion endpoint that takes an
+OAuth IdToken as the fuchsia.ui.input. Audience is the intended recipient
+of the firebase id token.</p>
+<p>The Firebase auth token is returned from cache if possible, otherwise it is
+refreshed from the auth provider.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>app_config</code></td>
+            <td>
+                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
+            </td>
+        </tr><tr>
+            <td><code>user_profile_id</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>audience</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr><tr>
+            <td><code>firebase_api_key</code></td>
+            <td>
+                <code>string</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code><a class='link' href='#Status'>Status</a></code>
+            </td>
+        </tr><tr>
+            <td><code>firebase_token</code></td>
+            <td>
+                <code><a class='link' href='#FirebaseToken'>FirebaseToken</a>?</code>
+            </td>
+        </tr></table>
+
 ### DeleteAllTokens {#DeleteAllTokens}
 
 <p>Deletes and revokes all long lived and short lived tokens generated for
