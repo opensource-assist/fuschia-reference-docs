@@ -516,6 +516,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.sys.internal/index">fuchsia.sys.internal</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.sys.test/index">fuchsia.sys.test</a></td>
     <td></td>
 </tr>

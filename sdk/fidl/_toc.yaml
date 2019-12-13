@@ -249,6 +249,8 @@ toc:
   path: /reference/fidl/fuchsia.sys
 - title: fuchsia.sys.index
   path: /reference/fidl/fuchsia.sys.index
+- title: fuchsia.sys.internal
+  path: /reference/fidl/fuchsia.sys.internal
 - title: fuchsia.sys.test
   path: /reference/fidl/fuchsia.sys.test
 - title: fuchsia.sys2
