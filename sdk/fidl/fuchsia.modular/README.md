@@ -1592,7 +1592,7 @@ arrives here.</p>
         </tr></table>
 
 ## StoryPuppetMaster {#StoryPuppetMaster}
-*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#74)*
+*Defined in [fuchsia.modular/puppet_master.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular/story/puppet_master.fidl#75)*
 
 
 ### Enqueue {#Enqueue}
