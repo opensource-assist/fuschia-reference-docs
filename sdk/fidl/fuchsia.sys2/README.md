@@ -276,6 +276,22 @@ interface.</p>
 <p>The caller of this method takes responsibility for binding client
 connections and controlling the lifetime of the newly started
 component instance through the requested <code>controller</code>.</p>
+<p>If an error is returned, the runner must ensure that resources
+are cleaned up; the caller will not invoke the <code>controller</code>
+interfaces, for example.</p>
+<p>Errors:</p>
+<ul>
+<li><code>INVALID_ARGUMENTS</code>: <code>resolved_url</code> is not supported by this runner;
+<code>program</code> contains missing or invalid arguments; or a required field
+in <code>start_info</code> (such <code>ns</code>, <code>outgoing_dir</code>, or <code>runtime_dir</code>) was not
+provided.</li>
+<li><code>INSTANCE_CANNOT_START</code>: The runner could not start the component.
+For example, a critical part of the program could not be found or
+loaded, or the referenced binary was invalid for this runner.</li>
+<li><code>NO_SPACE</code>: The component could not be launched due to lack of
+resources.</li>
+<li><code>INTERNAL</code>: An unexpected internal runner error was encountered.</li>
+</ul>
 
 #### Request
 <table>
@@ -293,9 +309,18 @@ component instance through the requested <code>controller</code>.</p>
         </tr></table>
 
 
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#ComponentRunner_Start_Result'>ComponentRunner_Start_Result</a></code>
+            </td>
+        </tr></table>
 
 ## ComponentController {#ComponentController}
-*Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#94)*
+*Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#110)*
 
 <p>An interface for binding client connections and controlling the lifetime
 of a component instance started using <code>ComponentRunner.Start()</code>.</p>
@@ -766,6 +791,17 @@ For example, [&quot;/foo&quot;, &quot;/foo/bar&quot;] is invalid.</p>
 </td>
             <td>No default</td>
         </tr>
+</table>
+
+### ComponentRunner_Start_Response {#ComponentRunner_Start_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
 ### WorkScheduler_ScheduleWork_Response {#WorkScheduler_ScheduleWork_Response}
@@ -1923,7 +1959,7 @@ applications.</p>
 ### ComponentStartInfo {#ComponentStartInfo}
 
 
-*Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#34)*
+*Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#50)*
 
 <p>Parameters for starting a new component instance.</p>
 
@@ -2105,6 +2141,25 @@ until it is canceled.</p>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Realm_ListChildren_Response'>Realm_ListChildren_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### ComponentRunner_Start_Result {#ComponentRunner_Start_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#ComponentRunner_Start_Response'>ComponentRunner_Start_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
