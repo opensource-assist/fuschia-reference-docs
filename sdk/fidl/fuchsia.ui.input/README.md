@@ -1132,11 +1132,18 @@ is being pressed. A single report should be sent on every state change.</p>
             </td>
             <td></td>
             <td>No default</td>
+        </tr><tr>
+            <td><code>pause</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td></td>
+            <td>No default</td>
         </tr>
 </table>
 
 ### DeviceInfo {#DeviceInfo}
-*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#234)*
+*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#235)*
 
 
 
@@ -1175,7 +1182,7 @@ is being pressed. A single report should be sent on every state change.</p>
 </table>
 
 ### DeviceDescriptor {#DeviceDescriptor}
-*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#242)*
+*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#243)*
 
 
 
@@ -1235,7 +1242,7 @@ is being pressed. A single report should be sent on every state change.</p>
 </table>
 
 ### InputReport {#InputReport}
-*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#253)*
+*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#254)*
 
 
 
@@ -2049,6 +2056,14 @@ Structs defined in input_events.fidl.</p>
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/usages.fidl#19">kReset</a></td>
             <td>
                     <code>8</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
+    <tr id="kPause">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/usages.fidl#20">kPause</a></td>
+            <td>
+                    <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
             <td></td>
