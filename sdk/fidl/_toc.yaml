@@ -93,6 +93,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.block
 - title: fuchsia.hardware.block.partition
   path: /reference/fidl/fuchsia.hardware.block.partition
+- title: fuchsia.hardware.block.volume
+  path: /reference/fidl/fuchsia.hardware.block.volume
 - title: fuchsia.hardware.bluetooth
   path: /reference/fidl/fuchsia.hardware.bluetooth
 - title: fuchsia.hardware.display

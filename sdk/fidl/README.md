@@ -192,6 +192,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.hardware.block.volume/index">fuchsia.hardware.block.volume</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.hardware.bluetooth/index">fuchsia.hardware.bluetooth</a></td>
     <td></td>
 </tr>
