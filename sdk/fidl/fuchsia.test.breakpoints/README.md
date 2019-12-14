@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## BreakpointSystem {#BreakpointSystem}
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#100)*
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#110)*
 
 <p>Registers breakpoints in component manager.</p>
 
@@ -55,7 +55,7 @@ a component inside component manager.</p>
     </table>
 
 ## InvocationReceiver {#InvocationReceiver}
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#113)*
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#123)*
 
 <p>Receives invocations for registered events in component manager.</p>
 
@@ -82,7 +82,7 @@ allowed to proceed until resumed explicitly via the Handler.</p>
         </tr></table>
 
 ## Handler {#Handler}
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#122)*
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#132)*
 
 <p>Every Invocation supports this basic handler to allow resumption.</p>
 
@@ -102,7 +102,7 @@ allowed to proceed until resumed explicitly via the Handler.</p>
     </table>
 
 ## RoutingProtocol {#RoutingProtocol}
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#129)*
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#139)*
 
 <p>Allows injecting capabilities over FIDL.
 Used by RouteFrameworkCapability and RouteBuiltinCapability</p>
@@ -128,7 +128,7 @@ Used by RouteFrameworkCapability and RouteBuiltinCapability</p>
     </table>
 
 ## CapabilityProvider {#CapabilityProvider}
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#135)*
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#145)*
 
 <p>A FIDL-based version of a CapabilityProvider</p>
 
@@ -195,33 +195,21 @@ TODO(fxb/39417): Ensure the instance is stopped before this event.</p>
             <td><p>The root component instance's declaration was resolved successfully for the first time.</p>
 </td>
         </tr><tr>
-            <td><code>ROUTE_BUILTIN_CAPABILITY</code></td>
+            <td><code>ROUTE_CAPABILITY</code></td>
             <td><code>5</code></td>
             <td><p>A builtin capability is being requested by a component and requires routing.
 The event propagation system is used to supply the capability being requested.</p>
 </td>
         </tr><tr>
-            <td><code>ROUTE_FRAMEWORK_CAPABILITY</code></td>
-            <td><code>6</code></td>
-            <td><p>A framework capability is being requested by a component and requires routing.
-The event propagation system is used to supply the capability being requested.</p>
-</td>
-        </tr><tr>
             <td><code>START_INSTANCE</code></td>
-            <td><code>7</code></td>
+            <td><code>6</code></td>
             <td><p>An instance was bound to. If the instance is executable, it is also started.</p>
 </td>
         </tr><tr>
             <td><code>STOP_INSTANCE</code></td>
-            <td><code>8</code></td>
+            <td><code>7</code></td>
             <td><p>An instance was stopped successfully.
 This event must occur before PostDestroyInstance.</p>
-</td>
-        </tr><tr>
-            <td><code>USE_CAPABILITY</code></td>
-            <td><code>9</code></td>
-            <td><p>A capability was used by an instance. An instance uses a capability when
-it creates a channel and provides the server end to ComponentManager for routing.</p>
 </td>
         </tr></table>
 
@@ -229,10 +217,50 @@ it creates a channel and provides the server end to ComponentManager for routing
 
 ## **TABLES**
 
+### FrameworkCapability {#FrameworkCapability}
+
+
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#61)*
+
+<p>Describes a capability provided by the framework</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>scope_moniker</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td><p>The moniker of the instance that this capability is scoped to.</p>
+</td>
+        </tr></table>
+
+### ComponentCapability {#ComponentCapability}
+
+
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#67)*
+
+<p>Describes a capability provided by a component</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>source_moniker</code></td>
+            <td>
+                <code>string[100]</code>
+            </td>
+            <td><p>The moniker of the instance that is providing this capability.</p>
+</td>
+        </tr></table>
+
 ### EventPayload {#EventPayload}
 
 
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#59)*
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#73)*
 
 <p>Encapsulates additional data/protocols for some event types.</p>
 
@@ -245,24 +273,16 @@ it creates a channel and provides the server end to ComponentManager for routing
             <td>
                 <code><a class='link' href='#RoutingPayload'>RoutingPayload</a></code>
             </td>
-            <td><p>Payload for RouteFrameworkCapability and RouteBuiltinCapability events</p>
-</td>
-        </tr><tr>
-            <td>2</td>
-            <td><code>use_capability_payload</code></td>
-            <td>
-                <code><a class='link' href='#UseCapabilityPayload'>UseCapabilityPayload</a></code>
-            </td>
-            <td><p>Payload for UseCapability event</p>
+            <td><p>Payload for RouteCapability events</p>
 </td>
         </tr></table>
 
 ### RoutingPayload {#RoutingPayload}
 
 
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#68)*
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#79)*
 
-<p>Payload for RouteFrameworkCapability and RouteBuiltinCapability events</p>
+<p>Payload for RouteCapability events</p>
 
 
 <table>
@@ -273,43 +293,33 @@ it creates a channel and provides the server end to ComponentManager for routing
             <td>
                 <code><a class='link' href='#RoutingProtocol'>RoutingProtocol</a></code>
             </td>
-            <td><p>Allows setting a capability provider for RouteFrameworkCapability
-and RouteBuiltinCapability events</p>
+            <td><p>Allows setting a capability provider for
+RouteCapability events</p>
 </td>
         </tr><tr>
             <td>2</td>
-            <td><code>capability</code></td>
+            <td><code>capability_id</code></td>
             <td>
                 <code>string[50]</code>
             </td>
-            <td><p>Name/Path of a capability.</p>
+            <td><p>Identifier of capability being requested.
+For a path-based capability, this is the path.
+For a runner capability, this is the name.</p>
 </td>
-        </tr></table>
-
-### UseCapabilityPayload {#UseCapabilityPayload}
-
-
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#78)*
-
-<p>Payload for UseCapability event</p>
-
-
-<table>
-    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
-    <tr>
-            <td>1</td>
-            <td><code>capability</code></td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>source</code></td>
             <td>
-                <code>string[50]</code>
+                <code><a class='link' href='#CapabilitySource'>CapabilitySource</a></code>
             </td>
-            <td><p>Name/Path of a capability</p>
+            <td><p>Source of the capability that needs to be routed.</p>
 </td>
         </tr></table>
 
 ### Invocation {#Invocation}
 
 
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#84)*
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#94)*
 
 <p>Contains all information about a single invocation of a breakpoint</p>
 
@@ -354,6 +364,31 @@ and RouteBuiltinCapability events</p>
 
 
 
+## **XUNIONS**
+
+### CapabilitySource {#CapabilitySource}
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#51)*
+
+<p>Describes the source of a routed capability.</p>
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>framework</code></td>
+            <td>
+                <code><a class='link' href='#FrameworkCapability'>FrameworkCapability</a></code>
+            </td>
+            <td><p>The capability is provided by the framework and may be
+scoped down to a component.</p>
+</td>
+        </tr><tr>
+            <td><code>component</code></td>
+            <td>
+                <code><a class='link' href='#ComponentCapability'>ComponentCapability</a></code>
+            </td>
+            <td><p>The capability is provided by another component.</p>
+</td>
+        </tr></table>
+
 
 
 
@@ -380,13 +415,13 @@ This capacity should match the actual number of event types.</p>
             <td><p>The maximum string length of a component moniker.</p>
 </td>
         </tr>
-    <tr id="MAX_CAPABILITY_LENGTH">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#16">MAX_CAPABILITY_LENGTH</a></td>
+    <tr id="MAX_CAPABILITY_ID_LENGTH">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#16">MAX_CAPABILITY_ID_LENGTH</a></td>
             <td>
                     <code>50</code>
                 </td>
                 <td><code>uint64</code></td>
-            <td><p>The maximum string length of the name/path of a capability.
+            <td><p>The maximum string length of a capability ID.
 This value is currently set arbitrarily.</p>
 </td>
         </tr>
