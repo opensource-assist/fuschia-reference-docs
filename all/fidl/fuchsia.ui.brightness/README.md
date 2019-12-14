@@ -56,7 +56,7 @@ Value is in the range 0.0 to 1.0 representing min to max.</p>
     <tr>
             <td><code>value</code></td>
             <td>
-                <code>float32</code>
+                <code><a class='link' href='#brightness'>brightness</a></code>
             </td>
         </tr></table>
 
@@ -81,6 +81,46 @@ https://fuchsia.dev/fuchsia-src/development/api/fidl.md#delay-responses-using-ha
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
             <td><code>value</code></td>
+            <td>
+                <code><a class='link' href='#brightness'>brightness</a></code>
+            </td>
+        </tr></table>
+
+### SetAutoBrightnessOffset {#SetAutoBrightnessOffset}
+
+<p>Sets the brightness offset.
+This will change the built-in brightness curve by the factor of the offset.
+The offset is in the range of -1.0 to 1.0.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>offset</code></td>
+            <td>
+                <code>float32</code>
+            </td>
+        </tr></table>
+
+
+
+### WatchAutoBrightnessOffset {#WatchAutoBrightnessOffset}
+
+<p>Gets the current auto brightness offset.
+This call implements the Hanging Get protocol as detailed in
+https://fuchsia.dev/fuchsia-src/development/api/fidl.md#delay-responses-using-hanging-gets</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>offset</code></td>
             <td>
                 <code>float32</code>
             </td>
@@ -182,7 +222,7 @@ screen's color adjustment matrix.</p>
 ## **STRUCTS**
 
 ### BrightnessPoint {#BrightnessPoint}
-*Defined in [fuchsia.ui.brightness/brightness.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/brightness.fidl#42)*
+*Defined in [fuchsia.ui.brightness/brightness.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/brightness.fidl#51)*
 
 
 
@@ -208,7 +248,7 @@ screen's color adjustment matrix.</p>
 </table>
 
 ### BrightnessTable {#BrightnessTable}
-*Defined in [fuchsia.ui.brightness/brightness.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/brightness.fidl#49)*
+*Defined in [fuchsia.ui.brightness/brightness.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/brightness.fidl#58)*
 
 
 
@@ -296,7 +336,7 @@ This field may be omitted to disable color adjustment.</p>
             <td>5</td>
             <td><code>color_temperature</code></td>
             <td>
-                <code>float32</code>
+                <code><a class='link' href='#kelvin'>kelvin</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -349,7 +389,7 @@ This field may be omitted to disable color adjustment.</p>
             <td>5</td>
             <td><code>color_temperature</code></td>
             <td>
-                <code>float32</code>
+                <code><a class='link' href='#kelvin'>kelvin</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -375,4 +415,23 @@ This field may be omitted to disable color adjustment.</p>
 
 
 
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="brightness">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/brightness.fidl#9">brightness</a></td>
+            <td>
+                <code>float32</code></td>
+            <td><p>A normalized relative brightness adjustment in the range
+0.0 (off/minimum) to 1.0 (maximum).</p>
+</td>
+        </tr><tr id="kelvin">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_tint.fidl#7">kelvin</a></td>
+            <td>
+                <code>float32</code></td>
+            <td></td>
+        </tr></table>
 

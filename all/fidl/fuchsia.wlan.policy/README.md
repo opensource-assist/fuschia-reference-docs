@@ -1005,7 +1005,7 @@ individual APs.</p>
             <td>4</td>
             <td><code>timestamp_nanos</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>Realtime timestamp for this scan result entry.</p>
 </td>
@@ -1198,6 +1198,8 @@ connections and active connection attempts and their outcomes.</p>
             <td><p>Hash representation of the network passphrase (handled as binary data).</p>
 </td>
         </tr></table>
+
+
 
 
 

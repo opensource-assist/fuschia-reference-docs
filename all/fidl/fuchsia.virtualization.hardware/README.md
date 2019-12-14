@@ -30,17 +30,17 @@ guest physical addresses of the queue: <code>desc</code>, <code>avail</code>, an
         </tr><tr>
             <td><code>desc</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>avail</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>used</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr></table>
 
@@ -112,17 +112,17 @@ guest physical addresses of the queue: <code>desc</code>, <code>avail</code>, an
         </tr><tr>
             <td><code>desc</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>avail</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>used</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr></table>
 
@@ -205,7 +205,7 @@ driver and device have agreed upon.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>mem_stats</code></td>
@@ -239,17 +239,17 @@ guest physical addresses of the queue: <code>desc</code>, <code>avail</code>, an
         </tr><tr>
             <td><code>desc</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>avail</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>used</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr></table>
 
@@ -366,17 +366,17 @@ guest physical addresses of the queue: <code>desc</code>, <code>avail</code>, an
         </tr><tr>
             <td><code>desc</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>avail</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>used</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr></table>
 
@@ -510,17 +510,17 @@ guest physical addresses of the queue: <code>desc</code>, <code>avail</code>, an
         </tr><tr>
             <td><code>desc</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>avail</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>used</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr></table>
 
@@ -628,17 +628,17 @@ guest physical addresses of the queue: <code>desc</code>, <code>avail</code>, an
         </tr><tr>
             <td><code>desc</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>avail</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>used</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr></table>
 
@@ -730,17 +730,17 @@ guest physical addresses of the queue: <code>desc</code>, <code>avail</code>, an
         </tr><tr>
             <td><code>desc</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>avail</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>used</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr></table>
 
@@ -818,7 +818,7 @@ driver and device have agreed upon.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -847,17 +847,17 @@ guest physical addresses of the queue: <code>desc</code>, <code>avail</code>, an
         </tr><tr>
             <td><code>desc</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>avail</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>used</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr></table>
 
@@ -954,17 +954,17 @@ guest physical addresses of the queue: <code>desc</code>, <code>avail</code>, an
         </tr><tr>
             <td><code>desc</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>avail</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>used</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr></table>
 
@@ -1084,17 +1084,17 @@ guest physical addresses of the queue: <code>desc</code>, <code>avail</code>, an
         </tr><tr>
             <td><code>desc</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>avail</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr><tr>
             <td><code>used</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
         </tr></table>
 
@@ -1202,7 +1202,7 @@ driver and device have agreed upon.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>addr</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#gpaddr'>gpaddr</a></code>
             </td>
             <td><p>The address of the device trap. This must be page-aligned.</p>
 </td>
@@ -1282,7 +1282,7 @@ documented by the EVENT_* constants above.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="EVENT_SET_QUEUE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualization.hardware/device.fidl#18">EVENT_SET_QUEUE</a></td>
             <td>
                     <code>0</code>
@@ -1291,7 +1291,7 @@ documented by the EVENT_* constants above.</p>
             <td><p>Set a flag to inspect queues on the next interrupt.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="EVENT_SET_CONFIG">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualization.hardware/device.fidl#20">EVENT_SET_CONFIG</a></td>
             <td>
                     <code>1</code>
@@ -1300,7 +1300,7 @@ documented by the EVENT_* constants above.</p>
             <td><p>Set a flag to inspect configs on the next interrupt.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="EVENT_SET_INTERRUPT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualization.hardware/device.fidl#22">EVENT_SET_INTERRUPT</a></td>
             <td>
                     <code>2</code>
@@ -1309,7 +1309,7 @@ documented by the EVENT_* constants above.</p>
             <td><p>If a flag is set, send an interrupt to the device.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="kVirtioWaylandInvalidVfdId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualization.hardware/device.fidl#155">kVirtioWaylandInvalidVfdId</a></td>
             <td>
                     <code>0</code>
@@ -1319,4 +1319,6 @@ documented by the EVENT_* constants above.</p>
         </tr>
     
 </table>
+
+
 

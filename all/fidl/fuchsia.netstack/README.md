@@ -395,7 +395,7 @@ table.  Returns true if a transaction can be started.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -457,7 +457,7 @@ table.  Returns true if a transaction can be started.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -481,7 +481,7 @@ table.  Returns true if a transaction can be started.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -930,7 +930,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -963,7 +963,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="NetInterfaceFlagUp">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#82">NetInterfaceFlagUp</a></td>
             <td>
                     <code>1</code>
@@ -972,7 +972,7 @@ Type: <code>uint32</code>
             <td><p>Flags for NetInterface.flags.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="NetInterfaceFlagDhcp">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.netstack/netstack.fidl#83">NetInterfaceFlagDhcp</a></td>
             <td>
                     <code>2</code>
@@ -982,4 +982,6 @@ Type: <code>uint32</code>
         </tr>
     
 </table>
+
+
 

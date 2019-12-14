@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Ext4Server {#Ext4Server}
-*Defined in [fuchsia.storage.ext4server/ext4_server.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/storage/ext4/server/fidl/ext4_server.fidl#46)*
+*Defined in [fuchsia.storage.ext4server/ext4_server.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/storage/ext4/server/fidl/ext4_server.fidl#47)*
 
 
 ### MountVmo {#MountVmo}
@@ -40,7 +40,7 @@ and the <code>root</code> connection will be closed.</li>
     <tr>
             <td><code>source</code></td>
             <td>
-                <code>handle&lt;vmo&gt;</code>
+                <code><a class='link' href='../fuchsia.mem/'>fuchsia.mem</a>/<a class='link' href='../fuchsia.mem/#Buffer'>Buffer</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -70,7 +70,7 @@ and the <code>root</code> connection will be closed.</li>
 ## **STRUCTS**
 
 ### Success {#Success}
-*Defined in [fuchsia.storage.ext4server/ext4_server.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/storage/ext4/server/fidl/ext4_server.fidl#10)*
+*Defined in [fuchsia.storage.ext4server/ext4_server.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/storage/ext4/server/fidl/ext4_server.fidl#11)*
 
 
 
@@ -81,7 +81,7 @@ and the <code>root</code> connection will be closed.</li>
 </table>
 
 ### ParseFailure {#ParseFailure}
-*Defined in [fuchsia.storage.ext4server/ext4_server.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/storage/ext4/server/fidl/ext4_server.fidl#14)*
+*Defined in [fuchsia.storage.ext4server/ext4_server.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/storage/ext4/server/fidl/ext4_server.fidl#15)*
 
 
 
@@ -117,7 +117,7 @@ and the <code>root</code> connection will be closed.</li>
 ## **XUNIONS**
 
 ### MountVmoResult {#MountVmoResult}
-*Defined in [fuchsia.storage.ext4server/ext4_server.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/storage/ext4/server/fidl/ext4_server.fidl#28)*
+*Defined in [fuchsia.storage.ext4server/ext4_server.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/storage/ext4/server/fidl/ext4_server.fidl#29)*
 
 <p>Result of an <a class='link' href='#Ext4Server.MountVmo'>Ext4Server.MountVmo</a> call.</p>
 
@@ -133,7 +133,7 @@ root directory and none of the early validation checks have failed.</p>
         </tr><tr>
             <td><code>vmo_read_failure</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td><p>Error reading the VMO.</p>
 </td>
@@ -145,6 +145,8 @@ root directory and none of the early validation checks have failed.</p>
             <td><p>Failure during the initial parsing of the image.</p>
 </td>
         </tr></table>
+
+
 
 
 

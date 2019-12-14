@@ -176,7 +176,7 @@ To receive all changes, use an empty <code>key_prefix</code>.</p>
         </tr><tr>
             <td><code>key_prefix</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr><tr>
             <td><code>watcher</code></td>
@@ -215,7 +215,7 @@ priorities and their definition, see <code>Priority</code>.</li>
     <tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr><tr>
             <td><code>value</code></td>
@@ -235,7 +235,7 @@ priorities and their definition, see <code>Priority</code>.</li>
     <tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr><tr>
             <td><code>value</code></td>
@@ -260,7 +260,7 @@ priorities and their definition, see <code>Priority</code>.</li>
     <tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr><tr>
             <td><code>reference</code></td>
@@ -285,7 +285,7 @@ priorities and their definition, see <code>Priority</code>.</li>
     <tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr></table>
 
@@ -507,7 +507,7 @@ The returned <code>entries</code> are sorted by <code>key</code>.</p>
     <tr>
             <td><code>key_start</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr><tr>
             <td><code>token</code></td>
@@ -543,7 +543,7 @@ The returned <code>entries</code> are sorted by <code>key</code>.</p>
     <tr>
             <td><code>key_start</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr><tr>
             <td><code>token</code></td>
@@ -586,7 +586,7 @@ results and NULL once finished.</p>
     <tr>
             <td><code>key_start</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr><tr>
             <td><code>token</code></td>
@@ -624,7 +624,7 @@ be retrieved over the network using a Fetch() call.</p>
     <tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr></table>
 
@@ -652,7 +652,7 @@ See <code>Get()</code> for additional information.</p>
     <tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr></table>
 
@@ -679,7 +679,7 @@ is not available).</p>
     <tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr></table>
 
@@ -709,7 +709,7 @@ everything.</p>
     <tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
         </tr><tr>
             <td><code>offset</code></td>
@@ -1253,7 +1253,7 @@ called for new state change calls to be sent.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1308,7 +1308,7 @@ contents.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1343,7 +1343,7 @@ contents.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>timestamp</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>The timestamp of this change. This represents the number of nanoseconds
 since Unix epoch (i.e., since &quot;1970-01-01 00:00 UTC&quot;, ignoring leap
@@ -1385,7 +1385,7 @@ ignored.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1428,7 +1428,7 @@ page.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>key</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[256]</code>
+                <code><a class='link' href='#Key'>Key</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1707,7 +1707,7 @@ setup)</li>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1726,7 +1726,7 @@ setup)</li>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1837,7 +1837,7 @@ that is referenced by <code>reference</code>.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="PAGE_ID_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#17">PAGE_ID_SIZE</a></td>
             <td>
                     <code>16</code>
@@ -1848,4 +1848,17 @@ that is referenced by <code>reference</code>.</p>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="Key">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#14">Key</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>Type of the keys in a ledger Page.</p>
+</td>
+        </tr></table>
 

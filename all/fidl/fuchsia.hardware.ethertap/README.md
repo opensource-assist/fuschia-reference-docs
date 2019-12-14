@@ -126,7 +126,7 @@ and no <code>device</code> is created.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -194,7 +194,7 @@ device will fail.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="OPT_TRACE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#11">OPT_TRACE</a></td>
             <td>
                     <code>1</code>
@@ -203,7 +203,7 @@ device will fail.</p>
             <td><p>Enables tracing of the ethertap device itself.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPT_TRACE_PACKETS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#13">OPT_TRACE_PACKETS</a></td>
             <td>
                     <code>2</code>
@@ -212,7 +212,7 @@ device will fail.</p>
             <td><p>Enables tracing of individual packets.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPT_REPORT_PARAM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#17">OPT_REPORT_PARAM</a></td>
             <td>
                     <code>4</code>
@@ -223,7 +223,7 @@ EthernetImplSetParam().  If this option is not set, EthernetImplSetParam() will 
 <code>ZX_ERR_NOT_SUPPORTED</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="OPT_ONLINE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#19">OPT_ONLINE</a></td>
             <td>
                     <code>8</code>
@@ -232,7 +232,7 @@ EthernetImplSetParam().  If this option is not set, EthernetImplSetParam() will 
             <td><p>Starts ethertap device with link online.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_MTU">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#22">MAX_MTU</a></td>
             <td>
                     <code>2000</code>
@@ -241,7 +241,7 @@ EthernetImplSetParam().  If this option is not set, EthernetImplSetParam() will 
             <td><p>Maximum MTU supported by ethertap driver.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_PARAM_DATA">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#24">MAX_PARAM_DATA</a></td>
             <td>
                     <code>64</code>
@@ -250,7 +250,7 @@ EthernetImplSetParam().  If this option is not set, EthernetImplSetParam() will 
             <td><p>Maximum size of trailing data on params report.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethertap/ethertap.fidl#26">MAX_NAME_LENGTH</a></td>
             <td>
                     <code>30</code>
@@ -261,4 +261,6 @@ EthernetImplSetParam().  If this option is not set, EthernetImplSetParam() will 
         </tr>
     
 </table>
+
+
 

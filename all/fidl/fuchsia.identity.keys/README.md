@@ -409,7 +409,7 @@ might be reused for a different <code>Key</code> in the future.</p>
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#KeyId'>KeyId</a></code>
             </td>
         </tr></table>
 
@@ -438,7 +438,7 @@ guarantee that the deletion will be successfully committed.</p>
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#KeyId'>KeyId</a></code>
             </td>
         </tr></table>
 
@@ -493,7 +493,7 @@ NOT_FOUND if this key does not exist.</p>
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#KeyId'>KeyId</a></code>
             </td>
         </tr></table>
 
@@ -787,7 +787,7 @@ made, or zero if no <code>MarkId</code> calls have been made.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>id</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#KeyId'>KeyId</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -805,7 +805,7 @@ made, or zero if no <code>MarkId</code> calls have been made.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>id</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#KeyId'>KeyId</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1446,7 +1446,7 @@ in a future version of the API.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_NAME_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#18">MAX_NAME_LEN</a></td>
             <td>
                     <code>128</code>
@@ -1455,7 +1455,7 @@ in a future version of the API.</p>
             <td><p>The maximum length of a <code>KeySingleton</code> or <code>KeySet</code> name, in bytes.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_METADATA_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#20">MAX_METADATA_LEN</a></td>
             <td>
                     <code>128</code>
@@ -1464,7 +1464,7 @@ in a future version of the API.</p>
             <td><p>The maximum length of metadata in a <code>KeySingleton</code> or <code>KeySet</code>, in bytes.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_KEY_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#22">MAX_KEY_LEN</a></td>
             <td>
                     <code>64</code>
@@ -1473,7 +1473,7 @@ in a future version of the API.</p>
             <td><p>The maximum length of an unstructured random <code>Key</code>, in bytes.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_KEYSET_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#25">MAX_KEYSET_SIZE</a></td>
             <td>
                     <code>64</code>
@@ -1482,7 +1482,7 @@ in a future version of the API.</p>
             <td><p>The maximum number of <code>Key</code> objects in a <code>KeySet</code>.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="TWICE_MAX_KEYSET_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#27">TWICE_MAX_KEYSET_SIZE</a></td>
             <td>
                     <code>128</code>
@@ -1493,4 +1493,16 @@ in a future version of the API.</p>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="KeyId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.keys/key_manager.fidl#15">KeyId</a></td>
+            <td>
+                <code>uint32</code></td>
+            <td></td>
+        </tr></table>
 

@@ -33,7 +33,7 @@ is already present on the remote device.</p>
     <tr>
             <td><code>account_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../fuchsia.identity.account/'>fuchsia.identity.account</a>/<a class='link' href='../fuchsia.identity.account/#LocalAccountId'>LocalAccountId</a></code>
             </td>
         </tr><tr>
             <td><code>target_device</code></td>
@@ -99,6 +99,8 @@ is already present on the remote device.</p>
             </td>
             <td></td>
         </tr></table>
+
+
 
 
 

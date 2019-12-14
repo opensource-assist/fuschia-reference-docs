@@ -24,7 +24,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -48,7 +48,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>handle</code></td>
@@ -72,7 +72,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -251,7 +251,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="POWER_STATE_ONLINE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-power/power.fidl#13">POWER_STATE_ONLINE</a></td>
             <td>
                     <code>1</code>
@@ -259,7 +259,7 @@ Type: <code>uint32</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="POWER_STATE_DISCHARGING">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-power/power.fidl#14">POWER_STATE_DISCHARGING</a></td>
             <td>
                     <code>2</code>
@@ -267,7 +267,7 @@ Type: <code>uint32</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="POWER_STATE_CHARGING">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-power/power.fidl#15">POWER_STATE_CHARGING</a></td>
             <td>
                     <code>4</code>
@@ -275,7 +275,7 @@ Type: <code>uint32</code>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="POWER_STATE_CRITICAL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-power/power.fidl#16">POWER_STATE_CRITICAL</a></td>
             <td>
                     <code>8</code>
@@ -285,4 +285,6 @@ Type: <code>uint32</code>
         </tr>
     
 </table>
+
+
 

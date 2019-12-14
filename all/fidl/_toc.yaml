@@ -231,8 +231,6 @@ toc:
   path: /reference/fidl/fuchsia.devicesettings
 - title: fuchsia.diagnostics
   path: /reference/fidl/fuchsia.diagnostics
-- title: fuchsia.diagnostics.inspect
-  path: /reference/fidl/fuchsia.diagnostics.inspect
 - title: fuchsia.diagnostics.stream
   path: /reference/fidl/fuchsia.diagnostics.stream
 - title: fuchsia.diagnostics.streaming
@@ -295,6 +293,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.mediacodec
 - title: fuchsia.hardware.power
   path: /reference/fidl/fuchsia.hardware.power
+- title: fuchsia.hardware.power.statecontrol
+  path: /reference/fidl/fuchsia.hardware.power.statecontrol
 - title: fuchsia.hardware.pty
   path: /reference/fidl/fuchsia.hardware.pty
 - title: fuchsia.hardware.rtc
@@ -319,6 +319,8 @@ toc:
   path: /reference/fidl/fuchsia.hwinfo
 - title: fuchsia.identity.account
   path: /reference/fidl/fuchsia.identity.account
+- title: fuchsia.identity.authentication
+  path: /reference/fidl/fuchsia.identity.authentication
 - title: fuchsia.identity.external
   path: /reference/fidl/fuchsia.identity.external
 - title: fuchsia.identity.internal
@@ -355,8 +357,6 @@ toc:
   path: /reference/fidl/fuchsia.ledger
 - title: fuchsia.ledger.cloud
   path: /reference/fidl/fuchsia.ledger.cloud
-- title: fuchsia.ledger.cloud.test
-  path: /reference/fidl/fuchsia.ledger.cloud.test
 - title: fuchsia.ledger.internal
   path: /reference/fidl/fuchsia.ledger.internal
 - title: fuchsia.ledger.syncabletest
@@ -367,6 +367,8 @@ toc:
   path: /reference/fidl/fuchsia.location.namedplace
 - title: fuchsia.logger
   path: /reference/fidl/fuchsia.logger
+- title: fuchsia.lowpan
+  path: /reference/fidl/fuchsia.lowpan
 - title: fuchsia.math
   path: /reference/fidl/fuchsia.math
 - title: fuchsia.maxwell.internal
@@ -381,6 +383,8 @@ toc:
   path: /reference/fidl/fuchsia.media.playback
 - title: fuchsia.media.sessions2
   path: /reference/fidl/fuchsia.media.sessions2
+- title: fuchsia.media.sounds
+  path: /reference/fidl/fuchsia.media.sounds
 - title: fuchsia.mediacodec
   path: /reference/fidl/fuchsia.mediacodec
 - title: fuchsia.mem
@@ -499,6 +503,8 @@ toc:
   path: /reference/fidl/fuchsia.sys
 - title: fuchsia.sys.index
   path: /reference/fidl/fuchsia.sys.index
+- title: fuchsia.sys.internal
+  path: /reference/fidl/fuchsia.sys.internal
 - title: fuchsia.sys.test
   path: /reference/fidl/fuchsia.sys.test
 - title: fuchsia.sys2

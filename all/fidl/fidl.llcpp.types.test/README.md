@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## TestInterface {#TestInterface}
-*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#44)*
+*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#53)*
 
 
 ### TestMethod {#TestMethod}
@@ -34,7 +34,7 @@
         </tr></table>
 
 ## Baz {#Baz}
-*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#55)*
+*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#66)*
 
 
 ### Foo {#Foo}
@@ -102,7 +102,7 @@
 </table>
 
 ### FooRequest {#FooRequest}
-*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#49)*
+*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#58)*
 
 
 
@@ -121,7 +121,7 @@
 </table>
 
 ### FooResponse {#FooResponse}
-*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#52)*
+*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#62)*
 
 
 
@@ -147,7 +147,7 @@
 ### SampleTable {#SampleTable}
 
 
-*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#38)*
+*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#43)*
 
 <p>Verifies that user code can build and access tables.</p>
 
@@ -176,6 +176,18 @@
             </td>
             <td></td>
         </tr></table>
+
+### SampleEmptyTable {#SampleEmptyTable}
+
+
+*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#50)*
+
+<p>Verifies that an empty table compiles.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
 
 
 
@@ -230,6 +242,25 @@
             <td></td>
         </tr></table>
 
+### TestStrictXUnion {#TestStrictXUnion}
+*Defined in [fidl.llcpp.types.test/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/llcpp/types.test.fidl#27)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>primitive</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>copyable</code></td>
+            <td>
+                <code><a class='link' href='#CopyableStruct'>CopyableStruct</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 
 
 ## **BITS**
@@ -252,6 +283,8 @@ Type: <code>uint8</code>
             <td>8</td>
             <td></td>
         </tr></table>
+
+
 
 
 

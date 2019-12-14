@@ -362,7 +362,7 @@ reached.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -376,7 +376,7 @@ reached.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="FILE_PATH_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.factory.camera/factory.fidl#12">FILE_PATH_MAX_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -386,4 +386,6 @@ reached.</p>
         </tr>
     
 </table>
+
+
 

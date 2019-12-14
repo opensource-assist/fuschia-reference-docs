@@ -571,7 +571,7 @@ enums and zx.status instead.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAJOR_DEVICE_CLASS_MASK">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#19">MAJOR_DEVICE_CLASS_MASK</a></td>
             <td>
                     <code>7936</code>
@@ -580,7 +580,7 @@ enums and zx.status instead.</p>
             <td><p>Constants for the major device class field. The major device class is defined by bits 12-8.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAJOR_DEVICE_CLASS_MISCELLANEOUS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#21">MAJOR_DEVICE_CLASS_MISCELLANEOUS</a></td>
             <td>
                     <code>0</code>
@@ -588,7 +588,7 @@ enums and zx.status instead.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAJOR_DEVICE_CLASS_COMPUTER">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#22">MAJOR_DEVICE_CLASS_COMPUTER</a></td>
             <td>
                     <code>256</code>
@@ -596,7 +596,7 @@ enums and zx.status instead.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAJOR_DEVICE_CLASS_PHONE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#23">MAJOR_DEVICE_CLASS_PHONE</a></td>
             <td>
                     <code>512</code>
@@ -604,7 +604,7 @@ enums and zx.status instead.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAJOR_DEVICE_CLASS_LAN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#24">MAJOR_DEVICE_CLASS_LAN</a></td>
             <td>
                     <code>768</code>
@@ -612,7 +612,7 @@ enums and zx.status instead.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAJOR_DEVICE_CLASS_AUDIO_VIDEO">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#25">MAJOR_DEVICE_CLASS_AUDIO_VIDEO</a></td>
             <td>
                     <code>1024</code>
@@ -620,7 +620,7 @@ enums and zx.status instead.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAJOR_DEVICE_CLASS_PERIPHERAL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#26">MAJOR_DEVICE_CLASS_PERIPHERAL</a></td>
             <td>
                     <code>1280</code>
@@ -628,7 +628,7 @@ enums and zx.status instead.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAJOR_DEVICE_CLASS_IMAGING">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#27">MAJOR_DEVICE_CLASS_IMAGING</a></td>
             <td>
                     <code>1536</code>
@@ -636,7 +636,7 @@ enums and zx.status instead.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAJOR_DEVICE_CLASS_WEARABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#28">MAJOR_DEVICE_CLASS_WEARABLE</a></td>
             <td>
                     <code>1792</code>
@@ -644,7 +644,7 @@ enums and zx.status instead.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAJOR_DEVICE_CLASS_TOY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#29">MAJOR_DEVICE_CLASS_TOY</a></td>
             <td>
                     <code>2048</code>
@@ -652,7 +652,7 @@ enums and zx.status instead.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAJOR_DEVICE_CLASS_HEALTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#30">MAJOR_DEVICE_CLASS_HEALTH</a></td>
             <td>
                     <code>2304</code>
@@ -660,7 +660,7 @@ enums and zx.status instead.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAJOR_DEVICE_CLASS_UNCATEGORIZED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth/device_class.fidl#31">MAJOR_DEVICE_CLASS_UNCATEGORIZED</a></td>
             <td>
                     <code>7936</code>
@@ -670,4 +670,6 @@ enums and zx.status instead.</p>
         </tr>
     
 </table>
+
+
 

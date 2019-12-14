@@ -140,7 +140,7 @@ Use <code>timeout</code> &lt;= 0 for indefinite wait.</p>
         </tr><tr>
             <td><code>timeout</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -178,7 +178,7 @@ Use <code>timeout</code> &lt;= 0 for indefinite wait.</p>
         </tr><tr>
             <td><code>timeout</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -250,7 +250,7 @@ Use <code>timeout</code> &lt;= 0 for indefinite wait.</p>
         </tr><tr>
             <td><code>timeout</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -308,6 +308,8 @@ Use <code>timeout</code> &lt;= 0 for indefinite wait.</p>
             <td><p>serialized arguments.</p>
 </td>
         </tr></table>
+
+
 
 
 

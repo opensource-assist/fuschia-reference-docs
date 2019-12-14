@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Host {#Host}
-*Defined in [fuchsia.bluetooth.host/host.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/bluetooth/fidl/host.fidl#14)*
+*Defined in [fuchsia.bluetooth.host/host.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/connectivity/bluetooth/fidl/host.fidl#16)*
 
 <p>Interface for interacting with a Bluetooth host device (bt-host)</p>
 
@@ -95,9 +95,14 @@ terminated.</p>
 
 
 
-### GetInfo {#GetInfo}
+### WatchState {#WatchState}
 
-<p>Returns information about the Bluetooth adapter managed by this host.</p>
+<p>Returns information about the Bluetooth host subsystem and controller managed by this Host
+instance. If there has been no change to the state since the last call to this method, the
+response will be deferred until there is a change.</p>
+<p>The returned <code>info</code> structure will be populated with the current state of the bt-host
+device. However the <code>active</code> parameter will never be populated. This field is managed
+by a higher layer.</p>
 
 #### Request
 <table>
@@ -111,7 +116,7 @@ terminated.</p>
     <tr>
             <td><code>info</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/'>fuchsia.bluetooth.control</a>/<a class='link' href='../fuchsia.bluetooth.control/#AdapterInfo'>AdapterInfo</a></code>
+                <code><a class='link' href='../fuchsia.bluetooth.sys/'>fuchsia.bluetooth.sys</a>/<a class='link' href='../fuchsia.bluetooth.sys/#HostInfo'>HostInfo</a></code>
             </td>
         </tr></table>
 
@@ -169,7 +174,7 @@ above.</p>
 
 ### SetLocalName {#SetLocalName}
 
-<p>Sets the local name for this adapter.</p>
+<p>Sets the local name for this host device.</p>
 
 #### Request
 <table>
@@ -194,7 +199,7 @@ above.</p>
 
 ### SetDeviceClass {#SetDeviceClass}
 
-<p>Sets the device class for this adapter.</p>
+<p>Sets the device class for this host device.</p>
 
 #### Request
 <table>
@@ -202,7 +207,7 @@ above.</p>
     <tr>
             <td><code>device_class</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/'>fuchsia.bluetooth.control</a>/<a class='link' href='../fuchsia.bluetooth.control/#DeviceClass'>DeviceClass</a></code>
+                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#DeviceClass'>DeviceClass</a></code>
             </td>
         </tr></table>
 
@@ -220,11 +225,11 @@ above.</p>
 ### StartDiscovery {#StartDiscovery}
 
 <p>Initiates a general discovery procedure for BR/EDR and LE devices. On success, discovered
-devices will be reported via AdapterDelegate.OnDeviceDiscovered().</p>
+devices will be reported via OnDeviceUpdated events.</p>
 <p>On the LE transport, only general-discoverable and connectable peripherals will be reported.</p>
-<p>Discovery will continue until it is terminated via StopDiscovery() or if the proxy to the
-Adapter gets disconnected. If the device does not support BR/EDR, only LE
-discovery will be performed.</p>
+<p>Discovery will continue until it is terminated via StopDiscovery() or if the Host protocol
+channel gets closed. If the device does not support BR/EDR, only LE discovery will be
+performed.</p>
 <p>An OnDeviceUpdated event will be sent when the discovery procedures are
 started.</p>
 
@@ -246,8 +251,7 @@ started.</p>
 
 ### StopDiscovery {#StopDiscovery}
 
-<p>Terminates discovery if one was started via StartDiscovery(). The AdapterDelegate will stop
-receiving device discovery notifications.</p>
+<p>Terminates discovery if one was started via StartDiscovery().</p>
 <p>NOTE: If another client is performing discovery (e.g. via its own le.Central interface handle),
 then the system will continue performing device discovery even if this method results in
 success.</p>
@@ -519,22 +523,6 @@ using the provided bonding data.</p>
             </td>
         </tr></table>
 
-### OnAdapterStateChanged {#OnAdapterStateChanged}
-
-<p>Notifies when the adapter state changes.</p>
-
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>state</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.bluetooth.control/'>fuchsia.bluetooth.control</a>/<a class='link' href='../fuchsia.bluetooth.control/#AdapterState'>AdapterState</a></code>
-            </td>
-        </tr></table>
-
 ### OnDeviceUpdated {#OnDeviceUpdated}
 
 <p>Events that are sent when a connectable device is added, updated, or
@@ -582,6 +570,8 @@ removed as a result of connection and discovery procedures.</p>
                 <code><a class='link' href='../fuchsia.bluetooth.control/'>fuchsia.bluetooth.control</a>/<a class='link' href='../fuchsia.bluetooth.control/#BondingData'>BondingData</a></code>
             </td>
         </tr></table>
+
+
 
 
 

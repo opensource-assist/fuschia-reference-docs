@@ -33,7 +33,7 @@ Device's report FIFO. When there are events in the FIFO, |event| will have
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>event</code></td>
@@ -601,7 +601,7 @@ converting it to absolute movement.</p>
             <td>1</td>
             <td><code>event_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>|event_time| is in nanoseconds when the event was recorded.</p>
 </td>
@@ -874,7 +874,7 @@ and they should be in the same units as <code>position_x</code> and <code>positi
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_DEVICE_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/descriptor.fidl#7">MAX_DEVICE_NAME_LENGTH</a></td>
             <td>
                     <code>256</code>
@@ -882,7 +882,7 @@ and they should be in the same units as <code>position_x</code> and <code>positi
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_DEVICE_REPORT_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/device.fidl#9">MAX_DEVICE_REPORT_COUNT</a></td>
             <td>
                     <code>50</code>
@@ -890,7 +890,7 @@ and they should be in the same units as <code>position_x</code> and <code>positi
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="KEYBOARD_MAX_NUM_KEYS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/keyboard.fidl#11">KEYBOARD_MAX_NUM_KEYS</a></td>
             <td>
                     <code>150</code>
@@ -900,7 +900,7 @@ and they should be in the same units as <code>position_x</code> and <code>positi
 if we ever see keyboards with more keys.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="KEYBOARD_MAX_PRESSED_KEYS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/keyboard.fidl#16">KEYBOARD_MAX_PRESSED_KEYS</a></td>
             <td>
                     <code>15</code>
@@ -911,7 +911,7 @@ This should be increased in the future if we see keyboards that can
 handle more pressed keys.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MOUSE_MAX_NUM_BUTTONS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/mouse.fidl#9">MOUSE_MAX_NUM_BUTTONS</a></td>
             <td>
                     <code>32</code>
@@ -921,7 +921,7 @@ handle more pressed keys.</p>
 if we ever see mice with more buttons.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="SENSOR_MAX_VALUES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/sensor.fidl#9">SENSOR_MAX_VALUES</a></td>
             <td>
                     <code>100</code>
@@ -931,7 +931,7 @@ if we ever see mice with more buttons.</p>
 if we ever see a sensor with more values.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="TOUCH_MAX_CONTACTS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.input.report/touch.fidl#9">TOUCH_MAX_CONTACTS</a></td>
             <td>
                     <code>10</code>
@@ -943,4 +943,6 @@ we see devices with more than the max amount.</p>
         </tr>
     
 </table>
+
+
 

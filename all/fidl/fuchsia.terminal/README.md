@@ -41,7 +41,7 @@
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>string[36]</code>
+                <code><a class='link' href='#ProfileId'>ProfileId</a></code>
             </td>
         </tr></table>
 
@@ -85,7 +85,7 @@ profile are updated.</p>
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>string[36]</code>
+                <code><a class='link' href='#ProfileId'>ProfileId</a></code>
             </td>
         </tr></table>
 
@@ -112,7 +112,7 @@ exist. A Profile must be created with a call to [CreateProfile].</p>
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>string[36]</code>
+                <code><a class='link' href='#ProfileId'>ProfileId</a></code>
             </td>
         </tr><tr>
             <td><code>profile</code></td>
@@ -149,7 +149,7 @@ exist. A Profile must be created with a call to [CreateProfile].</p>
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>string[36]</code>
+                <code><a class='link' href='#ProfileId'>ProfileId</a></code>
             </td>
         </tr><tr>
             <td><code>profile</code></td>
@@ -174,7 +174,7 @@ event.</p>
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>string[36]</code>
+                <code><a class='link' href='#ProfileId'>ProfileId</a></code>
             </td>
         </tr></table>
 
@@ -192,7 +192,7 @@ event.</p>
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>string[36]</code>
+                <code><a class='link' href='#ProfileId'>ProfileId</a></code>
             </td>
         </tr><tr>
             <td><code>profile</code></td>
@@ -258,7 +258,7 @@ a profile that has been saved.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>id</code></td>
             <td>
-                <code>string[36]</code>
+                <code><a class='link' href='#ProfileId'>ProfileId</a></code>
             </td>
             <td><p>A unique identifier for this profile represented as a UUID V4 string.</p>
 </td>
@@ -541,7 +541,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_PROFILE_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.terminal/profiles.fidl#10">MAX_PROFILE_NAME_LENGTH</a></td>
             <td>
                     <code>128</code>
@@ -549,7 +549,7 @@ Type: <code>uint32</code>
                 <td><code>int32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_ALLOWED_PROFILES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.terminal/profiles.fidl#11">MAX_ALLOWED_PROFILES</a></td>
             <td>
                     <code>24</code>
@@ -557,7 +557,7 @@ Type: <code>uint32</code>
                 <td><code>int32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_ID_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.terminal/profiles.fidl#12">MAX_ID_LENGTH</a></td>
             <td>
                     <code>36</code>
@@ -567,4 +567,17 @@ Type: <code>uint32</code>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="ProfileId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.terminal/profiles.fidl#15">ProfileId</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_ID_LENGTH'>MAX_ID_LENGTH</a></code>]</td>
+            <td><p>An alias to a profile's id.</p>
+</td>
+        </tr></table>
 

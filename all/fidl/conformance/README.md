@@ -483,7 +483,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2537,6 +2537,42 @@
             <td></td>
         </tr></table>
 
+### Table_NoFields {#Table_NoFields}
+
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#142)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
+
+### Table_TwoReservedFields {#Table_TwoReservedFields}
+
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#145)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### Table_StructWithReservedSandwich {#Table_StructWithReservedSandwich}
 
 
@@ -3211,6 +3247,8 @@
             </td>
             <td></td>
         </tr></table>
+
+
 
 
 

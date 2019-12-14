@@ -222,7 +222,7 @@ is sent, and this InterceptedComponent handle is closed.</p>
         </tr><tr>
             <td><code>url</code></td>
             <td>
-                <code>string[2083]</code>
+                <code><a class='link' href='../fuchsia.sys/'>fuchsia.sys</a>/<a class='link' href='../fuchsia.sys/#component_url'>component_url</a></code>
             </td>
             <td><p>URL of the component which will provide the service.
 The service is retrieved from this component's /out/svc namespace.</p>
@@ -396,7 +396,7 @@ environment's life.</p>
             <td>1</td>
             <td><code>component_url</code></td>
             <td>
-                <code>string[2083]</code>
+                <code><a class='link' href='../fuchsia.sys/'>fuchsia.sys</a>/<a class='link' href='../fuchsia.sys/#component_url'>component_url</a></code>
             </td>
             <td><p>Required. Must be a valid component URL (e.g., fuchsia-pkg://..), or is
 considered malformed.</p>
@@ -453,6 +453,8 @@ override the default constructed manifest, which only has the required
             </td>
             <td></td>
         </tr></table>
+
+
 
 
 

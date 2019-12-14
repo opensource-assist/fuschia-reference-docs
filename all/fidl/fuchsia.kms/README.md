@@ -1061,7 +1061,7 @@ asymmetric key operation.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_KEY_NAME_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#9">MAX_KEY_NAME_SIZE</a></td>
             <td>
                     <code>32</code>
@@ -1069,7 +1069,7 @@ asymmetric key operation.</p>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_DATA_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager.fidl#10">MAX_DATA_SIZE</a></td>
             <td>
                     <code>65536</code>
@@ -1077,7 +1077,7 @@ asymmetric key operation.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_HARDWARE_DERIVE_KEY_INFO_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager_stateless.fidl#7">MAX_HARDWARE_DERIVE_KEY_INFO_SIZE</a></td>
             <td>
                     <code>32</code>
@@ -1085,7 +1085,7 @@ asymmetric key operation.</p>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_HARDWARE_DERIVED_KEY_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.kms/key_manager_stateless.fidl#8">MAX_HARDWARE_DERIVED_KEY_SIZE</a></td>
             <td>
                     <code>32</code>
@@ -1095,4 +1095,6 @@ asymmetric key operation.</p>
         </tr>
     
 </table>
+
+
 

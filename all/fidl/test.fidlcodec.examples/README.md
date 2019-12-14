@@ -762,6 +762,26 @@
 
 
 
+### ShortUnionReserved {#ShortUnionReserved}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>u</code></td>
+            <td>
+                <code><a class='link' href='#U8U16UnionReserved'>U8U16UnionReserved</a></code>
+            </td>
+        </tr><tr>
+            <td><code>i</code></td>
+            <td>
+                <code>int32</code>
+            </td>
+        </tr></table>
+
+
+
 ### ShortXUnion {#ShortXUnion}
 
 
@@ -1058,7 +1078,7 @@
 
 
 ## ParamProtocol {#ParamProtocol}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#234)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#242)*
 
 
 ### Method {#Method}
@@ -1100,7 +1120,7 @@
 ## **STRUCTS**
 
 ### BoolStructType {#BoolStructType}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#91)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#92)*
 
 
 
@@ -1118,7 +1138,7 @@
 </table>
 
 ### PrimitiveTypes {#PrimitiveTypes}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#95)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#96)*
 
 
 
@@ -1213,7 +1233,7 @@
 </table>
 
 ### SmallStruct {#SmallStruct}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#110)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#111)*
 
 
 
@@ -1245,7 +1265,7 @@
 </table>
 
 ### SmallUnevenStruct {#SmallUnevenStruct}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#116)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#117)*
 
 
 
@@ -1270,7 +1290,7 @@
 </table>
 
 ### TwoStringStruct {#TwoStringStruct}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#121)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#122)*
 
 
 
@@ -1295,7 +1315,7 @@
 </table>
 
 ### U8U16UnionStructType {#U8U16UnionStructType}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#146)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#153)*
 
 
 
@@ -1313,7 +1333,7 @@
 </table>
 
 ### HandleStruct {#HandleStruct}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#211)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#219)*
 
 
 
@@ -1345,7 +1365,7 @@
 </table>
 
 ### OptHandleStruct {#OptHandleStruct}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#217)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#225)*
 
 
 
@@ -1370,7 +1390,7 @@
 </table>
 
 ### TraversalOrder {#TraversalOrder}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#227)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#235)*
 
 
 
@@ -1408,7 +1428,7 @@
 ### DefaultEnum {#DefaultEnum}
 Type: <code>uint32</code>
 
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#150)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#157)*
 
 
 
@@ -1422,7 +1442,7 @@ Type: <code>uint32</code>
 ### I8Enum {#I8Enum}
 Type: <code>int8</code>
 
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#154)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#161)*
 
 
 
@@ -1436,7 +1456,7 @@ Type: <code>int8</code>
 ### I16Enum {#I16Enum}
 Type: <code>int16</code>
 
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#158)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#165)*
 
 
 
@@ -1450,7 +1470,7 @@ Type: <code>int16</code>
 ### I32Enum {#I32Enum}
 Type: <code>int32</code>
 
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#162)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#169)*
 
 
 
@@ -1464,7 +1484,7 @@ Type: <code>int32</code>
 ### I64Enum {#I64Enum}
 Type: <code>int64</code>
 
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#166)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#173)*
 
 
 
@@ -1507,7 +1527,7 @@ Type: <code>int64</code>
 ### ValueTable {#ValueTable}
 
 
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#205)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#212)*
 
 
 
@@ -1529,6 +1549,13 @@ Type: <code>int64</code>
             <td></td>
         </tr><tr>
             <td>3</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>4</td>
             <td><code>third_union</code></td>
             <td>
                 <code><a class='link' href='#IntStructUnion'>IntStructUnion</a></code>
@@ -1539,7 +1566,7 @@ Type: <code>int64</code>
 ### HandleTable {#HandleTable}
 
 
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#222)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#230)*
 
 
 
@@ -1566,7 +1593,7 @@ Type: <code>int64</code>
 ## **UNIONS**
 
 ### IntStructUnion {#IntStructUnion}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#126)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#127)*
 
 
 <table>
@@ -1585,7 +1612,7 @@ Type: <code>int64</code>
         </tr></table>
 
 ### U8U16Union {#U8U16Union}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#136)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#137)*
 
 
 <table>
@@ -1593,6 +1620,31 @@ Type: <code>int64</code>
             <td><code>variant_u8</code></td>
             <td>
                 <code>uint8</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>variant_u16</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### U8U16UnionReserved {#U8U16UnionReserved}
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#142)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>variant_u8</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code></code></td>
+            <td>
+                <code></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1627,7 +1679,7 @@ Type: <code>int64</code>
 ## **XUNIONS**
 
 ### IntStructXunion {#IntStructXunion}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#131)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#132)*
 
 
 <table>
@@ -1646,7 +1698,7 @@ Type: <code>int64</code>
         </tr></table>
 
 ### U8U16Xunion {#U8U16Xunion}
-*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#141)*
+*Defined in [test.fidlcodec.examples/types.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/types.test.fidl#148)*
 
 
 <table>
@@ -1801,6 +1853,8 @@ Type: <code>uint64</code>
             <td>34359738368</td>
             <td></td>
         </tr></table>
+
+
 
 
 

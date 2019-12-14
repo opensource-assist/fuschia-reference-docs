@@ -32,7 +32,7 @@ combination of <code>DEVICE_SUSPEND_FLAG_*</code> from the DDK.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -72,7 +72,7 @@ which case the other end of the channel will have been passed to the driver.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>test_output</code></td>
@@ -113,7 +113,7 @@ which case the other end of the channel will have been passed to the driver.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -181,7 +181,7 @@ once |device_remove| invokes |unbind|.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -207,7 +207,7 @@ once |device_remove| invokes |unbind|.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -260,7 +260,7 @@ with the devcoordinator via <code>coordinator</code>. Implements DeviceControlle
         </tr><tr>
             <td><code>local_device_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalDeviceId'>LocalDeviceId</a></code>
             </td>
         </tr></table>
 
@@ -316,7 +316,7 @@ fuchsia.boot.Items protocol.</p>
         </tr><tr>
             <td><code>local_device_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalDeviceId'>LocalDeviceId</a></code>
             </td>
         </tr></table>
 
@@ -358,7 +358,7 @@ the resulting composite device.</p>
         </tr><tr>
             <td><code>local_device_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalDeviceId'>LocalDeviceId</a></code>
             </td>
         </tr></table>
 
@@ -369,7 +369,7 @@ the resulting composite device.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -877,7 +877,7 @@ termination is guaranteed.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>written</code></td>
@@ -912,7 +912,7 @@ termination is guaranteed.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>written</code></td>
@@ -948,7 +948,7 @@ and bytes <code>available</code> to write.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>written</code></td>
@@ -999,7 +999,7 @@ and bytes <code>available</code> to write.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>local_device_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalDeviceId'>LocalDeviceId</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1017,7 +1017,7 @@ and bytes <code>available</code> to write.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>local_device_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LocalDeviceId'>LocalDeviceId</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -1426,7 +1426,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1445,7 +1445,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1464,7 +1464,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1483,7 +1483,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1502,7 +1502,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1521,7 +1521,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1540,7 +1540,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1559,7 +1559,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1578,7 +1578,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1597,7 +1597,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1616,7 +1616,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1635,7 +1635,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1654,7 +1654,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1673,7 +1673,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1692,7 +1692,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1720,7 +1720,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="SUSPEND_FLAG_REBOOT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#10">SUSPEND_FLAG_REBOOT</a></td>
             <td>
                     <code>3705405696</code>
@@ -1729,7 +1729,7 @@ Type: <code>uint32</code>
             <td><p>All available suspend flags</p>
 </td>
         </tr>
-    <tr>
+    <tr id="SUSPEND_FLAG_REBOOT_BOOTLOADER">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#11">SUSPEND_FLAG_REBOOT_BOOTLOADER</a></td>
             <td>
                     <code>3705405697</code>
@@ -1737,7 +1737,7 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SUSPEND_FLAG_REBOOT_RECOVERY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#12">SUSPEND_FLAG_REBOOT_RECOVERY</a></td>
             <td>
                     <code>3705405698</code>
@@ -1745,7 +1745,7 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SUSPEND_FLAG_POWEROFF">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#13">SUSPEND_FLAG_POWEROFF</a></td>
             <td>
                     <code>3705405952</code>
@@ -1753,7 +1753,7 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SUSPEND_FLAG_MEXEC">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#14">SUSPEND_FLAG_MEXEC</a></td>
             <td>
                     <code>3705406208</code>
@@ -1761,7 +1761,7 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SUSPEND_FLAG_SUSPEND_RAM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#15">SUSPEND_FLAG_SUSPEND_RAM</a></td>
             <td>
                     <code>3705406464</code>
@@ -1769,7 +1769,7 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_SYSTEM_POWER_STATES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/administrator.fidl#29">MAX_SYSTEM_POWER_STATES</a></td>
             <td>
                     <code>7</code>
@@ -1777,7 +1777,7 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="DEVICE_NAME_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#31">DEVICE_NAME_MAX</a></td>
             <td>
                     <code>31</code>
@@ -1786,7 +1786,7 @@ Type: <code>uint32</code>
             <td><p>This definition must match <code>ZX_DEVICE_NAME_MAX</code> and is checked by a static assert.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_PATH_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#35">DEVICE_PATH_MAX</a></td>
             <td>
                     <code>1024</code>
@@ -1795,7 +1795,7 @@ Type: <code>uint32</code>
             <td><p>Maximum number of bytes in a path</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_ARGS_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#38">DEVICE_ARGS_MAX</a></td>
             <td>
                     <code>1024</code>
@@ -1804,7 +1804,7 @@ Type: <code>uint32</code>
             <td><p>Maximum number of bytes in a device arguments string.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="METADATA_BYTES_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#41">METADATA_BYTES_MAX</a></td>
             <td>
                     <code>8192</code>
@@ -1813,7 +1813,7 @@ Type: <code>uint32</code>
             <td><p>Maximum number of bytes in a metadata payload</p>
 </td>
         </tr>
-    <tr>
+    <tr id="METADATA_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#44">METADATA_MAX</a></td>
             <td>
                     <code>32</code>
@@ -1822,7 +1822,7 @@ Type: <code>uint32</code>
             <td><p>Maximum number of metadata that can be added to a device</p>
 </td>
         </tr>
-    <tr>
+    <tr id="PROPERTIES_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#47">PROPERTIES_MAX</a></td>
             <td>
                     <code>256</code>
@@ -1831,7 +1831,7 @@ Type: <code>uint32</code>
             <td><p>Maximum number of properties that can be attached to a device</p>
 </td>
         </tr>
-    <tr>
+    <tr id="COMPONENTS_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#50">COMPONENTS_MAX</a></td>
             <td>
                     <code>16</code>
@@ -1840,7 +1840,7 @@ Type: <code>uint32</code>
             <td><p>Maximum number of components that a composite device can have</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_COMPONENT_PARTS_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#53">DEVICE_COMPONENT_PARTS_MAX</a></td>
             <td>
                     <code>16</code>
@@ -1849,7 +1849,7 @@ Type: <code>uint32</code>
             <td><p>Maximum number of parts that a composite device component can have</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_COMPONENT_PART_INSTRUCTIONS_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#56">DEVICE_COMPONENT_PART_INSTRUCTIONS_MAX</a></td>
             <td>
                     <code>32</code>
@@ -1860,4 +1860,21 @@ Type: <code>uint32</code>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="DeviceProperty">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#15">DeviceProperty</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td></td>
+        </tr><tr id="LocalDeviceId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device-manager/coordinator.fidl#28">LocalDeviceId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td></td>
+        </tr></table>
 

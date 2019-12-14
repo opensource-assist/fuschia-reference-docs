@@ -66,7 +66,7 @@ the memory balloon.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>mem_stats</code></td>
@@ -359,7 +359,7 @@ accepting connections, the implementation should return <code>ZX_OK</code>.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -401,7 +401,7 @@ on the current configuration.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>handle</code></td>
@@ -454,7 +454,7 @@ on the current configuration.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>handle</code></td>
@@ -559,7 +559,7 @@ port and to manage dynamic port allocation for outbound connections.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -595,7 +595,7 @@ port and to manage dynamic port allocation for outbound connections.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -924,7 +924,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_BLOCK_DEVICE_ID_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualization/realm.fidl#28">MAX_BLOCK_DEVICE_ID_SIZE</a></td>
             <td>
                     <code>20</code>
@@ -932,7 +932,7 @@ Type: <code>uint32</code>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="HOST_CID">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.virtualization/vsock.fidl#13">HOST_CID</a></td>
             <td>
                     <code>2</code>
@@ -945,4 +945,6 @@ corresponding <code>InstanceInfo</code> structure.</p>
         </tr>
     
 </table>
+
+
 

@@ -448,7 +448,7 @@ these and will not transition out of them.</p>
             <td>6</td>
             <td><code>when</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>When this update attempt started. Always present.</p>
 </td>
@@ -553,7 +553,7 @@ equal to <a class='link' href='#download_size'>download_size</a>.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="PERCENT_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.update.installer/progress.fidl#88">PERCENT_MAX</a></td>
             <td>
                     <code>100</code>
@@ -564,4 +564,6 @@ equal to <a class='link' href='#download_size'>download_size</a>.</p>
         </tr>
     
 </table>
+
+
 

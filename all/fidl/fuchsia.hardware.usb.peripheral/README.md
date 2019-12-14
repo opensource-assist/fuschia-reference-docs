@@ -274,7 +274,7 @@ except for the string fields.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -288,7 +288,7 @@ except for the string fields.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_FUNCTION_DESCRIPTORS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-usb-peripheral/usb-peripheral.fidl#9">MAX_FUNCTION_DESCRIPTORS</a></td>
             <td>
                     <code>32</code>
@@ -296,7 +296,7 @@ except for the string fields.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_STRING_DESCRIPTORS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-usb-peripheral/usb-peripheral.fidl#10">MAX_STRING_DESCRIPTORS</a></td>
             <td>
                     <code>255</code>
@@ -304,7 +304,7 @@ except for the string fields.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_STRING_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-usb-peripheral/usb-peripheral.fidl#12">MAX_STRING_LENGTH</a></td>
             <td>
                     <code>127</code>
@@ -314,4 +314,6 @@ except for the string fields.</p>
         </tr>
     
 </table>
+
+
 

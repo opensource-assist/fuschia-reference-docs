@@ -44,7 +44,7 @@
     <tr>
             <td><code>response</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -111,7 +111,7 @@
     <tr>
             <td><code>response</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -122,6 +122,8 @@
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
+
+
 
 
 

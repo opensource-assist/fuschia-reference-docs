@@ -9,64 +9,6 @@
 *Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#39)*
 
 
-### AllocateBlock {#AllocateBlock}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>size</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>res</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr><tr>
-            <td><code>paddr</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr><tr>
-            <td><code>vmo</code></td>
-            <td>
-                <code>handle&lt;vmo&gt;?</code>
-            </td>
-        </tr></table>
-
-### DeallocateBlock {#DeallocateBlock}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>paddr</code></td>
-            <td>
-                <code>uint64</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>res</code></td>
-            <td>
-                <code>int32</code>
-            </td>
-        </tr></table>
-
 ### OpenChildDriver {#OpenChildDriver}
 
 
@@ -88,7 +30,7 @@
 
 
 ## AddressSpaceChildDriver {#AddressSpaceChildDriver}
-*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#85)*
+*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#75)*
 
 
 ### AllocateBlock {#AllocateBlock}
@@ -111,7 +53,7 @@
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>paddr</code></td>
@@ -145,7 +87,7 @@
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -174,7 +116,7 @@
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>vmo</code></td>
@@ -203,7 +145,7 @@
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -227,7 +169,7 @@
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>ping</code></td>
@@ -280,7 +222,7 @@ Returns ZX_ERR_ALREADY_EXISTS if color buffer has already been created.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -306,7 +248,7 @@ buffer.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>id</code></td>
@@ -366,7 +308,7 @@ intact on failure.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -404,7 +346,7 @@ returns a new handle to the VMO.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>vmo</code></td>
@@ -440,7 +382,7 @@ Returns <code>ZX_ERR_SHOULD_WAIT</code> if pipe device is not readable.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>actual</code></td>
@@ -476,7 +418,7 @@ Returns <code>ZX_ERR_SHOULD_WAIT</code> if pipe device is not writable.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>actual</code></td>
@@ -524,7 +466,7 @@ Returns <code>ZX_ERR_SHOULD_WAIT</code> if pipe device is not readable.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>actual</code></td>
@@ -538,7 +480,7 @@ Returns <code>ZX_ERR_SHOULD_WAIT</code> if pipe device is not readable.</p>
 ## **STRUCTS**
 
 ### AddressSpaceChildDriverPingMessage {#AddressSpaceChildDriverPingMessage}
-*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#74)*
+*Defined in [fuchsia.hardware.goldfish/goldfish_address_space.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_address_space.fidl#64)*
 
 
 
@@ -656,7 +598,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="SIGNAL_READABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_pipe.fidl#11">SIGNAL_READABLE</a></td>
             <td>
                     <code>16777216</code>
@@ -666,7 +608,7 @@ Type: <code>uint32</code>
 will return data.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="SIGNAL_WRITABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_pipe.fidl#15">SIGNAL_WRITABLE</a></td>
             <td>
                     <code>33554432</code>
@@ -676,7 +618,7 @@ will return data.</p>
 will accept data.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="SIGNAL_HANGUP">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.hardware.goldfish/goldfish_pipe.fidl#19">SIGNAL_HANGUP</a></td>
             <td>
                     <code>67108864</code>
@@ -688,4 +630,6 @@ disconnected.</p>
         </tr>
     
 </table>
+
+
 

@@ -25,7 +25,7 @@ change was made.</p>
     <tr>
             <td><code>update_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr></table>
 
@@ -102,7 +102,7 @@ devices the most common external time source is a network time server.</p>
             <td>1</td>
             <td><code>timestamp</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>The monotonic time at which this <code>UtcState</code> was observed.</p>
 </td>
@@ -115,6 +115,8 @@ devices the most common external time source is a network time server.</p>
             <td><p>The source of our current UTC approximation.</p>
 </td>
         </tr></table>
+
+
 
 
 

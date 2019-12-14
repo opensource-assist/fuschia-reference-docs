@@ -18,7 +18,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -36,7 +36,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -54,7 +54,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -72,7 +72,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -90,7 +90,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -108,7 +108,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -126,7 +126,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -144,7 +144,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -162,7 +162,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -180,7 +180,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -198,7 +198,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -216,7 +216,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -234,7 +234,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -252,7 +252,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -270,7 +270,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -288,7 +288,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -306,7 +306,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -324,7 +324,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -342,7 +342,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -360,7 +360,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -378,7 +378,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -396,7 +396,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -414,7 +414,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -432,7 +432,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -450,7 +450,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -468,7 +468,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -486,7 +486,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -504,7 +504,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -522,7 +522,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -540,7 +540,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -558,7 +558,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -576,7 +576,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -594,7 +594,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -612,7 +612,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -630,7 +630,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -648,7 +648,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -666,7 +666,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -684,7 +684,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -702,7 +702,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -720,7 +720,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -738,7 +738,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -756,7 +756,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -774,7 +774,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -792,7 +792,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -810,7 +810,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -828,7 +828,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -846,7 +846,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -864,7 +864,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -882,7 +882,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -900,7 +900,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -918,7 +918,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -936,7 +936,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -954,7 +954,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -972,7 +972,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -990,7 +990,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1008,7 +1008,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1026,7 +1026,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1044,7 +1044,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1062,7 +1062,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1080,7 +1080,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1098,7 +1098,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1116,7 +1116,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1134,7 +1134,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1152,7 +1152,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1170,7 +1170,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1188,7 +1188,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1206,7 +1206,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1224,7 +1224,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1242,7 +1242,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1260,7 +1260,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1278,7 +1278,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1296,7 +1296,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1314,7 +1314,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1332,7 +1332,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1350,7 +1350,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1368,7 +1368,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1386,7 +1386,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1404,7 +1404,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1422,7 +1422,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1440,7 +1440,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1458,7 +1458,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1476,7 +1476,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1494,7 +1494,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1512,7 +1512,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1530,7 +1530,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1548,7 +1548,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1566,7 +1566,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1584,7 +1584,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1602,7 +1602,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1620,7 +1620,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1638,7 +1638,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1656,7 +1656,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1674,7 +1674,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1692,7 +1692,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1710,7 +1710,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1728,7 +1728,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1746,7 +1746,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1764,7 +1764,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1782,7 +1782,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1800,7 +1800,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1818,7 +1818,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1836,7 +1836,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1854,7 +1854,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1872,7 +1872,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1890,7 +1890,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1908,7 +1908,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1926,7 +1926,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1944,7 +1944,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1962,7 +1962,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1980,7 +1980,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -1998,7 +1998,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2016,7 +2016,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2034,7 +2034,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2052,7 +2052,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2070,7 +2070,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2088,7 +2088,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2106,7 +2106,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2124,7 +2124,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2142,7 +2142,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2160,7 +2160,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2178,7 +2178,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2196,7 +2196,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2214,7 +2214,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2232,7 +2232,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2250,7 +2250,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2268,7 +2268,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2286,7 +2286,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2304,7 +2304,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2322,7 +2322,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2340,7 +2340,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2358,7 +2358,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2376,7 +2376,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2394,7 +2394,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2412,7 +2412,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2430,7 +2430,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2448,7 +2448,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2466,7 +2466,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2484,7 +2484,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2502,7 +2502,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2520,7 +2520,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2538,7 +2538,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2556,7 +2556,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2574,7 +2574,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2592,7 +2592,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2610,7 +2610,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2628,7 +2628,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2646,7 +2646,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2664,7 +2664,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2682,7 +2682,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2700,7 +2700,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2718,7 +2718,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2736,7 +2736,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2754,7 +2754,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2772,7 +2772,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2790,7 +2790,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2808,7 +2808,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2826,7 +2826,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2844,7 +2844,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2862,7 +2862,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2880,7 +2880,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2898,7 +2898,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2916,7 +2916,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2934,7 +2934,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2952,7 +2952,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2970,7 +2970,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -2988,7 +2988,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3006,7 +3006,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3024,7 +3024,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3042,7 +3042,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3060,7 +3060,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3078,7 +3078,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3096,7 +3096,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3114,7 +3114,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3132,7 +3132,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3150,7 +3150,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3168,7 +3168,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3186,7 +3186,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3204,7 +3204,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3222,7 +3222,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3240,7 +3240,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3258,7 +3258,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3276,7 +3276,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3294,7 +3294,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3312,7 +3312,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3330,7 +3330,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3348,7 +3348,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3366,7 +3366,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3384,7 +3384,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3402,7 +3402,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3420,7 +3420,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3438,7 +3438,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3456,7 +3456,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3474,7 +3474,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3492,7 +3492,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3510,7 +3510,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3528,7 +3528,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3546,7 +3546,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3564,7 +3564,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3582,7 +3582,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3600,7 +3600,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3618,7 +3618,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3636,7 +3636,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3654,7 +3654,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3672,7 +3672,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3690,7 +3690,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3708,7 +3708,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3726,7 +3726,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3744,7 +3744,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3762,7 +3762,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3780,7 +3780,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3798,7 +3798,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3816,7 +3816,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3834,7 +3834,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -3852,7 +3852,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>member</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#membertype'>membertype</a></code>
             </td>
             <td></td>
             <td>1</td>
@@ -5379,4 +5379,16 @@
 
 
 
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="membertype">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/garnet/tests/fidl-dangerous-identifiers/fidl/fidl.test.dangerous.struct.types.camel.test.fidl#6">membertype</a></td>
+            <td>
+                <code>uint32</code></td>
+            <td></td>
+        </tr></table>
 

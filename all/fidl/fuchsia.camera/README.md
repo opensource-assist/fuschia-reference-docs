@@ -44,7 +44,7 @@ GetFormats need to be issued until total_format_count are received</p>
         </tr><tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -585,7 +585,7 @@ notification.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_FORMATS_PER_RESPONSE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#13">MAX_FORMATS_PER_RESPONSE</a></td>
             <td>
                     <code>16</code>
@@ -593,7 +593,7 @@ notification.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="CAMERA_OUTPUT_UNKNOWN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#18">CAMERA_OUTPUT_UNKNOWN</a></td>
             <td>
                     <code>0</code>
@@ -604,7 +604,7 @@ to help filter out cameras which will not have the needed capabilities.
 This set of declarations would be the bitfield: CameraOutputCapabilities.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="CAMERA_OUTPUT_STILL_IMAGE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#19">CAMERA_OUTPUT_STILL_IMAGE</a></td>
             <td>
                     <code>1</code>
@@ -612,7 +612,7 @@ This set of declarations would be the bitfield: CameraOutputCapabilities.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="CAMERA_OUTPUT_BURST">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#20">CAMERA_OUTPUT_BURST</a></td>
             <td>
                     <code>2</code>
@@ -620,7 +620,7 @@ This set of declarations would be the bitfield: CameraOutputCapabilities.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="CAMERA_OUTPUT_STREAM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#21">CAMERA_OUTPUT_STREAM</a></td>
             <td>
                     <code>4</code>
@@ -628,7 +628,7 @@ This set of declarations would be the bitfield: CameraOutputCapabilities.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="CAMERA_OUTPUT_HDR">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#22">CAMERA_OUTPUT_HDR</a></td>
             <td>
                     <code>8</code>
@@ -636,7 +636,7 @@ This set of declarations would be the bitfield: CameraOutputCapabilities.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="CAMERA_OUTPUT_DEPTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#23">CAMERA_OUTPUT_DEPTH</a></td>
             <td>
                     <code>16</code>
@@ -644,7 +644,7 @@ This set of declarations would be the bitfield: CameraOutputCapabilities.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="CAMERA_OUTPUT_STEREO">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera/camera.fidl#24">CAMERA_OUTPUT_STEREO</a></td>
             <td>
                     <code>32</code>
@@ -654,4 +654,6 @@ This set of declarations would be the bitfield: CameraOutputCapabilities.</p>
         </tr>
     
 </table>
+
+
 

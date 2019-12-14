@@ -91,7 +91,7 @@ devices, ensuring that the cloud was not erased since the last sync.</p>
     <tr>
             <td><code>fingerprint</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[32]</code>
+                <code><a class='link' href='#Fingerprint'>Fingerprint</a></code>
             </td>
         </tr></table>
 
@@ -116,7 +116,7 @@ devices, ensuring that the cloud was not erased since the last sync.</p>
     <tr>
             <td><code>fingerprint</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[32]</code>
+                <code><a class='link' href='#Fingerprint'>Fingerprint</a></code>
             </td>
         </tr></table>
 
@@ -152,7 +152,7 @@ on the watcher.</p>
     <tr>
             <td><code>fingerprint</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[32]</code>
+                <code><a class='link' href='#Fingerprint'>Fingerprint</a></code>
             </td>
         </tr><tr>
             <td><code>watcher</code></td>
@@ -326,7 +326,7 @@ most recent of the <code>commits</code> (equivalent to <code>min_position_token<
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#ObjectIdentifier'>ObjectIdentifier</a></code>
             </td>
         </tr><tr>
             <td><code>buffer</code></td>
@@ -363,7 +363,7 @@ content. If the resulting <code>status</code> is not <code>OK</code>, <code>buff
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#ObjectIdentifier'>ObjectIdentifier</a></code>
             </td>
         </tr></table>
 
@@ -436,7 +436,7 @@ this commit should be downloaded using GetObject.</p>
     <tr>
             <td><code>commit_id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#CommitIdentifier'>CommitIdentifier</a></code>
             </td>
         </tr><tr>
             <td><code>possible_bases</code></td>
@@ -555,7 +555,7 @@ previous one.</p>
     <tr>
             <td><code>id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#ObjectIdentifier'>ObjectIdentifier</a></code>
             </td>
         </tr><tr>
             <td><code>buffer</code></td>
@@ -836,7 +836,7 @@ Type: <code>uint8</code>
             <td>1</td>
             <td><code>id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#CommitIdentifier'>CommitIdentifier</a></code>
             </td>
             <td><p>A unique commit identifier, chosen by Ledger. Required.</p>
 <p>Two commits uploaded with the same identifier are to be considered
@@ -916,7 +916,7 @@ cloud, or the empty page.</p>
             <td>1</td>
             <td><code>entry_id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[64]</code>
+                <code><a class='link' href='#EntryIdentifier'>EntryIdentifier</a></code>
             </td>
             <td><p>Identifier of the entry. Required.</p>
 </td>
@@ -943,7 +943,7 @@ deleted multiple times, the cloud provider can send any of the values.</p>
             <td>4</td>
             <td><code>reference</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#ObjectIdentifier'>ObjectIdentifier</a></code>
             </td>
             <td><p>An optional reference to an object, given by its identifier.</p>
 <p>Sent by Ledger when the value of the entry is not inlined in the <code>data</code>
@@ -965,7 +965,7 @@ field. The cloud provider may always omit this field in diffs.</p>
             <td>1</td>
             <td><code>commit_id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#CommitIdentifier'>CommitIdentifier</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1016,7 +1016,7 @@ field. The cloud provider may always omit this field in diffs.</p>
             <td>1</td>
             <td><code>fingerprint</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[32]</code>
+                <code><a class='link' href='#Fingerprint'>Fingerprint</a></code>
             </td>
             <td><p>Fingerprint of the device. It should match the fingerprint of the device in <code>DeviceSet</code>.</p>
 </td>
@@ -1081,7 +1081,7 @@ same page on the same device. It is defined by the device only and only used for
         </tr><tr>
             <td><code>at_commit</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[128]</code>
+                <code><a class='link' href='#CommitIdentifier'>CommitIdentifier</a></code>
             </td>
             <td><p>The state is the content of a page at the commit with the given
 identifier.</p>
@@ -1117,4 +1117,35 @@ identifier.</p>
 
 
 
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="CommitIdentifier">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#13">CommitIdentifier</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>Identifier for a commit, controlled by Ledger.</p>
+</td>
+        </tr><tr id="ObjectIdentifier">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#16">ObjectIdentifier</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>Identifier for an object, controlled by Ledger.</p>
+</td>
+        </tr><tr id="EntryIdentifier">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#19">EntryIdentifier</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>Identifier for an entry, controlled by Ledger.</p>
+</td>
+        </tr><tr id="Fingerprint">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#22">Fingerprint</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>Fingerprint, controlled by Ledger and used to watch for cloud erasure.</p>
+</td>
+        </tr></table>
 

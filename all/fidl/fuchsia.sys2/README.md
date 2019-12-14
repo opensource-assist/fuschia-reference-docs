@@ -248,7 +248,7 @@ the component's resources.</li>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>component</code></td>
@@ -276,6 +276,22 @@ interface.</p>
 <p>The caller of this method takes responsibility for binding client
 connections and controlling the lifetime of the newly started
 component instance through the requested <code>controller</code>.</p>
+<p>If an error is returned, the runner must ensure that resources
+are cleaned up; the caller will not invoke the <code>controller</code>
+interfaces, for example.</p>
+<p>Errors:</p>
+<ul>
+<li><code>INVALID_ARGUMENTS</code>: <code>resolved_url</code> is not supported by this runner;
+<code>program</code> contains missing or invalid arguments; or a required field
+in <code>start_info</code> (such <code>ns</code>, <code>outgoing_dir</code>, or <code>runtime_dir</code>) was not
+provided.</li>
+<li><code>INSTANCE_CANNOT_START</code>: The runner could not start the component.
+For example, a critical part of the program could not be found or
+loaded, or the referenced binary was invalid for this runner.</li>
+<li><code>NO_SPACE</code>: The component could not be launched due to lack of
+resources.</li>
+<li><code>INTERNAL</code>: An unexpected internal runner error was encountered.</li>
+</ul>
 
 #### Request
 <table>
@@ -293,9 +309,18 @@ component instance through the requested <code>controller</code>.</p>
         </tr></table>
 
 
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#ComponentRunner_Start_Result'>ComponentRunner_Start_Result</a></code>
+            </td>
+        </tr></table>
 
 ## ComponentController {#ComponentController}
-*Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#94)*
+*Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#110)*
 
 <p>An interface for binding client connections and controlling the lifetime
 of a component instance started using <code>ComponentRunner.Start()</code>.</p>
@@ -405,7 +430,7 @@ reschedule work roughly every <code>work_request.period</code> until the the wor
     <tr>
             <td><code>work_id</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#WorkId'>WorkId</a></code>
             </td>
         </tr><tr>
             <td><code>work_request</code></td>
@@ -435,7 +460,7 @@ reschedule work roughly every <code>work_request.period</code> until the the wor
     <tr>
             <td><code>work_id</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#WorkId'>WorkId</a></code>
             </td>
         </tr></table>
 
@@ -468,7 +493,7 @@ provider (i.e., the framework) and no one else.</p>
     <tr>
             <td><code>work_id</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#WorkId'>WorkId</a></code>
             </td>
         </tr></table>
 
@@ -528,7 +553,7 @@ a number of nanoseconds between dispatching batches of work.</p>
     <tr>
             <td><code>batch_period</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -560,7 +585,7 @@ a number of nanoseconds between dispatching batches of work.</p>
 </table>
 
 ### SelfRef {#SelfRef}
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#22)*
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#23)*
 
 
 
@@ -572,7 +597,7 @@ a number of nanoseconds between dispatching batches of work.</p>
 </table>
 
 ### ChildRef {#ChildRef}
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#25)*
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#27)*
 
 
 
@@ -583,7 +608,7 @@ a number of nanoseconds between dispatching batches of work.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>name</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#child_name'>child_name</a></code>
             </td>
             <td><p>The name assigned to the child by its parent. If <code>collection</code> is set,
 <code>name</code> is scoped to <code>collection</code> and the child is a dynamic instance.
@@ -593,7 +618,7 @@ Required.</p>
         </tr><tr>
             <td><code>collection</code></td>
             <td>
-                <code>string[100]?</code>
+                <code><a class='link' href='#collection_name'>collection_name</a></code>
             </td>
             <td><p>The collection <code>name</code> belongs to. If omitted, <code>name</code> references a static
 instance. This field must be omitted if the <code>ChildRef</code> is being used in
@@ -604,7 +629,7 @@ a component declaration. Optional.</p>
 </table>
 
 ### CollectionRef {#CollectionRef}
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#37)*
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#39)*
 
 
 
@@ -615,7 +640,7 @@ a component declaration. Optional.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>name</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#collection_name'>collection_name</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -623,7 +648,7 @@ a component declaration. Optional.</p>
 </table>
 
 ### StorageRef {#StorageRef}
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#42)*
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#44)*
 
 
 
@@ -642,7 +667,7 @@ a component declaration. Optional.</p>
 </table>
 
 ### FrameworkRef {#FrameworkRef}
-*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#47)*
+*Defined in [fuchsia.sys2/relative_refs.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/decls/relative_refs.fidl#49)*
 
 
 
@@ -768,6 +793,17 @@ For example, [&quot;/foo&quot;, &quot;/foo/bar&quot;] is invalid.</p>
         </tr>
 </table>
 
+### ComponentRunner_Start_Response {#ComponentRunner_Start_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### WorkScheduler_ScheduleWork_Response {#WorkScheduler_ScheduleWork_Response}
 *generated*
 
@@ -812,7 +848,7 @@ For example, [&quot;/foo&quot;, &quot;/foo/bar&quot;] is invalid.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>batch_period</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -981,7 +1017,7 @@ performing the operation.</p>
             <td>1</td>
             <td><code>name</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#child_name'>child_name</a></code>
             </td>
             <td><p>The name assigned to the child by its parent.</p>
 <p>Must be non-empty, unique among all siblings, and contain only the
@@ -1020,7 +1056,7 @@ following characters: [a-z0-9-_.].</p>
             <td>1</td>
             <td><code>name</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#collection_name'>collection_name</a></code>
             </td>
             <td><p>The name of the collection. Instances created in the collection are
 scoped to this name.</p>
@@ -1308,7 +1344,7 @@ framework.</p>
             <td>5</td>
             <td><code>rights</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io2/'>fuchsia.io2</a>/<a class='link' href='../fuchsia.io2/#Operations'>Operations</a></code>
+                <code><a class='link' href='../fuchsia.io2/'>fuchsia.io2</a>/<a class='link' href='../fuchsia.io2/#Rights'>Rights</a></code>
             </td>
             <td><p>The rights to expose this directory with, required iff <code>source == self</code>.</p>
 </td>
@@ -1338,7 +1374,7 @@ be <code>self</code> or <code>child</code>.</p>
             <td>2</td>
             <td><code>source_name</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#runner_name'>runner_name</a></code>
             </td>
             <td><p>The name of the runner, by which it was presented to this component.</p>
 </td>
@@ -1355,7 +1391,7 @@ framework.</p>
             <td>4</td>
             <td><code>target_name</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#runner_name'>runner_name</a></code>
             </td>
             <td><p>The name by which the capability is being exposed.</p>
 </td>
@@ -1513,7 +1549,7 @@ itself, or one of its other children.</p>
             <td>5</td>
             <td><code>rights</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io2/'>fuchsia.io2</a>/<a class='link' href='../fuchsia.io2/#Operations'>Operations</a></code>
+                <code><a class='link' href='../fuchsia.io2/'>fuchsia.io2</a>/<a class='link' href='../fuchsia.io2/#Rights'>Rights</a></code>
             </td>
             <td><p>The rights this directory should be offered with, required iff <code>source == self</code>.</p>
 </td>
@@ -1583,7 +1619,7 @@ or one of its other children.</p>
             <td>2</td>
             <td><code>source_name</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#runner_name'>runner_name</a></code>
             </td>
             <td><p>Name of the runner being offered.</p>
 </td>
@@ -1600,7 +1636,7 @@ or one of its other children.</p>
             <td>4</td>
             <td><code>target_name</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#runner_name'>runner_name</a></code>
             </td>
             <td><p>Name under which the capability is being offered.</p>
 </td>
@@ -1620,7 +1656,7 @@ or one of its other children.</p>
             <td>1</td>
             <td><code>name</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#runner_name'>runner_name</a></code>
             </td>
             <td><p>The name of this runner.</p>
 </td>
@@ -1813,7 +1849,7 @@ namespace.</p>
             <td>4</td>
             <td><code>rights</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.io2/'>fuchsia.io2</a>/<a class='link' href='../fuchsia.io2/#Operations'>Operations</a></code>
+                <code><a class='link' href='../fuchsia.io2/'>fuchsia.io2</a>/<a class='link' href='../fuchsia.io2/#Rights'>Rights</a></code>
             </td>
             <td><p>The rights required by the component to use this directory.</p>
 </td>
@@ -1865,7 +1901,7 @@ environment.</p>
             <td>1</td>
             <td><code>source_name</code></td>
             <td>
-                <code>string[100]</code>
+                <code><a class='link' href='#runner_name'>runner_name</a></code>
             </td>
             <td><p>The name of the runner, as it was presented to this component by the
 realm.</p>
@@ -1923,7 +1959,7 @@ applications.</p>
 ### ComponentStartInfo {#ComponentStartInfo}
 
 
-*Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#34)*
+*Defined in [fuchsia.sys2/component_runner.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/runtime/component_runner.fidl#50)*
 
 <p>Parameters for starting a new component instance.</p>
 
@@ -2027,7 +2063,7 @@ the component.</p>
             <td>2</td>
             <td><code>period</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>Delay between repeated schedulings of corresponding work item. This is left unspecified for
 one-shot work that should not repeat. Repeating work items are rescheduled indefinitely
@@ -2105,6 +2141,25 @@ until it is canceled.</p>
             <td><code>response</code></td>
             <td>
                 <code><a class='link' href='#Realm_ListChildren_Response'>Realm_ListChildren_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### ComponentRunner_Start_Result {#ComponentRunner_Start_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#ComponentRunner_Start_Response'>ComponentRunner_Start_Response</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -2380,14 +2435,14 @@ component's environment.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>delay</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>A non-negative delay to wait before scheduling work.</p>
 </td>
         </tr><tr>
             <td><code>monotonic_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>A fixed point in time to start scheduling work, interpreted like <code>ZX_CLOCK_MONOTONIC</code>:
 number of nanoseconds since the system was powered on.</p>
@@ -2401,7 +2456,7 @@ number of nanoseconds since the system was powered on.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_FACET_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#7">MAX_FACET_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
@@ -2409,7 +2464,7 @@ number of nanoseconds since the system was powered on.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_CHILD_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#8">MAX_CHILD_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
@@ -2417,7 +2472,7 @@ number of nanoseconds since the system was powered on.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_COLLECTION_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#9">MAX_COLLECTION_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
@@ -2425,7 +2480,7 @@ number of nanoseconds since the system was powered on.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_RUNNER_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#10">MAX_RUNNER_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
@@ -2433,7 +2488,7 @@ number of nanoseconds since the system was powered on.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_STORAGE_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#11">MAX_STORAGE_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
@@ -2441,7 +2496,7 @@ number of nanoseconds since the system was powered on.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_PATH_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#12">MAX_PATH_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -2449,7 +2504,7 @@ number of nanoseconds since the system was powered on.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_URL_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#13">MAX_URL_LENGTH</a></td>
             <td>
                     <code>4096</code>
@@ -2457,7 +2512,7 @@ number of nanoseconds since the system was powered on.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_MONIKER_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#14">MAX_MONIKER_LENGTH</a></td>
             <td>
                     <code>4096</code>
@@ -2465,7 +2520,7 @@ number of nanoseconds since the system was powered on.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="ERR_COMPONENT_DIED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/constants.fidl#17">ERR_COMPONENT_DIED</a></td>
             <td>
                     <code>1</code>
@@ -2474,7 +2529,7 @@ number of nanoseconds since the system was powered on.</p>
             <td><p>Error produced when a component terminates unexpected.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_WORK_ID_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#9">MAX_WORK_ID_LENGTH</a></td>
             <td>
                     <code>100</code>
@@ -2484,4 +2539,31 @@ number of nanoseconds since the system was powered on.</p>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="child_name">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/types.fidl#7">child_name</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_CHILD_NAME_LENGTH'>MAX_CHILD_NAME_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr id="collection_name">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/types.fidl#8">collection_name</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_COLLECTION_NAME_LENGTH'>MAX_COLLECTION_NAME_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr id="runner_name">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/types.fidl#9">runner_name</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_RUNNER_NAME_LENGTH'>MAX_RUNNER_NAME_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr id="WorkId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.sys2/work_scheduler.fidl#10">WorkId</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_WORK_ID_LENGTH'>MAX_WORK_ID_LENGTH</a></code>]</td>
+            <td></td>
+        </tr></table>
 

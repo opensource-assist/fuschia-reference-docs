@@ -599,7 +599,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_RULES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.filter/commands.fidl#16">MAX_RULES</a></td>
             <td>
                     <code>128</code>
@@ -610,4 +610,6 @@ Type: <code>uint32</code>
         </tr>
     
 </table>
+
+
 

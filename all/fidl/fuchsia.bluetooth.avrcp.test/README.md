@@ -221,7 +221,7 @@ disconnects or does not return a response in set amount of time.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -263,6 +263,8 @@ disconnects or does not return a response in set amount of time.</p>
             </td>
             <td></td>
         </tr></table>
+
+
 
 
 

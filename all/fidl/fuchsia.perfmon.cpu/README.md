@@ -357,7 +357,7 @@ These values are for informational/display purposes.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>event</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#EventId'>EventId</a></code>
             </td>
             <td><p>Event to collect data for.
 The values are architecture specific ids.
@@ -367,7 +367,7 @@ Each event may appear at most once.</p>
         </tr><tr>
             <td><code>rate</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#EventRate'>EventRate</a></code>
             </td>
             <td><p>Sampling rate.</p>
 <ul>
@@ -466,7 +466,7 @@ Each cpu gets same buffer size.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -485,7 +485,7 @@ Each cpu gets same buffer size.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -504,7 +504,7 @@ Each cpu gets same buffer size.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -570,7 +570,7 @@ This is only available when the underlying system supports it.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="API_VERSION">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-perfmon-cpu/perfmon.fidl#21">API_VERSION</a></td>
             <td>
                     <code>0</code>
@@ -578,7 +578,7 @@ This is only available when the underlying system supports it.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_NUM_EVENTS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-perfmon-cpu/perfmon.fidl#25">MAX_NUM_EVENTS</a></td>
             <td>
                     <code>32</code>
@@ -590,4 +590,21 @@ Typically the h/w supports less than this, e.g., 7 or so.</p>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="EventRate">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-perfmon-cpu/perfmon.fidl#10">EventRate</a></td>
+            <td>
+                <code>uint32</code></td>
+            <td></td>
+        </tr><tr id="EventId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-perfmon-cpu/perfmon.fidl#19">EventId</a></td>
+            <td>
+                <code>uint16</code></td>
+            <td></td>
+        </tr></table>
 

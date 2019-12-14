@@ -115,7 +115,7 @@ subsequent calls return when the value changes.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>physical_key</code></td>
             <td>
-                <code><a class='link' href='#Key'>Key</a></code>
+                <code><a class='link' href='#PhysicalKey'>PhysicalKey</a></code>
             </td>
             <td><p>Physical key that's being mapped.</p>
 </td>
@@ -1155,7 +1155,7 @@ interim between press and release.</p>
             <td>5</td>
             <td><code>physical_key</code></td>
             <td>
-                <code><a class='link' href='#Key'>Key</a></code>
+                <code><a class='link' href='#PhysicalKey'>PhysicalKey</a></code>
             </td>
             <td><p>Identifies the physical key, ignoring modifiers and layout.</p>
 <p>Use this value for the following purposes:</p>
@@ -1416,7 +1416,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_ENTRIES_PER_MAP">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#7">MAX_ENTRIES_PER_MAP</a></td>
             <td>
                     <code>1024</code>
@@ -1424,7 +1424,7 @@ Type: <code>uint32</code>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_MAPS_PER_LAYOUT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/layout.fidl#8">MAX_MAPS_PER_LAYOUT</a></td>
             <td>
                     <code>64</code>
@@ -1434,4 +1434,19 @@ Type: <code>uint32</code>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="PhysicalKey">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input2/events.fidl#41">PhysicalKey</a></td>
+            <td>
+                <code>fuchsia.ui.input2/Key</code></td>
+            <td><p>Direct key mapping from hardware code (USB HID).</p>
+<p>Example:
+Key.Q for USB HID page 0x0007 usage 0x0014</p>
+</td>
+        </tr></table>
 

@@ -43,7 +43,7 @@ state and is ready to launch another process.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>process</code></td>
@@ -78,7 +78,7 @@ in <code>ProcessStartData</code> to actually start the process.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>data</code></td>
@@ -201,7 +201,7 @@ library loader scoped to that package.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>executable</code></td>
@@ -244,7 +244,7 @@ identifier.</p>
         </tr><tr>
             <td><code>id</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#procarg'>procarg</a></code>
             </td>
             <td><p>Process argument identifier.</p>
 <p>See &lt;zircon/processargs.h&gt; for definitions of well-known process
@@ -362,7 +362,7 @@ their intended use by the new process as namespace entries.</p>
         </tr><tr>
             <td><code>entry</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#vaddr'>vaddr</a></code>
             </td>
             <td><p>The address of the initial entry point in the process.</p>
 <p>Should be passed to <code>zx_process_start</code> when starting the process.</p>
@@ -371,7 +371,7 @@ their intended use by the new process as namespace entries.</p>
         </tr><tr>
             <td><code>stack</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#vaddr'>vaddr</a></code>
             </td>
             <td><p>The stack pointer value for the initial thread of the process.</p>
 <p>Should be passed to <code>zx_process_start</code> when starting the process.</p>
@@ -389,7 +389,7 @@ their intended use by the new process as namespace entries.</p>
         </tr><tr>
             <td><code>vdso_base</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#vaddr'>vaddr</a></code>
             </td>
             <td><p>The base address of the vDSO to pass to the process on startup.</p>
 <p>Should be passed to <code>zx_process_start</code> when starting the process.</p>
@@ -398,7 +398,7 @@ their intended use by the new process as namespace entries.</p>
         </tr><tr>
             <td><code>base</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#vaddr'>vaddr</a></code>
             </td>
             <td><p>The base load address of the ELF file loaded.</p>
 <p>Most often used by debuggers or other tools that inspect the process.</p>
@@ -422,7 +422,7 @@ their intended use by the new process as namespace entries.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/launcher.fidl#102">MAX</a></td>
             <td>
                     <code>4294967295</code>
@@ -430,7 +430,7 @@ their intended use by the new process as namespace entries.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_RESOLVE_NAME_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-process/resolver.fidl#11">MAX_RESOLVE_NAME_SIZE</a></td>
             <td>
                     <code>2048</code>
@@ -441,4 +441,6 @@ their intended use by the new process as namespace entries.</p>
         </tr>
     
 </table>
+
+
 

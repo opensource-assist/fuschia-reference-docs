@@ -74,7 +74,7 @@ Time 9: Ramp 3 completes; current scale value is now 0.0 (<code>MUTED_GAIN_DB</c
         </tr><tr>
             <td><code>duration</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr><tr>
             <td><code>rampType</code></td>
@@ -221,7 +221,7 @@ Type: <code>uint16</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MUTED_GAIN_DB">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#77">MUTED_GAIN_DB</a></td>
             <td>
                     <code>-160</code>
@@ -231,7 +231,7 @@ Type: <code>uint16</code>
 but produce the same effect as this value.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_GAIN_DB">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/gain_control.fidl#80">MAX_GAIN_DB</a></td>
             <td>
                     <code>24</code>
@@ -240,7 +240,7 @@ but produce the same effect as this value.</p>
             <td><p>Maximum permitted gain value.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_VOLUME">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#8">MAX_VOLUME</a></td>
             <td>
                     <code>1</code>
@@ -249,7 +249,7 @@ but produce the same effect as this value.</p>
             <td><p>The volume value representing the maximum loudness.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MIN_VOLUME">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.audio/volume_control.fidl#11">MIN_VOLUME</a></td>
             <td>
                     <code>0</code>
@@ -260,4 +260,6 @@ but produce the same effect as this value.</p>
         </tr>
     
 </table>
+
+
 

@@ -1132,11 +1132,18 @@ is being pressed. A single report should be sent on every state change.</p>
             </td>
             <td></td>
             <td>No default</td>
+        </tr><tr>
+            <td><code>pause</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td></td>
+            <td>No default</td>
         </tr>
 </table>
 
 ### DeviceInfo {#DeviceInfo}
-*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#234)*
+*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#235)*
 
 
 
@@ -1175,7 +1182,7 @@ is being pressed. A single report should be sent on every state change.</p>
 </table>
 
 ### DeviceDescriptor {#DeviceDescriptor}
-*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#242)*
+*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#243)*
 
 
 
@@ -1235,7 +1242,7 @@ is being pressed. A single report should be sent on every state change.</p>
 </table>
 
 ### InputReport {#InputReport}
-*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#253)*
+*Defined in [fuchsia.ui.input/input_reports.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_reports.fidl#254)*
 
 
 
@@ -1831,7 +1838,7 @@ Structs defined in input_events.fidl.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="kModifierNone">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#8">kModifierNone</a></td>
             <td>
                     <code>0</code>
@@ -1840,7 +1847,7 @@ Structs defined in input_events.fidl.</p>
             <td><p>Keyboard modifiers</p>
 </td>
         </tr>
-    <tr>
+    <tr id="kModifierCapsLock">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#9">kModifierCapsLock</a></td>
             <td>
                     <code>1</code>
@@ -1848,7 +1855,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierLeftShift">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#10">kModifierLeftShift</a></td>
             <td>
                     <code>2</code>
@@ -1856,7 +1863,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierRightShift">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#11">kModifierRightShift</a></td>
             <td>
                     <code>4</code>
@@ -1864,7 +1871,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierShift">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#12">kModifierShift</a></td>
             <td>
                     <code>6</code>
@@ -1872,7 +1879,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierLeftControl">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#13">kModifierLeftControl</a></td>
             <td>
                     <code>8</code>
@@ -1880,7 +1887,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierRightControl">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#14">kModifierRightControl</a></td>
             <td>
                     <code>16</code>
@@ -1888,7 +1895,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierControl">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#15">kModifierControl</a></td>
             <td>
                     <code>24</code>
@@ -1896,7 +1903,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierLeftAlt">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#16">kModifierLeftAlt</a></td>
             <td>
                     <code>32</code>
@@ -1904,7 +1911,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierRightAlt">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#17">kModifierRightAlt</a></td>
             <td>
                     <code>64</code>
@@ -1912,7 +1919,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierAlt">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#18">kModifierAlt</a></td>
             <td>
                     <code>96</code>
@@ -1920,7 +1927,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierLeftSuper">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#19">kModifierLeftSuper</a></td>
             <td>
                     <code>128</code>
@@ -1928,7 +1935,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierRightSuper">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#20">kModifierRightSuper</a></td>
             <td>
                     <code>256</code>
@@ -1936,7 +1943,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kModifierSuper">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#21">kModifierSuper</a></td>
             <td>
                     <code>384</code>
@@ -1944,7 +1951,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kMousePrimaryButton">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#24">kMousePrimaryButton</a></td>
             <td>
                     <code>1</code>
@@ -1953,7 +1960,7 @@ Structs defined in input_events.fidl.</p>
             <td><p>Mouse buttons</p>
 </td>
         </tr>
-    <tr>
+    <tr id="kMouseSecondaryButton">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#25">kMouseSecondaryButton</a></td>
             <td>
                     <code>2</code>
@@ -1961,7 +1968,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kMouseTertiaryButton">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#26">kMouseTertiaryButton</a></td>
             <td>
                     <code>4</code>
@@ -1969,7 +1976,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kStylusPrimaryButton">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#29">kStylusPrimaryButton</a></td>
             <td>
                     <code>1</code>
@@ -1978,7 +1985,7 @@ Structs defined in input_events.fidl.</p>
             <td><p>Stylus buttons</p>
 </td>
         </tr>
-    <tr>
+    <tr id="kStylusSecondaryButton">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/input_event_constants.fidl#30">kStylusSecondaryButton</a></td>
             <td>
                     <code>2</code>
@@ -1986,7 +1993,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kMouseButtonPrimary">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/usages.fidl#8">kMouseButtonPrimary</a></td>
             <td>
                     <code>1</code>
@@ -1995,7 +2002,7 @@ Structs defined in input_events.fidl.</p>
             <td><p>Common mouse buttons report constants</p>
 </td>
         </tr>
-    <tr>
+    <tr id="kMouseButtonSecondary">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/usages.fidl#9">kMouseButtonSecondary</a></td>
             <td>
                     <code>2</code>
@@ -2003,7 +2010,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kMouseButtonTertiary">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/usages.fidl#10">kMouseButtonTertiary</a></td>
             <td>
                     <code>4</code>
@@ -2011,7 +2018,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kStylusBarrel">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/usages.fidl#13">kStylusBarrel</a></td>
             <td>
                     <code>1</code>
@@ -2020,7 +2027,7 @@ Structs defined in input_events.fidl.</p>
             <td><p>Common stylus buttons report constants</p>
 </td>
         </tr>
-    <tr>
+    <tr id="kVolumeUp">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/usages.fidl#16">kVolumeUp</a></td>
             <td>
                     <code>1</code>
@@ -2029,7 +2036,7 @@ Structs defined in input_events.fidl.</p>
             <td><p>Used as mask bits (2^N) against ButtonDescriptor.buttons.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="kVolumeDown">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/usages.fidl#17">kVolumeDown</a></td>
             <td>
                     <code>2</code>
@@ -2037,7 +2044,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kMicMute">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/usages.fidl#18">kMicMute</a></td>
             <td>
                     <code>4</code>
@@ -2045,7 +2052,7 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kReset">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/usages.fidl#19">kReset</a></td>
             <td>
                     <code>8</code>
@@ -2053,6 +2060,16 @@ Structs defined in input_events.fidl.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
+    <tr id="kPause">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.input/usages.fidl#20">kPause</a></td>
+            <td>
+                    <code>16</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td></td>
+        </tr>
     
 </table>
+
+
 

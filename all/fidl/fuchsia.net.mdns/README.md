@@ -25,12 +25,12 @@ unsuccessful resolution is indicated when both addresses are null.</p>
     <tr>
             <td><code>host</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#host_name'>host_name</a></code>
             </td>
         </tr><tr>
             <td><code>timeout</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -66,7 +66,7 @@ unbound.</p>
     <tr>
             <td><code>service</code></td>
             <td>
-                <code>string[22]</code>
+                <code><a class='link' href='#service_name'>service_name</a></code>
             </td>
         </tr><tr>
             <td><code>subscriber</code></td>
@@ -99,12 +99,12 @@ be <code>true</code> unless the instance name is known to be unique.</p>
     <tr>
             <td><code>service</code></td>
             <td>
-                <code>string[22]</code>
+                <code><a class='link' href='#service_name'>service_name</a></code>
             </td>
         </tr><tr>
             <td><code>instance</code></td>
             <td>
-                <code>string[63]</code>
+                <code><a class='link' href='#instance_name'>instance_name</a></code>
             </td>
         </tr><tr>
             <td><code>perform_probe</code></td>
@@ -187,12 +187,12 @@ instance have changed.</p>
     <tr>
             <td><code>service</code></td>
             <td>
-                <code>string[22]</code>
+                <code><a class='link' href='#service_name'>service_name</a></code>
             </td>
         </tr><tr>
             <td><code>instance</code></td>
             <td>
-                <code>string[63]</code>
+                <code><a class='link' href='#instance_name'>instance_name</a></code>
             </td>
         </tr></table>
 
@@ -229,7 +229,7 @@ are transmitted in the TXT record.</p>
         </tr><tr>
             <td><code>subtype</code></td>
             <td>
-                <code>string[63]?</code>
+                <code><a class='link' href='#subtype_name'>subtype_name</a></code>
             </td>
         </tr></table>
 
@@ -303,7 +303,7 @@ values.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>service</code></td>
             <td>
-                <code>string[22]</code>
+                <code><a class='link' href='#service_name'>service_name</a></code>
             </td>
             <td><p>The name of the service.</p>
 </td>
@@ -311,7 +311,7 @@ values.</p>
         </tr><tr>
             <td><code>instance</code></td>
             <td>
-                <code>string[63]</code>
+                <code><a class='link' href='#instance_name'>instance_name</a></code>
             </td>
             <td><p>The name of the service instance.</p>
 </td>
@@ -404,7 +404,7 @@ channel being closed.</p>
         </tr><tr>
             <td><code>ptr_ttl</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>Time-to-live for PTR resource records.</p>
 </td>
@@ -412,7 +412,7 @@ channel being closed.</p>
         </tr><tr>
             <td><code>srv_ttl</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>Time-to-live for SRV resource records.</p>
 </td>
@@ -420,7 +420,7 @@ channel being closed.</p>
         </tr><tr>
             <td><code>txt_ttl</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>Time-to-live for TXT resource records.</p>
 </td>
@@ -500,7 +500,7 @@ a conflicting instance.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="DEFAULT_SRV_PRIORITY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#193">DEFAULT_SRV_PRIORITY</a></td>
             <td>
                     <code>0</code>
@@ -508,7 +508,7 @@ a conflicting instance.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="DEFAULT_SRV_WEIGHT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#194">DEFAULT_SRV_WEIGHT</a></td>
             <td>
                     <code>0</code>
@@ -516,7 +516,7 @@ a conflicting instance.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="DEFAULT_PTR_TTL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#195">DEFAULT_PTR_TTL</a></td>
             <td>
                     <code>4500000000000</code>
@@ -524,7 +524,7 @@ a conflicting instance.</p>
                 <td><code>int64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="DEFAULT_SRV_TTL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#196">DEFAULT_SRV_TTL</a></td>
             <td>
                     <code>120000000000</code>
@@ -532,7 +532,7 @@ a conflicting instance.</p>
                 <td><code>int64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="DEFAULT_TXT_TTL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#197">DEFAULT_TXT_TTL</a></td>
             <td>
                     <code>4500000000000</code>
@@ -542,4 +542,36 @@ a conflicting instance.</p>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="host_name">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#16">host_name</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr><tr id="service_name">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#24">service_name</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr><tr id="instance_name">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#29">instance_name</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr><tr id="subtype_name">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#34">subtype_name</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr><tr id="txt_string">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.mdns/mdns.fidl#39">txt_string</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr></table>
 

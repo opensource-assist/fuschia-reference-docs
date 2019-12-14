@@ -81,7 +81,7 @@
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>timestamp</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -149,6 +149,8 @@ Type: <code>uint32</code>
             </td>
             <td></td>
         </tr></table>
+
+
 
 
 

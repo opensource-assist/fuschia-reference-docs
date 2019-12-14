@@ -55,7 +55,7 @@ data may be queued on the socket again without causing races.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -129,7 +129,7 @@ No local port is specified as an ephemeral one will automatically be allocated.<
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>local_port</code></td>
@@ -165,7 +165,7 @@ a single port at a time.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -203,6 +203,8 @@ operations than just sending and receiving on a socket.</p>
             <td>No default</td>
         </tr>
 </table>
+
+
 
 
 

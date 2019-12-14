@@ -1044,7 +1044,7 @@ length allowed for the destionation characteristic or descriptor.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_VALUE_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/constants.fidl#7">MAX_VALUE_LENGTH</a></td>
             <td>
                     <code>512</code>
@@ -1052,7 +1052,7 @@ length allowed for the destionation characteristic or descriptor.</p>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kPropertyBroadcast">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#65">kPropertyBroadcast</a></td>
             <td>
                     <code>1</code>
@@ -1062,7 +1062,7 @@ length allowed for the destionation characteristic or descriptor.</p>
 GATT procedures that are allowed for a particular characteristic.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="kPropertyRead">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#66">kPropertyRead</a></td>
             <td>
                     <code>2</code>
@@ -1070,7 +1070,7 @@ GATT procedures that are allowed for a particular characteristic.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kPropertyWriteWithoutResponse">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#67">kPropertyWriteWithoutResponse</a></td>
             <td>
                     <code>4</code>
@@ -1078,7 +1078,7 @@ GATT procedures that are allowed for a particular characteristic.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kPropertyWrite">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#68">kPropertyWrite</a></td>
             <td>
                     <code>8</code>
@@ -1086,7 +1086,7 @@ GATT procedures that are allowed for a particular characteristic.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kPropertyNotify">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#69">kPropertyNotify</a></td>
             <td>
                     <code>16</code>
@@ -1094,7 +1094,7 @@ GATT procedures that are allowed for a particular characteristic.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kPropertyIndicate">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#70">kPropertyIndicate</a></td>
             <td>
                     <code>32</code>
@@ -1102,7 +1102,7 @@ GATT procedures that are allowed for a particular characteristic.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kPropertyAuthenticatedSignedWrites">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#71">kPropertyAuthenticatedSignedWrites</a></td>
             <td>
                     <code>64</code>
@@ -1110,7 +1110,7 @@ GATT procedures that are allowed for a particular characteristic.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kPropertyReliableWrite">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#72">kPropertyReliableWrite</a></td>
             <td>
                     <code>256</code>
@@ -1118,7 +1118,7 @@ GATT procedures that are allowed for a particular characteristic.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kPropertyWritableAuxiliaries">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.gatt/types.fidl#73">kPropertyWritableAuxiliaries</a></td>
             <td>
                     <code>512</code>
@@ -1128,4 +1128,6 @@ GATT procedures that are allowed for a particular characteristic.</p>
         </tr>
     
 </table>
+
+
 

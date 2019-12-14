@@ -9,7 +9,7 @@ related to latitude and longitude.</p>
 ## **PROTOCOLS**
 
 ## RegulatoryRegionConfigurator {#RegulatoryRegionConfigurator}
-*Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location/namedplace.fidl#20)*
+*Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location.namedplace/namedplace.fidl#20)*
 
 <p>The RegulatoryRegionConfigurator protocol provides mechanisms to
 inform Location Services of the inputs that should be used to
@@ -48,14 +48,14 @@ service2.SetRegion(&quot;BB&quot;);
     <tr>
             <td><code>region</code></td>
             <td>
-                <code>string[2]</code>
+                <code><a class='link' href='#RegionCode'>RegionCode</a></code>
             </td>
         </tr></table>
 
 
 
 ## RegulatoryRegionWatcher {#RegulatoryRegionWatcher}
-*Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location/namedplace.fidl#56)*
+*Defined in [fuchsia.location.namedplace/namedplace.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location.namedplace/namedplace.fidl#56)*
 
 <p>The RegulatoryRegionWatcher protocol provides the mechanism for
 radio subsystems to learn the currently applicable regulatory
@@ -100,7 +100,7 @@ closed with <code>ZX_ERR_BAD_STATE</code>.</li>
     <tr>
             <td><code>new_region</code></td>
             <td>
-                <code>string[2]</code>
+                <code><a class='link' href='#RegionCode'>RegionCode</a></code>
             </td>
         </tr></table>
 
@@ -117,4 +117,19 @@ closed with <code>ZX_ERR_BAD_STATE</code>.</li>
 
 
 
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="RegionCode">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.location.namedplace/namedplace.fidl#13">RegionCode</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>Represents a regulatory region. These values should generally be chosen
+from <a href="https://en.wikipedia.org/wiki/ISO_3166-2">ISO 3166-2</a> codes. However,
+some radios may support extensions beyond the set of ISO 3166-2 codes.</p>
+</td>
+        </tr></table>
 

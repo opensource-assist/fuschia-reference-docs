@@ -61,7 +61,7 @@ and request / response message bits.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -90,7 +90,7 @@ and request / response message bits.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -109,7 +109,7 @@ and request / response message bits.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -142,7 +142,7 @@ and request / response message bits.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -180,7 +180,7 @@ and request / response message bits.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -223,7 +223,7 @@ and request / response message bits.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -247,7 +247,7 @@ and request / response message bits.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -271,7 +271,7 @@ and request / response message bits.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -295,7 +295,7 @@ and request / response message bits.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -314,7 +314,7 @@ and request / response message bits.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -333,7 +333,7 @@ and request / response message bits.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -445,7 +445,7 @@ and request / response message bits.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="INFO_FEATURE_WLAN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#14">INFO_FEATURE_WLAN</a></td>
             <td>
                     <code>1</code>
@@ -453,7 +453,7 @@ and request / response message bits.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="INFO_FEATURE_SYNTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#15">INFO_FEATURE_SYNTH</a></td>
             <td>
                     <code>2</code>
@@ -461,7 +461,7 @@ and request / response message bits.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="INFO_FEATURE_LOOPBACK">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#16">INFO_FEATURE_LOOPBACK</a></td>
             <td>
                     <code>4</code>
@@ -469,7 +469,7 @@ and request / response message bits.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SIGNAL_STATUS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#37">SIGNAL_STATUS</a></td>
             <td>
                     <code>16777216</code>
@@ -477,7 +477,7 @@ and request / response message bits.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="DEVICE_STATUS_ONLINE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#40">DEVICE_STATUS_ONLINE</a></td>
             <td>
                     <code>1</code>
@@ -485,7 +485,7 @@ and request / response message bits.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_CLIENT_NAME_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#43">MAX_CLIENT_NAME_LEN</a></td>
             <td>
                     <code>15</code>
@@ -493,7 +493,7 @@ and request / response message bits.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SET_CLIENT_NAME_MAX_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-ethernet/ethernet.fidl#47">SET_CLIENT_NAME_MAX_LEN</a></td>
             <td>
                     <code>16</code>
@@ -503,4 +503,6 @@ and request / response message bits.</p>
         </tr>
     
 </table>
+
+
 

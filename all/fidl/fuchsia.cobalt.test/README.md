@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## LoggerQuerier {#LoggerQuerier}
-*Defined in [fuchsia.cobalt.test/query.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.cobalt.test/query.test.fidl#33)*
+*Defined in [fuchsia.cobalt.test/query.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.cobalt.test/query.test.fidl#32)*
 
 <p>LoggerQuerier provides a way to query mock cobalt services to check that
 clients of cobalt are logging events as expected.</p>
@@ -137,10 +137,6 @@ Type: <code>uint32</code>
             <td><code>5</code></td>
             <td></td>
         </tr><tr>
-            <td><code>LOG_STRING</code></td>
-            <td><code>6</code></td>
-            <td></td>
-        </tr><tr>
             <td><code>LOG_INT_HISTOGRAM</code></td>
             <td><code>7</code></td>
             <td></td>
@@ -157,7 +153,7 @@ Type: <code>uint32</code>
 ### QueryError {#QueryError}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.cobalt.test/query.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.cobalt.test/query.test.fidl#25)*
+*Defined in [fuchsia.cobalt.test/query.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.cobalt.test/query.test.fidl#24)*
 
 
 
@@ -203,7 +199,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_QUERY_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.cobalt.test/query.test.fidl#10">MAX_QUERY_LENGTH</a></td>
             <td>
                     <code>64</code>
@@ -214,4 +210,6 @@ Type: <code>uint32</code>
         </tr>
     
 </table>
+
+
 

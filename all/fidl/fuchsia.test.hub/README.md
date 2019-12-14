@@ -79,7 +79,7 @@ provided path.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_NUM_ENTRIES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/hub.fidl#11">MAX_NUM_ENTRIES</a></td>
             <td>
                     <code>100</code>
@@ -91,4 +91,6 @@ This capacity is currently set somewhat arbitrarily.</p>
         </tr>
     
 </table>
+
+
 

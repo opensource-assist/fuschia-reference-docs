@@ -520,7 +520,7 @@ node_id will not be filled when there is no hit.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_TREE_DEPTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#11">MAX_TREE_DEPTH</a></td>
             <td>
                     <code>256</code>
@@ -529,7 +529,7 @@ node_id will not be filled when there is no hit.</p>
             <td><p>Maximum depth of the semantic tree.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_FAN_OUT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#14">MAX_FAN_OUT</a></td>
             <td>
                     <code>20000</code>
@@ -538,7 +538,7 @@ node_id will not be filled when there is no hit.</p>
             <td><p>Maximum number of children for a node in the semantic tree.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_NODES_PER_UPDATE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#17">MAX_NODES_PER_UPDATE</a></td>
             <td>
                     <code>2048</code>
@@ -547,7 +547,7 @@ node_id will not be filled when there is no hit.</p>
             <td><p>Maximum number of semantic nodes that may be sent in a single update.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_LABEL_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#20">MAX_LABEL_SIZE</a></td>
             <td>
                     <code>16384</code>
@@ -556,7 +556,7 @@ node_id will not be filled when there is no hit.</p>
             <td><p>Maximum size of a label string, in bytes.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_VALUE_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/semantics_manager.fidl#23">MAX_VALUE_SIZE</a></td>
             <td>
                     <code>16384</code>
@@ -567,4 +567,6 @@ node_id will not be filled when there is no hit.</p>
         </tr>
     
 </table>
+
+
 

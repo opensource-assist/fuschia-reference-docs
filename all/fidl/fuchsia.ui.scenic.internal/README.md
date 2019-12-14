@@ -180,7 +180,7 @@ in use (see ReleaseTransform() for more details).</p>
     <tr>
             <td><code>transform_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#TransformId'>TransformId</a></code>
             </td>
         </tr></table>
 
@@ -198,12 +198,12 @@ any previously added children.</p>
     <tr>
             <td><code>parent_transform_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#TransformId'>TransformId</a></code>
             </td>
         </tr><tr>
             <td><code>child_transform_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#TransformId'>TransformId</a></code>
             </td>
         </tr></table>
 
@@ -219,12 +219,12 @@ any previously added children.</p>
     <tr>
             <td><code>parent_transform_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#TransformId'>TransformId</a></code>
             </td>
         </tr><tr>
             <td><code>child_transform_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#TransformId'>TransformId</a></code>
             </td>
         </tr></table>
 
@@ -248,7 +248,7 @@ objects that are not referenced by the new root.</p>
     <tr>
             <td><code>transform_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#TransformId'>TransformId</a></code>
             </td>
         </tr></table>
 
@@ -266,7 +266,7 @@ into their Graph through this Link object, and the object's associated Link prop
     <tr>
             <td><code>link_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LinkId'>LinkId</a></code>
             </td>
         </tr><tr>
             <td><code>token</code></td>
@@ -299,7 +299,7 @@ using this function.</p>
     <tr>
             <td><code>link_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LinkId'>LinkId</a></code>
             </td>
         </tr><tr>
             <td><code>properties</code></td>
@@ -326,7 +326,7 @@ construct a new object).</p>
     <tr>
             <td><code>transform_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#TransformId'>TransformId</a></code>
             </td>
         </tr></table>
 
@@ -582,4 +582,24 @@ LayoutInfo.</p>
 
 
 
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="TransformId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#78">TransformId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td><p>A user-defined identifier for a particular transform. See CreateTransform() and
+ReleaseTransform() for more information. </p>
+</td>
+        </tr><tr id="LinkId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#81">LinkId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td><p>A user-defined identifier for a particular Link. See CreateLink() for more information.</p>
+</td>
+        </tr></table>
 

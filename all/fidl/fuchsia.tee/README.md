@@ -44,7 +44,7 @@
         </tr><tr>
             <td><code>parameter_set</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Parameter'>Parameter</a>&gt;[4]</code>
+                <code><a class='link' href='#ParameterSet'>ParameterSet</a></code>
             </td>
         </tr></table>
 
@@ -85,7 +85,7 @@ trusted application.</p>
         </tr><tr>
             <td><code>parameter_set</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Parameter'>Parameter</a>&gt;[4]</code>
+                <code><a class='link' href='#ParameterSet'>ParameterSet</a></code>
             </td>
         </tr></table>
 
@@ -416,7 +416,7 @@ Buffer.size to the number of bytes written.</p>
             <td>3</td>
             <td><code>parameter_set</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='#Parameter'>Parameter</a>&gt;[4]</code>
+                <code><a class='link' href='#ParameterSet'>ParameterSet</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -459,7 +459,7 @@ Buffer.size to the number of bytes written.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_PARAMETERSET_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-tee/tee.fidl#83">MAX_PARAMETERSET_COUNT</a></td>
             <td>
                     <code>4</code>
@@ -469,4 +469,16 @@ Buffer.size to the number of bytes written.</p>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="ParameterSet">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-tee/tee.fidl#84">ParameterSet</a></td>
+            <td>
+                <code>vector</code>[<code><a class='link' href='#MAX_PARAMETERSET_COUNT'>MAX_PARAMETERSET_COUNT</a></code>]</td>
+            <td></td>
+        </tr></table>
 

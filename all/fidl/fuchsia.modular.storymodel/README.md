@@ -125,7 +125,7 @@ that process. Clients will typically construct these indirectly using convenienc
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_STORY_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.storymodel/constants.fidl#7">MAX_STORY_NAME_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -133,7 +133,7 @@ that process. Clients will typically construct these indirectly using convenienc
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_MODULES_PER_STORY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.storymodel/constants.fidl#9">MAX_MODULES_PER_STORY</a></td>
             <td>
                     <code>128</code>
@@ -141,7 +141,7 @@ that process. Clients will typically construct these indirectly using convenienc
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_MODULE_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.storymodel/constants.fidl#10">MAX_MODULE_NAME_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -151,4 +151,6 @@ that process. Clients will typically construct these indirectly using convenienc
         </tr>
     
 </table>
+
+
 

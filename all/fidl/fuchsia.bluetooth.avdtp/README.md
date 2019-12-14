@@ -212,6 +212,48 @@ If the streaming channel doesn't exist, no action will be taken.</p>
             </td>
         </tr></table>
 
+### AbortStream {#AbortStream}
+
+<p>Initiate an abort procedure on the current stream.
+If the streaming channel doesn't exist, no action will be taken.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#PeerController_AbortStream_Result'>PeerController_AbortStream_Result</a></code>
+            </td>
+        </tr></table>
+
+### StartStream {#StartStream}
+
+<p>Start streaming media on the current stream that is owned by the peer.
+If the streaming channel doesn't exist, no action will be taken.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#PeerController_StartStream_Result'>PeerController_StartStream_Result</a></code>
+            </td>
+        </tr></table>
+
 ### ReconfigureStream {#ReconfigureStream}
 
 <p>Initiate a reconfiguration procedure for the current stream.
@@ -336,6 +378,28 @@ The result is discarded because PeerController only initiates the procedure.</p>
 </table>
 
 ### PeerController_ReleaseStream_Response {#PeerController_ReleaseStream_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### PeerController_AbortStream_Response {#PeerController_AbortStream_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### PeerController_StartStream_Response {#PeerController_StartStream_Response}
 *generated*
 
 
@@ -524,6 +588,44 @@ Type: <code>uint32</code>
             <td></td>
         </tr></table>
 
+### PeerController_AbortStream_Result {#PeerController_AbortStream_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#PeerController_AbortStream_Response'>PeerController_AbortStream_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#PeerError'>PeerError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### PeerController_StartStream_Result {#PeerController_StartStream_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#PeerController_StartStream_Response'>PeerController_StartStream_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#PeerError'>PeerError</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### PeerController_ReconfigureStream_Result {#PeerController_ReconfigureStream_Result}
 *generated*
 
@@ -590,7 +692,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_PICONET_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.avdtp/types.fidl#9">MAX_PICONET_SIZE</a></td>
             <td>
                     <code>8</code>
@@ -602,4 +704,6 @@ Type: <code>uint32</code>
         </tr>
     
 </table>
+
+
 

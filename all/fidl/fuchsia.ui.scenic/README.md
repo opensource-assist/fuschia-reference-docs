@@ -5,6 +5,65 @@
 
 ## **PROTOCOLS**
 
+## PointerCaptureListener {#PointerCaptureListener}
+*Defined in [fuchsia.ui.scenic/pointer_capture.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/pointer_capture.fidl#11)*
+
+<p>A method of obtaining global pointer events, regardless of view focus.</p>
+
+### OnPointerEvent {#OnPointerEvent}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>event</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.ui.input/'>fuchsia.ui.input</a>/<a class='link' href='../fuchsia.ui.input/#PointerEvent'>PointerEvent</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+## PointerCaptureListenerRegistry {#PointerCaptureListenerRegistry}
+*Defined in [fuchsia.ui.scenic/pointer_capture.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/pointer_capture.fidl#17)*
+
+<p>Injects a listener protocol, along with a ViewRef that defines the coordinate space of the captured pointer events.</p>
+
+### RegisterListener {#RegisterListener}
+
+<p>This protocol will be subsumed by gesture disambiguation.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>listener</code></td>
+            <td>
+                <code><a class='link' href='#PointerCaptureListener'>PointerCaptureListener</a></code>
+            </td>
+        </tr><tr>
+            <td><code>view_ref</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.ui.views/'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/#ViewRef'>ViewRef</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>success</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
 ## Scenic {#Scenic}
 *Defined in [fuchsia.ui.scenic/scenic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#18)*
 
@@ -308,7 +367,7 @@ displayed at a given |presentation_time|, they should aim to have all
     <tr>
             <td><code>requested_prediction_span</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -433,7 +492,7 @@ Use <code>SetEventMaskCmd</code> to enable event delivery for a resource.</p>
             <td>1</td>
             <td><code>requested_presentation_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>|requested_presentation_time| specifies the time on or after which the
 client would like the enqueued operations to take visible effect
@@ -477,7 +536,7 @@ states have been fully-rendered and presented to the display.</p>
             <td>4</td>
             <td><code>requested_prediction_span</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>|requested_prediction_span| is the amount of time into the future Scenic
 will provide predictions for. A span of 0 is guaranteed to provide at
@@ -554,7 +613,7 @@ least one future time.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="displayOwnedSignal">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#37">displayOwnedSignal</a></td>
             <td>
                     <code>33554432</code>
@@ -562,7 +621,7 @@ least one future time.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="displayNotOwnedSignal">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#38">displayNotOwnedSignal</a></td>
             <td>
                     <code>16777216</code>
@@ -572,4 +631,6 @@ least one future time.</p>
         </tr>
     
 </table>
+
+
 

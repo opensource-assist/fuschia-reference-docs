@@ -1068,7 +1068,7 @@ to secure buffers.</p>
             <td>1</td>
             <td><code>key_id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[16]</code>
+                <code><a class='link' href='../fuchsia.media/'>fuchsia.media</a>/<a class='link' href='../fuchsia.media/#KeyId'>KeyId</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -1188,25 +1188,25 @@ to secure buffers.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="LICENSE_INIT_DATA_TYPE_CENC">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#12">LICENSE_INIT_DATA_TYPE_CENC</a></td>
             <td><code>cenc</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="LICENSE_INIT_DATA_TYPE_KEYIDS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#13">LICENSE_INIT_DATA_TYPE_KEYIDS</a></td>
             <td><code>keyids</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="LICENSE_INIT_DATA_TYPE_WEBM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#14">LICENSE_INIT_DATA_TYPE_WEBM</a></td>
             <td><code>webm</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="LICENSE_INIT_DATA_TYPE_HLS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.drm/license_session.fidl#15">LICENSE_INIT_DATA_TYPE_HLS</a></td>
             <td><code>hls</code></td>
                     <td><code>String</code></td>
@@ -1214,4 +1214,6 @@ to secure buffers.</p>
         </tr>
     
 </table>
+
+
 

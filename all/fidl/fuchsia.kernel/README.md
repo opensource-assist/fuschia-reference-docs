@@ -27,7 +27,7 @@ in |buffer| is in &quot;inspect-vmo&quot; format, documented elsewhere.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>buffer</code></td>
@@ -54,7 +54,7 @@ limited to an unspecified rate, but approximately every few seconds).</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -85,7 +85,7 @@ Look at zx_debug_send_command syscall handling to find valid values.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -110,7 +110,7 @@ Look at zx_debug_send_command syscall handling to find valid values.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -324,7 +324,7 @@ retrieve stats, which will be an un-recoverable error, it will close the channel
             <td>3</td>
             <td><code>idle_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -424,7 +424,7 @@ retrieve stats, which will be an un-recoverable error, it will close the channel
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="DEBUG_COMMAND_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-kernel/kernel-debug.fidl#10">DEBUG_COMMAND_MAX</a></td>
             <td>
                     <code>1024</code>
@@ -435,4 +435,6 @@ retrieve stats, which will be an un-recoverable error, it will close the channel
         </tr>
     
 </table>
+
+
 

@@ -1178,7 +1178,7 @@ Simple Pairing or stronger.</p>
             <td>1</td>
             <td><code>irk</code></td>
             <td>
-                <code><a class='link' href='#Key'>Key</a></code>
+                <code><a class='link' href='#LocalKey'>LocalKey</a></code>
             </td>
             <td><p>The local Identity Resolving Key used by a bt-host device to generate Resolvable Private
 Addresses when privacy is enabled.</p>
@@ -1463,7 +1463,7 @@ appearance information was obtained over advertising and/or GATT.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1473,4 +1473,17 @@ appearance information was obtained over advertising and/or GATT.</p>
 
 
 
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="LocalKey">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.sys/identity.fidl#30">LocalKey</a></td>
+            <td>
+                <code>fuchsia.bluetooth.sys/Key</code></td>
+            <td><p>Represents a locally generated key that is distributed across one or more bonds.</p>
+</td>
+        </tr></table>
 

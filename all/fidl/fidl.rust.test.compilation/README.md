@@ -33,6 +33,30 @@
             </td>
         </tr></table>
 
+### TestNullableXUnion {#TestNullableXUnion}
+
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>test_x_union</code></td>
+            <td>
+                <code><a class='link' href='#TestXUnion'>TestXUnion</a>?</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>test_x_union</code></td>
+            <td>
+                <code><a class='link' href='#TestXUnion'>TestXUnion</a>?</code>
+            </td>
+        </tr></table>
+
 ### TestErrorMethod {#TestErrorMethod}
 
 
@@ -73,7 +97,7 @@
 </table>
 
 ### HasBigArray {#HasBigArray}
-*Defined in [fidl.rust.test.compilation/compilation.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/rust/fidl/compilation.test.fidl#22)*
+*Defined in [fidl.rust.test.compilation/compilation.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/rust/fidl/compilation.test.fidl#23)*
 
 
 
@@ -91,7 +115,7 @@
 </table>
 
 ### Result {#Result}
-*Defined in [fidl.rust.test.compilation/compilation.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/rust/fidl/compilation.test.fidl#31)*
+*Defined in [fidl.rust.test.compilation/compilation.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/rust/fidl/compilation.test.fidl#32)*
 
 
 
@@ -109,7 +133,7 @@
 </table>
 
 ### HasHostFidlHandleStubbing {#HasHostFidlHandleStubbing}
-*Defined in [fidl.rust.test.compilation/compilation.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/rust/fidl/compilation.test.fidl#35)*
+*Defined in [fidl.rust.test.compilation/compilation.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/rust/fidl/compilation.test.fidl#36)*
 
 
 
@@ -174,7 +198,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### HasStructWithBigArray {#HasStructWithBigArray}
-*Defined in [fidl.rust.test.compilation/compilation.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/rust/fidl/compilation.test.fidl#26)*
+*Defined in [fidl.rust.test.compilation/compilation.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/garnet/public/lib/fidl/rust/fidl/compilation.test.fidl#27)*
 
 
 <table>
@@ -208,6 +232,8 @@ Type: <code>uint32</code>
             </td>
             <td></td>
         </tr></table>
+
+
 
 
 

@@ -111,7 +111,7 @@ provider. Both of these are used in logging and diagnostic messages.</p>
         </tr><tr>
             <td><code>pid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr><tr>
             <td><code>name</code></td>
@@ -145,7 +145,7 @@ provider. Both of these are used in logging and diagnostic messages.</p>
         </tr><tr>
             <td><code>pid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr><tr>
             <td><code>name</code></td>
@@ -161,7 +161,7 @@ provider. Both of these are used in logging and diagnostic messages.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>started</code></td>
@@ -349,7 +349,7 @@ preceding Stop and the current contents are to be retained.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_PROVIDER_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-tracing-provider/provider.fidl#10">MAX_PROVIDER_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
@@ -358,7 +358,7 @@ preceding Stop and the current contents are to be retained.</p>
             <td><p>The maximum length of a provider's name.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_NUM_CATEGORIES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-tracing-provider/provider.fidl#13">MAX_NUM_CATEGORIES</a></td>
             <td>
                     <code>100</code>
@@ -367,7 +367,7 @@ preceding Stop and the current contents are to be retained.</p>
             <td><p>The maximum number of categories supported.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_CATEGORY_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-tracing-provider/provider.fidl#16">MAX_CATEGORY_NAME_LENGTH</a></td>
             <td>
                     <code>100</code>
@@ -378,4 +378,6 @@ preceding Stop and the current contents are to be retained.</p>
         </tr>
     
 </table>
+
+
 

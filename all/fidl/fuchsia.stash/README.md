@@ -504,7 +504,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_STRING_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#9">MAX_STRING_SIZE</a></td>
             <td>
                     <code>12000</code>
@@ -514,7 +514,7 @@ Type: <code>uint32</code>
 think it should be higher just ask.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_KEY_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.stash/stash.fidl#10">MAX_KEY_SIZE</a></td>
             <td>
                     <code>256</code>
@@ -524,4 +524,6 @@ think it should be higher just ask.</p>
         </tr>
     
 </table>
+
+
 

@@ -2102,7 +2102,7 @@ Type: <code>uint64</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="arrays_size">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/tools/fidl/examples/types.test.fidl#61">arrays_size</a></td>
             <td>
                     <code>32</code>
@@ -2110,7 +2110,7 @@ Type: <code>uint64</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="vectors_size">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/tools/fidl/examples/types.test.fidl#104">vectors_size</a></td>
             <td>
                     <code>32</code>
@@ -2118,7 +2118,7 @@ Type: <code>uint64</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="strings_size">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/tools/fidl/examples/types.test.fidl#281">strings_size</a></td>
             <td>
                     <code>32</code>
@@ -2128,4 +2128,6 @@ Type: <code>uint64</code>
         </tr>
     
 </table>
+
+
 

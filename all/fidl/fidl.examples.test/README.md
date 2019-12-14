@@ -213,7 +213,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="NumberOfDirections">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/tools/fidl/examples/test.test.fidl#37">NumberOfDirections</a></td>
             <td>
                     <code>4</code>
@@ -223,4 +223,6 @@ Type: <code>uint32</code>
         </tr>
     
 </table>
+
+
 

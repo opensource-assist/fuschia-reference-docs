@@ -109,7 +109,7 @@ all the missing blobs were downloaded to the system.</li>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -156,7 +156,7 @@ successfully cached.</li>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -229,7 +229,7 @@ caller.</li>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -296,7 +296,7 @@ to be a font package.</li>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -339,7 +339,7 @@ repository administration tools.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -378,7 +378,7 @@ but in-flight downloads may not be interrupted.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -420,7 +420,7 @@ but in-flight downloads may not be interrupted.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -463,7 +463,7 @@ in-flight downloads may not be interrupted.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -486,7 +486,7 @@ in-flight downloads may not be interrupted.</p>
 
 
 ## RepositoryIterator {#RepositoryIterator}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#132)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#151)*
 
 <p>The iterator over all the repositories defined in a <code>PackageResolver</code>.</p>
 
@@ -576,7 +576,7 @@ successfully cached.</li>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -679,11 +679,6 @@ Type: <code>uint64</code>
             <td><p>Does nothing, but visible in inspect.</p>
 </td>
         </tr><tr>
-            <td><code>DOWNLOAD_BLOB</code></td>
-            <td><code>1</code></td>
-            <td><p>Perform blob downloading in the package resolver instead of amber.</p>
-</td>
-        </tr><tr>
             <td><code>RUST_TUF</code></td>
             <td><code>2</code></td>
             <td><p>Resolve package merkle roots using rust-tuf instead of amber.</p>
@@ -719,7 +714,8 @@ Type: <code>uint64</code>
             <td>
                 <code>vector&lt;<a class='link' href='#RepositoryKeyConfig'>RepositoryKeyConfig</a>&gt;</code>
             </td>
-            <td><p>A vector of public keys. Required.</p>
+            <td><p>A vector of public keys that have signed the initial trusted root
+metadata. Required.</p>
 <p>These keys must match one of the trusted keys known to the system.</p>
 </td>
         </tr><tr>
@@ -739,12 +735,38 @@ Type: <code>uint64</code>
             <td><p>The package URL of the system update package. Optional.</p>
 <p>Only used for the fuchsia-pkg://fuchsia.com/ repo.</p>
 </td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>root_version</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td><p>The initial trusted root metadata version. Optional, defaulting to 1.</p>
+<p>This value describes the initial root metadata version the resolver will
+fetch to initialize trust, once it's signatures has been verified by the
+<code>root_keys</code>. It will then walk the chain of N+1, N+2, and etc to the
+latest version before the resolver fetches any targets.</p>
+<p>It is recommended that this <code>root_version</code> number and <code>root_keys </code> are
+kept reasonably in sync with the most recent published version of the
+root metadata, as that avoids the risk of an old and unused root key
+being used to compromise resolvers during the trust initialization.</p>
+</td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>root_threshold</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td><p>The number of <code>root_keys</code> that need to have signed the root metadata for it
+to be considered trusted. This value must be greater than or equal to 1.
+Optional, defaulting to 1.</p>
+</td>
         </tr></table>
 
 ### MirrorConfig {#MirrorConfig}
 
 
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#116)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#135)*
 
 <p>Describes the configuration necessary to connect to a mirror.</p>
 
@@ -793,7 +815,7 @@ Defaults to <code>mirror_url + &quot;/blobs&quot;</code>.</p>
 ## **XUNIONS**
 
 ### RepositoryKeyConfig {#RepositoryKeyConfig}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#102)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#121)*
 
 <p>Describes the keys used by the repository to authenticate it's packages.</p>
 <p>The only supported algorithm at the moment is ed25519.</p>
@@ -809,7 +831,7 @@ Defaults to <code>mirror_url + &quot;/blobs&quot;</code>.</p>
         </tr></table>
 
 ### RepositoryBlobKey {#RepositoryBlobKey}
-*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#110)*
+*Defined in [fuchsia.pkg/repo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.pkg/repo.fidl#129)*
 
 <p>Describes a key used to decrypt blobs.</p>
 <p>The only supported algorithm at the moment is aes.</p>
@@ -823,6 +845,8 @@ Defaults to <code>mirror_url + &quot;/blobs&quot;</code>.</p>
             <td><p>A raw aes key as binary data.</p>
 </td>
         </tr></table>
+
+
 
 
 

@@ -164,8 +164,34 @@ discretion of the presenter implementation.</p>
 
 ### PresentView {#PresentView}
 
-<p>Request that the View's contents be displayed on the screen as a
-<code>Presentation</code>.</p>
+<p>Request that the View's contents be displayed on the screen as a <code>Presentation</code>.
+Each call to <code>PresentView</code> creates a new <code>Presentation</code>. Having more than one simultaneous
+<code>Presentation</code> (i.e. calling <code>PresentView</code> more than once) is deprecated, and will
+print a warning. In the future, this will result in an error and the channel being closed.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>view_holder_token</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.ui.views/'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/#ViewHolderToken'>ViewHolderToken</a></code>
+            </td>
+        </tr><tr>
+            <td><code>presentation_request</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#Presentation'>Presentation</a>&gt;?</code>
+            </td>
+        </tr></table>
+
+
+
+### PresentOrReplaceView {#PresentOrReplaceView}
+
+<p>Request that the View's contents be displayed on the screen as a <code>Presentation</code>.
+Destroys any existing presentations and replaces them with the new one.
+This is true whether the existing view was created by a call to
+PresentOrReplaceView or to PresentView.</p>
 
 #### Request
 <table>
@@ -252,6 +278,8 @@ Type: <code>uint32</code>
             <td><p>Display is used well beyond arm's reach.</p>
 </td>
         </tr></table>
+
+
 
 
 

@@ -595,6 +595,9 @@ sequentially rather than concurrently. The first stream sink that's created usin
 method is used as the sole source of packets incoming to the logical consumer until that
 stream sink is closed or the <code>EndOfStream</code> method is called on that sink. At that point,
 the second stream sink is used, and so on.</p>
+<p>If an unsupported compression type is supplied, the
+<code>stream_sink_request</code> request will be closed with an epitaph value of
+<code>ZX_ERR_INVALID_ARGS</code></p>
 
 #### Request
 <table>
@@ -668,7 +671,7 @@ specified.</p>
         </tr><tr>
             <td><code>reference_time</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
         </tr><tr>
             <td><code>media_time</code></td>
@@ -1365,18 +1368,17 @@ and not yet released.</p>
 
 
 
-### SetPcmStreamType {#SetPcmStreamType}
+### BindGainControl {#BindGainControl}
 
-<p>Sets the type of the stream to be delivered by the client. Using this
-method implies that the stream encoding is <code>AUDIO_ENCODING_LPCM</code>.</p>
+<p>Binds to the gain control for this AudioRenderer.</p>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>type</code></td>
+            <td><code>gain_control_request</code></td>
             <td>
-                <code><a class='link' href='#AudioStreamType'>AudioStreamType</a></code>
+                <code>request&lt;<a class='link' href='../fuchsia.media.audio/'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/#GainControl'>GainControl</a>&gt;</code>
             </td>
         </tr></table>
 
@@ -1484,6 +1486,117 @@ a CT of 0.</p>
         </tr></table>
 
 
+
+### SetUsage {#SetUsage}
+
+<p>Sets the usage of the render stream. This must be called before a call to
+|SetPcmStreamType|.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>usage</code></td>
+            <td>
+                <code><a class='link' href='#AudioRenderUsage'>AudioRenderUsage</a></code>
+            </td>
+        </tr></table>
+
+
+
+### SetPcmStreamType {#SetPcmStreamType}
+
+<p>Sets the type of the stream to be delivered by the client. Using this
+method implies that the stream encoding is <code>AUDIO_ENCODING_LPCM</code>.</p>
+<p>This must be called before |Play| or |PlayNoReply|. After a call to
+|SetPcmStreamType|, the client must then send an |AddPayloadBuffer|
+request, followed by the various |StreamSink| methods (ex: |SendPacket|/
+|SendPacketNoReply|, etc).</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>type</code></td>
+            <td>
+                <code><a class='link' href='#AudioStreamType'>AudioStreamType</a></code>
+            </td>
+        </tr></table>
+
+
+
+### EnableMinLeadTimeEvents {#EnableMinLeadTimeEvents}
+
+<p>Enable or disable notifications about changes to the minimum clock lead
+time (in nanoseconds) for this AudioRenderer. Calling this method with
+'enabled' set to true will trigger an immediate <code>OnMinLeadTimeChanged</code>
+event with the current minimum lead time for the AudioRenderer. If the
+value changes, an <code>OnMinLeadTimeChanged</code> event will be raised with the
+new value. This behavior will continue until the user calls
+<code>EnableMinLeadTimeEvents(false)</code>.</p>
+<p>The minimum clock lead time is the amount of time ahead of the reference
+clock's understanding of &quot;now&quot; that packets needs to arrive (relative to
+the playback clock transformation) in order for the mixer to be able to
+mix packet. For example...</p>
+<p>++ Let the PTS of packet X be P(X)
+++ Let the function which transforms PTS -&gt; RefClock be R(p) (this
+function is determined by the call to Play(...)
+++ Let the minimum lead time be MLT</p>
+<p>If R(P(X)) &lt; RefClock.Now() + MLT
+Then the packet is late, and some (or all) of the packet's payload will
+need to be skipped in order to present the packet at the scheduled time.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>enabled</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+
+
+### OnMinLeadTimeChanged {#OnMinLeadTimeChanged}
+
+
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>min_lead_time_nsec</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr></table>
+
+### GetMinLeadTime {#GetMinLeadTime}
+
+<p>While it is possible to call |GetMinLeadTime| before |SetPcmStreamType|,
+there's little reason to do so. This is because lead time is a function
+of format/rate, so lead time will be recalculated after |SetPcmStreamType|.
+If min lead time events are enabled before |SetPcmStreamType| (with
+|EnableMinLeadTimeEvents(true)|), then an event will be generated in
+response to |SetPcmStreamType|.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>min_lead_time_nsec</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+        </tr></table>
 
 ### Play {#Play}
 
@@ -1672,106 +1785,6 @@ established (if requested).</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
-
-
-
-### EnableMinLeadTimeEvents {#EnableMinLeadTimeEvents}
-
-<p>Enable or disable notifications about changes to the minimum clock lead
-time (in nanoseconds) for this AudioRenderer. Calling this method with
-'enabled' set to true will trigger an immediate <code>OnMinLeadTimeChanged</code>
-event with the current minimum lead time for the AudioRenderer. If the
-value changes, an <code>OnMinLeadTimeChanged</code> event will be raised with the
-new value. This behavior will continue until the user calls
-<code>EnableMinLeadTimeEvents(false)</code>.</p>
-<p>The minimum clock lead time is the amount of time ahead of the reference
-clock's understanding of &quot;now&quot; that packets needs to arrive (relative to
-the playback clock transformation) in order for the mixer to be able to
-mix packet. For example...</p>
-<p>++ Let the PTS of packet X be P(X)
-++ Let the function which transforms PTS -&gt; RefClock be R(p) (this
-function is determined by the call to Play(...)
-++ Let the minimum lead time be MLT</p>
-<p>If R(P(X)) &lt; RefClock.Now() + MLT
-Then the packet is late, and some (or all) of the packet's payload will
-need to be skipped in order to present the packet at the scheduled time.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>enabled</code></td>
-            <td>
-                <code>bool</code>
-            </td>
-        </tr></table>
-
-
-
-### OnMinLeadTimeChanged {#OnMinLeadTimeChanged}
-
-
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>min_lead_time_nsec</code></td>
-            <td>
-                <code>int64</code>
-            </td>
-        </tr></table>
-
-### GetMinLeadTime {#GetMinLeadTime}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    </table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>min_lead_time_nsec</code></td>
-            <td>
-                <code>int64</code>
-            </td>
-        </tr></table>
-
-### BindGainControl {#BindGainControl}
-
-<p>Binds to the gain control for this AudioRenderer.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>gain_control_request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.media.audio/'>fuchsia.media.audio</a>/<a class='link' href='../fuchsia.media.audio/#GainControl'>GainControl</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### SetUsage {#SetUsage}
-
-<p>Sets the usage of the render stream.  This may be changed on the fly, but
-packets in flight may be affected by the new usage.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>usage</code></td>
-            <td>
-                <code><a class='link' href='#AudioRenderUsage'>AudioRenderUsage</a></code>
-            </td>
-        </tr></table>
 
 
 
@@ -3113,7 +3126,7 @@ events will eventually be disconnected.</p>
 ## **STRUCTS**
 
 ### Void {#Void}
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#126)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#130)*
 
 
 
@@ -3708,8 +3721,40 @@ zero-padded to make a full batch for encoding.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
+### AacTransportLatm {#AacTransportLatm}
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#500)*
+
+
+
+<p>AAC inside LATM</p>
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>mux_config_present</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td><p>Whether MuxConfiguration stream element is present</p>
+</td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### AacTransportAdts {#AacTransportAdts}
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#506)*
+
+
+
+<p>AAC inside ADTS</p>
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
 ### AacConstantBitRate {#AacConstantBitRate}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#508)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#520)*
 
 
 
@@ -3728,7 +3773,7 @@ zero-padded to make a full batch for encoding.</p>
 </table>
 
 ### AacEncoderSettings {#AacEncoderSettings}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#535)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#547)*
 
 
 
@@ -3820,7 +3865,7 @@ stream.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>type</code></td>
             <td>
-                <code>string[256]</code>
+                <code><a class='link' href='#CompressionType'>CompressionType</a></code>
             </td>
             <td><p>The type of compression applied to the stream. This is generally one of the <em><em>ENCODING</em></em>
 values, though <code>AUDIO_ENCODING_LPCM</code> and <code>VIDEO_ENCODING_UNCOMPRESSED</code> must not be used,
@@ -4447,7 +4492,7 @@ Type: <code>uint32</code>
 ### AacChannelMode {#AacChannelMode}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#503)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#515)*
 
 
 
@@ -4465,7 +4510,7 @@ Type: <code>uint32</code>
 ### AacVariableBitRate {#AacVariableBitRate}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#517)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#529)*
 
 <p>Variable bit rate modes. The actual resulting bitrate
 varies based on input signal and other encoding settings.</p>
@@ -4498,7 +4543,7 @@ varies based on input signal and other encoding settings.</p>
 ### AacAudioObjectType {#AacAudioObjectType}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#530)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#542)*
 
 
 
@@ -4578,7 +4623,7 @@ Type: <code>uint32</code>
 ### AudioConsumerStatus {#AudioConsumerStatus}
 
 
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#101)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#105)*
 
 <p>Represents the status of the consumer. In the initial status, <code>error</code> and
 <code>presentation_timeline</code> are absent. The lead time fields are always present.</p>
@@ -4687,7 +4732,7 @@ same initial encrypted scheme. The scheme may be set to
             <td>8</td>
             <td><code>key_id</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[16]</code>
+                <code><a class='link' href='#KeyId'>KeyId</a></code>
             </td>
             <td><p><code>key_id</code> identifies the key that should be used for decrypting
 subsequent data.
@@ -4702,7 +4747,7 @@ decryptor.</li>
             <td>3</td>
             <td><code>init_vector</code></td>
             <td>
-                <code>vector&lt;uint8&gt;[16]</code>
+                <code><a class='link' href='#InitVector'>InitVector</a></code>
             </td>
             <td><p><code>init_vector</code> is used in combination with a key and a block of content
 to create the first cipher block in a chain and derive subsequent cipher
@@ -4771,7 +4816,7 @@ Currently, there is no additional format details for decrypted output.</p>
 ### FormatDetails {#FormatDetails}
 
 
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#574)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#586)*
 
 <p>FormatDetails</p>
 <p>This describes/details the format on input or output of a StreamProcessor
@@ -5898,7 +5943,7 @@ mute the volume of all streams with this usage.</p>
 ## **UNIONS**
 
 ### AudioConsumerError {#AudioConsumerError}
-*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#130)*
+*Defined in [fuchsia.media/audio_consumer.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_consumer.fidl#134)*
 
 <p>Represents a <code>AudioConsumer</code> error condition.</p>
 
@@ -6068,7 +6113,7 @@ permit fairly fast random access to image data.</p>
         </tr></table>
 
 ### AacBitRate {#AacBitRate}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#525)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#537)*
 
 
 <table>
@@ -6181,7 +6226,7 @@ only indirectly represented here.</p>
         </tr></table>
 
 ### AacTransport {#AacTransport}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#499)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#509)*
 
 
 <table>
@@ -6191,10 +6236,22 @@ only indirectly represented here.</p>
                 <code><a class='link' href='#AacTransportRaw'>AacTransportRaw</a></code>
             </td>
             <td></td>
+        </tr><tr>
+            <td><code>latm</code></td>
+            <td>
+                <code><a class='link' href='#AacTransportLatm'>AacTransportLatm</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>adts</code></td>
+            <td>
+                <code><a class='link' href='#AacTransportAdts'>AacTransportAdts</a></code>
+            </td>
+            <td></td>
         </tr></table>
 
 ### EncoderSettings {#EncoderSettings}
-*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#544)*
+*Defined in [fuchsia.media/stream_common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#556)*
 
 <p>Settings for encoders that tell them how to encode raw
 formats.</p>
@@ -6269,7 +6326,7 @@ flag is not set, packets arrive on demand.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MIN_PCM_CHANNEL_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#34">MIN_PCM_CHANNEL_COUNT</a></td>
             <td>
                     <code>1</code>
@@ -6278,7 +6335,7 @@ flag is not set, packets arrive on demand.</p>
             <td><p>Permitted ranges for AudioRenderer and AudioCapturer</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_PCM_CHANNEL_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#35">MAX_PCM_CHANNEL_COUNT</a></td>
             <td>
                     <code>8</code>
@@ -6286,7 +6343,7 @@ flag is not set, packets arrive on demand.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MIN_PCM_FRAMES_PER_SECOND">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#36">MIN_PCM_FRAMES_PER_SECOND</a></td>
             <td>
                     <code>1000</code>
@@ -6294,7 +6351,7 @@ flag is not set, packets arrive on demand.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_PCM_FRAMES_PER_SECOND">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio.fidl#37">MAX_PCM_FRAMES_PER_SECOND</a></td>
             <td>
                     <code>192000</code>
@@ -6302,7 +6359,7 @@ flag is not set, packets arrive on demand.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="RENDER_USAGE_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#35">RENDER_USAGE_COUNT</a></td>
             <td>
                     <code>5</code>
@@ -6310,7 +6367,7 @@ flag is not set, packets arrive on demand.</p>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="CAPTURE_USAGE_COUNT">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_core.fidl#62">CAPTURE_USAGE_COUNT</a></td>
             <td>
                     <code>4</code>
@@ -6318,7 +6375,7 @@ flag is not set, packets arrive on demand.</p>
                 <td><code>uint8</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AudioGainInfoFlag_Mute">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#7">AudioGainInfoFlag_Mute</a></td>
             <td>
                     <code>1</code>
@@ -6326,7 +6383,7 @@ flag is not set, packets arrive on demand.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AudioGainInfoFlag_AgcSupported">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#8">AudioGainInfoFlag_AgcSupported</a></td>
             <td>
                     <code>2</code>
@@ -6334,7 +6391,7 @@ flag is not set, packets arrive on demand.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AudioGainInfoFlag_AgcEnabled">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#9">AudioGainInfoFlag_AgcEnabled</a></td>
             <td>
                     <code>4</code>
@@ -6342,7 +6399,7 @@ flag is not set, packets arrive on demand.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SetAudioGainFlag_GainValid">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#29">SetAudioGainFlag_GainValid</a></td>
             <td>
                     <code>1</code>
@@ -6350,7 +6407,7 @@ flag is not set, packets arrive on demand.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SetAudioGainFlag_MuteValid">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#30">SetAudioGainFlag_MuteValid</a></td>
             <td>
                     <code>2</code>
@@ -6358,7 +6415,7 @@ flag is not set, packets arrive on demand.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SetAudioGainFlag_AgcValid">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/audio_device_enumerator.fidl#31">SetAudioGainFlag_AgcValid</a></td>
             <td>
                     <code>4</code>
@@ -6366,79 +6423,79 @@ flag is not set, packets arrive on demand.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_TITLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#17">METADATA_LABEL_TITLE</a></td>
             <td><code>fuchsia.media.title</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_ARTIST">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#18">METADATA_LABEL_ARTIST</a></td>
             <td><code>fuchsia.media.artist</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_ALBUM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#19">METADATA_LABEL_ALBUM</a></td>
             <td><code>fuchsia.media.album</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_TRACK_NUMBER">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#20">METADATA_LABEL_TRACK_NUMBER</a></td>
             <td><code>fuchsia.media.track_number</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_PUBLISHER">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#21">METADATA_LABEL_PUBLISHER</a></td>
             <td><code>fuchsia.media.publisher</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_GENRE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#22">METADATA_LABEL_GENRE</a></td>
             <td><code>fuchsia.media.genre</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_COMPOSER">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#23">METADATA_LABEL_COMPOSER</a></td>
             <td><code>fuchsia.media.composer</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_SUBTITLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#24">METADATA_LABEL_SUBTITLE</a></td>
             <td><code>fuchsia.media.subtitle</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_RELEASE_DATE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#25">METADATA_LABEL_RELEASE_DATE</a></td>
             <td><code>fuchsia.media.release_date</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_EPISODE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#26">METADATA_LABEL_EPISODE</a></td>
             <td><code>fuchsia.media.episode</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_SEASON">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#27">METADATA_LABEL_SEASON</a></td>
             <td><code>fuchsia.media.season</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_LABEL_STUDIO">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#28">METADATA_LABEL_STUDIO</a></td>
             <td><code>fuchsia.media.studio</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="METADATA_SOURCE_TITLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/metadata.fidl#32">METADATA_SOURCE_TITLE</a></td>
             <td><code>fuchsia.media.source_title</code></td>
                     <td><code>String</code></td>
@@ -6446,8 +6503,8 @@ flag is not set, packets arrive on demand.</p>
 website.</p>
 </td>
         </tr>
-    <tr>
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream.fidl#154">NO_TIMESTAMP</a></td>
+    <tr id="NO_TIMESTAMP">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream.fidl#152">NO_TIMESTAMP</a></td>
             <td>
                     <code>9223372036854775807</code>
                 </td>
@@ -6457,7 +6514,7 @@ specific presentation timestamp. The effective presentation time of such a
 packet depends on the context in which the <code>StreamPacket</code> is used.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="STREAM_PACKET_FLAG_KEY_FRAME">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream.fidl#159">STREAM_PACKET_FLAG_KEY_FRAME</a></td>
             <td>
                     <code>1</code>
@@ -6468,7 +6525,7 @@ packets in the stream. This is typically used in compressed streams to
 identify packets that contain key frames.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="STREAM_PACKET_FLAG_DROPPABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream.fidl#165">STREAM_PACKET_FLAG_DROPPABLE</a></td>
             <td>
                     <code>2</code>
@@ -6480,7 +6537,7 @@ identify packets containing frames that may be discarded without affecting
 other frames.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="STREAM_PACKET_FLAG_DISCONTINUITY">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream.fidl#170">STREAM_PACKET_FLAG_DISCONTINUITY</a></td>
             <td>
                     <code>4</code>
@@ -6491,7 +6548,7 @@ packets. The precise semantics of this flag depend on the context in which
 the <code>StreamPacket</code> is used.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_KEY_ID_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#9">MAX_KEY_ID_SIZE</a></td>
             <td>
                     <code>16</code>
@@ -6499,7 +6556,7 @@ the <code>StreamPacket</code> is used.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_INIT_VECTOR_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#10">MAX_INIT_VECTOR_SIZE</a></td>
             <td>
                     <code>16</code>
@@ -6507,37 +6564,37 @@ the <code>StreamPacket</code> is used.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="ENCRYPTION_SCHEME_UNENCRYPTED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#339">ENCRYPTION_SCHEME_UNENCRYPTED</a></td>
             <td><code>unencrypted</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="ENCRYPTION_SCHEME_CENC">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#340">ENCRYPTION_SCHEME_CENC</a></td>
             <td><code>cenc</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="ENCRYPTION_SCHEME_CBC1">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#341">ENCRYPTION_SCHEME_CBC1</a></td>
             <td><code>cbc1</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="ENCRYPTION_SCHEME_CENS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#342">ENCRYPTION_SCHEME_CENS</a></td>
             <td><code>cens</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="ENCRYPTION_SCHEME_CBCS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#343">ENCRYPTION_SCHEME_CBCS</a></td>
             <td><code>cbcs</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kMaxOobBytesSize">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#453">kMaxOobBytesSize</a></td>
             <td>
                     <code>8192</code>
@@ -6545,7 +6602,7 @@ the <code>StreamPacket</code> is used.</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="kDefaultInputPacketCountForClient">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#381">kDefaultInputPacketCountForClient</a></td>
             <td>
                     <code>2</code>
@@ -6577,7 +6634,7 @@ only intended to be plausible for some clients, not all clients.</p>
 <p>One for the client to be filling and one in transit.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="kDefaultOutputPacketCountForClient">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#383">kDefaultOutputPacketCountForClient</a></td>
             <td>
                     <code>2</code>
@@ -6586,7 +6643,7 @@ only intended to be plausible for some clients, not all clients.</p>
             <td><p>One for the client to be rendering, and one in transit.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="kDefaultInputIsSingleBufferMode">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#390">kDefaultInputIsSingleBufferMode</a></td>
             <td>
                     <code>false</code>
@@ -6595,7 +6652,7 @@ only intended to be plausible for some clients, not all clients.</p>
             <td><p>For input, this is the default on a fairly arbitrary basis.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="kDefaultOutputIsSingleBufferMode">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_processor.fidl#391">kDefaultOutputIsSingleBufferMode</a></td>
             <td>
                     <code>false</code>
@@ -6603,135 +6660,135 @@ only intended to be plausible for some clients, not all clients.</p>
                 <td><code>bool</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_AAC">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#39">AUDIO_ENCODING_AAC</a></td>
             <td><code>fuchsia.media.aac</code></td>
                     <td><code>String</code></td>
             <td><p>Audio encodings.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_AACLATM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#40">AUDIO_ENCODING_AACLATM</a></td>
             <td><code>fuchsia.media.aaclatm</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_AMRNB">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#41">AUDIO_ENCODING_AMRNB</a></td>
             <td><code>fuchsia.media.amrnb</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_AMRWB">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#42">AUDIO_ENCODING_AMRWB</a></td>
             <td><code>fuchsia.media.amrwb</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_APTX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#43">AUDIO_ENCODING_APTX</a></td>
             <td><code>fuchsia.media.aptx</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_FLAC">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#44">AUDIO_ENCODING_FLAC</a></td>
             <td><code>fuchsia.media.flac</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_GSMMS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#45">AUDIO_ENCODING_GSMMS</a></td>
             <td><code>fuchsia.media.gsmms</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_LPCM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#46">AUDIO_ENCODING_LPCM</a></td>
             <td><code>fuchsia.media.lpcm</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_MP3">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#47">AUDIO_ENCODING_MP3</a></td>
             <td><code>fuchsia.media.mp3</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_PCMALAW">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#48">AUDIO_ENCODING_PCMALAW</a></td>
             <td><code>fuchsia.media.pcmalaw</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_PCMMULAW">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#49">AUDIO_ENCODING_PCMMULAW</a></td>
             <td><code>fuchsia.media.pcmmulaw</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_SBC">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#50">AUDIO_ENCODING_SBC</a></td>
             <td><code>fuchsia.media.sbc</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_VORBIS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#51">AUDIO_ENCODING_VORBIS</a></td>
             <td><code>fuchsia.media.vorbis</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="AUDIO_ENCODING_OPUS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#52">AUDIO_ENCODING_OPUS</a></td>
             <td><code>fuchsia.media.opus</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="VIDEO_ENCODING_H263">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#55">VIDEO_ENCODING_H263</a></td>
             <td><code>fuchsia.media.h263</code></td>
                     <td><code>String</code></td>
             <td><p>Video encodings.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="VIDEO_ENCODING_H264">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#56">VIDEO_ENCODING_H264</a></td>
             <td><code>fuchsia.media.h264</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="VIDEO_ENCODING_MPEG4">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#57">VIDEO_ENCODING_MPEG4</a></td>
             <td><code>fuchsia.media.mpeg4</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="VIDEO_ENCODING_THEORA">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#58">VIDEO_ENCODING_THEORA</a></td>
             <td><code>fuchsia.media.theora</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="VIDEO_ENCODING_UNCOMPRESSED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#59">VIDEO_ENCODING_UNCOMPRESSED</a></td>
             <td><code>fuchsia.media.uncompressed_video</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="VIDEO_ENCODING_VP3">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#60">VIDEO_ENCODING_VP3</a></td>
             <td><code>fuchsia.media.vp3</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="VIDEO_ENCODING_VP8">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#61">VIDEO_ENCODING_VP8</a></td>
             <td><code>fuchsia.media.vp8</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="VIDEO_ENCODING_VP9">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#62">VIDEO_ENCODING_VP9</a></td>
             <td><code>fuchsia.media.vp9</code></td>
                     <td><code>String</code></td>
@@ -6739,4 +6796,27 @@ only intended to be plausible for some clients, not all clients.</p>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="KeyId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#345">KeyId</a></td>
+            <td>
+                <code>vector</code>[<code><a class='link' href='#MAX_KEY_ID_SIZE'>MAX_KEY_ID_SIZE</a></code>]</td>
+            <td></td>
+        </tr><tr id="InitVector">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_common.fidl#346">InitVector</a></td>
+            <td>
+                <code>vector</code>[<code><a class='link' href='#MAX_INIT_VECTOR_SIZE'>MAX_INIT_VECTOR_SIZE</a></code>]</td>
+            <td></td>
+        </tr><tr id="CompressionType">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media/stream_type.fidl#77">CompressionType</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>An identifier for compression types.</p>
+</td>
+        </tr></table>
 

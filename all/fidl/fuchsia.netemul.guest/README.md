@@ -55,7 +55,7 @@ or not the subprocess was successfully started.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -71,7 +71,7 @@ or not the subprocess was successfully started.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>return_code</code></td>
@@ -111,7 +111,7 @@ location on the guest under test.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -142,7 +142,7 @@ location on the Fuchsia host.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -233,7 +233,7 @@ error, and return code.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="GUEST_INTERACTION_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/virtualization/lib/guest_interaction/fidl/fuchsia.netemul.guest_interaction.fidl#10">GUEST_INTERACTION_MAX_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -241,7 +241,7 @@ error, and return code.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="DEFAULT_REALM">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/virtualization/lib/guest_interaction/fidl/fuchsia.netemul.guest_interaction.fidl#11">DEFAULT_REALM</a></td>
             <td><code>gis_default</code></td>
                     <td><code>String</code></td>
@@ -249,4 +249,6 @@ error, and return code.</p>
         </tr>
     
 </table>
+
+
 

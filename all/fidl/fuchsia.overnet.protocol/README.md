@@ -79,7 +79,7 @@ This interface is additionally exported to the Overnet mesh.</p>
 </table>
 
 ### Empty {#Empty}
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#28)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#38)*
 
 
 
@@ -90,7 +90,7 @@ This interface is additionally exported to the Overnet mesh.</p>
 </table>
 
 ### UpdateLinkStatus {#UpdateLinkStatus}
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#35)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#45)*
 
 
 
@@ -115,7 +115,7 @@ By bundling all link updates together, we guarantee:</p>
 </table>
 
 ### ConnectToService {#ConnectToService}
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#42)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#52)*
 
 
 
@@ -152,7 +152,7 @@ advertised service <code>service_name</code>.</p>
 </table>
 
 ### LinkStatus {#LinkStatus}
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#70)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#80)*
 
 
 
@@ -172,7 +172,7 @@ and is owned by the first peer. The target node is identified by <code>to</code>
         </tr><tr>
             <td><code>local_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#LinkId'>LinkId</a></code>
             </td>
             <td><p>An identifier (chosen by the link owner) to label this link.
 The link owner must guarantee that the tuple (to, local_id) is unique for each of it's held
@@ -654,10 +654,35 @@ Currently used: 'fuchsia', 'linux', 'mac'</p>
 </td>
         </tr></table>
 
+### ConfigRequest {#ConfigRequest}
+
+
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#23)*
+
+<p>Overall connection configuration request</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
+
+### ConfigResponse {#ConfigResponse}
+
+
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#28)*
+
+<p>Overall connection configuration response - sent as the first response message
+on the connection stream.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    </table>
+
 ### ConnectToServiceOptions {#ConnectToServiceOptions}
 
 
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#52)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#62)*
 
 <p>Options for service connection formation.</p>
 
@@ -669,7 +694,7 @@ Currently used: 'fuchsia', 'linux', 'mac'</p>
 ### PeerDescription {#PeerDescription}
 
 
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#56)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#66)*
 
 <p>Description of a single node.</p>
 
@@ -689,7 +714,7 @@ Currently used: 'fuchsia', 'linux', 'mac'</p>
 ### LinkMetrics {#LinkMetrics}
 
 
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#63)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#73)*
 
 <p>Metrics associated with a link.
 Note that a link is a uni-directional connection between two nodes.</p>
@@ -781,9 +806,10 @@ remote peer.</p>
         </tr></table>
 
 ### PeerReply {#PeerReply}
-*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#23)*
+*Defined in [fuchsia.overnet.protocol/peer_protocol.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#33)*
 
-<p>Reply messages for PeerMessage, where appropriate</p>
+<p>Reply messages for PeerMessage, where appropriate.
+The ConfigResponse message must have been sent already.</p>
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
@@ -849,7 +875,7 @@ Type: <code>uint64</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_SERVICE_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/peer_protocol.fidl#8">MAX_SERVICE_NAME_LENGTH</a></td>
             <td>
                     <code>255</code>
@@ -859,4 +885,17 @@ Type: <code>uint64</code>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="LinkId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.overnet.protocol/labels.fidl#18">LinkId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td><p>Node-local link label</p>
+</td>
+        </tr></table>
 

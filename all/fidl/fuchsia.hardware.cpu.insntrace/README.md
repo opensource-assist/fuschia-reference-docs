@@ -118,7 +118,7 @@ trace buffer descriptor is the number of the cpu using the buffer.</p>
     <tr>
             <td><code>descriptor</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#BufferDescriptor'>BufferDescriptor</a></code>
             </td>
         </tr><tr>
             <td><code>thread</code></td>
@@ -148,7 +148,7 @@ trace buffer descriptor is the number of the cpu using the buffer.</p>
     <tr>
             <td><code>descriptor</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#BufferDescriptor'>BufferDescriptor</a></code>
             </td>
         </tr><tr>
             <td><code>thread</code></td>
@@ -178,7 +178,7 @@ trace buffer descriptor is the number of the cpu using the buffer.</p>
     <tr>
             <td><code>descriptor</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#BufferDescriptor'>BufferDescriptor</a></code>
             </td>
         </tr></table>
 
@@ -203,7 +203,7 @@ trace buffer descriptor is the number of the cpu using the buffer.</p>
     <tr>
             <td><code>descriptor</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#BufferDescriptor'>BufferDescriptor</a></code>
             </td>
         </tr></table>
 
@@ -228,7 +228,7 @@ trace buffer descriptor is the number of the cpu using the buffer.</p>
     <tr>
             <td><code>descriptor</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#BufferDescriptor'>BufferDescriptor</a></code>
             </td>
         </tr><tr>
             <td><code>chunk_num</code></td>
@@ -258,7 +258,7 @@ trace buffer descriptor is the number of the cpu using the buffer.</p>
     <tr>
             <td><code>descriptor</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#BufferDescriptor'>BufferDescriptor</a></code>
             </td>
         </tr></table>
 
@@ -340,7 +340,7 @@ May be called multiple times.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>descriptor</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#BufferDescriptor'>BufferDescriptor</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -559,7 +559,7 @@ Type: <code>uint8</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -578,7 +578,7 @@ Type: <code>uint8</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -597,7 +597,7 @@ Type: <code>uint8</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -616,7 +616,7 @@ Type: <code>uint8</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -635,7 +635,7 @@ Type: <code>uint8</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -649,7 +649,7 @@ Type: <code>uint8</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="API_VERSION">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-cpu-insntrace/insntrace.fidl#9">API_VERSION</a></td>
             <td>
                     <code>0</code>
@@ -657,7 +657,7 @@ Type: <code>uint8</code>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_NUM_TRACES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-cpu-insntrace/insntrace.fidl#13">MAX_NUM_TRACES</a></td>
             <td>
                     <code>64</code>
@@ -667,7 +667,7 @@ Type: <code>uint8</code>
 A &quot;trace&quot; is the instruction stream for one entity, cpu or thread.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_NUM_ADDR_RANGES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-cpu-insntrace/insntrace.fidl#16">MAX_NUM_ADDR_RANGES</a></td>
             <td>
                     <code>2</code>
@@ -678,4 +678,16 @@ A &quot;trace&quot; is the instruction stream for one entity, cpu or thread.</p>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="BufferDescriptor">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-cpu-insntrace/insntrace.fidl#81">BufferDescriptor</a></td>
+            <td>
+                <code>uint32</code></td>
+            <td></td>
+        </tr></table>
 

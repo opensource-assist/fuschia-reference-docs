@@ -44,7 +44,7 @@ will return <code>ZX_ERR_ALREADY_BOUND</code>.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -80,7 +80,7 @@ will return <code>ZX_ERR_ALREADY_BOUND</code>.</p>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -150,7 +150,7 @@ being closed.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>image_id</code></td>
@@ -189,7 +189,7 @@ being closed.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>image_id</code></td>
@@ -274,7 +274,7 @@ active config has references to it.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>layer_id</code></td>
@@ -677,7 +677,7 @@ active config has references to it.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -721,7 +721,7 @@ active config has references to it.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -740,7 +740,7 @@ active config has references to it.</p>
     <tr>
             <td><code>res</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>vmo</code></td>
@@ -1391,7 +1391,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1410,7 +1410,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1429,7 +1429,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1448,7 +1448,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1462,7 +1462,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="invalidId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#11">invalidId</a></td>
             <td>
                     <code>0</code>
@@ -1470,7 +1470,7 @@ Type: <code>uint32</code>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="modeInterlaced">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#34">modeInterlaced</a></td>
             <td>
                     <code>1</code>
@@ -1478,7 +1478,7 @@ Type: <code>uint32</code>
                 <td><code>int32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="identifierMaxLen">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#45">identifierMaxLen</a></td>
             <td>
                     <code>128</code>
@@ -1486,7 +1486,7 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="typeSimple">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#94">typeSimple</a></td>
             <td>
                     <code>0</code>
@@ -1494,7 +1494,7 @@ Type: <code>uint32</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="typeCapture">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#96">typeCapture</a></td>
             <td>
                     <code>10</code>
@@ -1504,4 +1504,6 @@ Type: <code>uint32</code>
         </tr>
     
 </table>
+
+
 

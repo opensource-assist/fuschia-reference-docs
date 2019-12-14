@@ -44,18 +44,48 @@ exception channel.</p>
     </table>
 
 ## ProcessLimbo {#ProcessLimbo}
-*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#20)*
+*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#26)*
 
 <p>Protocol meant for clients interested in obtaining processes that are
 suspended waiting for an exception handler (in limbo). This is the core
 feature that enables Just In Time (JIT) debugging.</p>
+<p>An example usage of this API would be having a debugger listen on limbo for
+new processes. Then another component (eg. a CLI tool) could activate the
+limbo, meaning that the system is now ready to capture crashing processes.
+As the debugger got a notification that the limbo is now active, it can
+correctly handle newly excepted processes and do its normal workflow.</p>
+
+### SetActive {#SetActive}
+
+<p>Set the active state of the limbo. Will trigger the |WatchActive| event
+if there was a change, meaning that any listening components will receive
+a notification. This includes the caller of |SetActive|.</p>
+<p>When a limbo is inactive, there will not be any processes waiting on it,
+meaning that any waiting processes will be freed upon deactivating the
+limbo.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>active</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
 
 ### WatchActive {#WatchActive}
 
 <p>Watchs for changes determining whether the limbo is currently active,
 using a Hanging Get pattern. An active limbo could be empty (not have
-any processes waiting on an exception). However, an inactive limbo is
-guaranteed to not have any processes waiting in it.</p>
+any processes waiting on an exception).
+When a limbo is inactive, there will not be any processes waiting on it.</p>
 
 #### Request
 <table>
@@ -118,7 +148,7 @@ Returns ZX_ERR_UNAVAILABLE if limbo is not active.</p>
     <tr>
             <td><code>process_koid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr></table>
 
@@ -145,7 +175,7 @@ unretrievable in the future from here.</p>
     <tr>
             <td><code>process_koid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
         </tr></table>
 
@@ -266,14 +296,14 @@ Maps to <code>zx_exception_info_t</code>.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>process_koid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>thread_koid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -462,7 +492,7 @@ given by an exception channel.</p>
 ### ProcessExceptionMetadata {#ProcessExceptionMetadata}
 
 
-*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#98)*
+*Defined in [fuchsia.exception/process_limbo.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#113)*
 
 <p>Intended to be read only metadada associated with an exception waiting in
 limbo. The handles provided will only have read-only access to the resource,
@@ -517,7 +547,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -536,7 +566,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -555,7 +585,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -574,7 +604,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -593,7 +623,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -607,7 +637,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_EXCEPTIONS_PER_CALL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#11">MAX_EXCEPTIONS_PER_CALL</a></td>
             <td>
                     <code>32</code>
@@ -617,7 +647,7 @@ Only has ZX_RIGHT_READ and ZX_RIGHT_GET_PROPERTY rights.</p>
 call to |ListProcessesWaitingOnException|.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_FILTER_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#13">MAX_FILTER_LENGTH</a></td>
             <td>
                     <code>32</code>
@@ -625,7 +655,7 @@ call to |ListProcessesWaitingOnException|.</p>
                 <td><code>uint64</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_FILTERS_PER_CALL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-exception/process_limbo.fidl#14">MAX_FILTERS_PER_CALL</a></td>
             <td>
                     <code>32</code>
@@ -635,4 +665,6 @@ call to |ListProcessesWaitingOnException|.</p>
         </tr>
     
 </table>
+
+
 

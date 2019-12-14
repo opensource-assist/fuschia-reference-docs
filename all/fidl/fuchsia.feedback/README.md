@@ -253,7 +253,7 @@ returned in other encodings if need arises.</p>
             <td>6</td>
             <td><code>program_uptime</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>How long the program was running before it crashed.</p>
 </td>
@@ -434,7 +434,7 @@ could be a ZIP archive bundling a vector of Attachment objects.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -453,7 +453,7 @@ could be a ZIP archive bundling a vector of Attachment objects.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -500,7 +500,7 @@ attachments for a given type of crashes, e.g., a <code>RuntimeCrashReport</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_PROGRAM_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#20">MAX_PROGRAM_NAME_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -508,7 +508,7 @@ attachments for a given type of crashes, e.g., a <code>RuntimeCrashReport</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_NUM_ANNOTATIONS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#21">MAX_NUM_ANNOTATIONS</a></td>
             <td>
                     <code>32</code>
@@ -516,7 +516,7 @@ attachments for a given type of crashes, e.g., a <code>RuntimeCrashReport</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_NUM_ATTACHMENTS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#22">MAX_NUM_ATTACHMENTS</a></td>
             <td>
                     <code>16</code>
@@ -524,7 +524,7 @@ attachments for a given type of crashes, e.g., a <code>RuntimeCrashReport</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_EVENT_ID_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#23">MAX_EVENT_ID_LENGTH</a></td>
             <td>
                     <code>128</code>
@@ -532,7 +532,7 @@ attachments for a given type of crashes, e.g., a <code>RuntimeCrashReport</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_CRASH_SIGNATURE_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#68">MAX_CRASH_SIGNATURE_LENGTH</a></td>
             <td>
                     <code>128</code>
@@ -540,7 +540,7 @@ attachments for a given type of crashes, e.g., a <code>RuntimeCrashReport</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_EXCEPTION_TYPE_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#87">MAX_EXCEPTION_TYPE_LENGTH</a></td>
             <td>
                     <code>128</code>
@@ -548,7 +548,7 @@ attachments for a given type of crashes, e.g., a <code>RuntimeCrashReport</code>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_EXCEPTION_MESSAGE_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.feedback/crash_reporter.fidl#88">MAX_EXCEPTION_MESSAGE_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -558,4 +558,6 @@ attachments for a given type of crashes, e.g., a <code>RuntimeCrashReport</code>
         </tr>
     
 </table>
+
+
 

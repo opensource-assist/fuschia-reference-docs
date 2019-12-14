@@ -468,10 +468,6 @@
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.diagnostics.inspect/index">fuchsia.diagnostics.inspect</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.diagnostics.stream/index">fuchsia.diagnostics.stream</a></td>
     <td></td>
 </tr>
@@ -596,6 +592,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.hardware.power.statecontrol/index">fuchsia.hardware.power.statecontrol</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.hardware.pty/index">fuchsia.hardware.pty</a></td>
     <td> A PTY (pseudoterminal) emulates terminal devices, with a "server" side
  (which represents the keyboard+monitor side of the terminal and is obtained
@@ -646,6 +646,11 @@
     <td><a href="fuchsia.identity.account/index">fuchsia.identity.account</a></td>
     <td> Defines the protocols used to interface with the core Fuchsia identity
  system.</td>
+</tr>
+<tr>
+    <td><a href="fuchsia.identity.authentication/index">fuchsia.identity.authentication</a></td>
+    <td> Defines the protocols used to enroll and interact with user
+ authentication mechanisms.</td>
 </tr>
 <tr>
     <td><a href="fuchsia.identity.external/index">fuchsia.identity.external</a></td>
@@ -724,10 +729,6 @@
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.ledger.cloud.test/index">fuchsia.ledger.cloud.test</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.ledger.internal/index">fuchsia.ledger.internal</a></td>
     <td></td>
 </tr>
@@ -748,6 +749,10 @@
 </tr>
 <tr>
     <td><a href="fuchsia.logger/index">fuchsia.logger</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.lowpan/index">fuchsia.lowpan</a></td>
     <td></td>
 </tr>
 <tr>
@@ -776,6 +781,10 @@
 </tr>
 <tr>
     <td><a href="fuchsia.media.sessions2/index">fuchsia.media.sessions2</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.media.sounds/index">fuchsia.media.sounds</a></td>
     <td></td>
 </tr>
 <tr>
@@ -1013,6 +1022,10 @@
 </tr>
 <tr>
     <td><a href="fuchsia.sys.index/index">fuchsia.sys.index</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.sys.internal/index">fuchsia.sys.internal</a></td>
     <td></td>
 </tr>
 <tr>

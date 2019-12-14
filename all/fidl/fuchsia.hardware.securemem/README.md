@@ -40,14 +40,16 @@ address of the VMO being pinned must be stable.</li>
     <tr>
             <td><code>s</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>paddr</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#paddr'>paddr</a></code>
             </td>
         </tr></table>
+
+
 
 
 

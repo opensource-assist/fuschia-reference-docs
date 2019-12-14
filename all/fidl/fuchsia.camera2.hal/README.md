@@ -33,7 +33,7 @@ and setting up a stream.</p>
         </tr><tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -210,7 +210,7 @@ At least one format must be provided.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_CONFIGURATIONS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera2.hal/hal.fidl#12">MAX_CONFIGURATIONS</a></td>
             <td>
                     <code>256</code>
@@ -219,7 +219,7 @@ At least one format must be provided.</p>
             <td><p>Maximum number of configurations per device.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_STREAMS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.camera2.hal/hal.fidl#15">MAX_STREAMS</a></td>
             <td>
                     <code>64</code>
@@ -230,4 +230,6 @@ At least one format must be provided.</p>
         </tr>
     
 </table>
+
+
 

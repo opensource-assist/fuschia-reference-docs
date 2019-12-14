@@ -99,7 +99,7 @@ This may not complete before it returns.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>name</code></td>
@@ -164,7 +164,7 @@ This may not complete before it returns.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>event</code></td>
@@ -189,7 +189,7 @@ This may not complete before it returns.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>flags</code></td>
@@ -226,7 +226,7 @@ Each set bit in <code>set_flags</code> will then be set in the log flags state.<
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -246,7 +246,7 @@ Each set bit in <code>set_flags</code> will then be set in the log flags state.<
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -266,7 +266,7 @@ Each set bit in <code>set_flags</code> will then be set in the log flags state.<
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -341,7 +341,7 @@ to manage power for this device.</p>
         </tr><tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -414,7 +414,7 @@ state.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>out_state</code></td>
@@ -476,7 +476,7 @@ On failure, the out_state will have the state that the device can go into.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>out_state</code></td>
@@ -511,7 +511,7 @@ On failure, the out_state will have the state that the device can go into.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -888,7 +888,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -907,7 +907,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -926,7 +926,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -945,7 +945,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -964,7 +964,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -983,7 +983,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1002,7 +1002,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1021,7 +1021,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1040,7 +1040,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1054,7 +1054,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_DEVICE_NAME_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#11">MAX_DEVICE_NAME_LEN</a></td>
             <td>
                     <code>32</code>
@@ -1063,7 +1063,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
             <td><p>Maxmium length for a device name</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_DEVICE_PATH_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#13">MAX_DEVICE_PATH_LEN</a></td>
             <td>
                     <code>1024</code>
@@ -1072,7 +1072,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
             <td><p>Maximum length of a device path</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_DRIVER_NAME_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#15">MAX_DRIVER_NAME_LEN</a></td>
             <td>
                     <code>32</code>
@@ -1081,7 +1081,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
             <td><p>Maxmium length for a driver name</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_DRIVER_PATH_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#17">MAX_DRIVER_PATH_LEN</a></td>
             <td>
                     <code>1024</code>
@@ -1090,7 +1090,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
             <td><p>Maximum length for a driver path</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_DEVICE_POWER_STATES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#20">MAX_DEVICE_POWER_STATES</a></td>
             <td>
                     <code>5</code>
@@ -1100,7 +1100,7 @@ Device may be powered by other auxiliary supplies to support wake capability.</p
 for performance states.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MIN_DEVICE_POWER_STATES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#21">MIN_DEVICE_POWER_STATES</a></td>
             <td>
                     <code>2</code>
@@ -1108,7 +1108,7 @@ for performance states.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_DEVICE_PERFORMANCE_STATES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#22">MAX_DEVICE_PERFORMANCE_STATES</a></td>
             <td>
                     <code>20</code>
@@ -1116,7 +1116,7 @@ for performance states.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MIN_DEVICE_PERFORMANCE_STATES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#23">MIN_DEVICE_PERFORMANCE_STATES</a></td>
             <td>
                     <code>1</code>
@@ -1124,7 +1124,7 @@ for performance states.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="DEVICE_SIGNAL_READABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#27">DEVICE_SIGNAL_READABLE</a></td>
             <td>
                     <code>16777216</code>
@@ -1134,7 +1134,7 @@ for performance states.</p>
 will return data.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_SIGNAL_OOB">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#31">DEVICE_SIGNAL_OOB</a></td>
             <td>
                     <code>33554432</code>
@@ -1145,7 +1145,7 @@ mechanism that needs attention.
 This is primarily used by the PTY support.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_SIGNAL_WRITABLE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#34">DEVICE_SIGNAL_WRITABLE</a></td>
             <td>
                     <code>67108864</code>
@@ -1155,7 +1155,7 @@ This is primarily used by the PTY support.</p>
 will accept data.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_SIGNAL_ERROR">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#37">DEVICE_SIGNAL_ERROR</a></td>
             <td>
                     <code>134217728</code>
@@ -1165,7 +1165,7 @@ will accept data.</p>
 This is primarily used by the PTY support.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_SIGNAL_HANGUP">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#40">DEVICE_SIGNAL_HANGUP</a></td>
             <td>
                     <code>268435456</code>
@@ -1175,7 +1175,7 @@ This is primarily used by the PTY support.</p>
 This is primarily used by the PTY support.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEVICE_PERFORMANCE_STATE_P0">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/controller.fidl#87">DEVICE_PERFORMANCE_STATE_P0</a></td>
             <td>
                     <code>0</code>
@@ -1184,13 +1184,13 @@ This is primarily used by the PTY support.</p>
             <td><p>[MANDATORY] Default performance state when the device is in DEVICE_POWER_STATE_D0</p>
 </td>
         </tr>
-    <tr>
+    <tr id="DEFAULT_DEVICE_NAME">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/name-provider.fidl#9">DEFAULT_DEVICE_NAME</a></td>
             <td><code>fuchsia</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="DEVICE_NAME_MAX">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-device/name-provider.fidl#13">DEVICE_NAME_MAX</a></td>
             <td>
                     <code>255</code>
@@ -1202,4 +1202,6 @@ HOST_NAME_MAX as defined by &lt;limits.h&gt;.</p>
         </tr>
     
 </table>
+
+
 

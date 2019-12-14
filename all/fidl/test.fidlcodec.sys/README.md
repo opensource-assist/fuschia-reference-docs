@@ -708,7 +708,7 @@ Type: <code>uint32</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="LABEL_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/lib/fidl_codec/testdata/sys.test.fidl#113">LABEL_MAX_LENGTH</a></td>
             <td>
                     <code>32</code>
@@ -718,4 +718,6 @@ Type: <code>uint32</code>
         </tr>
     
 </table>
+
+
 

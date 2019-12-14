@@ -100,7 +100,7 @@ ListChildNames and OpenChild.</p>
     <tr>
             <td><code>child_name</code></td>
             <td>
-                <code>string[2040]</code>
+                <code><a class='link' href='#TreeName'>TreeName</a></code>
             </td>
         </tr><tr>
             <td><code>tree</code></td>
@@ -150,7 +150,7 @@ ListChildNames and OpenChild.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_TREE_NAME_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/tree.fidl#9">MAX_TREE_NAME_LENGTH</a></td>
             <td>
                     <code>2040</code>
@@ -159,7 +159,7 @@ ListChildNames and OpenChild.</p>
             <td><p>Maximum length of an Inspect Tree, specified by the format.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_TREE_NAME_LIST_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/tree.fidl#12">MAX_TREE_NAME_LIST_SIZE</a></td>
             <td>
                     <code>64</code>
@@ -170,4 +170,16 @@ ListChildNames and OpenChild.</p>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="TreeName">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-inspect/tree.fidl#14">TreeName</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MAX_TREE_NAME_LENGTH'>MAX_TREE_NAME_LENGTH</a></code>]</td>
+            <td></td>
+        </tr></table>
 

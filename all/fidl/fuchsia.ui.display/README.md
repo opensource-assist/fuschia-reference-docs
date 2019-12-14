@@ -149,14 +149,14 @@ operations on displays in the DisplayManager protocol and other protocols
             <td>3</td>
             <td><code>manufacturer_name</code></td>
             <td>
-                <code>string[128]</code>
+                <code><a class='link' href='#DisplayIdentifier'>DisplayIdentifier</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>4</td>
             <td><code>monitor_name</code></td>
             <td>
-                <code>string[128]</code>
+                <code><a class='link' href='#DisplayIdentifier'>DisplayIdentifier</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -172,7 +172,7 @@ operations on displays in the DisplayManager protocol and other protocols
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MODES_MAX_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.display/display_manager.fidl#19">MODES_MAX_LEN</a></td>
             <td>
                     <code>256</code>
@@ -180,7 +180,7 @@ operations on displays in the DisplayManager protocol and other protocols
                 <td><code>int32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MODE_INTERLACED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.display/display_manager.fidl#22">MODE_INTERLACED</a></td>
             <td>
                     <code>1</code>
@@ -188,7 +188,7 @@ operations on displays in the DisplayManager protocol and other protocols
                 <td><code>int32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="IDENTIFIER_MAX_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.display/display_manager.fidl#24">IDENTIFIER_MAX_LEN</a></td>
             <td>
                     <code>128</code>
@@ -196,7 +196,7 @@ operations on displays in the DisplayManager protocol and other protocols
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="DISPLAYS_MAX_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.display/display_manager.fidl#39">DISPLAYS_MAX_LEN</a></td>
             <td>
                     <code>1024</code>
@@ -206,4 +206,16 @@ operations on displays in the DisplayManager protocol and other protocols
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="DisplayIdentifier">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.display/display_manager.fidl#25">DisplayIdentifier</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#IDENTIFIER_MAX_LEN'>IDENTIFIER_MAX_LEN</a></code>]</td>
+            <td></td>
+        </tr></table>
 

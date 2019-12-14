@@ -846,7 +846,7 @@ members of the AddressPool.</p>
             <td>1</td>
             <td><code>default</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#Duration'>Duration</a></code>
             </td>
             <td><p>The default lease length to be issued to clients. This field must have a value.</p>
 </td>
@@ -854,7 +854,7 @@ members of the AddressPool.</p>
             <td>2</td>
             <td><code>max</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#Duration'>Duration</a></code>
             </td>
             <td><p>The maximum lease length value which the server will issue to clients who
 have requested a specific lease length. If omitted, the max lease length is
@@ -908,7 +908,7 @@ equivalent to the default lease length.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -927,7 +927,7 @@ equivalent to the default lease length.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -946,7 +946,7 @@ equivalent to the default lease length.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -965,7 +965,7 @@ equivalent to the default lease length.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -984,7 +984,7 @@ equivalent to the default lease length.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1003,7 +1003,7 @@ equivalent to the default lease length.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1022,7 +1022,7 @@ equivalent to the default lease length.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1041,7 +1041,7 @@ equivalent to the default lease length.</p>
         </tr><tr>
             <td><code>err</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -1091,70 +1091,70 @@ a negative offset is west of the zero meridian.</p>
         </tr><tr>
             <td><code>router</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of the routers in a client's subnet, listed in order of preference.</p>
 </td>
         </tr><tr>
             <td><code>time_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of time servers available to the client, in order of preference.</p>
 </td>
         </tr><tr>
             <td><code>name_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of IEN 116 Name servers available to the client, in order of preference.</p>
 </td>
         </tr><tr>
             <td><code>domain_name_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of Domain Name System servers available to the client, in order of preference;</p>
 </td>
         </tr><tr>
             <td><code>log_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of MIT-LCS UDP Log servers available to the client, in order of preference.</p>
 </td>
         </tr><tr>
             <td><code>cookie_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of RFC 865 Cookie servers available to the client, in order of preference.</p>
 </td>
         </tr><tr>
             <td><code>lpr_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of RFC 1179 Line Printer servers available to the client, in order of preference.</p>
 </td>
         </tr><tr>
             <td><code>impress_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of Imagen Impress servers available to the client, in order of preference.</p>
 </td>
         </tr><tr>
             <td><code>resource_location_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of RFC 887 Resource Location servers available to the client, in order of preference.</p>
 </td>
         </tr><tr>
             <td><code>host_name</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#AsciiString'>AsciiString</a></code>
             </td>
             <td><p>The host name of the client, which may or may not be qualified with the local domain name.</p>
 </td>
@@ -1168,14 +1168,14 @@ a negative offset is west of the zero meridian.</p>
         </tr><tr>
             <td><code>merit_dump_file</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#AsciiString'>AsciiString</a></code>
             </td>
             <td><p>The path name to the client's core dump in the event the client crashes.</p>
 </td>
         </tr><tr>
             <td><code>domain_name</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#AsciiString'>AsciiString</a></code>
             </td>
             <td><p>The client's domain name for use in resolving hostnames in the DNS.</p>
 </td>
@@ -1189,14 +1189,14 @@ a negative offset is west of the zero meridian.</p>
         </tr><tr>
             <td><code>root_path</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#AsciiString'>AsciiString</a></code>
             </td>
             <td><p>The path name to the client's root disk.</p>
 </td>
         </tr><tr>
             <td><code>extensions_path</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#AsciiString'>AsciiString</a></code>
             </td>
             <td><p>The path name to a TFTP-retrievable file. This file contains data which can be interpreted
 as the BOOTP vendor-extension field. Unlike the BOOTP vendor-extension field, this file has
@@ -1219,7 +1219,7 @@ an unconstrained length and any references to Tag 18 are ignored.</p>
         </tr><tr>
             <td><code>policy_filter</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>Policy filters for non-local source routing.
 A list of IP Address and Subnet Mask pairs. If an incoming source-routed packet has a
@@ -1244,7 +1244,7 @@ minimum legal value is 576.</p>
         </tr><tr>
             <td><code>path_mtu_aging_timeout</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#Duration'>Duration</a></code>
             </td>
             <td><p>The timeout to be used when aging Path MTU values by the mechanism in RFC 1191.</p>
 </td>
@@ -1312,7 +1312,7 @@ defined in RFC 1256.</p>
         </tr><tr>
             <td><code>static_route</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>Static Routes which the host should put in its routing cache.
 A list of Destination address/Next-hop address pairs defining static routes for the client's
@@ -1330,7 +1330,7 @@ to use 0.0.0.0 as the destination in a static route.</p>
         </tr><tr>
             <td><code>arp_cache_timeout</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#Duration'>Duration</a></code>
             </td>
             <td><p>The timeout for ARP cache entries.</p>
 </td>
@@ -1353,7 +1353,7 @@ value is 1.</p>
         </tr><tr>
             <td><code>tcp_keepalive_interval</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#Duration'>Duration</a></code>
             </td>
             <td><p>The interval the client should wait before sending a TCP keepalive message. A
 value of 0 indicates that the client should not send keepalive messages unless specifically
@@ -1370,14 +1370,14 @@ garbage for compatibility with older implementations.</p>
         </tr><tr>
             <td><code>network_information_service_domain</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#AsciiString'>AsciiString</a></code>
             </td>
             <td><p>The name of the client's Network Information Service domain.</p>
 </td>
         </tr><tr>
             <td><code>network_information_servers</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of Network Information Service server addresses available to the client, listed in
 order of preference.</p>
@@ -1385,7 +1385,7 @@ order of preference.</p>
         </tr><tr>
             <td><code>network_time_protocol_servers</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of Network Time Protocol (NTP) server addresses available to the client, listed in
 order of preference.</p>
@@ -1400,7 +1400,7 @@ order of preference.</p>
         </tr><tr>
             <td><code>netbios_over_tcpip_name_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of NetBIOS name server addresses available to the client, listed in order of
 preference.</p>
@@ -1408,7 +1408,7 @@ preference.</p>
         </tr><tr>
             <td><code>netbios_over_tcpip_datagram_distribution_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of NetBIOS datagram distribution servers available to the client, listed in order of
 preference.</p>
@@ -1423,14 +1423,14 @@ preference.</p>
         </tr><tr>
             <td><code>netbios_over_tcpip_scope</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#AsciiString'>AsciiString</a></code>
             </td>
             <td><p>The NetBIOS over TCP/IP scope parameter, as defined in RFC 1001, for the client.</p>
 </td>
         </tr><tr>
             <td><code>x_window_system_font_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of X Window System Font server addresses available to the client, listed in order of
 preference.</p>
@@ -1438,7 +1438,7 @@ preference.</p>
         </tr><tr>
             <td><code>x_window_system_display_manager</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of X Window System Display Manager system addresses available to the client, listed
 in order of preference.</p>
@@ -1446,14 +1446,14 @@ in order of preference.</p>
         </tr><tr>
             <td><code>network_information_service_plus_domain</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#AsciiString'>AsciiString</a></code>
             </td>
             <td><p>The name of the client's Network Information System+ domain.</p>
 </td>
         </tr><tr>
             <td><code>network_information_service_plus_servers</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of Network Information System+ server addresses available to the client, listed in
 order of preference.</p>
@@ -1461,7 +1461,7 @@ order of preference.</p>
         </tr><tr>
             <td><code>mobile_ip_home_agent</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of mobile IP home agent addresses available to the client, listed in order of
 preference.</p>
@@ -1469,7 +1469,7 @@ preference.</p>
         </tr><tr>
             <td><code>smtp_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of Simple Mail Transport Protocol (SMTP) server address available to the client,
 listed in order of preference.</p>
@@ -1477,7 +1477,7 @@ listed in order of preference.</p>
         </tr><tr>
             <td><code>pop3_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of Post Office Protocol (POP3) server addresses available to the client, listed in
 order of preference.</p>
@@ -1485,7 +1485,7 @@ order of preference.</p>
         </tr><tr>
             <td><code>nntp_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list Network News Transport Protocol (NNTP) server addresses available to the client,
 listed in order of preference.</p>
@@ -1493,7 +1493,7 @@ listed in order of preference.</p>
         </tr><tr>
             <td><code>default_www_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of default World Wide Web (WWW) server addresses available to the client, listed in
 order of preference.</p>
@@ -1501,7 +1501,7 @@ order of preference.</p>
         </tr><tr>
             <td><code>default_finger_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of default Finger server addresses available to the client, listed in order of
 preference.</p>
@@ -1509,7 +1509,7 @@ preference.</p>
         </tr><tr>
             <td><code>default_irc_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of Internet Relay Chat server addresses available to the client, listed in order of
 preference.</p>
@@ -1517,7 +1517,7 @@ preference.</p>
         </tr><tr>
             <td><code>streettalk_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of StreetTalk server addresses available to the client, listed in order of
 preference.</p>
@@ -1525,7 +1525,7 @@ preference.</p>
         </tr><tr>
             <td><code>streettalk_directory_assistance_server</code></td>
             <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net/'>fuchsia.net</a>/<a class='link' href='../fuchsia.net/#Ipv4Address'>Ipv4Address</a>&gt;[63]</code>
+                <code><a class='link' href='#Addresses'>Addresses</a></code>
             </td>
             <td><p>A list of StreetTalk Directory Assistance server addresses available to the client, listed
 in order of preference.</p>
@@ -1542,7 +1542,7 @@ after it concludes interpreting standard option fields.</p>
         </tr><tr>
             <td><code>tftp_server_name</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#AsciiString'>AsciiString</a></code>
             </td>
             <td><p>The TFTP server name available to the client. This option should be used when the <code>sname</code>
 field has been overloaded to carry options.</p>
@@ -1550,7 +1550,7 @@ field has been overloaded to carry options.</p>
         </tr><tr>
             <td><code>bootfile_name</code></td>
             <td>
-                <code>string[255]</code>
+                <code><a class='link' href='#AsciiString'>AsciiString</a></code>
             </td>
             <td><p>The bootfile name for the client. This option should be used when the <code>file</code> field has been
 overloaded to carry options.</p>
@@ -1566,7 +1566,7 @@ The minimum value is 576.</p>
         </tr><tr>
             <td><code>renewal_time_value</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#Duration'>Duration</a></code>
             </td>
             <td><p>The time interval after address assignment at which the client will transition
 to the Renewing state.</p>
@@ -1574,7 +1574,7 @@ to the Renewing state.</p>
         </tr><tr>
             <td><code>rebinding_time_value</code></td>
             <td>
-                <code>uint32</code>
+                <code><a class='link' href='#Duration'>Duration</a></code>
             </td>
             <td><p>The time interval after address assignment at which the client will transition
 to the Rebinding state.</p>
@@ -1675,4 +1675,39 @@ Type: <code>uint8</code>
         </tr></table>
 
 
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="Duration">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.dhcp/options.fidl#11">Duration</a></td>
+            <td>
+                <code>uint32</code></td>
+            <td><p>A DHCP duration value, in seconds. As specified in
+https://tools.ietf.org/html/rfc2131#section-3.3, DHCP duration values are
+relative times.</p>
+</td>
+        </tr><tr id="Addresses">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.dhcp/options.fidl#16">Addresses</a></td>
+            <td>
+                <code>vector</code></td>
+            <td><p>A list of IP addresses. The vector bounds of this list are MAX_OPTION_LEN /
+len(Ipv4Address), where MAX_OPTION_LEN is the maximum byte length of a value
+for a DHCP option as defined in https://tools.ietf.org/html/rfc2132#section-2:
+&quot;All other options are variable-length with a length octet following the tag octet.&quot;</p>
+</td>
+        </tr><tr id="AsciiString">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.net.dhcp/options.fidl#24">AsciiString</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>An ASCII string with a length limit of 255. All DHCP Option values must have
+a length that can fit in an octet, cf. &quot;All other options are variable-length with a length octet following the tag octet.&quot;
+from https://tools.ietf.org/html/rfc2132#section-2. Similarly all DHCP Option
+string values must be limited to the ASCII character set. Should non-ASCII
+characters be sent in a <code>AsciiString</code> to Server, Server will close the channel to
+the client.</p>
+</td>
+        </tr></table>
 

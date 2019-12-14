@@ -92,7 +92,7 @@ false, constrain the capabilities of the player.</p>
     <tr>
             <td><code>duration_ns</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr><tr>
             <td><code>can_pause</code></td>
@@ -341,7 +341,7 @@ changes thereafter.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>size</code></td>
@@ -375,7 +375,7 @@ changes thereafter.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>socket</code></td>
@@ -471,7 +471,7 @@ false, constrain the capabilities of the player.</p>
     <tr>
             <td><code>duration_ns</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr><tr>
             <td><code>can_pause</code></td>
@@ -673,7 +673,7 @@ to this <code>ElementarySource</code> even after a channel is consumed by a call
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>duration</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>Duration of the content.</p>
 </td>
@@ -842,7 +842,7 @@ general means of dismissing a problem.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>duration</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>Duration of the content.</p>
 </td>
@@ -923,43 +923,43 @@ indicates that the source is functioning as intended.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="PROBLEM_INTERNAL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#25">PROBLEM_INTERNAL</a></td>
             <td><code>fuchsia.media.playback.Internal</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="PROBLEM_ASSET_NOT_FOUND">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#27">PROBLEM_ASSET_NOT_FOUND</a></td>
             <td><code>fuchsia.media.playback.AssetNotFound</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="PROBLEM_CONTAINER_NOT_SUPPORTED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#29">PROBLEM_CONTAINER_NOT_SUPPORTED</a></td>
             <td><code>fuchsia.media.playback.ContainerNotSupported</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="PROBLEM_AUDIO_ENCODING_NOT_SUPPORTED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#31">PROBLEM_AUDIO_ENCODING_NOT_SUPPORTED</a></td>
             <td><code>fuchsia.media.playback.AudioEncodingNotSupported</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="PROBLEM_VIDEO_ENCODING_NOT_SUPPORTED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#33">PROBLEM_VIDEO_ENCODING_NOT_SUPPORTED</a></td>
             <td><code>fuchsia.media.playback.VideoEncodingNotSupported</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="PROBLEM_CONNECTION_FAILED">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/problem.fidl#35">PROBLEM_CONNECTION_FAILED</a></td>
             <td><code>fuchsia.media.playback.ConnectionFailed</code></td>
                     <td><code>String</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="UNKNOWN_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/seeking_reader.fidl#25">UNKNOWN_SIZE</a></td>
             <td>
                     <code>18446744073709551615</code>
@@ -971,4 +971,6 @@ Indicating that the size isn't known.</p>
         </tr>
     
 </table>
+
+
 

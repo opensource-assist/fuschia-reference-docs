@@ -56,7 +56,7 @@ is an offset from the beginning of the media.</p>
     <tr>
             <td><code>position</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -171,8 +171,30 @@ playback mode.</p>
 
 
 
+### WatchStatus {#WatchStatus}
+
+<p>Watches the session status. Leave a request hanging to receive a reply when
+the session status changes. The first request will be answered immediately with
+the current state.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>session_info_delta</code></td>
+            <td>
+                <code><a class='link' href='#SessionInfoDelta'>SessionInfoDelta</a></code>
+            </td>
+        </tr></table>
+
 ## SessionsWatcher {#SessionsWatcher}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#83)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#87)*
 
 <p><code>SessionsWatcher</code> watches the collection of published sessions.</p>
 
@@ -190,7 +212,7 @@ Delinquent watchers who do not reply will eventually be disconnected.</p>
     <tr>
             <td><code>session_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#SessionId'>SessionId</a></code>
             </td>
         </tr><tr>
             <td><code>session_info_delta</code></td>
@@ -218,7 +240,7 @@ Delinquent watchers who do not reply will eventually be disconnected.</p>
     <tr>
             <td><code>session_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#SessionId'>SessionId</a></code>
             </td>
         </tr></table>
 
@@ -229,7 +251,7 @@ Delinquent watchers who do not reply will eventually be disconnected.</p>
     </table>
 
 ## Discovery {#Discovery}
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#103)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#107)*
 
 <p><code>Discovery</code> observes the collection of published media sessions
 and connects clients to them.</p>
@@ -266,7 +288,7 @@ given channel otherwise.</p>
     <tr>
             <td><code>session_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#SessionId'>SessionId</a></code>
             </td>
         </tr><tr>
             <td><code>session_control_request</code></td>
@@ -327,7 +349,7 @@ is an offset from the beginning of the media.</p>
     <tr>
             <td><code>position</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -494,7 +516,7 @@ is an offset from the beginning of the media.</p>
     <tr>
             <td><code>position</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
         </tr></table>
 
@@ -681,7 +703,7 @@ controlled by clients who have permission to do so.</p>
     <tr>
             <td><code>session_id</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='#SessionId'>SessionId</a></code>
             </td>
         </tr></table>
 
@@ -701,7 +723,7 @@ controlled by clients who have permission to do so.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>url</code></td>
             <td>
-                <code>string[1000]</code>
+                <code><a class='link' href='#Url'>Url</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -877,7 +899,7 @@ property is not recursive; top-level fields if set are snapshots).</p>
             <td>1</td>
             <td><code>domain</code></td>
             <td>
-                <code>string[1000]</code>
+                <code><a class='link' href='#Domain'>Domain</a></code>
             </td>
             <td><p>The domain on which the session takes place. A domain identifies a set of
 mutually compatable media targets and sessions; sessions on a domain may
@@ -938,7 +960,7 @@ session is not active.</p>
 ### WatchOptions {#WatchOptions}
 
 
-*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#75)*
+*Defined in [fuchsia.media.sessions2/discovery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#79)*
 
 <p>Options that specify which sessions are watched when watching the collection.</p>
 <p>The watched set is the set of sessions which satisfies all options.</p>
@@ -1005,7 +1027,7 @@ session is not active.</p>
             <td>1</td>
             <td><code>duration</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>Total duration of playing media. Omitted if not known or not applicable.</p>
 </td>
@@ -1145,7 +1167,7 @@ it.</p>
             <td>1</td>
             <td><code>domain</code></td>
             <td>
-                <code>string[1000]</code>
+                <code><a class='link' href='#Domain'>Domain</a></code>
             </td>
             <td><p>The domain on which the player exists. Unset if it is the native
 Fuchsia domain.</p>
@@ -1221,4 +1243,31 @@ Type: <code>uint32</code>
         </tr></table>
 
 
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="SessionId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/discovery.fidl#11">SessionId</a></td>
+            <td>
+                <code>uint64</code></td>
+            <td></td>
+        </tr><tr id="Url">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/images.fidl#7">Url</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr><tr id="Domain">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.sessions2/player.fidl#18">Domain</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>A domain identifies the ecosystem in which the session takes place.</p>
+<p>Domains should take the form of</p>
+<pre><code>`domain://&lt;unique name for protocol&gt;.version`
+</code></pre>
+<p>The <code>|</code> symbol is reserved and should not be used in a domain string.</p>
+</td>
+        </tr></table>
 

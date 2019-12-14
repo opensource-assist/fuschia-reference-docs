@@ -145,7 +145,7 @@ If it is a mock HID decice, the IDs will either be 0's or user defined.</p>
         </tr><tr>
             <td><code>id</code></td>
             <td>
-                <code>uint8</code>
+                <code><a class='link' href='#ReportId'>ReportId</a></code>
             </td>
         </tr></table>
 
@@ -156,7 +156,7 @@ If it is a mock HID decice, the IDs will either be 0's or user defined.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>size</code></td>
@@ -207,7 +207,7 @@ wait on the event from |GetReportsEvent|.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>data</code></td>
@@ -233,7 +233,7 @@ Device's report FIFO.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>event</code></td>
@@ -258,7 +258,7 @@ to be used for continuous polling of the reports.</p>
         </tr><tr>
             <td><code>id</code></td>
             <td>
-                <code>uint8</code>
+                <code><a class='link' href='#ReportId'>ReportId</a></code>
             </td>
         </tr></table>
 
@@ -269,7 +269,7 @@ to be used for continuous polling of the reports.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>report</code></td>
@@ -293,7 +293,7 @@ to be used for continuous polling of the reports.</p>
         </tr><tr>
             <td><code>id</code></td>
             <td>
-                <code>uint8</code>
+                <code><a class='link' href='#ReportId'>ReportId</a></code>
             </td>
         </tr><tr>
             <td><code>report</code></td>
@@ -309,7 +309,7 @@ to be used for continuous polling of the reports.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -431,7 +431,7 @@ Type: <code>uint8</code>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_DESC_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#17">MAX_DESC_LEN</a></td>
             <td>
                     <code>8192</code>
@@ -439,7 +439,7 @@ Type: <code>uint8</code>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_REPORT_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#18">MAX_REPORT_LEN</a></td>
             <td>
                     <code>8192</code>
@@ -447,7 +447,7 @@ Type: <code>uint8</code>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_REPORT_DATA">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#19">MAX_REPORT_DATA</a></td>
             <td>
                     <code>8192</code>
@@ -455,7 +455,7 @@ Type: <code>uint8</code>
                 <td><code>uint16</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_REPORT_IDS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#20">MAX_REPORT_IDS</a></td>
             <td>
                     <code>256</code>
@@ -465,4 +465,16 @@ Type: <code>uint8</code>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="ReportId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-input/input.fidl#9">ReportId</a></td>
+            <td>
+                <code>uint8</code></td>
+            <td></td>
+        </tr></table>
 

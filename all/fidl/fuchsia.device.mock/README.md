@@ -182,7 +182,7 @@ to perform that list of actions in order.</p>
         </tr><tr>
             <td><code>off</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#off'>off</a></code>
             </td>
         </tr></table>
 
@@ -216,7 +216,7 @@ to perform that list of actions in order.</p>
         </tr><tr>
             <td><code>off</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#off'>off</a></code>
             </td>
         </tr></table>
 
@@ -461,7 +461,7 @@ this interface.  Closing the interface causes the thread to exit.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>process_koid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
             <td><p>Process that the hook was invoked in</p>
 </td>
@@ -469,7 +469,7 @@ this interface.  Closing the interface causes the thread to exit.</p>
         </tr><tr>
             <td><code>thread_koid</code></td>
             <td>
-                <code>uint64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#koid'>koid</a></code>
             </td>
             <td><p>Thread that the hook was invoked on</p>
 </td>
@@ -559,7 +559,7 @@ debug messages.</p>
         </tr><tr>
             <td><code>expect_status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td><p>The expected return status from device_add()</p>
 </td>
@@ -584,7 +584,7 @@ debug messages.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>return_status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
             <td><p>Return this status.</p>
 </td>
@@ -634,7 +634,7 @@ debug messages.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_PROPERTIES_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/dev/test/mock-device/mock-device.fidl#25">MAX_PROPERTIES_LEN</a></td>
             <td>
                     <code>32</code>
@@ -642,7 +642,7 @@ debug messages.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_NAME_LEN">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/dev/test/mock-device/mock-device.fidl#26">MAX_NAME_LEN</a></td>
             <td>
                     <code>32</code>
@@ -650,7 +650,7 @@ debug messages.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_ACTIONS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/dev/test/mock-device/mock-device.fidl#72">MAX_ACTIONS</a></td>
             <td>
                     <code>10</code>
@@ -658,7 +658,7 @@ debug messages.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MAX_WRITE_BYTES">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/dev/test/mock-device/mock-device.fidl#73">MAX_WRITE_BYTES</a></td>
             <td>
                     <code>16384</code>
@@ -668,4 +668,6 @@ debug messages.</p>
         </tr>
     
 </table>
+
+
 

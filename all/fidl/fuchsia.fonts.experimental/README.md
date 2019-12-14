@@ -222,14 +222,14 @@ results remain.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>lower</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='../fuchsia.fonts/'>fuchsia.fonts</a>/<a class='link' href='../fuchsia.fonts/#Weight'>Weight</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>upper</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='../fuchsia.fonts/'>fuchsia.fonts</a>/<a class='link' href='../fuchsia.fonts/#Weight'>Weight</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -537,7 +537,7 @@ matches <code>FamilyName</code>.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_TYPEFACE_RESULTS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.fonts.experimental/provider.test.fidl#15">MAX_TYPEFACE_RESULTS</a></td>
             <td>
                     <code>16</code>
@@ -549,4 +549,6 @@ matches <code>FamilyName</code>.</p>
         </tr>
     
 </table>
+
+
 

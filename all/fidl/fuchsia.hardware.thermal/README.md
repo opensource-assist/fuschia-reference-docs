@@ -25,7 +25,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -50,7 +50,7 @@
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -81,7 +81,7 @@ TODO(bradenkell): Can this be removed? GetDeviceInfo() provides the same informa
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>info</code></td>
@@ -106,7 +106,7 @@ TODO(bradenkell): Can this be removed? GetDeviceInfo() provides the same informa
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>temp</code></td>
@@ -132,7 +132,7 @@ trip point is reached. It is deasserted when the state is read via GetInfo.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>handle</code></td>
@@ -157,7 +157,7 @@ trip point is reached. It is deasserted when the state is read via GetInfo.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>handle</code></td>
@@ -193,7 +193,7 @@ device will notify on an event.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -218,7 +218,7 @@ device will notify on an event.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>op_idx</code></td>
@@ -253,7 +253,7 @@ device will notify on an event.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -273,7 +273,7 @@ device will notify on an event.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr><tr>
             <td><code>fan_level</code></td>
@@ -303,7 +303,7 @@ device will notify on an event.</p>
     <tr>
             <td><code>status</code></td>
             <td>
-                <code>int32</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#status'>status</a></code>
             </td>
         </tr></table>
 
@@ -599,7 +599,7 @@ Other devices use <code>BIG_CLUSTER_POWER_DOMAIN</code> for getting/setting the 
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_TRIP_POINTS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-thermal/thermal.fidl#10">MAX_TRIP_POINTS</a></td>
             <td>
                     <code>16</code>
@@ -608,7 +608,7 @@ Other devices use <code>BIG_CLUSTER_POWER_DOMAIN</code> for getting/setting the 
             <td><p>The maximum number of trip points that can be used.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_DVFS_DOMAINS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-thermal/thermal.fidl#14">MAX_DVFS_DOMAINS</a></td>
             <td>
                     <code>2</code>
@@ -618,7 +618,7 @@ Other devices use <code>BIG_CLUSTER_POWER_DOMAIN</code> for getting/setting the 
 architecture).</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MAX_DVFS_OPPS">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-thermal/thermal.fidl#17">MAX_DVFS_OPPS</a></td>
             <td>
                     <code>16</code>
@@ -627,7 +627,7 @@ architecture).</p>
             <td><p>The maximum number of operating points that can be used.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="THERMAL_STATE_NORMAL">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-thermal/thermal.fidl#20">THERMAL_STATE_NORMAL</a></td>
             <td>
                     <code>0</code>
@@ -636,7 +636,7 @@ architecture).</p>
             <td><p>Bitmask values for ThermalInfo.state.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="THERMAL_STATE_TRIP_VIOLATION">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-thermal/thermal.fidl#21">THERMAL_STATE_TRIP_VIOLATION</a></td>
             <td>
                     <code>1</code>
@@ -646,4 +646,6 @@ architecture).</p>
         </tr>
     
 </table>
+
+
 

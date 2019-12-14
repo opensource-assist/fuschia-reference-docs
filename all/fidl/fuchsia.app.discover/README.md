@@ -48,7 +48,7 @@ service.</p>
     <tr>
             <td><code>story_id</code></td>
             <td>
-                <code>string[1024]</code>
+                <code><a class='link' href='#StoryId'>StoryId</a></code>
             </td>
         </tr><tr>
             <td><code>request</code></td>
@@ -128,7 +128,7 @@ service.</p>
     <tr>
             <td><code>surface_id</code></td>
             <td>
-                <code>string[1024]</code>
+                <code><a class='link' href='#SurfaceId'>SurfaceId</a></code>
             </td>
         </tr></table>
 
@@ -159,7 +159,7 @@ Return happens upon completion of a successful write.</p>
     <tr>
             <td><code>output_name</code></td>
             <td>
-                <code>string[128]</code>
+                <code><a class='link' href='#OutputName'>OutputName</a></code>
             </td>
         </tr><tr>
             <td><code>entity_reference</code></td>
@@ -195,7 +195,7 @@ with the given name.</p>
         </tr><tr>
             <td><code>mod_name</code></td>
             <td>
-                <code>string[512]</code>
+                <code><a class='link' href='#ModuleName'>ModuleName</a></code>
             </td>
         </tr></table>
 
@@ -215,7 +215,7 @@ with the given name.</p>
     <tr>
             <td><code>key</code></td>
             <td>
-                <code>string[128]</code>
+                <code><a class='link' href='#StateKey'>StateKey</a></code>
             </td>
         </tr><tr>
             <td><code>value</code></td>
@@ -245,7 +245,7 @@ with the given name.</p>
     <tr>
             <td><code>key</code></td>
             <td>
-                <code>string[128]</code>
+                <code><a class='link' href='#StateKey'>StateKey</a></code>
             </td>
         </tr></table>
 
@@ -275,7 +275,7 @@ can fetch suggestions coming as response.</p>
     <tr>
             <td><code>query</code></td>
             <td>
-                <code>string</code>
+                <code><a class='link' href='#Query'>Query</a></code>
             </td>
         </tr><tr>
             <td><code>iterator</code></td>
@@ -296,7 +296,7 @@ can fetch suggestions coming as response.</p>
     <tr>
             <td><code>suggestion_id</code></td>
             <td>
-                <code>string</code>
+                <code><a class='link' href='#SuggestionId'>SuggestionId</a></code>
             </td>
         </tr><tr>
             <td><code>interaction</code></td>
@@ -497,7 +497,7 @@ Type: <code>uint32</code>
             <td>1</td>
             <td><code>story_id</code></td>
             <td>
-                <code>string[1024]</code>
+                <code><a class='link' href='#StoryId'>StoryId</a></code>
             </td>
             <td><p>The ID of the story to which the module belongs.</p>
 </td>
@@ -505,7 +505,7 @@ Type: <code>uint32</code>
             <td>2</td>
             <td><code>module_path</code></td>
             <td>
-                <code>vector&lt;string&gt;[512]</code>
+                <code><a class='link' href='#ModulePath'>ModulePath</a></code>
             </td>
             <td><p>The named path leading up to this module instance. This path is a unique
 identifier of the module in the story.</p>
@@ -526,7 +526,7 @@ identifier of the module in the story.</p>
             <td>1</td>
             <td><code>action</code></td>
             <td>
-                <code>string[512]</code>
+                <code><a class='link' href='#ActionName'>ActionName</a></code>
             </td>
             <td><p>The name of the action that triggered the creation of that surface.</p>
 </td>
@@ -553,7 +553,7 @@ identifier of the module in the story.</p>
             <td>1</td>
             <td><code>id</code></td>
             <td>
-                <code>string</code>
+                <code><a class='link' href='#SuggestionId'>SuggestionId</a></code>
             </td>
             <td><p>The id of the suggestion. This id is used when notifying an interaction.</p>
 </td>
@@ -675,7 +675,7 @@ identifier of the module in the story.</p>
 ## **CONSTANTS**
 
 <table>
-    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="STORY_ID_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#8">STORY_ID_MAX_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -684,7 +684,7 @@ identifier of the module in the story.</p>
             <td><p>Maximum length of a story id.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MODULE_PATH_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#14">MODULE_PATH_MAX_LENGTH</a></td>
             <td>
                     <code>512</code>
@@ -693,7 +693,7 @@ identifier of the module in the story.</p>
             <td><p>Maximum length of a module path.</p>
 </td>
         </tr>
-    <tr>
+    <tr id="MODULE_PATH_PART_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#15">MODULE_PATH_PART_MAX_LENGTH</a></td>
             <td>
                     <code>512</code>
@@ -701,7 +701,7 @@ identifier of the module in the story.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="ACTION_NAME_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#55">ACTION_NAME_MAX_LENGTH</a></td>
             <td>
                     <code>512</code>
@@ -709,7 +709,7 @@ identifier of the module in the story.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="PARAMETER_TYPE_NAME_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#56">PARAMETER_TYPE_NAME_MAX_LENGTH</a></td>
             <td>
                     <code>512</code>
@@ -717,7 +717,7 @@ identifier of the module in the story.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="SURFACE_ID_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#57">SURFACE_ID_MAX_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -725,7 +725,7 @@ identifier of the module in the story.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="ENTITY_REFERENCE_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#10">ENTITY_REFERENCE_MAX_LENGTH</a></td>
             <td>
                     <code>1024</code>
@@ -733,7 +733,7 @@ identifier of the module in the story.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="MODULE_NAME_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#11">MODULE_NAME_MAX_LENGTH</a></td>
             <td>
                     <code>512</code>
@@ -741,7 +741,7 @@ identifier of the module in the story.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="STATE_KEY_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#12">STATE_KEY_MAX_LENGTH</a></td>
             <td>
                     <code>128</code>
@@ -749,7 +749,7 @@ identifier of the module in the story.</p>
                 <td><code>uint32</code></td>
             <td></td>
         </tr>
-    <tr>
+    <tr id="OUTPUT_NAME_MAX_LENGTH">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#13">OUTPUT_NAME_MAX_LENGTH</a></td>
             <td>
                     <code>128</code>
@@ -759,4 +759,68 @@ identifier of the module in the story.</p>
         </tr>
     
 </table>
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="StoryId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#11">StoryId</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#STORY_ID_MAX_LENGTH'>STORY_ID_MAX_LENGTH</a></code>]</td>
+            <td><p>An ientifier for a story.</p>
+</td>
+        </tr><tr id="ModulePathPart">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#18">ModulePathPart</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MODULE_PATH_PART_MAX_LENGTH'>MODULE_PATH_PART_MAX_LENGTH</a></code>]</td>
+            <td><p>And identifier for a module.</p>
+</td>
+        </tr><tr id="ModulePath">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/discover_registry.fidl#19">ModulePath</a></td>
+            <td>
+                <code>vector</code>[<code><a class='link' href='#MODULE_PATH_MAX_LENGTH'>MODULE_PATH_MAX_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr id="ActionName">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#9">ActionName</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#ACTION_NAME_MAX_LENGTH'>ACTION_NAME_MAX_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr id="ParameterTypeName">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#10">ParameterTypeName</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#PARAMETER_TYPE_NAME_MAX_LENGTH'>PARAMETER_TYPE_NAME_MAX_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr id="SurfaceId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_discover_context.fidl#11">SurfaceId</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#SURFACE_ID_MAX_LENGTH'>SURFACE_ID_MAX_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr id="ModuleName">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#15">ModuleName</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#MODULE_NAME_MAX_LENGTH'>MODULE_NAME_MAX_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr id="OutputName">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#16">OutputName</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#OUTPUT_NAME_MAX_LENGTH'>OUTPUT_NAME_MAX_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr id="StateKey">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/story_module.fidl#17">StateKey</a></td>
+            <td>
+                <code>string</code>[<code><a class='link' href='#STATE_KEY_MAX_LENGTH'>STATE_KEY_MAX_LENGTH</a></code>]</td>
+            <td></td>
+        </tr><tr id="Query">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/suggestions_service.fidl#8">Query</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr><tr id="SuggestionId">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.app.discover/suggestions_service.fidl#9">SuggestionId</a></td>
+            <td>
+                <code>string</code></td>
+            <td></td>
+        </tr></table>
 

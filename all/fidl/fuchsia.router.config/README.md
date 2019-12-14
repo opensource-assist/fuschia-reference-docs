@@ -2084,14 +2084,14 @@ value in the database, otherwise the change will be rejected.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>from</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#port'>port</a></code>
             </td>
             <td></td>
             <td>No default</td>
         </tr><tr>
             <td><code>to</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#port'>port</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2189,7 +2189,7 @@ the incoming ports, to the target address and port. Target address must be on on
         </tr><tr>
             <td><code>target_port</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#port'>port</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2255,7 +2255,7 @@ port on the target device.</p>
         </tr><tr>
             <td><code>trigger_port</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#port'>port</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2384,7 +2384,7 @@ from WAN to LAN.</p>
 </table>
 
 ### Channel {#Channel}
-*Defined in [fuchsia.router.config/wireless.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wireless.fidl#24)*
+*Defined in [fuchsia.router.config/wireless.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wireless.fidl#25)*
 
 
 
@@ -2410,7 +2410,7 @@ from WAN to LAN.</p>
 </table>
 
 ### Radio {#Radio}
-*Defined in [fuchsia.router.config/wireless.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wireless.fidl#30)*
+*Defined in [fuchsia.router.config/wireless.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wireless.fidl#31)*
 
 
 
@@ -2442,7 +2442,7 @@ from WAN to LAN.</p>
 </table>
 
 ### WlanNetwork {#WlanNetwork}
-*Defined in [fuchsia.router.config/wireless.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wireless.fidl#38)*
+*Defined in [fuchsia.router.config/wireless.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wireless.fidl#39)*
 
 
 
@@ -2488,7 +2488,7 @@ from WAN to LAN.</p>
 </table>
 
 ### Regulatory {#Regulatory}
-*Defined in [fuchsia.router.config/wireless.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wireless.fidl#46)*
+*Defined in [fuchsia.router.config/wireless.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wireless.fidl#47)*
 
 
 
@@ -3356,14 +3356,14 @@ a not specified selector represents a match all.</p>
             <td>3</td>
             <td><code>ingress_port</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#port'>port</a></code>
             </td>
             <td></td>
         </tr><tr>
             <td>4</td>
             <td><code>egress_port</code></td>
             <td>
-                <code>uint16</code>
+                <code><a class='link' href='#port'>port</a></code>
             </td>
             <td></td>
         </tr><tr>
@@ -3410,7 +3410,7 @@ a not specified selector represents a match all.</p>
 ### Credentials {#Credentials}
 
 
-*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#37)*
+*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#36)*
 
 
 
@@ -3435,7 +3435,7 @@ a not specified selector represents a match all.</p>
 ### Pppoe {#Pppoe}
 
 
-*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#42)*
+*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#41)*
 
 
 
@@ -3453,7 +3453,7 @@ a not specified selector represents a match all.</p>
 ### Pptp {#Pptp}
 
 
-*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#46)*
+*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#45)*
 
 
 
@@ -3478,7 +3478,7 @@ a not specified selector represents a match all.</p>
 ### L2tp {#L2tp}
 
 
-*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#51)*
+*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#50)*
 
 
 
@@ -3503,7 +3503,7 @@ a not specified selector represents a match all.</p>
 ### WanProperties {#WanProperties}
 
 
-*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#65)*
+*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#64)*
 
 <p>WanProperties holds the configuration associated to a WAN interface.
 It holds the type of upstream connection and authentication credentials for that connection,
@@ -3733,7 +3733,7 @@ is added the event only contains that route, not the full routing table.</p>
         </tr></table>
 
 ### ConnectionParameters {#ConnectionParameters}
-*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#56)*
+*Defined in [fuchsia.router.config/wan.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wan.fidl#55)*
 
 
 <table>
@@ -3758,7 +3758,7 @@ is added the event only contains that route, not the full routing table.</p>
         </tr></table>
 
 ### ChannelNumber {#ChannelNumber}
-*Defined in [fuchsia.router.config/wireless.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wireless.fidl#19)*
+*Defined in [fuchsia.router.config/wireless.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/wireless.fidl#20)*
 
 
 <table>
@@ -3796,4 +3796,16 @@ Type: <code>uint8</code>
         </tr></table>
 
 
+
+
+
+## **TYPE ALIASES**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="port">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.router.config/security.fidl#9">port</a></td>
+            <td>
+                <code>uint16</code></td>
+            <td></td>
+        </tr></table>
 

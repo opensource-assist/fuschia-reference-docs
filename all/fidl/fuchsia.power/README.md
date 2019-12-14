@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## BatteryInfoProvider {#BatteryInfoProvider}
-*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#101)*
+*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#103)*
 
 <p>Provider interface used to obtain battery status details</p>
 
@@ -47,7 +47,7 @@
 
 
 ## BatteryInfoWatcher {#BatteryInfoWatcher}
-*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#110)*
+*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#112)*
 
 <p>Watcher on battery info</p>
 
@@ -72,7 +72,7 @@
     </table>
 
 ## BatteryManager {#BatteryManager}
-*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#117)*
+*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#119)*
 
 <p>General manager interface for battery management</p>
 
@@ -145,7 +145,7 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>NOT_PRESENT</code></td>
             <td><code>3</code></td>
-            <td><p>battery not present (e.g. removed)</p>
+            <td><p>battery not present (e.g. removed or no battery)</p>
 </td>
         </tr></table>
 
@@ -221,27 +221,31 @@ Type: <code>uint32</code>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>OK</code></td>
+            <td><code>UNKNOWN</code></td>
             <td><code>0</code></td>
             <td></td>
         </tr><tr>
-            <td><code>WARNING</code></td>
+            <td><code>OK</code></td>
             <td><code>1</code></td>
             <td></td>
         </tr><tr>
-            <td><code>LOW</code></td>
+            <td><code>WARNING</code></td>
             <td><code>2</code></td>
             <td></td>
         </tr><tr>
-            <td><code>CRITICAL</code></td>
+            <td><code>LOW</code></td>
             <td><code>3</code></td>
+            <td></td>
+        </tr><tr>
+            <td><code>CRITICAL</code></td>
+            <td><code>4</code></td>
             <td></td>
         </tr></table>
 
 ### HealthStatus {#HealthStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#48)*
+*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#49)*
 
 <p>The general status related to the overall health of the battery.</p>
 
@@ -284,7 +288,7 @@ Type: <code>uint32</code>
 ### BatteryInfo {#BatteryInfo}
 
 
-*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#71)*
+*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#72)*
 
 <p>Current battery state information</p>
 
@@ -323,7 +327,8 @@ NONE (not charging) or UNKNOWN.</p>
             <td>
                 <code>float32</code>
             </td>
-            <td><p>Battery level in percentage</p>
+            <td><p>Battery level in percentage. Level percent is only available if
+level status is known.</p>
 </td>
         </tr><tr>
             <td>5</td>
@@ -353,7 +358,7 @@ NONE (not charging) or UNKNOWN.</p>
             <td>8</td>
             <td><code>timestamp</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
             <td><p>Timestamp to distinguish between latest and stale status</p>
 </td>
@@ -366,7 +371,7 @@ NONE (not charging) or UNKNOWN.</p>
 ## **XUNIONS**
 
 ### TimeRemaining {#TimeRemaining}
-*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#59)*
+*Defined in [fuchsia.power/battery.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.power/battery.fidl#60)*
 
 <p>The time remaining while actively charging or discharging.</p>
 
@@ -374,25 +379,27 @@ NONE (not charging) or UNKNOWN.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
             <td><code>indeterminate</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>Representation of indeterminate state with zero duration.</p>
 </td>
         </tr><tr>
             <td><code>battery_life</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>Remaining battery life while discharging</p>
 </td>
         </tr><tr>
             <td><code>full_charge</code></td>
             <td>
-                <code>int64</code>
+                <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#duration'>duration</a></code>
             </td>
             <td><p>Remaining time until full while charging</p>
 </td>
         </tr></table>
+
+
 
 
 
