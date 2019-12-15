@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## PayloadStream {#PayloadStream}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#55)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#56)*
 
 <p>Protocol for streaming the FVM payload.</p>
 
@@ -56,7 +56,7 @@
         </tr></table>
 
 ## Paver {#Paver}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#71)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#72)*
 
 <p>Protocol for managing boot partitions.</p>
 <p>Most of the protocol methods rely on auto-discovery of the storage device
@@ -384,7 +384,7 @@ been created with <code>ZX_VMO_RESIZABLE</code> or must be a child VMO that was 
 ### WipeVolume {#WipeVolume}
 
 <p>Wipes the FVM partition from the device. Should not be confused with factory reset, which
-is less intrusive.</p>
+is less intrusive. The result is that the default FVM volumes are re-created, but empty.</p>
 <p>Notable use cases include recovering from corrupted FVM as well as setting device to a
 &quot;clean&quot; state for automation.</p>
 <p>If |block_device| is not provided, the paver will perform a search for the the FVM.
@@ -542,7 +542,7 @@ the block device.</p>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
             <td><code>volume</code></td>
             <td>
-                <code>request&lt;<a class='link' href='../fuchsia.hardware.block/'>fuchsia.hardware.block</a>/<a class='link' href='../fuchsia.hardware.block/#Block'>Block</a>&gt;</code>
+                <code>request&lt;<a class='link' href='../fuchsia.hardware.block.volume/'>fuchsia.hardware.block.volume</a>/<a class='link' href='../fuchsia.hardware.block.volume/#VolumeManager'>VolumeManager</a>&gt;</code>
             </td>
             <td></td>
             <td>No default</td>
@@ -550,7 +550,7 @@ the block device.</p>
 </table>
 
 ### ReadInfo {#ReadInfo}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#38)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#39)*
 
 
 
@@ -583,7 +583,7 @@ the block device.</p>
 ### Configuration {#Configuration}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#13)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#14)*
 
 <p>Describes the version of an asset.</p>
 
@@ -606,7 +606,7 @@ Type: <code>uint32</code>
 ### Asset {#Asset}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#21)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#22)*
 
 <p>Describes assets which may be updated. Each asset has 3 versions, each tied to a particular
 configuration.</p>
@@ -628,7 +628,7 @@ configuration.</p>
 ### ConfigurationStatus {#ConfigurationStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#29)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#30)*
 
 <p>Set of states configuration may be in.</p>
 
@@ -734,7 +734,7 @@ Type: <code>uint32</code>
         </tr></table>
 
 ### ReadResult {#ReadResult}
-*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#45)*
+*Defined in [fuchsia.paver/paver.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-paver/paver.fidl#46)*
 
 
 <table>

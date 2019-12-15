@@ -5,6 +5,8 @@ toc:
   path: /reference/fidl/conformance
 - title: example
   path: /reference/fidl/example
+- title: fidl.developer.bridge
+  path: /reference/fidl/fidl.developer.bridge
 - title: fidl.examples.alignment
   path: /reference/fidl/fidl.examples.alignment
 - title: fidl.examples.bindingstest
@@ -273,6 +275,8 @@ toc:
   path: /reference/fidl/fuchsia.hardware.block
 - title: fuchsia.hardware.block.partition
   path: /reference/fidl/fuchsia.hardware.block.partition
+- title: fuchsia.hardware.block.volume
+  path: /reference/fidl/fuchsia.hardware.block.volume
 - title: fuchsia.hardware.bluetooth
   path: /reference/fidl/fuchsia.hardware.bluetooth
 - title: fuchsia.hardware.camera

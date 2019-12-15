@@ -16,6 +16,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fidl.developer.bridge/index">fidl.developer.bridge</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fidl.examples.alignment/index">fidl.examples.alignment</a></td>
     <td></td>
 </tr>
@@ -549,6 +553,10 @@
 </tr>
 <tr>
     <td><a href="fuchsia.hardware.block.partition/index">fuchsia.hardware.block.partition</a></td>
+    <td></td>
+</tr>
+<tr>
+    <td><a href="fuchsia.hardware.block.volume/index">fuchsia.hardware.block.volume</a></td>
     <td></td>
 </tr>
 <tr>

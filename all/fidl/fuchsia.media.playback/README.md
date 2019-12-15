@@ -6,35 +6,9 @@
 ## **PROTOCOLS**
 
 ## Player {#Player}
-*Defined in [fuchsia.media.playback/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/player.fidl#16)*
+*Defined in [fuchsia.media.playback/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/player.fidl#15)*
 
 <p>Plays media.</p>
-
-### CreateHttpSource {#CreateHttpSource}
-
-<p>Creates a source that reads from a URL.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>http_url</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>headers</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.oldhttp/'>fuchsia.net.oldhttp</a>/<a class='link' href='../fuchsia.net.oldhttp/#HttpHeader'>HttpHeader</a>&gt;?</code>
-            </td>
-        </tr><tr>
-            <td><code>source_request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#Source'>Source</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
 
 ### CreateFileSource {#CreateFileSource}
 
@@ -176,28 +150,6 @@ pending, the request channel is closed.</p>
             <td><code>returned_source_request</code></td>
             <td>
                 <code>request&lt;<a class='link' href='#Source'>Source</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-### SetHttpSource {#SetHttpSource}
-
-<p>Sets an HTTP URL to read from. The provided headers are added to each
-HTTP request issued to the URL.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>http_url</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>headers</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.oldhttp/'>fuchsia.net.oldhttp</a>/<a class='link' href='../fuchsia.net.oldhttp/#HttpHeader'>HttpHeader</a>&gt;?</code>
             </td>
         </tr></table>
 
@@ -385,35 +337,9 @@ changes thereafter.</p>
         </tr></table>
 
 ## SourceManager {#SourceManager}
-*Defined in [fuchsia.media.playback/source_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/source_manager.fidl#13)*
+*Defined in [fuchsia.media.playback/source_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/source_manager.fidl#12)*
 
 <p>Manages sources on behalf of a Player.</p>
-
-### CreateHttpSource {#CreateHttpSource}
-
-<p>Creates a source that reads from a URL.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>http_url</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>headers</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='../fuchsia.net.oldhttp/'>fuchsia.net.oldhttp</a>/<a class='link' href='../fuchsia.net.oldhttp/#HttpHeader'>HttpHeader</a>&gt;?</code>
-            </td>
-        </tr><tr>
-            <td><code>source_request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#Source'>Source</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
 
 ### CreateFileSource {#CreateFileSource}
 
@@ -561,7 +487,7 @@ pending, the request channel is closed.</p>
 
 
 ## Source {#Source}
-*Defined in [fuchsia.media.playback/source_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/source_manager.fidl#54)*
+*Defined in [fuchsia.media.playback/source_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/source_manager.fidl#48)*
 
 <p>A source of content that may be used by a player.</p>
 
@@ -581,7 +507,7 @@ pending, the request channel is closed.</p>
         </tr></table>
 
 ## ElementarySource {#ElementarySource}
-*Defined in [fuchsia.media.playback/source_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/source_manager.fidl#61)*
+*Defined in [fuchsia.media.playback/source_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/source_manager.fidl#55)*
 
 <p><code>Source</code> variant for providing elementary streams directly to the player.</p>
 
@@ -662,7 +588,7 @@ to this <code>ElementarySource</code> even after a channel is consumed by a call
 ## **STRUCTS**
 
 ### PlayerStatus {#PlayerStatus}
-*Defined in [fuchsia.media.playback/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/player.fidl#52)*
+*Defined in [fuchsia.media.playback/player.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/player.fidl#46)*
 
 
 
@@ -715,7 +641,7 @@ to this <code>ElementarySource</code> even after a channel is consumed by a call
             <td>
                 <code>bool</code>
             </td>
-            <td><p>Indicates whether the player is ready to play. After <code>SetHttpSource</code>,
+            <td><p>Indicates whether the player is ready to play. After
 <code>SetFileSource</code> or <code>SourceManager.SetSource</code> is called, this value is
 false until the player is fully prepared to play the content from the
 source.</p>
@@ -831,7 +757,7 @@ general means of dismissing a problem.</p>
 </table>
 
 ### SourceStatus {#SourceStatus}
-*Defined in [fuchsia.media.playback/source_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/source_manager.fidl#97)*
+*Defined in [fuchsia.media.playback/source_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.media.playback/source_manager.fidl#91)*
 
 
 
