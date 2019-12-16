@@ -305,9 +305,42 @@ Note: This does not remove a device bond, see Control::Forget.</p>
             </td>
         </tr></table>
 
+### Pair {#Pair}
+
+<p>Initiate a pairing to the remote <code>id</code> with the given <code>options</code>. Returns an error
+variant of fuchsia.bluetooth.Status if no connected peer with <code>id</code> is found or the pairing
+procedure fails. If already paired, this will do nothing unless the pairing is over LE and
+the PairingOptions.le_security_level is more secure than the current security level.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>id</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#PeerId'>PeerId</a></code>
+            </td>
+        </tr><tr>
+            <td><code>options</code></td>
+            <td>
+                <code><a class='link' href='#PairingOptions'>PairingOptions</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Status'>Status</a></code>
+            </td>
+        </tr></table>
+
 ### Forget {#Forget}
 
-<p>Forgets <code>device_id</code> completely, removing all bonding information.
+<p>Forget <code>device_id</code> completely, removing all bonding information.
 This will disconnect a device if it is connected.</p>
 
 #### Request
@@ -1208,6 +1241,29 @@ Type: <code>uint32</code>
 </td>
         </tr></table>
 
+### PairingSecurityLevel {#PairingSecurityLevel}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.bluetooth.control/pairing_options.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.control/pairing_options.fidl#9)*
+
+<p>The security level required for this pairing - corresponds to the security
+levels defined in the Security Manager Protocol in Vol 3, Part H, Section 2.3.1</p>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>ENCRYPTED</code></td>
+            <td><code>1</code></td>
+            <td><p>Encrypted without MITM protection (unauthenticated)</p>
+</td>
+        </tr><tr>
+            <td><code>AUTHENTICATED</code></td>
+            <td><code>2</code></td>
+            <td><p>Encrypted with MITM protection (authenticated), although this level of security does not
+fully protect against passive eavesdroppers</p>
+</td>
+        </tr></table>
+
 ### Appearance {#Appearance}
 Type: <code>uint16</code>
 
@@ -1458,6 +1514,51 @@ Type: <code>uint32</code>
         </tr></table>
 
 
+
+## **TABLES**
+
+### PairingOptions {#PairingOptions}
+
+
+*Defined in [fuchsia.bluetooth.control/pairing_options.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.bluetooth.control/pairing_options.fidl#20)*
+
+<p>Parameters that give a caller more fine-grained control over the pairing process. All of the
+fields of this table are optional and pairing can still succeed if none of them are set.</p>
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>le_security_level</code></td>
+            <td>
+                <code><a class='link' href='#PairingSecurityLevel'>PairingSecurityLevel</a></code>
+            </td>
+            <td><p>Only relevant for LE. If present, determines the Security Manager security level to pair
+with. If not present, defaults to PairingSecurityLevel.AUTHENTICATED.</p>
+</td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>non_bondable</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td><p>If not present or false, the pairing will default to bondable mode. Otherwise, setting this
+parameter to true will initiate a non-bondable pairing.</p>
+<p>TODO(fxb/42403): Only implemented for LE transport. Support this for BR/EDR.</p>
+</td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>transport</code></td>
+            <td>
+                <code><a class='link' href='#TechnologyType'>TechnologyType</a></code>
+            </td>
+            <td><p>If transport is LOW_ENERGY or CLASSIC, pairing will be performed over the transport
+corresponding to the specified technology, which must already be connected. If transport
+is not present or DUAL_MODE, the pairing will be performed over whichever transport is
+connected, and defaults to LE for dual-mode connections.</p>
+</td>
+        </tr></table>
 
 
 
