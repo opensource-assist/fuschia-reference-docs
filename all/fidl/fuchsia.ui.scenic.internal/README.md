@@ -9,7 +9,7 @@
 *Defined in [fuchsia.ui.scenic.internal/flatland.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#34)*
 
 <p>A protocol that provides information about a particular Link to the child client. Each Flatland
-instance may only specify a single root transform, so other objects in the graph can only be 
+instance may only specify a single root transform, so other objects in the graph can only be
 children of a single GraphLink. However, more than one GraphLink protocol may be active at a
 time for a particular Flatland instance. Specifically, when a Flatland instance is transitioning
 from using one Link to another, each Link will have a separate protocol instance, and more than
@@ -282,6 +282,30 @@ into their Graph through this Link object, and the object's associated Link prop
             <td><code>content_link</code></td>
             <td>
                 <code>request&lt;<a class='link' href='#ContentLink'>ContentLink</a>&gt;</code>
+            </td>
+        </tr></table>
+
+
+
+### SetLinkOnTransform {#SetLinkOnTransform}
+
+<p>Setting a Link on a Transform makes the content from the Link visible in the render tree
+as long as the Transform is visible from the root Transform. The contents of the Link will
+be rendered before, and therefore &quot;behind&quot;, any content attached to the descendants of the
+Transform.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>transform_id</code></td>
+            <td>
+                <code><a class='link' href='#TransformId'>TransformId</a></code>
+            </td>
+        </tr><tr>
+            <td><code>link_id</code></td>
+            <td>
+                <code><a class='link' href='#LinkId'>LinkId</a></code>
             </td>
         </tr></table>
 
@@ -593,7 +617,7 @@ LayoutInfo.</p>
             <td>
                 <code>uint64</code></td>
             <td><p>A user-defined identifier for a particular transform. See CreateTransform() and
-ReleaseTransform() for more information. </p>
+ReleaseTransform() for more information.</p>
 </td>
         </tr><tr id="LinkId">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic.internal/flatland.fidl#81">LinkId</a></td>
