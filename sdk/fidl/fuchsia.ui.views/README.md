@@ -5,6 +5,55 @@
 
 ## **PROTOCOLS**
 
+## Focuser {#Focuser}
+*Defined in [fuchsia.ui.views/focuser.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.views/focuser.fidl#17)*
+
+<p>A method of programmatically transferring view focus.</p>
+<p>The protocol client has implicit access to a requestor ViewRef, which is
+used as the basis for request authority.</p>
+
+### RequestFocus {#RequestFocus}
+
+<p>Asks the server to transfer focus to the view specified by |view_ref|,
+with the authority of the requestor ViewRef. Such a request may be
+honored or denied.</p>
+<p>If the request was honored, and it triggers a focus change, a FocusEvent
+(with focused=true) is issued to the newly-focused view, and a
+FocusEvent (with focused=false) is issued to the previous view.</p>
+<p>The result callback indicates that the request was received and honored.
+It does not guarantee that the requested view actually received a
+FocusEvent in time.</p>
+<p>The request may be denied for many reasons, for example:</p>
+<ul>
+<li>if |view_ref| is invalid</li>
+<li>if there is no view backed by |view_ref|</li>
+<li>if there is no requestor ViewRef accessible to Focuser</li>
+<li>if the requestor ViewRef lacks authority over |view_ref|'s view</li>
+<li>if |view_ref|'s view is not hittable or may not receive focus
+etc. A denied request is indicated with a Error.</li>
+</ul>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>view_ref</code></td>
+            <td>
+                <code><a class='link' href='#ViewRef'>ViewRef</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#Focuser_RequestFocus_Result'>Focuser_RequestFocus_Result</a></code>
+            </td>
+        </tr></table>
+
 ## View {#View}
 *Defined in [fuchsia.ui.views/view.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.views/view.fidl#79)*
 
@@ -102,6 +151,17 @@ with an error.</p>
 
 
 ## **STRUCTS**
+
+### Focuser_RequestFocus_Response {#Focuser_RequestFocus_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
 
 ### ViewRef {#ViewRef}
 *Defined in [fuchsia.ui.views/view.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.views/view.fidl#120)*
@@ -217,6 +277,24 @@ create a <code>ViewHolder</code> resource using the corresponding <code>ViewHold
 
 
 
+## **ENUMS**
+
+### Error {#Error}
+Type: <code>uint32</code>
+
+*Defined in [fuchsia.ui.views/focuser.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.views/focuser.fidl#8)*
+
+<p>Problematic situations that occur on Focuser.RequestFocus.</p>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>DENIED</code></td>
+            <td><code>1</code></td>
+            <td><p>Value returned when RequestFocus is denied.</p>
+</td>
+        </tr></table>
+
 
 
 
@@ -234,6 +312,25 @@ create a <code>ViewHolder</code> resource using the corresponding <code>ViewHold
             <td><code>empty</code></td>
             <td>
                 <code>int32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Focuser_RequestFocus_Result {#Focuser_RequestFocus_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#Focuser_RequestFocus_Response'>Focuser_RequestFocus_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
             </td>
             <td></td>
         </tr></table>
