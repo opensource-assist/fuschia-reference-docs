@@ -215,7 +215,8 @@ Type: <code>uint32</code>
         </tr><tr>
             <td><code>SECONDARY</code></td>
             <td><code>2</code></td>
-            <td><p>The secondary action associated with the element. This may correspond to a long press (touchscreens) or right click (mouse).</p>
+            <td><p>The secondary action associated with the element. This may correspond to a long press
+(touchscreens) or right click (mouse).</p>
 </td>
         </tr><tr>
             <td><code>SET_FOCUS</code></td>
@@ -227,12 +228,17 @@ Type: <code>uint32</code>
             <td><code>4</code></td>
             <td><p>Set the element's value.</p>
 </td>
+        </tr><tr>
+            <td><code>SHOW_ON_SCREEN</code></td>
+            <td><code>5</code></td>
+            <td><p>Scroll node to make it visible.</p>
+</td>
         </tr></table>
 
 ### Role {#Role}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#22)*
+*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#25)*
 
 <p>Represents a role of an element on a UI.</p>
 
@@ -268,7 +274,7 @@ Type: <code>uint32</code>
 ### CheckedState {#CheckedState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#53)*
+*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#56)*
 
 <p>Represents the state of a UI checkbox.</p>
 
@@ -303,7 +309,7 @@ Type: <code>uint32</code>
 ### Attributes {#Attributes}
 
 
-*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#39)*
+*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#42)*
 
 <p>An attribute is an essential property to describe an element. Unlike states, attributes do not
 change over the life of an element.
@@ -344,7 +350,7 @@ for truncating the label.</p>
 ### States {#States}
 
 
-*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#67)*
+*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#70)*
 
 <p>A state is a dynamic property of an element that may change in response to
 user action or automated processes. Thus, they are different from attributes
@@ -399,7 +405,7 @@ client is responsible for truncating.</p>
 ### Node {#Node}
 
 
-*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#88)*
+*Defined in [fuchsia.accessibility.semantics/node.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.accessibility.semantics/node.fidl#91)*
 
 <p>The Node represents a semantic element on an interface. This may
 be a button, a text field, a checkbox or any element that has a relevant
