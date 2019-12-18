@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Provider {#Provider}
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#181)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#173)*
 
 <p>Provider for display controllers.</p>
 <p>The driver supports two simultaneous clients - a primary client and a virtcon
@@ -85,7 +85,7 @@ will return <code>ZX_ERR_ALREADY_BOUND</code>.</p>
         </tr></table>
 
 ## Controller {#Controller}
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#219)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#211)*
 
 <p>Interface for accessing the display hardware.</p>
 <p>A display configuration can be separated into two parts: the layer layout and
@@ -1067,33 +1067,8 @@ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture</p>
         </tr>
 </table>
 
-### ImagePlane {#ImagePlane}
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#71)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>byte_offset</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>bytes_per_row</code></td>
-            <td>
-                <code>uint32</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### ImageConfig {#ImageConfig}
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#78)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#72)*
 
 
 
@@ -1128,18 +1103,11 @@ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture</p>
             </td>
             <td></td>
             <td><a class='link' href='#typeSimple'>typeSimple</a></td>
-        </tr><tr>
-            <td><code>planes</code></td>
-            <td>
-                <code>[4]</code>
-            </td>
-            <td></td>
-            <td>No default</td>
         </tr>
 </table>
 
 ### Frame {#Frame}
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#119)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#111)*
 
 
 
@@ -1178,7 +1146,7 @@ Returns ZX_ERR_NOT_SUPPORTED if controller does not support capture</p>
 </table>
 
 ### ClientCompositionOp {#ClientCompositionOp}
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#170)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#162)*
 
 
 
@@ -1238,7 +1206,7 @@ Type: <code>uint8</code>
 ### Transform {#Transform}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#99)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#91)*
 
 
 
@@ -1280,7 +1248,7 @@ Type: <code>uint8</code>
 ### AlphaMode {#AlphaMode}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#110)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#102)*
 
 
 
@@ -1302,7 +1270,7 @@ Type: <code>uint8</code>
 ### ClientCompositionOpcode {#ClientCompositionOpcode}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#128)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#120)*
 
 
 
@@ -1344,7 +1312,7 @@ Type: <code>uint8</code>
 ### ConfigResult {#ConfigResult}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#156)*
+*Defined in [fuchsia.hardware.display/display-controller.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#148)*
 
 
 
@@ -1487,7 +1455,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr id="typeSimple">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#94">typeSimple</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#86">typeSimple</a></td>
             <td>
                     <code>0</code>
                 </td>
@@ -1495,7 +1463,7 @@ Type: <code>uint32</code>
             <td></td>
         </tr>
     <tr id="typeCapture">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#96">typeCapture</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/zircon/system/fidl/fuchsia-hardware-display/display-controller.fidl#88">typeCapture</a></td>
             <td>
                     <code>10</code>
                 </td>
