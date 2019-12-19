@@ -286,14 +286,14 @@ Type: <code>uint32</code>
             <td><p>Used when no data is entered or the element is not a check box.</p>
 </td>
         </tr><tr>
-            <td><code>CHECKED</code></td>
+            <td><code>TRUE</code></td>
             <td><code>2</code></td>
-            <td><p>Checked</p>
+            <td><p>True</p>
 </td>
         </tr><tr>
-            <td><code>UNCHECKED</code></td>
+            <td><code>FALSE</code></td>
             <td><code>3</code></td>
-            <td><p>Unchecked</p>
+            <td><p>False</p>
 </td>
         </tr><tr>
             <td><code>MIXED</code></td>
