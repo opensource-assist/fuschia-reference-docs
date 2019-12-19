@@ -2637,33 +2637,8 @@ using content contributed from many different processes.</p>
         </tr>
 </table>
 
-### ViewArgs2 {#ViewArgs2}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#123)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>token</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.views/'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/#ViewToken'>ViewToken</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>debug_name</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### ViewArgs3 {#ViewArgs3}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#145)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#140)*
 
 
 
@@ -2718,7 +2693,7 @@ must be unique - do not clone it.</p>
 </table>
 
 ### ViewHolderArgs {#ViewHolderArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#163)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#158)*
 
 
 
@@ -2749,33 +2724,8 @@ using content contributed from many different processes.</p>
         </tr>
 </table>
 
-### ViewHolderArgs2 {#ViewHolderArgs2}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#168)*
-
-
-
-
-
-<table>
-    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>token</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.ui.views/'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/#ViewHolderToken'>ViewHolderToken</a></code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>debug_name</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-            <td></td>
-            <td>No default</td>
-        </tr>
-</table>
-
 ### CompositorArgs {#CompositorArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#176)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#166)*
 
 
 
@@ -2795,7 +2745,7 @@ attached <code>Display</code>, if any.  If no display is attached, nothing is re
 </table>
 
 ### DisplayCompositorArgs {#DisplayCompositorArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#183)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#173)*
 
 
 
@@ -2815,7 +2765,7 @@ presented on a display.</p>
 </table>
 
 ### ImagePipeCompositorArgs {#ImagePipeCompositorArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#190)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#180)*
 
 
 
@@ -2835,7 +2785,7 @@ presented on an image-pipe.</p>
 </table>
 
 ### LayerStackArgs {#LayerStackArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#201)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#191)*
 
 
 
@@ -2861,7 +2811,7 @@ affect the output).</p>
 </table>
 
 ### LayerArgs {#LayerArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#220)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#210)*
 
 
 
@@ -2894,7 +2844,7 @@ A layer is not drawn unless it has a camera, texture, or color.</p>
 </table>
 
 ### SceneArgs {#SceneArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#231)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#221)*
 
 
 
@@ -2919,7 +2869,7 @@ A layer is not drawn unless it has a camera, texture, or color.</p>
 </table>
 
 ### CameraArgs {#CameraArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#243)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#233)*
 
 
 
@@ -2945,7 +2895,7 @@ achieved by setting a Renderer to use the camera.</p>
 </table>
 
 ### StereoCameraArgs {#StereoCameraArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#254)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#244)*
 
 
 
@@ -2970,7 +2920,7 @@ Additional supported commands:</p>
 </table>
 
 ### RendererArgs {#RendererArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#264)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#254)*
 
 
 
@@ -2994,7 +2944,7 @@ Additional supported commands:</p>
 </table>
 
 ### AmbientLightArgs {#AmbientLightArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#274)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#264)*
 
 
 
@@ -3018,7 +2968,7 @@ in all directions.</p>
 </table>
 
 ### DirectionalLightArgs {#DirectionalLightArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#289)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#279)*
 
 
 
@@ -3046,7 +2996,7 @@ primary direction.</p>
 </table>
 
 ### PointLightArgs {#PointLightArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#303)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#293)*
 
 
 
@@ -3074,7 +3024,7 @@ values for artistic effect.</p>
 </table>
 
 ### MaterialArgs {#MaterialArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#314)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#304)*
 
 
 
@@ -3099,7 +3049,7 @@ The texture can be an Image or ImagePipe.</li>
 </table>
 
 ### VariableArgs {#VariableArgs}
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#320)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#310)*
 
 
 
@@ -4083,7 +4033,7 @@ Default behavior.</p>
 ### ImportSpec {#ImportSpec}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#330)*
+*Defined in [fuchsia.ui.gfx/resources.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.gfx/resources.fidl#320)*
 
 <p>Describes an exported resource that is to be imported by an
 ImportResourceCmd.</p>
@@ -4810,15 +4760,15 @@ Use <code>SetEventMaskCmd</code> to enable event delivery for a resource.</p>
             </td>
             <td></td>
         </tr><tr>
-            <td><code>view2</code></td>
+            <td><code></code></td>
             <td>
-                <code><a class='link' href='#ViewArgs2'>ViewArgs2</a></code>
+                <code></code>
             </td>
             <td></td>
         </tr><tr>
-            <td><code>view_holder2</code></td>
+            <td><code></code></td>
             <td>
-                <code><a class='link' href='#ViewHolderArgs2'>ViewHolderArgs2</a></code>
+                <code></code>
             </td>
             <td></td>
         </tr><tr>

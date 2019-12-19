@@ -444,6 +444,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.developer.remotecontrol/index">fuchsia.developer.remotecontrol</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.developer.tiles/index">fuchsia.developer.tiles</a></td>
     <td></td>
 </tr>
@@ -1380,6 +1384,10 @@
  commands, the Validator program will analyze the VMO contents for
  correctness and memory-packing efficiency.)
 </td>
+</tr>
+<tr>
+    <td><a href="test.mixer/index">test.mixer</a></td>
+    <td></td>
 </tr>
 <tr>
     <td><a href="test.modular.agent/index">test.modular.agent</a></td>

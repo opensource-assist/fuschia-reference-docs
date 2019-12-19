@@ -110,7 +110,7 @@ https://unicode.org/repos/cldr/trunk/common/bcp47/calendar.xml).</p>
 </table>
 
 ### TimeZoneId {#TimeZoneId}
-*Defined in [fuchsia.intl/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.intl/intl.fidl#51)*
+*Defined in [fuchsia.intl/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.intl/intl.fidl#54)*
 
 
 
@@ -136,20 +136,22 @@ https://unicode.org/repos/cldr/trunk/common/bcp47/calendar.xml).</p>
 ### TemperatureUnit {#TemperatureUnit}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.intl/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.intl/intl.fidl#57)*
+*Defined in [fuchsia.intl/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.intl/intl.fidl#60)*
 
-<p>Selection of temperature unit.</p>
+<p>Selection of <a href="https://en.wikipedia.org/wiki/Degree_(temperature)">temperature units</a>.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
             <td><code>CELSIUS</code></td>
             <td><code>0</code></td>
-            <td></td>
+            <td><p>The temperature should be formatted to show temperature in degrees Celsius.</p>
+</td>
         </tr><tr>
             <td><code>FAHRENHEIT</code></td>
             <td><code>1</code></td>
-            <td></td>
+            <td><p>The temperature should be formatted to show temperature in degrees Fahrenheit.</p>
+</td>
         </tr></table>
 
 
@@ -180,7 +182,7 @@ Type: <code>uint32</code>
 ### Profile {#Profile}
 
 
-*Defined in [fuchsia.intl/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.intl/intl.fidl#69)*
+*Defined in [fuchsia.intl/intl.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.intl/intl.fidl#74)*
 
 <p>A collection of ranked internationalization properties.</p>
 <p>There is no implied origin for this information; it might come from a user account, device
@@ -197,7 +199,9 @@ first-day-of-week, time zone) are denormalized into the locale IDs in <code>loca
             <td>
                 <code>vector&lt;<a class='link' href='#LocaleId'>LocaleId</a>&gt;</code>
             </td>
-            <td><p>Ranked list of locales (in descending order).</p>
+            <td><p>Ranked list of locales (in descending order of preference).  The vector will always
+contain at least one element.  For example, locales = [ LocaleId(&quot;en-US&quot;) ] is valid, but
+locales = [], or locales = <unset> is not.</p>
 </td>
         </tr><tr>
             <td>2</td>
@@ -205,9 +209,12 @@ first-day-of-week, time zone) are denormalized into the locale IDs in <code>loca
             <td>
                 <code>vector&lt;<a class='link' href='#CalendarId'>CalendarId</a>&gt;</code>
             </td>
-            <td><p>Ranked list of calendars (in descending order). The first entry is the primary calendar, and
-will be equal to the calendar indicated in <code>locales</code>.
-The list is intended for use by applications that can display multiple calendar systems.</p>
+            <td><p>Ranked list of calendars (in descending order of preference).
+The first entry is the primary calendar, and will be equal to the calendar indicated
+in <code>locales</code>.
+The vector will always contain at least one element.
+The list allows multiple ranked preferences, and is intended for use
+by applications that can display multiple calendar systems.</p>
 </td>
         </tr><tr>
             <td>3</td>
@@ -219,7 +226,10 @@ The list is intended for use by applications that can display multiple calendar 
 which should be used by default for formatting dates and times; it will be equal to the
 calendar indicated in <code>locales</code>.
 The list is intended for use by applications that can display multiple time zones, e.g.
-a world clock.</p>
+a world clock.
+The vector will always contain at least one element.
+On Fuchsia, the default time zone is always <code>DEFAULT_TIME_ZONE_ID</code> when
+no more specific time zones have been defined or selected.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -227,7 +237,9 @@ a world clock.</p>
             <td>
                 <code><a class='link' href='#TemperatureUnit'>TemperatureUnit</a></code>
             </td>
-            <td><p>Selected temperature unit.</p>
+            <td><p>Selected temperature unit. The unit is always reported: if there is no
+setting in the current environment, the default value of CELSIUS is
+used.</p>
 </td>
         </tr></table>
 
@@ -238,6 +250,19 @@ a world clock.</p>
 
 
 
+
+## **CONSTANTS**
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="DEFAULT_TIME_ZONE_ID">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.intl/intl.fidl#51">DEFAULT_TIME_ZONE_ID</a></td>
+            <td><code>UTC</code></td>
+                    <td><code>String</code></td>
+            <td><p>This is the time zone reported when no time zones have been set.</p>
+</td>
+        </tr>
+    
+</table>
 
 
 

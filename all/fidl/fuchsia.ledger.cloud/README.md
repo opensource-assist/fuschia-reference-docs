@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## CloudProvider {#CloudProvider}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#44)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#44)*
 
 <p>Cloud service that powers cloud sync for a single user. Top-level interface
 of this file.</p>
@@ -74,7 +74,7 @@ of this file.</p>
         </tr></table>
 
 ## DeviceSet {#DeviceSet}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#57)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#57)*
 
 <p>Cloud registry of devices participating in cloud sync.</p>
 <p>Closing the client connection to DeviceSet disconnects all watchers set on
@@ -194,7 +194,7 @@ cloud has been erased.</p>
         </tr></table>
 
 ## DeviceSetWatcher {#DeviceSetWatcher}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#89)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#89)*
 
 <p>Watcher for push notifications from the cloud registry of devices
 participating in cloud sync.</p>
@@ -233,7 +233,7 @@ further calls are made on the watcher after this is called.</p>
 
 
 ## PageCloud {#PageCloud}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#291)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#291)*
 
 <p>Handler for cloud sync of a single page.</p>
 <p>Implementation of this class manages a <em>commit log</em>, which is an append-only
@@ -509,7 +509,7 @@ rules when a deletion tombstone is received. If the state is:</li>
         </tr></table>
 
 ## PageCloudWatcher {#PageCloudWatcher}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#370)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#370)*
 
 <p>Watcher for push notifications from cloud sync of a single page.</p>
 
@@ -599,7 +599,7 @@ can then re-establish the watcher by calling SetWatcher() again.</p>
 ## **STRUCTS**
 
 ### CommitPack {#CommitPack}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#103)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#103)*
 
 
 
@@ -618,7 +618,7 @@ can then re-establish the watcher by calling SetWatcher() again.</p>
 </table>
 
 ### PositionToken {#PositionToken}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#109)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#109)*
 
 
 
@@ -638,7 +638,7 @@ a PageCloud instance.</p>
 </table>
 
 ### EmptyPage {#EmptyPage}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#144)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#144)*
 
 
 
@@ -649,7 +649,7 @@ a PageCloud instance.</p>
 </table>
 
 ### Commits {#Commits}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#190)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#190)*
 
 
 
@@ -668,7 +668,7 @@ a PageCloud instance.</p>
 </table>
 
 ### References {#References}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#195)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#195)*
 
 
 
@@ -687,7 +687,7 @@ a PageCloud instance.</p>
 </table>
 
 ### DiffPack {#DiffPack}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#200)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#200)*
 
 
 
@@ -706,7 +706,7 @@ a PageCloud instance.</p>
 </table>
 
 ### ReferencePack {#ReferencePack}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#207)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#207)*
 
 
 
@@ -726,7 +726,7 @@ a PageCloud instance.</p>
 </table>
 
 ### ClockPack {#ClockPack}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#276)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#276)*
 
 
 
@@ -752,7 +752,7 @@ We use a buffer to as the number of devices interested in a page is not bounded.
 ### Status {#Status}
 Type: <code>int32</code>
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#25)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#25)*
 
 <p>Response status for cloud provider operations.</p>
 
@@ -803,7 +803,7 @@ Type: <code>int32</code>
 ### Operation {#Operation}
 Type: <code>uint8</code>
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#184)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#184)*
 
 
 
@@ -825,7 +825,7 @@ Type: <code>uint8</code>
 ### Commit {#Commit}
 
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#114)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#114)*
 
 <p>A commit as seen by the cloud.</p>
 
@@ -870,7 +870,7 @@ Ledger.</p>
 ### Diff {#Diff}
 
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#153)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#153)*
 
 <p>A diff from a base state to a commit.</p>
 <p>Diffs are sequences of insertions and deletions. Updates are encoded as a
@@ -905,7 +905,7 @@ cloud, or the empty page.</p>
 ### DiffEntry {#DiffEntry}
 
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#166)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#166)*
 
 <p>An entry in a Diff.</p>
 
@@ -954,7 +954,7 @@ field. The cloud provider may always omit this field in diffs.</p>
 ### ClockEntry {#ClockEntry}
 
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#233)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#233)*
 
 <p>ClockEntry uniquely identifies a commit, as a way to indicate the state of the page on a device.</p>
 
@@ -981,7 +981,7 @@ field. The cloud provider may always omit this field in diffs.</p>
 ### TombstoneEntry {#TombstoneEntry}
 
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#240)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#240)*
 
 <p>Tombstone entry for a device clock.</p>
 
@@ -993,7 +993,7 @@ field. The cloud provider may always omit this field in diffs.</p>
 ### DeletionEntry {#DeletionEntry}
 
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#244)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#244)*
 
 <p>Deletion request for a device clock.</p>
 
@@ -1005,7 +1005,7 @@ field. The cloud provider may always omit this field in diffs.</p>
 ### DeviceClock {#DeviceClock}
 
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#258)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#258)*
 
 <p>Clock for a single device, active or inactive.</p>
 
@@ -1042,7 +1042,7 @@ same page on the same device. It is defined by the device only and only used for
 ### Clock {#Clock}
 
 
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#269)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#269)*
 
 <p>Full clock, representing the state of the device fleet for a given page.</p>
 
@@ -1066,7 +1066,7 @@ same page on the same device. It is defined by the device only and only used for
 ## **XUNIONS**
 
 ### PageState {#PageState}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#136)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#136)*
 
 <p>Specification of a page state used as base for a diff.</p>
 
@@ -1089,7 +1089,7 @@ identifier.</p>
         </tr></table>
 
 ### DeviceEntry {#DeviceEntry}
-*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#248)*
+*Defined in [fuchsia.ledger.cloud/cloud_provider.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#248)*
 
 <p>DeviceEntry contains clock entries for an active device.</p>
 
@@ -1124,25 +1124,25 @@ identifier.</p>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="CommitIdentifier">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#13">CommitIdentifier</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#13">CommitIdentifier</a></td>
             <td>
                 <code>vector</code></td>
             <td><p>Identifier for a commit, controlled by Ledger.</p>
 </td>
         </tr><tr id="ObjectIdentifier">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#16">ObjectIdentifier</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#16">ObjectIdentifier</a></td>
             <td>
                 <code>vector</code></td>
             <td><p>Identifier for an object, controlled by Ledger.</p>
 </td>
         </tr><tr id="EntryIdentifier">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#19">EntryIdentifier</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#19">EntryIdentifier</a></td>
             <td>
                 <code>vector</code></td>
             <td><p>Identifier for an entry, controlled by Ledger.</p>
 </td>
         </tr><tr id="Fingerprint">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#22">Fingerprint</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.cloud/cloud_provider.fidl#22">Fingerprint</a></td>
             <td>
                 <code>vector</code></td>
             <td><p>Fingerprint, controlled by Ledger and used to watch for cloud erasure.</p>

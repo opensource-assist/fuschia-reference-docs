@@ -219,6 +219,8 @@ toc:
   path: /reference/fidl/fuchsia.debugdata
 - title: fuchsia.deprecatedtimezone
   path: /reference/fidl/fuchsia.deprecatedtimezone
+- title: fuchsia.developer.remotecontrol
+  path: /reference/fidl/fuchsia.developer.remotecontrol
 - title: fuchsia.developer.tiles
   path: /reference/fidl/fuchsia.developer.tiles
 - title: fuchsia.device
@@ -679,6 +681,8 @@ toc:
   path: /reference/fidl/test.fuchsia.service.foo
 - title: test.inspect.validate
   path: /reference/fidl/test.inspect.validate
+- title: test.mixer
+  path: /reference/fidl/test.mixer
 - title: test.modular.agent
   path: /reference/fidl/test.modular.agent
 - title: test.modular.dart

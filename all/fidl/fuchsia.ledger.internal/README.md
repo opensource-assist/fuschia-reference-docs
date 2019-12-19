@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## LedgerRepositoryFactory {#LedgerRepositoryFactory}
-*Defined in [fuchsia.ledger.internal/internal.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/bin/fidl/internal.fidl#14)*
+*Defined in [fuchsia.ledger.internal/internal.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.internal/internal.fidl#14)*
 
 
 ### Sync {#Sync}
@@ -54,7 +54,7 @@
 
 
 ## LedgerController {#LedgerController}
-*Defined in [fuchsia.ledger.internal/internal.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/bin/fidl/internal.fidl#44)*
+*Defined in [fuchsia.ledger.internal/internal.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.internal/internal.fidl#44)*
 
 
 ### Terminate {#Terminate}
@@ -68,7 +68,7 @@
 
 
 ## LedgerRepository {#LedgerRepository}
-*Defined in [fuchsia.ledger.internal/internal.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/bin/fidl/internal.fidl#49)*
+*Defined in [fuchsia.ledger.internal/internal.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger.internal/internal.fidl#49)*
 
 
 ### Sync {#Sync}

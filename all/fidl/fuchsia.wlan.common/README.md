@@ -211,6 +211,10 @@ Type: <code>uint32</code>
             <td><code>4</code></td>
             <td></td>
         </tr><tr>
+            <td><code>PROBE_RESP_OFFLOAD</code></td>
+            <td><code>5</code></td>
+            <td></td>
+        </tr><tr>
             <td><code>TEMP_DIRECT_SME_CHANNEL</code></td>
             <td><code>3141592</code></td>
             <td><p>Temporary feature flag for incrementally transitioning drivers to use

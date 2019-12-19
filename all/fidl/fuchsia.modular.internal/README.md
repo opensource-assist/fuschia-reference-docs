@@ -213,7 +213,7 @@ is to also log out the users from the session.</p>
 ### StoryData {#StoryData}
 
 
-*Defined in [fuchsia.modular.internal/story_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.internal/story_data.fidl#12)*
+*Defined in [fuchsia.modular.internal/story_data.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.modular.internal/story_data.fidl#11)*
 
 <p>Metadata and summary information about a single story.  Does not contain the
 data necessary to run a story: see story_model.fidl for that.</p>
@@ -249,7 +249,7 @@ data necessary to run a story: see story_model.fidl for that.</p>
             <td>4</td>
             <td><code>story_page_id</code></td>
             <td>
-                <code><a class='link' href='../fuchsia.ledger/'>fuchsia.ledger</a>/<a class='link' href='../fuchsia.ledger/#PageId'>PageId</a></code>
+                <code>string</code>
             </td>
             <td><p>Page id on the user's ledger which stores story information.</p>
 </td>

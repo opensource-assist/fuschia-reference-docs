@@ -190,9 +190,9 @@ The instance still exists in the parent's realm but will soon be removed.
 TODO(fxb/39417): Ensure the instance is stopped before this event.</p>
 </td>
         </tr><tr>
-            <td><code>ROOT_COMPONENT_RESOLVED</code></td>
+            <td><code>RESOLVE_INSTANCE</code></td>
             <td><code>4</code></td>
-            <td><p>The root component instance's declaration was resolved successfully for the first time.</p>
+            <td><p>An instance's declaration was resolved successfully for the first time.</p>
 </td>
         </tr><tr>
             <td><code>ROUTE_CAPABILITY</code></td>

@@ -400,6 +400,42 @@ disconnected.</li>
             </td>
         </tr></table>
 
+### Pair {#Pair}
+
+<p>Initiates pairing to the peer with the supplied <code>id</code> and <code>options</code>. Returns an error
+variant of fuchsia.bluetooth.Status if no connected peer with <code>id</code> is found or the pairing
+procedure fails. If already paired, this will do nothing unless the pairing is over LE and
+the PairingOptions.le_security_level is more secure than the current security level.</p>
+<p>NOTE: This is intended to satisfy test scenarios that require pairing procedures to be
+initiated without relying on service access. In normal operation, Bluetooth security is
+enforced during service access.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>id</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#PeerId'>PeerId</a></code>
+            </td>
+        </tr><tr>
+            <td><code>options</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth.control/'>fuchsia.bluetooth.control</a>/<a class='link' href='../fuchsia.bluetooth.control/#PairingOptions'>PairingOptions</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>status</code></td>
+            <td>
+                <code><a class='link' href='../fuchsia.bluetooth/'>fuchsia.bluetooth</a>/<a class='link' href='../fuchsia.bluetooth/#Status'>Status</a></code>
+            </td>
+        </tr></table>
+
 ### Forget {#Forget}
 
 <p>Deletes a peer from the Bluetooth host. If the peer is connected, it will be disconnected,

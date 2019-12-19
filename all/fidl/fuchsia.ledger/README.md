@@ -6,7 +6,7 @@
 ## **PROTOCOLS**
 
 ## Syncable {#Syncable}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#34)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#34)*
 
 <p>Base interface for all services offered by the Ledger.</p>
 <p>In case of an unexpected error on one of the service offered by the Ledger,
@@ -31,7 +31,7 @@ service.</p>
     </table>
 
 ## Ledger {#Ledger}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#39)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#39)*
 
 
 ### Sync {#Sync}
@@ -117,7 +117,7 @@ resolved until this method is called again.</p>
 
 
 ## Page {#Page}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#89)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#89)*
 
 <p>A page is the smallest unit of syncable data.</p>
 
@@ -466,7 +466,7 @@ gets executed right away.</p>
         </tr></table>
 
 ## PageSnapshot {#PageSnapshot}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#252)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#252)*
 
 <p>The content of a page at a given time. Closing the connection to a <code>Page</code>
 interface closes all <code>PageSnapshot</code> interfaces it created. The contents
@@ -735,7 +735,7 @@ everything.</p>
         </tr></table>
 
 ## PageWatcher {#PageWatcher}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#338)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#338)*
 
 <p>Interface to watch changes to a page. The client will receive changes made by
 itself, as well as other clients or synced from other devices. The contents
@@ -787,7 +787,7 @@ finished.</p>
         </tr></table>
 
 ## ConflictResolverFactory {#ConflictResolverFactory}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#362)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#362)*
 
 <p>This interface lets clients control the conflict resolution policy of the
 ledger. It allows them to either use pre-defined policies, or provide their
@@ -842,7 +842,7 @@ or <code>CUSTOM</code>.</p>
 
 
 ## MergeResultProvider {#MergeResultProvider}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#445)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#445)*
 
 <p>A merge result provider, obtained from <code>ConflictResolver.Resolve()</code>. Can be
 used to retrieve data about the conflict, and provide the merge result. When
@@ -992,7 +992,7 @@ called <code>MergeResultProvider</code> interface cannot be used any more.</p>
 
 
 ## ConflictResolver {#ConflictResolver}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#510)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#510)*
 
 <p>Custom conflict resolver. If a <code>ConflictResolverFactory</code> is registered, and
 <code>ConflictResolverFactory.GetPolicy()</code> returns <code>AUTOMATIC_WITH_FALLBACK</code> or
@@ -1042,7 +1042,7 @@ of differences, i.e. conflicting keys, between the two versions.</p>
 
 
 ## SyncWatcher {#SyncWatcher}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#544)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#544)*
 
 <p>Watcher interface to be implemented by clients who wish to follow the
 synchronization status of their ledger. SyncStateChanged callback must be
@@ -1185,7 +1185,7 @@ called for new state change calls to be sent.</p>
 </table>
 
 ### PageId {#PageId}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#20)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#20)*
 
 
 
@@ -1204,7 +1204,7 @@ called for new state change calls to be sent.</p>
 </table>
 
 ### Reference {#Reference}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#69)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#69)*
 
 
 
@@ -1223,7 +1223,7 @@ called for new state change calls to be sent.</p>
 </table>
 
 ### Token {#Token}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#74)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#74)*
 
 
 
@@ -1242,7 +1242,7 @@ called for new state change calls to be sent.</p>
 </table>
 
 ### Entry {#Entry}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#217)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#217)*
 
 
 
@@ -1278,7 +1278,7 @@ contents.</p>
 </table>
 
 ### InlinedValue {#InlinedValue}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#227)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#227)*
 
 
 
@@ -1297,7 +1297,7 @@ contents.</p>
 </table>
 
 ### InlinedEntry {#InlinedEntry}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#232)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#232)*
 
 
 
@@ -1333,7 +1333,7 @@ contents.</p>
 </table>
 
 ### PageChange {#PageChange}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#321)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#321)*
 
 
 
@@ -1372,7 +1372,7 @@ the <code>timestamp</code> of a follow up change is greater than this one's.</p>
 </table>
 
 ### MergedValue {#MergedValue}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#412)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#412)*
 
 
 
@@ -1414,7 +1414,7 @@ ignored.</p>
 </table>
 
 ### DiffEntry {#DiffEntry}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#424)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#424)*
 
 
 
@@ -1457,7 +1457,7 @@ page.</p>
 </table>
 
 ### Value {#Value}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#436)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#436)*
 
 
 
@@ -1491,7 +1491,7 @@ value can be retrieved using a <code>Fetch()</code> call on a corresponding snap
 ### ConflictResolutionWaitStatus {#ConflictResolutionWaitStatus}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#80)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#80)*
 
 <p>The result of a wait for conflict resolution. See
 <code>Page.WaitForConflictResolution</code> for details.</p>
@@ -1514,7 +1514,7 @@ have been resolved.</p>
 ### Priority {#Priority}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#206)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#206)*
 
 <p>The synchronization priority of a reference.</p>
 
@@ -1538,7 +1538,7 @@ device has no internet connection at request time.</p>
 ### Error {#Error}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#242)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#242)*
 
 <p>Error returned by the different PageSnapshot methods.</p>
 
@@ -1561,7 +1561,7 @@ Type: <code>uint32</code>
 ### ResultState {#ResultState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#314)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#314)*
 
 
 
@@ -1587,7 +1587,7 @@ Type: <code>uint32</code>
 ### MergePolicy {#MergePolicy}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#372)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#372)*
 
 <p>Strategy to be used when resolving conflicts.</p>
 
@@ -1624,7 +1624,7 @@ above, even when commits to be merged change a disjoined set of keys.</p>
 ### ValueSource {#ValueSource}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#403)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#403)*
 
 <p>Source of the value used to resolve a conflict.</p>
 <p><code>DELETE</code> deletes the key; <code>NEW</code> creates a new value; <code>RIGHT</code>
@@ -1651,7 +1651,7 @@ Used by <code>MergedValue</code>.</p>
 ### SyncState {#SyncState}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#524)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#524)*
 
 <p>Synchronization state.</p>
 
@@ -1808,7 +1808,7 @@ setup)</li>
         </tr></table>
 
 ### BytesOrReference {#BytesOrReference}
-*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#392)*
+*Defined in [fuchsia.ledger/ledger.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#392)*
 
 <p>A value that is either small enough to be directly embedded in <code>bytes</code> or
 that is referenced by <code>reference</code>.</p>
@@ -1838,7 +1838,7 @@ that is referenced by <code>reference</code>.</p>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="PAGE_ID_SIZE">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#17">PAGE_ID_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#17">PAGE_ID_SIZE</a></td>
             <td>
                     <code>16</code>
                 </td>
@@ -1855,7 +1855,7 @@ that is referenced by <code>reference</code>.</p>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr id="Key">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ledger/ledger.fidl#14">Key</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/src/ledger/fidl/fuchsia.ledger/ledger.fidl#14">Key</a></td>
             <td>
                 <code>vector</code></td>
             <td><p>Type of the keys in a ledger Page.</p>

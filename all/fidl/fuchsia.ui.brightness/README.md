@@ -143,35 +143,12 @@ This will override the built-in brightness curve.</p>
 
 
 
-## ColorAdjustment {#ColorAdjustment}
+## ColorAdjustmentHandler {#ColorAdjustmentHandler}
 *Defined in [fuchsia.ui.brightness/color_adjustment.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_adjustment.fidl#11)*
 
-<p>Allows a presentation owner to register a handler for color adjustments.
-This API is implemented by the Brightness Manager and
-called by Root Presenter.</p>
-
-### RegisterColorAdjustmentHandler {#RegisterColorAdjustmentHandler}
-
-<p>Registers a handler for changes in the color adjustment configuration.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>handler</code></td>
-            <td>
-                <code><a class='link' href='#ColorAdjustmentHandler'>ColorAdjustmentHandler</a></code>
-            </td>
-        </tr></table>
-
-
-
-## ColorAdjustmentHandler {#ColorAdjustmentHandler}
-*Defined in [fuchsia.ui.brightness/color_adjustment.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_adjustment.fidl#19)*
-
 <p>Handler implemented by the owner of the presentation.
-The brightness manager uses this protocol to request changes to the
-screen's color adjustment matrix.</p>
+The UI component that controls brightness and screen tint uses this protocol to request changes
+to the screen's color adjustment matrix.</p>
 
 ### SetColorAdjustment {#SetColorAdjustment}
 
@@ -276,7 +253,7 @@ They should be ordered in increasing ambient_lux</p>
 ### ColorAdjustmentTable {#ColorAdjustmentTable}
 
 
-*Defined in [fuchsia.ui.brightness/color_adjustment.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_adjustment.fidl#25)*
+*Defined in [fuchsia.ui.brightness/color_adjustment.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.brightness/color_adjustment.fidl#17)*
 
 <p>The table for screen color tint adjustments.</p>
 

@@ -65,7 +65,7 @@
         </tr></table>
 
 ## Scenic {#Scenic}
-*Defined in [fuchsia.ui.scenic/scenic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#18)*
+*Defined in [fuchsia.ui.scenic/scenic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#19)*
 
 
 ### CreateSession {#CreateSession}
@@ -84,6 +84,36 @@
             <td><code>listener</code></td>
             <td>
                 <code><a class='link' href='#SessionListener'>SessionListener</a>?</code>
+            </td>
+        </tr></table>
+
+
+
+### CreateSession2 {#CreateSession2}
+
+<p>Create a new Session, which is the primary way to interact with Scenic.</p>
+<p>In this variant, the caller may register a request for focus management.
+The |view_focuser|'s client is coupled to the requested |session|, and
+this coupling acts as a security boundary: the ViewRef used as the basis
+for authority by |view_focuser| must come from |session|.</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>session</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='#Session'>Session</a>&gt;</code>
+            </td>
+        </tr><tr>
+            <td><code>listener</code></td>
+            <td>
+                <code><a class='link' href='#SessionListener'>SessionListener</a>?</code>
+            </td>
+        </tr><tr>
+            <td><code>view_focuser</code></td>
+            <td>
+                <code>request&lt;<a class='link' href='../fuchsia.ui.views/'>fuchsia.ui.views</a>/<a class='link' href='../fuchsia.ui.views/#Focuser'>Focuser</a>&gt;?</code>
             </td>
         </tr></table>
 
@@ -447,7 +477,7 @@ Use <code>SetEventMaskCmd</code> to enable event delivery for a resource.</p>
 ## **STRUCTS**
 
 ### ScreenshotData {#ScreenshotData}
-*Defined in [fuchsia.ui.scenic/scenic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#12)*
+*Defined in [fuchsia.ui.scenic/scenic.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#13)*
 
 
 
@@ -614,7 +644,7 @@ least one future time.</p>
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="displayOwnedSignal">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#37">displayOwnedSignal</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#48">displayOwnedSignal</a></td>
             <td>
                     <code>33554432</code>
                 </td>
@@ -622,7 +652,7 @@ least one future time.</p>
             <td></td>
         </tr>
     <tr id="displayNotOwnedSignal">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#38">displayNotOwnedSignal</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.ui.scenic/scenic.fidl#49">displayNotOwnedSignal</a></td>
             <td>
                     <code>16777216</code>
                 </td>
