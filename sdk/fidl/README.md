@@ -355,6 +355,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.media.sounds/index">fuchsia.media.sounds</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.mediacodec/index">fuchsia.mediacodec</a></td>
     <td></td>
 </tr>

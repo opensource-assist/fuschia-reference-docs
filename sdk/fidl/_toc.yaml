@@ -169,6 +169,8 @@ toc:
   path: /reference/fidl/fuchsia.media.playback
 - title: fuchsia.media.sessions2
   path: /reference/fidl/fuchsia.media.sessions2
+- title: fuchsia.media.sounds
+  path: /reference/fidl/fuchsia.media.sounds
 - title: fuchsia.mediacodec
   path: /reference/fidl/fuchsia.mediacodec
 - title: fuchsia.mem
