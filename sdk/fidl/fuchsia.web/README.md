@@ -37,7 +37,7 @@ service.</li>
 
 
 ## Context {#Context}
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#151)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#155)*
 
 <p>Manages browsing state (e.g. LocalStorage, cookies, etc) associated with a set of
 <a class='link' href='#fuchsia.web.Frame'>fuchsia.web.Frame</a>.</p>
@@ -1292,9 +1292,10 @@ its data discarded upon <a class='link' href='#fuchsia.web.Context'>fuchsia.web.
             <td>
                 <code>string[128]</code>
             </td>
-            <td><p>Optional suffix to append to the UserAgent string, to describe the
-embedder's product &amp; version. See the User-Agent HTTP header
-specification at https://tools.ietf.org/html/rfc7231#section-5.5.3</p>
+            <td><p>Optional string describing the embedding product to append to the User-Agent string.
+See the specification for the
+<a href="https://tools.ietf.org/html/rfc7231#section-5.5.3">HTTP User-Agent header</a>.
+Requires that <code>user_agent_version</code> is also specified.</p>
 </td>
         </tr><tr>
             <td>4</td>
@@ -1302,7 +1303,9 @@ specification at https://tools.ietf.org/html/rfc7231#section-5.5.3</p>
             <td>
                 <code>string[128]</code>
             </td>
-            <td></td>
+            <td><p>Optional version for the embedding product to append to the User-Agent string.
+Requires that <code>user_agent_product</code> is also specified.</p>
+</td>
         </tr><tr>
             <td>5</td>
             <td><code>remote_debugging_port</code></td>
@@ -1357,7 +1360,7 @@ Example value: <code>{&quot;http://a.com&quot;, &quot;http://b.com&quot;}</code>
 ### CreateFrameParams {#CreateFrameParams}
 
 
-*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#177)*
+*Defined in [fuchsia.web/context.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.web/context.fidl#181)*
 
 
 
