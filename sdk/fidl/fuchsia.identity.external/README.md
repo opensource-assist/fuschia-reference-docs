@@ -473,7 +473,7 @@ default ClientID defined by the implementation will be used.</p>
             <td>3</td>
             <td><code>scopes</code></td>
             <td>
-                <code>vector&lt;string&gt;[128]</code>
+                <code>vector&lt;string&gt;[64]</code>
             </td>
             <td><p>The list of OAuth scope strings to request. If absent or empty, a
 default set of scopes defined by the implementation will be used.</p>

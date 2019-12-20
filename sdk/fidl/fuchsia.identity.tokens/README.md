@@ -10,141 +10,58 @@ defined in <code>fuchsia.id.external</code>.</p>
 
 ## **PROTOCOLS**
 
-## AuthenticationContextProvider {#AuthenticationContextProvider}
-*Defined in [fuchsia.identity.tokens/token_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/token_manager.fidl#97)*
-
-<p>Implemented by a privileged system component with the ability to display UI
-to the end user.</p>
-<p>This is provided during the initialization of TokenManager service and is
-used for any subsequent authorize calls. The UI contexts created by this
-interface are used to display OAuth login and permission screens to the end
-user.</p>
-
-### GetAuthenticationUIContext {#GetAuthenticationUIContext}
-
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>request</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='../fuchsia.auth/'>fuchsia.auth</a>/<a class='link' href='../fuchsia.auth/#AuthenticationUIContext'>AuthenticationUIContext</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
-## TokenManagerFactory {#TokenManagerFactory}
-*Defined in [fuchsia.identity.tokens/token_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/token_manager.fidl#105)*
-
-<p>This interface provides a discoverable mechanism to create TokenManager
-instances for each user, and to supply auth provider configuration
-information using the structs defined in <code>auth_provider.fidl</code>.</p>
-
-### GetTokenManager {#GetTokenManager}
-
-<p>Creates an OAuth TokenManager instance scoped for the component specified
-by <code>application_url</code>, the Fuchsia user specified by <code>user_id</code>, and the list
-of auth providers specified in <code>auth_provider_configs</code>.</p>
-<p><code>auth_context_provider</code> is used to generate AuthenticationUIContexts during
-TokenManager methods that require UI, unless the caller of those methods
-supplies an alternative AuthenticationUIContext.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>user_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>application_url</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>auth_provider_configs</code></td>
-            <td>
-                <code>vector&lt;<a class='link' href='#AuthProviderConfig'>AuthProviderConfig</a>&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>auth_context_provider</code></td>
-            <td>
-                <code><a class='link' href='#AuthenticationContextProvider'>AuthenticationContextProvider</a></code>
-            </td>
-        </tr><tr>
-            <td><code>token_manager</code></td>
-            <td>
-                <code>request&lt;<a class='link' href='#TokenManager'>TokenManager</a>&gt;</code>
-            </td>
-        </tr></table>
-
-
-
 ## TokenManager {#TokenManager}
-*Defined in [fuchsia.identity.tokens/token_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/token_manager.fidl#129)*
+*Defined in [fuchsia.identity.tokens/token_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/token_manager.fidl#26)*
 
-<p>This interface manages OAuth tokens at the Fuchsia system level for different
-auth identity providers.</p>
-<p>If user authorization is required for minting tokens, TokenManager uses the
-<code>auth_context_provider's</code> UI context for displaying OAuth UI to the end user.</p>
-<p>After initialization, TokenManager handles are typically handed out by
-Framework to components like Ledger and Agents. These components fetch
-OAuth tokens from any configured auth provider, and use the
-<code>auth_context_provider</code> initialized above for new authorizations.</p>
+<p><code>TokenManager</code> maintains a set of credentials for accounts with service
+providers (such as Google) and provides access to standard tokens based on
+these credentials (such as OAuth2 access tokens and OpenID Connect ID
+tokens). This provides a &quot;single sign-on&quot; experience for these services on
+Fuchsia, where multiple components can use a service without requiring that
+the user signs in multiple times.</p>
 
-### Authorize {#Authorize}
+### ListServiceProviders {#ListServiceProviders}
 
-<p>The first step of OAuth is to get authorization from the user. For Fuchsia
-components, this is accomplished by displaying OAuth permissions in a view
-provided by the caller. This view will use <code>auth_ui_context</code> if supplied,
-or the <code>auth_context_provider</code> supplied at TokenManager creation if not.
-The component's OAuth configuration is provided in <code>app_config</code> and
-<code>app_scopes</code>. An optional <code>user_profile_id</code> that uniquely identifies an
-account for a given auth provider may be provided to identify an existing
-account during a re-auth flow.</p>
-<p>IoT ID authorization includes a mode where the user authorizes on a second
-device and that device acquires an auth code from the auth provider.
-In this mode, the auth code may be supplied in <code>auth_code</code> and no local
-user interface will be displayed.</p>
-<p>After the user has successfully authorized, Token manager receives and
-securely stores a persistent credential, such as an OAuth refresh token,
-for the intended scopes. TokenManager later uses this credential for
-minting short lived tokens.</p>
-<p>If the operation is successful, an OK status is returned along with user
-profile information in <code>user_profile_info</code> such as the user's email,
-image_url, profile_url, and first and last names as configured on the auth
-provider backend system.</p>
+<p>Returns the list of service providers that are available through this
+<code>TokenManager</code>.</p>
+<ul>
+<li><code>service_providers</code> a vector of available service providers.</li>
+</ul>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_ListServiceProviders_Result'>TokenManager_ListServiceProviders_Result</a></code>
+            </td>
+        </tr></table>
+
+### ListAccounts {#ListAccounts}
+
+<p>Returns the list of currently authorized accounts for a particular
+service provider.</p>
+<ul>
+<li><code>service_provider</code> the service provider to query.</li>
+</ul>
+<ul>
+<li><code>account_ids</code> a vector of authorized accounts for <code>service_provider</code>.</li>
+</ul>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>app_config</code></td>
+            <td><code>service_provider</code></td>
             <td>
-                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
-            </td>
-        </tr><tr>
-            <td><code>auth_ui_context</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.auth/'>fuchsia.auth</a>/<a class='link' href='../fuchsia.auth/#AuthenticationUIContext'>AuthenticationUIContext</a>?</code>
-            </td>
-        </tr><tr>
-            <td><code>app_scopes</code></td>
-            <td>
-                <code>vector&lt;string&gt;</code>
-            </td>
-        </tr><tr>
-            <td><code>user_profile_id</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-        </tr><tr>
-            <td><code>auth_code</code></td>
-            <td>
-                <code>string?</code>
+                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a></code>
             </td>
         </tr></table>
 
@@ -153,48 +70,175 @@ provider backend system.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>user_profile_info</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.auth/'>fuchsia.auth</a>/<a class='link' href='../fuchsia.auth/#UserProfileInfo'>UserProfileInfo</a>?</code>
+                <code><a class='link' href='#TokenManager_ListAccounts_Result'>TokenManager_ListAccounts_Result</a></code>
             </td>
         </tr></table>
 
-### GetAccessToken {#GetAccessToken}
+### AddAccount {#AddAccount}
 
-<p>Returns a downscoped access token from an auth provider for the given user
-<code>user_profile_id</code> and <code>scopes</code> to a Fuchsia component. The component's
-OAuth configuration is provided in <code>app_config</code> and the <code>user_profile_id</code>
-is the unique user identifier returned by the Authorize() call.</p>
-<p>In the interests of performance, Token Manager does not place the supplied
-scopes in a canonical order during caching. To benefit from caching of
-tokens, clients must request the same scopes in the same order across
-calls.</p>
+<p>Acquires credentials for a new account from a service provider.</p>
+<p>This process typically requires the user to interactively authenticate
+with the service provider and authorize the requested access.</p>
+<p>Once <code>AddAccount</code> has succeeded, tokens for the account may be acquired
+using the other <code>TokenManager</code> methods.</p>
+<ul>
+<li><code>service_provider</code> The <code>ServiceProvider</code> used to authorize the new
+account.</li>
+<li><code>scopes</code> A list of OAuth scope strings that the caller wishes to
+subsequently use in <code>GetOauthAccessToken</code>. The AuthProvider
+component chooses if and how to combine these with any
+default or threshold scopes.</li>
+</ul>
+<ul>
+<li><code>account_id</code>  A unique identifier within this service provider for the
+newly authorized account.</li>
+</ul>
+<ul>
+<li>error <code>ABORTED</code> The user cancelled or failed an interactive flow.</li>
+<li>error <code>SERVICE_PROVIDER_DENIED</code> The service provider refused to grant
+the requested token.</li>
+</ul>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>service_provider</code></td>
+            <td>
+                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a></code>
+            </td>
+        </tr><tr>
+            <td><code>scopes</code></td>
+            <td>
+                <code>vector&lt;string&gt;[64]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_AddAccount_Result'>TokenManager_AddAccount_Result</a></code>
+            </td>
+        </tr></table>
+
+### ReauthorizeAccount {#ReauthorizeAccount}
+
+<p>Refreshes credentials or changes credential scopes for an account that
+was previously authorized.</p>
+<p>This process may require the user to interactively authenticate with the
+service provider and authorize the requested access.</p>
+<ul>
+<li><code>service_provider</code> The <code>ServiceProvider</code> used to reauthorize the
+account.</li>
+<li><code>account_id</code>  An <code>AccountId</code> that has previously been authorized for
+this <code>ServiceProvider</code>.</li>
+<li><code>scopes</code> A list of OAuth scope strings that the caller wishes to
+subsequently use in <code>GetOauthAccessToken</code>. The AuthProvider
+component chooses if and how to combine these with any
+default or threshold scopes.</li>
+</ul>
+<ul>
+<li>error <code>ABORTED</code> The user cancelled or failed an interactive flow.</li>
+<li>error <code>SERVICE_PROVIDER_DENIED</code> The service provider refused to grant
+the requested token.</li>
+</ul>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>service_provider</code></td>
+            <td>
+                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a></code>
+            </td>
+        </tr><tr>
+            <td><code>account_id</code></td>
+            <td>
+                <code><a class='link' href='#AccountId'>AccountId</a></code>
+            </td>
+        </tr><tr>
+            <td><code>scopes</code></td>
+            <td>
+                <code>vector&lt;string&gt;[64]</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_ReauthorizeAccount_Result'>TokenManager_ReauthorizeAccount_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetOauthAccessToken {#GetOauthAccessToken}
+
+<p>Returns an OAuth 2.0 access token for the specified account.</p>
+<p>The access token may optionally be sidescoped (i.e. issued to a
+different <code>client_id</code> than the default <code>client_id</code> used during
+authorization) and may contain a smaller set of scopes than those
+acquired during authorization.</p>
 <p>The access token is returned from cache if possible, otherwise the auth
 provider is used to exchange the persistent credential for a new access
-token.</p>
+token. In the interests of performance, Token Manager does not place the
+supplied scopes in a canonical order during caching. To benefit from
+caching of tokens, clients must request the same scopes in the same
+order across calls.</p>
+<ul>
+<li><code>service_provider</code> The <code>ServiceProvider</code> from which the token should
+be requested.</li>
+<li><code>account_id</code> An <code>AccountId</code> that has previously been authorized for
+this <code>ServiceProvider</code>.</li>
+<li><code>client_id</code> The <code>ClientId</code> that the token will be used by. If ommitted
+(and if supported by the auth provider component) a
+default <code>client_id</code> is used.</li>
+<li><code>scopes</code> A list of OAuth scopes that should be included in the token,
+as defined by the service provider's API documention.</li>
+</ul>
+<ul>
+<li><code>access_token</code> An <code>OauthAccessToken</code>.</li>
+</ul>
+<ul>
+<li>error <code>ABORTED</code> The user rejected an interactive permission request.</li>
+<li>error <code>SERVICE_PROVIDER_DENIED</code> The service provider refused to grant
+the requested token.</li>
+<li>error <code>SERVICE_PROVIDER_REAUTHORIZE</code> The service provider requires
+that the user reauthenticate before supplying the requested
+token. The client should call the <code>ReauthorizeAccount</code> method
+before retrying the request.</li>
+</ul>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>app_config</code></td>
+            <td><code>service_provider</code></td>
             <td>
-                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a></code>
             </td>
         </tr><tr>
-            <td><code>user_profile_id</code></td>
+            <td><code>account_id</code></td>
             <td>
-                <code>string</code>
+                <code><a class='link' href='#AccountId'>AccountId</a></code>
             </td>
         </tr><tr>
-            <td><code>app_scopes</code></td>
+            <td><code>client_id</code></td>
             <td>
-                <code>vector&lt;string&gt;</code>
+                <code><a class='link' href='#ClientId'>ClientId</a></code>
+            </td>
+        </tr><tr>
+            <td><code>scopes</code></td>
+            <td>
+                <code>vector&lt;string&gt;[64]</code>
             </td>
         </tr></table>
 
@@ -203,47 +247,104 @@ token.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>access_token</code></td>
-            <td>
-                <code>string?</code>
+                <code><a class='link' href='#TokenManager_GetOauthAccessToken_Result'>TokenManager_GetOauthAccessToken_Result</a></code>
             </td>
         </tr></table>
 
-### GetIdToken {#GetIdToken}
+### GetOpenIdUserInfo {#GetOpenIdUserInfo}
 
-<p>Returns a JWT identity token from an auth provider to a Fuchsia component
-intended for the given <code>audience</code>. The component's OAuth configuration is
-supplied in <code>app_config</code>, the intended recipient of the id_token is
-supplied in <code>audience</code>, and <code>user_profile_id</code> is a unique account
-identifier returned by the Authorize() or ListProfileIds() calls.</p>
-<p><code>user_profile_id</code> is the unique user identifier returned by the
-Authorize() call.</p>
-<p>The identity token is returned from cache if possible, otherwise the auth
-provider is used to exchange the persistant credential for a new identity
-token.</p>
+<p>Returns user information for the specified account as defined by
+OpenID Connect.</p>
+<ul>
+<li><code>service_provider</code> The <code>ServiceProvider</code> from which the token should
+be requested.</li>
+<li><code>account_id</code> An <code>AccountId</code> that has previously been authorized for
+this <code>ServiceProvider</code>.</li>
+</ul>
+<ul>
+<li><code>user_info</code> An <code>OpenIdUserInfo</code> containing account information.</li>
+</ul>
+<ul>
+<li>error <code>ABORTED</code> The user rejected an interactive permission request.</li>
+<li>error <code>SERVICE_PROVIDER_REAUTHORIZE</code> The service provider requires
+that the user reauthenticate before supplying the user info.</li>
+<li>error <code>UNSUPPORTED_OPERATION</code> The auth provider does not support
+OpenID Connect.</li>
+</ul>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>app_config</code></td>
+            <td><code>service_provider</code></td>
             <td>
-                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a></code>
             </td>
         </tr><tr>
-            <td><code>user_profile_id</code></td>
+            <td><code>account_id</code></td>
             <td>
-                <code>string</code>
+                <code><a class='link' href='#AccountId'>AccountId</a></code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>result</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_GetOpenIdUserInfo_Result'>TokenManager_GetOpenIdUserInfo_Result</a></code>
+            </td>
+        </tr></table>
+
+### GetOpenIdToken {#GetOpenIdToken}
+
+<p>Returns an OpenID Connect ID token for the specified account.</p>
+<p>The identity token is returned from cache if possible, otherwise the
+auth provider is used to exchange the persistant credential for a new
+identity token.</p>
+<ul>
+<li><code>service_provider</code> The <code>ServiceProvider</code> from which the token should
+be requested.</li>
+<li><code>account_id</code> An <code>AccountId</code> that has previously been authorized for
+this <code>ServiceProvider</code>.</li>
+<li><code>audience</code> The <code>Audience</code> that the ID token will be used by. If
+ommitted (and if supported by the auth provider component)
+a default <code>audience</code> is used.</li>
+</ul>
+<ul>
+<li><code>id_token</code> An <code>OpenIdToken</code>.</li>
+</ul>
+<ul>
+<li>error <code>ABORTED</code> The user rejected an interactive permission request.</li>
+<li>error <code>SERVICE_PROVIDER_DENIED</code> The service provider refused to grant
+the requested token.</li>
+<li>error <code>SERVICE_PROVIDER_REAUTHORIZE</code> The service provider requires
+that the user reauthenticate before supplying the user info.</li>
+<li>error <code>UNSUPPORTED_OPERATION</code> The auth provider does not support
+OpenID Connect.</li>
+</ul>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>service_provider</code></td>
+            <td>
+                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a></code>
+            </td>
+        </tr><tr>
+            <td><code>account_id</code></td>
+            <td>
+                <code><a class='link' href='#AccountId'>AccountId</a></code>
             </td>
         </tr><tr>
             <td><code>audience</code></td>
             <td>
-                <code>string?</code>
+                <code><a class='link' href='#Audience'>Audience</a></code>
             </td>
         </tr></table>
 
@@ -252,102 +353,48 @@ token.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>id_token</code></td>
-            <td>
-                <code>string?</code>
+                <code><a class='link' href='#TokenManager_GetOpenIdToken_Result'>TokenManager_GetOpenIdToken_Result</a></code>
             </td>
         </tr></table>
 
-### GetFirebaseToken {#GetFirebaseToken}
-
-<p>Returns a Firebase token from an auth provider for the given account and
-Fuchsia component, and Firebase client. The component's OAuth configuration
-is supplied in <code>app_config</code>, the Firebase client is supplied in
-<code>firebase_api_key</code>, and <code>user_profile_id</code> is a unique account identifier
-returned by the Authorize() or ListProfileIds() calls.</p>
-<p>This api invokes firebase auth's VerifyAssertion endpoint that takes an
-OAuth IdToken as the fuchsia.ui.input. Audience is the intended recipient
-of the firebase id token.</p>
-<p>The Firebase auth token is returned from cache if possible, otherwise it is
-refreshed from the auth provider.</p>
-
-#### Request
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>app_config</code></td>
-            <td>
-                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
-            </td>
-        </tr><tr>
-            <td><code>user_profile_id</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>audience</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr><tr>
-            <td><code>firebase_api_key</code></td>
-            <td>
-                <code>string</code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code><a class='link' href='#Status'>Status</a></code>
-            </td>
-        </tr><tr>
-            <td><code>firebase_token</code></td>
-            <td>
-                <code><a class='link' href='../fuchsia.auth/'>fuchsia.auth</a>/<a class='link' href='../fuchsia.auth/#FirebaseToken'>FirebaseToken</a>?</code>
-            </td>
-        </tr></table>
-
-### DeleteAllTokens {#DeleteAllTokens}
+### DeleteAccount {#DeleteAccount}
 
 <p>Deletes and revokes all long lived and short lived tokens generated for
-an account and on behalf of a Fuchsia component. The component's OAuth
-configuration is provided in <code>app_config</code> and <code>user_profile_id</code>
-is a unique account identifier returned by the Authorize() or
-ListProfileIds() calls.</p>
+an account.</p>
 <p>Deletion of tokens involves three steps:</p>
 <ol>
-<li>Revoking credentials remotely at the auth provider.</li>
+<li>Revoking credentials remotely at the service provider.</li>
 <li>Deleting short lived tokens from the in-memory cache.</li>
 <li>Deleting persistent credentials stored locally on disk.</li>
 </ol>
-<p>If <code>force</code> is false then a failure at step 1 will terminate the method,
+<p>If <code>force</code> is false then a failure at step 1 terminates the method,
 ensuring client and server state remain consistent. If <code>force</code> is true
-then steps 2&amp;3 will be performed and the method will return OK even if
+then steps 2&amp;3 are performed and the method returns success even if
 step 1 fails, ensuring the local credentials are wiped in all
 circumstances.</p>
+<ul>
+<li><code>service_provider</code> The <code>ServiceProvider</code> from which the token should
+be requested.</li>
+<li><code>account_id</code> An <code>AccountId</code> that has previously been authorized for
+this <code>ServiceProvider</code>.</li>
+<li><code>force</code> Whether to force local deletion even when the remote
+revocation cannot be completed.</li>
+</ul>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>app_config</code></td>
+            <td><code>service_provider</code></td>
             <td>
-                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
+                <code><a class='link' href='#ServiceProvider'>ServiceProvider</a></code>
             </td>
         </tr><tr>
-            <td><code>user_profile_id</code></td>
+            <td><code>account_id</code></td>
             <td>
-                <code>string</code>
+                <code><a class='link' href='#AccountId'>AccountId</a></code>
             </td>
         </tr><tr>
             <td><code>force</code></td>
@@ -361,224 +408,268 @@ circumstances.</p>
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>status</code></td>
+            <td><code>result</code></td>
             <td>
-                <code><a class='link' href='#Status'>Status</a></code>
+                <code><a class='link' href='#TokenManager_DeleteAccount_Result'>TokenManager_DeleteAccount_Result</a></code>
             </td>
         </tr></table>
 
-### ListProfileIds {#ListProfileIds}
+## TokenManagerFactory {#TokenManagerFactory}
+*Defined in [fuchsia.identity.tokens/token_manager_factory.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/token_manager_factory.fidl#15)*
 
-<p>Returns a vector of all currently authorized user_profile_ids for a
-component's OAuth configuration provided in <code>app_config</code>.</p>
+<p><code>TokenManagerFactory</code> provides access to a global <code>TokenManager</code> on systems
+that do not include an <code>AccountManager</code>.</p>
+<p>On systems that do include <code>AccountManager</code>, that API should be used to
+acquire a separate <code>TokenManager</code> instance for each system account.</p>
+
+### GetTokenManager {#GetTokenManager}
+
+<p>Connects a new <code>TokenManager</code> channel.</p>
+<ul>
+<li><code>ui_context_provider</code> An <code>AuthenticationContextProvider</code> capable of
+generating the <code>AuthenticationUiContext</code>
+channels used to display interactive
+authentication and authorization flows.</li>
+<li><code>token_manager</code> The server end of a <code>TokenManager</code> channel.</li>
+</ul>
 
 #### Request
 <table>
     <tr><th>Name</th><th>Type</th></tr>
     <tr>
-            <td><code>app_config</code></td>
+            <td><code>ui_context_provider</code></td>
             <td>
-                <code><a class='link' href='#AppConfig'>AppConfig</a></code>
-            </td>
-        </tr></table>
-
-
-#### Response
-<table>
-    <tr><th>Name</th><th>Type</th></tr>
-    <tr>
-            <td><code>status</code></td>
-            <td>
-                <code><a class='link' href='#Status'>Status</a></code>
+                <code><a class='link' href='../fuchsia.auth/'>fuchsia.auth</a>/<a class='link' href='../fuchsia.auth/#AuthenticationContextProvider'>AuthenticationContextProvider</a></code>
             </td>
         </tr><tr>
-            <td><code>user_profile_ids</code></td>
+            <td><code>token_manager</code></td>
             <td>
-                <code>vector&lt;string&gt;</code>
+                <code>request&lt;<a class='link' href='#TokenManager'>TokenManager</a>&gt;</code>
             </td>
         </tr></table>
+
+
 
 
 
 ## **STRUCTS**
 
-### AuthProviderConfig {#AuthProviderConfig}
-*Defined in [fuchsia.identity.tokens/token_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/token_manager.fidl#51)*
+### TokenManager_ListServiceProviders_Response {#TokenManager_ListServiceProviders_Response}
+*generated*
 
 
 
-<p>Stores configuration parameters required to connect to available
-<code>AuthProvider</code>s. It is used by TokenManager to instantiate all auth providers
-during startup.</p>
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>auth_provider_type</code></td>
+            <td><code>service_providers</code></td>
             <td>
-                <code>string</code>
+                <code>vector&lt;string&gt;[128]</code>
             </td>
-            <td><p>Type of OAuth Identity provider. An identity provider authenticates and
-authorizes users for accessing their services. They also provide unique
-identifiers for users to interact with the system and may provide
-information about the user that is known to the provider.</p>
-<p>Sample auth provider types include:
-Dev : An identity provider that's used for development and testing.
-Google: Uses Google as the identity provider. Authorization from Google
-requires a working network connection and a web view.
-Spotify: Uses Spotify as an identity provider.</p>
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>url</code></td>
-            <td>
-                <code>string</code>
-            </td>
-            <td><p>Url of the Fuchsia component implementing the AuthProvider.</p>
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>params</code></td>
-            <td>
-                <code>vector&lt;string&gt;?</code>
-            </td>
-            <td><p>Optional parameters specified during AuthProvider startup.</p>
-</td>
+            <td></td>
             <td>No default</td>
         </tr>
 </table>
 
-### AppConfig {#AppConfig}
-*Defined in [fuchsia.identity.tokens/token_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/token_manager.fidl#73)*
+### TokenManager_ListAccounts_Response {#TokenManager_ListAccounts_Response}
+*generated*
 
 
 
-<p>Stores OAuth configuration details for a given client application. These
-details are used in the OAuth authorization step.</p>
 
 
 <table>
     <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
-            <td><code>auth_provider_type</code></td>
+            <td><code>account_ids</code></td>
             <td>
-                <code>string</code>
+                <code>vector&lt;string&gt;[128]</code>
             </td>
-            <td><p>An OAuth identity provider matching a configuration set in
-AuthProviderConfig.auth_provider_type.</p>
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>client_id</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-            <td><p>OAuth client id.</p>
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>client_secret</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-            <td><p>OAuth client secret.
-This field is optional and will only be used on calls to Authorize.</p>
-</td>
-            <td>No default</td>
-        </tr><tr>
-            <td><code>redirect_uri</code></td>
-            <td>
-                <code>string?</code>
-            </td>
-            <td><p>OAuth application's redirect uri.
-This field is optional and will only be used on calls to Authorize.</p>
-</td>
+            <td></td>
             <td>No default</td>
         </tr>
+</table>
+
+### TokenManager_AddAccount_Response {#TokenManager_AddAccount_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>account_id</code></td>
+            <td>
+                <code><a class='link' href='#AccountId'>AccountId</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TokenManager_ReauthorizeAccount_Response {#TokenManager_ReauthorizeAccount_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+</table>
+
+### TokenManager_GetOauthAccessToken_Response {#TokenManager_GetOauthAccessToken_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>access_token</code></td>
+            <td>
+                <code><a class='link' href='#OauthAccessToken'>OauthAccessToken</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TokenManager_GetOpenIdUserInfo_Response {#TokenManager_GetOpenIdUserInfo_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>user_info</code></td>
+            <td>
+                <code><a class='link' href='#OpenIdUserInfo'>OpenIdUserInfo</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TokenManager_GetOpenIdToken_Response {#TokenManager_GetOpenIdToken_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>id_token</code></td>
+            <td>
+                <code><a class='link' href='#OpenIdToken'>OpenIdToken</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### TokenManager_DeleteAccount_Response {#TokenManager_DeleteAccount_Response}
+*generated*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
 </table>
 
 
 
 ## **ENUMS**
 
-### Status {#Status}
+### Error {#Error}
 Type: <code>uint32</code>
 
-*Defined in [fuchsia.identity.tokens/token_manager.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/token_manager.fidl#10)*
+*Defined in [fuchsia.identity.tokens/common.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#40)*
 
-<p>Specifies the success/failure status of TokenManager calls.</p>
+<p>Specifies the reason that a fuchsia.identity.tokens method failed.</p>
 
 
 <table>
     <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
-            <td><code>OK</code></td>
-            <td><code>0</code></td>
-            <td><p>The command completed successfully</p>
-</td>
-        </tr><tr>
-            <td><code>AUTH_PROVIDER_SERVICE_UNAVAILABLE</code></td>
+            <td><code>UNKNOWN</code></td>
             <td><code>1</code></td>
-            <td><p>The command referred to a missing, misconfigured, or failed auth provider.
-Retrying is not recommended.</p>
+            <td><p>Some other problem occurred that cannot be classified using one of the
+more specific statuses. Retry is optional.</p>
 </td>
         </tr><tr>
-            <td><code>AUTH_PROVIDER_SERVER_ERROR</code></td>
+            <td><code>INTERNAL</code></td>
             <td><code>2</code></td>
-            <td><p>The auth server was reachable but responded with an error. These errors
-are typically caused by a configuration problem or a revoked token and so
-should not be retried.</p>
+            <td><p>An internal error occurred. This usually indicates a bug within the
+Token Manager itself. Retry is optional.</p>
 </td>
         </tr><tr>
-            <td><code>INTERNAL_ERROR</code></td>
+            <td><code>UNSUPPORTED_OPERATION</code></td>
             <td><code>3</code></td>
-            <td><p>An internal error occurred. This usually indicates a bug within the Token
-Manager itself. Retry is optional.</p>
-</td>
-        </tr><tr>
-            <td><code>INVALID_AUTH_CONTEXT</code></td>
-            <td><code>4</code></td>
-            <td><p>An invalid or non-functional AuthContextProvider was provided. Retrying is
-unlikely to correct this error.</p>
+            <td><p>The requested operation is not supported for the requested entity. For
+example, some service providers may not support some types of token.
+The request should not be retried.</p>
 </td>
         </tr><tr>
             <td><code>INVALID_REQUEST</code></td>
-            <td><code>5</code></td>
+            <td><code>4</code></td>
             <td><p>The request was malformed in some way, such as using an empty string for
-the user_profile_id. The request should not be retried.</p>
+service provider. The request should not be retried.</p>
 </td>
         </tr><tr>
-            <td><code>USER_NOT_FOUND</code></td>
+            <td><code>RESOURCE</code></td>
+            <td><code>5</code></td>
+            <td><p>A local resource error occurred such as I/O, FIDL, or memory allocation
+failure. Retry, after a delay, is recommended.</p>
+</td>
+        </tr><tr>
+            <td><code>NETWORK</code></td>
             <td><code>6</code></td>
-            <td><p>The requested user profile could not be found in the database. The request
+            <td><p>A network error occurred while communicating with a server or the server
+was unreachable.  Retry, after a delay, is recommended.</p>
+</td>
+        </tr><tr>
+            <td><code>INVALID_SERVICE_PROVIDER</code></td>
+            <td><code>7</code></td>
+            <td><p>The request referred to a missing service provider or one where the auth
+provider component is misconfigured or failed.</p>
+</td>
+        </tr><tr>
+            <td><code>INVALID_ACCOUNT</code></td>
+            <td><code>8</code></td>
+            <td><p>The request referred to an account that is not found for the specified
+service provider. The request should not be retried.</p>
+</td>
+        </tr><tr>
+            <td><code>SERVICE_PROVIDER_ERROR</code></td>
+            <td><code>10</code></td>
+            <td><p>The service provider returned a error that indicates a failure within
+the service provider itself. Retry, after a delay, is recommended.</p>
+</td>
+        </tr><tr>
+            <td><code>SERVICE_PROVIDER_DENIED</code></td>
+            <td><code>11</code></td>
+            <td><p>The service provider refused to grant the requested token. The request
 should not be retried.</p>
 </td>
         </tr><tr>
-            <td><code>IO_ERROR</code></td>
-            <td><code>7</code></td>
-            <td><p>A local error occurred such as disk I/O or memory allocation. Retry, after
-a delay, is recommended.</p>
+            <td><code>SERVICE_PROVIDER_REAUTHORIZE</code></td>
+            <td><code>12</code></td>
+            <td><p>The service provider requires that the user reauthenticate before
+supplying the requested token. The client should call the
+<code>ReauthorizeAccount</code> method before retrying the request.</p>
 </td>
         </tr><tr>
-            <td><code>UNKNOWN_ERROR</code></td>
-            <td><code>8</code></td>
-            <td><p>Some other problem occurred that cannot be classified using one of the more
-specific statuses. Retry is optional.</p>
-</td>
-        </tr><tr>
-            <td><code>REAUTH_REQUIRED</code></td>
-            <td><code>9</code></td>
-            <td><p>The auth server requires that the user reauthenticate. The client should
-call the Authorize method.</p>
-</td>
-        </tr><tr>
-            <td><code>USER_CANCELLED</code></td>
-            <td><code>10</code></td>
-            <td><p>The user cancelled the flow. User consent is required before any retry.</p>
-</td>
-        </tr><tr>
-            <td><code>NETWORK_ERROR</code></td>
-            <td><code>11</code></td>
-            <td><p>A network error occurred while communicating with the auth server. Retry,
-after a delay, is recommended.</p>
+            <td><code>ABORTED</code></td>
+            <td><code>13</code></td>
+            <td><p>The user cancelled or failed an interactive flow. The caller should
+gather user consent before any retry of the request.</p>
 </td>
         </tr></table>
 
@@ -639,8 +730,8 @@ specified by the authorization server.</p>
             <td>
                 <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
-            <td><p>The time on <code>ZX_CLOCK_UTC</code> at which the token will expire. If the field is
-absent the token does not have a fixed expiry time.</p>
+            <td><p>The time on <code>ZX_CLOCK_UTC</code> at which the token will expire. If the field
+is absent the token does not have a fixed expiry time.</p>
 </td>
         </tr></table>
 
@@ -668,8 +759,8 @@ absent the token does not have a fixed expiry time.</p>
             <td>
                 <code><a class='link' href='../zx/'>zx</a>/<a class='link' href='../zx/#time'>time</a></code>
             </td>
-            <td><p>The time on <code>ZX_CLOCK_UTC</code> at which the token will expire. If the field is
-absent the token does not have a fixed expiry time.</p>
+            <td><p>The time on <code>ZX_CLOCK_UTC</code> at which the token will expire. If the field
+is absent the token does not have a fixed expiry time.</p>
 </td>
         </tr></table>
 
@@ -719,6 +810,160 @@ absent the token does not have a fixed expiry time.</p>
 
 
 
+## **UNIONS**
+
+### TokenManager_ListServiceProviders_Result {#TokenManager_ListServiceProviders_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_ListServiceProviders_Response'>TokenManager_ListServiceProviders_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TokenManager_ListAccounts_Result {#TokenManager_ListAccounts_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_ListAccounts_Response'>TokenManager_ListAccounts_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TokenManager_AddAccount_Result {#TokenManager_AddAccount_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_AddAccount_Response'>TokenManager_AddAccount_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TokenManager_ReauthorizeAccount_Result {#TokenManager_ReauthorizeAccount_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_ReauthorizeAccount_Response'>TokenManager_ReauthorizeAccount_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TokenManager_GetOauthAccessToken_Result {#TokenManager_GetOauthAccessToken_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_GetOauthAccessToken_Response'>TokenManager_GetOauthAccessToken_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TokenManager_GetOpenIdUserInfo_Result {#TokenManager_GetOpenIdUserInfo_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_GetOpenIdUserInfo_Response'>TokenManager_GetOpenIdUserInfo_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TokenManager_GetOpenIdToken_Result {#TokenManager_GetOpenIdToken_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_GetOpenIdToken_Response'>TokenManager_GetOpenIdToken_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TokenManager_DeleteAccount_Result {#TokenManager_DeleteAccount_Result}
+*generated*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>response</code></td>
+            <td>
+                <code><a class='link' href='#TokenManager_DeleteAccount_Response'>TokenManager_DeleteAccount_Response</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>err</code></td>
+            <td>
+                <code><a class='link' href='#Error'>Error</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 
 
 
@@ -731,60 +976,75 @@ absent the token does not have a fixed expiry time.</p>
     <tr><th>Name</th><th>Value</th><th>Type</th><th>Description</th></tr><tr id="MAX_ACCOUNT_ID_SIZE">
             <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#8">MAX_ACCOUNT_ID_SIZE</a></td>
             <td>
-                    <code>1024</code>
+                    <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
             <td><p>The maximum length of an account ID string, in bytes.</p>
 </td>
         </tr>
     <tr id="MAX_CLIENT_ID_SIZE">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#17">MAX_CLIENT_ID_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#16">MAX_CLIENT_ID_SIZE</a></td>
             <td>
-                    <code>1024</code>
+                    <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td><p>The maximum length of an OAuth client ID, in bytes.
-We reserve the right to increase this size in future.</p>
+            <td><p>The maximum length of an OAuth client ID, in bytes.</p>
 </td>
         </tr>
     <tr id="MAX_SCOPE_SIZE">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#24">MAX_SCOPE_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#22">MAX_SCOPE_SIZE</a></td>
             <td>
-                    <code>1024</code>
+                    <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td><p>The maximum length of an OAuth scope, in bytes.
-We reserve the right to increase this size in future.</p>
+            <td><p>The maximum length of an OAuth scope, in bytes.</p>
 </td>
         </tr>
     <tr id="MAX_SCOPE_COUNT">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#31">MAX_SCOPE_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#28">MAX_SCOPE_COUNT</a></td>
             <td>
-                    <code>128</code>
+                    <code>64</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td><p>The maximum number of OAuth scopes that may be requested for a single token.
-We reserve the right to increase this value in future.</p>
+            <td><p>The maximum number of OAuth scopes that may be requested for a single token.</p>
 </td>
         </tr>
     <tr id="MAX_AUDIENCE_SIZE">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#35">MAX_AUDIENCE_SIZE</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#31">MAX_AUDIENCE_SIZE</a></td>
             <td>
-                    <code>1024</code>
+                    <code>256</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td><p>The maximum length of an OpenID audience string, in bytes.
-We reserve the right to increase this size in future.</p>
+            <td><p>The maximum length of an OpenID audience string, in bytes.</p>
 </td>
         </tr>
     <tr id="MAX_AUDIENCE_COUNT">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#42">MAX_AUDIENCE_COUNT</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#37">MAX_AUDIENCE_COUNT</a></td>
             <td>
                     <code>16</code>
                 </td>
                 <td><code>uint32</code></td>
-            <td><p>The maximum number of audiences that may be requested for a single ID token.
-We reserve the right to increase this value in future.</p>
+            <td><p>The maximum number of audiences that may be requested for a single ID token.</p>
+</td>
+        </tr>
+    <tr id="MAX_SERVICE_PROVIDER_COUNT">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/token_manager.fidl#9">MAX_SERVICE_PROVIDER_COUNT</a></td>
+            <td>
+                    <code>128</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td><p>The maximum number of service providers for which <code>AuthProvider</code> components
+can be simultaneously installed.</p>
+</td>
+        </tr>
+    <tr id="MAX_ACCOUNT_COUNT">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/token_manager.fidl#13">MAX_ACCOUNT_COUNT</a></td>
+            <td>
+                    <code>128</code>
+                </td>
+                <td><code>uint32</code></td>
+            <td><p>The maximum number of Accounts that can be authorized within a service
+provider for a single instance of TokenManager.</p>
 </td>
         </tr>
     
@@ -804,22 +1064,30 @@ by the authorization server. Account identifiers are guaranteed to be unique
 within an auth provider type.</p>
 </td>
         </tr><tr id="ClientId">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#20">ClientId</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#19">ClientId</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_CLIENT_ID_SIZE'>MAX_CLIENT_ID_SIZE</a></code>]</td>
             <td><p>An OAuth client ID string.</p>
 </td>
         </tr><tr id="Scope">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#27">Scope</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#25">Scope</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_SCOPE_SIZE'>MAX_SCOPE_SIZE</a></code>]</td>
             <td><p>An OAuth scope string.</p>
 </td>
         </tr><tr id="Audience">
-            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#38">Audience</a></td>
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/common.fidl#34">Audience</a></td>
             <td>
                 <code>string</code>[<code><a class='link' href='#MAX_AUDIENCE_SIZE'>MAX_AUDIENCE_SIZE</a></code>]</td>
             <td><p>An OpenID audience string.</p>
+</td>
+        </tr><tr id="ServiceProvider">
+            <td><a href="https://fuchsia.googlesource.com/fuchsia/+/master/sdk/fidl/fuchsia.identity.tokens/token_manager.fidl#18">ServiceProvider</a></td>
+            <td>
+                <code>string</code></td>
+            <td><p>The primary domain name of the service provider used to authorize accounts.
+Only one <code>AuthProvider</code> component can be installed for each service provider
+at a time.</p>
 </td>
         </tr></table>
 
