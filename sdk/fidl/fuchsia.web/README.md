@@ -107,7 +107,7 @@ cannot be shared across multiple components.</p>
 number. Multiple calls may be queued to received the port number.</p>
 <p>If an error occured, the <a class='link' href='#fuchsia.web.ContextError'>fuchsia.web.ContextError</a> will be set to this value:</p>
 <ul>
-<li><code>REMOTE_DEBUGGING_PORT_NOT_OPENED</code>: |remote_debugging_port| was not set in
+<li><code>REMOTE_DEBUGGING_PORT_NOT_OPENED</code>: <code>remote_debugging_port</code> was not set in
 <a class='link' href='#fuchsia.web.CreateContextParams'>fuchsia.web.CreateContextParams</a> or the remote debugging service failed to start.</li>
 </ul>
 
@@ -138,7 +138,7 @@ number. Multiple calls may be queued to received the port number.</p>
 <p>If neither <code>url</code> nor <code>name</code> are set then all cookies are observed. If only <code>url</code> is set
 then all cookies for that URL are observed. If both are set then only cookies matching both
 fields are observed.</p>
-<p>|changes| iterates over a stream of cookie changes. Additions or updates are expressed as
+<p><code>changes</code> iterates over a stream of cookie changes. Additions or updates are expressed as
 complete cookies, while deletions are expressed as cookies with no <code>value</code> set.</p>
 
 #### Request
@@ -1373,7 +1373,7 @@ Example value: <code>{&quot;http://a.com&quot;, &quot;http://b.com&quot;}</code>
                 <code>bool</code>
             </td>
             <td><p>Set to true to enable remote debugging. The <a class='link' href='#fuchsia.web.Frame'>fuchsia.web.Frame</a> will be closed with
-`ERR_INVALID_ARGS if |remote_debugging_port| was not set in
+<code>ERR_INVALID_ARGS</code> if <code>remote_debugging_port</code> was not set in
 <a class='link' href='#fuchsia.web.CreateContextParams'>fuchsia.web.CreateContextParams</a>.</p>
 </td>
         </tr></table>
