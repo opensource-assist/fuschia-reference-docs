@@ -1125,6 +1125,10 @@
     <td></td>
 </tr>
 <tr>
+    <td><a href="fuchsia.thermal/index">fuchsia.thermal</a></td>
+    <td></td>
+</tr>
+<tr>
     <td><a href="fuchsia.time/index">fuchsia.time</a></td>
     <td></td>
 </tr>

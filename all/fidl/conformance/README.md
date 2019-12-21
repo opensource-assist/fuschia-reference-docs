@@ -1009,8 +1009,47 @@
         </tr>
 </table>
 
+### TransactionHeader {#TransactionHeader}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#7)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>tx_id</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>flags</code></td>
+            <td>
+                <code>uint8[3]</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>magic_number</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>ordinal</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### StructSize16Align8 {#StructSize16Align8}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#20)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#27)*
 
 
 
@@ -1035,7 +1074,7 @@
 </table>
 
 ### Sandwich1 {#Sandwich1}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#32)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#39)*
 
 
 
@@ -1066,8 +1105,33 @@
         </tr>
 </table>
 
+### Sandwich1Message {#Sandwich1Message}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#45)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>header</code></td>
+            <td>
+                <code><a class='link' href='#TransactionHeader'>TransactionHeader</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>body</code></td>
+            <td>
+                <code><a class='link' href='#Sandwich1'>Sandwich1</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Sandwich1WithOptUnion {#Sandwich1WithOptUnion}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#38)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#50)*
 
 
 
@@ -1099,7 +1163,7 @@
 </table>
 
 ### Sandwich2 {#Sandwich2}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#44)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#56)*
 
 
 
@@ -1131,7 +1195,7 @@
 </table>
 
 ### Sandwich3 {#Sandwich3}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#50)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#62)*
 
 
 
@@ -1163,7 +1227,7 @@
 </table>
 
 ### Sandwich4 {#Sandwich4}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#63)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#75)*
 
 
 
@@ -1194,8 +1258,33 @@
         </tr>
 </table>
 
+### Sandwich4Message {#Sandwich4Message}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#81)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>header</code></td>
+            <td>
+                <code><a class='link' href='#TransactionHeader'>TransactionHeader</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>body</code></td>
+            <td>
+                <code><a class='link' href='#Sandwich4'>Sandwich4</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Sandwich5 {#Sandwich5}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#77)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#94)*
 
 
 
@@ -1226,8 +1315,33 @@
         </tr>
 </table>
 
+### Sandwich5Message {#Sandwich5Message}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#100)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>header</code></td>
+            <td>
+                <code><a class='link' href='#TransactionHeader'>TransactionHeader</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>body</code></td>
+            <td>
+                <code><a class='link' href='#Sandwich5'>Sandwich5</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### StructSize3Align1 {#StructSize3Align1}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#83)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#105)*
 
 
 
@@ -1245,7 +1359,7 @@
 </table>
 
 ### StructSize3Align2 {#StructSize3Align2}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#87)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#109)*
 
 
 
@@ -1270,7 +1384,7 @@
 </table>
 
 ### Sandwich6 {#Sandwich6}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#105)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#127)*
 
 
 
@@ -1302,7 +1416,7 @@
 </table>
 
 ### Sandwich7 {#Sandwich7}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#111)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#133)*
 
 
 
@@ -1333,8 +1447,33 @@
         </tr>
 </table>
 
+### Sandwich7Message {#Sandwich7Message}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#139)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>header</code></td>
+            <td>
+                <code><a class='link' href='#TransactionHeader'>TransactionHeader</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>body</code></td>
+            <td>
+                <code><a class='link' href='#Sandwich7'>Sandwich7</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Sandwich8 {#Sandwich8}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#118)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#145)*
 
 
 
@@ -1366,7 +1505,7 @@
 </table>
 
 ### Regression1 {#Regression1}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#124)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#151)*
 
 
 
@@ -1419,7 +1558,7 @@
 </table>
 
 ### Regression2 {#Regression2}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#133)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#160)*
 
 
 
@@ -1444,7 +1583,7 @@
 </table>
 
 ### Regression3 {#Regression3}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#138)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#165)*
 
 
 
@@ -1461,8 +1600,44 @@
         </tr>
 </table>
 
+### Struct_Table_NoFields {#Struct_Table_NoFields}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#172)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>t</code></td>
+            <td>
+                <code><a class='link' href='#Table_NoFields'>Table_NoFields</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Struct_Table_TwoReservedFields {#Struct_Table_TwoReservedFields}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#181)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>t</code></td>
+            <td>
+                <code><a class='link' href='#Table_TwoReservedFields'>Table_TwoReservedFields</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Table_StructWithReservedSandwichStruct {#Table_StructWithReservedSandwichStruct}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#157)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#192)*
 
 
 
@@ -1480,7 +1655,7 @@
 </table>
 
 ### Table_StructWithUint32SandwichStruct {#Table_StructWithUint32SandwichStruct}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#168)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#203)*
 
 
 
@@ -1498,7 +1673,7 @@
 </table>
 
 ### Table_UnionWithVector_ReservedSandwichStruct {#Table_UnionWithVector_ReservedSandwichStruct}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#178)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#213)*
 
 
 
@@ -1516,7 +1691,7 @@
 </table>
 
 ### Table_UnionWithVector_StructSandwichStruct {#Table_UnionWithVector_StructSandwichStruct}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#188)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#223)*
 
 
 
@@ -1534,7 +1709,7 @@
 </table>
 
 ### XUnionWithStructStruct {#XUnionWithStructStruct}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#196)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#231)*
 
 
 
@@ -1552,7 +1727,7 @@
 </table>
 
 ### XUnionWithXUnionStruct {#XUnionWithXUnionStruct}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#204)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#239)*
 
 
 
@@ -1570,7 +1745,7 @@
 </table>
 
 ### Size5Alignment1 {#Size5Alignment1}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#213)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#248)*
 
 
 
@@ -1588,7 +1763,7 @@
 </table>
 
 ### Size5Alignment4 {#Size5Alignment4}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#217)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#252)*
 
 
 
@@ -1613,7 +1788,7 @@
 </table>
 
 ### Size5Alignment1Vector {#Size5Alignment1Vector}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#222)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#257)*
 
 
 
@@ -1631,7 +1806,7 @@
 </table>
 
 ### Size5Alignment4Vector {#Size5Alignment4Vector}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#226)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#261)*
 
 
 
@@ -1649,7 +1824,7 @@
 </table>
 
 ### Size5Alignment1Array {#Size5Alignment1Array}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#230)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#265)*
 
 
 
@@ -1667,7 +1842,7 @@
 </table>
 
 ### Size5Alignment4Array {#Size5Alignment4Array}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#234)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#269)*
 
 
 
@@ -1685,7 +1860,7 @@
 </table>
 
 ### ArrayStruct {#ArrayStruct}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#244)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#279)*
 
 
 
@@ -1710,7 +1885,7 @@
 </table>
 
 ### TransformerEmptyStruct {#TransformerEmptyStruct}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#249)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#284)*
 
 
 
@@ -1721,7 +1896,7 @@
 </table>
 
 ### EmptyStructUnionStruct {#EmptyStructUnionStruct}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#257)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#292)*
 
 
 
@@ -1739,7 +1914,7 @@
 </table>
 
 ### Size8Align8 {#Size8Align8}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#261)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#296)*
 
 
 
@@ -1757,7 +1932,7 @@
 </table>
 
 ### NoCodingTablesStressor {#NoCodingTablesStressor}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#265)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#300)*
 
 
 
@@ -1866,7 +2041,7 @@
 </table>
 
 ### OutOfLineSandwich1 {#OutOfLineSandwich1}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#282)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#317)*
 
 
 
@@ -1898,7 +2073,7 @@
 </table>
 
 ### OutOfLineSandwich1WithOptUnion {#OutOfLineSandwich1WithOptUnion}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#288)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#323)*
 
 
 
@@ -1930,7 +2105,7 @@
 </table>
 
 ### Regression4 {#Regression4}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#295)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#330)*
 
 
 
@@ -1989,8 +2164,390 @@
         </tr>
 </table>
 
+### Regression5 {#Regression5}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#349)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>f1</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>f2</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>f3</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>f4</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>f5</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>f6</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Regression6 {#Regression6}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#373)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>f1</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>f2</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>f3</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>f4</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>f5</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>f6</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Regression7TableUnionXUnion {#Regression7TableUnionXUnion}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#414)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code><a class='link' href='#TableOfUnionThenXUnionThenTableThenXUnionThenUnion'>TableOfUnionThenXUnionThenTableThenXUnionThenUnion</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Regression8OptUnionSize12Align4 {#Regression8OptUnionSize12Align4}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#418)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>opt_union1</code></td>
+            <td>
+                <code><a class='link' href='#UnionSize12Align4'>UnionSize12Align4</a>?</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>opt_union2</code></td>
+            <td>
+                <code><a class='link' href='#UnionSize12Align4'>UnionSize12Align4</a>?</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>opt_union3</code></td>
+            <td>
+                <code><a class='link' href='#UnionSize12Align4'>UnionSize12Align4</a>?</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Regression8VectorOfOptUnionSize12Align4 {#Regression8VectorOfOptUnionSize12Align4}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#424)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code>vector&lt;<a class='link' href='#UnionSize12Align4'>UnionSize12Align4</a>&gt;</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Regression8TableWithUnionSize12Align4 {#Regression8TableWithUnionSize12Align4}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#436)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code><a class='link' href='#TableWithUnionSize12Align4'>TableWithUnionSize12Align4</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### StringUnionStruct {#StringUnionStruct}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#445)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>u</code></td>
+            <td>
+                <code><a class='link' href='#StringBoolUnion'>StringBoolUnion</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>nullable_u</code></td>
+            <td>
+                <code><a class='link' href='#StringBoolUnion'>StringBoolUnion</a>?</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### StringUnionStructWrapper {#StringUnionStructWrapper}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#450)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>sus</code></td>
+            <td>
+                <code><a class='link' href='#StringUnionStruct'>StringUnionStruct</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### StringUnionStructWrapperResponse {#StringUnionStructWrapperResponse}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#454)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>header</code></td>
+            <td>
+                <code><a class='link' href='#TransactionHeader'>TransactionHeader</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>body</code></td>
+            <td>
+                <code><a class='link' href='#StringUnionStructWrapper'>StringUnionStructWrapper</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Regression9Value {#Regression9Value}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#459)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>u</code></td>
+            <td>
+                <code><a class='link' href='#StringBoolUnion'>StringBoolUnion</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>nullable_u</code></td>
+            <td>
+                <code><a class='link' href='#StringBoolUnion'>StringBoolUnion</a>?</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Regression9Message {#Regression9Message}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#470)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>header</code></td>
+            <td>
+                <code><a class='link' href='#TransactionHeader'>TransactionHeader</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>body</code></td>
+            <td>
+                <code><a class='link' href='#Regression9Result'>Regression9Result</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Regression10V1 {#Regression10V1}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#500)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>table</code></td>
+            <td>
+                <code><a class='link' href='#Regression10TableV1'>Regression10TableV1</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Regression10V2 {#Regression10V2}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#504)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>table</code></td>
+            <td>
+                <code><a class='link' href='#Regression10TableV2'>Regression10TableV2</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Regression10V3 {#Regression10V3}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#508)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>table</code></td>
+            <td>
+                <code><a class='link' href='#Regression10TableV3'>Regression10TableV3</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### Regression11 {#Regression11}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#518)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>table_of_table</code></td>
+            <td>
+                <code><a class='link' href='#UnionWithRegression10Table'>UnionWithRegression10Table</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
 ### Sandwich4Align8 {#Sandwich4Align8}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#305)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#522)*
 
 
 
@@ -2015,7 +2572,7 @@
 </table>
 
 ### Sandwich4Align8WithPointer {#Sandwich4Align8WithPointer}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#310)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#527)*
 
 
 
@@ -2040,7 +2597,7 @@
 </table>
 
 ### Sandwich9 {#Sandwich9}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#320)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#537)*
 
 
 
@@ -2072,7 +2629,7 @@
 </table>
 
 ### SimpleTableArrayStruct {#SimpleTableArrayStruct}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#330)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#547)*
 
 
 
@@ -2090,7 +2647,7 @@
 </table>
 
 ### StringUnionVector {#StringUnionVector}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#334)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#551)*
 
 
 
@@ -2108,7 +2665,7 @@
 </table>
 
 ### LaunchInfo {#LaunchInfo}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#338)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#555)*
 
 
 
@@ -2168,7 +2725,7 @@
 </table>
 
 ### CreateComponentRequest {#CreateComponentRequest}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#349)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#566)*
 
 
 
@@ -2186,6 +2743,127 @@
             <td><code>controller</code></td>
             <td>
                 <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### CompatTable {#CompatTable}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#593)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code><a class='link' href='#CompatTableValue'>CompatTableValue</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>empty</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### MixedFieldsBody {#MixedFieldsBody}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#598)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>before</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>first_union</code></td>
+            <td>
+                <code><a class='link' href='#UnionSize8Align4'>UnionSize8Align4</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>middle_start</code></td>
+            <td>
+                <code>uint16</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>middle_end</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>second_union</code></td>
+            <td>
+                <code><a class='link' href='#UnionSize8Align4'>UnionSize8Align4</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>after</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### MixedFieldsMessage {#MixedFieldsMessage}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#607)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>header</code></td>
+            <td>
+                <code><a class='link' href='#TransactionHeader'>TransactionHeader</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr><tr>
+            <td><code>body</code></td>
+            <td>
+                <code><a class='link' href='#MixedFieldsBody'>MixedFieldsBody</a></code>
+            </td>
+            <td></td>
+            <td>No default</td>
+        </tr>
+</table>
+
+### StructOfTableWithXUnion {#StructOfTableWithXUnion}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#616)*
+
+
+
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr><tr>
+            <td><code>value</code></td>
+            <td>
+                <code><a class='link' href='#TableWithXUnion'>TableWithXUnion</a></code>
             </td>
             <td></td>
             <td>No default</td>
@@ -2366,6 +3044,36 @@
 
 
 
+## **ENUMS**
+
+### EnumUint32 {#EnumUint32}
+Type: <code>uint32</code>
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#340)*
+
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>MEMBER</code></td>
+            <td><code>842084399</code></td>
+            <td></td>
+        </tr></table>
+
+### EnumUint8 {#EnumUint8}
+Type: <code>uint8</code>
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#344)*
+
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td><code>MEMBER</code></td>
+            <td><code>8</code></td>
+            <td></td>
+        </tr></table>
+
 
 
 ## **TABLES**
@@ -2540,7 +3248,7 @@
 ### Table_NoFields {#Table_NoFields}
 
 
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#142)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#169)*
 
 
 
@@ -2551,7 +3259,7 @@
 ### Table_TwoReservedFields {#Table_TwoReservedFields}
 
 
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#145)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#176)*
 
 
 
@@ -2576,7 +3284,7 @@
 ### Table_StructWithReservedSandwich {#Table_StructWithReservedSandwich}
 
 
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#150)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#185)*
 
 
 
@@ -2615,7 +3323,7 @@
 ### Table_StructWithUint32Sandwich {#Table_StructWithUint32Sandwich}
 
 
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#161)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#196)*
 
 
 
@@ -2654,7 +3362,7 @@
 ### Table_UnionWithVector_ReservedSandwich {#Table_UnionWithVector_ReservedSandwich}
 
 
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#172)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#207)*
 
 
 
@@ -2686,7 +3394,7 @@
 ### Table_UnionWithVector_StructSandwich {#Table_UnionWithVector_StructSandwich}
 
 
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#182)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#217)*
 
 
 
@@ -2715,10 +3423,237 @@
             <td></td>
         </tr></table>
 
+### TableOfXUnionThenUnion {#TableOfXUnionThenUnion}
+
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#393)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>member</code></td>
+            <td>
+                <code><a class='link' href='#XUnionOfUnion'>XUnionOfUnion</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TableOfUnionThenXUnionThenTableThenXUnionThenUnion {#TableOfUnionThenXUnionThenTableThenXUnionThenUnion}
+
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#408)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>member</code></td>
+            <td>
+                <code><a class='link' href='#UnionOfXUnionThenTableThenXUnionThenUnion'>UnionOfXUnionThenTableThenXUnionThenUnion</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TableWithUnionSize12Align4 {#TableWithUnionSize12Align4}
+
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#428)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>before</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>member</code></td>
+            <td>
+                <code><a class='link' href='#UnionSize12Align4'>UnionSize12Align4</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>4</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>after</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Regression10TableV1 {#Regression10TableV1}
+
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#476)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>member1</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Regression10TableV2 {#Regression10TableV2}
+
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#481)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>member1</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>3</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>4</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>member2</code></td>
+            <td>
+                <code>uint64</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Regression10TableV3 {#Regression10TableV3}
+
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#490)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>x</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>3</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>4</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>5</td>
+            <td><code>y</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>6</td>
+            <td><code>z</code></td>
+            <td>
+                <code>int64</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>7</td>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### TransformerSimpleTable {#TransformerSimpleTable}
 
 
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#326)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#543)*
 
 
 
@@ -2729,6 +3664,81 @@
             <td><code>value</code></td>
             <td>
                 <code>uint32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### CompatTableString {#CompatTableString}
+
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#577)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>s</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### CompatTableValue {#CompatTableValue}
+
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#586)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>union_member</code></td>
+            <td>
+                <code><a class='link' href='#CompatUnion'>CompatUnion</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>2</td>
+            <td><code>array_member</code></td>
+            <td>
+                <code>uint32[3]</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>3</td>
+            <td><code>table_member</code></td>
+            <td>
+                <code><a class='link' href='#CompatTableString'>CompatTableString</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td>4</td>
+            <td><code>xunion_member</code></td>
+            <td>
+                <code><a class='link' href='#CompatXUnion'>CompatXUnion</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### TableWithXUnion {#TableWithXUnion}
+
+
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#612)*
+
+
+
+<table>
+    <tr><th>Ordinal</th><th>Name</th><th>Type</th><th>Description</th></tr>
+    <tr>
+            <td>1</td>
+            <td><code>member</code></td>
+            <td>
+                <code><a class='link' href='#CompatXUnion'>CompatXUnion</a></code>
             </td>
             <td></td>
         </tr></table>
@@ -2776,7 +3786,7 @@
         </tr></table>
 
 ### UnionSize8Align4 {#UnionSize8Align4}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#7)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#14)*
 
 
 <table>
@@ -2801,7 +3811,7 @@
         </tr></table>
 
 ### UnionSize12Align4 {#UnionSize12Align4}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#13)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#20)*
 
 
 <table>
@@ -2832,7 +3842,7 @@
         </tr></table>
 
 ### UnionSize24Align8 {#UnionSize24Align8}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#25)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#32)*
 
 
 <table>
@@ -2863,7 +3873,7 @@
         </tr></table>
 
 ### UnionSize36Align4 {#UnionSize36Align4}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#56)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#68)*
 
 
 <table>
@@ -2894,7 +3904,7 @@
         </tr></table>
 
 ### UnionOfUnion {#UnionOfUnion}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#69)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#86)*
 
 
 <table>
@@ -2931,7 +3941,7 @@
         </tr></table>
 
 ### UnionWithVector {#UnionWithVector}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#92)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#114)*
 
 
 <table>
@@ -2992,7 +4002,7 @@
         </tr></table>
 
 ### StringUnion {#StringUnion}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#238)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#273)*
 
 
 <table>
@@ -3017,7 +4027,7 @@
         </tr></table>
 
 ### EmptyStructUnion {#EmptyStructUnion}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#252)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#287)*
 
 
 <table>
@@ -3035,8 +4045,121 @@
             <td></td>
         </tr></table>
 
+### UnionAtTheBottom {#UnionAtTheBottom}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#383)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>unused1</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>unused2</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>tiny</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### UnionOfXUnionThenTableThenXUnionThenUnion {#UnionOfXUnionThenTableThenXUnionThenUnion}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#402)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>unused1</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>variant</code></td>
+            <td>
+                <code><a class='link' href='#XUnionOfTableThenXUnionThenUnion'>XUnionOfTableThenXUnionThenUnion</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### StringBoolUnion {#StringBoolUnion}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#440)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>s</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>b</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### Regression9Result {#Regression9Result}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#465)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>ok</code></td>
+            <td>
+                <code><a class='link' href='#Regression9Value'>Regression9Value</a></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>error</code></td>
+            <td>
+                <code>uint32</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### UnionWithRegression10Table {#UnionWithRegression10Table}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#512)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>unused</code></td>
+            <td>
+                <code>uint8</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code></code></td>
+            <td>
+                <code></code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>at_v2</code></td>
+            <td>
+                <code><a class='link' href='#Regression10TableV2'>Regression10TableV2</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
 ### UnionWithVectorOfVectors {#UnionWithVectorOfVectors}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#316)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#533)*
 
 
 <table>
@@ -3044,6 +4167,25 @@
             <td><code>v</code></td>
             <td>
                 <code>vector&lt;vector&gt;</code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### CompatUnion {#CompatUnion}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#572)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>s</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>b</code></td>
+            <td>
+                <code>bool</code>
             </td>
             <td></td>
         </tr></table>
@@ -3154,7 +4296,7 @@
         </tr></table>
 
 ### XUnionWithStruct {#XUnionWithStruct}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#192)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#227)*
 
 
 <table>
@@ -3167,7 +4309,7 @@
         </tr></table>
 
 ### XUnionWithXUnion {#XUnionWithXUnion}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#200)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#235)*
 
 
 <table>
@@ -3180,7 +4322,7 @@
         </tr></table>
 
 ### XUnionWithUnions {#XUnionWithUnions}
-*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#208)*
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#243)*
 
 
 <table>
@@ -3194,6 +4336,51 @@
             <td><code>u2</code></td>
             <td>
                 <code><a class='link' href='#UnionSize12Align4'>UnionSize12Align4</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### XUnionOfUnion {#XUnionOfUnion}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#389)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>variant</code></td>
+            <td>
+                <code><a class='link' href='#UnionAtTheBottom'>UnionAtTheBottom</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### XUnionOfTableThenXUnionThenUnion {#XUnionOfTableThenXUnionThenUnion}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#398)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>variant</code></td>
+            <td>
+                <code><a class='link' href='#TableOfXUnionThenUnion'>TableOfXUnionThenUnion</a></code>
+            </td>
+            <td></td>
+        </tr></table>
+
+### CompatXUnion {#CompatXUnion}
+*Defined in [conformance/transformer.test.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/tools/fidl/gidl-conformance-suite/transformer.test.fidl#581)*
+
+
+<table>
+    <tr><th>Name</th><th>Type</th><th>Description</th></tr><tr>
+            <td><code>s</code></td>
+            <td>
+                <code>string</code>
+            </td>
+            <td></td>
+        </tr><tr>
+            <td><code>b</code></td>
+            <td>
+                <code>bool</code>
             </td>
             <td></td>
         </tr></table>
@@ -3249,6 +4436,42 @@
         </tr></table>
 
 
+
+## **BITS**
+
+### BitsUint32 {#BitsUint32}
+Type: <code>uint32</code>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td>MEMBER_LOW_1</td>
+            <td>1</td>
+            <td></td>
+        </tr><tr>
+            <td>MEMBER_LOW_2</td>
+            <td>2</td>
+            <td></td>
+        </tr><tr>
+            <td>MEMBER_HIG_1</td>
+            <td>268435456</td>
+            <td></td>
+        </tr><tr>
+            <td>MEMBER_HIG_2</td>
+            <td>536870912</td>
+            <td></td>
+        </tr></table>
+
+### BitsUint8 {#BitsUint8}
+Type: <code>uint8</code>
+
+
+<table>
+    <tr><th>Name</th><th>Value</th><th>Description</th></tr><tr>
+            <td>MEMBER</td>
+            <td>8</td>
+            <td></td>
+        </tr></table>
 
 
 

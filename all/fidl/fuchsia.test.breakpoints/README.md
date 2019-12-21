@@ -109,7 +109,10 @@ Used by RouteFrameworkCapability and RouteBuiltinCapability</p>
 
 ### SetProvider {#SetProvider}
 
-<p>Inject a CapabilityProvider in response to a routing event.</p>
+<p>Set a CapabilityProvider. Invoking this method will replace
+any existing provider.</p>
+<p>When a component attempts to connect to a capability,
+this method can be used to mock/inject that capability.</p>
 
 #### Request
 <table>
@@ -127,8 +130,38 @@ Used by RouteFrameworkCapability and RouteBuiltinCapability</p>
     <tr><th>Name</th><th>Type</th></tr>
     </table>
 
+### ReplaceAndOpen {#ReplaceAndOpen}
+
+<p>Replace the existing provider with the given client_end and
+open the existing provider with given server end.</p>
+<p>This method is used to interpose between a client and service:
+Client &lt;---&gt; Interposer &lt;---&gt; Server</p>
+<p>Opening the existing provider sets up Interposer &lt;---&gt; Server
+Replacing the existing provider sets up Client &lt;---&gt; Interposer</p>
+
+#### Request
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    <tr>
+            <td><code>client_end</code></td>
+            <td>
+                <code><a class='link' href='#CapabilityProvider'>CapabilityProvider</a></code>
+            </td>
+        </tr><tr>
+            <td><code>server_end</code></td>
+            <td>
+                <code>handle&lt;channel&gt;</code>
+            </td>
+        </tr></table>
+
+
+#### Response
+<table>
+    <tr><th>Name</th><th>Type</th></tr>
+    </table>
+
 ## CapabilityProvider {#CapabilityProvider}
-*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#145)*
+*Defined in [fuchsia.test.breakpoints/breakpoints.fidl](https://fuchsia.googlesource.com/fuchsia/+/master/src/sys/component_manager/tests/fidl/breakpoints.fidl#159)*
 
 <p>A FIDL-based version of a CapabilityProvider</p>
 

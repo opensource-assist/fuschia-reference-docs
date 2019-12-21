@@ -553,6 +553,8 @@ toc:
   path: /reference/fidl/fuchsia.testing.modular
 - title: fuchsia.testing.runner
   path: /reference/fidl/fuchsia.testing.runner
+- title: fuchsia.thermal
+  path: /reference/fidl/fuchsia.thermal
 - title: fuchsia.time
   path: /reference/fidl/fuchsia.time
 - title: fuchsia.tracing.controller
