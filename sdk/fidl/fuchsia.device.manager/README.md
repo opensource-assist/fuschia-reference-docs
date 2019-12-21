@@ -432,6 +432,11 @@ On success, the returned <code>local_device_id</code> is the identifier assigned
                 <code><a class='link' href='#AddDeviceConfig'>AddDeviceConfig</a></code>
             </td>
         </tr><tr>
+            <td><code>has_init</code></td>
+            <td>
+                <code>bool</code>
+            </td>
+        </tr><tr>
             <td><code>client_remote</code></td>
             <td>
                 <code>handle&lt;channel&gt;?</code>
@@ -492,6 +497,11 @@ visible (via MakeVisible).</p>
             <td><code>args</code></td>
             <td>
                 <code>string[1024]?</code>
+            </td>
+        </tr><tr>
+            <td><code>has_init</code></td>
+            <td>
+                <code>bool</code>
             </td>
         </tr><tr>
             <td><code>client_remote</code></td>
