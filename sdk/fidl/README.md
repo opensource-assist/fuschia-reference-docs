@@ -415,10 +415,6 @@
     <td></td>
 </tr>
 <tr>
-    <td><a href="fuchsia.net.policy/index">fuchsia.net.policy</a></td>
-    <td></td>
-</tr>
-<tr>
     <td><a href="fuchsia.net.ppp/index">fuchsia.net.ppp</a></td>
     <td></td>
 </tr>

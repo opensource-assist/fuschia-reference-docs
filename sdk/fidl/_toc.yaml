@@ -199,8 +199,6 @@ toc:
   path: /reference/fidl/fuchsia.net.mdns
 - title: fuchsia.net.oldhttp
   path: /reference/fidl/fuchsia.net.oldhttp
-- title: fuchsia.net.policy
-  path: /reference/fidl/fuchsia.net.policy
 - title: fuchsia.net.ppp
   path: /reference/fidl/fuchsia.net.ppp
 - title: fuchsia.net.stack
